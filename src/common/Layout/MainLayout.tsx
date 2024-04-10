@@ -1,10 +1,10 @@
 import React from "react";
 
-interface I_MainLayoutProps {
-  children: React.ReactElement;
+interface Props {
+  children: React.ReactNode;
 }
 
-const MainLayout = ({ children }: I_MainLayoutProps) => {
+const MainLayout = ({ children }: Props) => {
   return (
     <div className="w-screen h-screen">
       {children}
