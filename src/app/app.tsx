@@ -1,11 +1,10 @@
 import Routing from "./routing/routing.tsx";
+import MainLayout from "../common/Layout/MainLayout.tsx";
 
-const App = () => {
-  return (
-    <>
-      <Routing />
-    </>
-  );
-};
+const App = () => (
+  <MainLayout>
+    <Routing />
+  </MainLayout>
+);
 
 export default App;
