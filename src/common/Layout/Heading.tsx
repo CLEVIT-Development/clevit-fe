@@ -24,7 +24,7 @@ const Heading = () => {
           Request a Quote
         </button>
       </div>
-      {/*<Waves className="absolute left-[6%] top-[-15%] h-full" />*/}
+      <Waves className="absolute left-[6%] top-[-15%] h-full" />
     </div>
   );
 };
