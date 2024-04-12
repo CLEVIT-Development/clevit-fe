@@ -1,5 +1,4 @@
-import HomePage from "@/pages/HomePage.tsx";
-import { RoutePaths } from "@/routing/routing.constants.ts";
+import { RoutePaths, routerElements } from "@/routing/routing.constants.ts";
 
 import {
   Navigate,
@@ -12,8 +11,10 @@ import {
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
-      <Route path={RoutePaths.Home} element={<HomePage />} />
-      <Route path="*" element={<Navigate to="/" />} />
+      {routerElements.map(({ Element, path }) => (
+        <Route path={path} element={<Element />} />
+      ))}
+      <Route path={RoutePaths.All} element={<Navigate to="/" />} />
     </>
   )
 );
