@@ -1,10 +1,10 @@
-import MainLayout from "@/layout/MainLayout.tsx";
+import Layout from "@/layout/Layout.tsx";
 
 const HomePage = () => {
   return (
-    <MainLayout>
-      <div className="bg-white text-black h-screen">Home</div>
-    </MainLayout>
+    <Layout>
+      <div className="w-screen -ml-20 px-20 h-[600px]">Home</div>
+    </Layout>
   );
 };
 
