@@ -1,3 +1,6 @@
+import HomePage from "@/pages/HomePage.tsx";
+import { RoutePaths } from "@/routing/routing.constants.ts";
+
 import {
   Navigate,
   Route,
@@ -6,16 +9,13 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 
-import { HomePage } from "pages";
-import { RoutePaths } from "@/routing/routing.constants.ts";
-
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route path={RoutePaths.Home} element={<HomePage />} />
       <Route path="*" element={<Navigate to="/" />} />
-    </>,
-  ),
+    </>
+  )
 );
 
 const Routing = () => {

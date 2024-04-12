@@ -1,10 +1,10 @@
 export enum RoutePaths {
   Home = "/",
-  About = '/about',
-  Services = '/services',
-  Portfolio = '/portfolio',
-  Blog = '/blog',
-  ContactUs = '#Contact-us'
+  About = "/about",
+  Services = "/services",
+  Portfolio = "/portfolio",
+  Blog = "/blog",
+  ContactUs = "/contact-us",
 }
 
 export const headerMenuLinks = [
