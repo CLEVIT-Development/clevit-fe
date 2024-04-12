@@ -1,5 +1,3 @@
-import { RoutePaths, routerElements } from "@/routing/routing.constants.ts";
-
 import {
   Navigate,
   Route,
@@ -7,6 +5,8 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom";
+
+import { RoutePaths, routerElements } from "@/routing/routing.constants.ts";
 
 const router = createBrowserRouter(
   createRoutesFromElements(

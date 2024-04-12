@@ -9,7 +9,7 @@ interface Props {
 
 const ServiceCard = ({ Icon, order, title, description }: Props) => {
   return (
-    <div className="max-w-[400px] min-h-[360px] p-6 rounded-lg shadow-[0px_8px_10px_0px_#00000012]">
+    <div className="p-6 rounded-lg shadow-[0px_8px_10px_0px_#00000012] transition-all duration-500 hover:scale-105">
       <div className="flex justify-between">
         <div className="bg-purple200 rounded-full w-[100px] h-[100px] flex items-center justify-center">
           {Icon}

@@ -1,25 +1,23 @@
 import serviceCards from "@/constants/serviceCards.ts";
-import MainLayout from "@/layout/MainLayout.tsx";
+import Layout from "@/layout/Layout.tsx";
 
 import ServiceCard from "../components/ui/ServiceCard.tsx";
 
 const HomePage = () => {
   return (
-    <MainLayout>
-      <div className="bg-white text-black">
-        <div className="bg-white grid grid-cols-3 gap-10 px-20 py-10">
-          {serviceCards.map(({ id, Icon, title, description }, index) => (
-            <ServiceCard
-              key={id}
-              title={title}
-              Icon={<Icon />}
-              order={index - 10 < 0 ? `0${index + 1}` : `${index + 1}`}
-              description={description}
-            />
-          ))}
-        </div>
+    <Layout>
+      <div className="-ml-20 h-full bg-white grid grid-cols-3 gap-10 px-20 py-10">
+        {serviceCards.map(({ id, Icon, title, description }, index) => (
+          <ServiceCard
+            key={id}
+            title={title}
+            Icon={<Icon />}
+            order={index - 10 < 0 ? `0${index + 1}` : `${index + 1}`}
+            description={description}
+          />
+        ))}
       </div>
-    </MainLayout>
+    </Layout>
   );
 };
 
