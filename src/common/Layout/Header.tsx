@@ -9,7 +9,7 @@ const Header = () => {
       <Logo />
       <div className="flex items-center gap-5">
         {headerMenuLinks.map(headerMenuLink => (
-          <NavLink key={headerMenuLink.id} to={headerMenuLink.link} className="text-white font-sans">
+          <NavLink key={headerMenuLink.id} to={headerMenuLink.link} className="text-white">
             {headerMenuLink.label}
           </NavLink>
         ))}
