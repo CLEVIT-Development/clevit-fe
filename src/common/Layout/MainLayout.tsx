@@ -1,4 +1,6 @@
 import React from "react";
+import Heading from "@/layout/Heading.tsx";
+import Footer from "@/layout/Footer.tsx";
 
 interface Props {
   children: React.ReactNode;
@@ -6,8 +8,10 @@ interface Props {
 
 const MainLayout = ({ children }: Props) => {
   return (
-    <div className="w-screen h-screen">
+    <div className='w-full h-screen'>
+      <Heading />
       {children}
+      <Footer />
     </div>
   );
 };
