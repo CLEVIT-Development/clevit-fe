@@ -11,7 +11,7 @@ const HomePage = () => {
           <ServiceCard
             key={id}
             title={title}
-            Icon={<Icon />}
+            icon={<Icon />}
             order={index - 9 < 0 ? `0${index + 1}` : `${index + 1}`}
             description={description}
           />

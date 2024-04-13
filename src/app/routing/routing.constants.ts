@@ -7,7 +7,6 @@ export enum RoutePaths {
   Portfolio = "/portfolio",
   Blog = "/blog",
   ContactUs = "/contact-us",
-  All = "*",
 }
 
 export const headerMenuLinks = [

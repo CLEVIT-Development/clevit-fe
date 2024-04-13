@@ -6,7 +6,7 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 
-import { RoutePaths, routerElements } from "@/routing/routing.constants.ts";
+import { routerElements } from "@/routing/routing.constants.ts";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -14,7 +14,7 @@ const router = createBrowserRouter(
       {routerElements.map(({ Element, path }) => (
         <Route path={path} element={<Element />} />
       ))}
-      <Route path={RoutePaths.All} element={<Navigate to="/" />} />
+      <Route path={"*"} element={<Navigate to="/" />} />
     </>
   )
 );
