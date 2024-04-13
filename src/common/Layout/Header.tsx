@@ -14,7 +14,7 @@ const Header = () => {
           </NavLink>
         ))}
         <button
-          className="flex items-center gap-2 bg-white text-purple100 font-medium px-6 py-3.5 ml-1 shadow-[4px_5px_0px_0px_rgba(109,40,217)]">
+          className="flex items-center gap-2 bg-white text-purple100 font-medium px-6 py-3.5 ml-1 shadow-[4px_5px_0px_0px_rgba(109,40,217)] rounded-md">
           <Messages />
           Let's Talk
         </button>
