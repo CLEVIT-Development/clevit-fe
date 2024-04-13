@@ -1,10 +1,12 @@
+import HomePage from "@/pages/HomePage.tsx";
+
 export enum RoutePaths {
   Home = "/",
-  About = '/about',
-  Services = '/services',
-  Portfolio = '/portfolio',
-  Blog = '/blog',
-  ContactUs = '#Contact-us'
+  About = "/about",
+  Services = "/services",
+  Portfolio = "/portfolio",
+  Blog = "/blog",
+  ContactUs = "/contact-us",
 }
 
 export const headerMenuLinks = [
@@ -15,3 +17,5 @@ export const headerMenuLinks = [
   { id: 5, label: "Blog", link: RoutePaths.Blog },
   { id: 6, label: "Contact Us", link: RoutePaths.ContactUs },
 ];
+
+export const routerElements = [{ path: RoutePaths.Home, Element: HomePage }];
