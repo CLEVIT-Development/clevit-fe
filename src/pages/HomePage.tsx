@@ -12,7 +12,7 @@ const HomePage = () => {
             key={id}
             title={title}
             Icon={<Icon />}
-            order={index - 10 < 0 ? `0${index + 1}` : `${index + 1}`}
+            order={index - 9 < 0 ? `0${index + 1}` : `${index + 1}`}
             description={description}
           />
         ))}
