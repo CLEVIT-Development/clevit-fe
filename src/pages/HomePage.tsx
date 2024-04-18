@@ -1,21 +1,19 @@
-import serviceCards from "@/constants/serviceCards.ts";
-import Layout from "@/layout/Layout.tsx";
-
-import ServiceCard from "../components/ui/ServiceCard.tsx";
+import AboutSection from "@/atom/AboutSection.tsx";
+import RequestQuoteSection from "@/molecules/RequestQuoteSection.tsx";
+import ServiceSection from "@/molecules/ServiceSection.tsx";
+import TechnologySection from "@/molecules/TechnologySection.tsx";
+import Layout from "@/templates/Layout.tsx";
+import Section from "@/templates/Section.tsx";
 
 const HomePage = () => {
   return (
     <Layout>
-      <div className="-ml-20 h-full bg-white grid grid-cols-3 gap-10 px-20 py-10">
-        {serviceCards.map(({ id, Icon, title, description }, index) => (
-          <ServiceCard
-            key={id}
-            title={title}
-            icon={<Icon />}
-            order={index - 9 < 0 ? `0${index + 1}` : `${index + 1}`}
-            description={description}
-          />
-        ))}
+      <div className="flex flex-col space-y-24">
+        <AboutSection />
+        <ServiceSection />
+        <RequestQuoteSection />
+        <TechnologySection />
+        <Section title={"Processes We Follow"}>ASD</Section>
       </div>
     </Layout>
   );

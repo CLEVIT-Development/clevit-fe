@@ -1,6 +1,3 @@
-import Footer from "@/layout/Footer.tsx";
-import Heading from "@/layout/Heading.tsx";
-
 import React from "react";
 
 interface Props {
@@ -10,9 +7,9 @@ interface Props {
 const Layout = ({ children }: Props) => {
   return (
     <div className="w-screen h-screen">
-      <Heading />
-      <main className="relative px-20">{children}</main>
-      <Footer />
+      {/*<Heading />*/}
+      <main className="relative xl:px-20 lg:px-16 xs:px-5 md:py-24">{children}</main>
+      {/*<Footer />*/}
     </div>
   );
 };

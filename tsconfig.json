@@ -2,7 +2,12 @@
   "compilerOptions": {
     "target": "ES2020",
     "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable",
+      "dom"
+    ],
     "module": "ESNext",
     "skipLibCheck": true,
 
@@ -17,7 +22,13 @@
     "paths": {
       "@/assets/*": ["assets/*"],
       "@/routing/*": ["app/routing/*"],
-      "@/layout/*": ["common/Layout/*"],
+      "@/templates/*": ["templates/*"],
+      "@/hooks/*": ["hooks/*"],
+      "@/types/*": ["types/*"],
+      "@/atom/*": ["components/atom/*"],
+      "@/molecules/*": ["components/molecules/*"],
+      "@/organism/*": ["components/organism/*"],
+      "@/util/*": ["util/*"],
       "@/pages/*": ["pages/*"],
       "@/constants/*": ["constants/*"]
     },

@@ -3,11 +3,22 @@
 @tailwind utilities;
 
 :root {
-  font-family: Inter, sans-serif;
+    font-family: Poppins, sans-serif;
 }
 
 body {
-  padding: 0;
-  margin: 0;
-  display: flex;
+    @apply m-0;
+    @apply p-0;
+    @apply flex;
+}
+
+button {
+    @apply outline-none;
+}
+
+.button-prefix-suffix {
+    > svg {
+        @apply w-full;
+        @apply h-full;
+    }
 }

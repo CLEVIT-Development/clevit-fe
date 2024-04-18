@@ -11,7 +11,7 @@ import Support from "@/assets/vectors/Support.svg?react";
 import TechnicalAssessment from "@/assets/vectors/TechnicalAssessment.svg?react";
 import UIUX from "@/assets/vectors/UIUX.svg?react";
 
-const serviceCards = [
+const serviceCardsConstant = [
   {
     id: 1,
     Icon: PC,
@@ -98,4 +98,4 @@ const serviceCards = [
   },
 ];
 
-export default serviceCards;
+export default serviceCardsConstant;
