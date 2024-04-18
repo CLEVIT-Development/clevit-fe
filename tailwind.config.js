@@ -117,13 +117,6 @@ export default {
             fontWeight: "700",
           },
         ],
-        xll: [
-          "18px",
-          {
-            lineHeight: "150%",
-            fontWeight: "700",
-          },
-        ],
       },
     },
   },

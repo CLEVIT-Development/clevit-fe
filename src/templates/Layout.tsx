@@ -1,3 +1,6 @@
+import Footer from "@/organism/Footer.tsx";
+import Heading from "@/organism/Heading.tsx";
+
 import React from "react";
 
 interface Props {
@@ -7,9 +10,9 @@ interface Props {
 const Layout = ({ children }: Props) => {
   return (
     <div className="w-screen h-screen">
-      {/*<Heading />*/}
+      <Heading />
       <main className="relative xl:px-20 lg:px-16 xs:px-5 md:py-24">{children}</main>
-      {/*<Footer />*/}
+      <Footer />
     </div>
   );
 };
