@@ -17,7 +17,7 @@ const Button = forwardRef(
     ref: LegacyRef<HTMLButtonElement>
   ) => {
     const buttonVariantStyle = {
-      [ButtonVariant.Primary]: "bg-blue200 bg-purple300",
+      [ButtonVariant.Primary]: "bg-blue-200 bg-purple-300",
       [ButtonVariant.Outlined]: "bg-transparent border border-white",
     };
 
@@ -25,7 +25,7 @@ const Button = forwardRef(
       <button
         ref={ref}
         className={twMerge(
-          `flex space-x-2 items-center rounded-lg px-6 py-3 ${buttonVariantStyle[variant]}`,
+          `flex space-x-2 items-center rounded-lg px-6 py-3 ${buttonVariantStyle[variant]} outline-none`,
           className
         )}
         {...props}

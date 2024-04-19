@@ -10,10 +10,7 @@ body {
     @apply m-0;
     @apply p-0;
     @apply flex;
-}
-
-button {
-    @apply outline-none;
+    @apply box-border;
 }
 
 .button-prefix-suffix {

@@ -4,14 +4,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        purple100: "#703391",
-        purple200: "#7033911A",
-        purple300: "#4f1d85",
-        blue100: "#0E59F2",
-        blue200: "#1404CE",
-        gray100: "#55606A",
-        gray200: "#314252",
-        gray300: "#F8F7FD",
+        "purple-100": "#703391",
+        "purple-200": "#7033911A",
+        "purple-300": "#4f1d85",
+        "blue-100": "#0E59F2",
+        "blue-200": "#1404CE",
+        "gray-100": "#55606A",
+        "gray-200": "#314252",
+        "gray-300": "#F8F7FD",
       },
       animation: {
         swipeRight: "swipeRightKeyframe 0.5s",
@@ -122,3 +122,6 @@ export default {
   },
   plugins: [],
 };
+
+// @TODO: add font size config
+// 3xl, 2xl, xl, lg, md, base, sm, xs

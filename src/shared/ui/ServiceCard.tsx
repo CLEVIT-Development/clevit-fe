@@ -19,15 +19,15 @@ const ServiceCard = ({ icon, order, title, description, className }: Props) => {
       )}
     >
       <div className="flex justify-between">
-        <div className="bg-purple200 rounded-full w-[100px] h-[100px] flex items-center justify-center">
+        <div className="bg-purple-200 rounded-full w-[100px] h-[100px] flex items-center justify-center">
           {icon}
         </div>
-        <p className="text-purple200 text-7xl font-bold mt-2 font-poppins sm:visible xs:invisible">
+        <p className="text-purple-200 text-7xl font-bold mt-2 font-poppins sm:visible xs:invisible">
           {order}
         </p>
       </div>
-      <p className="text-gray200 text-md mt-6 mb-5">{title}</p>
-      <p className="text-gray200 text-base break-words">{description}</p>
+      <p className="text-gray-200 text-md mt-6 mb-5">{title}</p>
+      <p className="text-gray-200 text-base break-words">{description}</p>
     </div>
   );
 };

@@ -5,7 +5,7 @@ import RequestQuoteSection from "@/pages/home/RequestQuoteSection.tsx";
 import ServiceSection from "@/pages/home/ServiceSection.tsx";
 import TechnologySection from "@/pages/home/TechnologySection.tsx";
 
-const HomePage = () => {
+const Home = () => {
   return (
     <Layout>
       <div className="flex flex-col space-y-24">
@@ -13,10 +13,12 @@ const HomePage = () => {
         <ServiceSection />
         <RequestQuoteSection />
         <TechnologySection />
-        <Section title={"Processes We Follow"}>ASD</Section>
+        <Section title={"Processes We Follow"}>
+          <p>asd</p>
+        </Section>
       </div>
     </Layout>
   );
 };
 
-export default HomePage;
+export default Home;
