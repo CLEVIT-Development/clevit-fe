@@ -1,3 +1,5 @@
+import { useCallback, useState } from "react";
+
 import { swipeAnimationConstants } from "@/common/constants/swipeAnimation.constants.ts";
 import {
   technologiesConstants,
@@ -5,8 +7,6 @@ import {
 } from "@/common/constants/technologiesConstants.ts";
 import Section from "@/common/templates/Section.tsx";
 import Navigation from "@/shared/ui/Navigation.tsx";
-
-import { useCallback, useState } from "react";
 
 const TechnologySection = () => {
   const [{ currTabId, direction }, setActiveTab] = useState({

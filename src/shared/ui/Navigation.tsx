@@ -1,6 +1,6 @@
-import useWindowSize from "@/common/hooks/useWindowSize.ts";
-
 import { useCallback, useState } from "react";
+
+import useWindowSize from "@/common/hooks/useWindowSize.ts";
 
 export interface INavigationData {
   id: number;

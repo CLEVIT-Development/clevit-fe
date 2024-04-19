@@ -1,9 +1,9 @@
-import { ButtonVariant } from "@/types/variant.types.ts";
-
 import { forwardRef } from "react";
 import type { ComponentPropsWithoutRef, LegacyRef, ReactNode } from "react";
 
 import { twMerge } from "tailwind-merge";
+
+import { ButtonVariant } from "@/types/variant.types.ts";
 
 interface Props extends Omit<ComponentPropsWithoutRef<"button">, "prefix"> {
   prefix?: ReactNode;

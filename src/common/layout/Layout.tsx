@@ -1,7 +1,7 @@
+import React from "react";
+
 import Footer from "@/common/layout/Footer.tsx";
 import Heading from "@/common/layout/Heading.tsx";
-
-import React from "react";
 
 interface Props {
   children: React.ReactNode;
