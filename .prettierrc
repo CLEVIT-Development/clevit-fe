@@ -1,5 +1,5 @@
 {
-  "printWidth": 80,
+  "printWidth": 100,
   "tabWidth": 2,
   "useTabs": false,
   "semi": true,
@@ -11,7 +11,7 @@
   "proseWrap": "never",
   "htmlWhitespaceSensitivity": "strict",
   "endOfLine": "lf",
-  "importOrder": ["^react", "^react-redux", "^[a-zA-Z]", "^@?\\w", "^[./]"],
+  "importOrder": ["^react", "^react-redux", "^[a-zA-Z]", "^@/?\\w", "^[./]"],
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": true,
   "plugins": ["@trivago/prettier-plugin-sort-imports"]

@@ -1,3 +1,5 @@
+import { routerElements } from "@/app/routing/routing.constants.ts";
+
 import {
   Navigate,
   Route,
@@ -6,13 +8,11 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 
-import { routerElements } from "@/routing/routing.constants.ts";
-
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
       {routerElements.map(({ Element, path }) => (
-        <Route path={path} element={<Element />} />
+        <Route key={path} path={path} element={<Element />} />
       ))}
       <Route path={"*"} element={<Navigate to="/" />} />
     </>

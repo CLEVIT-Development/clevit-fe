@@ -2,7 +2,12 @@
   "compilerOptions": {
     "target": "ES2020",
     "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable",
+      "dom"
+    ],
     "module": "ESNext",
     "skipLibCheck": true,
 
@@ -15,11 +20,7 @@
     "jsx": "react-jsx",
     "baseUrl": "./src",
     "paths": {
-      "@/assets/*": ["assets/*"],
-      "@/routing/*": ["app/routing/*"],
-      "@/layout/*": ["common/Layout/*"],
-      "@/pages/*": ["pages/*"],
-      "@/constants/*": ["constants/*"]
+      "@/*": ["*"],
     },
     /* Linting */
     "strict": true,

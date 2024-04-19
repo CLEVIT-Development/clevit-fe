@@ -11,7 +11,7 @@ import Support from "@/assets/vectors/Support.svg?react";
 import TechnicalAssessment from "@/assets/vectors/TechnicalAssessment.svg?react";
 import UIUX from "@/assets/vectors/UIUX.svg?react";
 
-const serviceCards = [
+export const serviceCardsConstants = [
   {
     id: 1,
     Icon: PC,
@@ -23,8 +23,7 @@ const serviceCards = [
     id: 2,
     Icon: Phone,
     title: "Mobile App Development",
-    description:
-      "Develop engaging mobile apps that keep users coming back for more",
+    description: "Develop engaging mobile apps that keep users coming back for more",
   },
   {
     id: 3,
@@ -97,5 +96,3 @@ const serviceCards = [
       "We help you reach your target audience with effective digital marketing strategies.",
   },
 ];
-
-export default serviceCards;
