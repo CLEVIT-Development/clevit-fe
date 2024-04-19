@@ -1,4 +1,4 @@
-export const swipeAnimationConstant = {
+export const swipeAnimationConstants = {
   left: "animate-swipeLeft",
   right: "animate-swipeRight",
   top: "animate-swipeTop",

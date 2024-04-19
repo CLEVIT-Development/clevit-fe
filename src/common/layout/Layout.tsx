@@ -1,5 +1,5 @@
-import Footer from "@/organism/Footer.tsx";
-import Heading from "@/organism/Heading.tsx";
+import Footer from "@/common/layout/Footer.tsx";
+import Heading from "@/common/layout/Heading.tsx";
 
 import React from "react";
 

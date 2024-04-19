@@ -1,10 +1,9 @@
+import { headerMenuLinks } from "@/app/routing/routing.constants.ts";
 import Logo from "@/assets/vectors/Logo.svg?react";
 import Messages from "@/assets/vectors/Messages.svg?react";
-import { headerMenuLinks } from "@/routing/routing.constants.ts";
+import Button from "@/shared/ui/Button.tsx";
 
 import { NavLink } from "react-router-dom";
-
-import Button from "../atom/Button.tsx";
 
 const Header = () => {
   return (

@@ -1,5 +1,5 @@
 import CalendarBlank from "@/assets/vectors/CalendarBlank.svg?react";
-import { formatDate } from "@/util/date.util.ts";
+import { formatDate } from "@/utils/date.util.ts";
 
 interface Props {
   image: string;

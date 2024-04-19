@@ -1,4 +1,4 @@
-import HomePage from "@/pages/HomePage.tsx";
+import HomePage from "@/pages/home/HomePage.tsx";
 
 export enum RoutePaths {
   Home = "/",

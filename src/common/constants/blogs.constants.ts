@@ -1,4 +1,4 @@
-const blogsConstant = [
+export const blogsConstants = [
   {
     id: 1,
     description: "Your Business safeakjsdknjsadnjkadsjkn",
@@ -14,5 +14,3 @@ const blogsConstant = [
       "https://s3-alpha-sig.figma.com/img/fa7a/2cef/f1c7c06bafdd16244024bdb913527910?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=CboCJ5KQ3MFhJXXKwcla7SbMG79PFNU0aXj4tTap5hntnAYIhekkHRraU1y6qFuZWWpSMn0Ac8A54v~lsHU7WExct~TGvYlVAgXww2GidFk~pJT-CDl7rXCS3g7BmV~8cp2pgaHYsjNkOIPWIroBYhZoOHKOdHd~fPJLjx6EY6dZmeOerkXsCrgdYWTZRvLI7Uxu5fPgBuMyCsC5umAD3Q726WCMYyuyPhgMqmQremvDTwu6UIZNhBoqOsXkxzYCiaktQhvXvMeobmLD4QV008slj~3iULjd7-XWFPuYvjeiRwGgTdasTOv-oPkNn~EgF-f6IZbva27W1Xj926klPQ__",
   },
 ];
-
-export default blogsConstant;

@@ -1,6 +1,6 @@
 import Pointer from "@/assets/vectors/Pointer.svg?react";
-import Button from "@/atom/Button.tsx";
-import { EButtonVariant } from "@/types/variant.types.ts";
+import Button from "@/shared/ui/Button.tsx";
+import { ButtonVariant } from "@/types/variant.types.ts";
 
 const RequestQuoteSection = () => {
   return (
@@ -11,7 +11,7 @@ const RequestQuoteSection = () => {
         </p>
         <Pointer className="md:rotate-0 md:scale-100 xs:rotate-[130deg] xs:scale-[.6]" />
       </div>
-      <Button variant={EButtonVariant.Outlined}>Request a Quote</Button>
+      <Button variant={ButtonVariant.Outlined}>Request a Quote</Button>
     </section>
   );
 };

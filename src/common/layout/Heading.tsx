@@ -1,5 +1,5 @@
-import Button from "@/atom/Button.tsx";
-import Header from "@/molecules/Header.tsx";
+import Header from "@/common/layout/Header.tsx";
+import Button from "@/shared/ui/Button.tsx";
 
 const Heading = () => {
   return (

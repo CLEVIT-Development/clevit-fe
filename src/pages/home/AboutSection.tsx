@@ -1,7 +1,7 @@
-import Section from "@/templates/Section.tsx";
+import Section from "@/common/templates/Section.tsx";
 
 const AboutSection = () => (
-  <Section title={"Who We Are"}>
+  <Section title="Who We Are">
     <p className="text-md font-normal xs:text-left md:text-center xs:max-w-full max-w-[80%]">
       As a leading web and mobile app development company, Clevit empowers businesses across all
       sectors to unlock their full digital potential. Our team of skilled web app developers

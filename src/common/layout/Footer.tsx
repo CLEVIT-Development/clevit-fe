@@ -1,8 +1,8 @@
-import RecentPost from "@/atom/RecentPost.tsx";
-import blogsConstant from "@/constants/blogs.constant.ts";
-import contactsConstant from "@/constants/contacts.constant.ts";
-import socialLinksConstant from "@/constants/socials.constant.ts";
-import { getFullYear } from "@/util/date.util.ts";
+import { blogsConstants } from "@/common/constants/blogs.constants.ts";
+import { contactsConstants } from "@/common/constants/contacts.constants.ts";
+import { socialLinksConstants } from "@/common/constants/socials.constants.ts";
+import RecentPost from "@/shared/ui/RecentPost.tsx";
+import { getFullYear } from "@/utils/date.util.ts";
 
 import { Link } from "react-router-dom";
 
@@ -17,7 +17,7 @@ const Footer = () => {
             all sectors to unlock their full digital potential.
           </p>
           <div className="flex space-x-4 mt-6">
-            {socialLinksConstant.map(({ id, link, Icon }) => (
+            {socialLinksConstants.map(({ id, link, Icon }) => (
               <Link key={id} to={link} target="_blank">
                 <Icon />
               </Link>
@@ -32,7 +32,7 @@ const Footer = () => {
         </div>
         <div className="flex flex-col space-y-4">
           <h6 className="font-bold text-white opacity-60">Contact Us</h6>
-          {contactsConstant.map(({ id, text, link, Element }) => (
+          {contactsConstants.map(({ id, text, link, Element }) => (
             <div key={id} className="flex items-center space-x-2">
               <Element className="size-6" />
               <Link to={link} className="text-gray100 font-medium whitespace-nowrap">
@@ -43,7 +43,7 @@ const Footer = () => {
         </div>
         <div className="flex flex-col space-y-4">
           <h6 className="font-bold text-white opacity-60">Recent Posts</h6>
-          {blogsConstant.map((blog) => (
+          {blogsConstants.map((blog) => (
             <RecentPost
               key={blog.id}
               image={blog.image}

@@ -1,4 +1,4 @@
-import { EButtonVariant } from "@/types/variant.types.ts";
+import { ButtonVariant } from "@/types/variant.types.ts";
 
 import { forwardRef } from "react";
 import type { ComponentPropsWithoutRef, LegacyRef, ReactNode } from "react";
@@ -8,17 +8,17 @@ import { twMerge } from "tailwind-merge";
 interface Props extends Omit<ComponentPropsWithoutRef<"button">, "prefix"> {
   prefix?: ReactNode;
   suffix?: ReactNode;
-  variant?: EButtonVariant;
+  variant?: ButtonVariant;
 }
 
 const Button = forwardRef(
   (
-    { children, className, prefix, suffix, variant = EButtonVariant.Primary, ...props }: Props,
+    { children, className, prefix, suffix, variant = ButtonVariant.Primary, ...props }: Props,
     ref: LegacyRef<HTMLButtonElement>
   ) => {
     const buttonVariantStyle = {
-      [EButtonVariant.Primary]: "bg-blue200 bg-purple300",
-      [EButtonVariant.Outlined]: "bg-transparent border border-white",
+      [ButtonVariant.Primary]: "bg-blue200 bg-purple300",
+      [ButtonVariant.Outlined]: "bg-transparent border border-white",
     };
 
     return (

@@ -1,4 +1,4 @@
-import useWindowSize from "@/hooks/useWindowSize.ts";
+import useWindowSize from "@/common/hooks/useWindowSize.ts";
 
 import { useCallback, useState } from "react";
 

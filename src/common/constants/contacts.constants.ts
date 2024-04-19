@@ -1,7 +1,7 @@
 import Envelope from "@/assets/vectors/Envelope.svg?react";
 import Telephone from "@/assets/vectors/Telephone.svg?react";
 
-const contactsConstant = [
+export const contactsConstants = [
   {
     id: 1,
     text: "info@clevit.com",
@@ -15,5 +15,3 @@ const contactsConstant = [
     Element: Telephone,
   },
 ];
-
-export default contactsConstant;

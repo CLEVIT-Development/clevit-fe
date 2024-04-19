@@ -5,16 +5,16 @@ import ReactIcon from "@/assets/vectors/React.svg?react";
 import TailwindCSSIcon from "@/assets/vectors/Tailwind.svg?react";
 import ViteIcon from "@/assets/vectors/Vite.svg?react";
 import VueIcon from "@/assets/vectors/Vue.svg?react";
-import type { INavigationData } from "@/atom/Navigation.tsx";
+import type { INavigationData } from "@/shared/ui/Navigation.tsx";
 
-export const technologyTabsConstant: INavigationData[] = [
+export const technologyTabsConstants: INavigationData[] = [
   { id: 1, title: "Front-End Development" },
   { id: 2, title: "Mobile App Development" },
   { id: 3, title: "Back-End Development" },
   { id: 4, title: "Database Management" },
 ];
 
-export const technologiesConstant = {
+export const technologiesConstants = {
   1: [
     { id: 1, title: "React.js", Icon: ReactIcon },
     { id: 2, title: "Vue.js", Icon: VueIcon },

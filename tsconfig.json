@@ -20,17 +20,7 @@
     "jsx": "react-jsx",
     "baseUrl": "./src",
     "paths": {
-      "@/assets/*": ["assets/*"],
-      "@/routing/*": ["app/routing/*"],
-      "@/templates/*": ["templates/*"],
-      "@/hooks/*": ["hooks/*"],
-      "@/types/*": ["types/*"],
-      "@/atom/*": ["components/atom/*"],
-      "@/molecules/*": ["components/molecules/*"],
-      "@/organism/*": ["components/organism/*"],
-      "@/util/*": ["util/*"],
-      "@/pages/*": ["pages/*"],
-      "@/constants/*": ["constants/*"]
+      "@/*": ["*"],
     },
     /* Linting */
     "strict": true,

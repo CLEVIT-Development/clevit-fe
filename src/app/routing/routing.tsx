@@ -1,4 +1,4 @@
-import { routerElements } from "@/routing/routing.constants.ts";
+import { routerElements } from "@/app/routing/routing.constants.ts";
 
 import {
   Navigate,
