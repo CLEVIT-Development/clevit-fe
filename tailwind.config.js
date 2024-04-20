@@ -12,6 +12,7 @@ export default {
         "gray-100": "#55606A",
         "gray-200": "#314252",
         "gray-300": "#F8F7FD",
+        "gray-400": "#E5E5E5",
       },
       animation: {
         swipeRight: "swipeRightKeyframe 0.5s",
@@ -62,7 +63,10 @@ export default {
         },
       },
       boxShadow: {
-        base: "0 8px 10px 0 #00000012",
+        "base-100": "0 8px 10px 0 #00000012",
+        "base-200": "0 8px 10px 0 #0000001A",
+        "thick-100": "0 0 0 5px #7033914D",
+        "thick-200": "0 0 0 10px #7033914D",
       },
       screens: {
         xs: "270px",

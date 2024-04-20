@@ -1,24 +1,35 @@
+import { NavLink } from "react-router-dom";
+
 import { headerMenuLinks } from "@/app/routing/routing.constants.ts";
 import Logo from "@/assets/vectors/Logo.svg?react";
 import Messages from "@/assets/vectors/Messages.svg?react";
+import useResponsive from "@/common/hooks/useResponsive.ts";
 import Button from "@/shared/ui/Button.tsx";
 
-import { NavLink } from "react-router-dom";
-
 const Header = () => {
+  const { isDesktop } = useResponsive();
+
   return (
     <header className="flex justify-between items-center">
-      <Logo />
-      <div className="flex space-x-4">
-        <nav className="flex items-center space-x-5">
-          {headerMenuLinks.map((headerMenuLink) => (
-            <NavLink key={headerMenuLink.id} to={headerMenuLink.link} className="text-white">
-              {headerMenuLink.label}
-            </NavLink>
-          ))}
-        </nav>
-        <Button prefix={<Messages />}>Let's Talk</Button>
-      </div>
+      <Logo className="md:w-auto md:h-auto xs:w-16 xs:h-[30px]" />
+      {isDesktop ? (
+        <div className="flex flex-col space-y-[5px]">
+          <div className="w-8 h-1 bg-gray-400 rounded-lg" />
+          <div className="w-8 h-1 bg-gray-400 rounded-lg" />
+          <div className="w-8 h-1 bg-gray-400 rounded-lg" />
+        </div>
+      ) : (
+        <div className="flex space-x-4">
+          <nav className="flex items-center space-x-5">
+            {headerMenuLinks.map((headerMenuLink) => (
+              <NavLink key={headerMenuLink.id} to={headerMenuLink.link} className="text-white">
+                {headerMenuLink.label}
+              </NavLink>
+            ))}
+          </nav>
+          <Button prefix={<Messages />}>Let's Talk</Button>
+        </div>
+      )}
     </header>
   );
 };

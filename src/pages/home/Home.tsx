@@ -1,6 +1,6 @@
 import Layout from "@/common/layout/Layout.tsx";
-import Section from "@/common/templates/Section.tsx";
 import AboutSection from "@/pages/home/AboutSection.tsx";
+import ProcessSection from "@/pages/home/ProcessSection.tsx";
 import RequestQuoteSection from "@/pages/home/RequestQuoteSection.tsx";
 import ServiceSection from "@/pages/home/ServiceSection.tsx";
 import TechnologySection from "@/pages/home/TechnologySection.tsx";
@@ -13,9 +13,7 @@ const Home = () => {
         <ServiceSection />
         <RequestQuoteSection />
         <TechnologySection />
-        <Section title={"Processes We Follow"}>
-          <p>asd</p>
-        </Section>
+        <ProcessSection />
       </div>
     </Layout>
   );

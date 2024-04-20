@@ -14,7 +14,7 @@ const ServiceCard = ({ icon, order, title, description, className }: Props) => {
   return (
     <div
       className={twMerge(
-        "p-6 rounded-lg sm:shadow-base transition-all duration-500 sm:hover:scale-105 max-w-[430px]",
+        "p-6 rounded-lg sm:shadow-base-100 transition-all duration-500 sm:hover:scale-105 max-w-[430px]",
         className
       )}
     >

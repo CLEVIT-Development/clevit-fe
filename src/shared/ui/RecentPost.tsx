@@ -1,5 +1,5 @@
 import CalendarBlank from "@/assets/vectors/CalendarBlank.svg?react";
-import { formatDate } from "@/utils/date.util.ts";
+import { formatDate } from "@/utils/date.utils.ts";
 
 interface Props {
   image: string;
@@ -10,7 +10,7 @@ interface Props {
 const RecentPost = ({ image, date, description }: Props) => {
   return (
     <div className="flex space-x-2">
-      <img src={image} alt="Recent Post Image" className="w-[54px] h-[52px]" />
+      <img src={image} alt="Recent Post Image" className="w-[54px] h-[52px] rounded" />
       <div className="flex flex-col space-y-1">
         <p className="flex items-center space-x-1">
           <CalendarBlank />
