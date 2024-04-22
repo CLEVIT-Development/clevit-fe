@@ -5,11 +5,10 @@ const useResponsive = () => {
 
   return {
     isMobile: width <= 768,
-    isDesktop: width <= 1024,
-    isLarge: width <= 1260,
-    isExtraLarge: width <= 1440,
-    isExtraLarge2: width <= 1600,
-    isExtraLarge3: width <= 2056,
+    isTablet: width <= 1024,
+    isDesktop: width <= 1260,
+    isLarge: width <= 1440,
+    isExtraLarge: width <= 1600,
   };
 };
 

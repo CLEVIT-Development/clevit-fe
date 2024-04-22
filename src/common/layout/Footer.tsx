@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 
-import Copyright from "@/assets/vectors/Copyright.svg?react";
 import { blogsConstants } from "@/common/constants/blogs.constants.ts";
 import { contactsConstants } from "@/common/constants/contacts.constants.ts";
 import { socialLinksConstants } from "@/common/constants/socials.constants.ts";
@@ -69,7 +68,7 @@ const Footer = () => {
           </Link>
         </div>
         <p className="flex items-center space-x-0.5 text-xs text-gray-100">
-          <Copyright />
+          <span className="text-base font-semibold leading-[12px] opacity-60">&copy;</span>
           <span className="text-xs text-gray-100 opacity-60">{getFullYear()} Clevit</span>
         </p>
       </div>
