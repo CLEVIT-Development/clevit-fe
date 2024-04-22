@@ -8,7 +8,7 @@ import TechnologySection from "@/pages/home/TechnologySection.tsx";
 const Home = () => {
   return (
     <Layout>
-      <div className="flex flex-col space-y-24">
+      <div className="flex flex-col lg:space-y-24 xs:space-y-12">
         <AboutSection />
         <ServiceSection />
         <RequestQuoteSection />

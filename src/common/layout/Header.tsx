@@ -22,7 +22,11 @@ const Header = () => {
         <div className="flex space-x-4">
           <nav className="flex items-center space-x-5">
             {headerMenuLinks.map((headerMenuLink) => (
-              <NavLink key={headerMenuLink.id} to={headerMenuLink.link} className="text-white">
+              <NavLink
+                key={headerMenuLink.id}
+                to={headerMenuLink.link}
+                className="text-white text-md"
+              >
                 {headerMenuLink.label}
               </NavLink>
             ))}

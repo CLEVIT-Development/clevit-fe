@@ -14,11 +14,9 @@ const RecentPost = ({ image, date, description }: Props) => {
       <div className="flex flex-col space-y-1">
         <p className="flex items-center space-x-1">
           <CalendarBlank />
-          <span className="text-white font-medium">{formatDate(date)}</span>
+          <span className="text-white text-sm font-medium">{formatDate(date)}</span>
         </p>
-        <p className="max-w-[142px] font-medium truncate text-white whitespace-nowrap">
-          {description}
-        </p>
+        <p className="max-w-[142px] truncate text-sm text-white whitespace-nowrap">{description}</p>
       </div>
     </div>
   );
