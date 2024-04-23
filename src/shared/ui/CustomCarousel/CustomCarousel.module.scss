@@ -1,0 +1,13 @@
+.container {
+  > div {
+    border-radius: 10px;
+  }
+
+  .control-dots {
+    background-color: red;
+  }
+
+  li > * {
+    //min-height: 615px;
+  }
+}

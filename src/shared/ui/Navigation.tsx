@@ -32,19 +32,19 @@ const getDirectionFromTab = (currTabId: number, clickTabId: number, isDesktopEnd
 };
 
 const Navigation = ({ items, onItemClick }: Props) => {
-  const { isDesktop } = useResponsive();
+  const { isTablet } = useResponsive();
 
   const [activeTab, setActiveTab] = useState(1);
 
   const onNavItemClickHandler = useCallback(
     (currTabId: number) => {
-      const direction = getDirectionFromTab(activeTab, currTabId, isDesktop);
+      const direction = getDirectionFromTab(activeTab, currTabId, isTablet);
 
       setActiveTab(currTabId);
 
       onItemClick?.(currTabId, direction);
     },
-    [activeTab, isDesktop, onItemClick]
+    [activeTab, isTablet, onItemClick]
   );
 
   return (

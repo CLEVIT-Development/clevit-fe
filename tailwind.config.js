@@ -7,12 +7,14 @@ export default {
         "purple-100": "#703391",
         "purple-200": "#7033911A",
         "purple-300": "#4f1d85",
+        "purple-400": "#E51DFF",
         "blue-100": "#0E59F2",
         "blue-200": "#1404CE",
         "gray-100": "#55606A",
         "gray-200": "#314252",
         "gray-300": "#F8F7FD",
         "gray-400": "#E5E5E5",
+        "gray-500": "#FAFAFA",
       },
       animation: {
         swipeRight: "swipeRightKeyframe 0.5s",
@@ -84,6 +86,7 @@ export default {
       backgroundImage: {
         quoteGradient: "linear-gradient(88.98deg, #9B3B94 0.87%, #210F2B 79.26%)",
         headingGradient: "linear-gradient(254.76deg, #9B3B94 -12.62%, #000000 51%)",
+        projectGradient: "linear-gradient(108.79deg, #0A0240 28.15%, rgba(10, 2, 64, 0.8) 93.01%)",
       },
       fontSize: {
         xs: [

@@ -1,9 +1,11 @@
 import Layout from "@/common/layout/Layout.tsx";
 import AboutSection from "@/pages/home/AboutSection.tsx";
-import ProcessSection from "@/pages/home/ProcessSection.tsx";
 import RequestQuoteSection from "@/pages/home/RequestQuoteSection.tsx";
 import ServiceSection from "@/pages/home/ServiceSection.tsx";
 import TechnologySection from "@/pages/home/TechnologySection.tsx";
+
+import FeedbackSection from "./Feedback/FeedbackSection";
+import ProjectSection from "./Project/ProjectSection";
 
 const Home = () => {
   return (
@@ -13,7 +15,9 @@ const Home = () => {
         <ServiceSection />
         <RequestQuoteSection />
         <TechnologySection />
-        <ProcessSection />
+        {/*<ProcessSection />*/}
+        <ProjectSection />
+        <FeedbackSection />
       </div>
     </Layout>
   );

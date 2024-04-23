@@ -1,0 +1,61 @@
+import { useCallback } from "react";
+import AliceCarousel from "react-alice-carousel";
+
+import { twMerge } from "tailwind-merge";
+
+import { feedbacksConstants } from "@/common/constants/feedbacks.constants";
+import useResponsive from "@/common/hooks/useResponsive";
+import useWindowSize from "@/common/hooks/useWindowSize";
+import Section from "@/common/templates/Section";
+
+import "./Feedback.css";
+
+const FeedbackSection = () => {
+  const { width } = useWindowSize();
+  const { isTablet } = useResponsive();
+
+  const feedbacksData = useCallback(
+    (className?: string) =>
+      feedbacksConstants.map(({ id, companyLogo, description, author, position }) => {
+        return (
+          <div
+            key={id}
+            className={twMerge(
+              "bg-white shadow-base-200 rounded-[10px] min-h-[600px] flex flex-col justify-between items-start px-4 desktop:pt-8 xs:pt-5 pb-6",
+              className
+            )}
+          >
+            <div className="flex flex-col md:space-y-8 xs:space-y-6">
+              <div className="flex items-center max-w-[200px] h-[122px]">
+                <img src={companyLogo} />
+              </div>
+              <p className="md:text-base xs:text-sm text-gray-200 text-left">{description}</p>
+            </div>
+            <div className="flex flex-col items-start">
+              <p className="text-gray-200 text-base font-semibold">{author}</p>
+              <p className="text-gray-200 opacity-60 md:text-base xs:text-sm">{position}</p>
+            </div>
+          </div>
+        );
+      }),
+    []
+  );
+
+  return (
+    <Section title="What People Say" className="bg-gray-500 py-12x xl:-mx-20 lg:-mx-16 xs:-mx-5">
+      <div className="w-full desktop:px-20 xs:px-5 py-12" style={{ maxWidth: `${width - 20}px` }}>
+        {feedbacksConstants.length > 3 || isTablet ? (
+          <AliceCarousel
+            responsive={{ 0: { items: 1 } }}
+            disableButtonsControls
+            items={feedbacksData()}
+          />
+        ) : (
+          <div className="flex space-x-4">{feedbacksData("flex-1 max-w-[410px]")}</div>
+        )}
+      </div>
+    </Section>
+  );
+};
+
+export default FeedbackSection;
