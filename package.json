@@ -9,7 +9,8 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "precommit": "lint-staged",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "audit": "yarn run audit-ci --config ./audit-ci.json"
   },
   "lint-staged": {
     "**/*": [
@@ -22,6 +23,7 @@
     }
   },
   "dependencies": {
+    "audit-ci": "^6.6.1",
     "classnames": "^2.5.1",
     "react": "^18.2.0",
     "react-alice-carousel": "^2.9.1",
