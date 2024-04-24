@@ -5,13 +5,11 @@ import { twMerge } from "tailwind-merge";
 
 import { feedbacksConstants } from "@/common/constants/feedbacks.constants";
 import useResponsive from "@/common/hooks/useResponsive";
-import useWindowSize from "@/common/hooks/useWindowSize";
 import Section from "@/common/templates/Section";
 
 import "./Feedback.css";
 
 const FeedbackSection = () => {
-  const { width } = useWindowSize();
   const { isTablet } = useResponsive();
 
   const feedbacksData = useCallback(
@@ -42,8 +40,8 @@ const FeedbackSection = () => {
   );
 
   return (
-    <Section title="What People Say" className="bg-gray-500 py-12x xl:-mx-20 lg:-mx-16 xs:-mx-5">
-      <div className="w-full desktop:px-20 xs:px-5 py-12" style={{ maxWidth: `${width - 20}px` }}>
+    <Section title="What People Say" className="bg-gray-500 py-12 xl:-mx-20 lg:-mx-16 xs:-mx-5">
+      <div className="w-full desktop:px-20 xs:px-5 py-12 max-w-[calc(100vw-20px)]">
         {feedbacksConstants.length > 3 || isTablet ? (
           <AliceCarousel
             responsive={{ 0: { items: 1 } }}
@@ -51,7 +49,7 @@ const FeedbackSection = () => {
             items={feedbacksData()}
           />
         ) : (
-          <div className="flex space-x-4">{feedbacksData("flex-1 max-w-[410px]")}</div>
+          <div className="w-full flex space-x-4">{feedbacksData("flex-1 max-w-[410px]")}</div>
         )}
       </div>
     </Section>

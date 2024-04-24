@@ -4,4 +4,8 @@
 
 .alice-carousel__stage-item {
   width: 100% !important;
+
+  @media screen and (max-width: 768px) {
+    margin: 0 -40px;
+  }
 }
