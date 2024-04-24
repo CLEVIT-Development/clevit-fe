@@ -7,11 +7,14 @@ export default {
         "purple-100": "#703391",
         "purple-200": "#7033911A",
         "purple-300": "#4f1d85",
+        "purple-400": "#E51DFF",
         "blue-100": "#0E59F2",
         "blue-200": "#1404CE",
         "gray-100": "#55606A",
         "gray-200": "#314252",
         "gray-300": "#F8F7FD",
+        "gray-400": "#E5E5E5",
+        "gray-500": "#FAFAFA",
       },
       animation: {
         swipeRight: "swipeRightKeyframe 0.5s",
@@ -62,7 +65,10 @@ export default {
         },
       },
       boxShadow: {
-        base: "0 8px 10px 0 #00000012",
+        "base-100": "0 8px 10px 0 #00000012",
+        "base-200": "0 8px 10px 0 #0000001A",
+        "thick-100": "0 0 0 5px #7033914D",
+        "thick-200": "0 0 0 10px #7033914D",
       },
       screens: {
         xs: "270px",
@@ -79,42 +85,71 @@ export default {
       },
       backgroundImage: {
         quoteGradient: "linear-gradient(88.98deg, #9B3B94 0.87%, #210F2B 79.26%)",
-        headingGradient: "linear-gradient(250.07deg, #9B3B94 14.33%, #000000 43.64%)",
+        headingGradient: "linear-gradient(254.76deg, #9B3B94 -12.62%, #000000 51%)",
+        projectGradient: "linear-gradient(108.79deg, #0A0240 28.15%, rgba(10, 2, 64, 0.8) 93.01%)",
       },
       fontSize: {
         xs: [
           "12px",
           {
-            lineHeight: "150%",
-            fontWeight: "400",
+            lineHeight: "14px",
+            fontWeight: "500",
           },
         ],
         sm: [
           "14px",
           {
-            lineHeight: "150%",
+            lineHeight: "21px",
             fontWeight: "400",
           },
         ],
         base: [
           "16px",
           {
-            lineHeight: "150%",
+            lineHeight: "24px",
             fontWeight: "400",
           },
         ],
         md: [
           "18px",
           {
-            lineHeight: "150%",
-            fontWeight: "700",
+            lineHeight: "27px",
+            fontWeight: "500",
+          },
+        ],
+        "md-l": [
+          "20px",
+          {
+            lineHeight: "30px",
+            fontWeight: "600",
+          },
+        ],
+        lg: [
+          "24px",
+          {
+            lineHeight: "36px",
+            fontWeight: "400",
           },
         ],
         xl: [
-          "18px",
+          "32px",
           {
-            lineHeight: "150%",
+            lineHeight: "48px",
+            fontWeight: "600",
+          },
+        ],
+        "2xl": [
+          "36px",
+          {
+            lineHeight: "54px",
             fontWeight: "700",
+          },
+        ],
+        "3xl": [
+          "45px",
+          {
+            lineHeight: "68px",
+            fontWeight: "600",
           },
         ],
       },
@@ -122,6 +157,3 @@ export default {
   },
   plugins: [],
 };
-
-// @TODO: add font size config
-// 3xl, 2xl, xl, lg, md, base, sm, xs

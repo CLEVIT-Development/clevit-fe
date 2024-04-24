@@ -1,21 +1,61 @@
+@import "react-alice-carousel/lib/alice-carousel.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-    font-family: Poppins, sans-serif;
+  font-family: Poppins, sans-serif;
 }
 
 body {
-    @apply m-0;
-    @apply p-0;
-    @apply flex;
-    @apply box-border;
+  @apply m-0;
+  @apply p-0;
+  @apply flex;
+  @apply box-border;
 }
 
 .button-prefix-suffix {
-    > svg {
-        @apply w-full;
-        @apply h-full;
-    }
+  > svg {
+    @apply w-full;
+    @apply h-full;
+  }
+}
+
+.alice-carousel {
+  position: relative;
+  width: 100%;
+}
+
+.alice-carousel__prev-btn,
+.alice-carousel__next-btn {
+  padding: 0;
+  display: block;
+  width: 12px;
+  height: 24px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.alice-carousel__prev-btn {
+  left: 20px;
+}
+
+.alice-carousel__next-btn {
+  right: 20px;
+}
+
+.alice-carousel__wrapper {
+  border-radius: 16px;
+}
+
+.alice-carousel__stage {
+  gap: 10px;
+  display: flex;
+}
+
+.alice-carousel__stage-item {
+  flex: 1 0 auto;
 }
