@@ -21,7 +21,7 @@ const TechnologySection = () => {
   return (
     <Section
       title="Technologies We Use"
-      className="bg-gray-300 desktop:py-12 desktop:px-[26px] md:mx-0 xs:-mx-5 xs:py-5 xs:px-[24px] rounded-[10px] space-y-9"
+      className="bg-gray-300 desktop:py-12 desktop:px-[26px] md:mx-0 xs:-mx-5 xs:py-5 xs:px-[24px] rounded-[10px] space-y-9 overflow-hidden"
     >
       <div className="flex flex-col items-center space-y-[58px] w-full">
         <Navigation items={technologyTabsConstants} onItemClick={onTabItemClickHandler} />

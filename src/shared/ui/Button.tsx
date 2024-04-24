@@ -25,7 +25,7 @@ const Button = forwardRef(
       <button
         ref={ref}
         className={twMerge(
-          `flex space-x-2 items-center rounded-lg px-6 py-3 outline-none ${buttonVariantStyle[variant]}`,
+          `flex space-x-2 items-center rounded-lg px-6 py-3 focus:outline-none ${buttonVariantStyle[variant]}`,
           className
         )}
         {...props}

@@ -13,7 +13,7 @@ const ServiceSection = () => (
           icon={<Icon />}
           description={description}
           className="shadow-none"
-          order={orderUtils(index)}
+          order={orderUtils(index + 1)}
         />
       ))}
     </div>

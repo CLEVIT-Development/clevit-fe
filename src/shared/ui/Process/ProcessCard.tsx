@@ -21,7 +21,7 @@ const ProcessCard = ({ order, title, icon, className }: Props) => {
         {icon}
         <p className="text-gray-200 text-md text-center">{title}</p>
       </div>
-      <div className="transition-all duration-500 absolute top-0 -translate-y-1/2 shadow-thick-100 group-hover:shadow-thick-200  size-[52px] bg-purple-100 rounded-full flex items-center justify-center">
+      <div className="transition-all duration-500 absolute top-0 -translate-y-1/2 shadow-thick-100 group-hover:shadow-thick-200 size-[52px] bg-purple-100 rounded-full flex items-center justify-center">
         <span className="text-white text-[26px] leading-[39px] font-semibold">{order}</span>
       </div>
     </div>
