@@ -1,5 +1,0 @@
-.alice-carousel__dots {
-  @media screen and (min-width: 1024px) {
-    display: none;
-  }
-}

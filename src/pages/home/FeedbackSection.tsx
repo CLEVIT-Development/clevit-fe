@@ -7,8 +7,6 @@ import { feedbacksConstants } from "@/common/constants/feedbacks.constants";
 import useResponsive from "@/common/hooks/useResponsive";
 import Section from "@/common/templates/Section";
 
-import "./Feedback.css";
-
 const FeedbackSection = () => {
   const { isTablet } = useResponsive();
 

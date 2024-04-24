@@ -4,7 +4,7 @@ import RequestQuoteSection from "@/pages/home/RequestQuoteSection.tsx";
 import ServiceSection from "@/pages/home/ServiceSection.tsx";
 import TechnologySection from "@/pages/home/TechnologySection.tsx";
 
-import FeedbackSection from "./Feedback/FeedbackSection";
+import FeedbackSection from "./FeedbackSection";
 import ProjectSection from "./Project/ProjectSection";
 
 const Home = () => {
