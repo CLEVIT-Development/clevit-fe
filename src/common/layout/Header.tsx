@@ -1,4 +1,4 @@
-import type { LegacyRef } from "react";
+import type { ForwardedRef } from "react";
 import { forwardRef } from "react";
 import { NavLink } from "react-router-dom";
 
@@ -14,7 +14,7 @@ interface Props {
   isReached: boolean;
 }
 
-const Header = forwardRef(({ isReached }: Props, ref: LegacyRef<HTMLDivElement>) => {
+const Header = forwardRef(({ isReached }: Props, ref: ForwardedRef<HTMLDivElement>) => {
   return (
     <header className="w-full flex justify-between items-center fixed top-0 z-[20] backdrop-blur-[4px] desktop:px-20 desktop:py-11 xs:px-5 xs:py-4">
       <Logo className="md:w-auto md:h-auto xs:w-16 xs:h-[30px]" />
