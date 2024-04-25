@@ -1,11 +1,11 @@
 :root {
   --color-bg1: #000000;
   --color-bg2: #000000;
-  --color1: 137, 20, 128;
-  --color2: 182, 29, 171;
-  --color3: 200, 27, 187;
-  --color4: 239, 35, 225;
-  --color5: 255, 69, 245;
+  --color1: 117, 44, 111;
+  --color2: 96, 36, 91;
+  --color3: 0, 0, 0;
+  --color4: 119, 25, 112;
+  --color5: 94, 19, 88;
   --color-interactive: 137, 20, 128;
   --circle-size: 80%;
   --blending: hard-light;
