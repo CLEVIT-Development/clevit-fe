@@ -74,7 +74,7 @@ export const Gradient = forwardRef<HTMLDivElement, Props>(({ children, ...defaul
   return (
     <div ref={ref} {...defaultProps} className="w-full" style={{ height: `${height}px` }}>
       <div className={styles.gradientBackground}>
-        <div className="absolute top-0 left-0 z-10">
+        <div className="absolute top-0 left-0 z-10 w-full">
           <div ref={contentRef}>{children}</div>
           <svg xmlns="http://www.w3.org/2000/svg" className="hidden">
             <defs>

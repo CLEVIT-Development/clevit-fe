@@ -16,7 +16,7 @@ body {
   @apply overscroll-none;
 }
 
-.button-prefix-suffix {
+.svg-full {
   > svg {
     @apply w-full;
     @apply h-full;
@@ -36,7 +36,7 @@ body {
   height: 24px;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-100%);
   cursor: pointer;
 }
 

@@ -25,14 +25,14 @@ const Button = forwardRef(
       <button
         ref={ref}
         className={twMerge(
-          `flex space-x-2 items-center rounded-lg px-6 py-3 focus:outline-none ${buttonVariantStyle[variant]}`,
+          `flex space-x-2 items-center rounded-lg px-6 py-3 outline-none focus:outline-none ${buttonVariantStyle[variant]}`,
           className
         )}
         {...props}
       >
-        {prefix ? <div className="w-6 h-6 button-prefix-suffix">{prefix}</div> : null}
+        {prefix ? <div className="w-6 h-6 svg-full">{prefix}</div> : null}
         <span className="text-white font-medium text-md-l">{children}</span>
-        {suffix ? <div className="w-6 h-6 button-prefix-suffix">{suffix}</div> : null}
+        {suffix ? <div className="w-6 h-6 svg-full">{suffix}</div> : null}
       </button>
     );
   }

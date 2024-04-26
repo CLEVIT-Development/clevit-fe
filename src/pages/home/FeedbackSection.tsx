@@ -39,10 +39,10 @@ const FeedbackSection = () => {
 
   return (
     <Section title="What People Say" className="bg-gray-500 py-12 xl:-mx-20 lg:-mx-16 xs:-mx-5">
-      <div className="w-full desktop:px-20 xs:px-5 py-12 max-w-[calc(100vw-20px)]">
+      <div className="w-full lg:px-20 desktop:px-15 xs:px-5 py-12 max-w-[calc(100vw-20px)]">
         {feedbacksConstants.length > 3 || isTablet ? (
           <AliceCarousel
-            responsive={{ 0: { items: 1 } }}
+            responsive={{ 0: { items: 1 }, 1024: { items: 2 } }}
             disableButtonsControls
             items={feedbacksData()}
           />
