@@ -14,6 +14,7 @@ body {
   @apply flex;
   @apply box-border;
   @apply overscroll-none;
+  @apply overflow-x-hidden;
 }
 
 .svg-full {
