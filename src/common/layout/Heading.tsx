@@ -1,29 +1,28 @@
+import type { ForwardedRef } from "react";
+import { forwardRef } from "react";
+
 import Messages from "@/assets/vectors/Messages.svg?react";
-import Header from "@/common/layout/Header.tsx";
 import { Gradient } from "@/shared/gradient/Gradient.tsx";
 import Button from "@/shared/ui/Button.tsx";
 
-const Heading = () => {
+const Heading = forwardRef((_, ref: ForwardedRef<HTMLDivElement>) => {
   return (
-    <Gradient>
-      <div className="desktop:px-20 desktop:pt-11 desktop:pb-20 xs:px-5 xs:pt-4 xs:pb-6 flex flex-col desktop:space-y-[140px] xs:space-y-[76px]">
-        <Header />
-        <div className="flex flex-col items-center text-center">
-          <h1 className="text-white desktop:text-3xl xs:text-lg xs:font-semibold">
-            Web and Mobile App Development Company
-          </h1>
-          <p className="text-white text-center desktop:max-w-[80%] md:text-lg xs:text-base md:mt-4 md:mb-9 xs:mt-6 xs:mb-11">
-            Clevit provides a comprehensive suite of web, mobile, and AI solutions to help your
-            business evolve and fuel innovation.
-          </p>
-          <Button className="xs:visible desktop:invisible" prefix={<Messages />}>
-            Let's Talk
-          </Button>
-          <Button className="xs:invisible desktop:visible">Request a Quote</Button>
-        </div>
+    <Gradient ref={ref}>
+      <div className="flex flex-col items-center text-center desktop:pb-20 desktop:pt-[240px] xs:pb-6 xs:pt-[125px] xs:px-[30px]">
+        <h1 className="text-white desktop:text-3xl xs:text-lg xs:font-semibold">
+          Web and Mobile App Development Company
+        </h1>
+        <p className="text-white text-center desktop:max-w-[80%] desktop:text-lg xs:text-base desktop:mt-4 desktop:mb-9 xs:mt-6 xs:mb-11">
+          Clevit provides a comprehensive suite of web, mobile, and AI solutions to help your
+          business evolve and fuel innovation.
+        </p>
+        <Button className="xs:flex desktop:hidden" prefix={<Messages />}>
+          Let's Talk
+        </Button>
+        <Button className="xs:hidden desktop:flex">Request a Quote</Button>
       </div>
     </Gradient>
   );
-};
+});
 
 export default Heading;

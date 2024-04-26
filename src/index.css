@@ -13,6 +13,7 @@ body {
   @apply p-0;
   @apply flex;
   @apply box-border;
+  @apply overscroll-none;
 }
 
 .button-prefix-suffix {
@@ -58,4 +59,6 @@ body {
 
 .alice-carousel__stage-item {
   flex: 1 0 auto;
+  width: 100% !important;
+  height: auto !important;
 }

@@ -27,7 +27,7 @@ const TechnologySection = () => {
         <Navigation items={technologyTabsConstants} onItemClick={onTabItemClickHandler} />
         <div
           key={currTabId}
-          className={`w-full relative desktop:flex desktop:flex-wrap justify-around desktop:items-stretch xs:grid xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xs:gap-8 desktop:gap-0 ${swipeAnimationConstants[direction as keyof typeof swipeAnimationConstants]}`}
+          className={`w-full relative desktop:overflow-x-auto desktop:gap-0 desktop:flex desktop:space-x-[48px] desktop:items-stretch xs:grid xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xs:gap-8 ${swipeAnimationConstants[direction as keyof typeof swipeAnimationConstants]}`}
         >
           {technologiesConstants[currTabId as keyof typeof technologiesConstants].map(
             ({ id, title, Icon }) => (

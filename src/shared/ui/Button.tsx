@@ -1,5 +1,5 @@
 import { forwardRef } from "react";
-import type { ComponentPropsWithoutRef, LegacyRef, ReactNode } from "react";
+import type { ComponentPropsWithoutRef, ForwardedRef, ReactNode } from "react";
 
 import { twMerge } from "tailwind-merge";
 
@@ -14,7 +14,7 @@ interface Props extends Omit<ComponentPropsWithoutRef<"button">, "prefix"> {
 const Button = forwardRef(
   (
     { children, className, prefix, suffix, variant = ButtonVariant.Primary, ...props }: Props,
-    ref: LegacyRef<HTMLButtonElement>
+    ref: ForwardedRef<HTMLButtonElement>
   ) => {
     const buttonVariantStyle = {
       [ButtonVariant.Primary]: "bg-blue-200 bg-purple-300",
@@ -25,7 +25,7 @@ const Button = forwardRef(
       <button
         ref={ref}
         className={twMerge(
-          `flex space-x-2 items-center rounded-lg px-6 py-3 outline-none ${buttonVariantStyle[variant]}`,
+          `flex space-x-2 items-center rounded-lg px-6 py-3 focus:outline-none ${buttonVariantStyle[variant]}`,
           className
         )}
         {...props}

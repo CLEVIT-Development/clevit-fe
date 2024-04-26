@@ -42,7 +42,7 @@ const ProjectSection = () => {
               }) => (
                 <div
                   key={id}
-                  className="bg-projectGradient flex md:flex-row xs:flex-col md:px-[50px] xs:space-y-[40px] xs:pb-[80px] xs:pt-[36px] xs:px-[20px]"
+                  className="h-full bg-projectGradient flex md:flex-row xs:flex-col md:px-[50px] xs:space-y-[40px] xs:pb-[80px] xs:pt-[36px] xs:px-[20px]"
                 >
                   <div className="flex flex-col justify-start md:space-y-[65px] xs:space-y-[30px]">
                     <div className="flex flex-col space-y-6">
