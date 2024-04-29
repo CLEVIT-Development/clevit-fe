@@ -12,16 +12,14 @@ import ProjectSection from "./Project/ProjectSection";
 const Home = () => {
   return (
     <Layout>
-      <div className="flex flex-col lg:space-y-24 xs:space-y-12">
-        <AboutSection />
-        <ServiceSection />
-        <RequestQuoteSection />
-        <TechnologySection />
-        <ProcessSection />
-        <ProjectSection />
-        <FeedbackSection />
-        <CalendlySection />
-      </div>
+      <AboutSection />
+      <ServiceSection />
+      <RequestQuoteSection />
+      <TechnologySection />
+      <ProcessSection />
+      <ProjectSection />
+      <FeedbackSection />
+      <CalendlySection />
     </Layout>
   );
 };

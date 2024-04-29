@@ -1,5 +1,7 @@
 import { useCallback, useState } from "react";
 
+import classNames from "classnames";
+
 import useResponsive from "@/common/hooks/useResponsive.ts";
 
 export interface INavigationData {
@@ -11,6 +13,7 @@ export interface INavigationData {
 interface Props {
   items: INavigationData[];
   onItemClick?: (tabId: number, direction: string) => void;
+  className?: string;
 }
 
 const getDirectionFromTab = (currTabId: number, clickTabId: number, isDesktopEnd: boolean) => {
@@ -31,7 +34,7 @@ const getDirectionFromTab = (currTabId: number, clickTabId: number, isDesktopEnd
   }
 };
 
-const Navigation = ({ items, onItemClick }: Props) => {
+const Navigation = ({ items, onItemClick, className = "" }: Props) => {
   const { isTablet } = useResponsive();
 
   const [activeTab, setActiveTab] = useState(1);
@@ -48,7 +51,12 @@ const Navigation = ({ items, onItemClick }: Props) => {
   );
 
   return (
-    <nav className="flex lg:space-x-8 desktop:space-x-11 xs:space-x-0 desktop:flex-row xs:w-full xs:px-1.5 xs:flex-col xs:justify-center desktop:space-y-0 xs:space-y-8">
+    <nav
+      className={classNames(
+        "flex lg:space-x-8 desktop:space-x-11 xs:space-x-0 desktop:flex-row xs:w-full xs:px-1.5 xs:flex-col xs:justify-center desktop:space-y-0 xs:space-y-8",
+        className
+      )}
+    >
       {items.map(({ id, title }) => (
         <button
           key={id}

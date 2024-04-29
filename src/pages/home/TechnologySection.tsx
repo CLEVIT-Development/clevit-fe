@@ -4,7 +4,7 @@ import { swipeAnimationConstants } from "@/common/constants/swipeAnimation.const
 import {
   technologiesConstants,
   technologyTabsConstants,
-} from "@/common/constants/technologiesConstants.ts";
+} from "@/common/constants/technologies.constants";
 import Section from "@/common/templates/Section.tsx";
 import Navigation from "@/shared/ui/Navigation.tsx";
 
