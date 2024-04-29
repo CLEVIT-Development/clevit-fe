@@ -48,13 +48,14 @@ const Navigation = ({ items, onItemClick }: Props) => {
   );
 
   return (
-    <nav className="flex lg:space-x-12 desktop:space-x-6 xs:space-x-0 desktop:flex-row xs:w-full xs:px-1.5 xs:flex-col xs:justify-center desktop:space-y-0 xs:space-y-8">
+    <nav className="flex lg:space-x-8 desktop:space-x-11 xs:space-x-0 desktop:flex-row xs:w-full xs:px-1.5 xs:flex-col xs:justify-center desktop:space-y-0 xs:space-y-8">
       {items.map(({ id, title }) => (
         <button
           key={id}
           onClick={() => onNavItemClickHandler(id)}
           className={`
-                    relative font-bold text-md duration-500 whitespace-nowrap outline-none focus:outline-none
+                    relative duration-500 whitespace-nowrap outline-none focus:outline-none
+                    lg:text-md desktop:text-base !font-bold
                     after:transition-all after:absolute after:left-0 after:right-0 after:-bottom-2 after:h-0.5 
                     after:border-purple-100 after:content-['.'] after:text-transparent after:bg-purple-100 
                     ${activeTab === id ? "after:w-full text-purple-100" : "desktop:after:w-0 xs:after:bg-gray-200 xs:after:bg-opacity-40 text-gray-200"}

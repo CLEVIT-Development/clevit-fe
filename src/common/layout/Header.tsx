@@ -6,9 +6,10 @@ import classNames from "classnames";
 import { twMerge } from "tailwind-merge";
 
 import { headerMenuLinks } from "@/app/routing/routing.constants.ts";
-import Logo from "@/assets/vectors/Logo.svg?react";
 import Messages from "@/assets/vectors/Messages.svg?react";
 import Button from "@/shared/ui/Button.tsx";
+import Logo from "@/shared/ui/Logo.tsx";
+import { LogoVariant } from "@/types/variant.types.ts";
 
 interface Props {
   isReached: boolean;
@@ -16,12 +17,31 @@ interface Props {
 
 const Header = forwardRef(({ isReached }: Props, ref: ForwardedRef<HTMLDivElement>) => {
   return (
-    <header className="w-full flex justify-between items-center fixed top-0 z-[20] backdrop-blur-[4px] desktop:px-20 desktop:py-11 xs:px-5 xs:py-4">
-      <Logo className="md:w-auto md:h-auto xs:w-16 xs:h-[30px]" />
+    <header
+      className={classNames(
+        "transition-all duration-500 w-full flex justify-between items-center fixed top-0 z-[20] backdrop-blur-[5px] desktop:px-10 desktop:py-6 xs:px-5 xs:py-4",
+        {
+          ["bg-white shadow-base-200"]: isReached,
+        }
+      )}
+    >
+      <Logo variant={isReached ? LogoVariant.Secondary : LogoVariant.Primary} />
       <div className="flex flex-col space-y-[5px] xs:flex desktop:hidden">
-        <div className="w-8 h-1 bg-gray-400 rounded-lg" />
-        <div className="w-8 h-1 bg-gray-400 rounded-lg" />
-        <div className="w-8 h-1 bg-gray-400 rounded-lg" />
+        <div
+          className={classNames("w-8 h-1 bg-gray-400 rounded-lg", {
+            ["bg-gray-600"]: isReached,
+          })}
+        />
+        <div
+          className={classNames("w-8 h-1 bg-gray-400 rounded-lg", {
+            ["bg-gray-600"]: isReached,
+          })}
+        />
+        <div
+          className={classNames("w-8 h-1 bg-gray-400 rounded-lg", {
+            ["bg-gray-600"]: isReached,
+          })}
+        />
       </div>
       <div ref={ref} className="flex space-x-[28px] xs:hidden desktop:flex">
         <nav className="flex items-center space-x-5">

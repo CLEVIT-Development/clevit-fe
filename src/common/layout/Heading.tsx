@@ -8,7 +8,7 @@ import Button from "@/shared/ui/Button.tsx";
 const Heading = forwardRef((_, ref: ForwardedRef<HTMLDivElement>) => {
   return (
     <Gradient ref={ref}>
-      <div className="flex flex-col items-center text-center desktop:pb-20 desktop:pt-[240px] xs:pb-6 xs:pt-[125px] xs:px-[30px]">
+      <div className="w-full flex flex-col items-center text-center desktop:pb-20 desktop:pt-[240px] xs:pb-6 xs:pt-[125px] xs:px-[30px]">
         <h1 className="text-white desktop:text-3xl xs:text-lg xs:font-semibold">
           Web and Mobile App Development Company
         </h1>

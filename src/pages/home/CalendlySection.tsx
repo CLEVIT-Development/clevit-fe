@@ -7,7 +7,7 @@ const CalendlySection = () => {
   return (
     <Section title="Ready to turn your vision into reality? The journey starts here. We're excited to meet you.">
       <div className="w-full">
-        <InlineWidget url={CalendlyConfig.shareUrl} />
+        <InlineWidget url={CalendlyConfig.shareUrl} styles={{ height: "1100px" }} />
       </div>
     </Section>
   );

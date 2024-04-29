@@ -44,7 +44,7 @@ const Footer = () => {
             </div>
           ))}
         </div>
-        <div className="flex flex-col space-y-4 md:col-auto col-span-3">
+        <div className="flex flex-col space-y-4 md:col-auto lg:ml-auto md:ml-0 col-span-3">
           <h6 className="font-bold lg:text-md-l xs:text-md text-white opacity-60">Recent Posts</h6>
           {blogsConstants.map((blog) => (
             <RecentPost

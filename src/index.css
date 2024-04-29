@@ -14,9 +14,10 @@ body {
   @apply flex;
   @apply box-border;
   @apply overscroll-none;
+  @apply overflow-x-hidden;
 }
 
-.button-prefix-suffix {
+.svg-wrapper {
   > svg {
     @apply w-full;
     @apply h-full;
@@ -36,7 +37,7 @@ body {
   height: 24px;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-100%);
   cursor: pointer;
 }
 

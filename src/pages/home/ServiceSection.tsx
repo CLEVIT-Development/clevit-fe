@@ -1,6 +1,6 @@
 import { serviceCardsConstants } from "@/common/constants/serviceCards.constants.ts";
 import Section from "@/common/templates/Section.tsx";
-import ServiceCard from "@/shared/ui/ServiceCard.tsx";
+import ServiceCard from "@/shared/ui/ServiceCard/ServiceCard";
 import { orderUtils } from "@/utils/order.utils.ts";
 
 const ServiceSection = () => (

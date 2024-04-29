@@ -10,12 +10,12 @@ import Button from "@/shared/ui/Button";
 import "./Project.css";
 
 const ProjectSection = () => {
-  const { isTablet } = useResponsive();
+  const { isMobile } = useResponsive();
 
   return (
     <Section
       title="Web Apps We Developed"
-      className="w-full max-w-[calc(100vw-40px)] md:py-12 xs:py-5"
+      className="w-full lg:max-w-[calc(100vw-128px)] xs:max-w-[calc(100vw-40px)]  md:py-12 xs:py-5 self-center"
     >
       <div className="w-full flex flex-col items-center space-y-5 md:mx-0 xs:-mx-[20px] md:min-w-full xs:min-w-[100vw]">
         <div className="w-full">
@@ -24,7 +24,7 @@ const ProjectSection = () => {
             autoPlayInterval={2500}
             animationDuration={1000}
             responsive={{ 0: { items: 1 } }}
-            disableButtonsControls={isTablet}
+            disableButtonsControls={isMobile}
             renderPrevButton={({ isDisabled }) => !isDisabled && <Arrow />}
             renderNextButton={({ isDisabled }) => !isDisabled && <Arrow className="rotate-180" />}
             items={projectsConstants.map(
@@ -88,7 +88,7 @@ const ProjectSection = () => {
                     <img
                       src={desktopBackground}
                       alt="Desktop Background"
-                      className="desktop:max-w-[616px] desktop:max-h-[387px] xs:max-w-[316px] xs:max-h-[200px]"
+                      className="desktop:max-w-[500px] desktop:max-h-[380px] xs:max-w-[300px] xs:max-h-[190px]"
                     />
                     <img
                       src={mobileBackground}
