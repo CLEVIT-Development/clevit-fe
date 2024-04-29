@@ -1,9 +1,6 @@
 import React from "react";
 
-import classNames from "classnames";
 import { twMerge } from "tailwind-merge";
-
-import styles from "./service.module.css";
 
 interface Props {
   icon: React.ReactNode;
@@ -24,12 +21,11 @@ const ServiceCard = ({ icon, order, title, description, className }: Props) => {
       <div className="flex sm:flex-col justify-between sm:space-x-0 xs:space-x-[15px] sm:items-start xs:items-center sm:space-y-4">
         <div className="sm:w-full xs:w-fit flex items-center justify-between">
           <div
-            className={classNames(
-              "bg-purple-200 rounded-full sm:w-[100px] sm:h-[100px] xs:w-[80px] xs:h-[80px] flex items-center justify-center",
-              styles["svg-mobile"]
-            )}
+            className={
+              "bg-purple-200 rounded-full sm:w-[100px] sm:h-[100px] xs:w-[80px] xs:h-[80px] flex items-center justify-center"
+            }
           >
-            {icon}
+            <div className="h-[50%] svg-wrapper">{icon}</div>
           </div>
           <p className="text-purple-200 text-[80px] leading-[120px] font-bold sm:block xs:hidden">
             {order}

@@ -17,7 +17,7 @@ body {
   @apply overflow-x-hidden;
 }
 
-.svg-full {
+.svg-wrapper {
   > svg {
     @apply w-full;
     @apply h-full;
