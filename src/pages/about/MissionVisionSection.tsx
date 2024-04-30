@@ -1,9 +1,16 @@
-import MissionWave from "@/assets/vectors/MissionWave.svg?react";
-import Section from "@/common/templates/Section";
+import MissionVision from "@/assets/images/MissionVision.png";
 
 const MissionVisionSection = () => {
   return (
-    <Section className="relative bg-gray-500 rounded-[10px] space-y-6 py-12 pl-[100px] pr-[53px]">
+    <section
+      style={{
+        backgroundImage: `url(${MissionVision})`,
+        backgroundAttachment: "fixed",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "contain",
+      }}
+      className={`relative bg-gray-500 rounded-[10px] space-y-6 py-12 pl-[100px] pr-[53px]`}
+    >
       <div className="flex flex-col space-y-6 items-center">
         <h2 className="text-2xl text-gray-200">Mission</h2>
         <p className="text-md font-normal text-center">
@@ -22,8 +29,7 @@ const MissionVisionSection = () => {
           that enable success in the evolving digital landscape.
         </p>
       </div>
-      <MissionWave className="absolute left-[10px] top-0 max-h-[100%]" />
-    </Section>
+    </section>
   );
 };
 
