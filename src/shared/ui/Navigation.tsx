@@ -53,7 +53,7 @@ const Navigation = ({ items, onItemClick, className = "" }: Props) => {
   return (
     <nav
       className={classNames(
-        "flex lg:space-x-8 desktop:space-x-11 xs:space-x-0 desktop:flex-row xs:w-full xs:px-1.5 xs:flex-col xs:justify-center desktop:space-y-0 xs:space-y-8",
+        "flex desktop:space-x-4 xs:space-x-0 desktop:flex-row xs:w-full xs:px-1.5 xs:flex-col desktop:justify-between xs:justify-center desktop:space-y-0 xs:space-y-8",
         className
       )}
     >

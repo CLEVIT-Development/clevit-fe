@@ -7,6 +7,8 @@ import { feedbacksConstants } from "@/common/constants/feedbacks.constants";
 import useResponsive from "@/common/hooks/useResponsive";
 import Section from "@/common/templates/Section";
 
+import "./Feedback.css";
+
 const FeedbackSection = () => {
   const { isTablet } = useResponsive();
 
@@ -17,7 +19,7 @@ const FeedbackSection = () => {
           <div
             key={id}
             className={twMerge(
-              "bg-white shadow-base-200 rounded-[10px] min-h-[600px] flex flex-col justify-between items-start px-4 desktop:pt-8 xs:pt-5 pb-6",
+              "bg-white rounded-[10px] min-h-[600px] flex flex-col justify-between items-start px-4 desktop:pt-8 xs:pt-5 pb-6",
               className
             )}
           >

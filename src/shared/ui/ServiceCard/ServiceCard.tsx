@@ -20,14 +20,14 @@ const ServiceCard = ({ icon, order, title, description, className }: Props) => {
         className
       )}
     >
-      <div className="flex sm:flex-col justify-between sm:space-x-0 xs:space-x-[15px] sm:items-start xs:items-center sm:space-y-4">
+      <div className="flex sm:flex-col sm:space-x-0 xs:space-x-[24px] sm:items-start xs:items-center sm:space-y-4">
         <div className="sm:w-full xs:w-fit flex items-center justify-between">
           <IconWrapper icon={icon} className="sm:w-[100px] sm:h-[100px] xs:w-[80px] xs:h-[80px]" />
           <p className="text-purple-200 text-[80px] leading-[120px] font-bold sm:block xs:hidden">
             {order}
           </p>
         </div>
-        <p className="text-gray-200 text-md font-bold sm:text-left xs:text-right">{title}</p>
+        <span className="w-full text-gray-200 text-md font-bold text-center">{title}</span>
       </div>
       <p className="text-gray-200 text-base break-words">{description}</p>
     </div>
