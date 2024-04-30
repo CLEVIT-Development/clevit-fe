@@ -8,6 +8,8 @@ export default {
         "purple-200": "#7033911A",
         "purple-300": "#4f1d85",
         "purple-400": "#E51DFF",
+        "purple-500": "#6C30AD",
+        "purple-600": "#19124C",
         "blue-100": "#0E59F2",
         "blue-200": "#1404CE",
         "gray-100": "#55606A",
@@ -124,6 +126,13 @@ export default {
             fontWeight: "600",
           },
         ],
+        "lg-l": [
+          "22px",
+          {
+            lineHeight: "33px",
+            fontWeight: "500",
+          },
+        ],
         lg: [
           "24px",
           {
@@ -149,6 +158,13 @@ export default {
           "45px",
           {
             lineHeight: "68px",
+            fontWeight: "600",
+          },
+        ],
+        "4xl": [
+          "66px",
+          {
+            lineHeight: "99px",
             fontWeight: "600",
           },
         ],

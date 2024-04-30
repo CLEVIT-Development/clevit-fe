@@ -18,6 +18,7 @@ import ReactIcon from "@/assets/vectors/technology/React.svg?react";
 import SASSIcon from "@/assets/vectors/technology/SASS.svg?react";
 import SwiftIcon from "@/assets/vectors/technology/Swift.svg?react";
 import TailwindCSSIcon from "@/assets/vectors/technology/Tailwind.svg?react";
+import Typescript from "@/assets/vectors/technology/Typescript.svg?react";
 import ViteIcon from "@/assets/vectors/technology/Vite.svg?react";
 import VueIcon from "@/assets/vectors/technology/Vue.svg?react";
 import WebSocketIcon from "@/assets/vectors/technology/WebSocket.svg?react";
@@ -36,13 +37,14 @@ export const technologiesConstants = {
     { id: 2, title: "Vue.js", Icon: VueIcon },
     { id: 3, title: "Vite.js", Icon: ViteIcon },
     { id: 4, title: "Next.js", Icon: NextIcon },
-    { id: 5, title: "Material UI", Icon: MUIIcon },
-    { id: 6, title: "Tailwind CSS", Icon: TailwindCSSIcon },
-    { id: 7, title: "Ant Design", Icon: AntIcon },
-    { id: 8, title: "Cypress", Icon: CypressIcon },
-    { id: 9, title: "HTML 5", Icon: HTMLIcon },
-    { id: 10, title: "CSS3", Icon: CSSIcon },
-    { id: 11, title: "SCSS(SASS)", Icon: SASSIcon },
+    { id: 5, title: "Typescript", Icon: Typescript },
+    { id: 6, title: "Material UI", Icon: MUIIcon },
+    { id: 7, title: "Tailwind CSS", Icon: TailwindCSSIcon },
+    { id: 8, title: "Ant Design", Icon: AntIcon },
+    { id: 9, title: "Cypress", Icon: CypressIcon },
+    { id: 10, title: "HTML 5", Icon: HTMLIcon },
+    { id: 11, title: "CSS3", Icon: CSSIcon },
+    { id: 12, title: "SCSS(SASS)", Icon: SASSIcon },
   ],
   2: [
     { id: 1, title: "Swift", Icon: SwiftIcon },

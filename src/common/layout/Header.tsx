@@ -49,11 +49,15 @@ const Header = forwardRef(({ isReached }: Props, ref: ForwardedRef<HTMLDivElemen
             <NavLink
               key={headerMenuLink.id}
               to={headerMenuLink.link}
-              className={twMerge(
-                classNames("text-white text-md", {
-                  ["text-gray-800"]: isReached,
-                })
-              )}
+              className={({ isActive }) =>
+                twMerge(
+                  classNames("text-white text-md", {
+                    ["text-purple-100"]: isReached,
+                    ["text-gray-200"]: isActive && isReached,
+                    ["text-gray-100"]: isActive && !isReached,
+                  })
+                )
+              }
             >
               {headerMenuLink.label}
             </NavLink>

@@ -4,7 +4,7 @@ import { ButtonVariant } from "@/types/variant.types.ts";
 
 const RequestQuoteSection = () => {
   return (
-    <section className="bg-quoteGradient rounded-[10px] md:py-[84px] xs:py-6 md:px-[46px] md:mx-0 xs:-mx-5 flex md:flex-row xs:flex-col items-center justify-center md:space-x-[73px] mb-24">
+    <section className="bg-quoteGradient rounded-[10px] md:py-[84px] xs:py-6 md:px-[46px] flex md:flex-row xs:flex-col items-center justify-center md:space-x-[73px] mb-24">
       <div className="flex md:flex-row xs:flex-col space-x-3 md:items-end xs:items-center">
         <p className="text-white desktop:text-xl xs:text-lg xs:font-medium text-center">
           Let's build your dream project
