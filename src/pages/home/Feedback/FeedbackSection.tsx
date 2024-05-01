@@ -1,4 +1,4 @@
-import { useCallback } from "react";
+import { useMemo } from "react";
 import AliceCarousel from "react-alice-carousel";
 
 import { twMerge } from "tailwind-merge";
@@ -12,15 +12,15 @@ import "./Feedback.css";
 const FeedbackSection = () => {
   const { isTablet } = useResponsive();
 
-  const feedbacksData = useCallback(
-    (className?: string) =>
+  const feedbacksData = useMemo(
+    () =>
       feedbacksConstants.map(({ id, companyLogo, description, author, position }) => {
         return (
           <div
             key={id}
             className={twMerge(
               "bg-white rounded-[10px] min-h-[600px] flex flex-col justify-between items-start px-4 desktop:pt-8 xs:pt-5 pb-6",
-              className
+              "feedback-item"
             )}
           >
             <div className="flex flex-col md:space-y-8 xs:space-y-6">
@@ -46,10 +46,10 @@ const FeedbackSection = () => {
           <AliceCarousel
             responsive={{ 0: { items: 1 }, 1024: { items: 2 } }}
             disableButtonsControls
-            items={feedbacksData()}
+            items={feedbacksData}
           />
         ) : (
-          <div className="w-full flex space-x-4">{feedbacksData("flex-1 max-w-[410px]")}</div>
+          <div className="w-full flex space-x-4 feedback-non-carousel-wrapper">{feedbacksData}</div>
         )}
       </div>
     </Section>

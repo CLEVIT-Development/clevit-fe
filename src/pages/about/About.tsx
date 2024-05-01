@@ -13,7 +13,7 @@ const About = () => {
       <TeamSection />
       <MissionVisionSection />
       <ReasonSection />
-      <TotalSection projectsCount={35} stuffCount={10} servedCount={25} />
+      <TotalSection projectsCount={35} stuffCount={10} servedCount={20} />
       <FeedbackSection />
       <CalendlySection />
     </Layout>

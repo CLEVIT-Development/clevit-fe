@@ -54,7 +54,7 @@ const Header = forwardRef(({ isReached }: Props, ref: ForwardedRef<HTMLDivElemen
                   classNames("text-white text-md", {
                     ["text-purple-100"]: isReached,
                     ["text-gray-200"]: isActive && isReached,
-                    ["text-gray-100"]: isActive && !isReached,
+                    ["text-gray-100 opacity-90"]: isActive && !isReached,
                   })
                 )
               }
