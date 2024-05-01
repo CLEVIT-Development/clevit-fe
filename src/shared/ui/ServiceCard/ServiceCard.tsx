@@ -27,7 +27,7 @@ const ServiceCard = ({ icon, order, title, description, className }: Props) => {
             {order}
           </p>
         </div>
-        <span className="w-full text-gray-200 text-md font-bold text-center">{title}</span>
+        <span className="w-full text-gray-200 text-md font-bold">{title}</span>
       </div>
       <p className="text-gray-200 text-base break-words">{description}</p>
     </div>

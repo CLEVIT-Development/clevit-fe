@@ -4,3 +4,10 @@ export const swipeAnimationConstants = {
   top: "animate-swipeTop",
   bottom: "animate-swipeBottom",
 };
+
+export const swipeAnimationSecondaryConstants = {
+  left: "animate-swipeBottom",
+  right: "animate-swipeTop",
+  top: "animate-swipeTop",
+  bottom: "animate-swipeBottom",
+};

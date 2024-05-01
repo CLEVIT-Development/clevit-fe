@@ -1,15 +1,13 @@
 import AliceCarousel from "react-alice-carousel";
 import { NavLink } from "react-router-dom";
 
-import ProjectCube from "@/assets/images/ProjectCube.png";
+import ProjectCube from "@/assets/images/projects/ProjectCube.png";
 import Arrow from "@/assets/vectors/Arrow.svg?react";
 import { projectsConstants } from "@/common/constants/projects.constants";
 import useResponsive from "@/common/hooks/useResponsive";
 import Section from "@/common/templates/Section.tsx";
 import Button from "@/shared/ui/Button";
 import { urlShortener } from "@/utils/link.utils";
-
-import "./Project.css";
 
 const ProjectSection = () => {
   const { isMobile } = useResponsive();
@@ -45,10 +43,10 @@ const ProjectSection = () => {
               }) => (
                 <div
                   style={{
-                    background: `url(${ProjectCube}) no-repeat fixed -12% 50%, linear-gradient(108.79deg, #0A0240 28.15%, rgba(10, 2, 64, 0.8) 93.01%)`,
+                    backgroundImage: `url(${ProjectCube}),linear-gradient(108.79deg, #0A0240 28.15%, rgba(10, 2, 64, 0.8) 93.01%)`,
                   }}
                   key={id}
-                  className="h-full rounded-[10px] flex md:flex-row xs:flex-col desktop:pl-[90px] desktop:pr-[75px] md:pl-[50px] md:pr-[40px] xs:space-y-[40px] xs:pb-[80px] xs:pt-[36px] xs:pl-[20px] xs:pr-[10px]"
+                  className="h-full justify-between rounded-[10px] flex md:flex-row xs:flex-col desktop:pl-[90px] desktop:pr-[50px] md:pl-[60px] md:pr-[40px] xs:space-y-[40px] xs:pb-[80px] xs:pt-[36px] xs:pl-[20px] xs:pr-[10px] bg-no-repeat md:bg-projectCubeDesktopPosition bg-projectCubeMobilePosition"
                 >
                   <div className="flex flex-col justify-start md:space-y-[65px] xs:space-y-[30px]">
                     <div className="flex flex-col space-y-6">

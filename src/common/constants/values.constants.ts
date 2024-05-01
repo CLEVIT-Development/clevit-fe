@@ -1,4 +1,4 @@
-import ReactIcon from "@/assets/vectors/technology/React.svg?react";
+import PuzzleIcon from "@/assets/vectors/values/Puzzle.svg?react";
 import type { INavigationData } from "@/shared/ui/Navigation.tsx";
 
 export const valueTabsConstants: INavigationData[] = [
@@ -12,33 +12,30 @@ export const valuesConstants = {
   1: [
     {
       id: 1,
-      title:
+      description:
         "At Clevit honesty is our guiding principle. We believe in open communication and ethical actions with everyone we interact with. This builds trust - the foundation of strong relationships.",
-      Icon: ReactIcon,
+      Icon: PuzzleIcon,
     },
   ],
   2: [
     {
       id: 1,
-      title:
-        "At Clevit honesty is our guiding principle. We believe in open communication and ethical actions with everyone we interact with. This builds trust - the foundation of strong relationships.",
-      Icon: ReactIcon,
+      description: "Text 2",
+      Icon: PuzzleIcon,
     },
   ],
   3: [
     {
       id: 1,
-      title:
-        "At Clevit honesty is our guiding principle. We believe in open communication and ethical actions with everyone we interact with. This builds trust - the foundation of strong relationships.",
-      Icon: ReactIcon,
+      description: "Text 3",
+      Icon: PuzzleIcon,
     },
   ],
   4: [
     {
       id: 1,
-      description:
-        "At Clevit honesty is our guiding principle. We believe in open communication and ethical actions with everyone we interact with. This builds trust - the foundation of strong relationships.",
-      Icon: ReactIcon,
+      description: "Text 4",
+      Icon: PuzzleIcon,
     },
   ],
 };

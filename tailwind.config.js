@@ -21,8 +21,8 @@ export default {
       animation: {
         swipeRight: "swipeRightKeyframe 0.5s",
         swipeLeft: "swipeLeftKeyframe 0.5s",
-        swipeTop: "swipeTopKeyframe 0.5s",
-        swipeBottom: "swipeBottomKeyframe 0.5s",
+        swipeTop: "swipeTopKeyframe 0.7s",
+        swipeBottom: "swipeBottomKeyframe 0.7s",
       },
       keyframes: {
         swipeRightKeyframe: {
@@ -88,7 +88,18 @@ export default {
       backgroundImage: {
         quoteGradient: "linear-gradient(88.98deg, #9B3B94 0.87%, #210F2B 79.26%)",
         headingGradient: "linear-gradient(254.76deg, #9B3B94 -12.62%, #000000 51%)",
-        projectGradient: "linear-gradient(108.79deg, #0A0240 28.15%, rgba(10, 2, 64, 0.8) 93.01%)",
+        missionDesktopImage: "url(src/assets/images/missionVision/MissionVisionDesktop.png)",
+        missionMobileImage: "url(src/assets/images/missionVision/MissionVisionMobile.png)",
+        totalDesktopImage: "url(src/assets/images/totalWave/TotalWaveDesktop.png)",
+        totalMobileImage: "url(src/assets/images/totalWave/TotalWaveMobile.png)",
+      },
+      backgroundPosition: {
+        missionDesktopPosition: "-15% 55%",
+        missionMobilePosition: "50% 50%",
+        totalDesktopPosition: "-15% 50%",
+        totalMobilePosition: "65% 50%",
+        projectCubeDesktopPosition: "-15% 50%",
+        projectCubeMobilePosition: "25% 150%",
       },
       fontSize: {
         xs: [
@@ -152,6 +163,13 @@ export default {
           {
             lineHeight: "54px",
             fontWeight: "700",
+          },
+        ],
+        "2xl-3xl": [
+          "40px",
+          {
+            lineHeight: "60px",
+            fontWeight: "600",
           },
         ],
         "3xl": [
