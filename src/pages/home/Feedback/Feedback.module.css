@@ -1,4 +1,4 @@
-.alice-carousel__wrapper {
+.container [class~="alice-carousel__wrapper"] {
   box-shadow: 0 8px 10px 0 #0000001a;
 }
 

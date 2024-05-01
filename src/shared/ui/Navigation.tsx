@@ -1,6 +1,7 @@
 import { useCallback, useState } from "react";
 
 import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 
 import useResponsive from "@/common/hooks/useResponsive.ts";
 
@@ -52,9 +53,11 @@ const Navigation = ({ items, onItemClick, className = "" }: Props) => {
 
   return (
     <nav
-      className={classNames(
-        "flex desktop:space-x-4 xs:space-x-0 desktop:flex-row xs:w-full xs:px-1.5 xs:flex-col desktop:justify-between xs:justify-center desktop:space-y-0 xs:space-y-8",
-        className
+      className={twMerge(
+        classNames(
+          "flex desktop:space-x-4 xs:space-x-0 desktop:flex-row xs:w-full xs:px-1.5 xs:flex-col desktop:justify-between xs:justify-center desktop:space-y-0 xs:space-y-8",
+          className
+        )
       )}
     >
       {items.map(({ id, title }) => (

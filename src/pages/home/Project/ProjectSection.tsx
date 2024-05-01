@@ -9,8 +9,6 @@ import Section from "@/common/templates/Section.tsx";
 import Button from "@/shared/ui/Button";
 import { urlShortener } from "@/utils/link.utils";
 
-import "./Project.css";
-
 const ProjectSection = () => {
   const { isMobile } = useResponsive();
 
@@ -24,6 +22,8 @@ const ProjectSection = () => {
           <AliceCarousel
             infinite={true}
             autoPlay
+            autoPlayInterval={2500}
+            animationDuration={1000}
             responsive={{ 0: { items: 1 } }}
             disableButtonsControls={isMobile}
             renderPrevButton={({ isDisabled }) => !isDisabled && <Arrow />}

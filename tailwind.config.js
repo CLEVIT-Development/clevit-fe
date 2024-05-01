@@ -21,8 +21,8 @@ export default {
       animation: {
         swipeRight: "swipeRightKeyframe 0.5s",
         swipeLeft: "swipeLeftKeyframe 0.5s",
-        swipeTop: "swipeTopKeyframe 0.5s",
-        swipeBottom: "swipeBottomKeyframe 0.5s",
+        swipeTop: "swipeTopKeyframe 0.7s",
+        swipeBottom: "swipeBottomKeyframe 0.7s",
       },
       keyframes: {
         swipeRightKeyframe: {

@@ -1,4 +1,4 @@
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useState } from "react";
 
 import classNames from "classnames";
 
@@ -11,7 +11,6 @@ import Section from "@/common/templates/Section.tsx";
 import Navigation from "@/shared/ui/Navigation.tsx";
 
 const TechnologySection = () => {
-  const contentRef = useRef<HTMLDivElement>(null);
   const [{ currTabId, direction }, setActiveTab] = useState({
     currTabId: 1,
     direction: "",
@@ -30,7 +29,6 @@ const TechnologySection = () => {
         <Navigation items={technologyTabsConstants} onItemClick={onTabItemClickHandler} />
         <div
           key={currTabId}
-          ref={contentRef}
           className={classNames(
             `w-full relative justify-center max-w-[90%] desktop:flex-wrap desktop:flex desktop:gap-[55px] desktop:items-stretch xs:grid xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xs:gap-8 ${swipeAnimationConstants[direction as keyof typeof swipeAnimationConstants]}`
           )}

@@ -6,12 +6,14 @@ import MissionVisionSection from "./MissionVisionSection";
 import ReasonSection from "./ReasonSection";
 import TeamSection from "./TeamSection";
 import TotalSection from "./TotalSection";
+import ValuesSection from "./ValuesSection";
 
 const About = () => {
   return (
     <Layout>
       <TeamSection />
       <MissionVisionSection />
+      <ValuesSection />
       <ReasonSection />
       <TotalSection projectsCount={35} stuffCount={10} servedCount={20} />
       <FeedbackSection />
