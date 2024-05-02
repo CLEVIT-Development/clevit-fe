@@ -88,10 +88,6 @@ export default {
       backgroundImage: {
         quoteGradient: "linear-gradient(88.98deg, #9B3B94 0.87%, #210F2B 79.26%)",
         headingGradient: "linear-gradient(254.76deg, #9B3B94 -12.62%, #000000 51%)",
-        missionDesktopImage: "url(src/assets/images/missionVision/MissionVisionDesktop.png)",
-        missionMobileImage: "url(src/assets/images/missionVision/MissionVisionMobile.png)",
-        totalDesktopImage: "url(src/assets/images/totalWave/TotalWaveDesktop.png)",
-        totalMobileImage: "url(src/assets/images/totalWave/TotalWaveMobile.png)",
       },
       backgroundPosition: {
         missionDesktopPosition: "-15% 55%",

@@ -1,11 +1,11 @@
 import type { ForwardedRef } from "react";
 import { forwardRef } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 import classNames from "classnames";
 import { twMerge } from "tailwind-merge";
 
-import { headerMenuLinks } from "@/app/routing/routing.constants.ts";
+import { RoutePaths, headerMenuLinks } from "@/app/routing/routing.constants.ts";
 import Messages from "@/assets/vectors/Messages.svg?react";
 import Button from "@/shared/ui/Button.tsx";
 import Logo from "@/shared/ui/Logo.tsx";
@@ -16,6 +16,8 @@ interface Props {
 }
 
 const Header = forwardRef(({ isReached }: Props, ref: ForwardedRef<HTMLDivElement>) => {
+  const navigate = useNavigate();
+
   return (
     <header
       className={classNames(
@@ -25,7 +27,16 @@ const Header = forwardRef(({ isReached }: Props, ref: ForwardedRef<HTMLDivElemen
         }
       )}
     >
-      <Logo variant={isReached ? LogoVariant.Secondary : LogoVariant.Primary} />
+      <Logo
+        onLogoClick={() => {
+          navigate(RoutePaths.Home);
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        }}
+        variant={isReached ? LogoVariant.Secondary : LogoVariant.Primary}
+      />
       <div className="flex flex-col space-y-[5px] xs:flex desktop:hidden">
         <div
           className={classNames("w-8 h-1 bg-gray-400 rounded-lg", {

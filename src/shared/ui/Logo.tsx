@@ -6,9 +6,10 @@ import { LogoVariant } from "@/types/variant.types.ts";
 interface Props {
   variant?: LogoVariant;
   className?: string;
+  onLogoClick?: () => void;
 }
 
-const Logo = ({ variant = LogoVariant.Primary, className }: Props) => {
+const Logo = ({ variant = LogoVariant.Primary, className, onLogoClick, ...props }: Props) => {
   const configVariant = {
     [LogoVariant.Primary]: "fill-gray-400",
     [LogoVariant.Secondary]: "fill-gray-200",
@@ -17,10 +18,15 @@ const Logo = ({ variant = LogoVariant.Primary, className }: Props) => {
   return (
     <LogoIcon
       className={classNames(
-        "md:w-auto md:h-auto xs:w-16 xs:h-[30px]",
+        "md:w-auto md:h-auto xs:w-16 xs:h-[30px] cursor-pointer",
         configVariant[variant],
         className
       )}
+      onClick={() => {
+        console.log("click");
+        onLogoClick?.();
+      }}
+      {...props}
     />
   );
 };
