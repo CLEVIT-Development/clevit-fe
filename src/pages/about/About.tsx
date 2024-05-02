@@ -1,3 +1,4 @@
+import AboutHeading from "@/common/layout/Heading/AboutHeading";
 import Layout from "@/common/layout/Layout";
 
 import CalendlySection from "../home/CalendlySection";
@@ -10,7 +11,7 @@ import ValuesSection from "./ValuesSection";
 
 const About = () => {
   return (
-    <Layout>
+    <Layout heading={<AboutHeading />}>
       <TeamSection />
       <MissionVisionSection />
       <ValuesSection />

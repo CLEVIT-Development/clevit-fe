@@ -1,3 +1,7 @@
+import MissionVisionDesktop from "@/assets/images/missionVision/MissionVisionDesktop.png";
+import MissionVisionMobile from "@/assets/images/missionVision/MissionVisionMobile.png";
+import useResponsive from "@/common/hooks/useResponsive";
+
 interface MissionSingleItemProps {
   title: string;
   description: string;
@@ -11,8 +15,15 @@ const MissionSingleItem = ({ title, description }: MissionSingleItemProps) => (
 );
 
 const MissionVisionSection = () => {
+  const { isMobile } = useResponsive();
+
   return (
-    <section className="bg-gray-500 rounded-[10px] md:space-y-12 space-y-6 py-12 md:pl-[100px] md:pr-[53px] pl-[20px] pr-[20px] bg-no-repeat md:bg-missionDesktopPosition bg-missionMobilePosition md:bg-missionDesktopImage bg-missionMobileImage">
+    <section
+      style={{
+        backgroundImage: isMobile ? `url(${MissionVisionMobile})` : `url(${MissionVisionDesktop})`,
+      }}
+      className="bg-gray-500 rounded-[10px] md:space-y-12 space-y-6 py-12 md:pl-[100px] md:pr-[53px] pl-[20px] pr-[20px] bg-no-repeat md:bg-missionDesktopPosition bg-missionMobilePosition"
+    >
       <MissionSingleItem
         title="Mission"
         description="Clevit's mission is to empower businesses across all sectors with tailored digital solutions, enabling them to focus on core operations while we handle technology. We strive to be the go-to partner for building and modernizing applications, driving optimal functionality and innovation across industries."
