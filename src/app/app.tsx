@@ -1,11 +1,7 @@
-import Routing from "./routing/routing.tsx";
+import Routing from "app/routing/routing.tsx";
 
-const App = () => {
-  return (
-    <>
-      <Routing />
-    </>
-  );
-};
+const App = () => (
+  <Routing />
+);
 
 export default App;
