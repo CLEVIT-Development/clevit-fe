@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
 import useScroll from "../hooks/useScroll";
-import Header from "./Header";
+import Header from "./Header/Header";
 
 interface Props {
   heading: React.ReactNode;
