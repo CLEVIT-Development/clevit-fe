@@ -87,20 +87,18 @@ const Header = forwardRef(({ isReached }: Props, ref: ForwardedRef<HTMLDivElemen
       </div>
       <div
         className={classNames(
-          "transition-all duration-1000 overflow-hidden desktop:hidden flex flex-col justify-between items-center h-0",
+          "transition-all duration-700 overflow-hidden desktop:hidden flex flex-col justify-between items-center h-0",
           {
-            ["h-[580px]"]: isOpen,
+            ["h-[60vh]"]: isOpen,
           }
         )}
         onTransitionEnd={() => {
           setIsTransitionEndClose(isOpen);
         }}
       >
-        <nav className={"flex flex-col items-center space-y-6 overflow-hidden"}>
-          {renderNavList}
-        </nav>
+        <nav className={"flex flex-col items-center space-y-6"}>{renderNavList}</nav>
         <Copyright
-          className={classNames("overflow-hidden", {
+          className={classNames({
             ["text-gray-400"]: !isReached && isTablet,
           })}
         />
