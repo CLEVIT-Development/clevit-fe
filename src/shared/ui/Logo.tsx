@@ -18,14 +18,11 @@ const Logo = ({ variant = LogoVariant.Primary, className, onLogoClick, ...props 
   return (
     <LogoIcon
       className={classNames(
-        "md:w-auto md:h-auto xs:w-16 xs:h-[30px] cursor-pointer",
+        "md:w-auto md:h-auto xs:w-20 xs:h-[38px] cursor-pointer",
         configVariant[variant],
         className
       )}
-      onClick={() => {
-        console.log("click");
-        onLogoClick?.();
-      }}
+      onClick={onLogoClick}
       {...props}
     />
   );

@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import { blogsConstants } from "@/common/constants/blogs.constants.ts";
 import { contactsConstants } from "@/common/constants/contacts.constants.ts";
 import { socialLinksConstants } from "@/common/constants/socials.constants.ts";
+import Copyright from "@/shared/ui/Copyright";
 import RecentPost from "@/shared/ui/RecentPost.tsx";
-import { getFullYear } from "@/utils/date.utils.ts";
 
 const Footer = () => {
   return (
@@ -67,10 +67,7 @@ const Footer = () => {
             Terms of Conditions
           </Link>
         </div>
-        <p className="flex items-center space-x-0.5 text-xs text-gray-100">
-          <span className="text-base font-semibold leading-[12px] opacity-60">&copy;</span>
-          <span className="text-xs text-gray-100 opacity-60">{getFullYear()} Clevit</span>
-        </p>
+        <Copyright />
       </div>
     </footer>
   );
