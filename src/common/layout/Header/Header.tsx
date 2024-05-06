@@ -1,5 +1,5 @@
 import type { ForwardedRef } from "react";
-import { forwardRef, useMemo, useState } from "react";
+import { forwardRef, useMemo, useRef, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 
 import classNames from "classnames";
@@ -7,6 +7,7 @@ import { twMerge } from "tailwind-merge";
 
 import { RoutePaths, headerMenuLinks } from "@/app/routing/routing.constants.ts";
 import Messages from "@/assets/vectors/Messages.svg?react";
+import useLockBodyScroll from "@/common/hooks/useBodyLock";
 import useResponsive from "@/common/hooks/useResponsive";
 import Button from "@/shared/ui/Button.tsx";
 import Copyright from "@/shared/ui/Copyright";
@@ -24,6 +25,9 @@ const Header = forwardRef(({ isReached }: Props, ref: ForwardedRef<HTMLDivElemen
   const { isTablet } = useResponsive();
   const [isOpen, setIsOpen] = useState(false);
   const [isTransitionEndClose, setIsTransitionEndClose] = useState(false);
+  const navListRef = useRef<HTMLDivElement>(null);
+
+  useLockBodyScroll(isOpen);
 
   const renderNavList = useMemo(() => {
     return headerMenuLinks.map((headerMenuLink) => (
@@ -56,7 +60,7 @@ const Header = forwardRef(({ isReached }: Props, ref: ForwardedRef<HTMLDivElemen
     <header
       className={twMerge(
         classNames(
-          "transition-all duration-500 w-full fixed top-0 z-[20] backdrop-blur-[5px] desktop:px-10 desktop:py-6 xs:px-5 xs:py-4",
+          "transition-all duration-500 w-full fixed top-0 z-[20] backdrop-blur-[5px] desktop:px-10 desktop:py-6 px-5 py-4",
           {
             ["shadow-base-200 bg-white"]: isReached,
             ["bg-headingGradient"]: !isReached && isTablet && (isOpen || isTransitionEndClose),
@@ -89,14 +93,16 @@ const Header = forwardRef(({ isReached }: Props, ref: ForwardedRef<HTMLDivElemen
         className={classNames(
           "transition-all duration-700 overflow-hidden desktop:hidden flex flex-col justify-between items-center h-0",
           {
-            ["h-[60vh]"]: isOpen,
+            ["h-[50vh]"]: isOpen,
           }
         )}
         onTransitionEnd={() => {
           setIsTransitionEndClose(isOpen);
         }}
       >
-        <nav className={"flex flex-col items-center space-y-6"}>{renderNavList}</nav>
+        <nav ref={navListRef} className="flex flex-col items-center space-y-6">
+          {renderNavList}
+        </nav>
         <Copyright
           className={classNames({
             ["text-gray-400"]: !isReached && isTablet,

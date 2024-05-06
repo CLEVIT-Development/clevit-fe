@@ -34,7 +34,7 @@ const ValuesSection = () => {
                   key={id}
                   className="w-full bg-gray-300 rounded-[10px] min-h-[237px] p-5 flex flex-col md:items-start items-center md:space-y-[33px] space-y-4"
                 >
-                  <div>
+                  <div className="svg-wrapper">
                     <Icon />
                   </div>
                   <p className="text-md font-normal">{description}</p>

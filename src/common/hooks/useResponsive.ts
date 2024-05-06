@@ -4,6 +4,7 @@ const useResponsive = () => {
   const { width } = useWindowSize();
 
   return {
+    isExtraSmall: width <= 640,
     isMobile: width <= 768,
     isTablet: width <= 1024,
     isDesktop: width <= 1260,

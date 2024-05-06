@@ -29,7 +29,9 @@ const HeadBar = ({ heading }: Props) => {
   return (
     <>
       <Header ref={headerRef} isReached={isReached} />
-      <div ref={headingRef}>{heading}</div>
+      <div ref={headingRef} className="desktop:h-[680px]">
+        {heading}
+      </div>
     </>
   );
 };
