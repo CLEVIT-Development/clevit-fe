@@ -100,7 +100,7 @@ const Header = forwardRef(({ isReached }: Props, ref: ForwardedRef<HTMLDivElemen
           setIsTransitionEndClose(isOpen);
         }}
       >
-        <nav ref={navListRef} className={"flex flex-col items-center space-y-6"}>
+        <nav ref={navListRef} className="flex flex-col items-center space-y-6">
           {renderNavList}
         </nav>
         <Copyright
