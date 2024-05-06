@@ -1,3 +1,4 @@
+import HomeHeading from "@/common/layout/Heading/HomeHeading";
 import Layout from "@/common/layout/Layout.tsx";
 import AboutSection from "@/pages/home/AboutSection.tsx";
 import RequestQuoteSection from "@/pages/home/RequestQuoteSection.tsx";
@@ -11,7 +12,7 @@ import ProjectSection from "./Project/ProjectSection";
 
 const Home = () => {
   return (
-    <Layout>
+    <Layout heading={<HomeHeading />}>
       <AboutSection />
       <ServiceSection />
       <RequestQuoteSection />

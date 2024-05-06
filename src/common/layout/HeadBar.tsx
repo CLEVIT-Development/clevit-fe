@@ -1,10 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 
 import useScroll from "../hooks/useScroll";
-import Header from "./Header";
-import Heading from "./Heading";
+import Header from "./Header/Header";
 
-const HeadBar = () => {
+interface Props {
+  heading: React.ReactNode;
+}
+
+const HeadBar = ({ heading }: Props) => {
   const headerRef = useRef<HTMLDivElement>(null);
   const headingRef = useRef<HTMLDivElement>(null);
   const [isReached, setIsReached] = useState(false);
@@ -26,7 +29,9 @@ const HeadBar = () => {
   return (
     <>
       <Header ref={headerRef} isReached={isReached} />
-      <Heading ref={headingRef} />
+      <div ref={headingRef} className="desktop:h-[680px]">
+        {heading}
+      </div>
     </>
   );
 };

@@ -30,21 +30,19 @@ const TechnologySection = () => {
         <div
           key={currTabId}
           className={classNames(
-            `w-full relative justify-center max-w-[90%] desktop:flex-wrap desktop:flex desktop:gap-[55px] desktop:items-stretch xs:grid xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xs:gap-8 ${swipeAnimationConstants[direction as keyof typeof swipeAnimationConstants]}`
+            `w-full relative justify-center desktop:max-w-[90%] desktop:flex-wrap desktop:flex desktop:gap-[55px] desktop:items-stretch xs:grid xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xs:gap-8 ${swipeAnimationConstants[direction as keyof typeof swipeAnimationConstants]}`
           )}
         >
           {technologiesConstants[currTabId as keyof typeof technologiesConstants].map(
             ({ id, title, Icon }) => (
               <div
                 key={id}
-                className={
-                  "flex flex-col desktop:space-y-5 xs:space-y-2 items-center justify-between min-w-[103px]"
-                }
+                className="flex flex-col desktop:space-y-5 xs:space-y-2 items-center justify-between min-w-[103px]"
               >
                 <div className="desktop:h-auto xs:h-[64px] svg-wrapper">
                   <Icon />
                 </div>
-                <p className="text-base font-medium">{title}</p>
+                <p className="text-base font-medium text-center">{title}</p>
               </div>
             )
           )}

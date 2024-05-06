@@ -1,7 +1,5 @@
 import Routing from "app/routing/routing.tsx";
 
-const App = () => (
-  <Routing />
-);
+const App = () => <Routing />;
 
 export default App;

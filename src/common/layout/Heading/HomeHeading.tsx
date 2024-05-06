@@ -5,7 +5,7 @@ import Messages from "@/assets/vectors/Messages.svg?react";
 import { Gradient } from "@/shared/gradient/Gradient.tsx";
 import Button from "@/shared/ui/Button.tsx";
 
-const Heading = forwardRef((_, ref: ForwardedRef<HTMLDivElement>) => {
+const HomeHeading = forwardRef((_, ref: ForwardedRef<HTMLDivElement>) => {
   return (
     <Gradient ref={ref}>
       <div className="w-full flex flex-col items-center text-center desktop:pb-20 desktop:pt-[240px] xs:pb-6 xs:pt-[125px] xs:px-[30px]">
@@ -25,4 +25,4 @@ const Heading = forwardRef((_, ref: ForwardedRef<HTMLDivElement>) => {
   );
 });
 
-export default Heading;
+export default HomeHeading;
