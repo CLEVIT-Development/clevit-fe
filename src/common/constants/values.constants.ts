@@ -1,3 +1,6 @@
+import CommitmentIcon from "@/assets/vectors/values/Commitment.svg?react";
+import HandshakeIcon from "@/assets/vectors/values/Handshake.svg?react";
+import PassioneIcon from "@/assets/vectors/values/Passion.svg?react";
 import PuzzleIcon from "@/assets/vectors/values/Puzzle.svg?react";
 import type { INavigationData } from "@/shared/ui/Navigation.tsx";
 
@@ -19,23 +22,26 @@ export const valuesConstants = {
   ],
   2: [
     {
-      id: 1,
-      description: "Text 2",
-      Icon: PuzzleIcon,
+      id: 2,
+      description:
+        "Our dedication to excellence is unwavering. Fulfilling our commitments is fundamental to us, as it reinforces our reliability and cultivates trust with our esteemed clients.",
+      Icon: HandshakeIcon,
     },
   ],
   3: [
     {
-      id: 1,
-      description: "Text 3",
-      Icon: PuzzleIcon,
+      id: 3,
+      description:
+        "We understand the world we operate in. We take full ownership of our impact, aiming to be sustainable and ethical in everything we do.",
+      Icon: CommitmentIcon,
     },
   ],
   4: [
     {
-      id: 1,
-      description: "Text 4",
-      Icon: PuzzleIcon,
+      id: 4,
+      description:
+        "We're passionate about our mission. This fuels innovation and exceptional service. Our team's dedication creates a dynamic work environment where everyone excels.",
+      Icon: PassioneIcon,
     },
   ],
 };

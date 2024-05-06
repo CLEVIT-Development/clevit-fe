@@ -3,10 +3,12 @@ import CSSIcon from "@/assets/vectors/technology/CSS.svg?react";
 import CypressIcon from "@/assets/vectors/technology/Cypress.svg?react";
 import ExpressIcon from "@/assets/vectors/technology/Express.svg?react";
 import FirebaseIcon from "@/assets/vectors/technology/Firebase.svg?react";
+import GoogleCloudIcon from "@/assets/vectors/technology/GoogleCloud.svg?react";
 import GraphQLIcon from "@/assets/vectors/technology/GraphQL.svg?react";
 import HTMLIcon from "@/assets/vectors/technology/HTML.svg?react";
 import JestIcon from "@/assets/vectors/technology/Jest.svg?react";
 import MUIIcon from "@/assets/vectors/technology/MUI.svg?react";
+import MicrosoftServerIcon from "@/assets/vectors/technology/MicrosoftServer.svg?react";
 import MongoIcon from "@/assets/vectors/technology/Mongo.svg?react";
 import MySQLIcon from "@/assets/vectors/technology/MySQL.svg?react";
 import NestIcon from "@/assets/vectors/technology/Nest.svg?react";
@@ -64,5 +66,7 @@ export const technologiesConstants = {
     { id: 3, title: "MongoDB", Icon: MongoIcon },
     { id: 4, title: "PostgreSQL", Icon: PostgresIcon },
     { id: 5, title: "Firebase", Icon: FirebaseIcon },
+    { id: 6, title: "Google Cloud", Icon: GoogleCloudIcon },
+    { id: 7, title: "Microsoft SQL Server", Icon: MicrosoftServerIcon },
   ],
 };
