@@ -1,4 +1,4 @@
-import { type ComponentPropsWithoutRef, useState } from "react";
+import { type ComponentPropsWithoutRef, useCallback, useState } from "react";
 import type { Control, FieldValues, Path, RegisterOptions } from "react-hook-form";
 import { Controller } from "react-hook-form";
 import PhoneInput2 from "react-phone-input-2";
@@ -11,6 +11,16 @@ import {
   phoneValidationConstants,
   preferredCountries,
 } from "@/common/constants/phoneInput.constants";
+
+type PhoneInputCountry = {
+  countryCode: string;
+  dialCode: string;
+  format: string;
+  iso2: string;
+  name: string;
+  priority: number;
+  regions: string;
+};
 
 interface Props<T extends FieldValues> extends Omit<ComponentPropsWithoutRef<"input">, "onChange"> {
   label?: string;
@@ -25,7 +35,7 @@ interface Props<T extends FieldValues> extends Omit<ComponentPropsWithoutRef<"in
   onChange?: (value: string, country: TCountryCode) => void;
 }
 
-const Input = <T extends FieldValues>({
+const PhoneInput = <T extends FieldValues>({
   label,
   required = false,
   disabled = false,
@@ -40,6 +50,19 @@ const Input = <T extends FieldValues>({
   ...props
 }: Props<T>) => {
   const [countryCode, setCountryCode] = useState<TCountryCode>(defaultCountry);
+
+  const onPhoneInputChange = useCallback(
+    (phoneNumber: string, countryOption: PhoneInputCountry) => {
+      const pickedCountryCode = countryOption.iso2 as TCountryCode;
+
+      setCountryCode(pickedCountryCode);
+
+      onChange?.(phoneNumber, pickedCountryCode);
+
+      return true;
+    },
+    [onChange]
+  );
 
   return (
     <label className={twMerge(classNames("flex flex-col space-y-[6px] max-w-[300px]", className))}>
@@ -70,15 +93,9 @@ const Input = <T extends FieldValues>({
           <PhoneInput2
             {...field}
             inputProps={{ ref, autoFocus: true, ...props }}
-            isValid={(phoneNumber, country) => {
-              const pickedCountryCode = country.iso2 as TCountryCode;
-
-              setCountryCode(pickedCountryCode);
-
-              onChange?.(phoneNumber, pickedCountryCode);
-
-              return true;
-            }}
+            isValid={(phoneNumber, country) =>
+              onPhoneInputChange(phoneNumber, country as PhoneInputCountry)
+            }
             disabled={disabled}
             country={defaultCountry}
             placeholder={placeholder}
@@ -116,4 +133,4 @@ const Input = <T extends FieldValues>({
   );
 };
 
-export default Input;
+export default PhoneInput;
