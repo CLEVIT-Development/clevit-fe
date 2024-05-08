@@ -10,6 +10,7 @@ export default {
         "purple-400": "#E51DFF",
         "purple-500": "#6C30AD",
         "purple-600": "#19124C",
+        "purple-700": "#e306ff",
         "blue-100": "#0E59F2",
         "blue-200": "#1404CE",
         "gray-100": "#55606A",
@@ -17,6 +18,8 @@ export default {
         "gray-300": "#F8F7FD",
         "gray-400": "#E5E5E5",
         "gray-500": "#FAFAFA",
+        "error-100": "#C0241A",
+        "warning-100": "#C0A51A",
       },
       animation: {
         swipeRight: "swipeRightKeyframe 0.5s",
@@ -69,6 +72,7 @@ export default {
       boxShadow: {
         "base-100": "0 8px 10px 0 #00000012",
         "base-200": "0 8px 10px 0 #0000001A",
+        "base-300": "0 4px 10px 0 #00000040",
         "thick-100": "0 0 0 5px #7033914D",
         "thick-200": "0 0 0 10px #7033914D",
       },
@@ -89,6 +93,7 @@ export default {
       backgroundImage: {
         quoteGradient: "linear-gradient(88.98deg, #9B3B94 0.87%, #210F2B 79.26%)",
         headingGradient: "linear-gradient(254.76deg, #9B3B94 -12.62%, #000000 51%)",
+        contactUsGradient: "linear-gradient(232.27deg, #0A0240 1.73%, rgba(10, 2, 64, 0.8) 91.7%)",
       },
       backgroundPosition: {
         missionDesktopPosition: "-15% 55%",
@@ -183,6 +188,9 @@ export default {
             fontWeight: "600",
           },
         ],
+      },
+      borderRadius: {
+        "lg-l": "10px",
       },
     },
   },

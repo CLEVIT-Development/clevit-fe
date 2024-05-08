@@ -7,3 +7,8 @@ export enum LogoVariant {
   Primary = "primary",
   Secondary = "secondary",
 }
+
+export enum HeaderVariant {
+  Primary = "primary",
+  Secondary = "secondary",
+}

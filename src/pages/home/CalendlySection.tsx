@@ -7,7 +7,7 @@ const CalendlySection = () => {
   return (
     <Section
       title="Ready to turn your vision into reality? The journey starts here. We're excited to meet you."
-      className="-z-[20]"
+      className="-z-[20] calendlyDesktop:!mb-[-200px] sm:!mb-[-30px] !-mb-[160px]"
     >
       <div className="w-full">
         <InlineWidget url={CalendlyConfig.shareUrl} styles={{ height: 1100 }} />

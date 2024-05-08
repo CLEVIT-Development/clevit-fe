@@ -1,6 +1,8 @@
 import AntIcon from "@/assets/vectors/technology/Ant.svg?react";
 import CSSIcon from "@/assets/vectors/technology/CSS.svg?react";
 import CypressIcon from "@/assets/vectors/technology/Cypress.svg?react";
+import DynamoDBIcon from "@/assets/vectors/technology/DynamoDB.svg?react";
+import ElasticSearchIcon from "@/assets/vectors/technology/ElasticSearch.svg?react";
 import ExpressIcon from "@/assets/vectors/technology/Express.svg?react";
 import FirebaseIcon from "@/assets/vectors/technology/Firebase.svg?react";
 import GoogleCloudIcon from "@/assets/vectors/technology/GoogleCloud.svg?react";
@@ -8,6 +10,7 @@ import GraphQLIcon from "@/assets/vectors/technology/GraphQL.svg?react";
 import HTMLIcon from "@/assets/vectors/technology/HTML.svg?react";
 import JestIcon from "@/assets/vectors/technology/Jest.svg?react";
 import MUIIcon from "@/assets/vectors/technology/MUI.svg?react";
+import MariaDBIcon from "@/assets/vectors/technology/MariaDB.svg?react";
 import MicrosoftServerIcon from "@/assets/vectors/technology/MicrosoftServer.svg?react";
 import MongoIcon from "@/assets/vectors/technology/Mongo.svg?react";
 import MySQLIcon from "@/assets/vectors/technology/MySQL.svg?react";
@@ -15,9 +18,12 @@ import NestIcon from "@/assets/vectors/technology/Nest.svg?react";
 import NextIcon from "@/assets/vectors/technology/Next.svg?react";
 import NoSQLIcon from "@/assets/vectors/technology/NoSQL.svg?react";
 import NodeIcon from "@/assets/vectors/technology/Node.svg?react";
+import OracleIcon from "@/assets/vectors/technology/Oracle.svg?react";
 import PostgresIcon from "@/assets/vectors/technology/PostgreSQL.svg?react";
 import ReactIcon from "@/assets/vectors/technology/React.svg?react";
+import RedisIcon from "@/assets/vectors/technology/Redis.svg?react";
 import SASSIcon from "@/assets/vectors/technology/SASS.svg?react";
+import SQLiteIcon from "@/assets/vectors/technology/SQLite.svg?react";
 import SwiftIcon from "@/assets/vectors/technology/Swift.svg?react";
 import TailwindCSSIcon from "@/assets/vectors/technology/Tailwind.svg?react";
 import Typescript from "@/assets/vectors/technology/Typescript.svg?react";
@@ -68,5 +74,11 @@ export const technologiesConstants = {
     { id: 5, title: "Firebase", Icon: FirebaseIcon },
     { id: 6, title: "Google Cloud", Icon: GoogleCloudIcon },
     { id: 7, title: "Microsoft SQL Server", Icon: MicrosoftServerIcon },
+    { id: 8, title: "SQLite", Icon: SQLiteIcon },
+    { id: 9, title: "Redis", Icon: RedisIcon },
+    { id: 10, title: "Maria DB", Icon: MariaDBIcon },
+    { id: 11, title: "Oracle", Icon: OracleIcon },
+    { id: 12, title: "Elasticsearch", Icon: ElasticSearchIcon },
+    { id: 13, title: "DynamoDB", Icon: DynamoDBIcon },
   ],
 };

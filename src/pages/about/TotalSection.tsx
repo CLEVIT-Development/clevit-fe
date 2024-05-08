@@ -30,7 +30,7 @@ const TotalSection = ({ projectsCount, stuffCount, servedCount }: Props) => {
         style={{
           backgroundImage: isMobile ? `url(${TotalWaveMobile})` : `url(${TotalWaveDesktop})`,
         }}
-        className="w-full flex md:justify-evenly md:space-y-0 space-y-8 md:flex-row flex-col items-center bg-purple-600 md:py-[90px] py-5 rounded-[10px] bg-no-repeat md:bg-totalDesktopPosition bg-totalMobilePosition"
+        className="w-full flex md:justify-evenly md:space-y-0 space-y-8 md:flex-row flex-col items-center bg-purple-600 md:py-[90px] py-5 rounded-lg-l bg-no-repeat md:bg-totalDesktopPosition bg-totalMobilePosition"
       >
         <TotalItem title="Successful Projects" count={projectsCount} />
         <TotalItem title="Engineers & Designers" count={stuffCount} />

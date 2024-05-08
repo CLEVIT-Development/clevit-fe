@@ -46,7 +46,7 @@ const ProjectSection = () => {
                     backgroundImage: `url(${ProjectCube}),linear-gradient(108.79deg, #0A0240 28.15%, rgba(10, 2, 64, 0.8) 93.01%)`,
                   }}
                   key={id}
-                  className="h-full justify-between rounded-[10px] flex md:flex-row xs:flex-col desktop:pl-[90px] desktop:pr-[50px] md:pl-[60px] md:pr-[40px] xs:space-y-[40px] xs:pb-[80px] xs:pt-[36px] xs:pl-[20px] xs:pr-[10px] bg-no-repeat md:bg-projectCubeDesktopPosition bg-projectCubeMobilePosition"
+                  className="h-full justify-between rounded-lg-l flex md:flex-row xs:flex-col desktop:pl-[90px] desktop:pr-[50px] md:pl-[60px] md:pr-[40px] xs:space-y-[40px] xs:pb-[80px] xs:pt-[36px] xs:pl-[20px] xs:pr-[10px] bg-no-repeat md:bg-projectCubeDesktopPosition bg-projectCubeMobilePosition"
                 >
                   <div className="flex flex-col justify-start md:space-y-[65px] xs:space-y-[30px]">
                     <div className="flex flex-col space-y-6">

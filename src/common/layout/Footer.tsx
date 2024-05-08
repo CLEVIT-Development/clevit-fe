@@ -30,8 +30,8 @@ const Footer = () => {
           <p className="text-gray-100 font-medium lg:text-md xs:text-base">Portfolio</p>
           <p className="text-gray-100 font-medium lg:text-md xs:text-base">Blog</p>
         </div>
-        <div className="flex flex-col space-y-4 sm:col-auto xs:col-span-2 sm:mx-auto">
-          <h6 className="font-bold lg:text-md-l xs:text-md text-white opacity-60">Contact Us</h6>
+        <div className="flex flex-col space-y-4 sm:col-auto col-span-2 ml-auto">
+          <h6 className="font-bold lg:text-md-l text-md text-white opacity-60">Contact Us</h6>
           {contactsConstants.map(({ id, text, link, Element }) => (
             <div key={id} className="flex items-center space-x-2">
               <Element className="size-6" />
