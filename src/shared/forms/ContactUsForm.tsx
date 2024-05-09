@@ -5,10 +5,10 @@ import {
   contactUsCountriesConstants,
   contactUsServicesConstants,
 } from "@/common/constants/contactUs.constants";
-import AutoCompleteInput from "@/shared/ui/forms/AutoCompleteInput";
 import { filesSizeValidation, mailRegExp } from "@/utils/validation.utils";
 
 import Button from "../ui/Button";
+import AutoCompleteInput from "../ui/forms/AutoCompleteInput.tsx";
 import FileInput from "../ui/forms/FileInput";
 import Input from "../ui/forms/Input";
 import PhoneInput from "../ui/forms/PhoneInput";
