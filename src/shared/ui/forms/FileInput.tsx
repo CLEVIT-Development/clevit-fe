@@ -1,5 +1,5 @@
 import type { ForwardedRef } from "react";
-import { type ComponentPropsWithoutRef, forwardRef, useState } from "react";
+import { type ComponentPropsWithoutRef, forwardRef, memo, useState } from "react";
 
 import classNames from "classnames";
 import { twMerge } from "tailwind-merge";
@@ -64,4 +64,4 @@ const FileInput = forwardRef(
   }
 );
 
-export default FileInput;
+export default memo(FileInput);

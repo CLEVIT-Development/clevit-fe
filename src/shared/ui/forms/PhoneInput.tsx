@@ -1,6 +1,7 @@
 import { type ComponentPropsWithoutRef, useCallback, useState } from "react";
 import type { Control, FieldValues, Path, RegisterOptions } from "react-hook-form";
 import { Controller } from "react-hook-form";
+import type { CountryData } from "react-phone-input-2";
 import PhoneInput2 from "react-phone-input-2";
 
 import classNames from "classnames";
@@ -11,16 +12,6 @@ import {
   phoneValidationConstants,
   preferredCountries,
 } from "@/common/constants/phoneInput.constants";
-
-type PhoneInputCountry = {
-  countryCode: string;
-  dialCode: string;
-  format: string;
-  iso2: string;
-  name: string;
-  priority: number;
-  regions: string;
-};
 
 interface Props<T extends FieldValues> extends Omit<ComponentPropsWithoutRef<"input">, "onChange"> {
   label?: string;
@@ -36,10 +27,10 @@ interface Props<T extends FieldValues> extends Omit<ComponentPropsWithoutRef<"in
 }
 
 const PhoneInput = <T extends FieldValues>({
-  label,
   required = false,
   disabled = false,
   placeholder = "Input Placeholder",
+  label,
   error,
   name,
   rules,
@@ -52,8 +43,8 @@ const PhoneInput = <T extends FieldValues>({
   const [countryCode, setCountryCode] = useState<TCountryCode>(defaultCountry);
 
   const onPhoneInputChange = useCallback(
-    (phoneNumber: string, countryOption: PhoneInputCountry) => {
-      const pickedCountryCode = countryOption.iso2 as TCountryCode;
+    (phoneNumber: string, countryData: CountryData) => {
+      const pickedCountryCode = countryData.countryCode as TCountryCode;
 
       setCountryCode(pickedCountryCode);
 
@@ -65,7 +56,7 @@ const PhoneInput = <T extends FieldValues>({
   );
 
   return (
-    <label className={twMerge(classNames("flex flex-col space-y-[6px] max-w-[300px]", className))}>
+    <label className={twMerge(classNames("flex flex-col space-y-[6px]", className))}>
       {label && (
         <span
           className={twMerge(
@@ -89,13 +80,18 @@ const PhoneInput = <T extends FieldValues>({
             message: "Invalid phone number format",
           },
         }}
-        render={({ field: { ref, ...field } }) => (
+        render={({ field: { ref, onChange, ...field } }) => (
           <PhoneInput2
+            onChange={(phoneNumber, countryData) => {
+              onChange(phoneNumber);
+              onPhoneInputChange(phoneNumber, countryData as CountryData);
+            }}
             {...field}
-            inputProps={{ ref, autoFocus: true, ...props }}
-            isValid={(phoneNumber, country) =>
-              onPhoneInputChange(phoneNumber, country as PhoneInputCountry)
-            }
+            inputProps={{
+              ref,
+              autoFocus: true,
+              ...props,
+            }}
             disabled={disabled}
             country={defaultCountry}
             placeholder={placeholder}

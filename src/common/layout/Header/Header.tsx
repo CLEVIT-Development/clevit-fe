@@ -63,7 +63,7 @@ const Header = forwardRef(
       <header
         className={twMerge(
           classNames(
-            "transition-all duration-500 fixed top-0 z-[20] w-full backdrop-blur-[5px] desktop:px-10 desktop:py-6 px-5 py-4",
+            "transition-all duration-500 fixed top-0 z-[30] w-full backdrop-blur-[5px] desktop:px-10 desktop:py-6 px-5 py-4",
             {
               ["bg-headingGradient"]: !isReached && isTablet && (isOpen || isTransitionEndClose),
               ["bg-white"]: isReached,

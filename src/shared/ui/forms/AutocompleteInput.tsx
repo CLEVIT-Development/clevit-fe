@@ -1,5 +1,5 @@
-import { forwardRef, useRef, useState } from "react";
-import type { ComponentPropsWithoutRef, ForwardedRef } from "react";
+import { forwardRef, memo, useCallback, useRef, useState } from "react";
+import type { ChangeEvent, ComponentPropsWithoutRef, ForwardedRef, KeyboardEvent } from "react";
 
 import classNames from "classnames";
 import { twMerge } from "tailwind-merge";
@@ -44,6 +44,57 @@ const AutoCompleteInput = forwardRef(
     const [isOpen, setIsOpen] = useState(false);
     const [list, setList] = useState(items);
 
+    const onKeyDown = useCallback(
+      (event: KeyboardEvent<HTMLInputElement>) => {
+        setSelectedItem((prev) => {
+          switch (event.code) {
+            case "ArrowDown":
+              if (!isOpen) setIsOpen(true);
+
+              return Math.min(prev + 1, list.length);
+
+            case "Tab":
+              setIsOpen(false);
+
+              return prev;
+
+            case "ArrowUp":
+              if (!isOpen) setIsOpen(true);
+
+              return Math.max(prev - 1, 1);
+
+            case "Enter":
+              if (isOpen) setIsOpen(false);
+
+              event.preventDefault();
+
+              listItemRef.current?.click();
+
+              return prev;
+
+            default:
+              return prev;
+          }
+        });
+      },
+      [isOpen, list]
+    );
+
+    const onInputChange = useCallback(
+      (event: ChangeEvent<HTMLInputElement>) => {
+        if (!isOpen) setIsOpen(true);
+
+        const value = event.target.value;
+
+        const filteredList = items.filter((item) =>
+          item.title.toLowerCase().includes(value.toLowerCase())
+        );
+
+        setList(filteredList);
+      },
+      [isOpen, items]
+    );
+
     useOutsideClick(containerRef, () => setIsOpen(false));
 
     return (
@@ -78,44 +129,8 @@ const AutoCompleteInput = forwardRef(
                   }
                 )
               )}
-              onFocus={() => {
-                if (!disabled) {
-                  setIsOpen(true);
-                }
-              }}
-              onKeyDown={(event) => {
-                setSelectedItem((prev) => {
-                  switch (event.code) {
-                    case "ArrowDown":
-                      if (!isOpen) setIsOpen(true);
-
-                      return Math.min(prev + 1, list.length);
-                    case "ArrowUp":
-                      if (!isOpen) setIsOpen(true);
-
-                      return Math.max(prev - 1, 1);
-                    case "Enter":
-                      event.preventDefault();
-
-                      listItemRef.current?.click();
-
-                      return prev;
-                    default:
-                      return prev;
-                  }
-                });
-              }}
-              onInput={(event) => {
-                if (!isOpen) setIsOpen(true);
-
-                const value = (event.target as HTMLInputElement).value;
-
-                const filteredList = items.filter((item) =>
-                  item.title.toLowerCase().includes(value.toLowerCase())
-                );
-
-                setList(filteredList);
-              }}
+              onKeyDown={onKeyDown}
+              onInput={onInputChange}
               {...props}
             />
             <ArrowIcon
@@ -153,36 +168,41 @@ const AutoCompleteInput = forwardRef(
         <ul
           className="transition-all duration-300 absolute w-full top-[85px] flex flex-col bg-white border border-purple-100 rounded-[8px] p-1 z-[20]"
           style={{
-            height: isOpen ? `${list.length * 31 + 10}px` : "0",
+            // if the list is empty save the area for at least one item to show `no match found` message
+            height: isOpen ? `${(list.length || 1) * 31 + 10}px` : "0",
             opacity: isOpen ? 100 : 0,
             maxHeight: isOpen ? 120 : 0,
             overflow: isOpen ? "auto" : "hidden",
           }}
         >
-          {list.map(({ id, title }, index) => (
-            <li
-              key={id}
-              ref={selectedItem === index + 1 ? listItemRef : null}
-              onClick={() => {
-                if (!disabled) {
-                  onMenuClick?.(title);
-                  setIsOpen(false);
-                }
-              }}
-              className={classNames(
-                "transition-all duration-500 rounded-[8px] cursor-pointer hover:bg-gray-400 hover:bg-opacity-40",
-                {
-                  ["bg-gray-400 bg-opacity-40"]: selectedItem === index + 1,
-                }
-              )}
-            >
-              <p className="text-gray-200 text-sm py-[5px] pl-[12px] opacity-100">{title}</p>
-            </li>
-          ))}
+          {list.length !== 0 ? (
+            list.map(({ id, title }, index) => (
+              <li
+                key={id}
+                ref={selectedItem === index + 1 ? listItemRef : null}
+                onClick={() => {
+                  if (!disabled) {
+                    onMenuClick?.(title);
+                    setIsOpen(false);
+                  }
+                }}
+                className={classNames(
+                  "transition-all duration-500 rounded-[8px] cursor-pointer hover:bg-gray-400 hover:bg-opacity-40",
+                  {
+                    ["bg-gray-400 bg-opacity-40"]: selectedItem === index + 1,
+                  }
+                )}
+              >
+                <p className="text-gray-200 text-sm py-[5px] pl-[12px] opacity-100">{title}</p>
+              </li>
+            ))
+          ) : (
+            <p className="text-gray-200 text-sm py-[5px] pl-[12px] opacity-100">No Match Found</p>
+          )}
         </ul>
       </div>
     );
   }
 );
 
-export default AutoCompleteInput;
+export default memo(AutoCompleteInput);

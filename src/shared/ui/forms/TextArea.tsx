@@ -1,5 +1,5 @@
 import type { ForwardedRef } from "react";
-import { type ComponentPropsWithoutRef, forwardRef } from "react";
+import { type ComponentPropsWithoutRef, forwardRef, memo } from "react";
 
 import classNames from "classnames";
 import { twMerge } from "tailwind-merge";
@@ -76,4 +76,4 @@ const TextArea = forwardRef(
   }
 );
 
-export default TextArea;
+export default memo(TextArea);

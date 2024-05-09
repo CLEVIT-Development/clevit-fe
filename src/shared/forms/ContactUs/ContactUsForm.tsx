@@ -1,7 +1,7 @@
 import { useCallback } from "react";
 import { useForm } from "react-hook-form";
 
-import AutocompleteInput from "@/shared/ui/forms/AutocompleteInput";
+import AutoCompleteInput from "@/shared/ui/forms/AutoCompleteInput";
 import FileInput from "@/shared/ui/forms/FileInput";
 import { filesSizeValidation, mailRegExp } from "@/utils/validation.utils";
 
@@ -51,7 +51,7 @@ const ContactUs = () => {
             },
           })}
         />
-        <AutocompleteInput
+        <AutoCompleteInput
           required
           label="Country"
           placeholder="Please select Country"
@@ -67,7 +67,7 @@ const ContactUs = () => {
           placeholder="Enter Your Phone Number"
           error={errors.phone?.message}
         />
-        <AutocompleteInput
+        <AutoCompleteInput
           required
           label="Interested Services"
           className="desktop:col-span-2"
