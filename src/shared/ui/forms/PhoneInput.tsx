@@ -1,6 +1,6 @@
 import { type ComponentPropsWithoutRef, useCallback, useState } from "react";
-import type { Control, FieldValues, Path, RegisterOptions } from "react-hook-form";
-import { Controller } from "react-hook-form";
+import type { RegisterOptions } from "react-hook-form";
+import { Controller, useFormContext } from "react-hook-form";
 import type { CountryData } from "react-phone-input-2";
 import PhoneInput2 from "react-phone-input-2";
 
@@ -13,33 +13,31 @@ import {
   preferredCountries,
 } from "@/common/constants/phoneInput.constants";
 
-interface Props<T extends FieldValues> extends Omit<ComponentPropsWithoutRef<"input">, "onChange"> {
+interface Props extends Omit<ComponentPropsWithoutRef<"input">, "onChange"> {
   label?: string;
   disabled?: boolean;
   error?: string;
-  name: Path<T>;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  register?: any;
+  name: string;
   defaultCountry?: TCountryCode;
   rules?: RegisterOptions;
-  control: Control<T>;
   onChange?: (value: string, country: TCountryCode) => void;
 }
 
-const PhoneInput = <T extends FieldValues>({
+const PhoneInput = ({
   required = false,
   disabled = false,
+  defaultCountry = "am",
   placeholder = "Input Placeholder",
   label,
   error,
   name,
   rules,
   className,
-  defaultCountry = "am",
-  control,
   onChange,
   ...props
-}: Props<T>) => {
+}: Props) => {
+  const { control } = useFormContext();
+
   const [countryCode, setCountryCode] = useState<TCountryCode>(defaultCountry);
 
   const onPhoneInputChange = useCallback(
@@ -49,8 +47,6 @@ const PhoneInput = <T extends FieldValues>({
       setCountryCode(pickedCountryCode);
 
       onChange?.(phoneNumber, pickedCountryCode);
-
-      return true;
     },
     [onChange]
   );

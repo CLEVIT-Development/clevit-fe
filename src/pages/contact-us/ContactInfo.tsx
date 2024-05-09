@@ -1,9 +1,9 @@
+import { Link } from "react-router-dom";
+
 import EnvelopeIcon from "@/assets/vectors/Envelope.svg?react";
-import FacebookIcon from "@/assets/vectors/Facebook.svg?react";
-import InstagramIcon from "@/assets/vectors/Instagram.svg?react";
-import LinkedInIcon from "@/assets/vectors/Linkedin.svg?react";
 import LocationIcon from "@/assets/vectors/Location.svg?react";
 import TelephoneIcon from "@/assets/vectors/Telephone.svg?react";
+import { socialLinksConstants } from "@/common/constants/socials.constants";
 
 import ContactItem from "./ContactItem";
 
@@ -19,9 +19,11 @@ const ContactInfo = () => {
           content="Komitas 14/3, Yerevan, Armenia"
         />
         <div className="flex space-x-[30px] desktop:self-start self-center">
-          <LinkedInIcon className="fill-purple-700 desktop:h-[36px] desktop:w-[36px] h-[27px] w-[27px]" />
-          <FacebookIcon className="fill-purple-700 desktop:h-[36px] desktop:w-[36px] h-[27px] w-[27px]" />
-          <InstagramIcon className="fill-purple-700 desktop:h-[36px] desktop:w-[36px] h-[27px] w-[27px]" />
+          {socialLinksConstants.map(({ id, link, Icon }) => (
+            <Link key={id} to={link} target="_blank">
+              <Icon className="fill-purple-700 desktop:h-[36px] desktop:w-[36px] h-[27px] w-[27px]" />
+            </Link>
+          ))}
         </div>
       </div>
     </div>

@@ -9,6 +9,7 @@ interface Props extends Omit<ComponentPropsWithoutRef<"input">, "onChange"> {
   disabled?: boolean;
   error?: string;
   hint?: string;
+  name: string;
 }
 
 const Input = forwardRef(

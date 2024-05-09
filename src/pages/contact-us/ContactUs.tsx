@@ -1,5 +1,5 @@
 import Layout from "@/common/layout/Layout";
-import ContactUsForm from "@/shared/forms/ContactUs/ContactUsForm";
+import ContactUsForm from "@/shared/forms/ContactUsForm";
 import { HeaderVariant } from "@/types/variant.types";
 
 import ContactInfo from "./ContactInfo";

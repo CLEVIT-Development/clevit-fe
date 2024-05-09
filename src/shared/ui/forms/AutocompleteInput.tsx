@@ -1,5 +1,6 @@
-import { forwardRef, memo, useCallback, useRef, useState } from "react";
+import { forwardRef, useCallback, useRef, useState } from "react";
 import type { ChangeEvent, ComponentPropsWithoutRef, ForwardedRef, KeyboardEvent } from "react";
+import { useFormContext } from "react-hook-form";
 
 import classNames from "classnames";
 import { twMerge } from "tailwind-merge";
@@ -18,7 +19,7 @@ interface Props extends ComponentPropsWithoutRef<"input"> {
   error?: string;
   hint?: string;
   items: TSelectItem[];
-  onMenuClick: (value: string) => void;
+  name: string;
 }
 
 const AutoCompleteInput = forwardRef(
@@ -31,14 +32,16 @@ const AutoCompleteInput = forwardRef(
       hint,
       items,
       className,
-      onMenuClick,
       autoComplete = "new-password",
+      name,
       ...props
     }: Props,
     ref: ForwardedRef<HTMLInputElement>
   ) => {
+    const { setValue, trigger } = useFormContext();
     const containerRef = useRef<HTMLLabelElement>(null);
     const listItemRef = useRef<HTMLLIElement>(null);
+    const listContainerRef = useRef<HTMLUListElement>(null);
 
     const [selectedItem, setSelectedItem] = useState(0);
     const [isOpen, setIsOpen] = useState(false);
@@ -46,38 +49,58 @@ const AutoCompleteInput = forwardRef(
 
     const onKeyDown = useCallback(
       (event: KeyboardEvent<HTMLInputElement>) => {
-        setSelectedItem((prev) => {
+        if (["Tab", "ArrowDown", "ArrowUp", "Enter"].includes(event.code)) {
+          let newSelectedItem = 0;
+
           switch (event.code) {
-            case "ArrowDown":
-              if (!isOpen) setIsOpen(true);
-
-              return Math.min(prev + 1, list.length);
-
             case "Tab":
               setIsOpen(false);
 
-              return prev;
+              break;
 
+            case "ArrowDown":
+              if (!isOpen) setIsOpen(true);
+
+              newSelectedItem = Math.min(selectedItem + 1, list.length);
+              break;
             case "ArrowUp":
               if (!isOpen) setIsOpen(true);
 
-              return Math.max(prev - 1, 1);
+              newSelectedItem = Math.max(selectedItem - 1, 1);
+              break;
 
             case "Enter":
-              if (isOpen) setIsOpen(false);
-
               event.preventDefault();
 
               listItemRef.current?.click();
+              if (error) trigger(name);
 
-              return prev;
+              break;
 
             default:
-              return prev;
+              break;
           }
-        });
+
+          if (listContainerRef.current) {
+            const itemHeight = listItemRef.current?.offsetHeight ?? 0;
+            const containerHeight = listContainerRef.current.offsetHeight;
+            const scrollTop = listContainerRef.current.scrollTop;
+            const selectedOffsetTop = (newSelectedItem - 1) * itemHeight;
+            const selectedBottom = selectedOffsetTop + itemHeight;
+
+            if (selectedOffsetTop < scrollTop) {
+              listContainerRef.current.scrollTop = selectedOffsetTop;
+            }
+
+            if (selectedBottom >= scrollTop + containerHeight) {
+              listContainerRef.current.scrollTop = selectedBottom - containerHeight + itemHeight;
+            }
+          }
+
+          setSelectedItem(newSelectedItem);
+        }
       },
-      [isOpen, list]
+      [error, isOpen, list.length, name, selectedItem, trigger]
     );
 
     const onInputChange = useCallback(
@@ -166,23 +189,26 @@ const AutoCompleteInput = forwardRef(
           </span>
         </label>
         <ul
-          className="transition-all duration-300 absolute w-full top-[85px] flex flex-col bg-white border border-purple-100 rounded-[8px] p-1 z-[20]"
+          role="tree"
+          ref={listContainerRef}
+          className="transition-all duration-500 absolute w-full top-[85px] flex flex-col bg-white border border-purple-100 rounded-[8px] p-1 z-[20]"
           style={{
             // if the list is empty save the area for at least one item to show `no match found` message
             height: isOpen ? `${(list.length || 1) * 31 + 10}px` : "0",
             opacity: isOpen ? 100 : 0,
-            maxHeight: isOpen ? 120 : 0,
+            maxHeight: isOpen ? 134 : 0,
             overflow: isOpen ? "auto" : "hidden",
           }}
         >
           {list.length !== 0 ? (
             list.map(({ id, title }, index) => (
               <li
+                role="treeitem"
                 key={id}
                 ref={selectedItem === index + 1 ? listItemRef : null}
                 onClick={() => {
                   if (!disabled) {
-                    onMenuClick?.(title);
+                    setValue(name, title);
                     setIsOpen(false);
                   }
                 }}
@@ -205,4 +231,4 @@ const AutoCompleteInput = forwardRef(
   }
 );
 
-export default memo(AutoCompleteInput);
+export default AutoCompleteInput;

@@ -1,5 +1,7 @@
 import type { ForwardedRef } from "react";
-import { type ComponentPropsWithoutRef, forwardRef, memo, useState } from "react";
+import { type ComponentPropsWithoutRef, forwardRef, useState } from "react";
+import { useDropzone } from "react-dropzone";
+import { useFormContext } from "react-hook-form";
 
 import classNames from "classnames";
 import { twMerge } from "tailwind-merge";
@@ -20,11 +22,25 @@ const FileInput = forwardRef(
     { error, label = "Attach File", icon = <PaperClip />, ...props }: Props,
     ref: ForwardedRef<HTMLInputElement>
   ) => {
+    const { setValue } = useFormContext();
+
     const [selectedFile, setSelectedFile] = useState<File | null>();
+
+    const { getRootProps, getInputProps } = useDropzone({
+      onDrop: (acceptedFiles) => {
+        setValue("files", acceptedFiles[0]);
+        setSelectedFile(acceptedFiles[0]);
+      },
+    });
 
     return (
       <div className="flex flex-col space-y-2">
-        <label htmlFor="upload" className="flex items-center space-x-2 cursor-pointer">
+        <label
+          {...getRootProps()}
+          tabIndex={-1}
+          htmlFor="upload"
+          className="flex items-center space-x-2 cursor-pointer"
+        >
           {icon}
           <span className="text-purple-100 font-medium text-base">{label}</span>
           <input
@@ -36,6 +52,7 @@ const FileInput = forwardRef(
               setSelectedFile(event.currentTarget.files?.[0]);
             }}
             {...props}
+            {...getInputProps}
           />
         </label>
         <span
@@ -64,4 +81,4 @@ const FileInput = forwardRef(
   }
 );
 
-export default memo(FileInput);
+export default FileInput;
