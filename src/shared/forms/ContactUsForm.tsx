@@ -40,12 +40,10 @@ const ContactUs = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors, isValid, isDirty },
+    formState: { errors },
   } = methods;
 
   const onFormSubmit = (data: IContactUsFormPayload) => console.log(data);
-
-  console.log("dirty", isDirty, "valid", isValid);
 
   return (
     <FormProvider {...methods}>
@@ -83,12 +81,10 @@ const ContactUs = () => {
             {...register("country", { required: "Country Required" })}
           />
           <PhoneInput
-            required
             name="phone"
             label="Phone"
             placeholder="Enter Your Phone Number"
             error={errors.phone?.message}
-            rules={{ required: "Phone Required" }}
           />
           <AutoCompleteInput
             required
