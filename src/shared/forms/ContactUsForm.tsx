@@ -5,7 +5,7 @@ import {
   contactUsCountriesConstants,
   contactUsServicesConstants,
 } from "@/common/constants/contactUs.constants";
-import AutoCompleteInput from "@/shared/ui/forms/AutoCompleteInput.tsx";
+import AutoComplete from "@/shared/ui/forms/AutoComplete.tsx";
 import { filesSizeValidation, mailRegExp } from "@/utils/validation.utils";
 
 import Button from "../ui/Button";
@@ -72,7 +72,7 @@ const ContactUs = () => {
               },
             })}
           />
-          <AutoCompleteInput
+          <AutoComplete
             required
             label="Country"
             placeholder="Please select Country"
@@ -86,7 +86,7 @@ const ContactUs = () => {
             placeholder="Enter Your Phone Number"
             error={errors.phone?.message}
           />
-          <AutoCompleteInput
+          <AutoComplete
             required
             label="Interested Services"
             className="desktop:col-span-2"

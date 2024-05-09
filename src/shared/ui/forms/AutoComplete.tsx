@@ -22,7 +22,7 @@ interface Props extends ComponentPropsWithoutRef<"input"> {
   name: string;
 }
 
-const AutoCompleteInput = forwardRef(
+const AutoComplete = forwardRef(
   (
     {
       required = false,
@@ -234,4 +234,4 @@ const AutoCompleteInput = forwardRef(
   }
 );
 
-export default AutoCompleteInput;
+export default AutoComplete;
