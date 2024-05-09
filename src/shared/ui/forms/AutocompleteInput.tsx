@@ -39,6 +39,7 @@ const AutoCompleteInput = forwardRef(
     ref: ForwardedRef<HTMLInputElement>
   ) => {
     const { setValue, trigger } = useFormContext();
+
     const containerRef = useRef<HTMLLabelElement>(null);
     const listItemRef = useRef<HTMLLIElement>(null);
     const listContainerRef = useRef<HTMLUListElement>(null);
@@ -81,6 +82,7 @@ const AutoCompleteInput = forwardRef(
               break;
           }
 
+          // scroll into the next element in the list on key down
           if (listContainerRef.current) {
             const itemHeight = listItemRef.current?.offsetHeight ?? 0;
             const containerHeight = listContainerRef.current.offsetHeight;
@@ -205,6 +207,7 @@ const AutoCompleteInput = forwardRef(
               <li
                 role="treeitem"
                 key={id}
+                // the ref will be refered to the active item to click and set the value
                 ref={selectedItem === index + 1 ? listItemRef : null}
                 onClick={() => {
                   if (!disabled) {
