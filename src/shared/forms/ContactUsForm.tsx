@@ -1,4 +1,4 @@
-import type { FieldValues } from "react-hook-form";
+import { Controller, FieldValues } from "react-hook-form";
 import { FormProvider, useForm } from "react-hook-form";
 
 import {
@@ -40,6 +40,7 @@ const ContactUs = () => {
   const {
     register,
     handleSubmit,
+    control,
     formState: { errors },
   } = methods;
 
@@ -80,11 +81,18 @@ const ContactUs = () => {
             items={contactUsCountriesConstants}
             {...register("country", { required: "Country Required" })}
           />
-          <PhoneInput
+          <Controller
             name="phone"
-            label="Phone"
-            placeholder="Enter Your Phone Number"
-            error={errors.phone?.message}
+            control={control}
+            render={({ field: { ref, ...field } }) => (
+              <PhoneInput
+                label="Phone"
+                placeholder="Enter Your Phone Number"
+                error={errors.phone?.message}
+                ref={ref}
+                extraProps={field}
+              />
+            )}
           />
           <AutoComplete
             required

@@ -1,4 +1,4 @@
-import type { ForwardedRef } from "react";
+import type { ForwardedRef, ReactNode } from "react";
 import { type ComponentPropsWithoutRef, forwardRef, useState } from "react";
 import { useDropzone } from "react-dropzone";
 import { useFormContext } from "react-hook-form";
@@ -14,7 +14,7 @@ import FilePreview from "./FilePreview";
 interface Props extends ComponentPropsWithoutRef<"input"> {
   error?: string;
   label?: string;
-  icon?: React.ReactNode;
+  icon?: ReactNode;
 }
 
 const FileInput = forwardRef(
@@ -52,7 +52,7 @@ const FileInput = forwardRef(
               setSelectedFile(event.currentTarget.files?.[0]);
             }}
             {...props}
-            {...getInputProps}
+            {...getInputProps()}
           />
         </label>
         <span

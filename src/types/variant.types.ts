@@ -11,4 +11,5 @@ export enum LogoVariant {
 export enum HeaderVariant {
   Primary = "primary",
   Secondary = "secondary",
+  Tertiary = "tertiary",
 }

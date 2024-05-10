@@ -1,7 +1,7 @@
 import React from "react";
 
 import Footer from "@/common/layout/Footer.tsx";
-import type { HeaderVariant } from "@/types/variant.types";
+import { HeaderVariant } from "@/types/variant.types";
 
 import HeadBar from "./HeadBar";
 
@@ -11,7 +11,7 @@ interface Props {
   headerVariant?: HeaderVariant;
 }
 
-const Layout = ({ children, heading, headerVariant }: Props) => {
+const Layout = ({ children, heading, headerVariant = HeaderVariant.Primary }: Props) => {
   return (
     <div className="w-screen h-screen flex flex-col">
       <HeadBar heading={heading} headerVariant={headerVariant} />

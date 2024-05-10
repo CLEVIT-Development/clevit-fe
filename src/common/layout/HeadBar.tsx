@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { useEffect, useRef, useState } from "react";
 
 import { HeaderVariant } from "@/types/variant.types";
@@ -6,14 +7,14 @@ import useScroll from "../hooks/useScroll";
 import Header from "./Header/Header";
 
 interface Props {
-  heading: React.ReactNode;
-  headerVariant?: HeaderVariant;
+  heading: ReactNode;
+  headerVariant: HeaderVariant;
 }
 
-const HeadBar = ({ heading, headerVariant = HeaderVariant.Primary }: Props) => {
+const HeadBar = ({ heading, headerVariant }: Props) => {
   const headerRef = useRef<HTMLDivElement>(null);
   const headingRef = useRef<HTMLDivElement>(null);
-  const [isReached, setIsReached] = useState(headerVariant === HeaderVariant.Secondary);
+  const [currHeaderVariant, setCurrHeaderVariant] = useState<HeaderVariant>(headerVariant);
   const { scrollY } = useScroll();
 
   useEffect(() => {
@@ -25,13 +26,15 @@ const HeadBar = ({ heading, headerVariant = HeaderVariant.Primary }: Props) => {
         Number(headingRect?.height) - Number(headerRect?.height) + Number(headingRect?.top);
 
       // header will pass the heading bottom side if and only if the distance is negative.
-      setIsReached(headerHeadingDistance < 0);
+      const isReached = headerHeadingDistance < 0;
+
+      setCurrHeaderVariant(isReached ? HeaderVariant.Secondary : HeaderVariant.Primary);
     }
-  }, [scrollY, headerVariant]);
+  }, [scrollY, currHeaderVariant]);
 
   return (
     <>
-      <Header ref={headerRef} isReached={isReached} headerVariant={headerVariant} />
+      <Header ref={headerRef} headerVariant={currHeaderVariant} />
       {heading && (
         <div ref={headingRef} className="desktop:h-[680px]">
           {heading}
