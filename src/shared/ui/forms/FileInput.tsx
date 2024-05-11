@@ -1,6 +1,5 @@
 import type { ForwardedRef, ReactNode } from "react";
 import { type ComponentPropsWithoutRef, forwardRef, useState } from "react";
-import { useDropzone } from "react-dropzone";
 import { useFormContext } from "react-hook-form";
 
 import classNames from "classnames";
@@ -15,31 +14,23 @@ interface Props extends ComponentPropsWithoutRef<"input"> {
   error?: string;
   label?: string;
   icon?: ReactNode;
+  name: string;
 }
 
 const FileInput = forwardRef(
   (
-    { error, label = "Attach File", icon = <PaperClip />, ...props }: Props,
+    { error, label = "Attach File", icon = <PaperClip />, name, ...props }: Props,
     ref: ForwardedRef<HTMLInputElement>
   ) => {
     const { setValue } = useFormContext();
-
     const [selectedFile, setSelectedFile] = useState<File | null>();
-
-    const { getRootProps, getInputProps } = useDropzone({
-      onDrop: (acceptedFiles) => {
-        setValue("files", acceptedFiles[0]);
-        setSelectedFile(acceptedFiles[0]);
-      },
-    });
 
     return (
       <div className="flex flex-col space-y-2">
         <label
-          {...getRootProps()}
           tabIndex={-1}
           htmlFor="upload"
-          className="flex items-center space-x-2 cursor-pointer"
+          className="relative flex items-center space-x-2 cursor-pointer"
         >
           {icon}
           <span className="text-purple-100 font-medium text-base">{label}</span>
@@ -47,12 +38,16 @@ const FileInput = forwardRef(
             ref={ref}
             id="upload"
             type="file"
-            className="hidden"
+            title=""
+            className="absolute opacity-0 cursor-pointer w-[100px]"
             onInput={(event) => {
               setSelectedFile(event.currentTarget.files?.[0]);
+              setValue(name, event.currentTarget.files?.[0]);
+            }}
+            onDrop={(event) => {
+              setValue(name, event.currentTarget.files?.[0]);
             }}
             {...props}
-            {...getInputProps()}
           />
         </label>
         <span
@@ -72,7 +67,10 @@ const FileInput = forwardRef(
             <FilePreview
               name={selectedFile.name}
               icon={<PdfFileIcon />}
-              onCancelClick={() => setSelectedFile(null)}
+              onCancelClick={() => {
+                setSelectedFile(null);
+                setValue(name, null);
+              }}
             />
           </div>
         )}

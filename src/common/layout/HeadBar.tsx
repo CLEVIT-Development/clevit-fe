@@ -18,7 +18,7 @@ const HeadBar = ({ heading, headerVariant }: Props) => {
   const { scrollY } = useScroll();
 
   useEffect(() => {
-    if (scrollY > 0 && headerVariant === HeaderVariant.Primary) {
+    if (headerVariant === HeaderVariant.Primary) {
       const headerRect = headerRef.current?.getBoundingClientRect();
       const headingRect = headingRef.current?.getBoundingClientRect();
 
@@ -30,16 +30,12 @@ const HeadBar = ({ heading, headerVariant }: Props) => {
 
       setCurrHeaderVariant(isReached ? HeaderVariant.Secondary : HeaderVariant.Primary);
     }
-  }, [scrollY, currHeaderVariant]);
+  }, [scrollY, currHeaderVariant, headerVariant]);
 
   return (
     <>
       <Header ref={headerRef} headerVariant={currHeaderVariant} />
-      {heading && (
-        <div ref={headingRef} className="desktop:h-[680px]">
-          {heading}
-        </div>
-      )}
+      {heading && <div ref={headingRef}>{heading}</div>}
     </>
   );
 };

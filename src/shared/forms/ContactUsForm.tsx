@@ -1,5 +1,7 @@
-import { Controller, FieldValues } from "react-hook-form";
-import { FormProvider, useForm } from "react-hook-form";
+import type { FieldValues } from "react-hook-form";
+import { FormProvider } from "react-hook-form";
+import { Controller } from "react-hook-form";
+import { useForm } from "react-hook-form";
 
 import {
   contactUsCountriesConstants,
@@ -86,11 +88,11 @@ const ContactUs = () => {
             control={control}
             render={({ field: { ref, ...field } }) => (
               <PhoneInput
-                label="Phone"
-                placeholder="Enter Your Phone Number"
-                error={errors.phone?.message}
                 ref={ref}
+                label="Phone"
                 extraProps={field}
+                error={errors.phone?.message}
+                placeholder="Enter Your Phone Number"
               />
             )}
           />

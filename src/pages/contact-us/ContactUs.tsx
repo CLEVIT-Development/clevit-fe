@@ -1,13 +1,13 @@
-import Layout from "@/common/layout/Layout";
+import Layout from "@/common/layout/Layout.tsx";
 import ContactUsForm from "@/shared/forms/ContactUsForm";
-import { HeaderVariant } from "@/types/variant.types";
+import { HeaderVariant } from "@/types/variant.types.ts";
 
 import ContactInfo from "./ContactInfo";
 
 const ContactUs = () => {
   return (
     <Layout headerVariant={HeaderVariant.Tertiary}>
-      <section className="w-full flex flex-col items-center space-y-[50px] desktop:pt-[100px] pt-[80px] pb-[160px]">
+      <section className="w-full flex flex-col items-center space-y-[50px]">
         <div className="flex flex-col space-y-6 desktop:max-w-[80%]">
           <h1 className="desktop:text-3xl text-lg font-semibold text-gray-200 text-center">
             Your Idea, Our Expertise. Let's Collaborate!

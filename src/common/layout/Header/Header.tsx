@@ -62,12 +62,15 @@ const Header = forwardRef(({ headerVariant }: Props, ref: ForwardedRef<HTMLDivEl
     <header
       className={twMerge(
         classNames(
-          "transition-all duration-500 fixed top-0 z-[30] w-full backdrop-blur-[5px] desktop:px-10 desktop:py-6 px-5 py-4",
+          "transition-all duration-300 fixed top-0 z-[30] w-full backdrop-blur-[5px] desktop:px-10 desktop:py-6 px-5 py-4",
           {
             ["bg-white"]: isWhiteBackground,
             ["bg-headingGradient"]:
-              !isWhiteBackground && isTablet && (isOpen || isTransitionEndClose),
+              headerVariant === HeaderVariant.Primary &&
+              isTablet &&
+              (isOpen || isTransitionEndClose),
             ["shadow-base-200"]: headerVariant !== HeaderVariant.Tertiary,
+            ["border border-b-gray-400"]: headerVariant === HeaderVariant.Tertiary,
           }
         )
       )}

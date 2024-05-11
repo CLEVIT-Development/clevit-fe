@@ -13,3 +13,8 @@ export enum HeaderVariant {
   Secondary = "secondary",
   Tertiary = "tertiary",
 }
+
+export enum SectionVariant {
+  Primary = "primary",
+  Secondary = "secondary",
+}

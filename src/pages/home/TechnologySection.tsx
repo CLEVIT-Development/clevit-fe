@@ -21,7 +21,7 @@ const TechnologySection = () => {
   return (
     <Section
       title="Technologies We Use"
-      className="bg-gray-300 desktop:py-12 lg:px-[100px] desktop:px-[46px] md:px-[30px] md:mx-0 xs:-mx-5 xs:py-5 xs:px-[24px] rounded-lg-l space-y-9 overflow-hidden"
+      className="w-auto bg-gray-300 desktop:py-12 lg:px-[100px] desktop:px-[46px] md:px-[30px] md:mx-0 xs:-mx-5 xs:py-5 xs:px-[24px] rounded-lg-l space-y-9 overflow-hidden"
     >
       <div className="w-full flex flex-col items-center space-y-[58px]">
         <Navigation items={technologyTabsConstants} onItemClick={onTabItemClickHandler} />
@@ -33,7 +33,7 @@ const TechnologySection = () => {
             ({ id, title, Icon }) => (
               <div
                 key={id}
-                className="flex flex-col desktop:space-y-5 xs:space-y-2 items-center justify-between min-w-[163px]"
+                className="flex flex-col desktop:space-y-5 xs:space-y-2 items-center justify-between min-w-[103px]"
               >
                 <div className="desktop:h-auto xs:h-[64px] svg-wrapper">
                   <Icon />

@@ -1,5 +1,7 @@
 import React from "react";
 
+import classNames from "classnames";
+
 import Footer from "@/common/layout/Footer.tsx";
 import { HeaderVariant } from "@/types/variant.types";
 
@@ -16,7 +18,14 @@ const Layout = ({ children, heading, headerVariant = HeaderVariant.Primary }: Pr
     <div className="w-screen h-screen flex flex-col">
       <HeadBar heading={heading} headerVariant={headerVariant} />
       <main className="relative flex flex-col flex-grow xl:px-20 lg:px-16 px-5 pt-12 desktop:pt-[100px]">
-        <div className="flex flex-col lg:space-y-[100px] space-y-12 max-w-[1280px] self-center">
+        <div
+          className={classNames(
+            "flex flex-col lg:space-y-[100px] space-y-12 max-w-[1280px] self-center",
+            {
+              ["desktop:pt-[100px] pt-[80px] pb-[160px]"]: headerVariant === HeaderVariant.Tertiary,
+            }
+          )}
+        >
           {children}
         </div>
       </main>

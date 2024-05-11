@@ -1,6 +1,7 @@
 import About from "@/pages/about/About";
 import ContactUs from "@/pages/contact-us/ContactUs.tsx";
 import Home from "@/pages/home/Home.tsx";
+import PrivacyPolicy from "@/pages/privacy-policy/PrivacyPolicy.tsx";
 
 export enum RoutePaths {
   Home = "/",
@@ -9,6 +10,8 @@ export enum RoutePaths {
   Portfolio = "/portfolio",
   Blog = "/blog",
   ContactUs = "/contact-us",
+  PrivacyPolicy = "/privacy-policy",
+  TermsAndConditions = "/terms-and-conditions",
 }
 
 export const headerMenuLinks = [
@@ -24,4 +27,5 @@ export const routerElements = [
   { path: RoutePaths.Home, Element: Home },
   { path: RoutePaths.About, Element: About },
   { path: RoutePaths.ContactUs, Element: ContactUs },
+  { path: RoutePaths.PrivacyPolicy, Element: PrivacyPolicy },
 ];

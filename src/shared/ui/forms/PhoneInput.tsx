@@ -51,7 +51,6 @@ const PhoneInput = forwardRef(
         <PhoneInput2
           inputProps={{
             ref,
-            autoFocus: true,
             ...props,
           }}
           disabled={disabled}

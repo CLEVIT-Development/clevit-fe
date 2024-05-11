@@ -18,7 +18,6 @@ import NestIcon from "@/assets/vectors/technology/Nest.svg?react";
 import NextIcon from "@/assets/vectors/technology/Next.svg?react";
 import NoSQLIcon from "@/assets/vectors/technology/NoSQL.svg?react";
 import NodeIcon from "@/assets/vectors/technology/Node.svg?react";
-import OracleIcon from "@/assets/vectors/technology/Oracle.svg?react";
 import PostgresIcon from "@/assets/vectors/technology/PostgreSQL.svg?react";
 import ReactIcon from "@/assets/vectors/technology/React.svg?react";
 import RedisIcon from "@/assets/vectors/technology/Redis.svg?react";
@@ -73,12 +72,11 @@ export const technologiesConstants = {
     { id: 4, title: "PostgreSQL", Icon: PostgresIcon },
     { id: 5, title: "Firebase", Icon: FirebaseIcon },
     { id: 6, title: "Google Cloud", Icon: GoogleCloudIcon },
-    { id: 7, title: "Microsoft SQL Server", Icon: MicrosoftServerIcon },
+    { id: 7, title: "SQL Server", Icon: MicrosoftServerIcon },
     { id: 8, title: "SQLite", Icon: SQLiteIcon },
     { id: 9, title: "Redis", Icon: RedisIcon },
     { id: 10, title: "Maria DB", Icon: MariaDBIcon },
-    { id: 11, title: "Oracle", Icon: OracleIcon },
-    { id: 12, title: "Elasticsearch", Icon: ElasticSearchIcon },
-    { id: 13, title: "DynamoDB", Icon: DynamoDBIcon },
+    { id: 11, title: "Elasticsearch", Icon: ElasticSearchIcon },
+    { id: 12, title: "DynamoDB", Icon: DynamoDBIcon },
   ],
 };
