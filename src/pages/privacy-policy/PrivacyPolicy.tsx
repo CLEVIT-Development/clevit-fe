@@ -1,6 +1,7 @@
+import { appConfig } from "@/common/constants/config.ts";
 import Layout from "@/common/layout/Layout.tsx";
+import DocumentSection from "@/common/templates/DocumentSection.tsx";
 import EffectiveDateSection from "@/pages/privacy-policy/EffectiveDateSection.tsx";
-import PrivacyListSection from "@/pages/privacy-policy/PrivacyListSection.tsx";
 import { HeaderVariant } from "@/types/variant.types.ts";
 
 const PrivacyPolicy = () => {
@@ -11,7 +12,7 @@ const PrivacyPolicy = () => {
           Privacy Policy
         </h1>
         <EffectiveDateSection />
-        <PrivacyListSection
+        <DocumentSection
           headline="Information We Collect"
           title="We collect two types of information"
           listItems={[
@@ -19,7 +20,7 @@ const PrivacyPolicy = () => {
             "Non-Personal Information: This includes information collected automatically, such as your IP address, browser type, device information, and browsing history, using cookies and other tracking technologies. This helps us improve our website and deliver a better user experience.",
           ]}
         />
-        <PrivacyListSection
+        <DocumentSection
           headline="How We Use Your Information"
           title="We use the information we collect for the following purposes"
           listItems={[
@@ -31,7 +32,7 @@ const PrivacyPolicy = () => {
             "Improving website user experience",
           ]}
         />
-        <PrivacyListSection
+        <DocumentSection
           headline="How We Share Your Information"
           title="We may share your personal information with"
           listItems={[
@@ -41,15 +42,15 @@ const PrivacyPolicy = () => {
           ]}
           description="In the event of a business transfer, such as a merger or acquisition, your information may be transferred to the new owner. We may also disclose your information if required by law or in response to a legal request."
         />
-        <PrivacyListSection
+        <DocumentSection
           headline="Your Rights"
           title="You have the right to"
           listItems={[
-            "Access, correct, or delete the personal information we hold. You can do this by contacting us at [insert contact email].",
+            `Access, correct, or delete the personal information we hold. You can do this by contacting us at ${appConfig.contactMail}.`,
             "Opt-out of receiving marketing communications from us.",
           ]}
         />
-        <PrivacyListSection
+        <DocumentSection
           headline="Cookie Policy"
           title="Our website uses cookies and other tracking technologies to"
           description="By using our website, you consent to our use of cookies. You can learn more about our cookie policy and manage your preferences by visiting our Cookie Policy page."
@@ -59,17 +60,25 @@ const PrivacyPolicy = () => {
             "Personalize content",
           ]}
         />
-        <PrivacyListSection
+        <DocumentSection
           headline="Data Security"
           description="We take the security of your personal information seriously and use reasonable technical and organizational measures to protect it from unauthorized access, disclosure, alteration, or destruction."
         />
-        <PrivacyListSection
+        <DocumentSection
           headline="Third-Party Links"
           description="Our website may contain links to external websites. We are not responsible for the privacy practices or content of these sites. We encourage you to review the privacy policies of any third-party websites you visit."
         />
-        <PrivacyListSection
+        <DocumentSection
           headline="Children's Privacy"
           description="Our website is not intended for use by children under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that we have collected personal information from a child under 13, we will take steps to remove it from our records."
+        />
+        <DocumentSection
+          headline="Changes to this Privacy Policy"
+          description="We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. You are advised to review this Privacy Policy periodically for any changes."
+        />
+        <DocumentSection
+          headline="Contact Information"
+          description={`If you have any questions or concerns about this Privacy Policy, our privacy practices, or the collection and use of your personal information, please contact us at ${appConfig.contactMail}`}
         />
       </div>
     </Layout>

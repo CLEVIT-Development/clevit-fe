@@ -1,14 +1,17 @@
+import type { ReactNode } from "react";
+
 import Section from "@/common/templates/Section.tsx";
 import { SectionVariant } from "@/types/variant.types.ts";
 
 interface Props {
   title?: string;
   listItems?: string[];
-  description?: string;
+  description?: ReactNode;
+  description2?: string;
   headline: string;
 }
 
-const PrivacyListSection = ({ headline, title, listItems, description }: Props) => {
+const DocumentSection = ({ headline, title, listItems, description, description2 }: Props) => {
   return (
     <Section title={headline} variant={SectionVariant.Secondary}>
       <div className="flex flex-col items-start space-y-2">
@@ -24,9 +27,11 @@ const PrivacyListSection = ({ headline, title, listItems, description }: Props) 
           </ul>
         )}
         {description && <p className="text-md font-normal text-gray-200">{description}</p>}
+        {description2 && <br />}
+        {description2 && <p className="text-md font-normal text-gray-200">{description2}</p>}
       </div>
     </Section>
   );
 };
 
-export default PrivacyListSection;
+export default DocumentSection;
