@@ -12,15 +12,17 @@ import useResponsive from "@/common/hooks/useResponsive";
 import Button from "@/shared/ui/Button.tsx";
 import Copyright from "@/shared/ui/Copyright";
 import Logo from "@/shared/ui/Logo.tsx";
-import { LogoVariant } from "@/types/variant.types.ts";
+import { HeaderVariant, LogoVariant } from "@/types/variant.types.ts";
 
 import BurgerMenu from "./BurgerMenu";
 
 interface Props {
-  isReached: boolean;
+  headerVariant: HeaderVariant;
 }
 
-const Header = forwardRef(({ isReached }: Props, ref: ForwardedRef<HTMLDivElement>) => {
+const Header = forwardRef(({ headerVariant }: Props, ref: ForwardedRef<HTMLDivElement>) => {
+  const isWhiteBackground = headerVariant !== HeaderVariant.Primary;
+
   const navigate = useNavigate();
   const { isTablet } = useResponsive();
   const [isOpen, setIsOpen] = useState(false);
@@ -44,9 +46,9 @@ const Header = forwardRef(({ isReached }: Props, ref: ForwardedRef<HTMLDivElemen
         className={({ isActive }) =>
           twMerge(
             classNames("text-white desktop:text-md text-lg font-medium", {
-              ["text-purple-100"]: isReached,
-              ["text-gray-200"]: isActive && isReached,
-              ["text-gray-100 opacity-90"]: isActive && !isReached,
+              ["text-purple-100"]: isWhiteBackground,
+              ["text-gray-200"]: isActive && isWhiteBackground,
+              ["text-gray-100 opacity-90"]: isActive && !isWhiteBackground,
             })
           )
         }
@@ -54,16 +56,21 @@ const Header = forwardRef(({ isReached }: Props, ref: ForwardedRef<HTMLDivElemen
         {headerMenuLink.label}
       </NavLink>
     ));
-  }, [isReached]);
+  }, [isWhiteBackground]);
 
   return (
     <header
       className={twMerge(
         classNames(
-          "transition-all duration-500 w-full fixed top-0 z-[20] backdrop-blur-[5px] desktop:px-10 desktop:py-6 px-5 py-4",
+          "transition-all duration-300 fixed top-0 z-[30] w-full backdrop-blur-[5px] desktop:px-10 desktop:py-6 px-5 py-4",
           {
-            ["shadow-base-200 bg-white"]: isReached,
-            ["bg-headingGradient"]: !isReached && isTablet && (isOpen || isTransitionEndClose),
+            ["bg-white"]: isWhiteBackground,
+            ["bg-headingGradient"]:
+              headerVariant === HeaderVariant.Primary &&
+              isTablet &&
+              (isOpen || isTransitionEndClose),
+            ["shadow-base-200"]: headerVariant !== HeaderVariant.Tertiary,
+            ["border border-b-gray-400"]: headerVariant === HeaderVariant.Tertiary,
           }
         )
       )}
@@ -77,14 +84,14 @@ const Header = forwardRef(({ isReached }: Props, ref: ForwardedRef<HTMLDivElemen
               behavior: "smooth",
             });
           }}
-          variant={isReached ? LogoVariant.Secondary : LogoVariant.Primary}
+          variant={isWhiteBackground ? LogoVariant.Secondary : LogoVariant.Primary}
         />
         <BurgerMenu
           isOpen={isOpen}
-          isReached={isReached}
+          isReached={isWhiteBackground}
           onMenuClick={() => setIsOpen((prev) => !prev)}
         />
-        <div ref={ref} className="flex space-x-[28px] xs:hidden desktop:flex">
+        <div ref={ref} className="space-x-[28px] desktop:flex hidden">
           <nav className="flex items-center space-x-5">{renderNavList}</nav>
           <Button prefix={<Messages />}>Let's Talk</Button>
         </div>
@@ -105,7 +112,7 @@ const Header = forwardRef(({ isReached }: Props, ref: ForwardedRef<HTMLDivElemen
         </nav>
         <Copyright
           className={classNames({
-            ["text-gray-400"]: !isReached && isTablet,
+            ["text-gray-400"]: !isWhiteBackground && isTablet,
           })}
         />
       </div>

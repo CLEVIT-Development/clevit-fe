@@ -5,7 +5,7 @@ import Button from "@/shared/ui/Button";
 
 const TeamSection = () => {
   return (
-    <Section className="md:mx-[167px]">
+    <Section className="self-center desktop:max-w-[80%]">
       <p className="break-words text-md font-normal">
         Clevit, your full-cycle development partner assists businesses of all sizes to build new
         applications, modernize existing systems, and achieve optimal functionality in the

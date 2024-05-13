@@ -75,7 +75,7 @@ export const Gradient = forwardRef<HTMLDivElement, Props>(({ children, ...defaul
     <div
       ref={ref}
       {...defaultProps}
-      className="w-full desktop:min-h-full"
+      className="w-full desktop:max-h-[600px]"
       style={{ height: `${height}px` }}
     >
       <div className={styles.gradientBackground}>

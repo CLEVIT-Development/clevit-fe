@@ -13,7 +13,7 @@ const ProcessCard = ({ order, title, icon, className }: Props) => {
   return (
     <div
       className={twMerge(
-        "transition-all duration-500 group hover:scale-105 relative bg-white z-[1] shadow-base-200 border-[1px] border-purple-100 rounded-[10px] max-w-[200px] min-h-[200px] flex flex-col items-center justify-end",
+        "transition-all duration-500 group hover:scale-105 relative bg-white z-[1] shadow-base-200 border-[1px] border-purple-100 rounded-lg-l max-w-[200px] min-h-[200px] flex flex-col items-center justify-end",
         className
       )}
     >
