@@ -10,7 +10,7 @@ import FeedbackSection from "./Feedback/FeedbackSection";
 import ProcessSection from "./ProcessSection";
 import ProjectSection from "./Project/ProjectSection";
 
-const Home = () => {
+const HomePage = () => {
   return (
     <Layout heading={<HomeHeading />}>
       <AboutSection />
@@ -25,4 +25,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;

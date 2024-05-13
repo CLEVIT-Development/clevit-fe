@@ -9,7 +9,7 @@ import RecentPost from "@/shared/ui/RecentPost.tsx";
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col bg-black lg:pt-12 lg:pb-6 xs:pt-5 xs:pb-4 lg:px-20 xs:px-5">
+    <footer className="flex flex-col bg-black lg:pt-12 lg:pb-6 xs:pt-5 xs:pb-4 lg:px-20 xs:px-5 z-[20]">
       <div className="xs:grid xs:grid-cols-3 xs:gap-8 lg:grid-cols-4">
         <div className="flex flex-col space-y-4 sm:col-auto xs:col-span-3">
           <h6 className="font-bold lg:text-md-l xs:text-md text-white opacity-60">About Us</h6>
