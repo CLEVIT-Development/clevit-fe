@@ -18,7 +18,7 @@ body {
   @apply p-0;
   @apply flex;
   @apply box-border;
-  @apply overscroll-none;
+  @apply overscroll-y-none;
   @apply overflow-x-hidden;
 }
 
