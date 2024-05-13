@@ -12,10 +12,11 @@ interface Props {
 }
 
 const HeadBar = ({ heading, headerVariant }: Props) => {
+  const { scrollY } = useScroll();
+
   const headerRef = useRef<HTMLDivElement>(null);
   const headingRef = useRef<HTMLDivElement>(null);
   const [currHeaderVariant, setCurrHeaderVariant] = useState(headerVariant);
-  const { scrollY } = useScroll();
 
   useEffect(() => {
     if (headerVariant === HeaderVariant.Primary) {
@@ -34,7 +35,7 @@ const HeadBar = ({ heading, headerVariant }: Props) => {
 
   return (
     <>
-      <Header ref={headerRef} headerVariant={currHeaderVariant} />
+      <Header ref={headerRef} headerVariant={currHeaderVariant} scrollY={scrollY} />
       {heading && <div ref={headingRef}>{heading}</div>}
     </>
   );

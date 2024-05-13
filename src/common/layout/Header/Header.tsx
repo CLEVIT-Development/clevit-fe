@@ -18,108 +18,112 @@ import BurgerMenu from "./BurgerMenu";
 
 interface Props {
   headerVariant: HeaderVariant;
+  scrollY: number;
 }
 
-const Header = forwardRef(({ headerVariant }: Props, ref: ForwardedRef<HTMLDivElement>) => {
-  const isWhiteBackground = headerVariant !== HeaderVariant.Primary;
+const Header = forwardRef(
+  ({ headerVariant, scrollY }: Props, ref: ForwardedRef<HTMLDivElement>) => {
+    const isWhiteBackground = headerVariant !== HeaderVariant.Primary;
 
-  const navigate = useNavigate();
-  const { isTablet } = useResponsive();
-  const [isOpen, setIsOpen] = useState(false);
-  const [isTransitionEndClose, setIsTransitionEndClose] = useState(false);
-  const navListRef = useRef<HTMLDivElement>(null);
+    const navigate = useNavigate();
+    const { isTablet } = useResponsive();
+    const [isOpen, setIsOpen] = useState(false);
+    const [isTransitionEndClose, setIsTransitionEndClose] = useState(false);
+    const navListRef = useRef<HTMLDivElement>(null);
 
-  useLockBodyScroll(isOpen);
+    useLockBodyScroll(isOpen);
 
-  const renderNavList = useMemo(() => {
-    return headerMenuLinks.map((headerMenuLink) => (
-      <NavLink
-        onClick={() => {
-          setIsOpen(false);
-          window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-          });
-        }}
-        key={headerMenuLink.id}
-        to={headerMenuLink.link}
-        className={({ isActive }) =>
-          twMerge(
-            classNames("text-white desktop:text-md text-lg font-medium", {
-              ["text-purple-100"]: isWhiteBackground,
-              ["text-gray-200"]: isActive && isWhiteBackground,
-              ["text-gray-100 opacity-90"]: isActive && !isWhiteBackground,
-            })
-          )
-        }
-      >
-        {headerMenuLink.label}
-      </NavLink>
-    ));
-  }, [isWhiteBackground]);
-
-  return (
-    <header
-      className={twMerge(
-        classNames(
-          "transition-all duration-300 fixed top-0 z-[30] w-full backdrop-blur-[5px] desktop:px-10 desktop:py-6 px-5 py-4",
-          {
-            ["bg-white"]: isWhiteBackground,
-            ["bg-headingGradient"]:
-              headerVariant === HeaderVariant.Primary &&
-              isTablet &&
-              (isOpen || isTransitionEndClose),
-            ["shadow-base-200"]: headerVariant !== HeaderVariant.Tertiary,
-            ["border border-b-gray-400"]: headerVariant === HeaderVariant.Tertiary,
-          }
-        )
-      )}
-    >
-      <div className="flex justify-between items-center">
-        <Logo
-          onLogoClick={() => {
-            navigate(RoutePaths.Home);
+    const renderNavList = useMemo(() => {
+      return headerMenuLinks.map((headerMenuLink) => (
+        <NavLink
+          onClick={() => {
+            setIsOpen(false);
             window.scrollTo({
               top: 0,
               behavior: "smooth",
             });
           }}
-          variant={isWhiteBackground ? LogoVariant.Secondary : LogoVariant.Primary}
-        />
-        <BurgerMenu
-          isOpen={isOpen}
-          isReached={isWhiteBackground}
-          onMenuClick={() => setIsOpen((prev) => !prev)}
-        />
-        <div ref={ref} className="space-x-[28px] desktop:flex hidden">
-          <nav className="flex items-center space-x-5">{renderNavList}</nav>
-          <Button prefix={<Messages />} onClick={() => navigate(RoutePaths.Calendly)}>
-            Let's Talk
-          </Button>
-        </div>
-      </div>
-      <div
-        className={classNames(
-          "transition-all duration-700 overflow-hidden desktop:hidden flex flex-col justify-between items-center h-0",
-          {
-            ["h-[50vh]"]: isOpen,
+          key={headerMenuLink.id}
+          to={headerMenuLink.link}
+          className={({ isActive }) =>
+            twMerge(
+              classNames("text-white desktop:text-md text-lg font-medium", {
+                ["text-purple-100"]: isWhiteBackground,
+                ["text-gray-200"]: isActive && isWhiteBackground,
+                ["text-gray-100 opacity-90"]: isActive && !isWhiteBackground,
+              })
+            )
           }
+        >
+          {headerMenuLink.label}
+        </NavLink>
+      ));
+    }, [isWhiteBackground]);
+
+    return (
+      <header
+        className={twMerge(
+          classNames(
+            "transition-all duration-300 w-full fixed top-0 z-[30] desktop:px-10 desktop:py-6 px-5 py-4",
+            {
+              ["bg-white"]: isWhiteBackground,
+              ["bg-headingGradient"]:
+                headerVariant === HeaderVariant.Primary &&
+                isTablet &&
+                (isOpen || isTransitionEndClose),
+              ["shadow-base-200 backdrop-blur-[5px]"]:
+                headerVariant !== HeaderVariant.Tertiary && scrollY > 20,
+              ["border border-b-gray-400"]: headerVariant === HeaderVariant.Tertiary,
+            }
+          )
         )}
-        onTransitionEnd={() => {
-          setIsTransitionEndClose(isOpen);
-        }}
       >
-        <nav ref={navListRef} className="flex flex-col items-center space-y-6">
-          {renderNavList}
-        </nav>
-        <Copyright
-          className={classNames({
-            ["text-gray-400"]: !isWhiteBackground && isTablet,
-          })}
-        />
-      </div>
-    </header>
-  );
-});
+        <div className="flex justify-between items-center">
+          <Logo
+            onLogoClick={() => {
+              navigate(RoutePaths.Home);
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }}
+            variant={isWhiteBackground ? LogoVariant.Secondary : LogoVariant.Primary}
+          />
+          <BurgerMenu
+            isOpen={isOpen}
+            isReached={isWhiteBackground}
+            onMenuClick={() => setIsOpen((prev) => !prev)}
+          />
+          <div ref={ref} className="space-x-[28px] desktop:flex hidden">
+            <nav className="flex items-center space-x-5">{renderNavList}</nav>
+            <Button prefix={<Messages />} onClick={() => navigate(RoutePaths.Calendly)}>
+              Let's Talk
+            </Button>
+          </div>
+        </div>
+        <div
+          className={classNames(
+            "transition-all duration-700 overflow-hidden desktop:hidden flex flex-col justify-between items-center h-0",
+            {
+              ["h-[50vh]"]: isOpen,
+            }
+          )}
+          onTransitionEnd={() => {
+            setIsTransitionEndClose(isOpen);
+          }}
+        >
+          <nav ref={navListRef} className="flex flex-col items-center space-y-6">
+            {renderNavList}
+          </nav>
+          <Copyright
+            className={classNames({
+              ["text-gray-400"]: !isWhiteBackground && isTablet,
+            })}
+          />
+        </div>
+      </header>
+    );
+  }
+);
 
 export default Header;

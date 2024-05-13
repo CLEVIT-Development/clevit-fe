@@ -20,8 +20,9 @@ const ProjectSection = () => {
       <div className="w-full flex flex-col items-center space-y-5">
         <div className="w-full">
           <AliceCarousel
-            infinite={true}
             autoPlay
+            mouseTracking
+            infinite={true}
             autoPlayInterval={2500}
             animationDuration={1000}
             responsive={{ 0: { items: 1 } }}
