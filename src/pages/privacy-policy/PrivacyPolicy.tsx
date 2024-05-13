@@ -1,4 +1,4 @@
-import { appConfig } from "@/common/constants/config.constants.ts";
+import { appConfig } from "@/assets/constants/config.constants.ts";
 import Layout from "@/common/layout/Layout.tsx";
 import DocumentSection from "@/common/templates/DocumentSection.tsx";
 import { HeaderVariant } from "@/types/variant.types.ts";

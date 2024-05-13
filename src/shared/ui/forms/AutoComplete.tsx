@@ -214,6 +214,8 @@ const AutoComplete = forwardRef(
                     setValue(name, title);
                     setIsOpen(false);
                   }
+
+                  if (error) trigger(name);
                 }}
                 className={classNames(
                   "transition-all duration-500 rounded-[8px] cursor-pointer hover:bg-gray-400 hover:bg-opacity-40",

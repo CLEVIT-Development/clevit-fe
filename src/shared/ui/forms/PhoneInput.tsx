@@ -6,7 +6,7 @@ import PhoneInput2 from "react-phone-input-2";
 import classNames from "classnames";
 import { twMerge } from "tailwind-merge";
 
-import { preferredCountries } from "@/common/constants/phoneInput.constants";
+import { preferredCountries } from "@/assets/constants/phoneInput.constants";
 
 interface Props extends Omit<ComponentPropsWithoutRef<"input">, "onChange"> {
   label?: string;

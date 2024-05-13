@@ -1,4 +1,4 @@
-import { processesConstants } from "@/common/constants/processes.constants.ts";
+import { processesConstants } from "@/assets/constants/processes.constants.ts";
 import Section from "@/common/templates/Section.tsx";
 import ProcessCard from "@/shared/ui/Process/ProcessCard";
 import ProcessConnector from "@/shared/ui/Process/ProcessConnector";

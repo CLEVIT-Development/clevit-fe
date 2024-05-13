@@ -1,8 +1,8 @@
 import type { FieldValues } from "react-hook-form";
 import { Controller, FormProvider, useForm } from "react-hook-form";
 
+import { servicesConstants } from "@/assets/constants/services.constants.ts";
 import countriesConstants from "@/assets/data/countries.json";
-import { contactUsServicesConstants } from "@/common/constants/contactUs.constants";
 import { contactUsSchema } from "@/common/schemas/contactUsSchema.tsx";
 import AutoComplete from "@/shared/ui/forms/AutoComplete.tsx";
 import { filesSizeValidation } from "@/utils/validation.utils";
@@ -87,7 +87,7 @@ const ContactUs = () => {
             className="desktop:col-span-2"
             placeholder="Please select service"
             error={errors.service?.message}
-            items={contactUsServicesConstants}
+            items={servicesConstants}
             {...register("service")}
           />
           <TextArea

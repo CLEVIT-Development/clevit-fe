@@ -1,7 +1,7 @@
 import { useCallback, useState } from "react";
 
-import { swipeAnimationSecondaryConstants } from "@/common/constants/swipeAnimation.constants";
-import { valueTabsConstants, valuesConstants } from "@/common/constants/values.constants";
+import { swipeAnimationSecondaryConstants } from "@/assets/constants/swipeAnimation.constants";
+import { valueTabsConstants, valuesConstants } from "@/assets/constants/values.constants";
 import Section from "@/common/templates/Section";
 import Navigation from "@/shared/ui/Navigation";
 

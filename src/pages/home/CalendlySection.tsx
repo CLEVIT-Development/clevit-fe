@@ -1,6 +1,6 @@
 import { InlineWidget } from "react-calendly";
 
-import { appConfig } from "@/common/constants/config.constants.ts";
+import { appConfig } from "@/assets/constants/config.constants.ts";
 import useResponsive from "@/common/hooks/useResponsive.ts";
 import Section from "@/common/templates/Section";
 
@@ -10,12 +10,12 @@ const CalendlySection = () => {
   return (
     <Section
       title="Ready to turn your vision into reality? The journey starts here. We're excited to meet you."
-      className="calendlyDesktop:!mb-[50px] space-y-0"
+      className="calendlyDesktop:!mb-[30px] space-y-0"
     >
       <div className="w-full">
         <InlineWidget
           url={appConfig.shareUrl}
-          styles={{ height: isMobile ? 1000 : isTablet || isCalendlyDesktop ? 1100 : 700 }}
+          styles={{ height: isMobile ? 1000 : isTablet || isCalendlyDesktop ? 1100 : 660 }}
         />
       </div>
     </Section>

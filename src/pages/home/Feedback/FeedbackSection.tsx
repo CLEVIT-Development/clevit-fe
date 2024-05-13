@@ -4,7 +4,7 @@ import AliceCarousel from "react-alice-carousel";
 import classNames from "classnames";
 import { twMerge } from "tailwind-merge";
 
-import { feedbacksConstants } from "@/common/constants/feedbacks.constants";
+import { feedbacksConstants } from "@/assets/constants/feedbacks.constants";
 import useResponsive from "@/common/hooks/useResponsive";
 import Section from "@/common/templates/Section";
 

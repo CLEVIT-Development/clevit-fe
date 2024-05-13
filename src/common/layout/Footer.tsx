@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 
 import { RoutePaths } from "@/app/routing/routing.constants.ts";
-import { blogsConstants } from "@/common/constants/blogs.constants.ts";
-import { contactsConstants } from "@/common/constants/contacts.constants.ts";
-import { socialLinksConstants } from "@/common/constants/socials.constants.ts";
+import { blogsConstants } from "@/assets/constants/blogs.constants.ts";
+import { contactsConstants } from "@/assets/constants/contacts.constants.ts";
+import { socialLinksConstants } from "@/assets/constants/socials.constants.ts";
 import Copyright from "@/shared/ui/Copyright";
 import RecentPost from "@/shared/ui/RecentPost.tsx";
 
@@ -27,9 +27,15 @@ const Footer = () => {
         </div>
         <div className="flex flex-col space-y-4 sm:mx-auto">
           <h6 className="font-bold lg:text-md-l xs:text-md text-white opacity-60">Company</h6>
-          <p className="text-gray-100 font-medium lg:text-md xs:text-base">Services</p>
-          <p className="text-gray-100 font-medium lg:text-md xs:text-base">Portfolio</p>
-          <p className="text-gray-100 font-medium lg:text-md xs:text-base">Blog</p>
+          <Link to={RoutePaths.Services}>
+            <p className="text-gray-100 font-medium lg:text-md xs:text-base">Services</p>
+          </Link>
+          <Link to={RoutePaths.Portfolio}>
+            <p className="text-gray-100 font-medium lg:text-md xs:text-base">Portfolio</p>
+          </Link>
+          <Link to={RoutePaths.Blog}>
+            <p className="text-gray-100 font-medium lg:text-md xs:text-base">Blog</p>
+          </Link>
         </div>
         <div className="flex flex-col space-y-4 sm:col-auto col-span-2 ml-auto">
           <h6 className="font-bold lg:text-md-l text-md text-white opacity-60">Contact Us</h6>

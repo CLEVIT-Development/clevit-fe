@@ -1,10 +1,10 @@
 import { useCallback, useState } from "react";
 
-import { swipeAnimationConstants } from "@/common/constants/swipeAnimation.constants.ts";
+import { swipeAnimationConstants } from "@/assets/constants/swipeAnimation.constants.ts";
 import {
   technologiesConstants,
   technologyTabsConstants,
-} from "@/common/constants/technologies.constants";
+} from "@/assets/constants/technologies.constants";
 import Section from "@/common/templates/Section.tsx";
 import Navigation from "@/shared/ui/Navigation.tsx";
 
