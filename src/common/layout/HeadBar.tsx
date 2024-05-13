@@ -14,7 +14,7 @@ interface Props {
 const HeadBar = ({ heading, headerVariant }: Props) => {
   const headerRef = useRef<HTMLDivElement>(null);
   const headingRef = useRef<HTMLDivElement>(null);
-  const [currHeaderVariant, setCurrHeaderVariant] = useState<HeaderVariant>(headerVariant);
+  const [currHeaderVariant, setCurrHeaderVariant] = useState(headerVariant);
   const { scrollY } = useScroll();
 
   useEffect(() => {

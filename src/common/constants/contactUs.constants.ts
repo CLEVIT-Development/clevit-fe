@@ -232,7 +232,6 @@ export const contactUsCountriesConstants = [
   { id: 180, title: "Republic of North Macedonia" },
   { id: 181, title: "Romania" },
   { id: 182, title: "Russian Federation (the)" },
-  { id: 183, title: "Rwanda" },
   { id: 184, title: "Réunion" },
   { id: 185, title: "Saint Barthélemy" },
   { id: 186, title: "Saint Helena, Ascension and Tristan da Cunha" },

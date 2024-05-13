@@ -3,10 +3,8 @@ import { FormProvider } from "react-hook-form";
 import { Controller } from "react-hook-form";
 import { useForm } from "react-hook-form";
 
-import {
-  contactUsCountriesConstants,
-  contactUsServicesConstants,
-} from "@/common/constants/contactUs.constants";
+import countriesConstants from "@/assets/data/countries.json";
+import { contactUsServicesConstants } from "@/common/constants/contactUs.constants";
 import AutoComplete from "@/shared/ui/forms/AutoComplete.tsx";
 import { filesSizeValidation, mailRegExp } from "@/utils/validation.utils";
 
@@ -80,7 +78,7 @@ const ContactUs = () => {
             label="Country"
             placeholder="Please select Country"
             error={errors.country?.message}
-            items={contactUsCountriesConstants}
+            items={countriesConstants.countries}
             {...register("country", { required: "Country Required" })}
           />
           <Controller
