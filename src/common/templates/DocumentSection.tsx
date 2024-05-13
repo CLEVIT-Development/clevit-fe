@@ -8,7 +8,7 @@ interface Props {
   listItems?: string[];
   description?: ReactNode;
   description2?: string;
-  headline: string;
+  headline?: string;
 }
 
 const DocumentSection = ({ headline, title, listItems, description, description2 }: Props) => {

@@ -5,6 +5,7 @@ import { appConfig } from "@/common/constants/config.ts";
 import Layout from "@/common/layout/Layout.tsx";
 import DocumentSection from "@/common/templates/DocumentSection.tsx";
 import { HeaderVariant } from "@/types/variant.types.ts";
+import { urlShortener } from "@/utils/link.utils.ts";
 
 const TermsAndConditions = () => {
   return (
@@ -15,12 +16,18 @@ const TermsAndConditions = () => {
         </h1>
         <DocumentSection
           headline="Introduction"
-          description={`Welcome to Clevit, a leading provider of web and mobile app development solutions. Our
-            terms and conditions govern your use of our ${appConfig.websiteDomain}, and any
-            services or products offered therein. By accessing or using our website, you agree to
-            abide by these terms and conditions. If you do not agree with any part of these terms,
-            you may not access our website.
-            `}
+          description={
+            <>
+              Welcome to Clevit, a leading provider of web and mobile app development solutions. Our
+              terms and conditions govern your use of our{" "}
+              <Link to={appConfig.websiteDomain} className="text-blue-100">
+                {urlShortener(appConfig.websiteDomain)}
+              </Link>
+              , and any services or products offered therein. By accessing or using our website, you
+              agree to abide by these terms and conditions. If you do not agree with any part of
+              these terms, you may not access our website.
+            </>
+          }
         />
         <DocumentSection
           headline="Purchases"
@@ -63,7 +70,7 @@ const TermsAndConditions = () => {
             <>
               Your use of our website is subject to our privacy policy, which outlines how we
               collect, use, and protect your personal information. By using our website, you consent
-              to the terms of our privacy policy. For more information, please refer to our
+              to the terms of our privacy policy. For more information, please refer to our{" "}
               <Link to={RoutePaths.PrivacyPolicy} className="text-blue-100">
                 Privacy Policy page
               </Link>
