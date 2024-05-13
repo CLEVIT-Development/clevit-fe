@@ -1,18 +1,21 @@
 import { InlineWidget } from "react-calendly";
 
-import { CalendlyConfig } from "@/common/constants/config";
-import useResponsive from "@/common/hooks/useResponsive";
+import { appConfig } from "@/assets/constants/config.constants.ts";
+import useResponsive from "@/common/hooks/useResponsive.ts";
 import Section from "@/common/templates/Section";
 
 const CalendlySection = () => {
-  const { isTablet, isExtraSmall } = useResponsive();
+  const { isTablet, isMobile, isCalendlyDesktop } = useResponsive();
 
   return (
-    <Section title="Ready to turn your vision into reality? The journey starts here. We're excited to meet you.">
+    <Section
+      title="Ready to turn your vision into reality? The journey starts here. We're excited to meet you."
+      className="calendlyDesktop:!mb-[30px] space-y-0"
+    >
       <div className="w-full">
         <InlineWidget
-          url={CalendlyConfig.shareUrl}
-          styles={{ height: isExtraSmall ? 1000 : isTablet ? 1100 : 700 }}
+          url={appConfig.shareUrl}
+          styles={{ height: isMobile ? 1000 : isTablet || isCalendlyDesktop ? 1100 : 660 }}
         />
       </div>
     </Section>

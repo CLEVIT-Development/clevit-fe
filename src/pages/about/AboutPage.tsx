@@ -9,7 +9,7 @@ import TeamSection from "./TeamSection";
 import TotalSection from "./TotalSection";
 import ValuesSection from "./ValuesSection";
 
-const About = () => {
+const AboutPage = () => {
   return (
     <Layout heading={<AboutHeading />}>
       <TeamSection />
@@ -23,4 +23,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AboutPage;

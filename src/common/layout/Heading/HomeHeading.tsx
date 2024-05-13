@@ -1,11 +1,15 @@
 import type { ForwardedRef } from "react";
 import { forwardRef } from "react";
+import { useNavigate } from "react-router-dom";
 
+import { RoutePaths } from "@/app/routing/routing.constants.ts";
 import Messages from "@/assets/vectors/Messages.svg?react";
 import { Gradient } from "@/shared/gradient/Gradient.tsx";
 import Button from "@/shared/ui/Button.tsx";
 
 const HomeHeading = forwardRef((_, ref: ForwardedRef<HTMLDivElement>) => {
+  const navigate = useNavigate();
+
   return (
     <Gradient ref={ref}>
       <div className="w-full flex flex-col items-center text-center desktop:pb-20 desktop:pt-[240px] xs:pb-6 xs:pt-[125px] xs:px-[30px]">
@@ -16,10 +20,16 @@ const HomeHeading = forwardRef((_, ref: ForwardedRef<HTMLDivElement>) => {
           Clevit provides a comprehensive suite of web, mobile, and AI solutions to help your
           business evolve and fuel innovation.
         </p>
-        <Button className="xs:flex desktop:hidden" prefix={<Messages />}>
+        <Button
+          className="flex desktop:hidden"
+          prefix={<Messages />}
+          onClick={() => navigate(RoutePaths.Calendly)}
+        >
           Let's Talk
         </Button>
-        <Button className="xs:hidden desktop:flex">Request a Quote</Button>
+        <Button className="hidden desktop:flex" onClick={() => navigate(RoutePaths.Calendly)}>
+          Request a Quote
+        </Button>
       </div>
     </Gradient>
   );

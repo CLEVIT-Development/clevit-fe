@@ -1,7 +1,7 @@
 import { useCallback, useState } from "react";
 
-import { swipeAnimationSecondaryConstants } from "@/common/constants/swipeAnimation.constants";
-import { valueTabsConstants, valuesConstants } from "@/common/constants/values.constants";
+import { swipeAnimationSecondaryConstants } from "@/assets/constants/swipeAnimation.constants";
+import { valueTabsConstants, valuesConstants } from "@/assets/constants/values.constants";
 import Section from "@/common/templates/Section";
 import Navigation from "@/shared/ui/Navigation";
 
@@ -32,7 +32,7 @@ const ValuesSection = () => {
               return (
                 <div
                   key={id}
-                  className="w-full bg-gray-300 rounded-[10px] min-h-[237px] p-5 flex flex-col md:items-start items-center md:space-y-[33px] space-y-4"
+                  className="w-full bg-gray-300 rounded-lg-l min-h-[237px] p-5 flex flex-col md:items-start items-center md:space-y-[33px] space-y-4"
                 >
                   <div className="svg-wrapper">
                     <Icon />

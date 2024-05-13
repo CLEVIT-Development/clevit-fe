@@ -1,6 +1,6 @@
 import classNames from "classnames";
 
-import { processesConstants } from "@/common/constants/processes.constants";
+import { processesConstants } from "@/assets/constants/processes.constants";
 import useResponsive from "@/common/hooks/useResponsive";
 import { PositionVariant } from "@/types/position.types";
 import { isEven } from "@/utils/parity.utils";

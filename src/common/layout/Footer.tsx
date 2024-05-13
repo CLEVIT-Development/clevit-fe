@@ -1,14 +1,15 @@
 import { Link } from "react-router-dom";
 
-import { blogsConstants } from "@/common/constants/blogs.constants.ts";
-import { contactsConstants } from "@/common/constants/contacts.constants.ts";
-import { socialLinksConstants } from "@/common/constants/socials.constants.ts";
+import { RoutePaths } from "@/app/routing/routing.constants.ts";
+import { blogsConstants } from "@/assets/constants/blogs.constants.ts";
+import { contactsConstants } from "@/assets/constants/contacts.constants.ts";
+import { socialLinksConstants } from "@/assets/constants/socials.constants.ts";
 import Copyright from "@/shared/ui/Copyright";
 import RecentPost from "@/shared/ui/RecentPost.tsx";
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col bg-black lg:pt-12 lg:pb-6 xs:pt-5 xs:pb-4 lg:px-20 xs:px-5">
+    <footer className="flex flex-col bg-black lg:pt-12 lg:pb-6 xs:pt-5 xs:pb-4 lg:px-20 xs:px-5 z-[20]">
       <div className="xs:grid xs:grid-cols-3 xs:gap-8 lg:grid-cols-4">
         <div className="flex flex-col space-y-4 sm:col-auto xs:col-span-3">
           <h6 className="font-bold lg:text-md-l xs:text-md text-white opacity-60">About Us</h6>
@@ -26,12 +27,18 @@ const Footer = () => {
         </div>
         <div className="flex flex-col space-y-4 sm:mx-auto">
           <h6 className="font-bold lg:text-md-l xs:text-md text-white opacity-60">Company</h6>
-          <p className="text-gray-100 font-medium lg:text-md xs:text-base">Services</p>
-          <p className="text-gray-100 font-medium lg:text-md xs:text-base">Portfolio</p>
-          <p className="text-gray-100 font-medium lg:text-md xs:text-base">Blog</p>
+          <Link to={RoutePaths.Services}>
+            <p className="text-gray-100 font-medium lg:text-md xs:text-base">Services</p>
+          </Link>
+          <Link to={RoutePaths.Portfolio}>
+            <p className="text-gray-100 font-medium lg:text-md xs:text-base">Portfolio</p>
+          </Link>
+          <Link to={RoutePaths.Blog}>
+            <p className="text-gray-100 font-medium lg:text-md xs:text-base">Blog</p>
+          </Link>
         </div>
-        <div className="flex flex-col space-y-4 sm:col-auto xs:col-span-2 sm:mx-auto">
-          <h6 className="font-bold lg:text-md-l xs:text-md text-white opacity-60">Contact Us</h6>
+        <div className="flex flex-col space-y-4 sm:col-auto col-span-2 ml-auto">
+          <h6 className="font-bold lg:text-md-l text-md text-white opacity-60">Contact Us</h6>
           {contactsConstants.map(({ id, text, link, Element }) => (
             <div key={id} className="flex items-center space-x-2">
               <Element className="size-6" />
@@ -59,11 +66,11 @@ const Footer = () => {
       <div className="h-0.5 lg:-mx-20 xs:-mx-5 mt-6 lg:mb-6 xs:mb-4 bg-gray-100" />
       <div className="flex items-center lg:justify-between lg:flex-row xs:flex-col-reverse">
         <div className="flex items-center space-x-2 lg:mt-0 xs:mt-2">
-          <Link to={"link1"} className="text-xs text-gray-100 opacity-60">
+          <Link to={RoutePaths.PrivacyPolicy} className="text-xs text-gray-100 opacity-60">
             Privacy Policy
           </Link>
           <div className="w-0.5 h-4 bg-gray-100" />
-          <Link to={"link2"} className="text-xs text-gray-100 opacity-60">
+          <Link to={RoutePaths.TermsAndConditions} className="text-xs text-gray-100 opacity-60">
             Terms of Conditions
           </Link>
         </div>

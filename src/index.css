@@ -9,12 +9,16 @@
   font-family: Poppins, sans-serif;
 }
 
+input[type="file"]::-webkit-file-upload-button {
+  cursor: pointer;
+}
+
 body {
   @apply m-0;
   @apply p-0;
   @apply flex;
   @apply box-border;
-  @apply overscroll-none;
+  @apply overscroll-y-none;
   @apply overflow-x-hidden;
 }
 
