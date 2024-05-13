@@ -1,6 +1,7 @@
 import React from "react";
 
 import classNames from "classnames";
+import { twMerge } from "tailwind-merge";
 
 import Footer from "@/common/layout/Footer.tsx";
 import { HeaderVariant } from "@/types/variant.types";
@@ -11,19 +12,24 @@ interface Props {
   children: React.ReactNode;
   heading?: React.ReactNode;
   headerVariant?: HeaderVariant;
+  className?: string;
 }
 
-const Layout = ({ children, heading, headerVariant = HeaderVariant.Primary }: Props) => {
+const Layout = ({ children, heading, headerVariant = HeaderVariant.Primary, className }: Props) => {
   return (
     <div className="w-screen h-screen flex flex-col">
       <HeadBar heading={heading} headerVariant={headerVariant} />
       <main className="relative flex flex-col flex-grow xl:px-20 lg:px-16 px-5 pt-12 desktop:pt-[100px]">
         <div
-          className={classNames(
-            "flex flex-col lg:space-y-[100px] space-y-12 max-w-[1280px] self-center",
-            {
-              ["desktop:pt-[100px] pt-[80px] pb-[160px]"]: headerVariant === HeaderVariant.Tertiary,
-            }
+          className={twMerge(
+            classNames(
+              "flex flex-col lg:space-y-[100px] space-y-12 max-w-[1280px] self-center",
+              {
+                ["desktop:pt-[100px] pt-[80px] pb-[160px]"]:
+                  headerVariant === HeaderVariant.Tertiary,
+              },
+              className
+            )
           )}
         >
           {children}

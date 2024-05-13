@@ -93,7 +93,9 @@ const Header = forwardRef(({ headerVariant }: Props, ref: ForwardedRef<HTMLDivEl
         />
         <div ref={ref} className="space-x-[28px] desktop:flex hidden">
           <nav className="flex items-center space-x-5">{renderNavList}</nav>
-          <Button prefix={<Messages />}>Let's Talk</Button>
+          <Button prefix={<Messages />} onClick={() => navigate(RoutePaths.Calendly)}>
+            Let's Talk
+          </Button>
         </div>
       </div>
       <div

@@ -13,7 +13,7 @@ const AboutHeading = forwardRef((_, ref: ForwardedRef<HTMLDivElement>) => {
         </h1>
         <img
           src={AboutHeadingBackground}
-          alt="About Heading Background"
+          alt="AboutPage Heading Background"
           className="desktop:block hidden"
         />
       </div>

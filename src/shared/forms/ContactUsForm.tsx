@@ -1,12 +1,12 @@
 import type { FieldValues } from "react-hook-form";
-import { FormProvider } from "react-hook-form";
-import { Controller } from "react-hook-form";
-import { useForm } from "react-hook-form";
+import { Controller, FormProvider, useForm } from "react-hook-form";
 
 import countriesConstants from "@/assets/data/countries.json";
 import { contactUsServicesConstants } from "@/common/constants/contactUs.constants";
+import { contactUsSchema } from "@/common/schemas/contactUsSchema.tsx";
 import AutoComplete from "@/shared/ui/forms/AutoComplete.tsx";
-import { filesSizeValidation, mailRegExp } from "@/utils/validation.utils";
+import { filesSizeValidation } from "@/utils/validation.utils";
+import { yupResolver } from "@hookform/resolvers/yup";
 
 import Button from "../ui/Button";
 import FileInput from "../ui/forms/FileInput";
@@ -18,23 +18,16 @@ interface IContactUsFormPayload extends FieldValues {
   fullname: string;
   email: string;
   country: string;
-  phone: string;
+  phone?: string;
   service: string;
-  description: string;
-  files: File[];
+  description?: string;
+  files?: File[];
 }
 
 const ContactUs = () => {
   const methods = useForm<IContactUsFormPayload>({
     mode: "onChange",
-    defaultValues: {
-      fullname: "",
-      email: "",
-      phone: "",
-      country: "",
-      service: "",
-      description: "",
-    },
+    resolver: yupResolver(contactUsSchema),
   });
 
   const {
@@ -58,20 +51,14 @@ const ContactUs = () => {
             label="Full Name"
             error={errors.fullname?.message}
             placeholder="Enter Your Full Name"
-            {...register("fullname", { required: "Full Name Required" })}
+            {...register("fullname")}
           />
           <Input
             required
             label="Email"
             error={errors.email?.message}
             placeholder="Enter Your Email Address"
-            {...register("email", {
-              required: "Email Required",
-              pattern: {
-                value: mailRegExp,
-                message: "Email Format not valid",
-              },
-            })}
+            {...register("email")}
           />
           <AutoComplete
             required
@@ -79,7 +66,7 @@ const ContactUs = () => {
             placeholder="Please select Country"
             error={errors.country?.message}
             items={countriesConstants.countries}
-            {...register("country", { required: "Country Required" })}
+            {...register("country")}
           />
           <Controller
             name="phone"
@@ -101,7 +88,7 @@ const ContactUs = () => {
             placeholder="Please select service"
             error={errors.service?.message}
             items={contactUsServicesConstants}
-            {...register("service", { required: "Service Required" })}
+            {...register("service")}
           />
           <TextArea
             maxLength={2000}

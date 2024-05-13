@@ -10,5 +10,3 @@ export const filesSizeValidation = (
 
   return true;
 };
-
-export const mailRegExp = new RegExp(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/);

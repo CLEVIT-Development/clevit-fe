@@ -4,7 +4,7 @@ import { HeaderVariant } from "@/types/variant.types.ts";
 
 import ContactInfo from "./ContactInfo";
 
-const ContactUs = () => {
+const ContactUsPage = () => {
   return (
     <Layout headerVariant={HeaderVariant.Tertiary}>
       <section className="w-full flex flex-col items-center space-y-[50px]">
@@ -28,4 +28,4 @@ const ContactUs = () => {
   );
 };
 
-export default ContactUs;
+export default ContactUsPage;
