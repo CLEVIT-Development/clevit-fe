@@ -1,4 +1,4 @@
-import { reasonsConstants } from "@/common/constants/reasons.constants";
+import { reasonsConstants } from "@/assets/constants/reasons.constants";
 import Section from "@/common/templates/Section";
 import ReasonCard from "@/shared/ui/ReasonCard";
 

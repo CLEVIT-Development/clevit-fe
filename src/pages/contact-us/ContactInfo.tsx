@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 
+import { socialLinksConstants } from "@/assets/constants/socials.constants";
 import EnvelopeIcon from "@/assets/vectors/Envelope.svg?react";
 import LocationIcon from "@/assets/vectors/Location.svg?react";
 import TelephoneIcon from "@/assets/vectors/Telephone.svg?react";
-import { socialLinksConstants } from "@/common/constants/socials.constants";
 
 import ContactItem from "./ContactItem";
 

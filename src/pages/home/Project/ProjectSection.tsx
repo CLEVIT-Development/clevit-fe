@@ -1,9 +1,9 @@
 import AliceCarousel from "react-alice-carousel";
 import { NavLink } from "react-router-dom";
 
+import { projectsConstants } from "@/assets/constants/projects.constants";
 import ProjectCube from "@/assets/images/projects/ProjectCube.png";
 import Arrow from "@/assets/vectors/Arrow.svg?react";
-import { projectsConstants } from "@/common/constants/projects.constants";
 import useResponsive from "@/common/hooks/useResponsive";
 import Section from "@/common/templates/Section.tsx";
 import Button from "@/shared/ui/Button";

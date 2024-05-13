@@ -25,8 +25,7 @@ const Layout = ({ children, heading, headerVariant = HeaderVariant.Primary, clas
             classNames(
               "flex flex-col lg:space-y-[100px] space-y-12 max-w-[1280px] self-center",
               {
-                ["desktop:pt-[100px] pt-[80px] pb-[160px]"]:
-                  headerVariant === HeaderVariant.Tertiary,
+                ["pt-[50px] pb-[100px]"]: headerVariant === HeaderVariant.Tertiary,
               },
               className
             )
