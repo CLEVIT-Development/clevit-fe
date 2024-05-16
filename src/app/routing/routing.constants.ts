@@ -1,4 +1,5 @@
 import AboutPage from "@/pages/about/AboutPage.tsx";
+import BlogPage from "@/pages/blog/BlogPage.tsx";
 import CalendlyPage from "@/pages/calendly/CalendlyPage.tsx";
 import ContactUsPage from "@/pages/contact-us/ContactUsPage.tsx";
 import HomePage from "@/pages/home/HomePage.tsx";
@@ -33,4 +34,5 @@ export const routerElements = [
   { path: RoutePaths.PrivacyPolicy, Element: PrivacyPolicy },
   { path: RoutePaths.TermsAndConditions, Element: TermsAndConditions },
   { path: RoutePaths.Calendly, Element: CalendlyPage },
+  { path: RoutePaths.Blog, Element: BlogPage },
 ];

@@ -18,3 +18,8 @@ export enum SectionVariant {
   Primary = "primary",
   Secondary = "secondary",
 }
+
+export enum LayoutVariant {
+  Primary = "primary",
+  Secondary = "secondary",
+}
