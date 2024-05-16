@@ -81,7 +81,6 @@ export default {
         sm: "640px",
         md: "768px",
         desktop: "1024px",
-        calendlyDesktop: "1045px", // calendly breakpoint differs from 1024px, so I need configure my styles based on calendly
         lg: "1260px",
         xl: "1440px",
         "2xl": "1600px",
