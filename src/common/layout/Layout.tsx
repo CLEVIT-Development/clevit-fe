@@ -4,15 +4,14 @@ import classNames from "classnames";
 import { twMerge } from "tailwind-merge";
 
 import Footer from "@/common/layout/Footer.tsx";
+import HeadBar from "@/common/layout/HeadBar.tsx";
 import { HeaderVariant, LayoutVariant } from "@/types/variant.types";
 
-import HeadBar from "./HeadBar";
-
 interface Props {
+  className?: string;
   children: React.ReactNode;
   heading?: React.ReactNode;
   headerVariant?: HeaderVariant;
-  className?: string;
   layoutVariant?: LayoutVariant;
 }
 
