@@ -10,6 +10,8 @@ const AboutHeading = () => {
         src={AboutHeadingBackground}
         alt="AboutPage Heading Background"
         className="desktop:block hidden"
+        width={424}
+        height={309}
       />
     </div>
   );
