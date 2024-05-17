@@ -1,4 +1,4 @@
-import type { ComponentPropsWithoutRef } from "react";
+import { ComponentPropsWithoutRef, useLayoutEffect } from "react";
 import { useState } from "react";
 import { useEffect, useRef } from "react";
 import { forwardRef } from "react";
@@ -53,7 +53,7 @@ export const Gradient = forwardRef<HTMLDivElement, Props>(({ children, ...defaul
     interactiveGradientMovement(interBubble);
   }, []);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const checkHeightChange = () => {
       const currentHeight = contentRef.current?.clientHeight;
 

@@ -1,5 +1,6 @@
 import AboutHeading from "@/common/layout/Heading/AboutHeading";
 import Layout from "@/common/layout/Layout";
+import { Gradient } from "@/shared/gradient/Gradient.tsx";
 
 import CalendlySection from "../home/CalendlySection";
 import FeedbackSection from "../home/Feedback/FeedbackSection";
@@ -11,7 +12,13 @@ import ValuesSection from "./ValuesSection";
 
 const AboutPage = () => {
   return (
-    <Layout heading={<AboutHeading />}>
+    <Layout
+      heading={
+        <Gradient>
+          <AboutHeading />
+        </Gradient>
+      }
+    >
       <TeamSection />
       <MissionVisionSection />
       <ValuesSection />
