@@ -47,11 +47,17 @@ const Header = forwardRef(
           to={headerMenuLink.link}
           className={({ isActive }) =>
             twMerge(
-              classNames("text-white desktop:text-md text-lg font-medium", {
-                ["text-purple-100"]: isWhiteBackground,
-                ["text-gray-200"]: isActive && isWhiteBackground,
-                ["text-gray-100 opacity-90"]: isActive && !isWhiteBackground,
-              })
+              classNames(
+                "relative text-white desktop:text-md text-lg font-medium " +
+                  "desktop:after:transition-all desktop:after:duration-300 desktop:after:absolute desktop:after:w-0 desktop:after:h-0.5 desktop:after:left-0 desktop:after:right-0 desktop:after:-bottom-2 desktop:after:content-['.'] desktop:after:text-transparent " +
+                  "desktop:hover:after:w-full desktop:hover:after:bg-purple-100",
+                {
+                  ["text-purple-1300"]: isWhiteBackground,
+                  ["text-purple-300"]: isActive && isWhiteBackground,
+                  ["desktop:text-gray-100 desktop:opacity-70 desktop:after:w-full desktop:after:bg-purple-100"]:
+                    isActive && !isWhiteBackground,
+                }
+              )
             )
           }
         >

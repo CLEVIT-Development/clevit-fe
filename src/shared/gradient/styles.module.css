@@ -57,7 +57,7 @@
   left: 0;
 
   .gradientsContainer {
-    filter: saturate(180%) contrast(90%) blur(40px);
+    filter: saturate(180%) contrast(90%) blur(30px);
     width: 100%;
     height: 100%;
   }

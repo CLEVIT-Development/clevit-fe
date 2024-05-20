@@ -20,15 +20,14 @@ const ProjectSection = () => {
       <div className="w-full flex flex-col items-center space-y-5">
         <div className="w-full">
           <AliceCarousel
-            autoPlay
             mouseTracking
-            infinite={true}
-            autoPlayInterval={2500}
-            animationDuration={1000}
-            responsive={{ 0: { items: 1 } }}
             disableButtonsControls={isMobile}
-            renderPrevButton={({ isDisabled }) => !isDisabled && <Arrow />}
-            renderNextButton={({ isDisabled }) => !isDisabled && <Arrow className="rotate-180" />}
+            renderPrevButton={({ isDisabled }) =>
+              !isDisabled && <Arrow className="w-full h-full" />
+            }
+            renderNextButton={({ isDisabled }) =>
+              !isDisabled && <Arrow className="rotate-180 w-full h-full" />
+            }
             items={projectsConstants.map(
               ({
                 id,
@@ -43,11 +42,11 @@ const ProjectSection = () => {
                 link,
               }) => (
                 <div
+                  key={id}
+                  className="h-full justify-between rounded-lg-l flex md:flex-row xs:flex-col desktop:pl-[90px] desktop:pr-[50px] md:pl-[60px] md:pr-[40px] xs:space-y-[40px] xs:pb-[80px] xs:pt-[36px] xs:pl-[20px] xs:pr-[10px] bg-no-repeat md:bg-projectCubeDesktopPosition bg-projectCubeMobilePosition"
                   style={{
                     backgroundImage: `url(${ProjectCube}),linear-gradient(108.79deg, #0A0240 28.15%, rgba(10, 2, 64, 0.8) 93.01%)`,
                   }}
-                  key={id}
-                  className="h-full justify-between rounded-lg-l flex md:flex-row xs:flex-col desktop:pl-[90px] desktop:pr-[50px] md:pl-[60px] md:pr-[40px] xs:space-y-[40px] xs:pb-[80px] xs:pt-[36px] xs:pl-[20px] xs:pr-[10px] bg-no-repeat md:bg-projectCubeDesktopPosition bg-projectCubeMobilePosition"
                 >
                   <div className="flex flex-col justify-start md:space-y-[65px] xs:space-y-[30px]">
                     <div className="flex flex-col space-y-6">
@@ -56,11 +55,11 @@ const ProjectSection = () => {
                         <p className="desktop:text-2xl xs:text-[28px] font-bold text-white">
                           {title}
                         </p>
-                        <p className="text-md-l text-white max-w-[520px] text-left break-all">
+                        <p className="text-md-l text-white max-w-[520px] text-left break-words">
                           {subTitle}
                         </p>
                       </div>
-                      <span className="desktop:text-base xs:text-sm text-white text-left max-w-[532px] break-all">
+                      <span className="desktop:text-base xs:text-sm text-white text-left max-w-[532px] break-words">
                         {description}
                       </span>
                     </div>
