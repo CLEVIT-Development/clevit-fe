@@ -12,7 +12,11 @@ const CalendlySection = ({ title }: Props) => {
   const { isExtraSmall, isMobile, isTablet, isCalendlyDesktop } = useResponsive();
 
   return (
-    <Section title={title}>
+    <Section
+      title={title}
+      titleClassName="desktop:text-xl-l"
+      className="desktop:space-y-0 space-y-6"
+    >
       <div className="w-full">
         <InlineWidget
           url={appConfig.shareUrl}

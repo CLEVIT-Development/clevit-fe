@@ -39,7 +39,11 @@ const ProjectSection = () => {
                 description,
                 type,
                 duration,
+                country,
                 link,
+                icons,
+                appStoreLink,
+                googlePlayLink,
               }) => (
                 <div
                   key={id}
@@ -77,6 +81,31 @@ const ProjectSection = () => {
                         </span>
                       </p>
                       <p className="text-white desktop:text-md xs:text-sm !font-semibold">
+                        Country:
+                        <span className="font-normal desktop:text-md xs:text-base ml-2">
+                          {country}
+                        </span>
+                      </p>
+                      {(appStoreLink || googlePlayLink) && (
+                        <p className="text-white desktop:text-md xs:text-sm !font-semibold">
+                          App Links:
+                          <NavLink
+                            to={appStoreLink}
+                            target="_blank"
+                            className="font-normal desktop:text-md xs:text-base text-purple-400 ml-2"
+                          >
+                            App Store
+                          </NavLink>
+                          <NavLink
+                            to={googlePlayLink}
+                            target="_blank"
+                            className="font-normal desktop:text-md xs:text-base text-purple-400 ml-2"
+                          >
+                            Play Market
+                          </NavLink>
+                        </p>
+                      )}
+                      <p className="text-white desktop:text-md xs:text-sm !font-semibold">
                         Website:
                         <NavLink
                           to={link}
@@ -86,6 +115,16 @@ const ProjectSection = () => {
                           {urlShortener(link)}
                         </NavLink>
                       </p>
+                      <div className="flex space-x-2 items-start">
+                        <p className="text-white desktop:text-md xs:text-sm !font-semibold">
+                          Technologies:
+                        </p>
+                        <ul className="flex flex-wrap gap-3 space-x-2 max-w-[50%]">
+                          {icons?.map(({ id, Icon }) => (
+                            <li key={id}>{<Icon width={30} height={"100%"} />}</li>
+                          ))}
+                        </ul>
+                      </div>
                     </div>
                   </div>
                   <div className="relative self-center mr-4">

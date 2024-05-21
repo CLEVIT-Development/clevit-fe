@@ -1,18 +1,26 @@
-import React from "react";
+import React, { ComponentPropsWithoutRef } from "react";
 
 import classNames from "classnames";
 import { twMerge } from "tailwind-merge";
 
 import { SectionVariant } from "@/types/variant.types.ts";
 
-interface Props {
-  children: React.ReactNode;
-  className?: string;
+interface Props extends ComponentPropsWithoutRef<"section"> {
   title?: string;
+  className?: string;
+  titleClassName?: string;
   variant?: SectionVariant;
+  children: React.ReactNode;
 }
 
-const Section = ({ title, children, className, variant = SectionVariant.Primary }: Props) => {
+const Section = ({
+  title,
+  children,
+  className,
+  titleClassName,
+  variant = SectionVariant.Primary,
+  ...props
+}: Props) => {
   return (
     <section
       className={twMerge(
@@ -24,6 +32,7 @@ const Section = ({ title, children, className, variant = SectionVariant.Primary 
           className
         )
       )}
+      {...props}
     >
       {title && (
         <h3
@@ -33,7 +42,8 @@ const Section = ({ title, children, className, variant = SectionVariant.Primary 
               {
                 ["desktop:text-xl text-md-l font-semibold text-left"]:
                   variant === SectionVariant.Secondary,
-              }
+              },
+              titleClassName
             )
           )}
         >

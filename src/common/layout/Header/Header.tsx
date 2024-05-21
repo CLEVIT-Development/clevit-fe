@@ -1,6 +1,7 @@
 import type { ForwardedRef } from "react";
 import { forwardRef, useMemo, useRef, useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import { NavHashLink } from "react-router-hash-link";
 
 import classNames from "classnames";
 import { twMerge } from "tailwind-merge";
@@ -17,14 +18,16 @@ import { HeaderVariant, LogoVariant } from "@/types/variant.types.ts";
 import BurgerMenu from "./BurgerMenu";
 
 interface Props {
-  headerVariant: HeaderVariant;
   scrollY: number;
+  headerVariant: HeaderVariant;
 }
 
 const Header = forwardRef(
   ({ headerVariant, scrollY }: Props, ref: ForwardedRef<HTMLDivElement>) => {
     const isWhiteBackground = headerVariant !== HeaderVariant.Primary;
 
+    // TODO review later
+    const location = useLocation();
     const navigate = useNavigate();
     const { isTablet } = useResponsive();
     const [isOpen, setIsOpen] = useState(false);
@@ -34,36 +37,40 @@ const Header = forwardRef(
     useLockBodyScroll(isOpen);
 
     const renderNavList = useMemo(() => {
-      return headerMenuLinks.map((headerMenuLink) => (
-        <NavLink
-          onClick={() => {
-            setIsOpen(false);
-            window.scrollTo({
-              top: 0,
-              behavior: "smooth",
-            });
-          }}
-          key={headerMenuLink.id}
-          to={headerMenuLink.link}
-          className={({ isActive }) =>
-            twMerge(
+      return headerMenuLinks.map((headerMenuLink) => {
+        const isActive = `${location.pathname}${location.hash}` === headerMenuLink.link;
+
+        return (
+          <NavHashLink
+            smooth
+            onClick={() => {
+              setIsOpen(false);
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }}
+            key={headerMenuLink.id}
+            to={headerMenuLink.link}
+            className={twMerge(
               classNames(
                 "relative text-white desktop:text-md text-lg font-medium " +
                   "desktop:after:transition-all desktop:after:duration-300 desktop:after:absolute desktop:after:w-0 desktop:after:h-0.5 desktop:after:left-0 desktop:after:right-0 desktop:after:-bottom-2 desktop:after:content-['.'] desktop:after:text-transparent " +
                   "desktop:hover:after:w-full desktop:hover:after:bg-purple-100",
                 {
                   ["text-purple-1300"]: isWhiteBackground,
-                  ["text-purple-300"]: isActive && isWhiteBackground,
+                  ["text-purple-300 desktop:after:w-full desktop:after:bg-purple-100"]:
+                    isActive && isWhiteBackground,
                   ["desktop:text-gray-100 desktop:opacity-70 desktop:after:w-full desktop:after:bg-purple-100"]:
                     isActive && !isWhiteBackground,
                 }
               )
-            )
-          }
-        >
-          {headerMenuLink.label}
-        </NavLink>
-      ));
+            )}
+          >
+            {headerMenuLink.label}
+          </NavHashLink>
+        );
+      });
     }, [isWhiteBackground]);
 
     return (
