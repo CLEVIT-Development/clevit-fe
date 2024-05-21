@@ -12,15 +12,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <>
       {routerElements.map(({ Element, path }) => (
-        <Route
-          key={path}
-          path={path}
-          element={
-            <>
-              <Element />
-            </>
-          }
-        />
+        <Route key={path} path={path} element={<Element />} />
       ))}
       <Route path={"*"} element={<NotFoundPage />} />
     </>
