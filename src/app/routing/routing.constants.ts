@@ -9,7 +9,7 @@ import TermsAndConditions from "@/pages/terms-and-conditions/TermsAndConditions.
 export enum RoutePaths {
   Home = "/",
   About = "/about",
-  Services = "/services",
+  Services = "/#services",
   Portfolio = "/portfolio",
   Blog = "/blog",
   ContactUs = "/contact-us",
@@ -20,7 +20,7 @@ export enum RoutePaths {
 
 export const headerMenuLinks = [
   { id: 1, label: "Home", link: RoutePaths.Home },
-  { id: 2, label: "About", link: RoutePaths.About },
+  { id: 2, label: "About Us", link: RoutePaths.About },
   { id: 3, label: "Services", link: RoutePaths.Services },
   { id: 4, label: "Portfolio", link: RoutePaths.Portfolio },
   { id: 5, label: "Blog", link: RoutePaths.Blog },

@@ -1,10 +1,11 @@
+import type { ComponentPropsWithoutRef } from "react";
 import React from "react";
 
 import { twMerge } from "tailwind-merge";
 
 import IconWrapper from "@/common/templates/IconWrapper";
 
-interface Props {
+interface Props extends ComponentPropsWithoutRef<"div"> {
   icon: React.ReactNode;
   order: string;
   title: string;

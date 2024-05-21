@@ -26,6 +26,7 @@ export default {
         swipeLeft: "swipeLeftKeyframe 0.5s",
         swipeTop: "swipeTopKeyframe 0.7s",
         swipeBottom: "swipeBottomKeyframe 0.7s",
+        textSlide: "textSlide 0.7s ease-in-out",
       },
       keyframes: {
         swipeRightKeyframe: {
@@ -66,6 +67,14 @@ export default {
           "100%": {
             bottom: 0,
             opacity: "100%",
+          },
+        },
+        textSlide: {
+          "0%": {
+            transform: "translateY(20%)",
+          },
+          "100%": {
+            transform: "translateY(0)",
           },
         },
       },
@@ -150,6 +159,13 @@ export default {
           {
             lineHeight: "36px",
             fontWeight: "400",
+          },
+        ],
+        "xl-l": [
+          "28px",
+          {
+            lineHeight: "36px",
+            fontWeight: "600",
           },
         ],
         xl: [
