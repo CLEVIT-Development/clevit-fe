@@ -93,7 +93,6 @@ const Header = forwardRef(
               navigate(RoutePaths.Home);
               window.scrollTo({
                 top: 0,
-                behavior: "instant",
               });
             }}
             variant={isWhiteBackground ? LogoVariant.Secondary : LogoVariant.Primary}
