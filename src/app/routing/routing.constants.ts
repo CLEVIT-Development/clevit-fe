@@ -19,12 +19,11 @@ export enum RoutePaths {
 }
 
 export const headerMenuLinks = [
-  { id: 1, label: "Home", link: RoutePaths.Home },
-  { id: 2, label: "About Us", link: RoutePaths.About },
-  { id: 3, label: "Services", link: RoutePaths.Services },
-  { id: 4, label: "Portfolio", link: RoutePaths.Portfolio },
-  { id: 5, label: "Blog", link: RoutePaths.Blog },
-  { id: 6, label: "Contact Us", link: RoutePaths.ContactUs },
+  { id: 1, label: "About Us", link: RoutePaths.About },
+  { id: 2, label: "Services", link: RoutePaths.Services },
+  { id: 3, label: "Portfolio", link: RoutePaths.Portfolio },
+  { id: 4, label: "Blog", link: RoutePaths.Blog },
+  { id: 5, label: "Contact Us", link: RoutePaths.ContactUs },
 ];
 
 export const routerElements = [

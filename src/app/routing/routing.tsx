@@ -6,13 +6,23 @@ import {
 } from "react-router-dom";
 
 import { routerElements } from "@/app/routing/routing.constants.ts";
+import ScrollToTop from "@/common/templates/ScrollToTop.tsx";
 import NotFoundPage from "@/pages/not-found/NotFoundPage.tsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
       {routerElements.map(({ Element, path }) => (
-        <Route key={path} path={path} element={<Element />} />
+        <Route
+          key={path}
+          path={path}
+          element={
+            <>
+              <Element />
+              <ScrollToTop />
+            </>
+          }
+        />
       ))}
       <Route path={"*"} element={<NotFoundPage />} />
     </>
