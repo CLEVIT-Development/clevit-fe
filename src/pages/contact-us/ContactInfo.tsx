@@ -12,7 +12,7 @@ const ContactInfo = () => {
     <div className="flex flex-col desktop:items-start items-center desktop:space-y-8 space-y-6">
       <p className="desktop:text-2xl text-lg font-semibold text-white">Contact Details</p>
       <div className="flex flex-col desktop:space-y-[30px] space-y-[20px]">
-        <ContactItem icon={<EnvelopeIcon className="fill-white" />} content="info@clevit.com" />
+        <ContactItem icon={<EnvelopeIcon className="fill-white" />} content="info@clevit.io" />
         <ContactItem icon={<TelephoneIcon className="stroke-white" />} content="+374 96 555 555" />
         <ContactItem
           icon={<LocationIcon className="fill-white" />}
