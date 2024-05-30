@@ -4,7 +4,7 @@ import Telephone from "@/assets/vectors/Telephone.svg?react";
 export const contactsConstants = [
   {
     id: 1,
-    text: "info@clevit.com",
+    text: "info@clevit.io",
     link: "mailto:hovhannes.baghdasaryan.03@gmail.com",
     Element: Envelope,
   },

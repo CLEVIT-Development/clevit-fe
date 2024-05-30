@@ -10,7 +10,10 @@ export enum RoutePaths {
   Home = "/",
   About = "/about",
   Services = "/#services",
+  Technologies = "/#technologies",
+  Industries = "/#Industries",
   Portfolio = "/portfolio",
+  FAQ = "/FAQ",
   Blog = "/blog",
   ContactUs = "/contact-us",
   PrivacyPolicy = "/privacy-policy",
@@ -19,11 +22,14 @@ export enum RoutePaths {
 }
 
 export const headerMenuLinks = [
-  { id: 1, label: "About Us", link: RoutePaths.About },
-  { id: 2, label: "Services", link: RoutePaths.Services },
-  { id: 3, label: "Portfolio", link: RoutePaths.Portfolio },
-  { id: 4, label: "Blog", link: RoutePaths.Blog },
-  { id: 5, label: "Contact Us", link: RoutePaths.ContactUs },
+  { id: 1, label: "Services", link: RoutePaths.Services },
+  { id: 2, label: "Portfolio", link: RoutePaths.Portfolio },
+  { id: 3, label: "About Us", link: RoutePaths.About },
+  { id: 4, label: "Technologies", link: RoutePaths.Technologies },
+  { id: 5, label: "Industries", link: RoutePaths.Industries },
+  { id: 6, label: "FAQ", link: RoutePaths.FAQ },
+  { id: 7, label: "Blog", link: RoutePaths.Blog },
+  { id: 8, label: "Contact Us", link: RoutePaths.ContactUs },
 ];
 
 export const routerElements = [
