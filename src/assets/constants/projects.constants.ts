@@ -4,11 +4,12 @@ import OblivioniDesktop from "@/assets/images/projects/OblivioniDesktop.png";
 import OblivioniMobile from "@/assets/images/projects/OblivioniMobile.png";
 import RenegadeDesktop from "@/assets/images/projects/RenegadeDesktop.png";
 import RenegadeMobile from "@/assets/images/projects/RenegadeMobile.png";
-import Express from "@/assets/vectors/technology/Express.svg?react";
+import ExpressWhite from "@/assets/vectors/technology/ExpressWhite.svg?react";
 import Firebase from "@/assets/vectors/technology/Firebase.svg?react";
 import GoogleCloud from "@/assets/vectors/technology/GoogleCloud.svg?react";
 import MySQL from "@/assets/vectors/technology/MySQL.svg?react";
-import Next from "@/assets/vectors/technology/Next.svg?react";
+import Nest from "@/assets/vectors/technology/Nest.svg?react";
+import NextWhite from "@/assets/vectors/technology/NextWhite.svg?react";
 import Node from "@/assets/vectors/technology/Node.svg?react";
 import React from "@/assets/vectors/technology/React.svg?react";
 import Tailwind from "@/assets/vectors/technology/Tailwind.svg?react";
@@ -29,14 +30,14 @@ export const projectsConstants = [
     appStoreLink: "https://apps.apple.com/us/app/flowops/id6477181736",
     googlePlayLink: "https://apps.apple.com/us/app/flowops/id6477181736",
     icons: [
-      { id: 1, Icon: React },
-      { id: 2, Icon: Tailwind },
-      { id: 3, Icon: Vite },
-      { id: 4, Icon: Node },
-      { id: 5, Icon: Express },
-      { id: 6, Icon: MySQL },
-      { id: 7, Icon: GoogleCloud },
-      { id: 8, Icon: Firebase },
+      { id: 1, Icon: React, text: "React.js" },
+      { id: 2, Icon: Tailwind, text: "Tailwind CSS" },
+      { id: 3, Icon: Vite, text: "Vite.js" },
+      { id: 4, Icon: Node, text: "Node.js" },
+      { id: 5, Icon: ExpressWhite, text: "Express.js" },
+      { id: 6, Icon: MySQL, text: "MySQL" },
+      { id: 7, Icon: GoogleCloud, text: "Google Cloud" },
+      { id: 8, Icon: Firebase, text: "Google Firebase" },
     ],
     desktopBackground: FlowopsDesktop,
     mobileBackground: FlowOpsMobile,
@@ -53,12 +54,13 @@ export const projectsConstants = [
     country: "USA",
     link: "https://oblivioni.com/",
     icons: [
-      { id: 1, Icon: React },
-      { id: 2, Icon: Tailwind },
-      { id: 3, Icon: Next },
-      { id: 4, Icon: Node },
-      { id: 5, Icon: MySQL },
-      { id: 6, Icon: Firebase },
+      { id: 1, Icon: React, text: "React.js" },
+      { id: 2, Icon: Tailwind, text: "Tailwind CSS" },
+      { id: 3, Icon: NextWhite, text: "Next.js" },
+      { id: 4, Icon: Node, text: "Node.js" },
+      { id: 5, Icon: Nest, text: "Nest.js" },
+      { id: 6, Icon: MySQL, text: "MySQL" },
+      { id: 7, Icon: Firebase, text: "Google Firebase" },
     ],
     desktopBackground: OblivioniDesktop,
     mobileBackground: OblivioniMobile,
@@ -75,9 +77,9 @@ export const projectsConstants = [
     country: "USA",
     link: "https://renegadetechnology.com/",
     icons: [
-      { id: 1, Icon: React },
-      { id: 2, Icon: Tailwind },
-      { id: 3, Icon: Next },
+      { id: 1, Icon: React, text: "React.js" },
+      { id: 2, Icon: Tailwind, text: "Tailwind CSS" },
+      { id: 3, Icon: NextWhite, text: "Next.js" },
     ],
     desktopBackground: RenegadeDesktop,
     mobileBackground: RenegadeMobile,

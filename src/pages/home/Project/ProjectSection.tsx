@@ -1,3 +1,4 @@
+import { useState } from "react";
 import AliceCarousel from "react-alice-carousel";
 import { NavLink } from "react-router-dom";
 
@@ -11,6 +12,7 @@ import { urlShortener } from "@/utils/link.utils";
 
 const ProjectSection = () => {
   const { isMobile } = useResponsive();
+  const [hoveredIcon, setHoveredIcon] = useState<number | null>(null);
 
   return (
     <Section
@@ -146,9 +148,27 @@ const ProjectSection = () => {
                       <p className="text-white desktop:text-md xs:text-sm !font-semibold">
                         Technologies:
                       </p>
-                      <ul className="flex md:flex-nowrap flex-wrap gap-3">
-                        {icons?.map(({ id, Icon }) => (
-                          <li key={id}>{<Icon width={30} height={"100%"} />}</li>
+                      <ul className="flex md:flex-nowrap flex-wrap gap-3 items-center">
+                        {icons?.map(({ id, Icon, text }) => (
+                          <li key={id} className="relative">
+                            <button
+                              type="button"
+                              className="cursor-auto"
+                              onMouseEnter={() => setHoveredIcon(id)}
+                              onMouseLeave={() => setHoveredIcon(null)}
+                            >
+                              <Icon width={30} height={"100%"} />
+                              {hoveredIcon === id && (
+                                <div
+                                  role="tooltip"
+                                  className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-[120%] z-10 inline-block px-3 py-2 text-sm font-medium text-black bg-white border border-gray-300 rounded-lg shadow-sm whitespace-nowrap"
+                                >
+                                  {text}
+                                  <div className="absolute top-full left-1/2 transform -translate-x-1/2 -translate-y-1 bg-white h-2 w-2 rotate-45 border-l border-b border-gray-300"></div>
+                                </div>
+                              )}
+                            </button>
+                          </li>
                         ))}
                       </ul>
                     </div>
