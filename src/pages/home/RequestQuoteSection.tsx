@@ -17,7 +17,7 @@ const RequestQuoteSection = () => {
         <Pointer className="md:rotate-0 md:scale-100 xs:rotate-[130deg] xs:scale-[.6]" />
       </div>
       <Button variant={ButtonVariant.Outlined} onClick={() => navigate(RoutePaths.Calendly)}>
-        Request a Quote
+        Book a Free Consultation
       </Button>
     </section>
   );

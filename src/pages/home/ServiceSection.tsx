@@ -15,29 +15,33 @@ const ServiceSection = () => {
   useScrollView(sectionRef, RoutePaths.Services);
 
   useLayoutEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        // check if the user is not on the top of the page
-        if (entry.intersectionRect.height !== 0) {
-          navigate(entry.isIntersecting ? RoutePaths.Services : RoutePaths.Home);
+    const isActive = `${location.pathname}${location.hash}` === RoutePaths.Services;
+
+    if (isActive) {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          // check if the user is not on the top of the page
+          if (entry.intersectionRect.height !== 0) {
+            navigate(entry.isIntersecting ? RoutePaths.Services : RoutePaths.Home);
+          }
+        },
+        {
+          root: null,
+          rootMargin: "0px",
+          threshold: 0.1,
         }
-      },
-      {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.1,
-      }
-    );
+      );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => {
       if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+        observer.observe(sectionRef.current);
       }
-    };
+
+      return () => {
+        if (sectionRef.current) {
+          observer.unobserve(sectionRef.current);
+        }
+      };
+    }
   }, []);
 
   return (

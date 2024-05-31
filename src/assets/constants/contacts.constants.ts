@@ -5,7 +5,7 @@ export const contactsConstants = [
   {
     id: 1,
     text: "info@clevit.io",
-    link: "mailto:hovhannes.baghdasaryan.03@gmail.com",
+    link: "mailto:info@clevit.io",
     Element: Envelope,
   },
   {
