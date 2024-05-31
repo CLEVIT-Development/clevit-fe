@@ -25,7 +25,7 @@ const AboutPage = () => {
       <ReasonSection />
       <TotalSection
         projectsValue={`35+`}
-        stuffValue={`10+`}
+        stuffValue={`20+`}
         servedValue={`20+`}
         deliveredPercent={`99%`}
       />
