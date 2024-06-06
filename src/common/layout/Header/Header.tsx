@@ -1,6 +1,6 @@
 import type { ForwardedRef } from "react";
 import { forwardRef, useMemo, useRef, useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 
 import classNames from "classnames";
 import { twMerge } from "tailwind-merge";
@@ -17,14 +17,16 @@ import { HeaderVariant, LogoVariant } from "@/types/variant.types.ts";
 import BurgerMenu from "./BurgerMenu";
 
 interface Props {
-  headerVariant: HeaderVariant;
   scrollY: number;
+  headerVariant: HeaderVariant;
 }
 
 const Header = forwardRef(
   ({ headerVariant, scrollY }: Props, ref: ForwardedRef<HTMLDivElement>) => {
     const isWhiteBackground = headerVariant !== HeaderVariant.Primary;
 
+    // TODO review later
+    const location = useLocation();
     const navigate = useNavigate();
     const { isTablet } = useResponsive();
     const [isOpen, setIsOpen] = useState(false);
@@ -33,32 +35,39 @@ const Header = forwardRef(
 
     useLockBodyScroll(isOpen);
 
-    const renderNavList = useMemo(() => {
-      return headerMenuLinks.map((headerMenuLink) => (
-        <NavLink
-          onClick={() => {
-            setIsOpen(false);
-            window.scrollTo({
-              top: 0,
-              behavior: "smooth",
-            });
-          }}
-          key={headerMenuLink.id}
-          to={headerMenuLink.link}
-          className={({ isActive }) =>
-            twMerge(
-              classNames("text-white desktop:text-md text-lg font-medium", {
-                ["text-purple-100"]: isWhiteBackground,
-                ["text-gray-200"]: isActive && isWhiteBackground,
-                ["text-gray-100 opacity-90"]: isActive && !isWhiteBackground,
-              })
-            )
-          }
-        >
-          {headerMenuLink.label}
-        </NavLink>
-      ));
-    }, [isWhiteBackground]);
+    const renderNavList = useMemo(
+      () =>
+        headerMenuLinks.map((headerMenuLink) => {
+          const isActive = `${location.pathname}${location.hash}` === headerMenuLink.link;
+
+          return (
+            <NavLink
+              onClick={() => {
+                setIsOpen(false);
+              }}
+              key={headerMenuLink.id}
+              to={headerMenuLink.link}
+              className={twMerge(
+                classNames(
+                  "relative text-white desktop:text-md text-lg font-medium " +
+                    "desktop:after:transition-all desktop:after:duration-300 desktop:after:absolute desktop:after:w-0 desktop:after:h-0.5 desktop:after:left-0 desktop:after:right-0 desktop:after:-bottom-2 desktop:after:content-['.'] desktop:after:text-transparent " +
+                    "desktop:hover:after:w-full desktop:hover:after:bg-purple-100",
+                  {
+                    ["text-purple-1300"]: isWhiteBackground,
+                    ["text-purple-300 desktop:after:w-full desktop:after:bg-purple-100"]:
+                      isActive && isWhiteBackground,
+                    ["desktop:text-gray-100 desktop:opacity-70 desktop:after:w-full desktop:after:bg-purple-100"]:
+                      isActive && !isWhiteBackground,
+                  }
+                )
+              )}
+            >
+              {headerMenuLink.label}
+            </NavLink>
+          );
+        }),
+      [isWhiteBackground, location]
+    );
 
     return (
       <header
@@ -84,7 +93,6 @@ const Header = forwardRef(
               navigate(RoutePaths.Home);
               window.scrollTo({
                 top: 0,
-                behavior: "smooth",
               });
             }}
             variant={isWhiteBackground ? LogoVariant.Secondary : LogoVariant.Primary}
@@ -105,7 +113,7 @@ const Header = forwardRef(
           className={classNames(
             "transition-all duration-700 overflow-hidden desktop:hidden flex flex-col justify-between items-center h-0",
             {
-              ["h-[50vh]"]: isOpen,
+              ["h-[67vh]"]: isOpen,
             }
           )}
           onTransitionEnd={() => {

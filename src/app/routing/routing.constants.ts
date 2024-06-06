@@ -1,4 +1,5 @@
 import AboutPage from "@/pages/about/AboutPage.tsx";
+import BlogPage from "@/pages/blog/BlogPage.tsx";
 import CalendlyPage from "@/pages/calendly/CalendlyPage.tsx";
 import ContactUsPage from "@/pages/contact-us/ContactUsPage.tsx";
 import HomePage from "@/pages/home/HomePage.tsx";
@@ -8,8 +9,11 @@ import TermsAndConditions from "@/pages/terms-and-conditions/TermsAndConditions.
 export enum RoutePaths {
   Home = "/",
   About = "/about",
-  Services = "/services",
+  Services = "/#services",
+  Technologies = "/#technologies",
+  Industries = "/#Industries",
   Portfolio = "/portfolio",
+  FAQ = "/FAQ",
   Blog = "/blog",
   ContactUs = "/contact-us",
   PrivacyPolicy = "/privacy-policy",
@@ -18,12 +22,14 @@ export enum RoutePaths {
 }
 
 export const headerMenuLinks = [
-  { id: 1, label: "Home", link: RoutePaths.Home },
-  { id: 2, label: "About", link: RoutePaths.About },
-  { id: 3, label: "Services", link: RoutePaths.Services },
-  { id: 4, label: "Portfolio", link: RoutePaths.Portfolio },
-  { id: 5, label: "Blog", link: RoutePaths.Blog },
-  { id: 6, label: "Contact Us", link: RoutePaths.ContactUs },
+  { id: 1, label: "Services", link: RoutePaths.Services },
+  { id: 2, label: "Portfolio", link: RoutePaths.Portfolio },
+  { id: 3, label: "About Us", link: RoutePaths.About },
+  { id: 4, label: "Technologies", link: RoutePaths.Technologies },
+  { id: 5, label: "Industries", link: RoutePaths.Industries },
+  { id: 6, label: "FAQ", link: RoutePaths.FAQ },
+  { id: 7, label: "Blog", link: RoutePaths.Blog },
+  { id: 8, label: "Contact Us", link: RoutePaths.ContactUs },
 ];
 
 export const routerElements = [
@@ -33,4 +39,5 @@ export const routerElements = [
   { path: RoutePaths.PrivacyPolicy, Element: PrivacyPolicy },
   { path: RoutePaths.TermsAndConditions, Element: TermsAndConditions },
   { path: RoutePaths.Calendly, Element: CalendlyPage },
+  { path: RoutePaths.Blog, Element: BlogPage },
 ];

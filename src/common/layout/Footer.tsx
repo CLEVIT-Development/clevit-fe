@@ -5,17 +5,24 @@ import { blogsConstants } from "@/assets/constants/blogs.constants.ts";
 import { contactsConstants } from "@/assets/constants/contacts.constants.ts";
 import { socialLinksConstants } from "@/assets/constants/socials.constants.ts";
 import Copyright from "@/shared/ui/Copyright";
+import Logo from "@/shared/ui/Logo.tsx";
 import RecentPost from "@/shared/ui/RecentPost.tsx";
 
 const Footer = () => {
   return (
     <footer className="flex flex-col bg-black lg:pt-12 lg:pb-6 xs:pt-5 xs:pb-4 lg:px-20 xs:px-5 z-[20]">
-      <div className="xs:grid xs:grid-cols-3 xs:gap-8 lg:grid-cols-4">
+      <div className="xs:grid xs:grid-cols-2 xs:gap-8 lg:grid-cols-5">
         <div className="flex flex-col space-y-4 sm:col-auto xs:col-span-3">
-          <h6 className="font-bold lg:text-md-l xs:text-md text-white opacity-60">About Us</h6>
+          {/*<h6 className="font-bold lg:text-md-l xs:text-md text-white opacity-60">About Us</h6>*/}
+          <div>
+            <Logo />
+          </div>
           <span className="lg:text-base xs:text-sm text-gray-100 max-w-[340px]">
             As a leading web and mobile app development company, Clevit empowers businesses across
-            all sectors to unlock their full digital potential.
+            all sectors to unlock their full digital potential. Our team of skilled web app
+            developers delivers top-notch web, mobile, and AI-driven solutions tailored to your
+            unique needs and business goals. Whether you're a startup or an established company,
+            Clevit is your trusted partner for all your digital needs.
           </span>
           <div className="flex space-x-4 mt-6">
             {socialLinksConstants.map(({ id, link, Icon }) => (
@@ -27,17 +34,45 @@ const Footer = () => {
         </div>
         <div className="flex flex-col space-y-4 sm:mx-auto">
           <h6 className="font-bold lg:text-md-l xs:text-md text-white opacity-60">Company</h6>
+          <Link to={RoutePaths.About}>
+            <p className="text-gray-100 font-medium lg:text-md xs:text-base">About Us</p>
+          </Link>
           <Link to={RoutePaths.Services}>
             <p className="text-gray-100 font-medium lg:text-md xs:text-base">Services</p>
           </Link>
           <Link to={RoutePaths.Portfolio}>
             <p className="text-gray-100 font-medium lg:text-md xs:text-base">Portfolio</p>
           </Link>
+          <Link to={RoutePaths.Technologies}>
+            <p className="text-gray-100 font-medium lg:text-md xs:text-base">Technologies</p>
+          </Link>
           <Link to={RoutePaths.Blog}>
             <p className="text-gray-100 font-medium lg:text-md xs:text-base">Blog</p>
           </Link>
+          <Link to={RoutePaths.ContactUs}>
+            <p className="text-gray-100 font-medium lg:text-md xs:text-base">Contact Us</p>
+          </Link>
         </div>
-        <div className="flex flex-col space-y-4 sm:col-auto col-span-2 ml-auto">
+        <div className="flex flex-col space-y-4 mr-auto sm:mx-auto">
+          <h6 className="font-bold lg:text-md-l xs:text-md text-white opacity-60">Services</h6>
+          <p className="text-gray-100 font-medium lg:text-md xs:text-base">Web Development</p>
+          <p className="text-gray-100 font-medium lg:text-md xs:text-base">
+            Mobile App Development
+          </p>
+          <p className="text-gray-100 font-medium lg:text-md xs:text-base">DevOps</p>
+          <p className="text-gray-100 font-medium lg:text-md xs:text-base">AI Integration</p>
+          <p className="text-gray-100 font-medium lg:text-md xs:text-base">
+            Machine Learning Development
+          </p>
+          <p className="text-gray-100 font-medium lg:text-md xs:text-base">Quality Assurance</p>
+          <p className="text-gray-100 font-medium lg:text-md xs:text-base">Technical Assessment</p>
+          <p className="text-gray-100 font-medium lg:text-md xs:text-base">Support & Maintenance</p>
+          <p className="text-gray-100 font-medium lg:text-md xs:text-base">Outstaffing</p>
+          <p className="text-gray-100 font-medium lg:text-md xs:text-base">Project Management</p>
+          <p className="text-gray-100 font-medium lg:text-md xs:text-base">UI/UX Design</p>
+          <p className="text-gray-100 font-medium lg:text-md xs:text-base">Digital Marketing</p>
+        </div>
+        <div className="flex flex-col space-y-4 sm:col-auto lg:ml-auto col-span-2">
           <h6 className="font-bold lg:text-md-l text-md text-white opacity-60">Contact Us</h6>
           {contactsConstants.map(({ id, text, link, Element }) => (
             <div key={id} className="flex items-center space-x-2">

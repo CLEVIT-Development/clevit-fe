@@ -4,18 +4,27 @@ import { appConfig } from "@/assets/constants/config.constants.ts";
 import useResponsive from "@/common/hooks/useResponsive.ts";
 import Section from "@/common/templates/Section";
 
-const CalendlySection = () => {
-  const { isTablet, isMobile, isCalendlyDesktop } = useResponsive();
+interface Props {
+  title: string;
+}
+
+const CalendlySection = ({ title }: Props) => {
+  const { isExtraSmall, isMobile, isTablet, isCalendlyDesktop } = useResponsive();
 
   return (
     <Section
-      title="Ready to turn your vision into reality? The journey starts here. We're excited to meet you."
-      className="calendlyDesktop:!mb-[30px] space-y-0"
+      title={title}
+      titleClassName="desktop:text-xl-l"
+      className="desktop:space-y-0 space-y-6"
     >
       <div className="w-full">
         <InlineWidget
           url={appConfig.shareUrl}
-          styles={{ height: isMobile ? 1000 : isTablet || isCalendlyDesktop ? 1100 : 660 }}
+          styles={{
+            height: isExtraSmall ? 1000 : isTablet || isCalendlyDesktop ? 1100 : 660,
+            minWidth: isMobile ? "85vw" : 0,
+            marginBottom: isCalendlyDesktop ? (isExtraSmall ? "-80px" : 0) : 50,
+          }}
         />
       </div>
     </Section>

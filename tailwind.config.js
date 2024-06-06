@@ -26,6 +26,7 @@ export default {
         swipeLeft: "swipeLeftKeyframe 0.5s",
         swipeTop: "swipeTopKeyframe 0.7s",
         swipeBottom: "swipeBottomKeyframe 0.7s",
+        textSlide: "textSlide 0.7s ease-in-out",
       },
       keyframes: {
         swipeRightKeyframe: {
@@ -68,6 +69,14 @@ export default {
             opacity: "100%",
           },
         },
+        textSlide: {
+          "0%": {
+            transform: "translateY(20%)",
+          },
+          "100%": {
+            transform: "translateY(0)",
+          },
+        },
       },
       boxShadow: {
         "base-100": "0 8px 10px 0 #00000012",
@@ -81,7 +90,6 @@ export default {
         sm: "640px",
         md: "768px",
         desktop: "1024px",
-        calendlyDesktop: "1045px", // calendly breakpoint differs from 1024px, so I need configure my styles based on calendly
         lg: "1260px",
         xl: "1440px",
         "2xl": "1600px",
@@ -151,6 +159,13 @@ export default {
           {
             lineHeight: "36px",
             fontWeight: "400",
+          },
+        ],
+        "xl-l": [
+          "28px",
+          {
+            lineHeight: "36px",
+            fontWeight: "600",
           },
         ],
         xl: [

@@ -1,13 +1,12 @@
-import type { ComponentPropsWithoutRef } from "react";
+import { useLayoutEffect } from "react";
 import { useState } from "react";
 import { useEffect, useRef } from "react";
 import { forwardRef } from "react";
-import type { RefObject } from "react";
+import type { ComponentPropsWithoutRef, RefObject } from "react";
 
 import styles from "./styles.module.css";
 
 //TODO: add prop values for interactiveMovement: boolean,fix interactive handler to work if mouse movement is in container.
-
 interface Props extends ComponentPropsWithoutRef<"div"> {}
 
 const interactiveGradientMovement = (ref: RefObject<HTMLDivElement | null>) => {
@@ -53,7 +52,7 @@ export const Gradient = forwardRef<HTMLDivElement, Props>(({ children, ...defaul
     interactiveGradientMovement(interBubble);
   }, []);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const checkHeightChange = () => {
       const currentHeight = contentRef.current?.clientHeight;
 

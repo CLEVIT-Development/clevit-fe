@@ -21,7 +21,7 @@ export const reasonsConstants = [
   {
     id: 3,
     Icon: ClientApproach,
-    title: " Client-Centric Approach",
+    title: "Client-Centric Approach",
     description:
       "At Clevit, you're not just a customer, you're our valued partner. Choosing Clevit means entering into a relationship that is built on trust, collaboration, and mutual success. From the very start, our team is dedicated to understanding your unique challenges, goals, and aspirations at every stage of our journey together.",
   },

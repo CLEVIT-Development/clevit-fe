@@ -55,6 +55,7 @@ const FeedbackSection = () => {
       >
         {feedbacksConstants.length > 3 || isTablet ? (
           <AliceCarousel
+            mouseTracking
             responsive={{ 0: { items: 1 }, 1024: { items: 2 } }}
             disableButtonsControls
             items={feedbacksData}

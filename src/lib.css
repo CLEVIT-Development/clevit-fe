@@ -9,8 +9,8 @@
 .alice-carousel__next-btn {
   padding: 0;
   display: block;
-  width: 12px;
-  height: 24px;
+  width: 28px;
+  height: 40px;
   position: absolute;
   top: 50%;
   transform: translateY(-100%);
