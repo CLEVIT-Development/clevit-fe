@@ -21,7 +21,6 @@ const HomePage = () => {
         </Gradient>
       }
     >
-      <AboutSection />
       <TotalSection
         projectsValue={`35+`}
         stuffValue={`20+`}
@@ -34,6 +33,7 @@ const HomePage = () => {
       <ProcessSection />
       <ProjectSection />
       <FeedbackSection />
+      <AboutSection />
       <CalendlySection title="Schedule a free call with a member of our team who will be happy to discuss the services we offer and how they can benefit you." />
     </Layout>
   );
