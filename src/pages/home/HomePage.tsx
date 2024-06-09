@@ -9,6 +9,7 @@ import { Gradient } from "@/shared/gradient/Gradient.tsx";
 
 import CalendlySection from "./CalendlySection";
 import FeedbackSection from "./Feedback/FeedbackSection";
+import IndustriesSection from "./IndustriesSection";
 import ProcessSection from "./ProcessSection";
 import ProjectSection from "./Project/ProjectSection";
 
@@ -21,7 +22,6 @@ const HomePage = () => {
         </Gradient>
       }
     >
-      <AboutSection />
       <TotalSection
         projectsValue={`35+`}
         stuffValue={`20+`}
@@ -32,8 +32,10 @@ const HomePage = () => {
       <RequestQuoteSection />
       <TechnologySection />
       <ProcessSection />
+      <IndustriesSection />
       <ProjectSection />
       <FeedbackSection />
+      <AboutSection />
       <CalendlySection title="Schedule a free call with a member of our team who will be happy to discuss the services we offer and how they can benefit you." />
     </Layout>
   );
