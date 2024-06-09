@@ -31,7 +31,7 @@ const Section = forwardRef(
         ref={ref}
         className={twMerge(
           classNames(
-            "flex flex-col items-center space-y-8",
+            "w-full flex flex-col items-center space-y-8",
             {
               ["items-start desktop:space-y-2 space-y-4"]: variant === SectionVariant.Secondary,
             },

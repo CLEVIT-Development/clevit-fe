@@ -9,6 +9,7 @@ import { Gradient } from "@/shared/gradient/Gradient.tsx";
 
 import CalendlySection from "./CalendlySection";
 import FeedbackSection from "./Feedback/FeedbackSection";
+import IndustriesSection from "./IndustriesSection";
 import ProcessSection from "./ProcessSection";
 import ProjectSection from "./Project/ProjectSection";
 
@@ -31,6 +32,7 @@ const HomePage = () => {
       <RequestQuoteSection />
       <TechnologySection />
       <ProcessSection />
+      <IndustriesSection />
       <ProjectSection />
       <FeedbackSection />
       <AboutSection />
