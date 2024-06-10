@@ -15,6 +15,8 @@ const IndustriesSection: React.FC = () => {
   useLayoutEffect(() => {
     const isActive = `${location.pathname}${location.hash}` === RoutePaths.Industries;
 
+    console.log(`${location.pathname}${location.hash}`);
+
     if (isActive) {
       const observer = new IntersectionObserver(
         ([entry]) => {
@@ -45,13 +47,16 @@ const IndustriesSection: React.FC = () => {
   return (
     <Section
       title="Industries"
-      className="bg-gray-500 desktop:px-28 px-11 py-5  desktop:py-12 scroll-mt-[150px] relative   w-full"
+      className="bg-gray-500 desktop:px-20 px-11 py-5  desktop:py-12 scroll-mt-[150px] relative  max-w-full"
       ref={sectionRef}
     >
       <div className="desktop:flex desktop:space-x-[90px] text-center desktop:text-start">
         {industriesConstants.map((industryList, index) => (
-          <div key={index} className="desktop:flex  text-center desktop:text-start">
-            <ul className="desktop:space-y-4 space-y-3 text-gray-200 text-base">
+          <div
+            key={index}
+            className="desktop:flex desktop:space-x-[90px] text-center desktop:text-start min-w-fit"
+          >
+            <ul className="desktop:space-y-4 space-y-3 text-gray-200 text-base font-semibold">
               {industryList.map((industry, idx) => (
                 <li key={idx}>{industry}</li>
               ))}
