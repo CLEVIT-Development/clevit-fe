@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+
 import { socialLinksConstants } from "@/assets/constants/socials.constants";
 import EnvelopeIcon from "@/assets/vectors/Envelope.svg?react";
 import LocationIcon from "@/assets/vectors/Location.svg?react";
@@ -6,6 +7,7 @@ import TelegramIcon from "@/assets/vectors/Telegram.svg?react";
 import TelephoneIcon from "@/assets/vectors/Telephone.svg?react";
 import ViberIcon from "@/assets/vectors/Viber.svg?react";
 import WatsappIcon from "@/assets/vectors/Watsapp.svg?react";
+
 import ContactItem from "./ContactItem";
 import ContactWrapper from "./ContactWrapper";
 
@@ -20,11 +22,14 @@ const ContactInfo = () => {
         <ContactWrapper>
           <ContactItem
             icon={<TelephoneIcon className="stroke-white" />}
-            content="+374 96 555 555"
+            content="+374 99 18 09 23"
           />
-          <ContactItem icon={<WatsappIcon className="stroke-white" />} content="+374 96 555 555" />
-          <ContactItem icon={<TelegramIcon className="stroke-white" />} content="+374 96 555 555" />
-          <ContactItem icon={<ViberIcon className="stroke-white" />} content="+374 96 555 555" />
+          <ContactItem icon={<WatsappIcon className="stroke-white" />} content="+374 99 18 09 23" />
+          <ContactItem
+            icon={<TelegramIcon className="stroke-white" />}
+            content="+374 99 18 09 23"
+          />
+          <ContactItem icon={<ViberIcon className="stroke-white" />} content="+374 99 18 09 23" />
         </ContactWrapper>
         <ContactWrapper>
           <ContactItem
