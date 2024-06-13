@@ -16,7 +16,6 @@ export const industriesConstants = [
     "Digital Transformation",
     "Logistics and Transportation",
     "Freight and Cargo Services",
-    "Insurance",
   ],
   [
     "Passenger Transportation",
@@ -52,5 +51,6 @@ export const industriesConstants = [
     "Regenerative Medicine",
     "Underwriting",
     "Landing",
+    "Insurance",
   ],
 ];

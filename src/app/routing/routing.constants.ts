@@ -11,7 +11,7 @@ export enum RoutePaths {
   About = "/about",
   Services = "/#services",
   Technologies = "/#technologies",
-  Industries = "/#Industries",
+  Industries = "/#industries",
   Portfolio = "/portfolio",
   FAQ = "/FAQ",
   Blog = "/blog",
