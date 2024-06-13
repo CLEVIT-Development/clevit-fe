@@ -25,7 +25,7 @@ const HomePage = () => {
       <TotalSection
         projectsValue={`35+`}
         stuffValue={`20+`}
-        servedValue={`20+`}
+        servedValue={`45+`}
         deliveredPercent={`99%`}
       />
       <ServiceSection />
