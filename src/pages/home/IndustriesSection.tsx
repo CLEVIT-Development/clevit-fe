@@ -47,16 +47,16 @@ const IndustriesSection: React.FC = () => {
   return (
     <Section
       title="Industries"
-      className="bg-gray-500 desktop:px-20 px-11 py-5  desktop:py-12 scroll-mt-[150px] relative  max-w-full"
+      className="bg-gray-500 desktop:px-28 px-11 py-5  desktop:py-12 scroll-mt-[150px] relative min-w-full self-center"
       ref={sectionRef}
     >
-      <div className="desktop:flex desktop:space-x-[90px] text-center desktop:text-start">
+      <div className="desktop:flex desktop:space-x-[45px] text-center desktop:text-start">
         {industriesConstants.map((industryList, index) => (
           <div
             key={index}
-            className="desktop:flex desktop:space-x-[90px] text-center desktop:text-start min-w-fit"
+            className="desktop:flex  desktop:space-x-[45px]  text-center desktop:text-start"
           >
-            <ul className="desktop:space-y-4 space-y-3 text-gray-200 text-base font-semibold">
+            <ul className="desktop:space-y-4 space-y-3 text-gray-200 desktop:text-base desktop:font-semibold text-sm font-normal">
               {industryList.map((industry, idx) => (
                 <li key={idx}>{industry}</li>
               ))}
