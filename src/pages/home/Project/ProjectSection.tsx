@@ -17,7 +17,7 @@ const ProjectSection = () => {
   return (
     <Section
       title="Web Apps We Developed"
-      className="w-full lg:max-w-[calc(100vw-128px)] xs:max-w-[calc(100vw-40px)] md:py-12 xs:py-5 self-center"
+      className="w-full lg:max-w-[1280px] xs:max-w-[calc(100vw-40px)] md:py-12 xs:py-5 self-center"
     >
       <div className="w-full flex flex-col items-center space-y-5">
         <div className="w-full">
