@@ -35,7 +35,7 @@ const Layout = ({
         <div
           className={twMerge(
             classNames(
-              "flex flex-col lg:space-y-[70px] space-y-12 items-center",
+              "flex flex-col lg:space-y-[50px] space-y-12 items-center",
               {
                 ["pt-[50px] pb-[100px]"]: headerVariant === HeaderVariant.Tertiary,
                 ["w-full h-full max-w-full pt-3.5 pb-0"]: layoutVariant === LayoutVariant.Secondary,

@@ -49,7 +49,7 @@ const FeedbackSection = () => {
     >
       <div
         className={classNames(
-          "w-full lg:px-20 desktop:px-15 xs:px-5 py-12 max-w-[calc(100vw-20px)]",
+          "w-full lg:px-20 desktop:px-15 xs:px-5 pt-4 pb-12 max-w-[calc(100vw-20px)]",
           styles.container
         )}
       >
