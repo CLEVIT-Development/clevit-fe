@@ -21,9 +21,9 @@ const CalendlySection = ({ title }: Props) => {
         <InlineWidget
           url={appConfig.shareUrl}
           styles={{
-            height: isExtraSmall ? 1000 : isTablet || isCalendlyDesktop ? 1100 : 660,
-            minWidth: isMobile ? "85vw" : 0,
+            height: isExtraSmall ? 1100 : isTablet || isCalendlyDesktop ? 1100 : 660,
             marginBottom: isCalendlyDesktop ? (isExtraSmall ? "-80px" : 0) : 50,
+            minWidth: isMobile ? "85vw" : 0,
           }}
         />
       </div>

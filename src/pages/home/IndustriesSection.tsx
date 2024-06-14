@@ -13,48 +13,44 @@ const IndustriesSection: React.FC = () => {
   useScrollView(sectionRef, RoutePaths.Industries);
 
   useLayoutEffect(() => {
-    const isActive = `${location.pathname}${location.hash}` === RoutePaths.Industries;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        const isActive = `${location.pathname}${location.hash}` === RoutePaths.Industries;
 
-    console.log(`${location.pathname}${location.hash}`);
-
-    if (isActive) {
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          // check if the user is not on the top of the page
-          if (entry.intersectionRect.height !== 0) {
-            navigate(entry.isIntersecting ? RoutePaths.Industries : RoutePaths.Home);
-          }
-        },
-        {
-          root: null,
-          rootMargin: "0px",
-          threshold: 0.1,
+        // check if the user is not on the top of the page
+        if (entry.intersectionRect.height !== 0 && isActive) {
+          navigate(entry.isIntersecting ? RoutePaths.Industries : RoutePaths.Home);
         }
-      );
-
-      if (sectionRef.current) {
-        observer.observe(sectionRef.current);
+      },
+      {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.1,
       }
+    );
 
-      return () => {
-        if (sectionRef.current) {
-          observer.unobserve(sectionRef.current);
-        }
-      };
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
     }
-  }, []);
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, [location.pathname, location.hash]);
 
   return (
     <Section
       title="Industries"
-      className="bg-gray-500 desktop:px-28 px-11 py-5  desktop:py-12 scroll-mt-[150px] relative min-w-full self-center"
+      className="bg-gray-500 desktop:px-28 px-11 py-5 desktop:py-12 scroll-mt-[150px] relative min-w-full self-center"
       ref={sectionRef}
     >
       <div className="desktop:flex desktop:space-x-[45px] text-center desktop:text-start">
         {industriesConstants.map((industryList, index) => (
           <div
             key={index}
-            className="desktop:flex  desktop:space-x-[45px]  text-center desktop:text-start"
+            className="desktop:flex desktop:space-x-[45px] text-center desktop:text-start"
           >
             <ul className="desktop:space-y-4 space-y-3 text-gray-200 desktop:text-base desktop:font-semibold text-sm font-normal">
               {industryList.map((industry, idx) => (

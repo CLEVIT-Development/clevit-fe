@@ -9,7 +9,7 @@ import ArrowIcon from "@/assets/vectors/Arrow.svg?react";
 import useOutsideClick from "@/common/hooks/useOutsideClick";
 
 export type TSelectItem = {
-  id: number;
+  id: string;
   title: string;
 };
 

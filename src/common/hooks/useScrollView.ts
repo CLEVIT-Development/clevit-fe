@@ -2,24 +2,23 @@ import type { RefObject } from "react";
 import { useLayoutEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-import type { RoutePaths } from "@/app/routing/routing.constants.ts";
-
-const useScrollView = <T extends Element>(ref: RefObject<T>, routePath: RoutePaths) => {
+const useScrollView = (ref: RefObject<HTMLDivElement>, route: string) => {
   const { pathname, hash } = useLocation();
 
-  const isActive = `${pathname}${hash}` === routePath;
+  const isActive = route === `${pathname}${hash}`;
 
   useLayoutEffect(() => {
     if (isActive && ref.current) {
       const handleScroll = () => {
         if (ref.current) {
-          ref.current.scrollIntoView({ behavior: "smooth" });
+          // disable smooth scroll on pages navigation
+          ref.current.scrollIntoView({ behavior: "smooth", block: "center" });
         }
       };
 
       requestAnimationFrame(handleScroll);
     }
-  }, [isActive, ref]);
+  }, [isActive, hash, ref]);
 };
 
 export default useScrollView;

@@ -15,41 +15,40 @@ const ServiceSection = () => {
   useScrollView(sectionRef, RoutePaths.Services);
 
   useLayoutEffect(() => {
-    const isActive = `${location.pathname}${location.hash}` === RoutePaths.Services;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        const isActive = `${location.pathname}${location.hash}` === RoutePaths.Services;
 
-    if (isActive) {
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          // check if the user is not on the top of the page
-          if (entry.intersectionRect.height !== 0) {
-            navigate(entry.isIntersecting ? RoutePaths.Services : RoutePaths.Home);
-          }
-        },
-        {
-          root: null,
-          rootMargin: "0px",
-          threshold: 0.1,
+        // check if the user is not on the top of the page
+        if (entry.intersectionRect.height !== 0 && isActive) {
+          navigate(entry.isIntersecting ? RoutePaths.Services : RoutePaths.Home);
         }
-      );
-
-      if (sectionRef.current) {
-        observer.observe(sectionRef.current);
+      },
+      {
+        root: null,
+        rootMargin: "1px",
+        threshold: 0.1,
       }
+    );
 
-      return () => {
-        if (sectionRef.current) {
-          observer.unobserve(sectionRef.current);
-        }
-      };
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
     }
-  }, []);
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, [location.pathname, location.hash]);
 
   return (
-    <Section ref={sectionRef} title="Services We Offer" className="scroll-mt-[150px]">
+    <Section ref={sectionRef} title="Services We Offer" className="scroll-mt-[150px] md:px-0">
       <div className="h-full w-full rounded-lg bg-white xs:shadow-base-100 sm:shadow-none grid sm:gap-5 xs:grid-cols-1 xs:gap-0 sm:grid-cols-2 desktop:grid-cols-3">
         {servicesConstants.map(({ id, Icon, title, description }, index) => (
           <ServiceCard
             key={id}
+            id={id}
             title={title}
             icon={<Icon />}
             description={description}
