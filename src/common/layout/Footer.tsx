@@ -1,14 +1,17 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { RoutePaths } from "@/app/routing/routing.constants.ts";
 import { blogsConstants } from "@/assets/constants/blogs.constants.ts";
 import { contactsConstants } from "@/assets/constants/contacts.constants.ts";
+import { servicesConstants } from "@/assets/constants/services.constants.ts";
 import { socialLinksConstants } from "@/assets/constants/socials.constants.ts";
 import Copyright from "@/shared/ui/Copyright";
 import Logo from "@/shared/ui/Logo.tsx";
 import RecentPost from "@/shared/ui/RecentPost.tsx";
 
 const Footer = () => {
+  const navigate = useNavigate();
+
   return (
     <footer className="flex flex-col bg-black lg:pt-12 lg:pb-6 xs:pt-5 xs:pb-4 lg:px-20 xs:px-5 z-[20]">
       <div className="xs:grid xs:grid-cols-2 xs:gap-8 lg:grid-cols-5">
@@ -55,22 +58,15 @@ const Footer = () => {
         </div>
         <div className="flex flex-col space-y-4 mr-auto sm:mx-auto">
           <h6 className="font-bold lg:text-md-l xs:text-md text-white opacity-60">Services</h6>
-          <p className="text-gray-100 font-medium lg:text-md xs:text-base">Web Development</p>
-          <p className="text-gray-100 font-medium lg:text-md xs:text-base">
-            Mobile App Development
-          </p>
-          <p className="text-gray-100 font-medium lg:text-md xs:text-base">DevOps</p>
-          <p className="text-gray-100 font-medium lg:text-md xs:text-base">AI Integration</p>
-          <p className="text-gray-100 font-medium lg:text-md xs:text-base">
-            Machine Learning Development
-          </p>
-          <p className="text-gray-100 font-medium lg:text-md xs:text-base">Quality Assurance</p>
-          <p className="text-gray-100 font-medium lg:text-md xs:text-base">Technical Assessment</p>
-          <p className="text-gray-100 font-medium lg:text-md xs:text-base">Support & Maintenance</p>
-          <p className="text-gray-100 font-medium lg:text-md xs:text-base">Outstaffing</p>
-          <p className="text-gray-100 font-medium lg:text-md xs:text-base">Project Management</p>
-          <p className="text-gray-100 font-medium lg:text-md xs:text-base">UI/UX Design</p>
-          <p className="text-gray-100 font-medium lg:text-md xs:text-base">Digital Marketing</p>
+          {servicesConstants.map(({ id, title }) => {
+            return (
+              <div key={id} role="button" onClick={() => navigate(id)}>
+                <p className="text-gray-100 font-medium lg:text-md xs:text-base cursor-pointer">
+                  {title}
+                </p>
+              </div>
+            );
+          })}
         </div>
         <div className="flex flex-col space-y-4 sm:col-auto lg:ml-auto col-span-2">
           <h6 className="font-bold lg:text-md-l text-md text-white opacity-60">Contact Us</h6>

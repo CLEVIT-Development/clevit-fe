@@ -25,9 +25,8 @@ const Header = forwardRef(
   ({ headerVariant, scrollY }: Props, ref: ForwardedRef<HTMLDivElement>) => {
     const isWhiteBackground = headerVariant !== HeaderVariant.Primary;
 
-    // TODO review later
-    const location = useLocation();
     const navigate = useNavigate();
+    const { pathname, hash } = useLocation();
     const { isTablet } = useResponsive();
     const [isOpen, setIsOpen] = useState(false);
     const [isTransitionEndClose, setIsTransitionEndClose] = useState(false);
@@ -38,7 +37,7 @@ const Header = forwardRef(
     const renderNavList = useMemo(
       () =>
         headerMenuLinks.map((headerMenuLink) => {
-          const isActive = `${location.pathname}${location.hash}` === headerMenuLink.link;
+          const isActive = `${pathname}${hash}` === headerMenuLink.link;
 
           return (
             <NavLink
@@ -66,7 +65,7 @@ const Header = forwardRef(
             </NavLink>
           );
         }),
-      [isWhiteBackground, location]
+      [isWhiteBackground, pathname, hash]
     );
 
     return (
