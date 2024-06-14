@@ -1,7 +1,8 @@
 import { useLayoutEffect, useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import { RoutePaths } from "@/app/routing/routing.constants.ts";
+import { ServicesIdConstants } from "@/assets/constants/services-id.constants.ts";
 import { servicesConstants } from "@/assets/constants/services.constants.ts";
 import useScrollView from "@/common/hooks/useScrollView.ts";
 import Section from "@/common/templates/Section.tsx";
@@ -11,13 +12,20 @@ import { orderUtils } from "@/utils/order.utils.ts";
 const ServiceSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
+  const { pathname, hash } = useLocation();
 
   useScrollView(sectionRef, RoutePaths.Services);
 
   useLayoutEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        const isActive = `${location.pathname}${location.hash}` === RoutePaths.Services;
+        const checkPath = `${pathname}${hash}`;
+        const isActive = checkPath === RoutePaths.Services;
+
+        // If the scrollIntoView comes from footer remove the hash
+        if (entry.isIntersecting && Object.values(ServicesIdConstants).includes(checkPath)) {
+          navigate(RoutePaths.Home);
+        }
 
         // check if the user is not on the top of the page
         if (entry.intersectionRect.height !== 0 && isActive) {
@@ -40,7 +48,7 @@ const ServiceSection = () => {
         observer.unobserve(sectionRef.current);
       }
     };
-  }, [location.pathname, location.hash]);
+  }, [pathname, hash]);
 
   return (
     <Section ref={sectionRef} title="Services We Offer" className="scroll-mt-[150px] md:px-0">

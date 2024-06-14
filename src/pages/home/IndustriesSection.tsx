@@ -1,5 +1,5 @@
 import React, { useLayoutEffect, useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import { RoutePaths } from "@/app/routing/routing.constants";
 import { industriesConstants } from "@/assets/constants/industries.constants";
@@ -9,13 +9,14 @@ import Section from "@/common/templates/Section";
 const IndustriesSection: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
+  const { pathname, hash } = useLocation();
 
   useScrollView(sectionRef, RoutePaths.Industries);
 
   useLayoutEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        const isActive = `${location.pathname}${location.hash}` === RoutePaths.Industries;
+        const isActive = `${pathname}${hash}` === RoutePaths.Industries;
 
         // check if the user is not on the top of the page
         if (entry.intersectionRect.height !== 0 && isActive) {
@@ -38,7 +39,7 @@ const IndustriesSection: React.FC = () => {
         observer.unobserve(sectionRef.current);
       }
     };
-  }, [location.pathname, location.hash]);
+  }, [pathname, hash]);
 
   return (
     <Section

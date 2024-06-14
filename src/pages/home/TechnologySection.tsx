@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import { RoutePaths } from "@/app/routing/routing.constants.ts";
 import { swipeAnimationConstants } from "@/assets/constants/swipeAnimation.constants.ts";
@@ -19,13 +19,14 @@ const TechnologySection = () => {
 
   const sectionRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
+  const { pathname, hash } = useLocation();
 
   useScrollView(sectionRef, RoutePaths.Technologies);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        const isActive = `${location.pathname}${location.hash}` === RoutePaths.Technologies;
+        const isActive = `${pathname}${hash}` === RoutePaths.Technologies;
 
         // check if the user is not on the top of the page
         if (entry.intersectionRect.height !== 0 && isActive) {
@@ -48,7 +49,7 @@ const TechnologySection = () => {
         observer.unobserve(sectionRef.current);
       }
     };
-  }, [location.pathname, location.hash]);
+  }, [pathname, hash]);
 
   const onTabItemClickHandler = useCallback((clickTabId: number, direction: string) => {
     setActiveTab({ direction, currTabId: clickTabId });

@@ -11,7 +11,6 @@ const useScrollView = (ref: RefObject<HTMLDivElement>, route: string) => {
     if (isActive && ref.current) {
       const handleScroll = () => {
         if (ref.current) {
-          // disable smooth scroll on pages navigation
           ref.current.scrollIntoView({ behavior: "smooth", block: "center" });
         }
       };
