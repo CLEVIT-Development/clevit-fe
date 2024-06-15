@@ -3,6 +3,7 @@ import BlogPage from "@/pages/blog/BlogPage.tsx";
 import CalendlyPage from "@/pages/calendly/CalendlyPage.tsx";
 import ContactUsPage from "@/pages/contact-us/ContactUsPage.tsx";
 import HomePage from "@/pages/home/HomePage.tsx";
+import PortfolioPage from "@/pages/portfolio/PortfolioPage";
 import PrivacyPolicy from "@/pages/privacy-policy/PrivacyPolicy.tsx";
 import TermsAndConditions from "@/pages/terms-and-conditions/TermsAndConditions.tsx";
 
@@ -40,4 +41,5 @@ export const routerElements = [
   { path: RoutePaths.TermsAndConditions, Element: TermsAndConditions },
   { path: RoutePaths.Calendly, Element: CalendlyPage },
   { path: RoutePaths.Blog, Element: BlogPage },
+  { path: RoutePaths.Portfolio, Element: PortfolioPage },
 ];
