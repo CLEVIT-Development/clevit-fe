@@ -38,7 +38,7 @@ export const portfolioConstants = [
       { label: "Industry", value: "Musicians" },
       { label: "Type", value: "Web Development" },
       { label: "Duration", value: "1 year" },
-      { label: "Website", value: "https://oblivioni.com/", isLink: true },
+      { label: "Website", value: "oblivioni.com", isLink: true },
       { label: "Country", value: "United States" },
       {
         label: "Technologies",
@@ -69,7 +69,7 @@ export const portfolioConstants = [
       { label: "Industry", value: "Events & Entertainment" },
       { label: "Type", value: "App Development" },
       { label: "Duration", value: "2 year" },
-      { label: "Website", value: "https://www.theflowops.com/", isLink: true },
+      { label: "Website", value: "theflowops.com", isLink: true },
       { label: "Country", value: "Singapore" },
       {
         label: "Technologies",
@@ -99,7 +99,7 @@ export const portfolioConstants = [
       { label: "Industry", value: "Events & Entertainment" },
       { label: "Type", value: "Web Development" },
       { label: "Duration", value: "2 year" },
-      { label: "Website", value: "https://www.theflowops.com/", isLink: true },
+      { label: "Website", value: "theflowops.com", isLink: true },
       { label: "Country", value: "Singapore" },
       {
         label: "Technologies",
@@ -125,7 +125,7 @@ export const portfolioConstants = [
       { label: "Industry", value: "Events & Entertainment" },
       { label: "Type", value: "Admin Dashboard" },
       { label: "Duration", value: "2 year" },
-      { label: "Website", value: "https://www.theflowops.com/", isLink: true },
+      { label: "Website", value: "theflowops.com", isLink: true },
       { label: "Country", value: "Singapore" },
       {
         label: "Technologies",
@@ -154,7 +154,7 @@ export const portfolioConstants = [
       { label: "Industry", value: "IT Services and IT Consulting" },
       { label: "Type", value: "Web Development" },
       { label: "Duration", value: "1 year" },
-      { label: "Website", value: "https://renegadetechnology.com/", isLink: true },
+      { label: "Website", value: "renegadetechnology.com", isLink: true },
       { label: "Country", value: "United States" },
       {
         label: "Technologies",
@@ -183,7 +183,7 @@ export const portfolioConstants = [
       { label: "Industry", value: "Transportation" },
       { label: "Type", value: "Web Development" },
       { label: "Duration", value: "1 year" },
-      { label: "Website", value: " https://taglogistics.am/", isLink: true },
+      { label: "Website", value: " taglogistics.am", isLink: true },
       { label: "Country", value: "Armenia" },
       {
         label: "Technologies",
@@ -211,7 +211,7 @@ export const portfolioConstants = [
       { label: "Industry", value: "AI" },
       { label: "Type", value: "Web Development" },
       { label: "Duration", value: "1.5 year" },
-      { label: "Website", value: "  https://sqor.ai/", isLink: true },
+      { label: "Website", value: " sqor.ai", isLink: true },
       { label: "Country", value: "United States" },
       {
         label: "Technologies",
@@ -238,7 +238,7 @@ export const portfolioConstants = [
       { label: "Industry", value: "Online Storytelling" },
       { label: "Type", value: "Web Development" },
       { label: "Duration", value: "In Progress" },
-      { label: "Website", value: "In Progress", isLink: true },
+      { label: "Website", value: "In Progress", isLink: false },
       { label: "Country", value: "Australia" },
       {
         label: "Technologies",
@@ -265,7 +265,7 @@ export const portfolioConstants = [
       { label: "Industry", value: "HR" },
       { label: "Type", value: "Web Development" },
       { label: "Duration", value: "In Progress" },
-      { label: "Website", value: "In Progress", isLink: true },
+      { label: "Website", value: "In Progress", isLink: false },
       { label: "Country", value: "United States" },
       {
         label: "Technologies",
@@ -294,7 +294,7 @@ export const portfolioConstants = [
       { label: "Industry", value: "Educational, Work" },
       { label: "Type", value: "Web Development" },
       { label: "Duration", value: "In Progress" },
-      { label: "Website", value: "In Progress", isLink: true },
+      { label: "Website", value: "In Progress", isLink: false },
       { label: "Country", value: "Armenia" },
       {
         label: "Technologies",

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 import { portfolioConstants } from "@/assets/constants/portfolio.constants";
 import PortfolioHeading from "@/common/layout/Heading/PortfolioHeading";
@@ -22,7 +22,7 @@ const PortfolioPage = () => {
 
   return (
     <Layout
-      headerVariant={HeaderVariant.Tertiary}
+      headerVariant={HeaderVariant.Primary}
       heading={
         <Gradient>
           <PortfolioHeading />
@@ -57,7 +57,11 @@ const PortfolioPage = () => {
                     <li key={idx} className="text-[14x] font-medium flex">
                       <span className="text-gray-100 font-medium mr-2">{item.label}: </span>
                       {item.isLink ? (
-                        <a href={item.value} className="text-blue-200 font-semibold">
+                        <a
+                          href={`https://www.${item.value}/`}
+                          className="text-blue-200 font-semibold"
+                          target="_blank"
+                        >
                           {item.value}
                         </a>
                       ) : !Array.isArray(item.value) ? (
@@ -100,7 +104,11 @@ const PortfolioPage = () => {
                     <li key={idx} className="text-[18px] font-medium flex">
                       <span className="text-gray-100 font-medium mr-2">{item.label}: </span>
                       {item.isLink ? (
-                        <a href={item.value} className="text-blue-200 font-semibold">
+                        <a
+                          href={`https://www.${item.value}/`}
+                          className="text-blue-200 font-semibold"
+                          target="_blank"
+                        >
                           {item.value}
                         </a>
                       ) : !Array.isArray(item.value) ? (
@@ -122,9 +130,7 @@ const PortfolioPage = () => {
                               onClick={() => toggleShowMore(index)}
                               className="text-[18px] font-medium text-blue-200 cursor-pointer"
                             >
-                              {showMoreStates[index]
-                                ? "Show less"
-                                : ` ... ${item.value.length - 4} more`}
+                              {showMoreStates[index] ? "" : ` ... ${item.value.length - 4} more`}
                             </span>
                           )}
                         </div>
