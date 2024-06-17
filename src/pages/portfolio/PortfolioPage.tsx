@@ -12,7 +12,7 @@ import FeedbackSection from "../home/Feedback/FeedbackSection";
 
 const PortfolioPage = () => {
   const [showMoreStates, setShowMoreStates] = useState(portfolioConstants.map(() => false));
-
+  const [hoveredIcon, setHoveredIcon] = useState<string | null>(null);
   const toggleShowMore = (index: number) => {
     const newShowMoreStates = [...showMoreStates];
 
@@ -22,6 +22,7 @@ const PortfolioPage = () => {
 
   return (
     <Layout
+      className="space-y-9"
       headerVariant={HeaderVariant.Primary}
       heading={
         <Gradient>
@@ -29,11 +30,11 @@ const PortfolioPage = () => {
         </Gradient>
       }
     >
-      <h1 className="text-2xl font-bold text-gray-200">Portfolios</h1>
+      <h1 className="text-2xl font-bold text-gray-200 mb-10">Portfolios</h1>
       {portfolioConstants.map((project, index) => (
         <Section
           key={index}
-          className={`${index % 2 === 0 ? "desktop:items-start" : "desktop:items-end"} ${index !== portfolioConstants.length - 1 ? "desktop:!mb-[56px]" : ""} items-start`}
+          className={` ${index % 2 === 0 ? "desktop:items-start" : "desktop:items-end"} ${index !== portfolioConstants.length - 1 ? "desktop:!mb-[56px]" : ""} items-start`}
           titleClassName="text-purple-100"
         >
           <div className="flex flex-col desktop:flex-row gap-9">
@@ -69,21 +70,21 @@ const PortfolioPage = () => {
                       ) : (
                         <div className="flex flex-wrap">
                           {item.value
-                            .slice(0, showMoreStates[index] ? item.value.length : 4)
+                            .slice(0, showMoreStates[index] ? item.value.length : 5)
                             .map((elem, i) => (
                               <span
                                 key={i}
-                                className=" rounded-full bg-gray-300 h-6 w-6 flex items-center justify-center mr-2 font-semibold"
+                                className="rounded-full bg-gray-300 h-6 w-6 flex items-center justify-center mr-2 font-semibold"
                               >
-                                <elem.icon width={18} />
+                                <elem.Icon height={18} />
                               </span>
                             ))}
-                          {item.value.length > 4 && (
+                          {item.value.length > 5 && (
                             <span
                               onClick={() => toggleShowMore(index)}
                               className="text-[18px] font-medium text-blue-200 cursor-pointer"
                             >
-                              {showMoreStates[index] ? "" : ` ... ${item.value.length - 4} more`}
+                              {showMoreStates[index] ? "" : ` ... ${item.value.length - 5} more`}
                             </span>
                           )}
                         </div>
@@ -120,24 +121,26 @@ const PortfolioPage = () => {
                         <span className="text-gray-200">{item.value}</span>
                       ) : (
                         <div className="flex">
-                          {item.value
-                            .slice(0, showMoreStates[index] ? item.value.length : 4)
-                            .map((elem, i) => (
-                              <span
-                                key={i}
-                                className="rounded-full bg-gray-300 h-6 w-6 flex items-center justify-center mr-2"
-                              >
-                                <elem.icon width={18} />
-                              </span>
-                            ))}
-                          {item.value.length > 4 && (
-                            <span
-                              onClick={() => toggleShowMore(index)}
-                              className="text-[18px] font-medium text-blue-200 cursor-pointer"
+                          {item.value.map((elem, i) => (
+                            <button
+                              type="button"
+                              onMouseEnter={() => setHoveredIcon(`${project.title}-${i}`)}
+                              onMouseLeave={() => setHoveredIcon(null)}
+                              key={i}
+                              className=" swg-wrapper cursor-auto rounded-full bg-gray-300 h-6 w-6 flex items-center justify-center mr-2 relative"
                             >
-                              {showMoreStates[index] ? "" : ` ... ${item.value.length - 4} more`}
-                            </span>
-                          )}
+                              <elem.Icon height={18} />
+                              {hoveredIcon === `${project.title}-${i}` && (
+                                <div
+                                  role="tooltip"
+                                  className="absolute  -translate-y-[120%] z-10 inline-block px-3 py-2 text-sm font-medium text-black bg-white border border-gray-300 rounded-lg shadow-sm whitespace-nowrap"
+                                >
+                                  {elem.name}
+                                  <div className="absolute top-full left-1/2 transform -translate-x-1/2 -translate-y-1 bg-white h-2 w-2 rotate-45 border-l border-b border-gray-300"></div>
+                                </div>
+                              )}
+                            </button>
+                          ))}
                         </div>
                       )}
                     </li>
@@ -156,7 +159,7 @@ const PortfolioPage = () => {
           </div>
           {/* Divider for mobile */}
           {index !== portfolioConstants.length - 1 && (
-            <div className="desktop:hidden my-6 border-b border-gray-100 w-full opacity-25"></div>
+            <div className="desktop:hidden  border-b border-gray-100 w-full opacity-25"></div>
           )}
         </Section>
       ))}
