@@ -33,26 +33,26 @@ const PortfolioPage = () => {
       {portfolioConstants.map((project, index) => (
         <Section
           key={index}
-          title={project.title}
-          className={`${index % 2 === 0 ? "desktop:items-start" : "desktop:items-end"} ${index !== portfolioConstants.length - 1 ? "!mb-[56px]" : ""} items-start`}
+          className={`${index % 2 === 0 ? "desktop:items-start" : "desktop:items-end"} ${index !== portfolioConstants.length - 1 ? "desktop:!mb-[56px]" : ""} items-start`}
           titleClassName="text-purple-100"
         >
           <div className="flex flex-col desktop:flex-row gap-9">
             {/* Mobile layout */}
             <div className="flex flex-col desktop:hidden">
               <div>
-                <p className="text-base desktop:text-[20px] font-semibold text-gray-200 mb-6">
+                <h3 className="text-purple-100  font-bold text-[22px] mb-2">{project.title}</h3>
+                <p className="text-base desktop:text-[16px] font-semibold text-gray-200 mb-6">
                   {project.description}
                 </p>
               </div>
               <div>
-                <img alt={`${project.title} picture`} src={project.imageUrl} />
+                <img alt={`${project.title} picture`} src={project.mobileImageUrl} height={395} />
               </div>
               <div>
-                <p className="mt-6 desktop:text-base text-sm font-normal">{project.details}</p>
+                <p className="mt-6 text-sm font-normal">{project.details}</p>
               </div>
               <div>
-                <ul className="mt-10">
+                <ul className="mt-4">
                   {project.info.map((item, idx) => (
                     <li key={idx} className="text-[14x] font-medium flex">
                       <span className="text-gray-100 font-medium mr-2">{item.label}: </span>
@@ -95,11 +95,16 @@ const PortfolioPage = () => {
             </div>
 
             {/* Desktop layout */}
-            <div className="hidden desktop:flex desktop:flex-row gap-9">
-              <div className={`${index % 2 === 0 ? "order-1" : "order-2"}`}>
+            <div className="hidden desktop:flex desktop:flex-row gap-9 ">
+              <div
+                className={`${index % 2 === 0 ? "order-1" : "order-2"} justify-between flex flex-col`}
+              >
+                <h3 className="text-purple-100  md:max-w-fit max-w-[300px] desktop:text-xl text-md-l font-semibold text-left">
+                  {project.title}
+                </h3>
                 <p className="text-[20px] font-semibold text-gray-200">{project.description}</p>
-                <p className="mt-6 text-base font-normal">{project.details}</p>
-                <ul className="mt-10">
+                <p className="text-base font-normal">{project.details}</p>
+                <ul>
                   {project.info.map((item, idx) => (
                     <li key={idx} className="text-[18px] font-medium flex">
                       <span className="text-gray-100 font-medium mr-2">{item.label}: </span>
@@ -140,10 +145,19 @@ const PortfolioPage = () => {
                 </ul>
               </div>
               <div className={`${index % 2 !== 0 ? "order-1" : "order-2"}`}>
-                <img alt={`${project.title} picture`} src={project.imageUrl} />
+                <img
+                  alt={`${project.title} picture`}
+                  src={project.desktopImageUrl}
+                  width={678}
+                  className="min-w-[678px] max-w-unset"
+                />
               </div>
             </div>
           </div>
+          {/* Divider for mobile */}
+          {index !== portfolioConstants.length - 1 && (
+            <div className="desktop:hidden my-6 border-b border-gray-100 w-full opacity-25"></div>
+          )}
         </Section>
       ))}
       <FeedbackSection />

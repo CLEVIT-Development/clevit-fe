@@ -6,8 +6,8 @@ const PortfolioHeading = () => {
       className="w-full flex  items-center desktop:text-left  desktop:pb-[77px] desktop:pt-[240px] desktop:px-[168px] text-center justify-center pb-6 pt-[90px] px-5"
       style={{
         backgroundImage: `url(${PortfolioHeadingBackground})`,
-        backgroundSize: "cover",
         backgroundPosition: "center",
+        backgroundSize: "cover",
       }}
     >
       <div className="flex flex-col justify-center items-center">
