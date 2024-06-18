@@ -1,51 +1,23 @@
-import React, { useLayoutEffect, useRef } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import React, { useRef } from "react";
 
 import { RoutePaths } from "@/app/routing/routing.constants";
 import { industriesConstants } from "@/assets/constants/industries.constants";
+import useInteractiveObserver from "@/common/hooks/useInteractiveObserver.ts";
 import useScrollView from "@/common/hooks/useScrollView";
 import Section from "@/common/templates/Section";
 
 const IndustriesSection: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const navigate = useNavigate();
-  const { pathname, hash } = useLocation();
 
   useScrollView(sectionRef, RoutePaths.Industries);
 
-  useLayoutEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        const isActive = `${pathname}${hash}` === RoutePaths.Industries;
-
-        // check if the user is not on the top of the page
-        if (entry.intersectionRect.height !== 0 && isActive) {
-          navigate(entry.isIntersecting ? RoutePaths.Industries : RoutePaths.Home);
-        }
-      },
-      {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.1,
-      }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
-  }, [pathname, hash]);
+  useInteractiveObserver({ sectionRef, checkRoute: RoutePaths.Industries });
 
   return (
     <Section
-      title="Industries"
-      className="bg-gray-500 desktop:px-28 px-11 py-5 desktop:py-12 scroll-mt-[150px] relative min-w-full self-center"
       ref={sectionRef}
+      title="Industries"
+      className="bg-gray-500 desktop:px-28 px-11 py-5 desktop:py-12 scroll-mt-[100px] desktop:scroll-mt-[150px] relative min-w-full self-center"
     >
       <div className="desktop:flex desktop:space-x-[45px] text-center desktop:text-start">
         {industriesConstants.map((industryList, index) => (

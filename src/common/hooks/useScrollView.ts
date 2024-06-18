@@ -2,6 +2,8 @@ import type { RefObject } from "react";
 import { useLayoutEffect } from "react";
 import { useLocation } from "react-router-dom";
 
+import { ServicesIdConstants } from "@/assets/constants/services-id.constants.ts";
+
 const useScrollView = (ref: RefObject<HTMLDivElement>, route: string) => {
   const { pathname, hash } = useLocation();
 
@@ -11,7 +13,10 @@ const useScrollView = (ref: RefObject<HTMLDivElement>, route: string) => {
     if (isActive && ref.current) {
       const handleScroll = () => {
         if (ref.current) {
-          ref.current.scrollIntoView({ behavior: "smooth", block: "center" });
+          ref.current.scrollIntoView({
+            behavior: "smooth",
+            block: Object.values(ServicesIdConstants).includes(route) ? "center" : "start",
+          });
         }
       };
 

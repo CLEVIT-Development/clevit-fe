@@ -28,8 +28,8 @@ export const headerMenuLinks = [
   { id: 3, label: "About Us", link: RoutePaths.About },
   { id: 4, label: "Technologies", link: RoutePaths.Technologies },
   { id: 5, label: "Industries", link: RoutePaths.Industries },
-  { id: 6, label: "FAQ", link: RoutePaths.FAQ },
-  { id: 7, label: "Blog", link: RoutePaths.Blog },
+  // { id: 6, label: "FAQ", link: RoutePaths.FAQ },
+  // { id: 7, label: "Blog", link: RoutePaths.Blog },
   { id: 8, label: "Contact Us", link: RoutePaths.ContactUs },
 ];
 
