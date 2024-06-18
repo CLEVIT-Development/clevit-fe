@@ -16,7 +16,7 @@ const ValuesSection = () => {
   }, []);
 
   return (
-    <Section title="Values" className="desktop:max-w-[80%] desktop:mx-auto">
+    <Section title="Values" className="desktop:max-w-[80%] desktop:mx-auto" headingLevel="h2">
       <div className="w-full flex md:flex-row flex-col md:space-x-[138px] md:space-y-0 space-y-6 items-center">
         <Navigation
           items={valueTabsConstants}

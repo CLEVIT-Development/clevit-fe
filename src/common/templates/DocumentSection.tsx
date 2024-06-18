@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import React, { ReactNode } from "react";
 
 import Section from "@/common/templates/Section.tsx";
 import { SectionVariant } from "@/types/variant.types.ts";
@@ -21,7 +21,10 @@ const DocumentSection = ({ headline, title, listItems, description, description2
             {listItems.map((listItem, index) => (
               <li key={index} className="flex space-x-2 items-start">
                 <span className="text-gray-200">-</span>
-                <p className="text-base font-normal text-gray-200">{listItem}</p>
+                <p
+                  className="text-base font-normal text-gray-200"
+                  dangerouslySetInnerHTML={{ __html: listItem }}
+                />
               </li>
             ))}
           </ul>

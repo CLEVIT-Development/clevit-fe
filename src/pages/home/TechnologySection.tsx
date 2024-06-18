@@ -59,6 +59,7 @@ const TechnologySection = () => {
     <Section
       ref={sectionRef}
       title="Technologies We Use"
+      headingLevel="h2"
       className="scroll-mt-[150px] md:w-full w-auto bg-gray-300 desktop:py-12 lg:px-[100px] desktop:px-[46px] md:px-[30px] md:mx-0 xs:-mx-5 xs:py-5 xs:px-[24px] rounded-lg-l space-y-9 overflow-clip"
     >
       <div className="w-full flex flex-col items-center space-y-[58px]">

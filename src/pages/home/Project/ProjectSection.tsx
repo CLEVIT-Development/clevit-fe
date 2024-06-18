@@ -17,6 +17,7 @@ const ProjectSection = () => {
   return (
     <Section
       title="Web Apps We Developed"
+      headingLevel="h2"
       className="w-full lg:max-w-[1280px] xs:max-w-[calc(100vw-40px)] xs:py-5 self-center"
     >
       <div className="w-full flex flex-col items-center space-y-5">

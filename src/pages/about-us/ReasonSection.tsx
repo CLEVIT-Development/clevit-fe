@@ -6,6 +6,7 @@ const ReasonSection = () => {
   return (
     <Section
       title="Why Choose Clevit?"
+      headingLevel="h3"
       className="bg-gray-500 md:py-12 md:px-6 py-5 px-5 rounded-lg-l"
     >
       <div className="flex flex-wrap md:gap-[72px] gap-6 justify-between">

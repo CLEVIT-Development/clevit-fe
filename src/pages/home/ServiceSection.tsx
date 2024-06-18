@@ -51,7 +51,12 @@ const ServiceSection = () => {
   }, [pathname, hash]);
 
   return (
-    <Section ref={sectionRef} title="Services We Offer" className="scroll-mt-[150px] md:px-0">
+    <Section
+      ref={sectionRef}
+      title="Services We Offer"
+      className="scroll-mt-[150px] md:px-0"
+      headingLevel="h2"
+    >
       <div className="h-full w-full rounded-lg bg-white xs:shadow-base-100 sm:shadow-none grid sm:gap-5 xs:grid-cols-1 xs:gap-0 sm:grid-cols-2 desktop:grid-cols-3">
         {servicesConstants.map(({ id, Icon, title, description }, index) => (
           <ServiceCard

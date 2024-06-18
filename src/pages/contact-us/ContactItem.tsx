@@ -3,7 +3,7 @@ import React from "react";
 import IconWrapper from "@/common/templates/IconWrapper";
 
 interface Props {
-  content: string;
+  content: string | React.ReactNode;
   icon: React.ReactNode;
 }
 

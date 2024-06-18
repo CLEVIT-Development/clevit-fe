@@ -11,6 +11,7 @@ interface Props extends ComponentPropsWithoutRef<"section"> {
   className?: string;
   titleClassName?: string;
   variant?: SectionVariant;
+  headingLevel?: keyof JSX.IntrinsicElements;
   children: React.ReactNode;
 }
 
@@ -22,10 +23,13 @@ const Section = forwardRef(
       className,
       titleClassName,
       variant = SectionVariant.Primary,
+      headingLevel: HeadingLevel = "h2", // Default to h2 if not specified
       ...props
     }: Props,
     ref: ForwardedRef<HTMLDivElement>
   ) => {
+    const HeadingComponent = HeadingLevel as keyof JSX.IntrinsicElements;
+
     return (
       <section
         ref={ref}
@@ -41,7 +45,7 @@ const Section = forwardRef(
         {...props}
       >
         {title && (
-          <h3
+          <HeadingComponent
             className={twMerge(
               classNames(
                 "text-gray-200 desktop:text-2xl text-lg font-semibold text-center md:max-w-fit max-w-[300px]",
@@ -54,7 +58,7 @@ const Section = forwardRef(
             )}
           >
             {title}
-          </h3>
+          </HeadingComponent>
         )}
         {children}
       </section>
