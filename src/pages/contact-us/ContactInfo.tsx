@@ -23,6 +23,7 @@ const ContactInfo = () => {
 
   const displayPhoneNumber1 = formatPhoneNumber(appConfig.contactPhone, "Armenia");
   const displayPhoneNumber2 = formatPhoneNumber(appConfig.contactPhoneSecondary, "USA");
+
   return (
     <div className="flex flex-col desktop:items-start items-center desktop:space-y-8 space-y-6">
       <p className="desktop:text-2xl text-lg font-semibold text-white">Contact Details</p>
@@ -70,13 +71,13 @@ const ContactInfo = () => {
                 <a href={`https://t.me/${appConfig.contactPhone}`} className="hover:opacity-75">
                   {displayPhoneNumber1}
                 </a>
-                <span className="font-semibold">/</span>
-                <a
-                  href={`https://t.me/${appConfig.contactPhoneSecondary}`}
-                  className="hover:opacity-75"
-                >
-                  {displayPhoneNumber2}
-                </a>
+                {/*<span className="font-semibold">/</span>*/}
+                {/*<a*/}
+                {/*  href={`https://t.me/${appConfig.contactPhoneSecondary}`}*/}
+                {/*  className="hover:opacity-75"*/}
+                {/*>*/}
+                {/*  {displayPhoneNumber2}*/}
+                {/*</a>*/}
               </div>
             }
           />
@@ -90,13 +91,13 @@ const ContactInfo = () => {
                 >
                   {displayPhoneNumber1}
                 </a>
-                <span className="font-semibold">/</span>
-                <a
-                  href={`viber://chat?number=${appConfig.contactPhoneSecondary}`}
-                  className="hover:opacity-75"
-                >
-                  {displayPhoneNumber2}
-                </a>
+                {/*<span className="font-semibold">/</span>*/}
+                {/*<a*/}
+                {/*  href={`viber://chat?number=${appConfig.contactPhoneSecondary}`}*/}
+                {/*  className="hover:opacity-75"*/}
+                {/*>*/}
+                {/*  {displayPhoneNumber2}*/}
+                {/*</a>*/}
               </div>
             }
           />

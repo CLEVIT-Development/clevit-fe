@@ -1,5 +1,8 @@
 import React from "react";
 
+import AvoPhoto from "@/assets/images/team/Avo.png";
+import EdoPhoto from "@/assets/images/team/Edo.png";
+import GorPhoto from "@/assets/images/team/Gor.png";
 import LinkedinIcon from "@/assets/vectors/Linkedin.svg?react";
 import Section from "@/common/templates/Section";
 
@@ -16,27 +19,27 @@ interface Person {
 
 const persons: Person[] = [
   {
-    image: "",
-    name: "Name",
-    surname: "Surname",
-    position: "Position",
+    image: GorPhoto,
+    name: "Gor",
+    surname: "Khachatryan",
+    position: "CEO",
     icon: <LinkedinIcon className="fill-[#007EBB] desktop:w-4 w-3" />,
-    iconUrl: "https://www.linkedin.com/in/name-surname/",
+    iconUrl: "https://www.linkedin.com/in/gor-khachatryan-2286b317b/",
   },
   {
-    image: "",
-    name: "Name",
-    surname: "Surname",
-    position: "Position",
+    image: EdoPhoto,
+    name: "Edgar",
+    surname: "Hambaryan",
+    position: "COO",
     icon: <LinkedinIcon className="fill-[#007EBB] desktop:w-4 w-3" />,
-    iconUrl: "https://www.linkedin.com/in/name-surname/",
+    iconUrl: "https://www.linkedin.com/in/edgar-hambaryan-755575305/",
   },
   {
-    image: "",
-    name: "Name",
-    surname: "Surname",
-    position: "Position",
-    iconUrl: "https://www.linkedin.com/in/name-surname/",
+    image: AvoPhoto,
+    name: "Avetis",
+    surname: "Fishenkjian",
+    position: "CTO",
+    iconUrl: "https://www.linkedin.com/in/avo-fishenkjian-a47014208/",
     icon: <LinkedinIcon className="fill-[#007EBB] desktop:w-4 w-3" />,
   },
 ];

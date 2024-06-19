@@ -1,6 +1,6 @@
 import { useState } from "react";
 import AliceCarousel from "react-alice-carousel";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 import { projectsConstants } from "@/assets/constants/projects.constants";
 import ProjectCube from "@/assets/images/projects/ProjectCube.png";
@@ -13,6 +13,11 @@ import { urlShortener } from "@/utils/link.utils";
 const ProjectSection = () => {
   const { isMobile } = useResponsive();
   const [hoveredIcon, setHoveredIcon] = useState<number | null>(null);
+  const navigate = useNavigate();
+
+  const redirectToPortfolio = () => {
+    navigate("/portfolio");
+  };
 
   return (
     <Section
@@ -106,7 +111,7 @@ const ProjectSection = () => {
                                 target="_blank"
                                 className="font-normal desktop:text-md xs:text-base text-purple-400 ml-2"
                               >
-                                Play Market
+                                Play Store
                               </NavLink>
                             </p>
                           )}
@@ -179,7 +184,7 @@ const ProjectSection = () => {
             )}
           />
         </div>
-        <Button>See More Projects</Button>
+        <Button onClick={redirectToPortfolio}>See More Projects</Button>
       </div>
     </Section>
   );

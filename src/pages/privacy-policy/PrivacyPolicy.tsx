@@ -14,17 +14,7 @@ const PrivacyPolicy = () => {
       />
       <Layout headerVariant={HeaderVariant.Tertiary}>
         <div className="w-full flex flex-col items-center space-y-[50px]">
-          <h1 className="desktop:text-4xl text-2xl-3xl text-gray-200 desktop:mb-14">
-            Privacy Policy
-          </h1>
-          <DocumentSection
-            title="Effective Date: [Insert Date]"
-            description={`
-            At Clevit, a web and mobile app development company, (referred to as "Clevit," "we," "us,"or "our"), we recognize the importance of protecting your privacy and are committed to
-            maintaining the highest standards of data protection and security. This Privacy Policy
-            explains our data collection, usage, and disclosure practices for our website
-        `}
-          />
+          <h1 className="desktop:text-4xl text-2xl-3xl text-gray-200">Privacy Policy</h1>
           <DocumentSection
             headline="Information We Collect"
             title="We collect two types of information"

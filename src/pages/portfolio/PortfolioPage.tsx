@@ -39,7 +39,7 @@ const PortfolioPage = () => {
           </Gradient>
         }
       >
-        <h1 className="text-2xl font-bold text-gray-200 mb-10">Portfolios</h1>
+        <h1 className="text-2xl font-bold text-gray-200 desktop:mb-10">Portfolios</h1>
         {portfolioConstants.map((project, index) => (
           <Section
             key={index}

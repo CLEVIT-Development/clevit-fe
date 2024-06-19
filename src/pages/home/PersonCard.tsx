@@ -32,7 +32,7 @@ const PersonCard: React.FC<PersonCardProps> = ({
         {name} {surname}
       </h3>
       <div className="desktop:text-md mt-2 text-[#314252] text-sm">{position}</div>
-      <a href={iconUrl} className="text-2xl mt-2">
+      <a target="_blank" href={iconUrl} className="text-2xl mt-2">
         {icon}
       </a>
     </div>
