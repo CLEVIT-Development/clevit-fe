@@ -165,7 +165,7 @@ export const portfolioConstants = [
       { label: "Industry", value: "Events & Entertainment" },
       { label: "Type", value: "Admin Dashboard" },
       { label: "Duration", value: "2 year" },
-      { label: "Website", value: "theflowops.com", isLink: true },
+      { label: "Website", value: "Internal Use Only", isLink: false },
       { label: "Country", value: "Singapore" },
       {
         label: "Technologies",
