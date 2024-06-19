@@ -10,7 +10,7 @@ import { urlShortener } from "@/utils/link.utils.ts";
 import { formatPhoneNumber } from "@/utils/phone.utils";
 
 const TermsAndConditions = () => {
-  const displayPhoneNumber = formatPhoneNumber(appConfig.contactPhone, "Armenian");
+  const displayPhoneNumber = formatPhoneNumber(appConfig.contactPhone, "Armenia");
   return (
     <>
       <PageSEO
