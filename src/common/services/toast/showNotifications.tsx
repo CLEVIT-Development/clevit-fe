@@ -18,7 +18,7 @@ const showNotification = ({ type, title, description }: IShowNotification) => {
   switch (type) {
     case ToastVersions.success:
       toast(
-        <p className="text-green-500">
+        <p className="text-black">
           {title}
           <br />
           {description}

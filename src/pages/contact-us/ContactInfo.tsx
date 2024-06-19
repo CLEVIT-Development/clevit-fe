@@ -14,7 +14,15 @@ import ContactItem from "./ContactItem";
 import ContactWrapper from "./ContactWrapper";
 
 const ContactInfo = () => {
-  const displayPhoneNumber = formatPhoneNumber(appConfig.contactPhone);
+  const formattedAddress = encodeURIComponent(appConfig.contactAddress);
+  const formattedAddressSecond = encodeURIComponent(appConfig.contactAddressSecondary);
+
+  // Create the URL for Google Maps
+  const mapUrl = `https://www.google.com/maps/search/?api=1&query=${formattedAddress}`;
+  const mapUrlSecond = `https://www.google.com/maps/search/?api=1&query=${formattedAddressSecond}`;
+
+  const displayPhoneNumber1 = formatPhoneNumber(appConfig.contactPhone, "Armenia");
+  const displayPhoneNumber2 = formatPhoneNumber(appConfig.contactPhoneSecondary, "USA");
   return (
     <div className="flex flex-col desktop:items-start items-center desktop:space-y-8 space-y-6">
       <p className="desktop:text-2xl text-lg font-semibold text-white">Contact Details</p>
@@ -22,33 +30,103 @@ const ContactInfo = () => {
         <ContactWrapper>
           <ContactItem
             icon={<EnvelopeIcon className="fill-white" />}
-            content={<a href={`mailto:${appConfig.contactMail}}`}>{appConfig.contactMail}</a>}
+            content={
+              <a href={`mailto:${appConfig.contactMail}}`} className="hover:opacity-75">
+                {appConfig.contactMail}
+              </a>
+            }
           />
         </ContactWrapper>
         <ContactWrapper>
           <ContactItem
             icon={<TelephoneIcon className="stroke-white" />}
-            content={<a href={`tel:${appConfig.contactPhone}}`}>{displayPhoneNumber}</a>}
+            content={
+              <a href={`tel:${appConfig.contactPhone}}`} className="hover:opacity-75">
+                {displayPhoneNumber1}
+              </a>
+            }
           />
           <ContactItem
             icon={<WatsappIcon className="stroke-white" />}
-            content={<a href={`https://wa.me/${appConfig.contactPhone}`}>{displayPhoneNumber}</a>}
+            content={
+              <div className="flex space-x-2">
+                <a href={`https://wa.me/${appConfig.contactPhone}`} className="hover:opacity-75">
+                  {displayPhoneNumber1}
+                </a>
+                <span className="font-semibold">/</span>
+                <a
+                  href={`https://wa.me/${appConfig.contactPhoneSecondary}`}
+                  className="hover:opacity-75"
+                >
+                  {displayPhoneNumber2}
+                </a>
+              </div>
+            }
           />
           <ContactItem
             icon={<TelegramIcon className="stroke-white" />}
-            content={<a href={`https://t.me/${appConfig.contactPhone}`}>{displayPhoneNumber}</a>}
+            content={
+              <div className="flex space-x-2">
+                <a href={`https://t.me/${appConfig.contactPhone}`} className="hover:opacity-75">
+                  {displayPhoneNumber1}
+                </a>
+                <span className="font-semibold">/</span>
+                <a
+                  href={`https://t.me/${appConfig.contactPhoneSecondary}`}
+                  className="hover:opacity-75"
+                >
+                  {displayPhoneNumber2}
+                </a>
+              </div>
+            }
           />
           <ContactItem
             icon={<ViberIcon className="stroke-white" />}
             content={
-              <a href={`viber://chat?number=${appConfig.contactPhone}`}>{displayPhoneNumber}</a>
+              <div className="flex space-x-2">
+                <a
+                  href={`viber://chat?number=${appConfig.contactPhone}`}
+                  className="hover:opacity-75"
+                >
+                  {displayPhoneNumber1}
+                </a>
+                <span className="font-semibold">/</span>
+                <a
+                  href={`viber://chat?number=${appConfig.contactPhoneSecondary}`}
+                  className="hover:opacity-75"
+                >
+                  {displayPhoneNumber2}
+                </a>
+              </div>
             }
           />
         </ContactWrapper>
         <ContactWrapper>
           <ContactItem
             icon={<LocationIcon className="fill-white" />}
-            content="Komitas 14/3, Yerevan, Armenia"
+            content={
+              <a
+                href={mapUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:opacity-75"
+              >
+                {appConfig.contactAddress}
+              </a>
+            }
+          />
+          <ContactItem
+            icon={<LocationIcon className="fill-white" />}
+            content={
+              <a
+                href={mapUrlSecond}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:opacity-75"
+              >
+                {appConfig.contactAddressSecondary}
+              </a>
+            }
           />
         </ContactWrapper>
 

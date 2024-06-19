@@ -10,7 +10,7 @@ import { urlShortener } from "@/utils/link.utils.ts";
 import { formatPhoneNumber } from "@/utils/phone.utils";
 
 const TermsAndConditions = () => {
-  const displayPhoneNumber = formatPhoneNumber(appConfig.contactPhone);
+  const displayPhoneNumber = formatPhoneNumber(appConfig.contactPhone, "Armenian");
   return (
     <>
       <PageSEO
@@ -101,7 +101,7 @@ const TermsAndConditions = () => {
           />
           <DocumentSection
             headline="Contact Information"
-            description={`If you have any questions or concerns about these terms and conditions, please contact us at ${appConfig.contactMail}.`}
+            description2={`If you have any questions or concerns about these terms and conditions, please contact us at <a href='mailto:${appConfig.contactMail}'>${appConfig.contactMail}.</a>`}
           />
         </div>
       </Layout>

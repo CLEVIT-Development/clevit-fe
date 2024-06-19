@@ -1,9 +1,32 @@
-export const formatPhoneNumber = (phoneNumber: string) => {
-  // Match the phone number format and capture groups
-  const regex = /^(\+\d{3})(\d{2})(\d{2})(\d{2})(\d{2})$/;
+type CountryFormat = {
+  countryCode: string;
+  format: number[];
+};
 
-  // Use replace with captured groups to format the phone number
-  const formattedPhoneNumber = phoneNumber.replace(regex, "$1 $2 $3 $4 $5");
+const countryFormats: Record<string, CountryFormat> = {
+  Armenia: { countryCode: "+374", format: [2, 3, 3, 2] },
+  USA: { countryCode: "+1", format: [3, 3, 4] },
+  // Add other countries and their formats here
+};
+
+export const formatPhoneNumber = (phoneNumber: string, country: string): string => {
+  const countryFormat = countryFormats[country];
+
+  const { countryCode, format } = countryFormat;
+
+  // Extract the part of the phone number without the country code
+  const phoneNumberWithoutPrefix = phoneNumber.replace(countryCode, "");
+
+  // Split the phone number based on the format
+  let index = 0;
+  const splitPhoneNumber = format.map((groupSize) => {
+    const part = phoneNumberWithoutPrefix.slice(index, index + groupSize);
+    index += groupSize;
+    return part;
+  });
+
+  // Reconstruct the formatted phone number with spaces
+  const formattedPhoneNumber = [countryCode, ...splitPhoneNumber].join(" ");
 
   return formattedPhoneNumber;
 };

@@ -31,7 +31,12 @@ const DocumentSection = ({ headline, title, listItems, description, description2
         )}
         {description && <p className="text-md font-normal text-gray-200">{description}</p>}
         {description2 && <br />}
-        {description2 && <p className="text-md font-normal text-gray-200">{description2}</p>}
+        {description2 && (
+          <p
+            className="text-md font-normal text-gray-200"
+            dangerouslySetInnerHTML={{ __html: description2 }}
+          />
+        )}
       </div>
     </Section>
   );

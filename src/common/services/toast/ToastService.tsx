@@ -5,7 +5,7 @@ const ToastService = () => (
     className="toast-container"
     draggable
     rtl={false}
-    theme="dark"
+    theme="light"
     pauseOnHover
     closeOnClick
     autoClose={3000}

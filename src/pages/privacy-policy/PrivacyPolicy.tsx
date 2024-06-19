@@ -59,7 +59,7 @@ const PrivacyPolicy = () => {
             headline="Your Rights"
             title="You have the right to"
             listItems={[
-              `Access, correct, or delete the personal information we hold. You can do this by contacting us at ${appConfig.contactMail}.`,
+              `Access, correct, or delete the personal information we hold. You can do this by contacting us at <a href='mailto:${appConfig.contactMail}}>{appConfig.contactMail}</a>.`,
               "Opt-out of receiving marketing communications from us.",
             ]}
           />
@@ -91,7 +91,7 @@ const PrivacyPolicy = () => {
           />
           <DocumentSection
             headline="Contact Information"
-            description={`If you have any questions or concerns about this Privacy Policy, our privacy practices, or the collection and use of your personal information, please contact us at ${appConfig.contactMail}`}
+            description2={`If you have any questions or concerns about this Privacy Policy, our privacy practices, or the collection and use of your personal information, please contact us at <a href='mailto:${appConfig.contactMail}'>${appConfig.contactMail}</a>`}
           />
         </div>
       </Layout>
