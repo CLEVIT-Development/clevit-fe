@@ -103,19 +103,19 @@ const ContactInfo = () => {
           />
         </ContactWrapper>
         <ContactWrapper>
-          <ContactItem
-            icon={<LocationIcon className="fill-white" />}
-            content={
-              <a
-                href={mapUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:opacity-75"
-              >
-                {appConfig.contactAddress}
-              </a>
-            }
-          />
+          {/*<ContactItem*/}
+          {/*  icon={<LocationIcon className="fill-white" />}*/}
+          {/*  content={*/}
+          {/*    <a*/}
+          {/*      href={mapUrl}*/}
+          {/*      target="_blank"*/}
+          {/*      rel="noopener noreferrer"*/}
+          {/*      className="hover:opacity-75"*/}
+          {/*    >*/}
+          {/*      {appConfig.contactAddress}*/}
+          {/*    </a>*/}
+          {/*  }*/}
+          {/*/>*/}
           <ContactItem
             icon={<LocationIcon className="fill-white" />}
             content={
