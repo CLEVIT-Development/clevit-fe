@@ -45,6 +45,7 @@ const FeedbackSection = () => {
   return (
     <Section
       title="What People Say"
+      headingLevel="h3"
       className=" bg-gray-500 py-12 xl:-mx-20 lg:-mx-16 xs:-mx-5 max-w-full"
     >
       <div

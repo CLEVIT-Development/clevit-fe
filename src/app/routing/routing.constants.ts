@@ -1,13 +1,15 @@
-import AboutPage from "@/pages/about/AboutPage.tsx";
-import CalendlyPage from "@/pages/calendly/CalendlyPage.tsx";
+import AboutPage from "@/pages/about-us/AboutPage";
+import BlogPage from "@/pages/blog/BlogPage.tsx";
 import ContactUsPage from "@/pages/contact-us/ContactUsPage.tsx";
 import HomePage from "@/pages/home/HomePage.tsx";
+import PortfolioPage from "@/pages/portfolio/PortfolioPage";
 import PrivacyPolicy from "@/pages/privacy-policy/PrivacyPolicy.tsx";
+import CalendlyPage from "@/pages/request-demo/CalendlyPage";
 import TermsAndConditions from "@/pages/terms-and-conditions/TermsAndConditions.tsx";
 
 export enum RoutePaths {
   Home = "/",
-  About = "/about",
+  About = "/about-us",
   Services = "/#services",
   Technologies = "/#technologies",
   Industries = "/#industries",
@@ -17,7 +19,7 @@ export enum RoutePaths {
   ContactUs = "/contact-us",
   PrivacyPolicy = "/privacy-policy",
   TermsAndConditions = "/terms-and-conditions",
-  Calendly = "/calendly",
+  Calendly = "/request-demo",
 }
 
 export const headerMenuLinks = [
@@ -38,5 +40,6 @@ export const routerElements = [
   { path: RoutePaths.PrivacyPolicy, Element: PrivacyPolicy },
   { path: RoutePaths.TermsAndConditions, Element: TermsAndConditions },
   { path: RoutePaths.Calendly, Element: CalendlyPage },
-  // { path: RoutePaths.Blog, Element: BlogPage },
+  { path: RoutePaths.Blog, Element: BlogPage },
+  { path: RoutePaths.Portfolio, Element: PortfolioPage },
 ];

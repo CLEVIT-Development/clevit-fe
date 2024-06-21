@@ -27,7 +27,9 @@ const IndustriesSection: React.FC = () => {
           >
             <ul className="desktop:space-y-4 space-y-3 text-gray-200 desktop:text-base desktop:font-semibold text-sm font-normal">
               {industryList.map((industry, idx) => (
-                <li key={idx}>{industry}</li>
+                <li key={idx}>
+                  <h4>{industry}</h4>
+                </li>
               ))}
             </ul>
             {index < industriesConstants.length - 1 && (

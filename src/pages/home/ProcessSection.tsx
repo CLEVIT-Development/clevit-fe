@@ -6,7 +6,7 @@ import { orderUtils } from "@/utils/order.utils";
 
 const ProcessSection = () => {
   return (
-    <Section title="Processes We Follow" className="space-y-16">
+    <Section title="Processes We Follow" className="space-y-16" headingLevel="h2">
       <div className="w-full flex justify-evenly desktop:space-y-0 md:space-y-[250px] xs:space-y-14 desktop:flex-row xs:flex-col">
         {processesConstants.map(({ id, title, Icon }, index) => (
           <div key={id} className="relative flex items-center even:self-end w-fit">
