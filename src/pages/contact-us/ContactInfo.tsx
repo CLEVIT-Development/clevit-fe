@@ -14,11 +14,9 @@ import ContactItem from "./ContactItem";
 import ContactWrapper from "./ContactWrapper";
 
 const ContactInfo = () => {
-  const formattedAddress = encodeURIComponent(appConfig.contactAddress);
   const formattedAddressSecond = encodeURIComponent(appConfig.contactAddressSecondary);
 
   // Create the URL for Google Maps
-  const mapUrl = `https://www.google.com/maps/search/?api=1&query=${formattedAddress}`;
   const mapUrlSecond = `https://www.google.com/maps/search/?api=1&query=${formattedAddressSecond}`;
 
   const displayPhoneNumber1 = formatPhoneNumber(appConfig.contactPhone, "Armenia");
