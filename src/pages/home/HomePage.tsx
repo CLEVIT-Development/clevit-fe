@@ -1,41 +1,52 @@
 import HomeHeading from "@/common/layout/Heading/HomeHeading";
 import Layout from "@/common/layout/Layout.tsx";
-import TotalSection from "@/pages/about/TotalSection.tsx";
+import TotalSection from "@/pages/about-us/TotalSection";
 import AboutSection from "@/pages/home/AboutSection.tsx";
 import RequestQuoteSection from "@/pages/home/RequestQuoteSection.tsx";
 import ServiceSection from "@/pages/home/ServiceSection.tsx";
 import TechnologySection from "@/pages/home/TechnologySection.tsx";
 import { Gradient } from "@/shared/gradient/Gradient.tsx";
+import PageSEO from "@/shared/lib/meta/PageSeo";
 
 import CalendlySection from "./CalendlySection";
 import FeedbackSection from "./Feedback/FeedbackSection";
+import IndustriesSection from "./IndustriesSection";
 import ProcessSection from "./ProcessSection";
 import ProjectSection from "./Project/ProjectSection";
 
 const HomePage = () => {
   return (
-    <Layout
-      heading={
-        <Gradient>
-          <HomeHeading />
-        </Gradient>
-      }
-    >
-      <AboutSection />
-      <TotalSection
-        projectsValue={`35+`}
-        stuffValue={`20+`}
-        servedValue={`20+`}
-        deliveredPercent={`99%`}
+    <>
+      <PageSEO
+        title="Web and Mobile App Development Company | Clevit"
+        description="Clevit is a web and mobile app development company building reliable solutions for businesses and startups.Find out how we can help with your project. Book a FREE consultation!"
+        canonicalUrl="https://clevit.io/"
+        alternativeDescription="We provide project-based and dedicated teams for custom software, web, mobile, AI, and cloud solutions. Get smarter, cost-effective solutions for your business."
       />
-      <ServiceSection />
-      <RequestQuoteSection />
-      <TechnologySection />
-      <ProcessSection />
-      <ProjectSection />
-      <FeedbackSection />
-      <CalendlySection title="Schedule a free call with a member of our team who will be happy to discuss the services we offer and how they can benefit you." />
-    </Layout>
+      <Layout
+        heading={
+          <Gradient>
+            <HomeHeading />
+          </Gradient>
+        }
+      >
+        <TotalSection
+          projectsValue={`35+`}
+          stuffValue={`20+`}
+          servedValue={`45+`}
+          deliveredPercent={`99%`}
+        />
+        <ServiceSection />
+        <RequestQuoteSection />
+        <TechnologySection />
+        <ProcessSection />
+        <IndustriesSection />
+        <ProjectSection />
+        <FeedbackSection />
+        <AboutSection />
+        <CalendlySection title="Schedule a free call with a member of our team who will be happy to discuss the services we offer and how they can benefit you." />
+      </Layout>
+    </>
   );
 };
 

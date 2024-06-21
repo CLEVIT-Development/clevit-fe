@@ -1,21 +1,28 @@
+import React, { useRef } from "react";
 import type { ComponentPropsWithoutRef } from "react";
-import React from "react";
 
 import { twMerge } from "tailwind-merge";
 
+import useScrollView from "@/common/hooks/useScrollView.ts";
 import IconWrapper from "@/common/templates/IconWrapper";
 
 interface Props extends ComponentPropsWithoutRef<"div"> {
-  icon: React.ReactNode;
+  id: string;
   order: string;
   title: string;
-  description: string;
   className?: string;
+  description: string;
+  icon: React.ReactNode;
 }
 
-const ServiceCard = ({ icon, order, title, description, className }: Props) => {
+const ServiceCard = ({ id, icon, order, title, description, className }: Props) => {
+  const sectionCardRef = useRef<HTMLDivElement>(null);
+
+  useScrollView(sectionCardRef, id);
+
   return (
     <div
+      ref={sectionCardRef}
       className={twMerge(
         "p-6 rounded-lg sm:shadow-base-100 transition-all duration-500 sm:hover:scale-105 desktop:max-w-[410px] space-y-4",
         className
@@ -28,7 +35,7 @@ const ServiceCard = ({ icon, order, title, description, className }: Props) => {
             {order}
           </p>
         </div>
-        <span className="w-full text-gray-200 text-md font-bold">{title}</span>
+        <h3 className="w-full text-gray-200 text-md font-bold">{title}</h3>
       </div>
       <p className="text-gray-200 text-base break-words">{description}</p>
     </div>

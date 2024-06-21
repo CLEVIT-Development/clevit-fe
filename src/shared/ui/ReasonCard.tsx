@@ -11,7 +11,7 @@ const ReasonCard = ({ title, description, icon }: Props) => {
     <div className="flex flex-col space-y-2 items-start max-w-[504px]">
       <div className="flex flex-col md:space-y-1 space-y-4">
         <IconWrapper icon={icon} className="md:h-[86px] md:w-[86px] size-16" />
-        <p className="md:text-md-l text-md font-medium text-purple-100">{title}</p>
+        <h4 className="md:text-md-l text-md font-medium text-purple-100">{title}</h4>
       </div>
       <p className="md:text-base text-sm text-gray-200">{description}</p>
     </div>

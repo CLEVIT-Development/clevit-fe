@@ -9,7 +9,7 @@ import ArrowIcon from "@/assets/vectors/Arrow.svg?react";
 import useOutsideClick from "@/common/hooks/useOutsideClick";
 
 export type TSelectItem = {
-  id: number;
+  id: string;
   title: string;
 };
 
@@ -193,12 +193,12 @@ const AutoComplete = forwardRef(
         <ul
           role="tree"
           ref={listContainerRef}
-          className="transition-all duration-500 absolute w-full top-[85px] flex flex-col bg-white border border-purple-100 rounded-[8px] p-1 z-[20]"
+          className="transition-all duration-500 absolute w-full top-[85px] flex flex-col bg-white border border-purple-100 rounded-[8px] p-1 z-[20] "
           style={{
             // if the list is empty save the area for at least one item to show `no match found` message
             height: isOpen ? `${(list.length || 1) * 31 + 10}px` : "0",
             opacity: isOpen ? 100 : 0,
-            maxHeight: isOpen ? 134 : 0,
+            maxHeight: isOpen ? 400 : 0,
             overflow: isOpen ? "auto" : "hidden",
           }}
         >

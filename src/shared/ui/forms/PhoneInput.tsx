@@ -23,7 +23,7 @@ const PhoneInput = forwardRef(
     {
       required = false,
       disabled = false,
-      defaultCountry = "am",
+      defaultCountry = "us",
       placeholder = "Input Placeholder",
       label,
       error,

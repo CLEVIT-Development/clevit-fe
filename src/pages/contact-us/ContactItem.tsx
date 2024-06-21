@@ -3,20 +3,18 @@ import React from "react";
 import IconWrapper from "@/common/templates/IconWrapper";
 
 interface Props {
-  content: string;
+  content: string | React.ReactNode;
   icon: React.ReactNode;
 }
 
 const ContactItem = ({ icon, content }: Props) => {
   return (
-    <div className="desktop:min-w-full min-w-[300px] flex items-center rounded-lg-l desktop:space-x-5 space-x-2 border border-purple-700 desktop:py-[30px] desktop:pl-[30px] desktop:pr-[40px] py-4 pl-4 pr-9">
+    <div className="flex space-x-4 items-center ">
       <IconWrapper
         icon={icon}
-        className="bg-purple-700 desktop:h-[50px] desktop:w-[50px] h-[36px] w-[36px]"
+        className="bg-purple-700 desktop:h-[50px] desktop:min-w-[50px] h-[30px] w-[30px]"
       />
-      <span className="desktop:text-md-l text-base font-medium text-white max-w-[60%]">
-        {content}
-      </span>
+      <span className="desktop:text-base  text-sm font-medium text-white ">{content}</span>
     </div>
   );
 };

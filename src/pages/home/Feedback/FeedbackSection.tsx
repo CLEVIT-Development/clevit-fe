@@ -21,7 +21,7 @@ const FeedbackSection = () => {
             key={id}
             className={twMerge(
               classNames(
-                "bg-white rounded-lg-l md:min-h-[600px] min-h-[550px] flex flex-col justify-between items-start px-4 desktop:pt-8 xs:pt-5 pb-6",
+                "bg-white rounded-lg-l shadow-lg md:min-h-[600px] min-h-[550px] flex flex-col justify-between items-start px-4 desktop:pt-8 xs:pt-5 pb-6",
                 styles["feedback-item"]
               )
             )}
@@ -45,11 +45,12 @@ const FeedbackSection = () => {
   return (
     <Section
       title="What People Say"
-      className="w-auto bg-gray-500 py-12 xl:-mx-20 lg:-mx-16 xs:-mx-5"
+      headingLevel="h3"
+      className=" bg-gray-500 py-12 xl:-mx-20 lg:-mx-16 xs:-mx-5 max-w-full"
     >
       <div
         className={classNames(
-          "w-full lg:px-20 desktop:px-15 xs:px-5 py-12 max-w-[calc(100vw-20px)]",
+          "w-full lg:px-20 desktop:px-15 xs:px-5 pt-4 pb-12 max-w-[calc(100vw-20px)]",
           styles.container
         )}
       >
@@ -62,7 +63,10 @@ const FeedbackSection = () => {
           />
         ) : (
           <div
-            className={classNames("w-full flex space-x-4", styles["feedback-non-carousel-wrapper"])}
+            className={classNames(
+              "w-full flex space-x-4 justify-center",
+              styles["feedback-non-carousel-wrapper"]
+            )}
           >
             {feedbacksData}
           </div>

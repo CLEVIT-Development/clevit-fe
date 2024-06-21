@@ -10,8 +10,8 @@ export const contactsConstants = [
   },
   {
     id: 2,
-    text: "+374 96 555 555",
-    link: "tel:+374 96 555 555",
+    text: "+374 99 18 09 23",
+    link: "tel:+374 99 18 09 23",
     Element: Telephone,
   },
 ];

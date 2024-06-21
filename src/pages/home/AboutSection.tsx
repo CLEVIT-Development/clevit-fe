@@ -1,17 +1,56 @@
-import Section from "@/common/templates/Section.tsx";
+import React from "react";
 
-const AboutSection = () => (
+import AvoPhoto from "@/assets/images/team/Avo.png";
+import EdoPhoto from "@/assets/images/team/Edo.png";
+import GorPhoto from "@/assets/images/team/Gor.png";
+import LinkedinIcon from "@/assets/vectors/Linkedin.svg?react";
+import Section from "@/common/templates/Section";
+
+import PersonCard from "./PersonCard";
+
+interface Person {
+  image: string;
+  name: string;
+  surname: string;
+  position: string;
+  iconUrl: string;
+  icon: React.ReactNode;
+}
+
+const persons: Person[] = [
+  {
+    image: GorPhoto,
+    name: "Gor",
+    surname: "Khachatryan",
+    position: "CEO",
+    icon: <LinkedinIcon className="fill-[#007EBB] desktop:w-4 w-3" />,
+    iconUrl: "https://www.linkedin.com/in/gor-khachatryan-2286b317b/",
+  },
+  {
+    image: EdoPhoto,
+    name: "Edgar",
+    surname: "Hambaryan",
+    position: "COO",
+    icon: <LinkedinIcon className="fill-[#007EBB] desktop:w-4 w-3" />,
+    iconUrl: "https://www.linkedin.com/in/edgar-hambaryan-755575305/",
+  },
+  {
+    image: AvoPhoto,
+    name: "Avetis",
+    surname: "Fishenkjian",
+    position: "CTO",
+    iconUrl: "https://www.linkedin.com/in/avo-fishenkjian-a47014208/",
+    icon: <LinkedinIcon className="fill-[#007EBB] desktop:w-4 w-3" />,
+  },
+];
+
+const AboutSection: React.FC = () => (
   <Section title="Who We Are">
-    <p
-      id="home"
-      className="desktop:font-normal desktop:text-md xs:text-base xs:text-left md:text-center xs:text-center xs:max-w-full desktop:max-w-[80%]"
-    >
-      As a leading web and mobile app development company, Clevit empowers businesses across all
-      sectors to unlock their full digital potential. Our team of skilled web app developers
-      delivers top-notch web, mobile, and AI-driven solutions tailored to your unique needs and
-      business goals. Whether you're a startup or an established company, Clevit is your trusted
-      partner for all your digital needs.
-    </p>
+    <div className=" flex desktop:max-w-full overflow-scroll space-x-4 max-w-[350px] ">
+      {persons.map((person, index) => (
+        <PersonCard key={index} {...person} />
+      ))}
+    </div>
   </Section>
 );
 

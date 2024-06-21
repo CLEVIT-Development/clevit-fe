@@ -1,8 +1,10 @@
-import { useLayoutEffect, useRef } from "react";
+import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { RoutePaths } from "@/app/routing/routing.constants.ts";
+import { ServicesIdConstants } from "@/assets/constants/services-id.constants.ts";
 import { servicesConstants } from "@/assets/constants/services.constants.ts";
+import useInteractiveObserver from "@/common/hooks/useInteractiveObserver.ts";
 import useScrollView from "@/common/hooks/useScrollView.ts";
 import Section from "@/common/templates/Section.tsx";
 import ServiceCard from "@/shared/ui/ServiceCard/ServiceCard";
@@ -10,46 +12,35 @@ import { orderUtils } from "@/utils/order.utils.ts";
 
 const ServiceSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const navigate = useNavigate();
 
   useScrollView(sectionRef, RoutePaths.Services);
 
-  useLayoutEffect(() => {
-    const isActive = `${location.pathname}${location.hash}` === RoutePaths.Services;
+  const navigate = useNavigate();
 
-    if (isActive) {
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          // check if the user is not on the top of the page
-          if (entry.intersectionRect.height !== 0) {
-            navigate(entry.isIntersecting ? RoutePaths.Services : RoutePaths.Home);
-          }
-        },
-        {
-          root: null,
-          rootMargin: "0px",
-          threshold: 0.1,
-        }
-      );
+  useInteractiveObserver({
+    sectionRef,
+    checkRoute: RoutePaths.Services,
+    callback: (entry, checkPath) => {
+      const isServiceIdCheck = Object.values(ServicesIdConstants).includes(checkPath);
 
-      if (sectionRef.current) {
-        observer.observe(sectionRef.current);
+      if (entry.isIntersecting && isServiceIdCheck) {
+        navigate(RoutePaths.Home);
       }
-
-      return () => {
-        if (sectionRef.current) {
-          observer.unobserve(sectionRef.current);
-        }
-      };
-    }
-  }, []);
+    },
+  });
 
   return (
-    <Section ref={sectionRef} title="Services We Offer" className="scroll-mt-[150px]">
+    <Section
+      ref={sectionRef}
+      title="Services We Offer"
+      className="scroll-mt-[150px] md:px-0"
+      headingLevel="h2"
+    >
       <div className="h-full w-full rounded-lg bg-white xs:shadow-base-100 sm:shadow-none grid sm:gap-5 xs:grid-cols-1 xs:gap-0 sm:grid-cols-2 desktop:grid-cols-3">
         {servicesConstants.map(({ id, Icon, title, description }, index) => (
           <ServiceCard
             key={id}
+            id={id}
             title={title}
             icon={<Icon />}
             description={description}
