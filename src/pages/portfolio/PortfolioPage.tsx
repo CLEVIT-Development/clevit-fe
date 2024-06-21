@@ -39,7 +39,7 @@ const PortfolioPage = () => {
           </Gradient>
         }
       >
-        <h1 className="text-2xl font-bold text-gray-200 desktop:mb-10">Portfolios</h1>
+        <h1 className="text-2xl font-bold text-gray-200 mb-10">Portfolios</h1>
         {portfolioConstants.map((project, index) => (
           <Section
             key={index}
@@ -72,7 +72,7 @@ const PortfolioPage = () => {
                             className="text-blue-200 font-semibold"
                             target="_blank"
                           >
-                            {item.value}
+                            {item.value as string}
                           </a>
                         ) : !Array.isArray(item.value) ? (
                           <span className="text-gray-200 font-semibold">{item.value}</span>
@@ -140,7 +140,7 @@ const PortfolioPage = () => {
                             className="text-blue-200 font-semibold"
                             target="_blank"
                           >
-                            {item.value}
+                            {item.value as string}
                           </a>
                         ) : !Array.isArray(item.value) ? (
                           <span className="text-gray-200">{item.value}</span>

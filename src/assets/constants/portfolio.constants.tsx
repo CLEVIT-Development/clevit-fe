@@ -1,3 +1,5 @@
+import { FunctionComponent, SVGProps } from "react";
+
 import BepDesktop from "@/assets/images/portfolio/BepDesktop.png";
 import BepMobileImage from "@/assets/images/portfolio/BepMobile.png";
 import EvaluationDesktop from "@/assets/images/portfolio/EvaluationDesktop.png";
@@ -52,7 +54,23 @@ import ViteIcon from "@/assets/vectors/technology/Vite.svg?react";
 import VueIcon from "@/assets/vectors/technology/Vue.svg?react";
 import VuetifyIcon from "@/assets/vectors/technology/Vuetify.svg?react";
 
-export const portfolioConstants = [
+interface Project {
+  title: string;
+  description: string;
+  mobileImageUrl: string;
+  desktopImageUrl: string;
+  details: string;
+  info: Array<{
+    label: string;
+    isLink?: boolean;
+    value:
+      | string
+      | { Icon: FunctionComponent<SVGProps<SVGSVGElement>>; name: string }[]
+      | React.ReactNode;
+  }>;
+}
+
+export const portfolioConstants: Project[] = [
   {
     title: "Oblivioni",
     desktopImageUrl: OblivioniDesktopImage,
