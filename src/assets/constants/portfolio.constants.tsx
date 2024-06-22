@@ -81,7 +81,7 @@ export const portfolioConstants: Project[] = [
     info: [
       { label: "Industry", value: "Musicians" },
       { label: "Type", value: "Web Development" },
-      { label: "Duration", value: "1 year" },
+      { label: "Duration", value: "1 Year 2 Months" },
       { label: "Website", value: "oblivioni.com", isLink: true },
       { label: "Country", value: "United States" },
       {
@@ -113,7 +113,7 @@ export const portfolioConstants: Project[] = [
     info: [
       { label: "Industry", value: "Events & Entertainment" },
       { label: "Type", value: "App Development" },
-      { label: "Duration", value: "2 year" },
+      { label: "Duration", value: "2 Year 1 Month" },
       {
         label: "Application",
         value: [
@@ -121,9 +121,9 @@ export const portfolioConstants: Project[] = [
             <a target="_blank" href="https://apps.apple.com/us/app/flowops/id6477181736">
               App Store
             </a>
-            <a target="_blank" href="https://apps.apple.com/us/app/flowops/id6477181736">
-              Play Store
-            </a>
+            {/*<a target="_blank" href="https://apps.apple.com/us/app/flowops/id6477181736">*/}
+            {/*  Play Store*/}
+            {/*</a>*/}
           </div>,
         ],
         isLink: true,
@@ -156,7 +156,7 @@ export const portfolioConstants: Project[] = [
     info: [
       { label: "Industry", value: "Events & Entertainment" },
       { label: "Type", value: "Web Development" },
-      { label: "Duration", value: "2 year" },
+      { label: "Duration", value: "1 Year 11 Months" },
       { label: "Website", value: "theflowops.com", isLink: true },
       { label: "Country", value: "Singapore" },
       {
@@ -182,7 +182,7 @@ export const portfolioConstants: Project[] = [
     info: [
       { label: "Industry", value: "Events & Entertainment" },
       { label: "Type", value: "Admin Dashboard" },
-      { label: "Duration", value: "2 year" },
+      { label: "Duration", value: "2 Years" },
       { label: "Website", value: "Internal Use Only", isLink: false },
       { label: "Country", value: "Singapore" },
       {
@@ -211,7 +211,7 @@ export const portfolioConstants: Project[] = [
     info: [
       { label: "Industry", value: "IT Services and IT Consulting" },
       { label: "Type", value: "Web Development" },
-      { label: "Duration", value: "1 year" },
+      { label: "Duration", value: "10 Months" },
       { label: "Website", value: "renegadetechnology.com", isLink: true },
       { label: "Country", value: "United States" },
       {
@@ -240,7 +240,7 @@ export const portfolioConstants: Project[] = [
     info: [
       { label: "Industry", value: "Transportation" },
       { label: "Type", value: "Web Development" },
-      { label: "Duration", value: "1 year" },
+      { label: "Duration", value: "12 Months" },
       { label: "Website", value: " taglogistics.am", isLink: true },
       { label: "Country", value: "Armenia" },
       {
@@ -268,7 +268,7 @@ export const portfolioConstants: Project[] = [
     info: [
       { label: "Industry", value: "AI" },
       { label: "Type", value: "Web Development" },
-      { label: "Duration", value: "1.5 year" },
+      { label: "Duration", value: "1 Year 6 Months" },
       { label: "Website", value: " sqor.ai", isLink: true },
       { label: "Country", value: "United States" },
       {
@@ -380,7 +380,7 @@ export const portfolioConstants: Project[] = [
     info: [
       { label: "Industry", value: "EHealthcare" },
       { label: "Type", value: "Web Development" },
-      { label: "Duration", value: "3 years" },
+      { label: "Duration", value: "3 Years 2 Months" },
       { label: "Website", value: "fhhealth.com ", isLink: true },
       { label: "Country", value: "Canada" },
       {
@@ -413,7 +413,7 @@ export const portfolioConstants: Project[] = [
     info: [
       { label: "Industry", value: "EHealthcare" },
       { label: "Type", value: "Web Development" },
-      { label: "Duration", value: "2 years" },
+      { label: "Duration", value: "2 Years 3 Months" },
       { label: "Website", value: " pollinfertility.com", isLink: true },
       { label: "Country", value: "Canada" },
       {
@@ -446,7 +446,7 @@ export const portfolioConstants: Project[] = [
     info: [
       { label: "Industry", value: "Finance, AI" },
       { label: "Type", value: "Web Development, AI Development" },
-      { label: "Duration", value: "2 years" },
+      { label: "Duration", value: "2 Years 4 Months" },
       { label: "Website", value: " Internal Use Only", isLink: false },
       { label: "Country", value: "Canada" },
       {
