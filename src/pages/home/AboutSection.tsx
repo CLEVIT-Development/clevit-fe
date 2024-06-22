@@ -24,7 +24,7 @@ const persons: Person[] = [
     surname: "Khachatryan",
     position: "CEO",
     icon: <LinkedinIcon className="fill-[#007EBB] desktop:w-4 w-3" />,
-    iconUrl: "https://www.linkedin.com/in/gor-khachatryan-2286b317b/",
+    iconUrl: "https://www.linkedin.com/in/gor-khachatryan/",
   },
   {
     image: EdoPhoto,
@@ -32,14 +32,14 @@ const persons: Person[] = [
     surname: "Hambaryan",
     position: "COO",
     icon: <LinkedinIcon className="fill-[#007EBB] desktop:w-4 w-3" />,
-    iconUrl: "https://www.linkedin.com/in/edgar-hambaryan-755575305/",
+    iconUrl: "https://www.linkedin.com/in/edgar-hambaryan/",
   },
   {
     image: AvoPhoto,
     name: "Avetis",
     surname: "Fishenkjian",
     position: "CTO",
-    iconUrl: "https://www.linkedin.com/in/avo-fishenkjian-a47014208/",
+    iconUrl: "https://www.linkedin.com/in/avo-fishenkjian/",
     icon: <LinkedinIcon className="fill-[#007EBB] desktop:w-4 w-3" />,
   },
 ];
