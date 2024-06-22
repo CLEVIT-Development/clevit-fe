@@ -106,13 +106,13 @@ const ProjectSection = () => {
                               >
                                 App Store
                               </NavLink>
-                              <NavLink
-                                to={googlePlayLink}
-                                target="_blank"
-                                className="font-normal desktop:text-md xs:text-base text-purple-400 ml-2"
-                              >
-                                Play Store
-                              </NavLink>
+                              {/*<NavLink*/}
+                              {/*  to={googlePlayLink}*/}
+                              {/*  target="_blank"*/}
+                              {/*  className="font-normal desktop:text-md xs:text-base text-purple-400 ml-2"*/}
+                              {/*>*/}
+                              {/*  Play Store*/}
+                              {/*</NavLink>*/}
                             </p>
                           )}
                           <p className="text-white desktop:text-md xs:text-sm !font-semibold">
