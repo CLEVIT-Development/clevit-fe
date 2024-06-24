@@ -73,7 +73,7 @@ export const projectsConstants = [
     description:
       "As a full-service IT Managed Service Provider, Renegade Technology breaks conventions, delivering cutting-edge tech solutions to give your business a competitive edge. We developed their website emphasizing the importance of educating clients about evolving digital landscapes.",
     type: "Web Development",
-    duration: "10 months",
+    duration: "10 Months",
     country: "USA",
     link: "https://renegadetechnology.com/",
     icons: [
