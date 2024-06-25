@@ -27,7 +27,7 @@ const Header = forwardRef(
 
     const navigate = useNavigate();
     const { pathname, hash } = useLocation();
-    const { isTablet } = useResponsive();
+    const { isTablet, isDesktop } = useResponsive();
     const [isOpen, setIsOpen] = useState(false);
     const [isTransitionEndClose, setIsTransitionEndClose] = useState(false);
     const navListRef = useRef<HTMLDivElement>(null);
@@ -48,14 +48,14 @@ const Header = forwardRef(
               to={headerMenuLink.link}
               className={twMerge(
                 classNames(
-                  "relative text-white desktop:text-md text-lg font-medium " +
-                    "desktop:after:transition-all desktop:after:duration-300 desktop:after:absolute desktop:after:w-0 desktop:after:h-0.5 desktop:after:left-0 desktop:after:right-0 desktop:after:-bottom-2 desktop:after:content-['.'] desktop:after:text-transparent " +
-                    "desktop:hover:after:w-full desktop:hover:after:bg-purple-100",
+                  "relative text-white lg:text-md text-lg font-medium " +
+                    "lg:after:transition-all lg:after:duration-300 lg:after:absolute lg:after:w-0 lg:after:h-0.5 lg:after:left-0 lg:after:right-0 lg:after:-bottom-2 lg:after:content-['.'] lg:after:text-transparent " +
+                    "lg:hover:after:w-full lg:hover:after:bg-purple-100",
                   {
                     ["text-purple-1300"]: isWhiteBackground,
-                    ["text-purple-300 desktop:after:w-full desktop:after:bg-purple-100"]:
+                    ["text-purple-300 lg:after:w-full lg:after:bg-purple-100"]:
                       isActive && isWhiteBackground,
-                    ["desktop:text-gray-100 desktop:opacity-70 desktop:after:w-full desktop:after:bg-purple-100"]:
+                    ["lg:text-gray-100 lg:opacity-70 lg:after:w-full lg:after:bg-purple-100"]:
                       isActive && !isWhiteBackground,
                   }
                 )
@@ -72,12 +72,12 @@ const Header = forwardRef(
       <header
         className={twMerge(
           classNames(
-            "transition-all duration-300 w-full fixed top-0 z-[30] desktop:px-10 desktop:py-6 px-5 py-4",
+            "transition-all duration-300 w-full fixed top-0 z-[30] lg:px-10 lg:py-6 px-5 py-4",
             {
               ["bg-white"]: isWhiteBackground,
               ["bg-headingGradient"]:
                 headerVariant === HeaderVariant.Primary &&
-                isTablet &&
+                isDesktop &&
                 (isOpen || isTransitionEndClose),
               ["shadow-base-200 backdrop-blur-[5px]"]:
                 headerVariant !== HeaderVariant.Tertiary && scrollY > 20,
@@ -101,7 +101,7 @@ const Header = forwardRef(
             isReached={isWhiteBackground}
             onMenuClick={() => setIsOpen((prev) => !prev)}
           />
-          <div ref={ref} className="space-x-[28px] desktop:flex hidden">
+          <div ref={ref} className="space-x-[28px] lg:flex hidden">
             <nav className="flex items-center space-x-5">{renderNavList}</nav>
             <Button prefix={<Messages />} onClick={() => navigate(RoutePaths.Calendly)}>
               Let's Talk
@@ -110,7 +110,7 @@ const Header = forwardRef(
         </div>
         <div
           className={classNames(
-            "transition-all duration-700 overflow-hidden desktop:hidden flex flex-col justify-between items-center h-0",
+            "transition-all duration-700 overflow-hidden lg:hidden flex flex-col justify-between items-center h-0",
             {
               ["h-[67vh]"]: isOpen,
             }
