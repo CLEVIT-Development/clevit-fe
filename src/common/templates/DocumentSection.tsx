@@ -5,9 +5,9 @@ import { SectionVariant } from "@/types/variant.types.ts";
 
 interface Props {
   title?: string;
-  listItems?: string[];
+  listItems?: ReactNode[];
   description?: ReactNode;
-  description2?: string;
+  description2?: ReactNode;
   headline?: string;
 }
 
@@ -21,22 +21,14 @@ const DocumentSection = ({ headline, title, listItems, description, description2
             {listItems.map((listItem, index) => (
               <li key={index} className="flex space-x-2 items-start">
                 <span className="text-gray-200">-</span>
-                <p
-                  className="text-base font-normal text-gray-200"
-                  dangerouslySetInnerHTML={{ __html: listItem }}
-                />
+                <p className="text-base font-normal text-gray-200">{listItem}</p>
               </li>
             ))}
           </ul>
         )}
         {description && <p className="text-md font-normal text-gray-200">{description}</p>}
-        {description2 && <br />}
-        {description2 && (
-          <p
-            className="text-md font-normal text-gray-200"
-            dangerouslySetInnerHTML={{ __html: description2 }}
-          />
-        )}
+        {description && !description2 && <br />}
+        {description2 && <p className="text-md font-normal text-gray-200">{description2}</p>}
       </div>
     </Section>
   );

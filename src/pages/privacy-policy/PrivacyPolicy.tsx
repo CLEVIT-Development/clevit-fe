@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+
+import { RoutePaths } from "@/app/routing/routing.constants.ts";
 import { appConfig } from "@/assets/constants/config.constants.ts";
 import Layout from "@/common/layout/Layout.tsx";
 import DocumentSection from "@/common/templates/DocumentSection.tsx";
@@ -19,7 +22,17 @@ const PrivacyPolicy = () => {
             headline="Information We Collect"
             title="We collect two types of information"
             listItems={[
-              "Personal Information: This includes information you provide voluntarily, such as your name, email address, phone number, and country when you make inquiries, request a quote, or contact us.",
+              <>
+                Personal Information: This includes information you provide voluntarily, such as
+                your name, email address, phone number, and country when you make inquiries,{" "}
+                <Link to={RoutePaths.Calendly} className="text-purple-300">
+                  request a quote
+                </Link>
+                , or{" "}
+                <Link to={RoutePaths.ContactUs} className="text-purple-300">
+                  contact us.
+                </Link>
+              </>,
               "Non-Personal Information: This includes information collected automatically, such as your IP address, browser type, device information, and browsing history, using cookies and other tracking technologies. This helps us improve our website and deliver a better user experience.",
             ]}
           />
@@ -49,7 +62,13 @@ const PrivacyPolicy = () => {
             headline="Your Rights"
             title="You have the right to"
             listItems={[
-              `Access, correct, or delete the personal information we hold. You can do this by contacting us at <a href='mailto:${appConfig.contactMail}}>{appConfig.contactMail}</a>.`,
+              <>
+                Access, correct, or delete the personal information we hold. You can do this by
+                contacting us at{" "}
+                <a className="text-purple-300" href={`mailto:${appConfig.contactMail}`}>
+                  {appConfig.contactMail}.
+                </a>
+              </>,
               "Opt-out of receiving marketing communications from us.",
             ]}
           />
@@ -81,7 +100,16 @@ const PrivacyPolicy = () => {
           />
           <DocumentSection
             headline="Contact Information"
-            description2={`If you have any questions or concerns about this Privacy Policy, our privacy practices, or the collection and use of your personal information, please contact us at <a href='mailto:${appConfig.contactMail}'>${appConfig.contactMail}</a>`}
+            description2={
+              <>
+                If you have any questions or concerns about this Privacy Policy, our privacy
+                practices, or the collection and use of your personal information, please contact us
+                at{" "}
+                <a className="text-purple-300" href="mailto:${appConfig.contactMail}">
+                  {appConfig.contactMail}.
+                </a>
+              </>
+            }
           />
         </div>
       </Layout>
