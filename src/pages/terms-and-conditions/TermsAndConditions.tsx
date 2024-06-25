@@ -11,6 +11,7 @@ import { formatPhoneNumber } from "@/utils/phone.utils";
 
 const TermsAndConditions = () => {
   const displayPhoneNumber = formatPhoneNumber(appConfig.contactPhone, "Armenia");
+
   return (
     <>
       <PageSEO
@@ -29,7 +30,7 @@ const TermsAndConditions = () => {
               <>
                 Welcome to Clevit, a leading provider of web and mobile app development solutions.
                 Our terms and conditions govern your use of our{" "}
-                <Link to={appConfig.websiteDomain} className="text-blue-100">
+                <Link to={appConfig.websiteDomain} className="text-purple-300">
                   {urlShortener(appConfig.websiteDomain)}
                 </Link>
                 , and any services or products offered therein. By accessing or using our website,
@@ -42,9 +43,27 @@ const TermsAndConditions = () => {
             headline="Purchases"
             title="We offer a range of digital and technical solutions designed to enhance your business operations and user experience. To inquire about or purchase our services or products, you may reach out to us via"
             listItems={[
-              "Contact Us and Request a Quote forms",
-              `Email: <a href="mailto:${appConfig.contactMail}">${appConfig.contactMail}</a> `,
-              `Phone call inquiry: <a href="tel:${appConfig.contactPhone}">${displayPhoneNumber}</a> `,
+              <>
+                <Link to={RoutePaths.ContactUs} className="text-purple-300">
+                  Contact Us
+                </Link>{" "}
+                and{" "}
+                <Link to={RoutePaths.Calendly} className="text-purple-300">
+                  Request a Quote forms
+                </Link>
+              </>,
+              <>
+                Email:{" "}
+                <a className="text-purple-300" href={`mailto:${appConfig.contactMail}`}>
+                  {appConfig.contactMail}
+                </a>
+              </>,
+              <>
+                Phone call inquiry:{" "}
+                <a className="text-purple-300" href={`tel:${appConfig.contactPhone}`}>
+                  {displayPhoneNumber}
+                </a>
+              </>,
             ]}
           />
           <DocumentSection
@@ -81,7 +100,7 @@ const TermsAndConditions = () => {
                 collect, use, and protect your personal information. By using our website, you
                 consent to the terms of our privacy policy. For more information, please refer to
                 our{" "}
-                <Link to={RoutePaths.PrivacyPolicy} className="text-blue-100">
+                <Link to={RoutePaths.PrivacyPolicy} className="text-purple-300">
                   Privacy Policy page
                 </Link>
               </>
@@ -101,7 +120,15 @@ const TermsAndConditions = () => {
           />
           <DocumentSection
             headline="Contact Information"
-            description2={`If you have any questions or concerns about these terms and conditions, please contact us at <a href='mailto:${appConfig.contactMail}'>${appConfig.contactMail}.</a>`}
+            description2={
+              <>
+                If you have any questions or concerns about these terms and conditions, please
+                contact us at{" "}
+                <a className="text-purple-300" href="mailto:${appConfig.contactMail}">
+                  {appConfig.contactMail}.
+                </a>
+              </>
+            }
           />
         </div>
       </Layout>
