@@ -48,7 +48,7 @@ const PortfolioPage = () => {
           >
             <div className="flex flex-col desktop:flex-row gap-9">
               {/* Mobile layout */}
-              <div className="flex flex-col desktop:hidden">
+              <div className="flex flex-col lg:hidden">
                 <div>
                   <h3 className="text-purple-100  font-bold text-[22px] mb-2">{project.title}</h3>
                   <p className="text-base desktop:text-[16px] font-semibold text-gray-200 mb-6">
@@ -56,7 +56,12 @@ const PortfolioPage = () => {
                   </p>
                 </div>
                 <div>
-                  <img alt={`${project.title} picture`} src={project.mobileImageUrl} height={395} />
+                  <img
+                    alt={`${project.title} picture`}
+                    src={project.mobileImageUrl}
+                    height={395}
+                    width={"100%"}
+                  />
                 </div>
                 <div>
                   <p className="mt-6 text-sm font-normal">{project.details}</p>
@@ -121,7 +126,7 @@ const PortfolioPage = () => {
               </div>
 
               {/* Desktop layout */}
-              <div className="hidden desktop:flex desktop:flex-row gap-9 ">
+              <div className="hidden lg:flex lg:flex-row gap-9 ">
                 <div
                   className={`${index % 2 === 0 ? "order-1" : "order-2"} justify-between flex flex-col`}
                 >

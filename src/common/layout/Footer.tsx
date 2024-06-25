@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     <footer className="flex flex-col bg-black lg:pt-12 lg:pb-6 xs:pt-5 xs:pb-4 lg:px-20 xs:px-5 z-[20]">
       <div className="xs:grid xs:grid-cols-2 xs:gap-8 lg:grid-cols-4">
-        <div className="flex flex-col space-y-4 sm:col-auto xs:col-span-3">
+        <div className="flex flex-col space-y-4 sm:col-auto xs:col-span-2">
           {/*<h6 className="font-bold lg:text-md-l xs:text-md text-white opacity-60">About Us</h6>*/}
           <div>
             <Logo />
@@ -54,7 +54,7 @@ const Footer = () => {
             <p className="text-gray-100 font-medium lg:text-md xs:text-base">Contact Us</p>
           </Link>
         </div>
-        <div className="flex flex-col space-y-4 mr-auto lg:ml-auto sm:mx-auto">
+        <div className="flex flex-col space-y-4 mr-auto lg:ml-auto">
           <h6 className="font-bold lg:text-md-l xs:text-md text-white opacity-60">Services</h6>
           {servicesConstants.map(({ id, title }) => {
             return (
@@ -66,7 +66,7 @@ const Footer = () => {
             );
           })}
         </div>
-        <div className="flex flex-col space-y-4 sm:col-auto lg:mx-auto col-span-2">
+        <div className="flex flex-col space-y-4 sm:mx-auto sm:pl-10 lg:ml-auto">
           <h6 className="font-bold lg:text-md-l text-md text-white opacity-60">Contact Us</h6>
           {contactsConstants.map(({ id, text, link, Element }) => (
             <div key={id} className="flex items-center space-x-2">
@@ -80,7 +80,7 @@ const Footer = () => {
             </div>
           ))}
         </div>
-        // Footer recent posts
+        {/*// Footer recent posts*/}
         {/*<div className="flex flex-col space-y-4 md:col-auto lg:ml-auto md:ml-0 col-span-3">*/}
         {/*  <h6 className="font-bold lg:text-md-l xs:text-md text-white opacity-60">Recent Posts</h6>*/}
         {/*  {blogsConstants.map((blog) => (*/}

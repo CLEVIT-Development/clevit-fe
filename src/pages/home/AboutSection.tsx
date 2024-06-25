@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useMemo } from "react";
+import AliceCarousel from "react-alice-carousel";
+
+import classNames from "classnames";
 
 import AvoPhoto from "@/assets/images/team/Avo.png";
 import EdoPhoto from "@/assets/images/team/Edo.png";
 import GorPhoto from "@/assets/images/team/Gor.png";
 import LinkedinIcon from "@/assets/vectors/Linkedin.svg?react";
+import useResponsive from "@/common/hooks/useResponsive.ts";
 import Section from "@/common/templates/Section";
+import styles from "@/pages/home/Feedback/Feedback.module.css";
 
 import PersonCard from "./PersonCard";
 
@@ -44,14 +49,42 @@ const persons: Person[] = [
   },
 ];
 
-const AboutSection: React.FC = () => (
-  <Section title="Who We Are">
-    <div className=" flex desktop:max-w-full overflow-scroll space-x-4 max-w-[350px] ">
-      {persons.map((person, index) => (
-        <PersonCard key={index} {...person} />
-      ))}
-    </div>
-  </Section>
-);
+const AboutSection: React.FC = () => {
+  const { isTablet } = useResponsive();
+
+  const aboutData = useMemo(
+    () =>
+      persons.map((person, index) => {
+        return <PersonCard key={index} {...person} />;
+      }),
+    []
+  );
+
+  return (
+    <Section title="Who We Are">
+      <div className="flex lg:max-w-full space-x-4 desktop:max-w-[800px] max-w-[350px]">
+        <div className="w-full">
+          {aboutData.length > 3 || isTablet ? (
+            <AliceCarousel
+              mouseTracking
+              responsive={{ 0: { items: 1 }, 1256: { items: 3 } }}
+              disableButtonsControls
+              items={aboutData}
+            />
+          ) : (
+            <div
+              className={classNames(
+                "w-full flex space-x-4 justify-center",
+                styles["feedback-non-carousel-wrapper"]
+              )}
+            >
+              {aboutData}
+            </div>
+          )}
+        </div>
+      </div>
+    </Section>
+  );
+};
 
 export default AboutSection;

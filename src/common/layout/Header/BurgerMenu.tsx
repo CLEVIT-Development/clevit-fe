@@ -11,7 +11,7 @@ const BurgerMenu = ({ isReached, onMenuClick, isOpen }: Props) => {
     <div
       role="button"
       onClick={onMenuClick}
-      className={classNames("flex flex-col space-y-[5px] cursor-pointer xs:flex desktop:hidden")}
+      className={classNames("flex flex-col space-y-[5px] cursor-pointer xs:flex lg:hidden")}
     >
       <span
         className={classNames("transition-all duration-700 w-8 h-1 bg-gray-400 rounded-lg", {
