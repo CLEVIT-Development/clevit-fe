@@ -198,7 +198,7 @@ const AutoComplete = forwardRef(
             // if the list is empty save the area for at least one item to show `no match found` message
             height: isOpen ? `${(list.length || 1) * 31 + 10}px` : "0",
             opacity: isOpen ? 100 : 0,
-            maxHeight: isOpen ? 400 : 0,
+            maxHeight: isOpen ? 250 : 0,
             overflow: isOpen ? "auto" : "hidden",
           }}
         >
