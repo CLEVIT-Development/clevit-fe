@@ -21,7 +21,9 @@ export const formatPhoneNumber = (phoneNumber: string, country: string): string 
   let index = 0;
   const splitPhoneNumber = format.map((groupSize) => {
     const part = phoneNumberWithoutPrefix.slice(index, index + groupSize);
+
     index += groupSize;
+
     return part;
   });
 

@@ -1,4 +1,4 @@
-import { FunctionComponent, SVGProps } from "react";
+import type { FunctionComponent, SVGProps } from "react";
 
 import BepDesktop from "@/assets/images/portfolio/BepDesktop.png";
 import BepMobileImage from "@/assets/images/portfolio/BepMobile.png";
@@ -241,7 +241,7 @@ export const portfolioConstants: Project[] = [
       { label: "Industry", value: "Transportation" },
       { label: "Type", value: "Web Development" },
       { label: "Duration", value: "12 Months" },
-      { label: "Website", value: " taglogistics.am", isLink: true },
+      { label: "Website", value: "taglogistics.am", isLink: true },
       { label: "Country", value: "Armenia" },
       {
         label: "Technologies",
@@ -269,7 +269,7 @@ export const portfolioConstants: Project[] = [
       { label: "Industry", value: "AI" },
       { label: "Type", value: "Web Development" },
       { label: "Duration", value: "1 Year 6 Months" },
-      { label: "Website", value: " sqor.ai", isLink: true },
+      { label: "Website", value: "sqor.ai", isLink: true },
       { label: "Country", value: "United States" },
       {
         label: "Technologies",
@@ -414,7 +414,7 @@ export const portfolioConstants: Project[] = [
       { label: "Industry", value: "EHealthcare" },
       { label: "Type", value: "Web Development" },
       { label: "Duration", value: "2 Years 3 Months" },
-      { label: "Website", value: " pollinfertility.com", isLink: true },
+      { label: "Website", value: "pollinfertility.com", isLink: true },
       { label: "Country", value: "Canada" },
       {
         label: "Technologies",
@@ -447,7 +447,7 @@ export const portfolioConstants: Project[] = [
       { label: "Industry", value: "Finance, AI" },
       { label: "Type", value: "Web Development, AI Development" },
       { label: "Duration", value: "2 Years 4 Months" },
-      { label: "Website", value: " Internal Use Only", isLink: false },
+      { label: "Website", value: "Internal Use Only", isLink: false },
       { label: "Country", value: "Canada" },
       {
         label: "Technologies",
