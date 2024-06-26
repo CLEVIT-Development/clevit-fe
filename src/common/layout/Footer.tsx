@@ -47,9 +47,9 @@ const Footer = () => {
           <Link to={RoutePaths.Technologies}>
             <p className="text-gray-100 font-medium lg:text-md xs:text-base">Technologies</p>
           </Link>
-          <Link to={RoutePaths.Blog}>
-            <p className="text-gray-100 font-medium lg:text-md xs:text-base">Blog</p>
-          </Link>
+          {/*<Link to={RoutePaths.Blog}>*/}
+          {/*  <p className="text-gray-100 font-medium lg:text-md xs:text-base">Blog</p>*/}
+          {/*</Link>*/}
           <Link to={RoutePaths.ContactUs}>
             <p className="text-gray-100 font-medium lg:text-md xs:text-base">Contact Us</p>
           </Link>
