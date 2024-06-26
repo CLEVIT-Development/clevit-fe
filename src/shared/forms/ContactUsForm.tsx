@@ -50,7 +50,7 @@ const ContactUs = () => {
   return (
     <FormProvider {...methods}>
       <form
-        className="h-full w-full flex flex-col desktop:items-start items-center space-y-6 bg-white shadow-base-300 rounded-lg desktop:p-6 p-4"
+        className="h-full desktop:w-4/5 w-full flex flex-col desktop:items-start items-center space-y-6 bg-white shadow-base-300 rounded-lg desktop:p-6 p-4"
         onSubmit={handleSubmit(onFormSubmit)}
       >
         <div className="w-full grid desktop:grid-cols-2 grid-cols-1 desktop:gap-5 gap-4">

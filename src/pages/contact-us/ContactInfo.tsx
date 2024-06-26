@@ -23,7 +23,7 @@ const ContactInfo = () => {
   const displayPhoneNumber2 = formatPhoneNumber(appConfig.contactPhoneSecondary, "USA");
 
   return (
-    <div className="lg:w-auto w-full flex flex-col desktop:items-start items-center desktop:space-y-8 space-y-6">
+    <div className="lg:w-auto desktop:w-1/5 w-full flex flex-col desktop:items-start items-center desktop:space-y-8 space-y-6">
       <p className="desktop:text-2xl text-lg font-semibold text-white">Contact Details</p>
       <div className="lg:w-auto w-full flex flex-col desktop:space-y-[30px] space-y-[20px]">
         <ContactWrapper>
