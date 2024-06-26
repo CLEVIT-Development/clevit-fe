@@ -107,7 +107,7 @@ const PortfolioPage = () => {
                                 id={String(index)}
                                 ref={tooltipRef}
                                 role="tooltip"
-                                className="absolute space-y-3  -translate-y-[20%] translate-x-[50%] z-10 inline-block px-3 py-3 text-sm font-medium text-gray-200 bg-white border border-gray-300 rounded-lg shadow-lg whitespace-nowrap"
+                                className="absolute space-y-3 -translate-y-[20%] translate-x-[50%] z-10 inline-block px-3 py-3 text-sm font-medium text-gray-200 bg-white border border-gray-300 rounded-lg shadow-lg whitespace-nowrap"
                               >
                                 {item.value.slice(5, item.value.length).map((elem, i) => (
                                   <div key={i} className="flex items-center justify-left  ">

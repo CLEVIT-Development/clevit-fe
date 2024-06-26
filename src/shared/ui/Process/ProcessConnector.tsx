@@ -18,8 +18,8 @@ const ProcessConnector = ({ order }: Props) => {
   const connectorStyle = {
     "bottom-left": "translate-y-[100%] bottom-0 left-[30%] md:h-[348px] xs:h-[154px]",
     "bottom-right": "translate-y-[100%] bottom-0 right-[30%] md:h-[348px] xs:h-[154px]",
-    left: "left-0 -translate-x-[100%] desktop:w-[100px] xs:w-[calc(100vw-365px)]",
-    right: "right-0 translate-x-[100%] w-[calc(100vw-365px)]",
+    left: "left-0 -translate-x-[100%] desktop:w-[100px] xs:w-[calc(100vw-300px)] md:w-[calc(100vw-365px)]",
+    right: "right-0 translate-x-[100%] xs:w-[calc(100vw-300px)] md:w-[calc(100vw-365px)]",
   };
 
   return (
