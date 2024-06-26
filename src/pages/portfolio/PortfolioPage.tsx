@@ -18,6 +18,7 @@ const PortfolioPage = () => {
 
   const toggleShowMore = (index: number) => {
     const newShowMoreStates = [...showMoreStates];
+
     newShowMoreStates[index] = !newShowMoreStates[index];
     setShowMoreStates(newShowMoreStates);
   };

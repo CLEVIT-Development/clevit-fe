@@ -17,7 +17,7 @@ const PersonCard: React.FC<PersonCardProps> = ({
   icon,
   iconUrl,
 }) => (
-  <div className="min-w-[300px] text-center borderp-4 rounded-lg">
+  <div className="flex flex-col items-center min-w-[300px] text-center borderp-4 rounded-lg">
     {image ? (
       <img
         src={image}

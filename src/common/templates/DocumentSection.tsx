@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 
 import Section from "@/common/templates/Section.tsx";
 import { SectionVariant } from "@/types/variant.types.ts";
