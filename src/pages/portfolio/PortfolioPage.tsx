@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 
 import { portfolioConstants } from "@/assets/constants/portfolio.constants";
+import useResponsive from "@/common/hooks/useResponsive.ts";
 import PortfolioHeading from "@/common/layout/Heading/PortfolioHeading";
 import Layout from "@/common/layout/Layout.tsx";
 import Section from "@/common/templates/Section";
@@ -15,7 +16,7 @@ const PortfolioPage = () => {
   const [showMoreStates, setShowMoreStates] = useState(portfolioConstants.map(() => false));
   const [hoveredIcon, setHoveredIcon] = useState<string | null>(null);
   const tooltipRef = useRef<HTMLDivElement | null>(null);
-
+  const { isMobile } = useResponsive();
   const toggleShowMore = (index: number) => {
     const newShowMoreStates = [...showMoreStates];
 
@@ -84,15 +85,17 @@ const PortfolioPage = () => {
                           <span className="text-gray-200 font-semibold">{item.value}</span>
                         ) : (
                           <div className="flex flex-wrap relative items-end ">
-                            {item.value.slice(0, 5).map((elem, i) => (
-                              <span
-                                key={i}
-                                className="rounded-full bg-gray-300 h-6 w-6 flex items-center justify-center mr-2 font-semibold"
-                              >
-                                <elem.Icon height={18} />
-                              </span>
-                            ))}
-                            {item.value.length > 5 && (
+                            {item.value
+                              .slice(0, isMobile ? 5 : item.value.length - 1)
+                              .map((elem, i) => (
+                                <span
+                                  key={i}
+                                  className="rounded-full bg-gray-300 h-6 w-6 flex items-center justify-center mr-2 font-semibold"
+                                >
+                                  <elem.Icon height={18} />
+                                </span>
+                              ))}
+                            {item.value.length > 5 && isMobile && (
                               <span
                                 onClick={() => toggleShowMore(index)}
                                 className="text-[18px] desktop:font-medium text-blue-200 cursor-pointer text-sm"
