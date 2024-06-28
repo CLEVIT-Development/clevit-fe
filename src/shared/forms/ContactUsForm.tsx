@@ -5,6 +5,7 @@ import { servicesConstants } from "@/assets/constants/services.constants.ts";
 import countriesConstants from "@/assets/data/countries.json";
 import { contactUsSchema } from "@/common/schemas/contactUsSchema.tsx";
 import showNotification, { ToastVersions } from "@/common/services/toast/showNotifications.tsx";
+import axiosInstance from "@/services/axios.service";
 import AutoComplete from "@/shared/ui/forms/AutoComplete.tsx";
 import { filesSizeValidation } from "@/utils/validation.utils";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -38,13 +39,38 @@ const ContactUs = () => {
     formState: { errors },
   } = methods;
 
-  const onFormSubmit = (data: IContactUsFormPayload) => {
-    showNotification({
-      type: ToastVersions.success,
-      title: "Thank you!",
-      description: "Your message has been successfully submitted.",
-    });
-    console.log(data);
+  const onFormSubmit = async (data: IContactUsFormPayload) => {
+    try {
+      const formData = new FormData();
+
+      formData.append("fullname", data.fullname);
+      formData.append("email", data.email);
+      formData.append("country", data.country);
+      formData.append("phone", data.phone || "");
+      formData.append("service", data.service);
+      formData.append("description", data.description || "");
+
+      if (data.files) {
+        data.files.forEach((file) => {
+          formData.append("files", file);
+        });
+      }
+
+      await axiosInstance.post("/api/contact", formData);
+
+      showNotification({
+        type: ToastVersions.success,
+        title: "Thank you!",
+        description: "Your message has been successfully submitted.",
+      });
+    } catch (error) {
+      showNotification({
+        type: ToastVersions.error,
+        title: "Submission Failed",
+        description: "There was an error submitting your message. Please try again later.",
+      });
+      console.error("Error submitting form:", error);
+    }
   };
 
   return (
