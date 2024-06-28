@@ -1,6 +1,8 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 
+import TwitterCardImage from "@/assets/images/social/twitter_card.jpg";
+
 import { APP_TITLE, getAppTitle } from "./meta";
 
 // Importing constants or helper functions for meta tags
@@ -32,6 +34,11 @@ const PageSEO: React.FC<PageSEOProps> = ({
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="https://clevit.io/" />
       <meta name="twitter:title" content="Web and Mobile App Development Company | Clevit" />
+      <meta name="twitter:image" content={TwitterCardImage} />
+      <meta
+        name="twitter:image:alt"
+        content="A description of the image for visually impaired users"
+      />
       <meta
         name="twitter:description"
         content="Clevit is a web and mobile app development company building reliable solutions for businesses and startups.Find out how we can help with your project. Book a FREE consultation!"
