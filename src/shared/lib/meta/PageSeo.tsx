@@ -30,7 +30,7 @@ const PageSEO: React.FC<PageSEOProps> = ({
 
       {/* Twitter Card tags for sharing on Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@yourtwitterhandle" />
+      <meta name="twitter:site" content="https://clevit.io/" />
       <meta name="twitter:title" content="Web and Mobile App Development Company | Clevit" />
       <meta
         name="twitter:description"
@@ -38,13 +38,14 @@ const PageSEO: React.FC<PageSEOProps> = ({
       />
 
       {/* Open Graph tags for sharing on other platforms */}
+      <meta property="og:locale" content="en" />
       <meta property="og:title" content="Web and Mobile App Development Company | Clevit" />
       <meta
         property="og:description"
         content="Clevit is a web and mobile app development company building reliable solutions for businesses and startups.Find out how we can help with your project. Book a FREE consultation!"
       />
+      <meta property="og:url" content="https://clevit.io/" />
       <meta property="og:type" content="article" />
-      <meta property="og:url" content={`https://clevit.io/page`} />
 
       {/* Robots meta tag for search engine crawler instructions */}
       <meta
