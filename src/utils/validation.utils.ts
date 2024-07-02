@@ -1,10 +1,10 @@
 // Example: limit file size
 export const filesSizeValidation = (
-  files?: File[],
+  file?: File,
   size = 100 * (1024 * 100),
   message = "File size must be less than 100MB"
 ) => {
-  if (files && files[0]?.size > size) {
+  if (file && file?.size > size) {
     return message;
   }
 
