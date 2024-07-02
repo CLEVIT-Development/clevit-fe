@@ -23,7 +23,7 @@ interface IContactUsFormPayload extends FieldValues {
   phone?: string;
   service: string;
   description?: string;
-  files?: File[];
+  file?: File;
 }
 
 const ContactUs = () => {
@@ -42,21 +42,23 @@ const ContactUs = () => {
   const onFormSubmit = async (data: IContactUsFormPayload) => {
     try {
       const formData = new FormData();
+      const body = {
+        interestedServices: data.service,
+        fullName: data.fullname,
+        email: data.email,
+        message: data.description || "",
+        country: data.country,
+        phone: data.phone || "",
+      };
 
-      formData.append("fullname", data.fullname);
-      formData.append("email", data.email);
-      formData.append("country", data.country);
-      formData.append("phone", data.phone || "");
-      formData.append("service", data.service);
-      formData.append("description", data.description || "");
+      formData.append("data", JSON.stringify(body));
 
-      if (data.files) {
-        data.files.forEach((file) => {
-          formData.append("files", file);
-        });
+      if (data.file) {
+        formData.append("file", data.file);
       }
 
-      await axiosInstance.post("/api/contact", formData);
+      console.log(data.files);
+      await axiosInstance.post("/api/contact-us", formData);
 
       showNotification({
         type: ToastVersions.success,
@@ -132,8 +134,8 @@ const ContactUs = () => {
             {...register("description")}
           />
           <FileInput
-            error={errors.files?.message}
-            {...register("files", {
+            error={errors.file?.message}
+            {...register("file", {
               validate: {
                 fileSize: (value) => filesSizeValidation(value),
               },
