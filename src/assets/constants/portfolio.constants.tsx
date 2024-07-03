@@ -347,7 +347,7 @@ export const portfolioConstants: Project[] = [
     description:
       "Unlock your career potential. Connecting with top employers & educational partners!",
     details:
-      "Introducing BEA, an online platform that bridges the gap between job seekers and new employment opportunities. We built the whole platform to facilitate seamless connections for employers to fill vacancies and provide educational institutions with additional teams to foster growth and development. ",
+      "Introducing BEP, an online platform that bridges the gap between job seekers and new employment opportunities. We built the whole platform to facilitate seamless connections for employers to fill vacancies and provide educational institutions with additional teams to foster growth and development. ",
     info: [
       { label: "Industry", value: "Educational, Work" },
       { label: "Type", value: "Web Development" },
