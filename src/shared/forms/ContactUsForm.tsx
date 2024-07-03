@@ -5,6 +5,7 @@ import { servicesConstants } from "@/assets/constants/services.constants.ts";
 import countriesConstants from "@/assets/data/countries.json";
 import { contactUsSchema } from "@/common/schemas/contactUsSchema.tsx";
 import showNotification, { ToastVersions } from "@/common/services/toast/showNotifications.tsx";
+import axiosInstance from "@/services/axios.service";
 import AutoComplete from "@/shared/ui/forms/AutoComplete.tsx";
 import { filesSizeValidation } from "@/utils/validation.utils";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -22,7 +23,7 @@ interface IContactUsFormPayload extends FieldValues {
   phone?: string;
   service: string;
   description?: string;
-  files?: File[];
+  file?: File;
 }
 
 const ContactUs = () => {
@@ -38,19 +39,46 @@ const ContactUs = () => {
     formState: { errors },
   } = methods;
 
-  const onFormSubmit = (data: IContactUsFormPayload) => {
-    showNotification({
-      type: ToastVersions.success,
-      title: "Thank you!",
-      description: "Your message has been successfully submitted.",
-    });
-    console.log(data);
+  const onFormSubmit = async (data: IContactUsFormPayload) => {
+    try {
+      const formData = new FormData();
+      const body = {
+        interestedServices: data.service,
+        fullName: data.fullname,
+        email: data.email,
+        message: data.description || "",
+        country: data.country,
+        phone: data.phone || "",
+      };
+
+      formData.append("data", JSON.stringify(body));
+
+      if (data.file) {
+        formData.append("file", data.file);
+      }
+
+      console.log(data.files);
+      await axiosInstance.post("/api/contact-us", formData);
+
+      showNotification({
+        type: ToastVersions.success,
+        title: "Thank you!",
+        description: "Your message has been successfully submitted.",
+      });
+    } catch (error) {
+      showNotification({
+        type: ToastVersions.error,
+        title: "Submission Failed",
+        description: "There was an error submitting your message. Please try again later.",
+      });
+      console.error("Error submitting form:", error);
+    }
   };
 
   return (
     <FormProvider {...methods}>
       <form
-        className="h-full w-full max-w-[660px] flex flex-col desktop:items-start items-center space-y-6 bg-white shadow-base-300 rounded-lg desktop:p-6 p-4"
+        className="h-full desktop:w-4/5 w-full flex flex-col desktop:items-start items-center space-y-6 bg-white shadow-base-300 rounded-lg desktop:p-6 p-4"
         onSubmit={handleSubmit(onFormSubmit)}
       >
         <div className="w-full grid desktop:grid-cols-2 grid-cols-1 desktop:gap-5 gap-4">
@@ -106,8 +134,8 @@ const ContactUs = () => {
             {...register("description")}
           />
           <FileInput
-            error={errors.files?.message}
-            {...register("files", {
+            error={errors.file?.message}
+            {...register("file", {
               validate: {
                 fileSize: (value) => filesSizeValidation(value),
               },

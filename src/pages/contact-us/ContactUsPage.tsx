@@ -17,7 +17,7 @@ const ContactUsPage = () => {
       <Layout headerVariant={HeaderVariant.Tertiary}>
         <Section>
           <div className="flex flex-col space-y-6 desktop:max-w-[80%] ">
-            <h1 className="desktop:text-3xl text-lg font-semibold text-gray-200 text-center">
+            <h1 className="desktop:text-3xl text-lg md:mt-5 font-semibold text-gray-200 text-center">
               Your Idea, Our Expertise. Let's Collaborate!
             </h1>
             <p className="desktop:text-md text-base font-normal text-gray-200 desktop:text-center">
@@ -27,7 +27,7 @@ const ContactUsPage = () => {
               can't wait to partner with you!
             </p>
           </div>
-          <div className="w-full flex lg:flex-row flex-col items-center desktop:justify-between desktop:space-x-[60px] space-x-0 lg:space-y-0 space-y-[48px] bg-contactUsGradient rounded-lg-l desktop:px-12 desktop:pt-12 lg:pb-12 px-5 pt-6 pb-5">
+          <div className="w-full flex lg:flex-row flex-col items-center desktop:justify-between lg:space-x-[60px] space-x-0 lg:space-y-0 space-y-[48px] bg-contactUsGradient rounded-lg-l lg:px-12 lg:pt-12 desktop:px-32 lg:pb-12 px-5 pt-6 pb-5">
             <ContactInfo />
             <ContactUsForm />
           </div>

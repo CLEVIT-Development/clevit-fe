@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 
 import { portfolioConstants } from "@/assets/constants/portfolio.constants";
+import useResponsive from "@/common/hooks/useResponsive.ts";
 import PortfolioHeading from "@/common/layout/Heading/PortfolioHeading";
 import Layout from "@/common/layout/Layout.tsx";
 import Section from "@/common/templates/Section";
@@ -15,9 +16,10 @@ const PortfolioPage = () => {
   const [showMoreStates, setShowMoreStates] = useState(portfolioConstants.map(() => false));
   const [hoveredIcon, setHoveredIcon] = useState<string | null>(null);
   const tooltipRef = useRef<HTMLDivElement | null>(null);
-
+  const { isMobile } = useResponsive();
   const toggleShowMore = (index: number) => {
     const newShowMoreStates = [...showMoreStates];
+
     newShowMoreStates[index] = !newShowMoreStates[index];
     setShowMoreStates(newShowMoreStates);
   };
@@ -48,7 +50,7 @@ const PortfolioPage = () => {
           >
             <div className="flex flex-col desktop:flex-row gap-9">
               {/* Mobile layout */}
-              <div className="flex flex-col desktop:hidden">
+              <div className="flex flex-col lg:hidden">
                 <div>
                   <h3 className="text-purple-100  font-bold text-[22px] mb-2">{project.title}</h3>
                   <p className="text-base desktop:text-[16px] font-semibold text-gray-200 mb-6">
@@ -56,7 +58,12 @@ const PortfolioPage = () => {
                   </p>
                 </div>
                 <div>
-                  <img alt={`${project.title} picture`} src={project.mobileImageUrl} height={395} />
+                  <img
+                    alt={`${project.title} picture`}
+                    src={project.mobileImageUrl}
+                    height={395}
+                    width={"100%"}
+                  />
                 </div>
                 <div>
                   <p className="mt-6 text-sm font-normal">{project.details}</p>
@@ -78,15 +85,17 @@ const PortfolioPage = () => {
                           <span className="text-gray-200 font-semibold">{item.value}</span>
                         ) : (
                           <div className="flex flex-wrap relative items-end ">
-                            {item.value.slice(0, 5).map((elem, i) => (
-                              <span
-                                key={i}
-                                className="rounded-full bg-gray-300 h-6 w-6 flex items-center justify-center mr-2 font-semibold"
-                              >
-                                <elem.Icon height={18} />
-                              </span>
-                            ))}
-                            {item.value.length > 5 && (
+                            {item.value
+                              .slice(0, isMobile ? 5 : item.value.length - 1)
+                              .map((elem, i) => (
+                                <span
+                                  key={i}
+                                  className="rounded-full bg-gray-300 h-6 w-6 flex items-center justify-center mr-2 font-semibold"
+                                >
+                                  <elem.Icon height={18} />
+                                </span>
+                              ))}
+                            {item.value.length > 5 && isMobile && (
                               <span
                                 onClick={() => toggleShowMore(index)}
                                 className="text-[18px] desktop:font-medium text-blue-200 cursor-pointer text-sm"
@@ -101,7 +110,7 @@ const PortfolioPage = () => {
                                 id={String(index)}
                                 ref={tooltipRef}
                                 role="tooltip"
-                                className="absolute space-y-3  -translate-y-[20%] translate-x-[50%] z-10 inline-block px-3 py-3 text-sm font-medium text-gray-200 bg-white border border-gray-300 rounded-lg shadow-lg whitespace-nowrap"
+                                className="absolute space-y-3 -translate-y-[20%] translate-x-[50%] z-10 inline-block px-3 py-3 text-sm font-medium text-gray-200 bg-white border border-gray-300 rounded-lg shadow-lg whitespace-nowrap"
                               >
                                 {item.value.slice(5, item.value.length).map((elem, i) => (
                                   <div key={i} className="flex items-center justify-left  ">
@@ -121,7 +130,7 @@ const PortfolioPage = () => {
               </div>
 
               {/* Desktop layout */}
-              <div className="hidden desktop:flex desktop:flex-row gap-9 ">
+              <div className="hidden lg:flex lg:flex-row gap-9 ">
                 <div
                   className={`${index % 2 === 0 ? "order-1" : "order-2"} justify-between flex flex-col`}
                 >
