@@ -60,6 +60,8 @@ const PageSEO: React.FC<PageSEOProps> = ({
         content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
       />
 
+      <link rel="icon" href="/favicon.ico" />
+
       {/* Main description meta tag */}
       <meta name="description" content={metaDescription} />
 
