@@ -24,7 +24,6 @@ body {
 
 .svg-wrapper {
   > svg {
-    @apply w-full;
     @apply h-full;
   }
 }
