@@ -378,7 +378,7 @@ export const portfolioConstants: Project[] = [
     details:
       "FH Health, a leading healthcare technology firm, specializes in delivering innovative digital health solutions. The development includes secure monitoring of COVID-19 test results, automated recommendations for clinic revisits, a user-friendly admin panel, centralized test inventory management, integration of video conferencing for remote consultations, and secure messaging for direct patient-professional communication.",
     info: [
-      { label: "Industry", value: "EHealthcare" },
+      { label: "Industry", value: "Healthcare" },
       { label: "Type", value: "Web Development" },
       { label: "Duration", value: "3 Years 2 Months" },
       { label: "Website", value: "fhhealth.com ", isLink: true },
@@ -411,7 +411,7 @@ export const portfolioConstants: Project[] = [
     details:
       "Pollin Regenerative Health Clinic Management System simplifies patient appointment scheduling. We've developed an admin dashboard to facilitate clinic network actions and optimize connections between patients and doctors. Patients access consultations via a mobile app and interact with an AI-powered chatbot for effortless healthcare actions and information retrieval.",
     info: [
-      { label: "Industry", value: "EHealthcare" },
+      { label: "Industry", value: "Healthcare" },
       { label: "Type", value: "Web Development" },
       { label: "Duration", value: "2 Years 3 Months" },
       { label: "Website", value: "pollinfertility.com", isLink: true },
