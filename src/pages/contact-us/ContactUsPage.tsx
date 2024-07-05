@@ -27,7 +27,7 @@ const ContactUsPage = () => {
               can't wait to partner with you!
             </p>
           </div>
-          <div className="w-full flex lg:flex-row flex-col items-center desktop:justify-between lg:space-x-[60px] space-x-0 lg:space-y-0 space-y-[48px] bg-contactUsGradient rounded-lg-l lg:px-12 lg:pt-12 desktop:px-32 lg:pb-12 px-5 pt-6 pb-5">
+          <div className="w-full flex lg:flex-row flex-col items-center desktop:justify-between lg:space-x-[60px] space-x-0 lg:space-y-0 space-y-[48px] bg-contactUsGradient rounded-lg-l  lg:pt-12 lg:px-32 lg:pb-12 px-5 pt-6 pb-5">
             <ContactInfo />
             <ContactUsForm />
           </div>
