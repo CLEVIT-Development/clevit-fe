@@ -55,7 +55,7 @@ const ProjectSection = () => {
               }) => {
                 return (
                   <div
-                    className="flex flex-col h-full rounded-lg-l justify-center desktop:pl-[90px] desktop:pr-[50px] md:pl-[60px] md:pr-[40px] space-y-[10px] xs:pb-[80px] xs:pt-[36px] xs:pl-[20px] xs:pr-[10px] bg-no-repeat md:bg-projectCubeDesktopPosition bg-projectCubeMobilePosition"
+                    className="flex flex-col h-full rounded-lg-l justify-center lg:pl-[90px] lg:pr-[50px] md:pl-[60px] md:pr-[40px] space-y-[10px] xs:pb-[80px] xs:pt-[36px] xs:pl-[20px] xs:pr-[10px] bg-no-repeat md:bg-projectCubeDesktopPosition bg-projectCubeMobilePosition"
                     key={id}
                     style={{
                       backgroundImage: `url(${ProjectCube}),linear-gradient(108.79deg, #0A0240 28.15%, rgba(10, 2, 64, 0.8) 93.01%)`,

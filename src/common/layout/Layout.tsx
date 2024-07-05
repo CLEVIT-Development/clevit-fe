@@ -37,7 +37,7 @@ const Layout = ({
             classNames(
               "flex flex-col lg:space-y-[50px] space-y-12 items-center",
               {
-                ["pt-[50px] pb-[100px]"]: headerVariant === HeaderVariant.Tertiary,
+                ["lg:pt-[50px] pt:[25px] pb-[100px]"]: headerVariant === HeaderVariant.Tertiary,
                 ["w-full h-full max-w-full pt-3.5 pb-0"]: layoutVariant === LayoutVariant.Secondary,
               },
               className
