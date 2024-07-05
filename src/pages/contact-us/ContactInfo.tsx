@@ -23,7 +23,7 @@ const ContactInfo = () => {
   const displayPhoneNumber2 = formatPhoneNumber(appConfig.contactPhoneSecondary, "USA");
 
   return (
-    <div className="lg:w-auto desktop:w-1/5 w-full flex flex-col desktop:items-start items-center desktop:space-y-8 space-y-6">
+    <div className="lg:w-auto  w-full flex flex-col desktop:items-start items-center desktop:space-y-8 space-y-6">
       <p className="desktop:text-2xl text-lg font-semibold text-white">Contact Details</p>
       <div className="lg:w-auto w-full flex flex-col desktop:space-y-[30px] space-y-[20px]">
         <ContactWrapper>
@@ -129,7 +129,7 @@ const ContactInfo = () => {
           />
         </ContactWrapper>
 
-        <div className="flex space-x-[30px] desktop:self-start self-center">
+        <div className="flex space-x-[30px] lg:self-start self-center">
           {socialLinksConstants.map(({ id, link, Icon }) => (
             <Link key={id} to={link} target="_blank">
               <Icon className="fill-purple-700 desktop:h-[36px] desktop:w-[36px] h-[27px] w-[27px]" />
