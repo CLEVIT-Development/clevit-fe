@@ -6,7 +6,7 @@ const useResponsive = () => {
   return {
     isExtraSmall: width <= 640,
     isMobile: width <= 768,
-    isTablet: width <= 1024,
+    isTablet: width < 1024,
     // Calendly breakpoint differs from 1024px, so I need configure my styles based on calendly
     isCalendlyDesktop: width <= 1045,
     isDesktop: width <= 1260,
