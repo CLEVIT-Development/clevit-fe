@@ -20,7 +20,7 @@ const ContactInfo = () => {
   const mapUrlSecond = `https://www.google.com/maps/search/?api=1&query=${formattedAddressSecond}`;
 
   const displayPhoneNumber1 = formatPhoneNumber(appConfig.contactPhone, "Armenia");
-  const displayPhoneNumber2 = formatPhoneNumber(appConfig.contactPhoneSecondary, "USA");
+  // const displayPhoneNumber2 = formatPhoneNumber(appConfig.contactPhoneSecondary, "USA");
 
   return (
     <div className="lg:w-auto  w-full flex flex-col desktop:items-start items-center desktop:space-y-8 space-y-6">
@@ -52,13 +52,13 @@ const ContactInfo = () => {
                 <a href={`https://wa.me/${appConfig.contactPhone}`} className="hover:opacity-75">
                   {displayPhoneNumber1}
                 </a>
-                <span className="font-semibold">/</span>
-                <a
-                  href={`https://wa.me/${appConfig.contactPhoneSecondary}`}
-                  className="hover:opacity-75"
-                >
-                  {displayPhoneNumber2}
-                </a>
+                {/*<span className="font-semibold">/</span>*/}
+                {/*<a*/}
+                {/*  href={`https://wa.me/${appConfig.contactPhoneSecondary}`}*/}
+                {/*  className="hover:opacity-75"*/}
+                {/*>*/}
+                {/*  {displayPhoneNumber2}*/}
+                {/*</a>*/}
               </div>
             }
           />
