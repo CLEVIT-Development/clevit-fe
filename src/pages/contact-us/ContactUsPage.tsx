@@ -2,7 +2,7 @@ import Layout from "@/common/layout/Layout.tsx";
 import Section from "@/common/templates/Section";
 import ContactUsForm from "@/shared/forms/ContactUsForm";
 import PageSEO from "@/shared/lib/meta/PageSeo";
-import { HeaderVariant, LayoutVariant } from "@/types/variant.types.ts";
+import { HeaderVariant } from "@/types/variant.types.ts";
 
 import ContactInfo from "./ContactInfo";
 
