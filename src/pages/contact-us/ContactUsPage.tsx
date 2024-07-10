@@ -14,7 +14,7 @@ const ContactUsPage = () => {
         description="Contact Clevit team and order professional Web and Mobile development services. Just fill out the form and we'll get back to you right away."
         canonicalUrl="https://clevit.io/contact-us"
       />
-      <Layout headerVariant={HeaderVariant.Tertiary}>
+      <Layout headerVariant={HeaderVariant.Tertiary} className="!pt-[110px]">
         <Section>
           <div className="flex flex-col space-y-6 desktop:max-w-[80%] ">
             <h1 className="desktop:text-3xl text-lg md:mt-5 font-semibold text-gray-200 text-center">

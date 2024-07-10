@@ -33,7 +33,7 @@ const PortfolioPage = () => {
       />
 
       <Layout
-        className="space-y-9"
+        className="space-y-9 !pt-[40px]"
         headerVariant={HeaderVariant.Primary}
         heading={
           <Gradient>
