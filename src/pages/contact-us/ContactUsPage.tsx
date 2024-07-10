@@ -17,7 +17,7 @@ const ContactUsPage = () => {
       <Layout headerVariant={HeaderVariant.Tertiary} layoutVariant={LayoutVariant.Secondary}>
         <Section>
           <div className="flex flex-col space-y-6 desktop:max-w-[80%] ">
-            <h1 className="desktop:text-3xl text-lg md:mt-5 font-semibold text-gray-200 text-center">
+            <h1 className="desktop:text-3xl text-lg  font-semibold text-gray-200 text-center">
               Your Idea, Our Expertise. Let's Collaborate!
             </h1>
             <p className="desktop:text-md text-base font-normal text-gray-200 desktop:text-center">
