@@ -27,7 +27,7 @@ const Layout = ({
       <HeadBar heading={heading} headerVariant={headerVariant} />
       <main
         className={twMerge(
-          classNames("relative flex flex-col flex-grow pt-[130px] md:px-8", {
+          classNames("relative flex flex-col flex-grow md:px-8", {
             ["pt-0 !px-0"]: layoutVariant === LayoutVariant.Secondary,
           })
         )}
@@ -35,10 +35,10 @@ const Layout = ({
         <div
           className={twMerge(
             classNames(
-              "flex flex-col lg:space-y-[50px] space-y-12 items-center",
+              "flex flex-col lg:space-y-[50px] space-y-12 items-center pt-[40px] desktop:pt-[130px] ",
               {
-                ["lg:pt-[50px] pt:[25px] pb-[100px]"]: headerVariant === HeaderVariant.Tertiary,
-                ["w-full h-full max-w-full pt-3.5 pb-0"]: layoutVariant === LayoutVariant.Secondary,
+                ["pb-[100px] pt-[100px] md:pt-[110px] "]: headerVariant === HeaderVariant.Tertiary,
+                ["w-full h-full max-w-full pb-0"]: layoutVariant === LayoutVariant.Secondary,
               },
               className
             )

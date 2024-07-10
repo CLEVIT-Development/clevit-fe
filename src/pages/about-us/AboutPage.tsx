@@ -20,6 +20,7 @@ const AboutPage = () => {
         canonicalUrl="https://clevit.io/about-us"
       />
       <Layout
+        className="!pt-[40px]"
         heading={
           <Gradient>
             <AboutHeading />

@@ -33,7 +33,7 @@ const PortfolioPage = () => {
       />
 
       <Layout
-        className="space-y-9"
+        className="space-y-9 !pt-[40px]"
         headerVariant={HeaderVariant.Primary}
         heading={
           <Gradient>
@@ -41,7 +41,7 @@ const PortfolioPage = () => {
           </Gradient>
         }
       >
-        <h1 className="text-2xl font-bold text-gray-200 mb-10">Our Portfolio</h1>
+        <h1 className="text-2xl font-bold text-gray-200 desktop:mb-4">Our Portfolio</h1>
         {portfolioConstants.map((project, index) => (
           <Section
             key={index}
