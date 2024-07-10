@@ -2,7 +2,7 @@ import Layout from "@/common/layout/Layout.tsx";
 import Section from "@/common/templates/Section";
 import ContactUsForm from "@/shared/forms/ContactUsForm";
 import PageSEO from "@/shared/lib/meta/PageSeo";
-import { HeaderVariant } from "@/types/variant.types.ts";
+import { HeaderVariant, LayoutVariant } from "@/types/variant.types.ts";
 
 import ContactInfo from "./ContactInfo";
 
@@ -14,7 +14,7 @@ const ContactUsPage = () => {
         description="Contact Clevit team and order professional Web and Mobile development services. Just fill out the form and we'll get back to you right away."
         canonicalUrl="https://clevit.io/contact-us"
       />
-      <Layout headerVariant={HeaderVariant.Tertiary} className="!pt-[110px]">
+      <Layout headerVariant={HeaderVariant.Tertiary} layoutVariant={LayoutVariant.Secondary}>
         <Section>
           <div className="flex flex-col space-y-6 desktop:max-w-[80%] ">
             <h1 className="desktop:text-3xl text-lg md:mt-5 font-semibold text-gray-200 text-center">
