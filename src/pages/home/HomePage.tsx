@@ -20,7 +20,7 @@ const HomePage = () => {
       <PageSEO
         title="Web and Mobile App Development Company | Clevit"
         description="Clevit is a web and mobile app development company building reliable solutions for businesses and startups.Find out how we can help with your project. Book a FREE consultation!"
-        canonicalUrl="https://clevit.io/"
+        canonicalUrl="https://www.clevit.io/"
         alternativeDescription="We provide project-based and dedicated teams for custom software, web, mobile, AI, and cloud solutions. Get smarter, cost-effective solutions for your business."
       />
       <Layout

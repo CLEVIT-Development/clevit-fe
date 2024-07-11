@@ -29,7 +29,7 @@ const PortfolioPage = () => {
       <PageSEO
         title="Web and Mobile Apps Development Portfolios | Clevit"
         description="Find our software and different IT services design & development case studies across various industries for current & past clients. Feel free to contact us today!"
-        canonicalUrl="https://clevit.io/portfolio"
+        canonicalUrl="https://www.clevit.io/portfolio"
       />
 
       <Layout
