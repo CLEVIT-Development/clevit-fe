@@ -13,7 +13,7 @@ const PrivacyPolicy = () => {
       <PageSEO
         title="Clevit Privacy Policy: Details on Data We Collect and Use"
         description="Clevit respects personal data, so we drafted our privacy policy carefully. Read about what info we collect, how it is secured, and how you can control it."
-        canonicalUrl="https://clevit.io/privacy-policy"
+        canonicalUrl="https://www.clevit.io/privacy-policy"
       />
       <Layout headerVariant={HeaderVariant.Tertiary}>
         <div className="w-full flex flex-col items-center space-y-[50px]">
