@@ -17,7 +17,7 @@ const TermsAndConditions = () => {
       <PageSEO
         title="Terms and conditions that govern your use of Clevit’s website"
         description="This page outlines Clevit's Terms and Conditions considering the use of our website, restricted access, content, limitations of liability, laws and jurisdictions, and other essential details."
-        canonicalUrl="https://clevit.io/terms-and-conditions"
+        canonicalUrl="https://www.clevit.io/terms-and-conditions"
       />
       <Layout headerVariant={HeaderVariant.Tertiary}>
         <div className="w-full flex flex-col items-center space-y-[50px]">
