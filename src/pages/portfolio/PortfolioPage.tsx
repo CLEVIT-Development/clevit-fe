@@ -75,7 +75,7 @@ const PortfolioPage = () => {
                         <span className="text-gray-100 font-medium mr-2">{item.label}: </span>
                         {item.isLink ? (
                           <a
-                            href={`https://www.${item.value}/`}
+                            href={`https://www.${item.value}`}
                             className="text-blue-200 font-semibold"
                             target="_blank"
                           >
@@ -110,15 +110,17 @@ const PortfolioPage = () => {
                                 id={String(index)}
                                 ref={tooltipRef}
                                 role="tooltip"
-                                className="absolute space-y-3 -translate-y-[20%] translate-x-[50%] z-10 inline-block px-3 py-3 text-sm font-medium text-gray-200 bg-white border border-gray-300 rounded-lg shadow-lg whitespace-nowrap"
+                                className="absolute  bottom-[35px] py-2 px-4 right-0  z-10  text-sm font-medium text-gray-200 bg-white border border-gray-300 rounded-lg shadow-lg "
                               >
-                                {item.value.slice(5, item.value.length).map((elem, i) => (
-                                  <div key={i} className="flex items-center justify-left  ">
-                                    <elem.Icon height={18} width={18} className="mr-3 " />
-                                    <span>{elem.name}</span>
-                                  </div>
-                                ))}
-                                <div className="absolute top-full  z-9 left-1/2 transform -translate-x-1/2 -translate-y-4 bg-white h-2 w-2 rotate-45 border-l border-b border-gray-300"></div>
+                                <div className="space-y-4 ">
+                                  {item.value.slice(5, item.value.length).map((elem, i) => (
+                                    <div key={i} className="flex items-center justify-left  ">
+                                      <elem.Icon height={18} width={18} className="mr-3 " />
+                                      <span>{elem.name}</span>
+                                    </div>
+                                  ))}
+                                </div>
+                                <div className="absolute -bottom-1  z-4 left-1/2    bg-white h-2 w-2 rotate-45   border-gray-300"></div>
                               </div>
                             )}
                           </div>
