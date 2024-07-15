@@ -21,7 +21,7 @@ const TermsAndConditions = () => {
       />
       <Layout headerVariant={HeaderVariant.Tertiary}>
         <div className="w-full flex flex-col items-center space-y-[50px]">
-          <h1 className="desktop:text-4xl text-2xl-3xl text-gray-200 desktop:mb-14">
+          <h1 className="desktop:text-4xl text-2xl-3xl text-gray-200 desktop:mb-14 text-center">
             Terms And Conditions
           </h1>
           <DocumentSection
