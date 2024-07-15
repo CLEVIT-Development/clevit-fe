@@ -112,7 +112,7 @@ const Header = forwardRef(
           className={classNames(
             "transition-all duration-700 overflow-hidden lg:hidden flex flex-col justify-between items-center h-0",
             {
-              ["h-[45vh] md:h-[40vh] sm:h-[40vh] lg:h-[30vh] desktop:h-[30vh]"]: isOpen,
+              ["h-[50vh] md:h-[40vh] sm:h-[40vh] lg:h-[30vh] desktop:h-[30vh]"]: isOpen,
             }
           )}
           onTransitionEnd={() => {
