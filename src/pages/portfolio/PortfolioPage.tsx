@@ -147,7 +147,7 @@ const PortfolioPage = () => {
                         <span className="text-gray-100 font-medium mr-2">{item.label}: </span>
                         {item.isLink ? (
                           <a
-                            href={`https://www.${item.value}/`}
+                            href={`https://www.${item.value}`}
                             className="text-blue-200 font-semibold"
                             target="_blank"
                           >
