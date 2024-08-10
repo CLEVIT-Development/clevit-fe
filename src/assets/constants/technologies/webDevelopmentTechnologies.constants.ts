@@ -35,19 +35,19 @@ export const webDevelopmentTechnologiesTabsConstants: ITabsConstant[] = [
     id: 1,
     title: "Front-End Development",
     description:
-      "Front-end development is concerned with constructing, designing, and maintaining the visible content of the website. Front-end developers work with the first thing the website’s unique users see on the page. Through the use of various programming languages, web application developers cohesively structure the contents and set up the design (color, font, size, etc.) of the website.\n",
+      "Front-end development is concerned with constructing, designing, and maintaining the visible content of the website. Front-end developers work with the first thing the website’s unique users see on the page. Through the use of various programming languages, web application developers cohesively structure the contents and set up the design (color, font, size, etc.) of the website.",
   },
   {
     id: 2,
     title: "Back-End Development",
     description:
-      "Front-end development is concerned with constructing, designing, and maintaining the visible content of the website. Front-end developers work with the first thing the website’s unique users see on the page. Through the use of various programming languages, web application developers cohesively structure the contents and set up the design (color, font, size, etc.) of the website.\n",
+      "Anything that does not appear on the first page of the user is dealt with by the back-end developer. Back-end developers work with the server side of the website, where most of the data is stored safely for the front-end developer’s work to reflect. Back End Development Services include programming languages such as Node.js, Nest.js, Express.js, GraphQL, WebSocket, and Jest.",
   },
   {
     id: 3,
     title: "Database Management System",
     description:
-      "Front-end development is concerned with constructing, designing, and maintaining the visible content of the website. Front-end developers work with the first thing the website’s unique users see on the page. Through the use of various programming languages, web application developers cohesively structure the contents and set up the design (color, font, size, etc.) of the website.\n",
+      "Alongside the work that back-end and front-end developers perform, anything that concerns the computerized data preservation system goes within the Database Management System. The technologies used within this system are MySQL, NoSQL, MongoDB, PostgreSQL, Google Firebase, Google Cloud, SQL Server, SQLite, Redis, Maria DB, Elasticsearch, and DynamoDB.",
   },
 ];
 
