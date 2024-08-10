@@ -77,7 +77,7 @@ export const portfolioConstants: Project[] = [
     mobileImageUrl: OblivioniMobileImage,
     description: "The creative powerhouse that propels your visuals to new heights.",
     details:
-      "Oblivioni caters to the high-end needs of filmmakers and advertisers by connecting them with talented composers for custom music. Oblivioni has a network of industry-leading composers who can create bespoke music to perfectly match your vision. An automated system and comprehensive admin section make the ordering process smooth and efficient, saving you valuable time.",
+      "Oblivioni caters to the high-end needs of filmmakers and advertisers by connecting them with talented composers for custom music. Oblivioni has a network of industry-leading composers who can create bespoke music to perfectly match your vision. An automated system and comprehensive admin sections make the ordering process smooth and efficient, saving you valuable time.",
     info: [
       { label: "Industry", value: "Musicians" },
       { label: "Type", value: "Web Development" },

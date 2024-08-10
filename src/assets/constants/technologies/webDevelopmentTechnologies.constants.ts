@@ -1,3 +1,4 @@
+import type { ITabsConstant } from "@/assets/constants/technologies/technologies.constants.ts";
 import AntIcon from "@/assets/vectors/technology/Ant.svg?react";
 import CSSIcon from "@/assets/vectors/technology/CSS.svg?react";
 import CypressIcon from "@/assets/vectors/technology/Cypress.svg?react";
@@ -23,28 +24,39 @@ import ReactIcon from "@/assets/vectors/technology/React.svg?react";
 import RedisIcon from "@/assets/vectors/technology/Redis.svg?react";
 import SASSIcon from "@/assets/vectors/technology/SASS.svg?react";
 import SQLiteIcon from "@/assets/vectors/technology/SQLite.svg?react";
-import SwiftIcon from "@/assets/vectors/technology/Swift.svg?react";
 import TailwindCSSIcon from "@/assets/vectors/technology/Tailwind.svg?react";
 import Typescript from "@/assets/vectors/technology/Typescript.svg?react";
 import ViteIcon from "@/assets/vectors/technology/Vite.svg?react";
 import VueIcon from "@/assets/vectors/technology/Vue.svg?react";
 import WebSocketIcon from "@/assets/vectors/technology/WebSocket.svg?react";
-import type { INavigationData } from "@/shared/ui/Navigation.tsx";
 
-export const technologyTabsConstants: INavigationData[] = [
-  { id: 1, title: "Front-End Development" },
-  { id: 2, title: "Mobile App Development" },
-  { id: 3, title: "Back-End Development" },
-  { id: 4, title: "Database Management" },
+export const webDevelopmentTechnologiesTabsConstants: ITabsConstant[] = [
+  {
+    id: 1,
+    title: "Front-End Development",
+    description:
+      "Front-end development is concerned with constructing, designing, and maintaining the visible content of the website. Front-end developers work with the first thing the website’s unique users see on the page. Through the use of various programming languages, web application developers cohesively structure the contents and set up the design (color, font, size, etc.) of the website.\n",
+  },
+  {
+    id: 2,
+    title: "Back-End Development",
+    description:
+      "Front-end development is concerned with constructing, designing, and maintaining the visible content of the website. Front-end developers work with the first thing the website’s unique users see on the page. Through the use of various programming languages, web application developers cohesively structure the contents and set up the design (color, font, size, etc.) of the website.\n",
+  },
+  {
+    id: 3,
+    title: "Database Management System",
+    description:
+      "Front-end development is concerned with constructing, designing, and maintaining the visible content of the website. Front-end developers work with the first thing the website’s unique users see on the page. Through the use of various programming languages, web application developers cohesively structure the contents and set up the design (color, font, size, etc.) of the website.\n",
+  },
 ];
 
-export const technologiesConstants = {
+export const webDevelopmentTechnologiesConstants = {
   1: [
     { id: 1, title: "React.js", Icon: ReactIcon },
     { id: 2, title: "Vue.js", Icon: VueIcon },
     { id: 3, title: "Vite.js", Icon: ViteIcon },
     { id: 4, title: "Next.js", Icon: NextIcon },
-    { id: 5, title: "Typescript", Icon: Typescript },
     { id: 6, title: "Material UI", Icon: MUIIcon },
     { id: 7, title: "Tailwind CSS", Icon: TailwindCSSIcon },
     { id: 8, title: "Ant Design", Icon: AntIcon },
@@ -52,12 +64,9 @@ export const technologiesConstants = {
     { id: 10, title: "HTML 5", Icon: HTMLIcon },
     { id: 11, title: "CSS3", Icon: CSSIcon },
     { id: 12, title: "SCSS(SASS)", Icon: SASSIcon },
+    { id: 5, title: "Typescript", Icon: Typescript },
   ],
   2: [
-    { id: 1, title: "Swift", Icon: SwiftIcon },
-    { id: 2, title: "React Native", Icon: ReactIcon },
-  ],
-  3: [
     { id: 1, title: "Node.js", Icon: NodeIcon },
     { id: 2, title: "Nest.js", Icon: NestIcon },
     { id: 3, title: "Express.js", Icon: ExpressIcon },
@@ -65,7 +74,7 @@ export const technologiesConstants = {
     { id: 5, title: "WebSocket", Icon: WebSocketIcon },
     { id: 6, title: "Jest", Icon: JestIcon },
   ],
-  4: [
+  3: [
     { id: 1, title: "MySQL", Icon: MySQLIcon },
     { id: 2, title: "NoSQL", Icon: NoSQLIcon },
     { id: 3, title: "MongoDB", Icon: MongoIcon },
