@@ -1,6 +1,5 @@
 import classNames from "classnames";
 
-import LogoIcon from "@/assets/vectors/Logo.svg?react";
 import { LogoVariant } from "@/types/variant.types.ts";
 
 interface Props {
@@ -16,15 +15,19 @@ const Logo = ({ variant = LogoVariant.Primary, className, onLogoClick, ...props 
   };
 
   return (
-    <LogoIcon
-      className={classNames(
-        "md:w-auto md:h-auto xs:w-20 xs:h-[38px] cursor-pointer",
-        configVariant[variant],
-        className
-      )}
-      onClick={onLogoClick}
-      {...props}
-    />
+    <>
+      <img
+        alt="CLEVIT Logo"
+        src="https://res.cloudinary.com/dchnaa2wb/image/upload/v1723305640/splbcetu7trgqfdeuau9.svg"
+        className={classNames(
+          "md:w-auto md:h-auto xs:w-20 xs:h-[38px] cursor-pointer",
+          configVariant[variant],
+          className
+        )}
+        onClick={onLogoClick}
+        {...props}
+      />
+    </>
   );
 };
 

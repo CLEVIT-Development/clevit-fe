@@ -55,7 +55,7 @@ const Navigation = ({ items, onItemClick, className = "" }: Props) => {
     <nav
       className={twMerge(
         classNames(
-          "flex desktop:space-x-4 xs:space-x-0 desktop:flex-row xs:w-full xs:px-1.5 xs:flex-col desktop:justify-between xs:justify-center desktop:space-y-0 xs:space-y-8",
+          "flex flex-col desktop:space-x-4 xs:space-x-0 desktop:flex-row xs:w-full xs:px-1.5 xs:flex-col desktop:justify-between xs:justify-center desktop:space-y-0 xs:space-y-8",
           className
         )
       )}
