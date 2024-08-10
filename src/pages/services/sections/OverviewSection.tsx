@@ -15,8 +15,8 @@ const OverviewSection = ({ title, description, image, imageAlt }: Props) => {
   const navigate = useNavigate();
 
   return (
-    <Section className="bg-overviewGradient rounded-lg-l py-5 lg:px-12">
-      <div className="flex items-center">
+    <Section className="lg:px-0">
+      <div className="flex items-center bg-overviewGradient rounded-lg-l py-5 px-5 lg:px-12">
         <div className="flex flex-col">
           <span className="text-white text-center lg:text-left text-lg font-bold">{title}</span>
           <span className="text-white text-base lg:text-md mb-12 mt-6 lg:mt-4">{description}</span>
