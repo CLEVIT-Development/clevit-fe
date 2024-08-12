@@ -48,7 +48,7 @@ export const projectsConstants = [
     title: "Oblivioni",
     subTitle: "The creative powerhouse for elevating visuals with custom sync music.",
     description:
-      "Specializing in high-end motion pictures and commercial advertising, Oblivioni connects composers with clients for custom music. We've built an automated system and comprehensive admin sections for efficient order management.",
+      "Specializing in high-end motion pictures and commercial advertising, Oblivioni connects composers with clients for custom music. We've built an automated system and comprehensive admin section for efficient order management.",
     type: "Web Development",
     duration: "1 Year 2 Months",
     country: "USA",

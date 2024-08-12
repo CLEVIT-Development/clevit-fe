@@ -1,9 +1,9 @@
 import PCSmallIcon from "@/assets/vectors/PCSmall.svg?react";
-import ResearchIcon from "@/assets/vectors/processes/Research.svg?react";
-import SupportSmallIcon from "@/assets/vectors/processes/SupportSmall.svg?react";
-import UIUXSmallIcon from "@/assets/vectors/processes/UIUXSmall.svg?react";
+import ResearchIcon from "@/assets/vectors/Research.svg?react";
+import SupportSmallIcon from "@/assets/vectors/SupportSmall.svg?react";
+import UIUXSmallIcon from "@/assets/vectors/UIUXSmall.svg?react";
 
-export const homeProcessesConstants = [
+export const processesConstants = [
   {
     id: 1,
     Icon: ResearchIcon,
