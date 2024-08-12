@@ -102,6 +102,9 @@ export default {
         quoteGradient: "linear-gradient(88.98deg, #9B3B94 0.87%, #210F2B 79.26%)",
         headingGradient: "linear-gradient(254.76deg, #9B3B94 -12.62%, #000000 51%)",
         contactUsGradient: "linear-gradient(232.27deg, #0A0240 1.73%, rgba(10, 2, 64, 0.8) 91.7%)",
+        overviewGradient: "linear-gradient(232.27deg, #0A0240 1.73%, rgba(10, 2, 64, 0.8) 91.7%);",
+        showcaseGradient:
+          "radial-gradient(circle, rgba(128,90,213,0.4) 15%, rgba(255,255,255,0) 70%)",
       },
       backgroundPosition: {
         missionDesktopPosition: "-15% 55%",

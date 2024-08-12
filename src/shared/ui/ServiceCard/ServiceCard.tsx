@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import type { ComponentPropsWithoutRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 import { twMerge } from "tailwind-merge";
 
@@ -13,15 +14,19 @@ interface Props extends ComponentPropsWithoutRef<"div"> {
   className?: string;
   description: string;
   icon: React.ReactNode;
+  route: string;
 }
 
-const ServiceCard = ({ id, icon, order, title, description, className }: Props) => {
+const ServiceCard = ({ id, icon, order, title, route, description, className }: Props) => {
   const sectionCardRef = useRef<HTMLDivElement>(null);
+  const navigate = useNavigate();
 
   useScrollView(sectionCardRef, id);
 
   return (
     <div
+      role="button"
+      onClick={() => navigate(route)}
       ref={sectionCardRef}
       className={twMerge(
         "p-6 rounded-lg sm:shadow-base-100 transition-all duration-500 sm:hover:scale-105 desktop:max-w-[410px] space-y-4",
