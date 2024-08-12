@@ -5,7 +5,6 @@ import HomePage from "@/pages/home/HomePage.tsx";
 import PortfolioPage from "@/pages/portfolio/PortfolioPage";
 import PrivacyPolicy from "@/pages/privacy-policy/PrivacyPolicy.tsx";
 import CalendlyPage from "@/pages/request-demo/CalendlyPage";
-import WebDevelopmentPage from "@/pages/services/WebDevelopmentPage.tsx";
 import TermsAndConditions from "@/pages/terms-and-conditions/TermsAndConditions.tsx";
 
 export enum RoutePaths {
@@ -21,7 +20,6 @@ export enum RoutePaths {
   PrivacyPolicy = "/privacy-policy",
   TermsAndConditions = "/terms-and-conditions",
   Calendly = "/request-demo",
-  WebDevelopment = "/web-development",
 }
 
 export const headerMenuLinks = [
@@ -44,5 +42,4 @@ export const routerElements = [
   { path: RoutePaths.Calendly, Element: CalendlyPage },
   { path: RoutePaths.Blog, Element: BlogPage },
   { path: RoutePaths.Portfolio, Element: PortfolioPage },
-  { path: RoutePaths.WebDevelopment, Element: WebDevelopmentPage },
 ];

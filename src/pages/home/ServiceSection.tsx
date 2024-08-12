@@ -37,14 +37,13 @@ const ServiceSection = () => {
       headingLevel="h2"
     >
       <div className="h-full w-full rounded-lg bg-white xs:shadow-base-100 sm:shadow-none grid sm:gap-5 xs:grid-cols-1 xs:gap-0 sm:grid-cols-2 desktop:grid-cols-3">
-        {servicesConstants.map(({ id, Icon, title, description, route }, index) => (
+        {servicesConstants.map(({ id, Icon, title, description }, index) => (
           <ServiceCard
             key={id}
             id={id}
             title={title}
             icon={<Icon />}
             description={description}
-            route={route}
             className="shadow-none"
             order={orderUtils(index + 1)}
           />

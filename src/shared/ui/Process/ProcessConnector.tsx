@@ -1,7 +1,7 @@
 import classNames from "classnames";
 
+import { processesConstants } from "@/assets/constants/processes.constants";
 import useResponsive from "@/common/hooks/useResponsive";
-import type { IProcess } from "@/types/constant.types.ts";
 import { PositionVariant } from "@/types/position.types";
 import { isEven } from "@/utils/parity.utils";
 
@@ -9,11 +9,10 @@ import Connector from "./Connector";
 
 interface Props {
   order: number;
-  processes: IProcess[];
 }
 
 // I have added two connectors one for horizontal and 2nd for vertical, on desktop we omit the 2nd.
-const ProcessConnector = ({ order, processes }: Props) => {
+const ProcessConnector = ({ order }: Props) => {
   const { isTablet } = useResponsive();
 
   const connectorStyle = {
@@ -25,7 +24,7 @@ const ProcessConnector = ({ order, processes }: Props) => {
 
   return (
     <>
-      {order !== processes.length && (
+      {order !== processesConstants.length && (
         <Connector
           className={classNames(
             "absolute desktop:hidden",

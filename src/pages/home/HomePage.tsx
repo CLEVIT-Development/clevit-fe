@@ -1,8 +1,3 @@
-import { homeProcessesConstants } from "@/assets/constants/processes/homeProcesses.constants.ts";
-import {
-  technologiesConstants,
-  technologyTabsConstants,
-} from "@/assets/constants/technologies/technologies.constants.ts";
 import HomeHeading from "@/common/layout/Heading/HomeHeading";
 import Layout from "@/common/layout/Layout.tsx";
 import TotalSection from "@/pages/about-us/TotalSection";
@@ -43,12 +38,8 @@ const HomePage = () => {
         />
         <ServiceSection />
         <RequestQuoteSection />
-        <TechnologySection
-          title="Technologies We Use"
-          tabsConstant={technologyTabsConstants}
-          technologiesConstant={technologiesConstants}
-        />
-        <ProcessSection processes={homeProcessesConstants} />
+        <TechnologySection />
+        <ProcessSection />
         <IndustriesSection />
         <ProjectSection />
         <FeedbackSection />
