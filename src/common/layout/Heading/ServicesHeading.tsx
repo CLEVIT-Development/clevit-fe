@@ -1,0 +1,32 @@
+import { useNavigate } from "react-router-dom";
+
+import { RoutePaths } from "@/app/routing/routing.constants.ts";
+import Button from "@/shared/ui/Button.tsx";
+
+interface Props {
+  title: string;
+  description: string;
+  image: string;
+  imageAlt: string;
+}
+
+const ServicesHeading = ({ title, description, image, imageAlt }: Props) => {
+  const navigate = useNavigate();
+
+  return (
+    <div className="w-full flex items-center lg:pb-[30px] lg:pt-[140px] lg:pr-[120px] lg:pl-[155px] pb-6 px-6 pt-[124px]">
+      <div className="w-full flex flex-col items-center lg:items-start">
+        <h1 className="lg:max-w-full desktop:text-left text-center animate-textSlide text-white text-lg lg:text-3xl font-semibold">
+          {title}
+        </h1>
+        <p className="lg:max-w-full lg:text-left text-center text-white text-base lg:text-lg mt-6 lg:mt-4 mb-10 lg:mb-8">
+          {description}
+        </p>
+        <Button onClick={() => navigate(RoutePaths.Calendly)}>Request a Quote</Button>
+      </div>
+      <img className="ml-20 w-[470px] h-[350px] hidden lg:flex" alt={imageAlt} src={image} />
+    </div>
+  );
+};
+
+export default ServicesHeading;
