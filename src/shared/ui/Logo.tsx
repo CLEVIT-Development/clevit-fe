@@ -1,5 +1,4 @@
-import classNames from "classnames";
-
+import { PrimaryLogoURL, SecondaryLogoURL } from "@/assets/constants/seo.constants.ts";
 import { LogoVariant } from "@/types/variant.types.ts";
 
 interface Props {
@@ -10,24 +9,18 @@ interface Props {
 
 const Logo = ({ variant = LogoVariant.Primary, className, onLogoClick, ...props }: Props) => {
   const configVariant = {
-    [LogoVariant.Primary]: "fill-gray-400",
-    [LogoVariant.Secondary]: "fill-gray-200",
+    [LogoVariant.Primary]: PrimaryLogoURL,
+    [LogoVariant.Secondary]: SecondaryLogoURL,
   };
 
   return (
-    <>
-      <img
-        alt="CLEVIT Logo"
-        src="https://res.cloudinary.com/dchnaa2wb/image/upload/v1723305640/splbcetu7trgqfdeuau9.svg"
-        className={classNames(
-          "md:w-auto md:h-auto xs:w-20 xs:h-[38px] cursor-pointer",
-          configVariant[variant],
-          className
-        )}
-        onClick={onLogoClick}
-        {...props}
-      />
-    </>
+    <img
+      alt="CLEVIT Logo"
+      src={configVariant[variant]}
+      className={className}
+      onClick={onLogoClick}
+      {...props}
+    />
   );
 };
 
