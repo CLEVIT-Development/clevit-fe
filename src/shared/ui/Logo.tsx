@@ -1,3 +1,5 @@
+import classNames from "classnames";
+
 import { PrimaryLogoURL, SecondaryLogoURL } from "@/assets/constants/seo.constants.ts";
 import { LogoVariant } from "@/types/variant.types.ts";
 
@@ -17,7 +19,7 @@ const Logo = ({ variant = LogoVariant.Primary, className, onLogoClick, ...props 
     <img
       alt="CLEVIT Logo"
       src={configVariant[variant]}
-      className={className}
+      className={classNames("w-[140px] h-[64px] cursor-pointer", className)}
       onClick={onLogoClick}
       {...props}
     />
