@@ -1,4 +1,4 @@
 export const PrimaryLogoURL =
-  "https://res.cloudinary.com/dchnaa2wb/image/upload/v1723305640/splbcetu7trgqfdeuau9.svg";
+  "https://res.cloudinary.com/dchnaa2wb/image/upload/v1723466516/hztofei5mfohxbqhbvya.png";
 export const SecondaryLogoURL =
-  "https://res.cloudinary.com/dchnaa2wb/image/upload/v1723460755/ktkpahhqde0nlf1mehsk.svg";
+  "https://res.cloudinary.com/dchnaa2wb/image/upload/v1723466516/tltkjffiblba8jsxm7wj.png";
