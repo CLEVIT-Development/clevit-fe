@@ -26,7 +26,6 @@ const HeadBar = ({ heading, headerVariant }: Props) => {
       const headerHeadingDistance =
         Number(headingRect?.height) - Number(headerRect?.height) + Number(headingRect?.top);
 
-      // header will pass the heading bottom side if and only if the distance is negative.
       const isReached = headerHeadingDistance < 0;
 
       setCurrHeaderVariant(isReached ? HeaderVariant.Secondary : HeaderVariant.Primary);

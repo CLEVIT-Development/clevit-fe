@@ -3,7 +3,7 @@ import AliceCarousel from "react-alice-carousel";
 import { NavLink, useNavigate } from "react-router-dom";
 
 import { projectsConstants } from "@/assets/constants/projects.constants";
-import ProjectCube from "@/assets/images/projects/ProjectCube.png";
+import ProjectCube from "@/assets/images/projects/ProjectCube.webp";
 import Arrow from "@/assets/vectors/Arrow.svg?react";
 import useResponsive from "@/common/hooks/useResponsive";
 import Section from "@/common/templates/Section.tsx";

@@ -1,6 +1,6 @@
-import Oblivioni from "@/assets/images/feedbacks/Oblivioni.png";
-import Renegade from "@/assets/images/feedbacks/Renegade.png";
-import Sqor from "@/assets/images/feedbacks/Sqor.png";
+import Oblivioni from "@/assets/images/feedbacks/Oblivioni.webp";
+import Renegade from "@/assets/images/feedbacks/Renegade.webp";
+import Sqor from "@/assets/images/feedbacks/Sqor.webp";
 
 export const feedbacksConstants = [
   {

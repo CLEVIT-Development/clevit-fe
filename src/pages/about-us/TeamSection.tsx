@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-import TeamPhoto from "@/assets/images/team/teamPhoto.png";
+import TeamPhoto from "@/assets/images/team/teamPhoto.webp";
 import Messages from "@/assets/vectors/Messages.svg?react";
 import Section from "@/common/templates/Section";
 import Button from "@/shared/ui/Button";

@@ -1,5 +1,5 @@
-import Blog1 from "@/assets/images/blogs/Blog1.jpeg";
-import Blog2 from "@/assets/images/blogs/Blog2.jpeg";
+import Blog1 from "@/assets/images/blogs/Blog1.webp";
+import Blog2 from "@/assets/images/blogs/Blog2.webp";
 
 export const blogsConstants = [
   {
