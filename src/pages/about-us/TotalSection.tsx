@@ -1,5 +1,7 @@
-import TotalWaveDesktop from "@/assets/images/totalWave/TotalWaveDesktop.png";
-import TotalWaveMobile from "@/assets/images/totalWave/TotalWaveMobile.png";
+import { useEffect } from "react";
+
+import TotalWaveDesktop from "@/assets/images/totalWave/TotalWaveDesktop.webp";
+import TotalWaveMobile from "@/assets/images/totalWave/TotalWaveMobile.webp";
 import useResponsive from "@/common/hooks/useResponsive";
 import Section from "@/common/templates/Section";
 
@@ -25,11 +27,24 @@ const TotalItem = ({ value, title }: TotalItemProps) => (
 const TotalSection = ({ projectsValue, stuffValue, servedValue, deliveredPercent }: Props) => {
   const { isMobile } = useResponsive();
 
+  useEffect(() => {
+    const preloadImage = (src: string) => {
+      const img = new Image();
+
+      img.src = src;
+    };
+
+    preloadImage(TotalWaveDesktop);
+    preloadImage(TotalWaveMobile);
+  }, []);
+
   return (
     <Section>
       <div
         style={{
-          backgroundImage: isMobile ? `url(${TotalWaveMobile})` : `url(${TotalWaveDesktop})`,
+          backgroundImage: `url(${isMobile ? TotalWaveMobile : TotalWaveDesktop})`,
+          backgroundSize: "cover", // Ensures the image covers the entire div
+          backgroundPosition: "center", // Positions the image in the center
         }}
         className="w-full flex-1 flex md:justify-evenly md:space-y-0 space-y-1 md:flex-row flex-col items-center bg-purple-600 md:py-[60px] md:px-[30px] py-5 rounded-lg-l bg-no-repeat md:bg-totalDesktopPosition bg-totalMobilePosition"
       >

@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 
-import TwitterCardImage from "@/assets/images/social/twitter_card.jpg";
+import TwitterCardImage from "@/assets/images/social/twitter_card.webp";
 
 import { APP_TITLE, getAppTitle } from "./meta";
 

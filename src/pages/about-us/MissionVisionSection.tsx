@@ -1,5 +1,5 @@
-import MissionVisionDesktop from "@/assets/images/missionVision/MissionVisionDesktop.png";
-import MissionVisionMobile from "@/assets/images/missionVision/MissionVisionMobile.png";
+import MissionVisionDesktop from "@/assets/images/missionVision/MissionVisionDesktop.webp";
+import MissionVisionMobile from "@/assets/images/missionVision/MissionVisionMobile.webp";
 import useResponsive from "@/common/hooks/useResponsive";
 
 interface MissionSingleItemProps {

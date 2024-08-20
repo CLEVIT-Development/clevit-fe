@@ -1,4 +1,4 @@
-import PortfolioHeadingBackground from "@/assets/images/Portfolioheading.png";
+import PortfolioHeadingBackground from "@/assets/images/Portfolioheading.webp";
 
 const PortfolioHeading = () => {
   return (

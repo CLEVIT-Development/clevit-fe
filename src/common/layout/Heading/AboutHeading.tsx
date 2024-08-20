@@ -1,4 +1,4 @@
-import AboutHeadingBackground from "@/assets/images/AboutHeading.png";
+import AboutHeadingBackground from "@/assets/images/AboutHeading.webp";
 
 const AboutHeading = () => {
   return (

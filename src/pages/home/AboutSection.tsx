@@ -3,9 +3,9 @@ import AliceCarousel from "react-alice-carousel";
 
 import classNames from "classnames";
 
-import AvoPhoto from "@/assets/images/team/Avo.png";
-import EdoPhoto from "@/assets/images/team/Edo.png";
-import GorPhoto from "@/assets/images/team/Gor.png";
+import AvoPhoto from "@/assets/images/team/Avo.webp";
+import EdoPhoto from "@/assets/images/team/Edo.webp";
+import GorPhoto from "@/assets/images/team/Gor.webp";
 import LinkedinIcon from "@/assets/vectors/Linkedin.svg?react";
 import useResponsive from "@/common/hooks/useResponsive.ts";
 import Section from "@/common/templates/Section";
