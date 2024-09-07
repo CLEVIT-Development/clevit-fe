@@ -17,7 +17,7 @@ export const servicesConstants = [
     id: ServicesIdConstants.Web,
     Icon: PC,
     title: "Web Development",
-    route: "/web-development",
+    route: "",
     description:
       "Strengthen your brand and drive results with our custom-built and user-friendly websites.",
   },

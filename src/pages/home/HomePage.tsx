@@ -1,27 +1,29 @@
-import { homeProcessesConstants } from "@/assets/constants/processes/homeProcesses.constants.ts";
+import { Suspense } from "react";
+
+import { homeProcessesConstants } from "@/assets/constants/processes/homeProcesses.constants";
 import {
   technologiesConstants,
   technologyTabsConstants,
-} from "@/assets/constants/technologies/technologies.constants.ts";
+} from "@/assets/constants/technologies/technologies.constants";
 import HomeHeading from "@/common/layout/Heading/HomeHeading";
-import Layout from "@/common/layout/Layout.tsx";
-import TotalSection from "@/pages/about-us/TotalSection";
-import AboutSection from "@/pages/home/AboutSection.tsx";
-import RequestQuoteSection from "@/pages/home/RequestQuoteSection.tsx";
-import ServiceSection from "@/pages/home/ServiceSection.tsx";
-import TechnologySection from "@/pages/home/TechnologySection.tsx";
+import Layout from "@/common/layout/Layout";
 import { Gradient } from "@/shared/gradient/Gradient.tsx";
 import PageSEO from "@/shared/lib/meta/PageSeo";
 
+import TotalSection from "../about-us/TotalSection";
+import AboutSection from "./AboutSection";
 import CalendlySection from "./CalendlySection";
 import FeedbackSection from "./Feedback/FeedbackSection";
 import IndustriesSection from "./IndustriesSection";
 import ProcessSection from "./ProcessSection";
 import ProjectSection from "./Project/ProjectSection";
+import RequestQuoteSection from "./RequestQuoteSection";
+import ServiceSection from "./ServiceSection";
+import TechnologySection from "./TechnologySection";
 
 const HomePage = () => {
   return (
-    <>
+    <Suspense>
       <PageSEO
         title="Web and Mobile App Development Company | Clevit"
         description="Clevit is a web and mobile app development company building reliable solutions for businesses and startups.Find out how we can help with your project. Book a FREE consultation!"
@@ -55,7 +57,7 @@ const HomePage = () => {
         <AboutSection />
         <CalendlySection title="Schedule a free call with a member of our team who will be happy to discuss the services we offer and how they can benefit you." />
       </Layout>
-    </>
+    </Suspense>
   );
 };
 

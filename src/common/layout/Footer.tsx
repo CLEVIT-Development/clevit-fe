@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import { RoutePaths } from "@/app/routing/routing.constants.ts";
@@ -94,4 +95,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default memo(Footer);

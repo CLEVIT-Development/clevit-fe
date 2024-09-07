@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 
 import { twMerge } from "tailwind-merge";
 
@@ -26,4 +26,4 @@ const ProcessCard = ({ order, title, icon, className }: Props) => (
   </div>
 );
 
-export default ProcessCard;
+export default memo(ProcessCard);

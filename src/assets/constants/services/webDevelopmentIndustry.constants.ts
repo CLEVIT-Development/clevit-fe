@@ -1,10 +1,19 @@
-import CargoIcon from "@/assets/vectors/industryServe/Cargo.svg?react";
-import DashboardIcon from "@/assets/vectors/industryServe/Dashboard.svg?react";
-import MedicalIcon from "@/assets/vectors/industryServe/Medical.svg?react";
-import MusicProductionIcon from "@/assets/vectors/industryServe/MusicProduction.svg?react";
-import OnlineBookingIcon from "@/assets/vectors/industryServe/OnlineBooking.svg?react";
-import VirtualMeetingsIcon from "@/assets/vectors/industryServe/VirtualMeetings.svg?react";
+import { lazy } from "react";
+
 import type { IProcess } from "@/types/constant.types.ts";
+
+const DashboardIcon = lazy(() => import("@/assets/vectors/industryServe/Dashboard.svg?react"));
+const MedicalIcon = lazy(() => import("@/assets/vectors/industryServe/Medical.svg?react"));
+const MusicProductionIcon = lazy(
+  () => import("@/assets/vectors/industryServe/MusicProduction.svg?react")
+);
+const VirtualMeetingsIcon = lazy(
+  () => import("@/assets/vectors/industryServe/VirtualMeetings.svg?react")
+);
+const CargoIcon = lazy(() => import("@/assets/vectors/industryServe/Cargo.svg?react"));
+const OnlineBookingIcon = lazy(
+  () => import("@/assets/vectors/industryServe/OnlineBooking.svg?react")
+);
 
 export const webDevelopmentIndustryServeConstants: IProcess[] = [
   {

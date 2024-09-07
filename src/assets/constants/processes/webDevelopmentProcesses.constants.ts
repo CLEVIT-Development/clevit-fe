@@ -1,7 +1,9 @@
-import CommencementIcon from "@/assets/vectors/processes/Commencement.svg?react";
-import PCIcon from "@/assets/vectors/processes/PC.svg?react";
-import RocketIcon from "@/assets/vectors/processes/Rocket.svg?react";
-import SecurityIcon from "@/assets/vectors/processes/Security.svg?react";
+import { lazy } from "react";
+
+const CommencementIcon = lazy(() => import("@/assets/vectors/processes/Commencement.svg?react"));
+const PCIcon = lazy(() => import("@/assets/vectors/processes/PC.svg?react"));
+const RocketIcon = lazy(() => import("@/assets/vectors/processes/Rocket.svg?react"));
+const SecurityIcon = lazy(() => import("@/assets/vectors/processes/Security.svg?react"));
 
 export const webDevelopmentProcessesConstants = [
   {

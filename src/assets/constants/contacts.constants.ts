@@ -1,5 +1,7 @@
-import Envelope from "@/assets/vectors/Envelope.svg?react";
-import Telephone from "@/assets/vectors/Telephone.svg?react";
+import { lazy } from "react";
+
+const Envelope = lazy(() => import("@/assets/vectors/Envelope.svg?react"));
+const Telephone = lazy(() => import("@/assets/vectors/Telephone.svg?react"));
 
 export const contactsConstants = [
   {

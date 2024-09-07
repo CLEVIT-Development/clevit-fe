@@ -52,13 +52,6 @@ const ContactInfo = () => {
                 <a href={`https://wa.me/${appConfig.contactPhone}`} className="hover:opacity-75">
                   {displayPhoneNumber1}
                 </a>
-                {/*<span className="font-semibold">/</span>*/}
-                {/*<a*/}
-                {/*  href={`https://wa.me/${appConfig.contactPhoneSecondary}`}*/}
-                {/*  className="hover:opacity-75"*/}
-                {/*>*/}
-                {/*  {displayPhoneNumber2}*/}
-                {/*</a>*/}
               </div>
             }
           />
@@ -69,13 +62,6 @@ const ContactInfo = () => {
                 <a href={`https://t.me/${appConfig.contactPhone}`} className="hover:opacity-75">
                   {displayPhoneNumber1}
                 </a>
-                {/*<span className="font-semibold">/</span>*/}
-                {/*<a*/}
-                {/*  href={`https://t.me/${appConfig.contactPhoneSecondary}`}*/}
-                {/*  className="hover:opacity-75"*/}
-                {/*>*/}
-                {/*  {displayPhoneNumber2}*/}
-                {/*</a>*/}
               </div>
             }
           />
@@ -89,30 +75,11 @@ const ContactInfo = () => {
                 >
                   {displayPhoneNumber1}
                 </a>
-                {/*<span className="font-semibold">/</span>*/}
-                {/*<a*/}
-                {/*  href={`viber://chat?number=${appConfig.contactPhoneSecondary}`}*/}
-                {/*  className="hover:opacity-75"*/}
-                {/*>*/}
-                {/*  {displayPhoneNumber2}*/}
-                {/*</a>*/}
               </div>
             }
           />
         </ContactWrapper>
         <ContactWrapper>
-          {/*<ContactItem*/}
-          {/*  icon={<LocationIcon className="fill-white" />}*/}
-          {/*  content={*/}
-          {/*    <a*/}
-          {/*      href={mapUrl}*/}
-          {/*      target="_blank"*/}
-          {/*      rel="noopener noreferrer"*/}
-          {/*      className="hover:opacity-75"*/}
-          {/*    >*/}
-          {/*      {appConfig.contactAddress}*/}
-          {/*    </a>*/}
-          {/*  }*/}
           {/*/>*/}
           <ContactItem
             icon={<LocationIcon className="fill-white" />}

@@ -1,37 +1,40 @@
-import type { FunctionComponent, SVGProps } from "react";
+import { type FunctionComponent, type LazyExoticComponent, type SVGProps, lazy } from "react";
 
-import AntIcon from "@/assets/vectors/technology/Ant.svg?react";
-import CSSIcon from "@/assets/vectors/technology/CSS.svg?react";
-import CypressIcon from "@/assets/vectors/technology/Cypress.svg?react";
-import DynamoDBIcon from "@/assets/vectors/technology/DynamoDB.svg?react";
-import ElasticSearchIcon from "@/assets/vectors/technology/ElasticSearch.svg?react";
-import ExpressIcon from "@/assets/vectors/technology/Express.svg?react";
-import FirebaseIcon from "@/assets/vectors/technology/Firebase.svg?react";
-import GoogleCloudIcon from "@/assets/vectors/technology/GoogleCloud.svg?react";
-import GraphQLIcon from "@/assets/vectors/technology/GraphQL.svg?react";
-import HTMLIcon from "@/assets/vectors/technology/HTML.svg?react";
-import JestIcon from "@/assets/vectors/technology/Jest.svg?react";
-import MUIIcon from "@/assets/vectors/technology/MUI.svg?react";
-import MariaDBIcon from "@/assets/vectors/technology/MariaDB.svg?react";
-import MicrosoftServerIcon from "@/assets/vectors/technology/MicrosoftServer.svg?react";
-import MongoIcon from "@/assets/vectors/technology/Mongo.svg?react";
-import MySQLIcon from "@/assets/vectors/technology/MySQL.svg?react";
-import NestIcon from "@/assets/vectors/technology/Nest.svg?react";
-import NextIcon from "@/assets/vectors/technology/Next.svg?react";
-import NoSQLIcon from "@/assets/vectors/technology/NoSQL.svg?react";
-import NodeIcon from "@/assets/vectors/technology/Node.svg?react";
-import PostgresIcon from "@/assets/vectors/technology/PostgreSQL.svg?react";
-import ReactIcon from "@/assets/vectors/technology/React.svg?react";
-import RedisIcon from "@/assets/vectors/technology/Redis.svg?react";
-import SASSIcon from "@/assets/vectors/technology/SASS.svg?react";
-import SQLiteIcon from "@/assets/vectors/technology/SQLite.svg?react";
-import SwiftIcon from "@/assets/vectors/technology/Swift.svg?react";
-import TailwindCSSIcon from "@/assets/vectors/technology/Tailwind.svg?react";
-import Typescript from "@/assets/vectors/technology/Typescript.svg?react";
-import ViteIcon from "@/assets/vectors/technology/Vite.svg?react";
-import VueIcon from "@/assets/vectors/technology/Vue.svg?react";
-import WebSocketIcon from "@/assets/vectors/technology/WebSocket.svg?react";
 import type { INavigationData } from "@/shared/ui/Navigation.tsx";
+
+const AntIcon = lazy(() => import("@/assets/vectors/technology/Ant.svg?react"));
+const CSSIcon = lazy(() => import("@/assets/vectors/technology/CSS.svg?react"));
+const CypressIcon = lazy(() => import("@/assets/vectors/technology/Cypress.svg?react"));
+const DynamoDBIcon = lazy(() => import("@/assets/vectors/technology/DynamoDB.svg?react"));
+const ElasticSearchIcon = lazy(() => import("@/assets/vectors/technology/ElasticSearch.svg?react"));
+const ExpressIcon = lazy(() => import("@/assets/vectors/technology/Express.svg?react"));
+const FirebaseIcon = lazy(() => import("@/assets/vectors/technology/Firebase.svg?react"));
+const GoogleCloudIcon = lazy(() => import("@/assets/vectors/technology/GoogleCloud.svg?react"));
+const GraphQLIcon = lazy(() => import("@/assets/vectors/technology/GraphQL.svg?react"));
+const HTMLIcon = lazy(() => import("@/assets/vectors/technology/HTML.svg?react"));
+const JestIcon = lazy(() => import("@/assets/vectors/technology/Jest.svg?react"));
+const MUIIcon = lazy(() => import("@/assets/vectors/technology/MUI.svg?react"));
+const MariaDBIcon = lazy(() => import("@/assets/vectors/technology/MariaDB.svg?react"));
+const MicrosoftServerIcon = lazy(
+  () => import("@/assets/vectors/technology/MicrosoftServer.svg?react")
+);
+const MongoIcon = lazy(() => import("@/assets/vectors/technology/Mongo.svg?react"));
+const MySQLIcon = lazy(() => import("@/assets/vectors/technology/MySQL.svg?react"));
+const NestIcon = lazy(() => import("@/assets/vectors/technology/Nest.svg?react"));
+const NextIcon = lazy(() => import("@/assets/vectors/technology/Next.svg?react"));
+const NoSQLIcon = lazy(() => import("@/assets/vectors/technology/NoSQL.svg?react"));
+const NodeIcon = lazy(() => import("@/assets/vectors/technology/Node.svg?react"));
+const PostgresIcon = lazy(() => import("@/assets/vectors/technology/PostgreSQL.svg?react"));
+const ReactIcon = lazy(() => import("@/assets/vectors/technology/React.svg?react"));
+const RedisIcon = lazy(() => import("@/assets/vectors/technology/Redis.svg?react"));
+const SASSIcon = lazy(() => import("@/assets/vectors/technology/SASS.svg?react"));
+const SQLiteIcon = lazy(() => import("@/assets/vectors/technology/SQLite.svg?react"));
+const SwiftIcon = lazy(() => import("@/assets/vectors/technology/Swift.svg?react"));
+const TailwindCSSIcon = lazy(() => import("@/assets/vectors/technology/Tailwind.svg?react"));
+const Typescript = lazy(() => import("@/assets/vectors/technology/Typescript.svg?react"));
+const ViteIcon = lazy(() => import("@/assets/vectors/technology/Vite.svg?react"));
+const VueIcon = lazy(() => import("@/assets/vectors/technology/Vue.svg?react"));
+const WebSocketIcon = lazy(() => import("@/assets/vectors/technology/WebSocket.svg?react"));
 
 export interface ITabsConstant extends INavigationData {
   description?: string;
@@ -40,7 +43,7 @@ export interface ITabsConstant extends INavigationData {
 export interface ITechnologyConstant {
   id: number;
   title: string;
-  Icon: FunctionComponent<SVGProps<SVGSVGElement>>;
+  Icon: LazyExoticComponent<FunctionComponent<SVGProps<SVGSVGElement>>>;
 }
 
 export const technologyTabsConstants: ITabsConstant[] = [

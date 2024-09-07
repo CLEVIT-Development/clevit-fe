@@ -1,12 +1,16 @@
 import { useNavigate } from "react-router-dom";
 
-import { RoutePaths } from "@/app/routing/routing.constants.ts";
+import { RoutePaths } from "@/app/routing/routing.constants";
 import Pointer from "@/assets/vectors/Pointer.svg?react";
-import Button from "@/shared/ui/Button.tsx";
-import { ButtonVariant } from "@/types/variant.types.ts";
+import Button from "@/shared/ui/Button";
+import { ButtonVariant } from "@/types/variant.types";
 
 const RequestQuoteSection = () => {
   const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    navigate(RoutePaths.Calendly);
+  };
 
   return (
     <section className="md:w-full md:max-w-[1280px] p-3 bg-quoteGradient rounded-lg-l md:py-[84px] xs:py-6 md:px-[46px] flex md:flex-row xs:flex-col items-center justify-center md:space-x-[73px] mb-24">
@@ -16,7 +20,7 @@ const RequestQuoteSection = () => {
         </p>
         <Pointer className="md:rotate-0 md:scale-100 xs:rotate-[130deg] xs:scale-[.6]" />
       </div>
-      <Button variant={ButtonVariant.Outlined} onClick={() => navigate(RoutePaths.Calendly)}>
+      <Button variant={ButtonVariant.Outlined} onClick={handleNavigate}>
         Book a Free Consultation
       </Button>
     </section>
