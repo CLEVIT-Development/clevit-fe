@@ -20,6 +20,7 @@ const PersonCard: React.FC<PersonCardProps> = ({
   <div className="flex flex-col desktop:items-start items-center min-w-[300px] text-center borderp-4 rounded-lg">
     {image ? (
       <img
+        loading="lazy"
         src={image}
         alt={`${name} ${surname}`}
         className="desktop:w-[410px] w-[305px] h-[452px] object-cover rounded-[10px]"

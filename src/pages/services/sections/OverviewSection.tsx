@@ -27,7 +27,12 @@ const OverviewSection = ({ title, description, image, imageAlt }: Props) => {
             Book a Free Consultation
           </Button>
         </div>
-        <img alt={imageAlt} src={image} className="ml-20 w-[510px] h-[450px] hidden lg:flex" />
+        <img
+          loading="lazy"
+          alt={imageAlt}
+          src={image}
+          className="ml-20 w-[510px] h-[450px] hidden lg:flex"
+        />
       </div>
     </Section>
   );

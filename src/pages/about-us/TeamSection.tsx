@@ -20,7 +20,12 @@ const TeamSection = () => {
         fueled by a team of experts who craft next-generation solutions tailored to your specific
         needs. Focus on your core business, while Clevit handles the tech․
       </p>
-      <img src={TeamPhoto} alt="Team Picture" className="xl:max-w-[1024px] desktop:max-w-[768px]" />
+      <img
+        loading="lazy"
+        src={TeamPhoto}
+        alt="Team Picture"
+        className="xl:max-w-[1024px] desktop:max-w-[768px]"
+      />
       <Button onClick={redirectToCalendly} prefix={<Messages />}>
         Let's Talk
       </Button>

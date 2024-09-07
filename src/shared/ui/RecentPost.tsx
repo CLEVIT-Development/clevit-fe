@@ -10,7 +10,12 @@ interface Props {
 const RecentPost = ({ image, date, description }: Props) => {
   return (
     <div className="flex space-x-2">
-      <img src={image} alt="Recent Post Image" className="w-[54px] h-[52px] rounded" />
+      <img
+        loading="lazy"
+        src={image}
+        alt="Recent Post Image"
+        className="w-[54px] h-[52px] rounded"
+      />
       <div className="flex flex-col space-y-1">
         <p className="flex items-center space-x-1">
           <CalendarBlank />

@@ -17,6 +17,7 @@ const Logo = ({ variant = LogoVariant.Primary, className, onLogoClick, ...props 
 
   return (
     <img
+      loading="lazy"
       alt="CLEVIT Logo"
       src={configVariant[variant]}
       className={classNames("w-[140px] h-[64px] cursor-pointer", className)}

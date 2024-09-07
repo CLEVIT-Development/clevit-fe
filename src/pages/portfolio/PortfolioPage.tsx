@@ -59,6 +59,7 @@ const PortfolioPage = () => {
                 </div>
                 <div>
                   <img
+                    loading="lazy"
                     alt={`${project.title} picture`}
                     src={project.mobileImageUrl}
                     height={395}
@@ -185,6 +186,7 @@ const PortfolioPage = () => {
                 </div>
                 <div className={`${index % 2 !== 0 ? "order-1" : "order-2"}`}>
                   <img
+                    loading="lazy"
                     alt={`${project.title} picture`}
                     src={project.desktopImageUrl}
                     width={678}

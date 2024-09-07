@@ -24,7 +24,12 @@ const ServicesHeading = ({ title, description, image, imageAlt }: Props) => {
         </p>
         <Button onClick={() => navigate(RoutePaths.Calendly)}>Request a Quote</Button>
       </div>
-      <img className="ml-20 w-[470px] h-[350px] hidden lg:flex" alt={imageAlt} src={image} />
+      <img
+        loading="lazy"
+        className="ml-20 w-[470px] h-[350px] hidden lg:flex"
+        alt={imageAlt}
+        src={image}
+      />
     </div>
   );
 };
