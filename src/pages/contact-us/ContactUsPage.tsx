@@ -15,7 +15,7 @@ const ContactUsPage = () => {
         canonicalUrl="https://www.clevit.io/contact-us"
       />
       <Layout headerVariant={HeaderVariant.Tertiary}>
-        <Section>
+        <Section className="mt-8">
           <div className="flex flex-col space-y-6 desktop:max-w-[80%] ">
             <h1 className="desktop:text-3xl text-lg  font-semibold text-gray-200 text-center">
               Your Idea, Our Expertise. Let's Collaborate!

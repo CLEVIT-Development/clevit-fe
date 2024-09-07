@@ -12,8 +12,6 @@ const InlineWidget = lazy(() =>
   import("react-calendly").then((module) => ({ default: module.InlineWidget }))
 );
 
-// Inside your component
-
 const CalendlySection = ({ title }: Props) => {
   const { isExtraSmall, isMobile, isTablet, isCalendlyDesktop } = useResponsive();
 
@@ -35,7 +33,6 @@ const CalendlySection = ({ title }: Props) => {
             }}
           />
         </Suspense>
-        ;
       </div>
     </Section>
   );

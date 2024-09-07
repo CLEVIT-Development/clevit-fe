@@ -4,27 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CLEVIT</title>
-
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/clevit.ico" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
-    <!-- Preconnect to external domains -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" as="font" crossorigin />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Preload external domains -->
+    <link rel="preload" href="https://fonts.googleapis.com" as="font" crossorigin />
+    <link rel="preload" href="https://fonts.gstatic.com" crossorigin />
 
     <!-- Font styles with font-display swap for better performance -->
     <link
-      rel="preconnect"
+      rel="preload"
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
       media="print"
       onload="this.media='all'"
     />
-    <noscript>
-      <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      />
-    </noscript>
   </head>
   <body>
     <div id="root"></div>

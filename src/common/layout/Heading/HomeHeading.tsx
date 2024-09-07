@@ -9,7 +9,7 @@ const HomeHeading = () => {
 
   return (
     <div className="w-full flex flex-col items-center text-center desktop:pb-20 desktop:pt-[240px] xs:pb-6 xs:pt-[125px] xs:px-[30px]">
-      <h1 className="animate-textSlide text-white desktop:text-3xl xs:text-lg xs:font-semibold ">
+      <h1 className="animate-textSlide text-white desktop:text-3xl xs:text-lg xs:font-semibold">
         Web and Mobile App Development Company
       </h1>
       <p className="animate-textSlide text-white text-center desktop:max-w-[80%] desktop:text-lg xs:text-base desktop:mt-4 desktop:mb-9 xs:mt-6 xs:mb-11">
