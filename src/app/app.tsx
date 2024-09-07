@@ -1,27 +1,39 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Helmet } from "react-helmet";
 
 import Routing from "app/routing/routing.tsx";
 
 import ToastService from "@/common/services/toast/ToastService.tsx";
+import useLoadFont from "@/utils/fonts.utils";
 
-const App = () => (
-  <>
-    <Helmet>
-      {/* Google tag (gtag.js) */}
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-3N6NCX16LH"></script>
-      <script>
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
+const App = () => {
+  const handleGtagLoad = () => {
+    (window as any).dataLayer = (window as any).dataLayer || [];
 
-          gtag('config', 'G-3N6NCX16LH');
-        `}
-      </script>
-    </Helmet>
-    <Routing />
-    <ToastService />
-  </>
-);
+    function gtag(...args: any[]) {
+      (window as any).dataLayer.push(args);
+    }
+
+    gtag("js", new Date());
+    gtag("config", "G-3N6NCX16LH");
+  };
+
+  useLoadFont("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+  return (
+    <>
+      <Helmet>
+        {/* Google tag (gtag.js) */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-3N6NCX16LH"
+          onLoad={handleGtagLoad}
+        />
+      </Helmet>
+      <Routing />
+      <ToastService />
+    </>
+  );
+};
 
 export default App;
