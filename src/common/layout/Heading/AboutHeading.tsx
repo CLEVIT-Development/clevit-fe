@@ -7,6 +7,7 @@ const AboutHeading = () => {
         Transforming Ideas into Intelligent Software
       </h1>
       <img
+        loading="lazy"
         src={AboutHeadingBackground}
         alt="AboutPage Heading Background"
         className="desktop:block hidden"

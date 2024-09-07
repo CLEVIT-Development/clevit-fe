@@ -139,11 +139,13 @@ const ProjectSection = () => {
                       </div>
                       <div className="relative self-center mr-4">
                         <img
+                          loading="lazy"
                           src={desktopBackground}
                           alt="Desktop Background"
                           className="lg:max-w-[550px] lg:max-h-[400px] desktop:max-w-[520px] desktop:max-h-[380px] xs:max-w-[300px] xs:max-h-[190px]"
                         />
                         <img
+                          loading="lazy"
                           src={mobileBackground}
                           alt="Mobile Background"
                           className="lg:max-w-[160px] lg:max-h-[300px] desktop:max-w-[142px] desktop:max-h-[286px] xs:max-w-[88px] xs:max-h-[178px] absolute right-0 -bottom-[50px]"

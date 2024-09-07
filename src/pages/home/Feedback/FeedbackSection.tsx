@@ -26,7 +26,7 @@ const FeedbackSection = () => {
       >
         <div className="flex flex-col md:space-y-8 xs:space-y-6">
           <div className="flex items-center max-w-[200px] h-[122px]">
-            <img src={companyLogo} alt="Feedback Company Logo" />
+            <img src={companyLogo} alt="Feedback Company Logo" loading="lazy" />
           </div>
           <p className="md:text-base xs:text-sm text-gray-200 text-left">{description}</p>
         </div>
