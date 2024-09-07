@@ -10,9 +10,14 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   build: {
     target: "esnext",
-    minify: "esbuild",
+    minify: "terser",
     outDir: "dist",
     sourcemap: false,
+    terserOptions: {
+      compress: {
+        drop_console: true,
+      },
+    },
     chunkSizeWarningLimit: 500,
     modulePreload: {
       resolveDependencies: () => {
@@ -23,12 +28,18 @@ export default defineConfig({
       output: {
         sourcemap: false,
         manualChunks: {
-          react: ["react", "react-dom", "react-router-dom"], // Create separate chunks for React and React DOM
-          vendor: ["axios", "lodash"], // Example for vendor libraries
+          // Create separate chunks for React, React DOM, and react-jsx-runtime
+          react: ["react", "react-dom", "react-router-dom", "react/jsx-runtime"],
+          vendor: ["axios"], // Example for vendor libraries
           // Chunk specific libraries
           "react-calendly": ["react-calendly"],
           "react-phone-input-2": ["react-phone-input-2"],
           "tailwind-merge": ["tailwind-merge"],
+          "react-alice-carousel": ["react-alice-carousel", "vanilla-swipe"],
+          "react-hook-form": ["react-hook-form"],
+          yup: ["yup"],
+          "react-toastify": ["react-toastify"],
+          classnames: ["classnames"],
         },
       },
     },
@@ -49,7 +60,7 @@ export default defineConfig({
     react(),
     svgr({ include: "**/*.svg?react" }),
     tsconfigPaths(),
-    compression({ algorithm: "gzip" }),
+    compression({ algorithm: "gzip", threshold: 0 }),
     createHtmlPlugin({
       minify: true,
     }),
