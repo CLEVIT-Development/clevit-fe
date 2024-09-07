@@ -1,7 +1,9 @@
-import PCSmallIcon from "@/assets/vectors/PCSmall.svg?react";
-import ResearchIcon from "@/assets/vectors/processes/Research.svg?react";
-import SupportSmallIcon from "@/assets/vectors/processes/SupportSmall.svg?react";
-import UIUXSmallIcon from "@/assets/vectors/processes/UIUXSmall.svg?react";
+import { lazy } from "react";
+
+const ResearchIcon = lazy(() => import("@/assets/vectors/processes/Research.svg?react"));
+const UIUXSmallIcon = lazy(() => import("@/assets/vectors/processes/UIUXSmall.svg?react"));
+const PCSmallIcon = lazy(() => import("@/assets/vectors/PCSmall.svg?react"));
+const SupportSmallIcon = lazy(() => import("@/assets/vectors/processes/SupportSmall.svg?react"));
 
 export const homeProcessesConstants = [
   {

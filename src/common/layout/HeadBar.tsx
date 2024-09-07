@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import { type ReactNode, memo } from "react";
 import { useEffect, useRef, useState } from "react";
 
 import { HeaderVariant } from "@/types/variant.types";
@@ -40,4 +40,4 @@ const HeadBar = ({ heading, headerVariant }: Props) => {
   );
 };
 
-export default HeadBar;
+export default memo(HeadBar);

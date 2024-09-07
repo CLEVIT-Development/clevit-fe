@@ -1,4 +1,4 @@
-import { InlineWidget } from "react-calendly";
+import { Suspense, lazy } from "react";
 
 import { appConfig } from "@/assets/constants/config.constants.ts";
 import useResponsive from "@/common/hooks/useResponsive.ts";
@@ -7,6 +7,12 @@ import Section from "@/common/templates/Section";
 interface Props {
   title: string;
 }
+
+const InlineWidget = lazy(() =>
+  import("react-calendly").then((module) => ({ default: module.InlineWidget }))
+);
+
+// Inside your component
 
 const CalendlySection = ({ title }: Props) => {
   const { isExtraSmall, isMobile, isTablet, isCalendlyDesktop } = useResponsive();
@@ -19,14 +25,17 @@ const CalendlySection = ({ title }: Props) => {
       headingLevel="h3"
     >
       <div className="w-full">
-        <InlineWidget
-          url={appConfig.shareUrl}
-          styles={{
-            height: isExtraSmall ? 1100 : isTablet || isCalendlyDesktop ? 1100 : 660,
-            marginBottom: isCalendlyDesktop ? (isExtraSmall ? "-80px" : 0) : 50,
-            minWidth: isMobile ? "85vw" : 0,
-          }}
-        />
+        <Suspense>
+          <InlineWidget
+            url={appConfig.shareUrl}
+            styles={{
+              height: isExtraSmall ? 1100 : isTablet || isCalendlyDesktop ? 1100 : 660,
+              marginBottom: isCalendlyDesktop ? (isExtraSmall ? "-80px" : 0) : 50,
+              minWidth: isMobile ? "85vw" : 0,
+            }}
+          />
+        </Suspense>
+        ;
       </div>
     </Section>
   );

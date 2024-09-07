@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 
 import classNames from "classnames";
 import { twMerge } from "tailwind-merge";
@@ -18,38 +18,36 @@ interface Props {
 const Layout = ({
   children,
   heading,
-  className,
+  className = "",
   layoutVariant = LayoutVariant.Primary,
   headerVariant = HeaderVariant.Primary,
 }: Props) => {
+  const mainClasses = twMerge(
+    classNames("relative flex flex-col flex-grow md:px-8", {
+      "pt-0 !px-0": layoutVariant === LayoutVariant.Secondary,
+    })
+  );
+
+  const contentClasses = twMerge(
+    classNames(
+      "flex flex-col lg:space-y-[50px] space-y-12 items-center pt-[40px] desktop:pt-[100px]",
+      {
+        "pb-[100px] pt-[100px] md:pt-[110px]": headerVariant === HeaderVariant.Tertiary,
+        "w-full h-full max-w-full pb-0": layoutVariant === LayoutVariant.Secondary,
+      },
+      className
+    )
+  );
+
   return (
     <div className="w-screen h-screen flex flex-col">
       <HeadBar heading={heading} headerVariant={headerVariant} />
-      <main
-        className={twMerge(
-          classNames("relative flex flex-col flex-grow md:px-8", {
-            ["pt-0 !px-0"]: layoutVariant === LayoutVariant.Secondary,
-          })
-        )}
-      >
-        <div
-          className={twMerge(
-            classNames(
-              "flex flex-col lg:space-y-[50px] space-y-12 items-center pt-[40px] desktop:pt-[100px]",
-              {
-                ["pb-[100px] pt-[100px] md:pt-[110px]"]: headerVariant === HeaderVariant.Tertiary,
-                ["w-full h-full max-w-full pb-0"]: layoutVariant === LayoutVariant.Secondary,
-              },
-              className
-            )
-          )}
-        >
-          {children}
-        </div>
+      <main className={mainClasses}>
+        <div className={contentClasses}>{children}</div>
       </main>
       <Footer />
     </div>
   );
 };
 
-export default Layout;
+export default memo(Layout);

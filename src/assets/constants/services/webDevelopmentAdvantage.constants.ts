@@ -1,17 +1,21 @@
-import { type FunctionComponent, type SVGProps } from "react";
+import { type FunctionComponent, type LazyExoticComponent, type SVGProps, lazy } from "react";
 
-import ExquisiteIcon from "@/assets/vectors/services/Exquisite.svg?react";
-import FlexibilityIcon from "@/assets/vectors/services/Flexibility.svg?react";
-import MedalOriginalityIcon from "@/assets/vectors/services/MedalOriginality.svg?react";
-import MicroscopeQualityIcon from "@/assets/vectors/services/MicroscopeQuality.svg?react";
-import SupportIcon from "@/assets/vectors/services/Support.svg?react";
-import HandshakeIcon from "@/assets/vectors/values/Handshake.svg?react";
+const ExquisiteIcon = lazy(() => import("@/assets/vectors/services/Exquisite.svg?react"));
+const FlexibilityIcon = lazy(() => import("@/assets/vectors/services/Flexibility.svg?react"));
+const MedalOriginalityIcon = lazy(
+  () => import("@/assets/vectors/services/MedalOriginality.svg?react")
+);
+const MicroscopeQualityIcon = lazy(
+  () => import("@/assets/vectors/services/MicroscopeQuality.svg?react")
+);
+const SupportIcon = lazy(() => import("@/assets/vectors/services/Support.svg?react"));
+const HandshakeIcon = lazy(() => import("@/assets/vectors/values/Handshake.svg?react"));
 
 export interface IAdvantageConstant {
   id: number;
   title: string;
   description: string;
-  Icon: FunctionComponent<SVGProps<SVGSVGElement>>;
+  Icon: LazyExoticComponent<FunctionComponent<SVGProps<SVGSVGElement>>>;
 }
 
 export const webDevelopmentAdvantageConstants: IAdvantageConstant[] = [

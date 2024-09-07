@@ -1,7 +1,5 @@
-import type { FunctionComponent, SVGProps } from "react";
-
 export interface IProcess {
   id: number;
-  Icon: FunctionComponent<SVGProps<SVGSVGElement>>;
+  Icon: React.LazyExoticComponent<React.FunctionComponent<React.SVGProps<SVGSVGElement>>>;
   title: string;
 }
