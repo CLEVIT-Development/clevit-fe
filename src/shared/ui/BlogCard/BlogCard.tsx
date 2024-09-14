@@ -18,7 +18,7 @@ interface Props extends ComponentPropsWithoutRef<"div"> {
   date: Date;
 }
 
-const BlogCard = ({ id, image, date, imageAlt, description, readingTime, className }: Props) => {
+const BlogCard = ({ id, date, imageAlt, description, readingTime, className }: Props) => {
   const navigate = useNavigate();
 
   return (
