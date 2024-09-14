@@ -11,14 +11,14 @@ import { formatDate } from "@/utils/date.utils";
 interface Props extends ComponentPropsWithoutRef<"div"> {
   id: string;
   className?: string;
-  description: string;
+  title: string;
   image: string;
   imageAlt?: string;
   readingTime: string;
   date: Date;
 }
 
-const BlogCard = ({ id, date, imageAlt, description, readingTime, className }: Props) => {
+const BlogCard = ({ id, date, imageAlt, title, readingTime, className }: Props) => {
   const navigate = useNavigate();
 
   return (
@@ -26,7 +26,7 @@ const BlogCard = ({ id, date, imageAlt, description, readingTime, className }: P
       role="button"
       onClick={() => navigate(`/blog/${id}`)}
       className={twMerge(
-        "p-6 rounded-lg  transition-all duration-500  desktop:max-w-[420px] space-y-[24px]",
+        "rounded-lg  transition-all duration-500  desktop:max-w-[420px] space-y-[24px]",
         className
       )}
     >
@@ -38,7 +38,7 @@ const BlogCard = ({ id, date, imageAlt, description, readingTime, className }: P
       />
       <div className="space-y-4">
         <span className="text-[#858D9D] text-base">{formatDate(date)}</span>
-        <h3 className="w-full text-gray-200 text-sm font-semibold">{description}</h3>
+        <h3 className="w-full text-gray-200 text-sm font-semibold">{title}</h3>
         <div className="flex space-x-2">
           <IconWrapper icon={<ClockIcon />} className="bg-white" />
           <p className="text-[#858D9D] text-base font-medium">Reading time about {readingTime}</p>

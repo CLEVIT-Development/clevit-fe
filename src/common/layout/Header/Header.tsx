@@ -24,7 +24,6 @@ interface Props {
 const Header = forwardRef(
   ({ headerVariant, scrollY }: Props, ref: ForwardedRef<HTMLDivElement>) => {
     const isWhiteBackground = headerVariant !== HeaderVariant.Primary;
-
     const navigate = useNavigate();
     const { pathname, hash } = useLocation();
     const { isTablet, isDesktop } = useResponsive();

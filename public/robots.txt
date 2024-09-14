@@ -5,7 +5,7 @@ Disallow: /not-found  # Disallow the not-found page
 
 # Allowed pages
 Allow: /about-us
-Allow: /blog
+Allow: /blogs
 Allow: /contact-us
 Allow: /home
 Allow: /portfolio
