@@ -2,6 +2,7 @@ import AboutPage from "@/pages/about-us/AboutPage";
 import BlogsPage from "@/pages/blog/BlogsPage.tsx";
 import SingleBlogPage from "@/pages/blog/SingleBlogPage";
 import ContactUsPage from "@/pages/contact-us/ContactUsPage.tsx";
+import Faq from "@/pages/faq/FaqPage";
 import HomePage from "@/pages/home/HomePage.tsx";
 import PortfolioPage from "@/pages/portfolio/PortfolioPage";
 import PrivacyPolicy from "@/pages/privacy-policy/PrivacyPolicy.tsx";
@@ -32,7 +33,7 @@ export const headerMenuLinks = [
   { id: 3, label: "About Us", link: RoutePaths.About },
   { id: 4, label: "Technologies", link: RoutePaths.Technologies },
   { id: 5, label: "Industries", link: RoutePaths.Industries },
-  // { id: 6, label: "FAQ", link: RoutePaths.FAQ },
+  { id: 6, label: "FAQ", link: RoutePaths.FAQ },
   { id: 7, label: "Blog", link: RoutePaths.Blogs },
   { id: 8, label: "Contact Us", link: RoutePaths.ContactUs },
 ];
@@ -48,4 +49,5 @@ export const routerElements = [
   { path: RoutePaths.Blog, Element: SingleBlogPage },
   { path: RoutePaths.Portfolio, Element: PortfolioPage },
   { path: RoutePaths.WebDevelopment, Element: WebDevelopmentPage },
+  { path: RoutePaths.FAQ, Element: Faq },
 ];
