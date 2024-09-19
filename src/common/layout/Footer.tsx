@@ -99,7 +99,7 @@ const Footer = () => {
           </Link>
           <div className="w-0.5 h-4 bg-gray-100" />
           <Link to={RoutePaths.TermsAndConditions} className="text-xs text-gray-100 opacity-60">
-            Terms And Conditions
+            Terms And Conditions and Edo
           </Link>
         </div>
         <Copyright />
