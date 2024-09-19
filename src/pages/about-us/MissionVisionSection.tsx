@@ -1,6 +1,7 @@
 import MissionVisionDesktop from "@/assets/images/missionVision/MissionVisionDesktop.webp";
 import MissionVisionMobile from "@/assets/images/missionVision/MissionVisionMobile.webp";
 import useResponsive from "@/common/hooks/useResponsive";
+import Section from "@/common/templates/Section";
 
 interface MissionSingleItemProps {
   title: string;
@@ -18,11 +19,11 @@ const MissionVisionSection = () => {
   const { isMobile } = useResponsive();
 
   return (
-    <section
+    <Section
+      className="self-center desktop:max-w-[80%] bg-gray-500 rounded-lg-l md:space-y-12 space-y-6 py-12 md:pl-[100px] md:pr-[53px] pl-[20px] pr-[20px] bg-no-repeat md:bg-missionDesktopPosition bg-missionMobilePosition"
       style={{
         backgroundImage: isMobile ? `url(${MissionVisionMobile})` : `url(${MissionVisionDesktop})`,
       }}
-      className="bg-gray-500 rounded-lg-l md:space-y-12 space-y-6 py-12 md:pl-[100px] md:pr-[53px] pl-[20px] pr-[20px] bg-no-repeat md:bg-missionDesktopPosition bg-missionMobilePosition"
     >
       <MissionSingleItem
         title="Mission"
@@ -33,7 +34,7 @@ const MissionVisionSection = () => {
         title="Vision"
         description="We become the premier web and mobile app development company, setting industry standards for excellence. We aim to be the trusted ally of businesses, providing tailored solutions that enable success in the evolving digital landscape."
       />
-    </section>
+    </Section>
   );
 };
 

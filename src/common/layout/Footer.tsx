@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 import { RoutePaths } from "@/app/routing/routing.constants.ts";
 import { contactsConstants } from "@/assets/constants/contacts.constants.ts";
+import { industriesConstants } from "@/assets/constants/industries.constants";
 import { servicesConstants } from "@/assets/constants/services.constants.ts";
 import { socialLinksConstants } from "@/assets/constants/socials.constants.ts";
 import Copyright from "@/shared/ui/Copyright";
@@ -13,7 +14,7 @@ const Footer = () => {
 
   return (
     <footer className="flex flex-col bg-black lg:pt-12 lg:pb-6 xs:pt-5 xs:pb-4 lg:px-20 xs:px-5 z-[20]">
-      <div className="xs:grid xs:grid-cols-2 xs:gap-8 lg:grid-cols-4">
+      <div className="xs:grid xs:grid-cols-2 xs:gap-8 lg:grid-cols-5">
         <div className="flex flex-col space-y-4 sm:col-auto xs:col-span-2">
           <div>
             <Logo />
@@ -36,19 +37,19 @@ const Footer = () => {
         <div className="flex flex-col space-y-4 sm:mx-auto lg:ml-auto">
           <h6 className="font-bold lg:text-md-l xs:text-md text-white opacity-60">Company</h6>
           <Link to={RoutePaths.About}>
-            <p className="text-gray-100 font-medium lg:text-md xs:text-base">About Us</p>
+            <p className="text-gray-100 font-medium lg:text-md xs:text-sm">About Us</p>
           </Link>
           <Link to={RoutePaths.Services}>
-            <p className="text-gray-100 font-medium lg:text-md xs:text-base">Services</p>
+            <p className="text-gray-100 font-medium lg:text-md xs:text-sm">Services</p>
           </Link>
           <Link to={RoutePaths.Portfolio}>
-            <p className="text-gray-100 font-medium lg:text-md xs:text-base">Portfolio</p>
+            <p className="text-gray-100 font-medium lg:text-md xs:text-sm">Portfolio</p>
           </Link>
           <Link to={RoutePaths.Technologies}>
-            <p className="text-gray-100 font-medium lg:text-md xs:text-base">Technologies</p>
+            <p className="text-gray-100 font-medium lg:text-md xs:text-sm">Technologies</p>
           </Link>
           <Link to={RoutePaths.ContactUs}>
-            <p className="text-gray-100 font-medium lg:text-md xs:text-base">Contact Us</p>
+            <p className="text-gray-100 font-medium lg:text-md xs:text-sm">Contact Us</p>
           </Link>
         </div>
         <div className="flex flex-col space-y-4 mr-auto lg:ml-auto">
@@ -56,8 +57,20 @@ const Footer = () => {
           {servicesConstants.map(({ id, title }) => {
             return (
               <div key={id} role="button" onClick={() => navigate(id)}>
-                <p className="text-gray-100 font-medium lg:text-md xs:text-base cursor-pointer">
+                <p className="text-gray-100 font-medium lg:text-md xs:text-sm cursor-pointer">
                   {title}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+        <div className="flex flex-col space-y-4 mr-auto lg:ml-auto">
+          <h6 className="font-bold lg:text-md-l xs:text-md text-white opacity-60">Industries</h6>
+          {[...industriesConstants.map((item) => item)].map((name, index) => {
+            return (
+              <div key={index} role="button">
+                <p className="text-gray-100 font-medium lg:text-md xs:text-sm cursor-pointer">
+                  {name}
                 </p>
               </div>
             );
