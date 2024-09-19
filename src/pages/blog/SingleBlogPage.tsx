@@ -18,7 +18,6 @@ const SingleBlogPage = () => {
       <PageSEO canonicalUrl="https://www.clevit.io/blog" />
       <Layout
         headerVariant={HeaderVariant.Primary}
-        className="mt-11"
         heading={
           <Gradient className="h-[200px] w-full">
             {/* Gradient doesn't appear without SingleBlogHeading, even though it's not strictly necessary */}
