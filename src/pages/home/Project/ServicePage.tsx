@@ -20,7 +20,7 @@ const ServicePage = () => {
           </Gradient>
         }
       >
-        <section className="w-full flex flex-col  items-center justify-start ">
+        <section className="w-full flex flex-col  items-center justify-start p-0	 ">
           {servicePageData.map((element, index) => {
             console.log(index);
             console.log(element.title.includes("Mobile"));
@@ -34,29 +34,34 @@ const ServicePage = () => {
                       ? `url(${BackgroundGradientReverse})`
                       : `url(${BackgroundGradient})`,
                 }}
-                className={`w-full max-w-screen-2xl bg-no-repeat  flex  justify-between items-center py-16 ${index % 2 === 0 ? "flex-row bg-right " : "flex-row-reverse bg-left"}`}
+                className={`w-full desktop:max-w-screen-2xl bg-no-repeat bg-[length:285px_302px]  flex  justify-between items-center desktop:py-16 py-10 ${index % 2 === 0 ? "flex-row bg-right " : "flex-row-reverse bg-left"}`}
               >
-                <div className="w-1/2  desktop:px-[72px] desktop:py-[60px]">
+                <div className="desktop:w-1/2 w-full desktop:px-[72px] desktop:py-[60px] flex flex-col justify-center items-center">
                   {" "}
                   <h2 className="text-[#314252] text-lg font-bold desktop:text-2xl">
                     {element.title}
                   </h2>{" "}
-                  <p className="w-[516px] text-lg">{element.description}</p>
-                  <div className="w-full flex justify-start gap-x-4 pt-8">
-                    <Button>{element.buttonTitle}</Button>
+                  <p className="desktop:w-[516px] desktop:text-lg  my-3 text-center leading-5	 text-xs w-[266px]">
+                    {element.description}
+                  </p>
+                  <div className="w-full flex desktop:justify-start justify-center  gap-x-4 pt-8">
+                    <Button>
+                      {" "}
+                      <p className="text-sm"> {element.buttonTitle}</p>
+                    </Button>
                     <Button
-                      className="!text-black !border-black !decoration-black"
+                      className="!text-black !border-black !decoration-black "
                       variant={ButtonVariant.Outlined}
                     >
-                      <p className="!text-black "> learn more</p>
+                      <p className="!text-black text-sm "> learn more</p>
                     </Button>
                   </div>
                 </div>
-                <div className="w-1/2 flex items-center justify-center ">
+                <div className=" desktop:flex hidden w-1/2  items-center justify-center  desktop:block ">
                   <img
                     src={element.Icon}
                     alt={element.title}
-                    className={element.title.includes("Mobile") ? "transform scale-x-[-1]" : ""}
+                    className={element.title.includes("Mobile") ? "transform scale-x-[-1] " : "	"}
                   />
                 </div>
               </div>
