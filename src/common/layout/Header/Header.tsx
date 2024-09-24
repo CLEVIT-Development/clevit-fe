@@ -24,7 +24,6 @@ interface Props {
 const Header = forwardRef(
   ({ headerVariant, scrollY }: Props, ref: ForwardedRef<HTMLDivElement>) => {
     const isWhiteBackground = headerVariant !== HeaderVariant.Primary;
-
     const navigate = useNavigate();
     const { pathname, hash } = useLocation();
     const { isTablet, isDesktop } = useResponsive();
@@ -47,18 +46,13 @@ const Header = forwardRef(
               key={headerMenuLink.id}
               to={headerMenuLink.link}
               className={twMerge(
-                classNames(
-                  "relative text-white lg:text-md text-lg font-medium " +
-                    "lg:after:transition-all lg:after:duration-300 lg:after:absolute lg:after:w-0 lg:after:h-0.5 lg:after:left-0 lg:after:right-0 lg:after:-bottom-2 lg:after:content-['.'] lg:after:text-transparent " +
-                    "lg:hover:after:w-full lg:hover:after:bg-purple-100",
-                  {
-                    ["text-purple-1300"]: isWhiteBackground,
-                    ["text-purple-300 lg:after:w-full lg:after:bg-purple-100"]:
-                      isActive && isWhiteBackground,
-                    ["lg:text-gray-100 lg:opacity-70 lg:after:w-full lg:after:bg-purple-100"]:
-                      isActive && !isWhiteBackground,
-                  }
-                )
+                classNames(" text-white lg:text-md text-lg font-medium ", {
+                  ["text-purple-1300"]: isWhiteBackground,
+                  ["text-purple-300 lg:after:w-full lg:after:bg-purple-100"]:
+                    isActive && isWhiteBackground,
+                  ["lg:text-purple-400 lg:opacity-70 lg:after:w-full lg:after:bg-purple-100"]:
+                    isActive && !isWhiteBackground,
+                })
               )}
             >
               {headerMenuLink.label}

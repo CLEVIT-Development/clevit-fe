@@ -123,7 +123,7 @@ const ContactUs = () => {
             className="desktop:col-span-2"
             placeholder="Please select service"
             error={errors.service?.message}
-            items={servicesConstants}
+            items={[...servicesConstants, { id: "other", title: "Other" }]}
             {...register("service")}
           />
           <TextArea

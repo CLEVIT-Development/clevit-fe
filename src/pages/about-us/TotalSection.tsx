@@ -21,7 +21,7 @@ const TotalItem = ({ value, title }: TotalItemProps) => (
 
 const TotalSection = ({ projectsValue, stuffValue, servedValue, deliveredPercent }: Props) => {
   return (
-    <Section>
+    <Section className="self-center desktop:max-w-[80%]">
       <div
         style={{
           backgroundSize: "cover",
