@@ -36,12 +36,12 @@ const ServicePage = () => {
                 }}
                 className={`w-full desktop:max-w-screen-2xl bg-no-repeat bg-[length:285px_302px]  flex  justify-between items-center desktop:py-16 py-10 ${index % 2 === 0 ? "flex-row bg-right " : "flex-row-reverse bg-left"}`}
               >
-                <div className="desktop:w-1/2 w-full desktop:px-[72px] desktop:py-[60px] flex flex-col justify-center items-center">
+                <div className="desktop:w-1/2 w-full desktop:px-[72px] desktop:py-[60px] desktop:justify-start desktop:items-start flex flex-col justify-center items-center">
                   {" "}
                   <h2 className="text-[#314252] text-lg font-bold desktop:text-2xl">
                     {element.title}
                   </h2>{" "}
-                  <p className="desktop:w-[516px] desktop:text-lg  my-3 text-center leading-5	 text-xs w-[266px]">
+                  <p className="desktop:w-[516px] desktop:text-lg  my-3 text-center desktop:text-start leading-5	 text-xs w-[266px]">
                     {element.description}
                   </p>
                   <div className="w-full flex desktop:justify-start justify-center  gap-x-4 pt-8">
