@@ -4,10 +4,10 @@ import SingleBlogPage from "@/pages/blog/SingleBlogPage";
 import ContactUsPage from "@/pages/contact-us/ContactUsPage.tsx";
 import Faq from "@/pages/faq/FaqPage";
 import HomePage from "@/pages/home/HomePage.tsx";
-import ServicePage from "@/pages/home/Project/ServicePage";
 import PortfolioPage from "@/pages/portfolio/PortfolioPage";
 import PrivacyPolicy from "@/pages/privacy-policy/PrivacyPolicy.tsx";
 import CalendlyPage from "@/pages/request-demo/CalendlyPage";
+import ServicePage from "@/pages/services/ServicePage";
 import WebDevelopmentPage from "@/pages/services/WebDevelopmentPage.tsx";
 import TermsAndConditions from "@/pages/terms-and-conditions/TermsAndConditions.tsx";
 
