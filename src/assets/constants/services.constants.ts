@@ -81,7 +81,6 @@ export const servicesConstants = [
     Icon: Settings,
     image: MachineLearning,
     buttonTitle: "Discover More",
-
     title: "Machine Learning Development",
     route: "/",
     description:
@@ -135,7 +134,7 @@ export const servicesConstants = [
     image: OutStaffingImage,
     Icon: Outstaffing,
     title: "Outstaffing",
-    buttonTitle: "Plan Your Project",
+    buttonTitle: "Hire Now",
 
     route: "/",
     description:
@@ -150,7 +149,7 @@ export const servicesConstants = [
     Icon: PM,
     title: "Project Management",
     route: "/",
-    buttonTitle: "See Our Work",
+    buttonTitle: "Plan Your Project",
 
     description:
       "Make your projects successful with the help of our Project Management services. Through planning to implementation, we are fully involved in every detail of the project to meet your business needs.",
@@ -163,6 +162,7 @@ export const servicesConstants = [
     image: UIUXDesigne,
     Icon: UIUX,
     title: "UI/UX Design",
+    buttonTitle: "See Our Work",
     route: "/",
     description:
       "Design captivating and user-friendly interfaces with our UI/UX Design solutions. Our main goal here is to create sleek and polished interfaces with a highly usable design that enhances the experience.",
@@ -177,10 +177,8 @@ export const servicesConstants = [
     title: "Digital Marketing",
     route: "/",
     buttonTitle: "Start Marketing",
-
     description:
       "Unlock the potential of your brand with our Digital Marketing solutions. We create a marketing strategy in accordance with the effective marketing data to expand your exposure, interact with your target audience, and generate sales.",
-
     descriptionOffer:
       "We help you reach your target audience with effective digital marketing strategies.",
   },

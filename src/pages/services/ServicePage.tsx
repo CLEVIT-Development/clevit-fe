@@ -1,4 +1,3 @@
-import { servicePageData } from "@/assets/constants/servicePageData.constants";
 import "@/assets/constants/services.constants";
 import { servicesConstants } from "@/assets/constants/services.constants";
 import ServiceHeading from "@/common/layout/Heading/ServiceHeading";
@@ -20,10 +19,10 @@ const ServicePage = () => {
         }
       >
         <section className="w-full flex flex-col  items-center justify-start p-0	 ">
-          {servicesConstants.map(({ Icon, description, title, buttonTitle }, index) => {
+          {servicesConstants.map(({ image, description, title, buttonTitle }, index) => {
             return (
               <ServiceBox
-                image={Icon}
+                Image={image}
                 description={description}
                 title={title}
                 buttonTitle={buttonTitle}

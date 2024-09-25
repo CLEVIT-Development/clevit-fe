@@ -11,10 +11,10 @@ interface ServiceBoxProps {
   index: number;
   description: string;
   buttonTitle: string;
-  Icon: string;
+  Image: string;
 }
 
-const ServiceBox: FC<ServiceBoxProps> = ({ title, index, description, buttonTitle, Icon }) => {
+const ServiceBox: FC<ServiceBoxProps> = ({ title, index, description, buttonTitle, Image }) => {
   return (
     <div
       key={index}
@@ -45,7 +45,7 @@ const ServiceBox: FC<ServiceBoxProps> = ({ title, index, description, buttonTitl
       </div>
       <div className=" desktop:flex hidden w-1/2  items-center justify-center  desktop:block ">
         <img
-          src={Icon}
+          src={Image}
           alt={title}
           className={title.includes("Mobile") ? "transform scale-x-[-1] " : "	"}
         />
