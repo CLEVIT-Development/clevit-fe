@@ -8,7 +8,6 @@ import useInteractiveObserver from "@/common/hooks/useInteractiveObserver.ts";
 import useScrollView from "@/common/hooks/useScrollView.ts";
 import Section from "@/common/templates/Section.tsx";
 import ServiceCard from "@/shared/ui/ServiceCard/ServiceCard";
-import { orderUtils } from "@/utils/order.utils.ts";
 
 const ServiceSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -33,20 +32,18 @@ const ServiceSection = () => {
     <Section
       ref={sectionRef}
       title="Services We Offer"
-      className="scroll-mt-[150px] md:px-0"
+      className="scroll-mt-[150px] md:px-0 "
       headingLevel="h2"
     >
-      <div className="h-full w-full rounded-lg bg-white xs:shadow-base-100 sm:shadow-none grid sm:gap-5 xs:grid-cols-1 xs:gap-0 sm:grid-cols-2 desktop:grid-cols-3">
-        {servicesConstants.map(({ id, Icon, title, description, route }, index) => (
+      <div className="h-full w-full  rounded-lg bg-white xs:shadow-base-100 sm:shadow-none grid sm:gap-5 xs:grid-cols-1 xs:gap-0 sm:grid-cols-2 desktop:grid-cols-3 justify-items-center items-center pb-20	">
+        {servicesConstants.map(({ id, Icon, title, route }) => (
           <ServiceCard
             key={id}
             id={id}
             title={title}
             icon={<Icon />}
-            description={description}
             route={route}
             className="shadow-none"
-            order={orderUtils(index + 1)}
           />
         ))}
       </div>
