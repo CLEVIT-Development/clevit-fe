@@ -9,31 +9,29 @@ import CalendlySection from "../home/CalendlySection";
 
 const ServicePage = () => {
   return (
-    <>
-      <Layout
-        layoutClassName="!px-0"
-        heading={
-          <Gradient>
-            <ServiceHeading />
-          </Gradient>
-        }
-      >
-        <section className="w-full flex flex-col  items-center justify-start p-0	 ">
-          {servicesConstants.map(({ image, description, title, buttonTitle }, index) => {
-            return (
-              <ServiceBox
-                Image={image}
-                description={description}
-                title={title}
-                buttonTitle={buttonTitle}
-                index={index}
-              />
-            );
-          })}
-          <CalendlySection title="Ready to turn your vision into reality? The journey starts here. We're excited to meet you." />
-        </section>
-      </Layout>
-    </>
+    <Layout
+      layoutClassName="!px-0"
+      heading={
+        <Gradient>
+          <ServiceHeading />
+        </Gradient>
+      }
+    >
+      <section className="w-full flex flex-col  items-center justify-start p-0	 ">
+        {servicesConstants.map(({ image, description, title, buttonTitle }, index) => {
+          return (
+            <ServiceBox
+              Image={image}
+              description={description}
+              title={title}
+              buttonTitle={buttonTitle}
+              index={index}
+            />
+          );
+        })}
+        <CalendlySection title="Ready to turn your vision into reality? The journey starts here. We're excited to meet you." />
+      </section>
+    </Layout>
   );
 };
 
