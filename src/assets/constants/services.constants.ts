@@ -1,10 +1,10 @@
 import { ServicesIdConstants } from "@/assets/constants/services-id.constants.ts";
 import AIintegration from "@/assets/images/services/AIintegration.png";
-import AppDevelopmentOverview from "@/assets/images/services/AppDevelopmentOverview.png";
+import AppDevelopmentOverviewReverse from "@/assets/images/services/AppDevelopmentOverviewReverse.png";
 import DevopsServices from "@/assets/images/services/DevopsServices.png";
 import DigitalMarketingImage from "@/assets/images/services/DigitalMarketingImage.png";
 import MachineLearning from "@/assets/images/services/MachineLearning.png";
-import OutStaffingImage from "@/assets/images/services/OutStaffing.png";
+import OutStaffingImage from "@/assets/images/services/Outstaffing.png";
 import ProjectManagment from "@/assets/images/services/ProjectManagment.png";
 import QualityAssurance from "@/assets/images/services/QualityAssurance.png";
 import SupportMaintenance from "@/assets/images/services/Support&Maintenance.png";
@@ -28,6 +28,7 @@ export const servicesConstants = [
   {
     id: ServicesIdConstants.Web,
     image: WebDevelopmentOverviewImage,
+    imageAlt: "web development image",
     Icon: PC,
     buttonTitle: "Get a Quote",
     title: "Web Development",
@@ -40,7 +41,8 @@ export const servicesConstants = [
   {
     id: ServicesIdConstants.Mobile,
     Icon: Phone,
-    image: AppDevelopmentOverview,
+    image: AppDevelopmentOverviewReverse,
+    imageAlt: "Mobile App Development image",
     buttonTitle: " Start Your Project",
     title: "Mobile App Development",
     route: "/",
@@ -53,7 +55,7 @@ export const servicesConstants = [
     Icon: Devops,
     image: DevopsServices,
     buttonTitle: "Consult with Us",
-
+    imageAlt: "Devops service image",
     title: "DevOps",
     route: "/",
     description:
@@ -67,7 +69,7 @@ export const servicesConstants = [
     Icon: Robot,
     image: AIintegration,
     buttonTitle: "Request a Demo",
-
+    imageAlt: "AI integration image",
     title: "AI Integration",
     route: "/",
     description:
@@ -80,6 +82,7 @@ export const servicesConstants = [
     id: ServicesIdConstants.ML,
     Icon: Settings,
     image: MachineLearning,
+    imageAlt: "Machine Learning Development image ",
     buttonTitle: "Discover More",
     title: "Machine Learning Development",
     route: "/",
@@ -94,7 +97,7 @@ export const servicesConstants = [
     Icon: Security,
     image: QualityAssurance,
     buttonTitle: "Book a Consultation",
-
+    imageAlt: "Quality Assurance image",
     title: "Quality Assurance",
     route: "/",
     description:
@@ -107,6 +110,7 @@ export const servicesConstants = [
     id: ServicesIdConstants.Assessment,
     Icon: TechnicalAssessment,
     buttonTitle: "Schedule an Assessment",
+    imageAlt: "Technical Assessment image",
     image: TechnicalAssessmentImage,
     title: "Technical Assessment",
     route: "/",
@@ -120,6 +124,7 @@ export const servicesConstants = [
     id: ServicesIdConstants.Maintenance,
     Icon: Support,
     buttonTitle: " Get Support",
+    imageAlt: "Support & Maintence image",
     image: SupportMaintenance,
     title: "Support & Maintenance",
     route: "/",
@@ -135,7 +140,7 @@ export const servicesConstants = [
     Icon: Outstaffing,
     title: "Outstaffing",
     buttonTitle: "Hire Now",
-
+    imageAlt: "Outstaffing image",
     route: "/",
     description:
       "Outstaffing – build your team with our professionals. Our skilled professionals blend effectively into your team, enabling you to manage your growing projects effectively.",
@@ -150,7 +155,7 @@ export const servicesConstants = [
     title: "Project Management",
     route: "/",
     buttonTitle: "Plan Your Project",
-
+    imageAlt: "Project Managment image",
     description:
       "Make your projects successful with the help of our Project Management services. Through planning to implementation, we are fully involved in every detail of the project to meet your business needs.",
 
@@ -162,6 +167,7 @@ export const servicesConstants = [
     image: UIUXDesigne,
     Icon: UIUX,
     title: "UI/UX Design",
+    imageAlt: "UI/UX designe image ",
     buttonTitle: "See Our Work",
     route: "/",
     description:
@@ -174,6 +180,7 @@ export const servicesConstants = [
     id: ServicesIdConstants.Marketing,
     image: DigitalMarketingImage,
     Icon: DigitalMarketing,
+    imageAlt: "web development image",
     title: "Digital Marketing",
     route: "/",
     buttonTitle: "Start Marketing",

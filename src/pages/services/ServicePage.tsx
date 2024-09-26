@@ -18,10 +18,11 @@ const ServicePage = () => {
       }
     >
       <section className="w-full flex flex-col  items-center justify-start p-0	 ">
-        {servicesConstants.map(({ image, description, title, buttonTitle }, index) => {
+        {servicesConstants.map(({ image, imageAlt, description, title, buttonTitle }, index) => {
           return (
             <ServiceBox
-              Image={image}
+              imageAlt={imageAlt}
+              image={image}
               description={description}
               title={title}
               buttonTitle={buttonTitle}
