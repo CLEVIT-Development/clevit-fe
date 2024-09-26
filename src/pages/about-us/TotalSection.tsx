@@ -25,7 +25,7 @@ const TotalSection = ({ projectsValue, stuffValue, servedValue }: Props) => {
         style={{
           backgroundSize: "cover",
           backgroundPosition: "center",
-          background: "linear-gradient(160deg, #E6C6FA36 30%, white 50%, #E6C6FA36 75%)",
+          background: "rgba(226, 211, 235, 1)",
         }}
         className="w-full flex-1 flex md:justify-evenly gap-[16px] md:space-y-0 space-y-1 md:flex-row flex-col items-center md:py-[60px] md:px-[30px] py-5 rounded-lg-l bg-no-repeat md:bg-totalDesktopPosition bg-totalMobilePosition"
       >
