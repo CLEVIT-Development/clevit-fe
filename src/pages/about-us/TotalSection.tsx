@@ -12,8 +12,8 @@ interface TotalItemProps {
 }
 
 const TotalItem = ({ value, title }: TotalItemProps) => (
-  <div className="desktop:max-w-auto desktop:w-[323px] max-w-[323px] w-[95%] h-[178px] px-[15px] flex flex-col  md:items-center rounded-[28px] bg-white	 items-center  py-6 shadow-[0px_35.63px_95.02px_0px_rgba(44,22,84,0.07)]">
-    <span className="md:text-4xl text-4xl text-purple-300">{value}</span>
+  <div className="desktop:max-w-auto desktop:w-[323px] max-w-[323px] w-[95%] h-[178px] px-4  py-6 flex flex-col  md:items-center rounded-[28px] bg-white	 items-center shadow-[0px_35.63px_95.02px_0px_rgba(44,22,84,0.07)]">
+    <span className="md:text-4xl font-semibold	 text-4xl text-purple-300">{value}</span>
     <span className="md:text-lg-l text-base text-purple-300">{title}</span>
   </div>
 );

@@ -7,13 +7,14 @@ import HomePage from "@/pages/home/HomePage.tsx";
 import PortfolioPage from "@/pages/portfolio/PortfolioPage";
 import PrivacyPolicy from "@/pages/privacy-policy/PrivacyPolicy.tsx";
 import CalendlyPage from "@/pages/request-demo/CalendlyPage";
+import ServicePage from "@/pages/services/ServicePage";
 import WebDevelopmentPage from "@/pages/services/WebDevelopmentPage.tsx";
 import TermsAndConditions from "@/pages/terms-and-conditions/TermsAndConditions.tsx";
 
 export enum RoutePaths {
   Home = "/",
   About = "/about-us",
-  Services = "/#services",
+  Services = "/services",
   Technologies = "/#technologies",
   Industries = "/#industries",
   Portfolio = "/portfolio",
@@ -40,6 +41,7 @@ export const headerMenuLinks = [
 
 export const routerElements = [
   { path: RoutePaths.Home, Element: HomePage },
+  { path: RoutePaths.Services, Element: ServicePage },
   { path: RoutePaths.About, Element: AboutPage },
   { path: RoutePaths.ContactUs, Element: ContactUsPage },
   { path: RoutePaths.PrivacyPolicy, Element: PrivacyPolicy },

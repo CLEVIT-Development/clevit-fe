@@ -11,11 +11,12 @@ interface Props extends ComponentPropsWithoutRef<"div"> {
   id: string;
   title: string;
   className?: string;
+  descriptionOffer: string;
   icon: React.ReactNode;
   route: string;
 }
 
-const ServiceCard = ({ id, icon, title, route, className }: Props) => {
+const ServiceCard = ({ id, icon, order, title, route, descriptionOffer, className }: Props) => {
   const sectionCardRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
 
@@ -40,6 +41,7 @@ const ServiceCard = ({ id, icon, title, route, className }: Props) => {
         </div>
         <h3 className="w-full text-gray-200 text-md  font-bold !ml-0">{title}</h3>
       </div>
+      <p className="text-gray-200 text-base break-words">{descriptionOffer}</p>
     </div>
   );
 };

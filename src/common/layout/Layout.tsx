@@ -13,6 +13,7 @@ interface Props {
   heading?: React.ReactNode;
   headerVariant?: HeaderVariant;
   layoutVariant?: LayoutVariant;
+  layoutClassName?: string;
 }
 
 const Layout = ({
@@ -21,11 +22,16 @@ const Layout = ({
   className = "",
   layoutVariant = LayoutVariant.Primary,
   headerVariant = HeaderVariant.Primary,
+  layoutClassName,
 }: Props) => {
   const mainClasses = twMerge(
-    classNames("relative flex flex-col flex-grow md:px-8", {
-      "pt-0 !px-0": layoutVariant === LayoutVariant.Secondary,
-    })
+    classNames(
+      "relative flex flex-col flex-grow md:px-8",
+      {
+        "pt-0 !px-0": layoutVariant === LayoutVariant.Secondary,
+      },
+      layoutClassName
+    )
   );
 
   const contentClasses = twMerge(
