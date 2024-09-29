@@ -16,7 +16,7 @@ interface Props extends ComponentPropsWithoutRef<"div"> {
   route: string;
 }
 
-const ServiceCard = ({ id, icon, order, title, route, descriptionOffer, className }: Props) => {
+const ServiceCard = ({ id, icon, title, route, descriptionOffer, className }: Props) => {
   const sectionCardRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
 
