@@ -31,12 +31,7 @@ const AboutPage = () => {
         <MissionVisionSection />
         <ValuesSection />
         <ReasonSection />
-        <TotalSection
-          projectsValue={`35+`}
-          stuffValue={`20+`}
-          servedValue={`45+`}
-          deliveredPercent={`99%`}
-        />
+        <TotalSection projectsValue={`35+`} stuffValue={`20+`} servedValue={`45+`} />
         <FeedbackSection />
         <CalendlySection title="Ready to take the first step towards achieving your goals? Schedule a free call with a member of our team who will be happy to discuss the services we offer and how they can benefit you." />
       </Layout>
