@@ -1,5 +1,3 @@
-import Section from "@/common/templates/Section";
-
 interface Props {
   projectsValue: string;
   stuffValue: string;

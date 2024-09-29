@@ -29,6 +29,7 @@ const HomePage = () => {
         alternativeDescription="We provide project-based and dedicated teams for custom software, web, mobile, AI, and cloud solutions. Get smarter, cost-effective solutions for your business."
       />
       <Layout
+        layoutClassName="!px-0"
         heading={
           <Gradient>
             <HomeHeading />
