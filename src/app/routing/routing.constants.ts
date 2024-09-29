@@ -28,6 +28,7 @@ export enum RoutePaths {
   Calendly = "/request-demo",
   WebDevelopment = "/web-development",
   AdminSignIn = "admin/signin",
+  AdminAddBlog = "admin/addBlog",
 }
 
 export const headerMenuLinks = [
