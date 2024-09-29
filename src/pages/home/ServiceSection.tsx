@@ -35,8 +35,8 @@ const ServiceSection = () => {
       className="scroll-mt-[150px] md:px-0 "
       headingLevel="h2"
     >
-      <div className="h-full w-full rounded-lg bg-white xs:shadow-base-100 sm:shadow-none grid sm:gap-5 xs:grid-cols-1 xs:gap-0 sm:grid-cols-2 desktop:grid-cols-3">
-        {servicesConstants.map(({ id, Icon, title, descriptionOffer, route }, index) => (
+      <div className="h-full w-full rounded-lg bg-white xs:shadow-base-100 sm:shadow-none grid sm:gap-5 xs:grid-cols-1 xs:gap-0 sm:grid-cols-2 desktop:grid-cols-4 justify-items-center items-center">
+        {servicesConstants.map(({ id, Icon, title, descriptionOffer, route }) => (
           <ServiceCard
             key={id}
             id={id}

@@ -20,20 +20,18 @@ const TotalItem = ({ value, title }: TotalItemProps) => (
 
 const TotalSection = ({ projectsValue, stuffValue, servedValue }: Props) => {
   return (
-    <Section className="self-center desktop:max-w-[80%] ">
-      <div
-        style={{
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          background: "rgba(226, 211, 235, 1)",
-        }}
-        className="w-full flex-1 flex md:justify-evenly gap-[16px] md:space-y-0 space-y-1 md:flex-row flex-col items-center md:py-[60px] md:px-[30px] py-5 rounded-lg-l bg-no-repeat md:bg-totalDesktopPosition bg-totalMobilePosition"
-      >
-        <TotalItem title="Successful Projects" value={projectsValue} />
-        <TotalItem title="Engineers & Designers" value={stuffValue} />
-        <TotalItem title="Industries Served" value={servedValue} />
-      </div>
-    </Section>
+    <div
+      style={{
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        background: "rgba(226, 211, 235, 1)",
+      }}
+      className="w-full flex-1 flex md:justify-evenly gap-[16px] md:space-y-0 space-y-1 md:flex-row flex-col items-center md:py-[60px] py-5 rounded-lg-l bg-no-repeat md:bg-totalDesktopPosition bg-totalMobilePosition"
+    >
+      <TotalItem title="Successful Projects" value={projectsValue} />
+      <TotalItem title="Engineers & Designers" value={stuffValue} />
+      <TotalItem title="Industries Served" value={servedValue} />
+    </div>
   );
 };
 
