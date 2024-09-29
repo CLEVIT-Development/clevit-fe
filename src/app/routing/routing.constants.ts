@@ -1,4 +1,5 @@
 import AboutPage from "@/pages/about-us/AboutPage";
+import SignInPage from "@/pages/admin/sign-in/SignInPage";
 import BlogsPage from "@/pages/blog/BlogsPage.tsx";
 import SingleBlogPage from "@/pages/blog/SingleBlogPage";
 import ContactUsPage from "@/pages/contact-us/ContactUsPage.tsx";
@@ -26,6 +27,7 @@ export enum RoutePaths {
   TermsAndConditions = "/terms-and-conditions",
   Calendly = "/request-demo",
   WebDevelopment = "/web-development",
+  AdminSignIn = "admin/signin",
 }
 
 export const headerMenuLinks = [
@@ -52,4 +54,5 @@ export const routerElements = [
   { path: RoutePaths.Portfolio, Element: PortfolioPage },
   { path: RoutePaths.WebDevelopment, Element: WebDevelopmentPage },
   { path: RoutePaths.FAQ, Element: Faq },
+  { path: RoutePaths.AdminSignIn, Element: SignInPage },
 ];
