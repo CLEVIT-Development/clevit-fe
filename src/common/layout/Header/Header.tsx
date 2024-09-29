@@ -51,8 +51,6 @@ const Header = forwardRef(
       []
     );
 
-    console.log(isAuthenticated);
-
     const renderNavList = useMemo(
       () =>
         headerMenuLinks.map((headerMenuLink) => {

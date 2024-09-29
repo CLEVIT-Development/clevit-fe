@@ -27,8 +27,8 @@ export enum RoutePaths {
   TermsAndConditions = "/terms-and-conditions",
   Calendly = "/request-demo",
   WebDevelopment = "/web-development",
-  AdminSignIn = "admin/signin",
-  AdminAddBlog = "admin/addBlog",
+  AdminSignIn = "/admin/signin",
+  AdminAddBlog = "/admin/addBlog",
 }
 
 export const headerMenuLinks = [
@@ -43,17 +43,17 @@ export const headerMenuLinks = [
 ];
 
 export const routerElements = [
-  { path: RoutePaths.Home, Element: HomePage },
-  { path: RoutePaths.Services, Element: ServicePage },
-  { path: RoutePaths.About, Element: AboutPage },
-  { path: RoutePaths.ContactUs, Element: ContactUsPage },
-  { path: RoutePaths.PrivacyPolicy, Element: PrivacyPolicy },
-  { path: RoutePaths.TermsAndConditions, Element: TermsAndConditions },
-  { path: RoutePaths.Calendly, Element: CalendlyPage },
-  { path: RoutePaths.Blogs, Element: BlogsPage },
-  { path: RoutePaths.Blog, Element: SingleBlogPage },
-  { path: RoutePaths.Portfolio, Element: PortfolioPage },
-  { path: RoutePaths.WebDevelopment, Element: WebDevelopmentPage },
-  { path: RoutePaths.FAQ, Element: Faq },
-  { path: RoutePaths.AdminSignIn, Element: SignInPage },
+  { path: RoutePaths.Home, Element: HomePage, isPrivate: false },
+  { path: RoutePaths.Services, Element: ServicePage, isPrivate: false },
+  { path: RoutePaths.About, Element: AboutPage, isPrivate: false },
+  { path: RoutePaths.ContactUs, Element: ContactUsPage, isPrivate: false },
+  { path: RoutePaths.PrivacyPolicy, Element: PrivacyPolicy, isPrivate: false },
+  { path: RoutePaths.TermsAndConditions, Element: TermsAndConditions, isPrivate: false },
+  { path: RoutePaths.Calendly, Element: CalendlyPage, isPrivate: false },
+  { path: RoutePaths.Blogs, Element: BlogsPage, isPrivate: false },
+  { path: RoutePaths.Blog, Element: SingleBlogPage, isPrivate: false },
+  { path: RoutePaths.Portfolio, Element: PortfolioPage, isPrivate: false },
+  { path: RoutePaths.WebDevelopment, Element: WebDevelopmentPage, isPrivate: false },
+  { path: RoutePaths.FAQ, Element: Faq, isPrivate: false },
+  { path: RoutePaths.AdminSignIn, Element: SignInPage, isPrivate: false },
 ];
