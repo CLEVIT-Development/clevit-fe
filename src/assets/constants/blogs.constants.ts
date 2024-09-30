@@ -37,6 +37,7 @@ export const blogsConstants = [
     title: "Best Countries To Outsource Software Development in 2024",
     date: new Date("12/04/2024"),
     image: Blog2,
+    imageAlt: "Best Countries To Outsource Software Development in 2024 image",
     readingTime: "12 Min",
     description:
       "Outsourcing software development can provide significant advantages, such as cost savings, access to a global talent pool, and faster time-to-market. In 2024, several countries are considered top destinations for outsourcing software development due to their skilled workforce, favorable business environments, and competitive pricing. Countries like India, Ukraine, and Poland have established themselves as leading outsourcing hubs, offering expertise in various technologies and a strong track record of delivering high-quality software solutions. This guide will explore the reasons why these countries are popular choices, the factors to consider when selecting an outsourcing partner, and the potential benefits and challenges of working with offshore development teams.",
@@ -66,6 +67,7 @@ export const blogsConstants = [
     title: "How to Start with Medicine Delivery App Development in 2024",
     date: new Date("12/04/2024"),
     image: Blog2,
+    imageAlt: "How to Start with Medicine Delivery App Development in 2024 image",
     readingTime: "12 Min",
     description:
       "Developing a medicine delivery app requires a thorough understanding of the healthcare sector and the specific needs of users. Starting with market research is crucial to identify the target audience and their requirements. You'll need to design an app that ensures secure transactions, real-time tracking of deliveries, and compliance with health regulations. Key features to include are user registration, prescription management, and integration with local pharmacies. This guide will outline the steps to initiate the development process, including choosing the right technology stack, partnering with healthcare professionals, and planning for scalability and data security.",

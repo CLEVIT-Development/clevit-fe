@@ -2,10 +2,12 @@ import { memo } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import { RoutePaths } from "@/app/routing/routing.constants.ts";
+import { blogsConstants } from "@/assets/constants/blogs.constants";
 import { contactsConstants } from "@/assets/constants/contacts.constants.ts";
 import { industriesConstants } from "@/assets/constants/industries.constants";
 import { servicesConstants } from "@/assets/constants/services.constants.ts";
 import { socialLinksConstants } from "@/assets/constants/socials.constants.ts";
+import LatestBlogsBox from "@/pages/blog/LatestBlogsBox";
 import Copyright from "@/shared/ui/Copyright";
 import Logo from "@/shared/ui/Logo.tsx";
 
@@ -64,18 +66,7 @@ const Footer = () => {
             );
           })}
         </div>
-        <div className="flex flex-col space-y-4 mr-auto lg:ml-auto">
-          <h6 className="font-bold lg:text-md-l xs:text-md text-white opacity-60">Industries</h6>
-          {[...industriesConstants.map((item) => item)].map((name, index) => {
-            return (
-              <div key={index} role="button">
-                <p className="text-gray-100 font-medium lg:text-md xs:text-sm cursor-pointer">
-                  {name}
-                </p>
-              </div>
-            );
-          })}
-        </div>
+
         <div className="flex flex-col space-y-4 sm:mx-auto sm:pl-10 lg:ml-auto">
           <h6 className="font-bold lg:text-md-l text-md text-white opacity-60">Contact Us</h6>
           {contactsConstants.map(({ id, text, link, Element }) => (
@@ -89,6 +80,24 @@ const Footer = () => {
               </Link>
             </div>
           ))}
+        </div>
+        <div className="flex flex-col space-y-4 mr-auto lg:ml-auto">
+          <h6 className="font-bold lg:text-md-l xs:text-md text-white opacity-60">
+            Latest Blog Posts
+          </h6>
+          <div className="flex flex-col gap-5">
+            {blogsConstants.slice(-3).map((element) => {
+              return (
+                <LatestBlogsBox
+                  key={element.id}
+                  image={element.image}
+                  description={element.description}
+                  date={new Date("12/04/2024").toLocaleDateString()}
+                  imageAlt={element?.imageAlt}
+                />
+              );
+            })}
+          </div>
         </div>
       </div>
       <div className="h-0.5 lg:-mx-20 xs:-mx-5 mt-6 lg:mb-6 xs:mb-4 bg-gray-100" />
