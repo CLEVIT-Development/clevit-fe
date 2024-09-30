@@ -32,7 +32,7 @@ const ServiceBox: FC<ServiceBoxProps> = ({
         backgroundImage:
           index % 2 === 0 ? `url(${BackgroundGradientReverse})` : `url(${BackgroundGradient})`,
       }}
-      className={`w-full desktop:max-w-screen-3xl  bg-no-repeat  bg-[length:400px_500px] flex  justify-between items-center desktop:py-16 py-10 desktop:px-20 ${index % 2 === 0 ? "flex-row bg-right " : "flex-row-reverse bg-left"}`}
+      className={`w-full desktop:max-w-screen-3xl  bg-no-repeat  desktop:bg-[length:400px_500px] bg-[length:300px_300px] flex  justify-between items-center desktop:py-16 py-10 desktop:px-20 ${index % 2 === 0 ? "flex-row bg-right " : "flex-row-reverse bg-left"}`}
     >
       <div className="desktop:w-1/2 w-full desktop:px-[72px] desktop:py-[60px] desktop:justify-start desktop:items-start flex flex-col justify-start items-center">
         <div className=" desktop:text-start desktop:px-0 px-8 text-center">

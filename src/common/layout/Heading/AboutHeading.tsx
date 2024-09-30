@@ -3,8 +3,8 @@ import AboutHeadingBackground from "@/assets/images/AboutHeading.webp";
 const AboutHeading = () => {
   return (
     <div className="w-full flex items-center desktop:text-left desktop:justify-between desktop:pb-[77px] desktop:pt-[180px] desktop:pl-[80px] desktop:pr-[110px] text-center justify-center pb-6 pt-[125px] ">
-      <h1 className="animate-textSlide text-white desktop:max-w-[50%] desktop:text-3xl text-lg font-semibold">
-        Transforming Ideas into Intelligent Software
+      <h1 className="animate-textSlide text-white desktop:max-w-[60%] desktop:text-3xl text-lg font-semibold">
+        Providing Effective Digital Solutions for Your Businesses
       </h1>
       <img
         loading="lazy"
