@@ -38,3 +38,10 @@
   width: 100% !important;
   height: auto !important;
 }
+
+.rdw-editor-toolbar {
+  @apply border-none;
+}
+.rdw-editor-main {
+  @apply border p-2 min-h-[200px];
+}

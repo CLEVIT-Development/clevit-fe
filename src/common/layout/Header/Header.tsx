@@ -7,6 +7,7 @@ import { twMerge } from "tailwind-merge";
 
 import { RoutePaths, headerMenuLinks } from "@/app/routing/routing.constants.ts";
 import Messages from "@/assets/vectors/Messages.svg?react";
+import { useAuth } from "@/common/hooks/useAuth";
 import useLockBodyScroll from "@/common/hooks/useBodyLock";
 import useResponsive from "@/common/hooks/useResponsive";
 import Button from "@/shared/ui/Button.tsx";
@@ -31,7 +32,24 @@ const Header = forwardRef(
     const [isTransitionEndClose, setIsTransitionEndClose] = useState(false);
     const navListRef = useRef<HTMLDivElement>(null);
 
+    const { isAuthenticated } = useAuth();
+
     useLockBodyScroll(isOpen);
+
+    const renderAdminNavList = useMemo(
+      () => (
+        <>
+          <NavLink
+            onClick={() => setIsOpen(false)}
+            to={RoutePaths.AdminAddBlog}
+            className="text-white lg:text-md text-lg font-medium"
+          >
+            Add Blog
+          </NavLink>
+        </>
+      ),
+      []
+    );
 
     const renderNavList = useMemo(
       () =>
@@ -96,7 +114,10 @@ const Header = forwardRef(
             onMenuClick={() => setIsOpen((prev) => !prev)}
           />
           <div ref={ref} className="space-x-[28px] lg:flex hidden">
-            <nav className="flex items-center space-x-5">{renderNavList}</nav>
+            <nav className="flex items-center space-x-5">
+              {renderNavList}
+              {isAuthenticated && renderAdminNavList}
+            </nav>
             <Button prefix={<Messages />} onClick={() => navigate(RoutePaths.Calendly)}>
               Let's Talk
             </Button>
@@ -115,6 +136,7 @@ const Header = forwardRef(
         >
           <nav ref={navListRef} className="flex flex-col items-center space-y-6">
             {renderNavList}
+            {isAuthenticated && renderAdminNavList}
           </nav>
           <Copyright
             className={classNames({
