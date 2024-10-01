@@ -1,8 +1,6 @@
 import type { FieldValues } from "react-hook-form";
 import { FormProvider, useForm } from "react-hook-form";
 
-// import { useNavigate } from "react-router-dom";
-// import { RoutePaths } from "@/app/routing/routing.constants";
 import { useAuthToken } from "@/common/hooks/useAuthToken";
 import { SignInSchema } from "@/common/schemas/signInSchema";
 import showNotification, { ToastVersions } from "@/common/services/toast/showNotifications";
@@ -23,7 +21,6 @@ const SignInForm = () => {
     resolver: yupResolver(SignInSchema),
   });
 
-  // const navigate = useNavigate();
   const { setToken, setRefreshToken } = useAuthToken();
   const { signIn, loading } = useSignIn();
 
@@ -39,7 +36,6 @@ const SignInForm = () => {
         setToken("access-token-value");
         setRefreshToken("refresh-token-value");
         console.log("Tokens stored!", data);
-        // navigate(RoutePaths.Home);
         showNotification({
           type: ToastVersions.success,
           title: "Sign-in successfull",

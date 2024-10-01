@@ -27,7 +27,6 @@ const useSignIn = () => {
     try {
       const response = await axios.post("/api/auth/signin", { email, password });
 
-      // If there's an onSuccess callback, call it with the response
       if (options?.onSuccess) {
         options.onSuccess(response.data);
       }
