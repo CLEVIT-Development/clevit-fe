@@ -18,7 +18,7 @@ const RecentBlogFooter = ({ image, imageAlt, description, date }: Props) => {
           {" "}
           <Date /> <span className="text-white">{date}</span>{" "}
         </div>
-        <div className="whitespace-nowrap overflow-hidden text-ellipsis w-[200px] text-white">
+        <div className="whitespace-nowrap overflow-hidden text-ellipsis desktopw-[200px]  text-white">
           {description}
         </div>
       </div>
