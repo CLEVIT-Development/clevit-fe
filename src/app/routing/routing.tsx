@@ -9,22 +9,30 @@ import { routerElements } from "@/app/routing/routing.constants.ts";
 import ScrollToTop from "@/common/templates/ScrollToTop.tsx";
 import NotFoundPage from "@/pages/not-found/NotFoundPage.tsx";
 
+import PrivateRoute from "./PrivateRoute";
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
-      {routerElements.map(({ Element, path }) => (
+      {routerElements.map(({ Element, path, isPrivate }) => (
         <Route
           key={path}
           path={path}
           element={
             <>
-              <Element />
+              {isPrivate ? (
+                <PrivateRoute>
+                  <Element />
+                </PrivateRoute>
+              ) : (
+                <Element />
+              )}
               <ScrollToTop />
             </>
           }
         />
       ))}
-      <Route path={"*"} element={<NotFoundPage />} />
+      <Route path="*" element={<NotFoundPage />} />
     </>
   )
 );
