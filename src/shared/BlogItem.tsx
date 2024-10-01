@@ -7,7 +7,7 @@ interface Props {
   date: string;
 }
 
-const RecentBlogFooter = ({ image, imageAlt, description, date }: Props) => {
+const BlogItem = ({ image, imageAlt, description, date }: Props) => {
   return (
     <div className="flex gap-2">
       <div className="w-[54px] h-[52px]">
@@ -18,7 +18,7 @@ const RecentBlogFooter = ({ image, imageAlt, description, date }: Props) => {
           {" "}
           <Date /> <span className="text-white">{date}</span>{" "}
         </div>
-        <div className="whitespace-nowrap overflow-hidden text-ellipsis desktopw-[200px]  text-white">
+        <div className="whitespace-nowrap overflow-hidden text-ellipsis desktop:w-[200px] w-[100px]  text-white">
           {description}
         </div>
       </div>
@@ -26,4 +26,4 @@ const RecentBlogFooter = ({ image, imageAlt, description, date }: Props) => {
   );
 };
 
-export default RecentBlogFooter;
+export default BlogItem;

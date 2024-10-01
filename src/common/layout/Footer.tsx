@@ -7,7 +7,7 @@ import { contactsConstants } from "@/assets/constants/contacts.constants.ts";
 import { industriesConstants } from "@/assets/constants/industries.constants";
 import { servicesConstants } from "@/assets/constants/services.constants.ts";
 import { socialLinksConstants } from "@/assets/constants/socials.constants.ts";
-import RecentBlogFooter from "@/pages/blog/RecentBlogFooter";
+import BlogItem from "@/shared/BlogItem";
 import Copyright from "@/shared/ui/Copyright";
 import Logo from "@/shared/ui/Logo.tsx";
 
@@ -98,7 +98,7 @@ const Footer = () => {
           </h6>
           {blogsConstants.slice(-3).map((element) => {
             return (
-              <RecentBlogFooter
+              <BlogItem
                 key={element.id}
                 image={element.image}
                 description={element.description}
