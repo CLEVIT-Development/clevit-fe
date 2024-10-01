@@ -7,7 +7,7 @@ interface Props {
   date: string;
 }
 
-const RecentBlogFooter = ({ image, imageAlt, description, date }: Props) => {
+const BlogItem = ({ image, imageAlt, description, date }: Props) => {
   return (
     <div className="flex gap-2">
       <div className="w-[54px] h-[52px]">
@@ -26,4 +26,4 @@ const RecentBlogFooter = ({ image, imageAlt, description, date }: Props) => {
   );
 };
 
-export default RecentBlogFooter;
+export default BlogItem;
