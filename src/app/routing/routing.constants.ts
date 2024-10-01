@@ -1,4 +1,5 @@
 import AboutPage from "@/pages/about-us/AboutPage";
+import AddEditBlogPage from "@/pages/admin/add-edit-blog/AddEditBlog";
 import SignInPage from "@/pages/admin/sign-in/SignInPage";
 import BlogsPage from "@/pages/blog/BlogsPage.tsx";
 import SingleBlogPage from "@/pages/blog/SingleBlogPage";
@@ -27,6 +28,7 @@ export enum RoutePaths {
   TermsAndConditions = "/terms-and-conditions",
   Calendly = "/request-demo",
   WebDevelopment = "/web-development",
+  AdminBlog = "/admin/blog/:id?",
   AdminSignIn = "/admin/signin",
   AdminAddBlog = "/admin/addBlog",
 }
@@ -56,4 +58,5 @@ export const routerElements = [
   { path: RoutePaths.WebDevelopment, Element: WebDevelopmentPage, isPrivate: false },
   { path: RoutePaths.FAQ, Element: Faq, isPrivate: false },
   { path: RoutePaths.AdminSignIn, Element: SignInPage, isPrivate: false },
+  { path: RoutePaths.AdminBlog, Element: AddEditBlogPage },
 ];

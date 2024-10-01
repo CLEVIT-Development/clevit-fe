@@ -65,4 +65,7 @@ export default defineConfig({
       minify: true,
     }),
   ],
+  define: {
+    global: "globalThis",
+  },
 });

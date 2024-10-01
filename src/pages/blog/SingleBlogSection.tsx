@@ -11,8 +11,6 @@ interface SingleBlogPageProps {
 }
 
 const SingleBlogSection = ({ blogId }: SingleBlogPageProps) => {
-  console.log(blogId);
-
   const blog = blogsConstants.find((blog) => blog.id === blogId);
 
   if (!blog) {
