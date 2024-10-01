@@ -29,18 +29,14 @@ const HomePage = () => {
         alternativeDescription="We provide project-based and dedicated teams for custom software, web, mobile, AI, and cloud solutions. Get smarter, cost-effective solutions for your business."
       />
       <Layout
+        layoutClassName="!px-0"
         heading={
           <Gradient>
             <HomeHeading />
           </Gradient>
         }
       >
-        <TotalSection
-          projectsValue={`35+`}
-          stuffValue={`20+`}
-          servedValue={`45+`}
-          deliveredPercent={`99%`}
-        />
+        <TotalSection projectsValue={`35+`} stuffValue={`10+`} servedValue={`25+`} />
         <ServiceSection />
         <RequestQuoteSection />
         <TechnologySection

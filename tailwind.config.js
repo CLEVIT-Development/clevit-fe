@@ -210,6 +210,7 @@ export default {
       },
       borderRadius: {
         "lg-l": "10px",
+        "lg-2xl": "28px",
       },
     },
   },

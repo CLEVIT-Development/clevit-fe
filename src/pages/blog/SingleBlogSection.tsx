@@ -1,8 +1,8 @@
 import { blogsConstants } from "@/assets/constants/blogs.constants";
 import ImagePlaceholder from "@/assets/images/ImagePlaceholder.jpg";
 import FacebookIcon from "@/assets/vectors/Facebook.svg?react";
+import InstagramIcon from "@/assets/vectors/Instagram.svg?react";
 import LinkedInIcon from "@/assets/vectors/Linkedin.svg?react";
-import TwitterIcon from "@/assets/vectors/Twitter.svg?react";
 import Section from "@/common/templates/Section.tsx";
 import BlogCard from "@/shared/ui/BlogCard/BlogCard";
 
@@ -33,7 +33,7 @@ const SingleBlogSection = ({ blogId }: SingleBlogPageProps) => {
       <div className="flex space-x-2 items-center justify-center">
         <span className="text-lg">Share this</span>
         <FacebookIcon className="w-10 h-10" />
-        <TwitterIcon className="w-10 h-10" />
+        <InstagramIcon className="w-10 h-10" />
         <LinkedInIcon className="w-10 h-10" />
       </div>
       <div className="mt-40">
