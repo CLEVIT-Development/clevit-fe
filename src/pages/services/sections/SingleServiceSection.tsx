@@ -1,7 +1,13 @@
 import { type ServicesIdConstants } from "@/assets/constants/services-id.constants";
 import { servicesConstants } from "@/assets/constants/services.constants";
+import {
+  technologiesConstants,
+  technologyTabsConstants,
+} from "@/assets/constants/technologies/technologies.constants";
 import Section from "@/common/templates/Section";
+import TechnologySection from "@/pages/home/TechnologySection";
 
+import BookConsultation from "./BookConsultation";
 import { getIndustryByService } from "./IndustryServe/helper";
 
 interface SingleServiceSectionProps {
@@ -45,6 +51,16 @@ const SingleServiceSection = ({ serviceId }: SingleServiceSectionProps) => {
       </div>
       <div className="flex flex-col gap-4">
         <h3 className="text-blacktext-md-l text-2xl text-[#314252]">Key Aspects</h3>
+      </div>
+      <div className="">
+        <TechnologySection
+          title="Technologies We Use"
+          tabsConstant={technologyTabsConstants}
+          technologiesConstant={technologiesConstants}
+        />
+      </div>
+      <div className="w-full">
+        <BookConsultation />
       </div>
       <div className="flex gap-6">
         {industries.map(({ title, Icon }, index) => {
