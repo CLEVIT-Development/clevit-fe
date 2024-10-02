@@ -3,7 +3,6 @@ import { servicesConstants } from "@/assets/constants/services.constants";
 import Section from "@/common/templates/Section";
 
 import { getIndustryByService } from "./IndustryServe/helper";
-import ServiceKeyAspectsSection from "./ServiceKeyAspectsSection";
 
 interface SingleServiceSectionProps {
   serviceId: string;
