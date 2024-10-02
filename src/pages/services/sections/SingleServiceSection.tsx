@@ -45,7 +45,6 @@ const SingleServiceSection = ({ serviceId }: SingleServiceSectionProps) => {
       </div>
       <div className="flex flex-col gap-4">
         <h3 className="text-blacktext-md-l text-2xl text-[#314252]">Key Aspects</h3>
-        <ServiceKeyAspectsSection />
       </div>
       <div className="flex gap-6">
         {industries.map(({ title, Icon }, index) => {
