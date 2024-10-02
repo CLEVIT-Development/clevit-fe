@@ -1,7 +1,8 @@
+import { type ServicesIdConstants } from "@/assets/constants/services-id.constants";
 import { servicesConstants } from "@/assets/constants/services.constants";
-import { servicesIndustriesConstants } from "@/assets/constants/services.industries.constants";
 import Section from "@/common/templates/Section";
 
+import { getIndustryByService } from "./IndustryServe/helper";
 import ServiceKeyAspectsSection from "./ServiceKeyAspectsSection";
 
 interface SingleServiceSectionProps {
@@ -18,9 +19,8 @@ const SingleServiceSection = ({ serviceId }: SingleServiceSectionProps) => {
   if (!service) {
     return <h1>service not found</h1>;
   }
-  // const getIndustryByService = (serviceId: keyof typeof ServicesIdConstants) => {
-  //   return servicesIndustriesConstants[serviceId];
-  // };
+
+  const industries = getIndustryByService(service.id as keyof typeof ServicesIdConstants);
 
   return (
     <Section>
@@ -43,12 +43,20 @@ const SingleServiceSection = ({ serviceId }: SingleServiceSectionProps) => {
             </div>
           );
         })}
+      </div>
+      <div className="flex flex-col gap-4">
+        <h3 className="text-blacktext-md-l text-2xl text-[#314252]">Key Aspects</h3>
         <ServiceKeyAspectsSection />
-        {servicesIndustriesConstants[service.id].map(({ title, Icon }, index) => {
+      </div>
+      <div className="flex gap-6">
+        {industries.map(({ title, Icon }, index) => {
           return (
-            <div key={index}>
+            <div
+              key={index}
+              className="w-48 h-44 flex flex-col items-center justify-center gap-5 rounded-lg text-center transition-all duration-300   hover:shadow-[0px_8px_21px_0px_rgba(112,51,145,0.2)]"
+            >
               <Icon />
-              <h1>{title}titleee</h1>
+              <h1>{title}</h1>
             </div>
           );
         })}
