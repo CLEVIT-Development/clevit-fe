@@ -34,4 +34,290 @@ export const servicesIndustriesConstants = {
       title: "Online Booking Platforms",
     },
   ],
+  [ServicesIdConstants.Mobile]: [
+    {
+      Icon: EventPlanningManagment,
+      title: "Dashboard Development",
+    },
+    {
+      Icon: MedicalSoftwareDevelopment,
+      title: "Medical Software Development",
+    },
+    {
+      Icon: MusickProduction,
+      title: "Music Production & Sound Design",
+    },
+    {
+      Icon: VirtualMeeting,
+      title: "Virtual Meetings & Conferencing",
+    },
+    {
+      Icon: FreightCargoServices,
+      title: "Freight & Cargo Services",
+    },
+    {
+      Icon: OnlineBookingPlatforms,
+      title: "Online Booking Platforms",
+    },
+  ],
+  [ServicesIdConstants.DevOps]: [
+    {
+      Icon: EventPlanningManagment,
+      title: "Dashboard Development",
+    },
+    {
+      Icon: MedicalSoftwareDevelopment,
+      title: "Medical Software Development",
+    },
+    {
+      Icon: MusickProduction,
+      title: "Music Production & Sound Design",
+    },
+    {
+      Icon: VirtualMeeting,
+      title: "Virtual Meetings & Conferencing",
+    },
+    {
+      Icon: FreightCargoServices,
+      title: "Freight & Cargo Services",
+    },
+    {
+      Icon: OnlineBookingPlatforms,
+      title: "Online Booking Platforms",
+    },
+  ],
+  [ServicesIdConstants.AI]: [
+    {
+      Icon: EventPlanningManagment,
+      title: "Dashboard Development",
+    },
+    {
+      Icon: MedicalSoftwareDevelopment,
+      title: "Medical Software Development",
+    },
+    {
+      Icon: MusickProduction,
+      title: "Music Production & Sound Design",
+    },
+    {
+      Icon: VirtualMeeting,
+      title: "Virtual Meetings & Conferencing",
+    },
+    {
+      Icon: FreightCargoServices,
+      title: "Freight & Cargo Services",
+    },
+    {
+      Icon: OnlineBookingPlatforms,
+      title: "Online Booking Platforms",
+    },
+  ],
+  [ServicesIdConstants.ML]: [
+    {
+      Icon: EventPlanningManagment,
+      title: "Dashboard Development",
+    },
+    {
+      Icon: MedicalSoftwareDevelopment,
+      title: "Medical Software Development",
+    },
+    {
+      Icon: MusickProduction,
+      title: "Music Production & Sound Design",
+    },
+    {
+      Icon: VirtualMeeting,
+      title: "Virtual Meetings & Conferencing",
+    },
+    {
+      Icon: FreightCargoServices,
+      title: "Freight & Cargo Services",
+    },
+    {
+      Icon: OnlineBookingPlatforms,
+      title: "Online Booking Platforms",
+    },
+  ],
+  [ServicesIdConstants.Quality]: [
+    {
+      Icon: EventPlanningManagment,
+      title: "Dashboard Development",
+    },
+    {
+      Icon: MedicalSoftwareDevelopment,
+      title: "Medical Software Development",
+    },
+    {
+      Icon: MusickProduction,
+      title: "Music Production & Sound Design",
+    },
+    {
+      Icon: VirtualMeeting,
+      title: "Virtual Meetings & Conferencing",
+    },
+    {
+      Icon: FreightCargoServices,
+      title: "Freight & Cargo Services",
+    },
+    {
+      Icon: OnlineBookingPlatforms,
+      title: "Online Booking Platforms",
+    },
+  ],
+  [ServicesIdConstants.Assessment]: [
+    {
+      Icon: EventPlanningManagment,
+      title: "Dashboard Development",
+    },
+    {
+      Icon: MedicalSoftwareDevelopment,
+      title: "Medical Software Development",
+    },
+    {
+      Icon: MusickProduction,
+      title: "Music Production & Sound Design",
+    },
+    {
+      Icon: VirtualMeeting,
+      title: "Virtual Meetings & Conferencing",
+    },
+    {
+      Icon: FreightCargoServices,
+      title: "Freight & Cargo Services",
+    },
+    {
+      Icon: OnlineBookingPlatforms,
+      title: "Online Booking Platforms",
+    },
+  ],
+  [ServicesIdConstants.Maintenance]: [
+    {
+      Icon: EventPlanningManagment,
+      title: "Dashboard Development",
+    },
+    {
+      Icon: MedicalSoftwareDevelopment,
+      title: "Medical Software Development",
+    },
+    {
+      Icon: MusickProduction,
+      title: "Music Production & Sound Design",
+    },
+    {
+      Icon: VirtualMeeting,
+      title: "Virtual Meetings & Conferencing",
+    },
+    {
+      Icon: FreightCargoServices,
+      title: "Freight & Cargo Services",
+    },
+    {
+      Icon: OnlineBookingPlatforms,
+      title: "Online Booking Platforms",
+    },
+  ],
+  [ServicesIdConstants.OutStaffing]: [
+    {
+      Icon: EventPlanningManagment,
+      title: "Dashboard Development",
+    },
+    {
+      Icon: MedicalSoftwareDevelopment,
+      title: "Medical Software Development",
+    },
+    {
+      Icon: MusickProduction,
+      title: "Music Production & Sound Design",
+    },
+    {
+      Icon: VirtualMeeting,
+      title: "Virtual Meetings & Conferencing",
+    },
+    {
+      Icon: FreightCargoServices,
+      title: "Freight & Cargo Services",
+    },
+    {
+      Icon: OnlineBookingPlatforms,
+      title: "Online Booking Platforms",
+    },
+  ],
+  [ServicesIdConstants.ProjectManagement]: [
+    {
+      Icon: EventPlanningManagment,
+      title: "Dashboard Development",
+    },
+    {
+      Icon: MedicalSoftwareDevelopment,
+      title: "Medical Software Development",
+    },
+    {
+      Icon: MusickProduction,
+      title: "Music Production & Sound Design",
+    },
+    {
+      Icon: VirtualMeeting,
+      title: "Virtual Meetings & Conferencing",
+    },
+    {
+      Icon: FreightCargoServices,
+      title: "Freight & Cargo Services",
+    },
+    {
+      Icon: OnlineBookingPlatforms,
+      title: "Online Booking Platforms",
+    },
+  ],
+  [ServicesIdConstants.Design]: [
+    {
+      Icon: EventPlanningManagment,
+      title: "Dashboard Development",
+    },
+    {
+      Icon: MedicalSoftwareDevelopment,
+      title: "Medical Software Development",
+    },
+    {
+      Icon: MusickProduction,
+      title: "Music Production & Sound Design",
+    },
+    {
+      Icon: VirtualMeeting,
+      title: "Virtual Meetings & Conferencing",
+    },
+    {
+      Icon: FreightCargoServices,
+      title: "Freight & Cargo Services",
+    },
+    {
+      Icon: OnlineBookingPlatforms,
+      title: "Online Booking Platforms",
+    },
+  ],
+  [ServicesIdConstants.Marketing]: [
+    {
+      Icon: EventPlanningManagment,
+      title: "Dashboard Development",
+    },
+    {
+      Icon: MedicalSoftwareDevelopment,
+      title: "Medical Software Development",
+    },
+    {
+      Icon: MusickProduction,
+      title: "Music Production & Sound Design",
+    },
+    {
+      Icon: VirtualMeeting,
+      title: "Virtual Meetings & Conferencing",
+    },
+    {
+      Icon: FreightCargoServices,
+      title: "Freight & Cargo Services",
+    },
+    {
+      Icon: OnlineBookingPlatforms,
+      title: "Online Booking Platforms",
+    },
+  ],
 };

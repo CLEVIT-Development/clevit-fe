@@ -1,6 +1,6 @@
-import { lazy } from "react";
+import { type FunctionComponent, type LazyExoticComponent, type SVGProps, lazy } from "react";
 
-import type { ITabsConstant } from "@/assets/constants/technologies/technologies.constants.ts";
+import type { INavigationData } from "@/shared/ui/Navigation.tsx";
 
 const AntIcon = lazy(() => import("@/assets/vectors/technology/Ant.svg?react"));
 const CSSIcon = lazy(() => import("@/assets/vectors/technology/CSS.svg?react"));
@@ -29,45 +29,51 @@ const ReactIcon = lazy(() => import("@/assets/vectors/technology/React.svg?react
 const RedisIcon = lazy(() => import("@/assets/vectors/technology/Redis.svg?react"));
 const SASSIcon = lazy(() => import("@/assets/vectors/technology/SASS.svg?react"));
 const SQLiteIcon = lazy(() => import("@/assets/vectors/technology/SQLite.svg?react"));
+const SwiftIcon = lazy(() => import("@/assets/vectors/technology/Swift.svg?react"));
 const TailwindCSSIcon = lazy(() => import("@/assets/vectors/technology/Tailwind.svg?react"));
 const Typescript = lazy(() => import("@/assets/vectors/technology/Typescript.svg?react"));
 const ViteIcon = lazy(() => import("@/assets/vectors/technology/Vite.svg?react"));
 const VueIcon = lazy(() => import("@/assets/vectors/technology/Vue.svg?react"));
 const WebSocketIcon = lazy(() => import("@/assets/vectors/technology/WebSocket.svg?react"));
 
-export const webDevelopmentTechnologiesTabsConstants: ITabsConstant[] = [
+export interface ITabsConstant extends INavigationData {
+  description?: string;
+}
+
+export interface ITechnologyConstant {
+  id: number;
+  title: string;
+  Icon: LazyExoticComponent<FunctionComponent<SVGProps<SVGSVGElement>>>;
+}
+
+export const webDevelopmentTechnologyTabsConstants: ITabsConstant[] = [
   {
     id: 1,
     title: "Front-End Development",
     description:
-      "Front-End developers at our company create intuitive, dynamic, and aesthetically-pleasing and user interfaces. Using technologies like React.js, Vue.js, Next.js, TypeScript, and many others we develop websites that are adaptable to various screen sizes.The goal is to bring an additional focus on the user experience that will allow not to lose a visitor.",
+      "Front-End developers at our company create intuitive, dynamic, and aesthetically-pleasing and user interfaces. Using technologies like React.js, Vue.js, Next.js, TypeScript, and many others we develop websites that are adaptable to various screen sizes. The goal is to bring an additional focus on the user experience that will allow not to lose a visitor.",
   },
   {
     id: 2,
-    title: "Back-End Development",
-    description:
-      "Every website has its back-end, which serves as a foundation for web development. With Node, we make certain that every aspect of your website’s server, databases, and applications are well-coordinated. Node.js, Nest.js, Express.js, and other modern frameworks which we are going to build in this project. We integrate back-end services with the keen sense of security and performance as our basis for the reliable solutions.",
+    title: "Mobile App Development",
   },
   {
     id: 3,
-    title: "Database Management",
-    description:
-      "It is therefore important to have a well formulated database so that it can deliver on its performance and also to enhance the level of security. We use tools such as MySQL, MongoDB, PostgreSQL, Redis, and among others in developing effective storage systems. Whether you need relational databases or NoSQL, rest assured that our services will handle your data with utmost attention so you have the fastest secure data access for your application.",
+    title: "Back-End Development",
   },
   {
     id: 4,
-    title: "Custom Solutions",
-    description:
-      "Therefore, we appreciate that each business organization has a specific and special requirement and thus, we offer the web development services that can suit your business needs. No matter whether it is about incorporating third party APIs or developing applications for web security that is top-notch, we have features and solutions that could help your business to gain leverage.",
+    title: "Database Management",
   },
 ];
 
-export const webDevelopmentTechnologiesConstants = {
+export const technologiesConstants = {
   1: [
     { id: 1, title: "React.js", Icon: ReactIcon },
     { id: 2, title: "Vue.js", Icon: VueIcon },
     { id: 3, title: "Vite.js", Icon: ViteIcon },
     { id: 4, title: "Next.js", Icon: NextIcon },
+    { id: 5, title: "Typescript", Icon: Typescript },
     { id: 6, title: "Material UI", Icon: MUIIcon },
     { id: 7, title: "Tailwind CSS", Icon: TailwindCSSIcon },
     { id: 8, title: "Ant Design", Icon: AntIcon },
@@ -75,9 +81,12 @@ export const webDevelopmentTechnologiesConstants = {
     { id: 10, title: "HTML 5", Icon: HTMLIcon },
     { id: 11, title: "CSS3", Icon: CSSIcon },
     { id: 12, title: "SCSS(SASS)", Icon: SASSIcon },
-    { id: 5, title: "Typescript", Icon: Typescript },
   ],
   2: [
+    { id: 1, title: "Swift", Icon: SwiftIcon },
+    { id: 2, title: "React Native", Icon: ReactIcon },
+  ],
+  3: [
     { id: 1, title: "Node.js", Icon: NodeIcon },
     { id: 2, title: "Nest.js", Icon: NestIcon },
     { id: 3, title: "Express.js", Icon: ExpressIcon },
@@ -85,7 +94,7 @@ export const webDevelopmentTechnologiesConstants = {
     { id: 5, title: "WebSocket", Icon: WebSocketIcon },
     { id: 6, title: "Jest", Icon: JestIcon },
   ],
-  3: [
+  4: [
     { id: 1, title: "MySQL", Icon: MySQLIcon },
     { id: 2, title: "NoSQL", Icon: NoSQLIcon },
     { id: 3, title: "MongoDB", Icon: MongoIcon },

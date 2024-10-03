@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 
+import AppDevelopmentOverview from "@/assets/images/services/AppDevelopmentHeading.png";
 import Layout from "@/common/layout/Layout.tsx";
 import CalendlySection from "@/pages/home/CalendlySection";
 import NotFound from "@/pages/not-found/NotFoundPage";
@@ -10,8 +12,17 @@ import { HeaderVariant } from "@/types/variant.types.ts";
 import SingleServiceHeading from "./SingleServiceHeading";
 import SingleServiceSection from "./SingleServiceSection";
 
+export interface SingleServiceHeaderItems {
+  title: string;
+  description: string;
+  image: string;
+  imageAlt: string;
+}
+
 const SingleServicePage = () => {
   const { id } = useParams();
+  // ... existing code ...
+  const [headerItems, setHeaderItems] = useState<SingleServiceHeaderItems>({});
 
   return (
     <>
@@ -21,11 +32,20 @@ const SingleServicePage = () => {
         heading={
           <Gradient className="h-[200px] w-full">
             {/* Gradient doesn't appear without SingleBlogHeading, even though it's not strictly necessary */}
-            <SingleServiceHeading />
+            <SingleServiceHeading
+              title={headerItems.title}
+              description={headerItems.description}
+              image={headerItems.image}
+              imageAlt={headerItems.imageAlt}
+            />
           </Gradient>
         }
       >
-        {id ? <SingleServiceSection serviceId={id} /> : <NotFound />}
+        {id ? (
+          <SingleServiceSection setHeaderItems={setHeaderItems} serviceId={id} />
+        ) : (
+          <NotFound />
+        )}
 
         <CalendlySection title="Ready to turn your vision into reality? The journey starts here. We're excited to meet you." />
       </Layout>
