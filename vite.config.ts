@@ -67,10 +67,10 @@ export default defineConfig({
     }),
     sitemap({
       hostname: "https://www.clevit.io/",
-      exclude: ["/admin"],
-      extensions: ["tsx", "ts", "js", "html"],
+      exclude: ["/assets/**"],
+      extensions: ["tsx", "js", "html"],
       outDir: "dist",
-      generateRobotsTxt: true, // Whether to generate a robots.txt file
+      generateRobotsTxt: true,
       robots: [
         {
           userAgent: "*",
