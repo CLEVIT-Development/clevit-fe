@@ -2,6 +2,7 @@ import { defineConfig } from "vite";
 import compression from "vite-plugin-compression";
 import { createHtmlPlugin } from "vite-plugin-html";
 import inspect from "vite-plugin-inspect";
+import sitemap from "vite-plugin-sitemap";
 import svgr from "vite-plugin-svgr";
 import tsconfigPaths from "vite-tsconfig-paths";
 
@@ -63,6 +64,21 @@ export default defineConfig({
     compression({ algorithm: "gzip", threshold: 0 }),
     createHtmlPlugin({
       minify: true,
+    }),
+    sitemap({
+      hostname: "https://www.clevit.io/",
+      exclude: ["/admin"],
+      extensions: ["tsx", "ts", "js", "html"],
+      outDir: "dist",
+      generateRobotsTxt: true, // Whether to generate a robots.txt file
+      robots: [
+        {
+          userAgent: "*",
+          allow: "/",
+          disallow: ["/admin", "/not-found"],
+          crawlDelay: 2,
+        },
+      ],
     }),
   ],
 });
