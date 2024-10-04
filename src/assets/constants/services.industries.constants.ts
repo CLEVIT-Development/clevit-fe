@@ -37,15 +37,15 @@ export const servicesIndustriesConstants = {
   [ServicesIdConstants.Mobile]: [
     {
       Icon: EventPlanningManagment,
-      title: "Dashboard Development",
+      title: "Event Planning & Management",
     },
     {
       Icon: MedicalSoftwareDevelopment,
-      title: "Medical Software Development",
+      title: "Clinic & Lab Management",
     },
     {
       Icon: MusickProduction,
-      title: "Music Production & Sound Design",
+      title: "Online Booking Platforms",
     },
     {
       Icon: VirtualMeeting,
@@ -53,11 +53,11 @@ export const servicesIndustriesConstants = {
     },
     {
       Icon: FreightCargoServices,
-      title: "Freight & Cargo Services",
+      title: "Digital Health Solutions",
     },
     {
       Icon: OnlineBookingPlatforms,
-      title: "Online Booking Platforms",
+      title: "Appointment Scheduling",
     },
   ],
   [ServicesIdConstants.DevOps]: [

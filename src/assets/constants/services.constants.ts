@@ -11,15 +11,27 @@ import SupportMaintenance from "@/assets/images/services/Support&Maintenance.png
 import TechnicalAssessmentImage from "@/assets/images/services/TechnicalAssessmentImage.png";
 import UIUXDesigne from "@/assets/images/services/UIUXDesigne.png";
 import WebDevelopmentOverviewImage from "@/assets/images/services/WebDevelopmentOverview.png";
+import ConsistentSupport from "@/assets/vectors/ConsistentSupport.svg?react";
+import CustomerSupport from "@/assets/vectors/CustomerSupport.svg?react";
+import CustomizedUserExperience from "@/assets/vectors/CustomizedUserExperience.svg?react";
+import CuttingEdge from "@/assets/vectors/CuttingEdge.svg?react";
 import Devops from "@/assets/vectors/Devops.svg?react";
 import DigitalMarketing from "@/assets/vectors/DigitalMarketing.svg?react";
+import ExeptionalPerformance from "@/assets/vectors/ExeptionalPerformance.svg?react";
+import Exquisite from "@/assets/vectors/Exquisite.svg?react";
+import Flexibility from "@/assets/vectors/Flexibility.svg?react";
+import Originality from "@/assets/vectors/Originality.svg?react";
 import Outstaffing from "@/assets/vectors/Outstaffing.svg?react";
 import PM from "@/assets/vectors/PM.svg?react";
 import Phone from "@/assets/vectors/Phone.svg?react";
+import QualityConsistency from "@/assets/vectors/QualityConsistency.svg?react";
 import Robot from "@/assets/vectors/Robot.svg?react";
 import Settings from "@/assets/vectors/Settings.svg?react";
+import SuitableSolutions from "@/assets/vectors/SuitableSolutions.svg?react";
 import Support from "@/assets/vectors/Support.svg?react";
 import TechnicalAssessment from "@/assets/vectors/TechnicalAssessment.svg?react";
+import TrustAndPartnerShip from "@/assets/vectors/TrustAndPartnerShip.svg?react";
+import TrustOwnership from "@/assets/vectors/TrustOwnership.svg?react";
 import UIUX from "@/assets/vectors/UIUX.svg?react";
 import PC from "@/assets/vectors/processes/PC.svg?react";
 import Security from "@/assets/vectors/processes/Security.svg?react";
@@ -52,43 +64,43 @@ export const servicesConstants = [
     offers: [
       {
         title: "Exquisite & Sophisticated Solutions",
-        Icon: PC,
+        Icon: Exquisite,
         description:
           "We understand that one’s web solution should be not only permanent and effective but also beautiful. Each design and development decision is perfect in its way and does not leave a littered mess, which ruins the outward appearance of your brand.",
       },
       {
         title: "Flexibility",
-        Icon: PC,
+        Icon: Flexibility,
         description:
           "It is important for you to know that we do not operate on a ‘one size fits all’ basis with businesses. That is why we provide flexibility in our web development solutions with the option to choose the necessity levels. Whether it is highly elaborate modifications or simple executions in conjunction with other software, we provide dynamic solutions.",
       },
       {
         title: "Trust & Ownership",
-        Icon: PC,
+        Icon: TrustOwnership,
         description:
           "It is always important to point out that trust is always the ownership in any relationship that we establish. It is an essential policy that the company owns all projects it is involved in to champion clear communication and organizational responsibility. Your achievements are important to us and thus make your objectives our own.",
       },
       {
         title: "Originality",
-        Icon: PC,
+        Icon: Originality,
         description:
           "All our activities are founded and guided by the principle of innovation. With every assignment, we start thinking outside the box, therefore the solutions that we devise are not only relevant but unique as well. You may wonder what makes us so unique in an era where more and more websites are being developed.",
       },
       {
         title: "Quality & Consistency",
-        Icon: PC,
+        Icon: QualityConsistency,
         description:
           "Quality is not negotiable for us because our goal is to provide excellent services. It is because of this reason that we adopt rigorous production quality control measures to ensure you receive the best. This is a very critical area to make sure that all your website related development is consistent so that your site is always efficient and aesthetically pleasing.",
       },
       {
         title: "Customer Support",
-        Icon: PC,
+        Icon: CustomerSupport,
         description:
           "We are here for you at any point in your suffering. We provide our client with the best services right from the time of consultation and even after launch of your site. We understand that it is possible to have business relationships that span over a long period and that is why the customer comes first.",
       },
     ],
     serviceIndustriesDescription:
-      "IT Project Management services include Clevit from multiple sectors of industries. We appreciate the fact that each industry comes with its problems and we provide the best solution to enhance the progress of any project. Some of the industries we serve include:",
+      "Our web development process is streamlined and efficient, ensuring the best results for your business:",
     serviceTechnologiesTitle: "Key Aspects of Our Web Development Process",
     serviceTabTechnologies: webDevelopmentTechnologiesTabsConstants,
     serviceTechnologies: webDevelopmentTechnologiesConstants,
@@ -96,7 +108,7 @@ export const servicesConstants = [
       title: "Ready to Elevate Your Digital Presence? ",
       description: "Contact Us Today to Start Building Your Custom Website.",
     },
-    ChooseClevitTitle: "Why Choose Clevit for Technical Assessment Services?",
+    ChooseClevitTitle: "Why Choose Clevit for Web Development?",
     ChooseClevitRecomendation: [
       {
         title: "Tailored Solutions",
@@ -132,11 +144,11 @@ export const servicesConstants = [
     imageAlt: "Mobile App Development image",
     singleServiceHeaderTitle: "Mobile App Development Services",
     singleServiceHeaderDescription: "Transform Your Ideas into High-Performance Mobile Apps",
-    buttonTitle: "Start Your Project",
+    buttonTitle: "Request a Quote",
     title: "Mobile App Development",
     route: "/",
     description:
-      "Make your dreams a reality with our Mobile App Development Services now. We develop clarity based, efficient and rich user experience mobile applications which boost up engagement on all devices.",
+      "If you have some features in mind for your mobile application, then turn them into reality at Clevit – your application solutions with next-level performance. No matter if you want to build a native, cross-platform, or hybrid application, our professionals will help you in each step of the workflow, making the final product easy-to-navigate, easily-scaled, and aligned with the vision of your business.",
     descriptionOffer: "Develop engaging mobile apps that keep users coming back for more",
     singlePageDescription:
       "If you have some features in mind for your mobile application, then turn them into reality at Clevit – your application solutions with next level performance. No matter if you want to build a native, cross-platform, or hybrid application, our professionals will help you in each step of the workflow, making the final product easy-to-navigate, easily-scaled, and aligned with the vision of your business.",
@@ -144,96 +156,95 @@ export const servicesConstants = [
       "When creating mobile applications, at Clevit we follow several rules that are universal for all projects. Here’s what drives us:",
     offers: [
       {
-        title: "Exquisite & Sophisticated Solutions",
-        Icon: PC,
+        title: "Suitable Solutions",
+        Icon: SuitableSolutions,
         description:
-          "We understand that one’s web solution should be not only permanent and effective but also beautiful. Each design and development decision is perfect in its way and does not leave a littered mess, which ruins the outward appearance of your brand.",
+          "We present tailored solutions for your actual and specific business requirements. In order to create a mobile app that will work in tandem with your current business plan, we make sure to take the time to understand what you want.",
       },
       {
-        title: "Flexibility",
-        Icon: PC,
+        title: "Trust and Partnership",
+        Icon: TrustAndPartnerShip,
         description:
-          "It is important for you to know that we do not operate on a ‘one size fits all’ basis with businesses. That is why we provide flexibility in our web development solutions with the option to choose the necessity levels. Whether it is highly elaborate modifications or simple executions in conjunction with other software, we provide dynamic solutions.",
+          "A relationship not only means the customer, but the cornerstone of who we are is about creating and sustaining relationships. All of the projects are partnership-based, thus, we communicate all the information and do not have secret intentions but the goal of achievement.",
       },
       {
-        title: "Trust & Ownership",
-        Icon: PC,
+        title: "Cutting-Edge Technologies",
+        Icon: CuttingEdge,
         description:
-          "It is always important to point out that trust is always the ownership in any relationship that we establish. It is an essential policy that the company owns all projects it is involved in to champion clear communication and organizational responsibility. Your achievements are important to us and thus make your objectives our own.",
+          "We keep up with the advancements in technology, implementing the best practices that include secure and highly scalable approaches to mobile application development that defines successful mobile apps of today.",
       },
       {
-        title: "Originality",
-        Icon: PC,
+        title: "Exceptional Performance",
+        Icon: ExeptionalPerformance,
         description:
-          "All our activities are founded and guided by the principle of innovation. With every assignment, we start thinking outside the box, therefore the solutions that we devise are not only relevant but unique as well. You may wonder what makes us so unique in an era where more and more websites are being developed.",
+          "Instead of creating beautiful interfaces, we insist on the quality of performance that the application provides. Starting with the loading time durations to the whole procedure of interaction, each and every aspect of the application becomes refined.",
       },
       {
-        title: "Quality & Consistency",
-        Icon: PC,
+        title: "Consistent Support",
+        Icon: ConsistentSupport,
         description:
-          "Quality is not negotiable for us because our goal is to provide excellent services. It is because of this reason that we adopt rigorous production quality control measures to ensure you receive the best. This is a very critical area to make sure that all your website related development is consistent so that your site is always efficient and aesthetically pleasing.",
+          "I do not believe that our job is done once we go out in the field to release it. They experience constant support, updates, and maintenance on the mobile app since it adapts with the growth of the business and the flux of users’ requirements.",
       },
       {
-        title: "Customer Support",
-        Icon: PC,
+        title: "Customized User Experience",
+        Icon: CustomizedUserExperience,
         description:
-          "We are here for you at any point in your suffering. We provide our client with the best services right from the time of consultation and even after launch of your site. We understand that it is possible to have business relationships that span over a long period and that is why the customer comes first.",
+          "The analysis of the user experience aspect and its importance in the success of an app. Our fully navigational and aesthetically pleasing interfaces are developed with ordinary and imaginative touch appropriate to your clients.",
       },
     ],
     serviceIndustriesDescription:
-      "IT Project Management services include Clevit from multiple sectors of industries. We appreciate the fact that each industry comes with its problems and we provide the best solution to enhance the progress of any project. Some of the industries we serve include:",
-    serviceTechnologiesTitle: "Key Aspects of Our Web Development Process",
+      "Our mobile app development services cater to various industries, providing tailored solutions that meet unique business needs.",
+    serviceTechnologiesTitle: "Key Aspects of Our Mobile App Development Process",
     serviceTabTechnologies: webDevelopmentTechnologiesTabsConstants,
     serviceTechnologies: webDevelopmentTechnologiesConstants,
     serviceBookConsultation: {
-      title: "Ready to Elevate Your Digital Presence? ",
-      description: "Contact Us Today to Start Building Your Custom Website.",
+      title: "Ready to Turn Your Mobile App Vision into Reality?",
+      description: "Contact Us Now to Start Building a Custom App for Your Business.",
     },
-    ChooseClevitTitle: "Why Choose Clevit for Technical Assessment Services?",
+    ChooseClevitTitle: "Why Choose Clevit for Mobile App Development?",
     ChooseClevitRecomendation: [
       {
-        title: "Tailored Solutions",
+        title: "Custom Solutions",
         description:
-          "Here we design small and large-scale websites that correspond to your company’s and brand’s goals.",
+          "The advantage of our services is that we develop each app for your particular business requirements so that you can have an optimal end product.",
       },
       {
         title: "Advanced Technologies",
         description:
-          "We utilize up to date technology that will enable us to provide the most efficient, effective and secure website.",
+          "Our competence lies in deploying advanced technologies to deliver secure, scalable, and high-performing mobile apps.",
       },
       {
-        title: "Scalability",
+        title: "User-Centric Design",
         description:
-          "Whether you are a start-up company or an established enterprise, we create sites that expand your company.",
+          "The importance of the UX/UI design assists in creating an application that has an enhanced user experience.",
       },
       {
-        title: "Ongoing Support:",
+        title: "Ongoing Support",
         description:
-          "Our work is not done as soon as a product is out on the market. We provide support to make certain your site stays current and modified as per the current trend.",
+          "To make sure your app remains relevant and properly working, we guarantee its constant updates and maintenance.",
       },
     ],
     GetConsultation: {
-      title: "Let's Build Your Future",
+      title: "Let’s Build Your Mobile App Together",
       description:
-        "It is time to create new image of your busines online? Contact us today and let us guide you on how to achive a website that will capture your brand and market needs.",
+        "Are you ready to open the gates for your mobile app idea? Contact us today to begin your path to creating an effective and user-friendly application.",
     },
   },
   {
     id: ServicesIdConstants.DevOps,
     Icon: Devops,
     image: DevopsServices,
-
-    buttonTitle: "Consult with Us",
+    buttonTitle: "Request a Quote",
     imageAlt: "Devops service image",
     singleServiceHeaderTitle: "DevOps Services & Solutions",
     singleServiceHeaderDescription: "Accelerate Your Development with Seamless DevOps Integration",
     title: "DevOps",
     route: "/",
     description:
-      "Optimize your processes and do it with the help of our DevOps Services. We connect the development team with IT operations thus facilitating continuous delivery and optimizing the SDLC.",
+      "At Clevit, the Devops service provided focus on the delivery, collaboration and IT infrastructure management between development and operations. This way, we make your operations smooth, consistently integrating, automating and expanding according to what your business requires.",
 
     descriptionOffer:
-      "We ensure efficient collaboration between development and operations, allowing for speedy and high-quality product deployment.",
+      "We offer an extensive range of DevOps services to support the comprehensive life cycle of your systems development, from conception to monitoring for stability and automated, continually optimized performance.",
     singlePageDescription:
       "If you have some features in mind for your mobile application, then turn them into reality at Clevit – your application solutions with next level performance. No matter if you want to build a native, cross-platform, or hybrid application, our professionals will help you in each step of the workflow, making the final product easy-to-navigate, easily-scaled, and aligned with the vision of your business.",
     serviceDetails:
@@ -282,7 +293,7 @@ export const servicesConstants = [
     serviceTabTechnologies: webDevelopmentTechnologiesTabsConstants,
     serviceTechnologies: webDevelopmentTechnologiesConstants,
     serviceBookConsultation: {
-      title: "Ready to Elevate Your Digital Presence? ",
+      title: "Ready to Elevate Your Digital Presence?",
       description: "Contact Us Today to Start Building Your Custom Website.",
     },
     ChooseClevitTitle: "Why Choose Clevit for Technical Assessment Services?",
@@ -309,305 +320,361 @@ export const servicesConstants = [
       },
     ],
     GetConsultation: {
-      title: "Let's Build Your Future",
+      title: "Transform Your Operations with Expert DevOps Solutions",
       description:
-        "It is time to create new image of your busines online? Contact us today and let us guide you on how to achive a website that will capture your brand and market needs.",
+        "It is time to create new image of your business online? Contact us today and let us guide you on how to achieve a website that will capture your brand and market needs.",
     },
   },
   {
     id: ServicesIdConstants.AI,
     Icon: Robot,
     image: AIintegration,
-
-    buttonTitle: "Request a Demo",
     imageAlt: "AI integration image",
     singleServiceHeaderTitle: "AI Integration Services",
     singleServiceHeaderDescription: "Unlock the Power of AI with Custom Solutions",
+    buttonTitle: "Request a Quote",
     title: "AI Integration",
     route: "/",
     description:
-      "Let our AI Integration services make use of the power of AI. That is why we assist you in AI integration into your company’s activities, information processing, and decision-making.",
-
+      "At Clevit, we focus on applying the latest AI technologies that enhance your business processes and bring about positive changes. Our AI services range from data analytics to automation to help businesses improve efficiency, innovation, and growth.",
     descriptionOffer:
       "Clevit can integrate AI features that unlock powerful data insights and make your application truly intelligent.",
     singlePageDescription:
-      "If you have some features in mind for your mobile application, then turn them into reality at Clevit – your application solutions with next level performance. No matter if you want to build a native, cross-platform, or hybrid application, our professionals will help you in each step of the workflow, making the final product easy-to-navigate, easily-scaled, and aligned with the vision of your business.",
+      "If you have AI features in mind for your mobile application, turn them into reality at Clevit – offering solutions with next-level performance. Whether you aim for native, cross-platform, or hybrid applications, our experts will guide you through every step, ensuring scalability and alignment with your business vision.",
     serviceDetails:
-      "When creating mobile applications, at Clevit we follow several rules that are universal for all projects. Here’s what drives us:",
+      "At Clevit, when integrating AI into projects, we follow several principles that guide all our work. Here’s what drives us:",
     offers: [
       {
-        title: "Exquisite & Sophisticated Solutions",
+        title: "Adaptive AI Solutions",
         Icon: PC,
         description:
-          "We understand that one’s web solution should be not only permanent and effective but also beautiful. Each design and development decision is perfect in its way and does not leave a littered mess, which ruins the outward appearance of your brand.",
+          "Our AI solutions are customized to fit your organization’s needs and dynamics so that they may be adjusted for its benefit. Using a modern form of algorithms and technologies, we offer artificial intelligence systems that learn over time, thus solutions that will continue to grow with your business.",
       },
       {
-        title: "Flexibility",
+        title: "Trust",
         Icon: PC,
         description:
-          "It is important for you to know that we do not operate on a ‘one size fits all’ basis with businesses. That is why we provide flexibility in our web development solutions with the option to choose the necessity levels. Whether it is highly elaborate modifications or simple executions in conjunction with other software, we provide dynamic solutions.",
+          "Trust is at the core of our model. A key aspect is to design AI applications which are as clear as possible and that you can trust. Ethical AI principles are incorporated to guarantee the security and appropriate use of your data, which helps build credibility between your business and our AI services.",
       },
       {
-        title: "Trust & Ownership",
+        title: "Advanced AI",
         Icon: PC,
         description:
-          "It is always important to point out that trust is always the ownership in any relationship that we establish. It is an essential policy that the company owns all projects it is involved in to champion clear communication and organizational responsibility. Your achievements are important to us and thus make your objectives our own.",
+          "AI technologies have been employed to provide unique solutions that propel your business ahead. Machine learning models and deep learning frameworks state that we incorporate the state-of-the-art techniques in AI to make you stay ahead of the competition.",
       },
       {
-        title: "Originality",
+        title: "Quality First",
         Icon: PC,
         description:
-          "All our activities are founded and guided by the principle of innovation. With every assignment, we start thinking outside the box, therefore the solutions that we devise are not only relevant but unique as well. You may wonder what makes us so unique in an era where more and more websites are being developed.",
+          "Integration of AI is a fine process for us thus the stress on quality. At every developmental stage of our AI solutions, we follow stringent testing and validation processes to achieve high levels of precision and efficiency. This commitment to quality ensures that our AI applications provide you with the best results.",
       },
       {
-        title: "Quality & Consistency",
+        title: "Support",
         Icon: PC,
         description:
-          "Quality is not negotiable for us because our goal is to provide excellent services. It is because of this reason that we adopt rigorous production quality control measures to ensure you receive the best. This is a very critical area to make sure that all your website related development is consistent so that your site is always efficient and aesthetically pleasing.",
+          "According to the social model, continuous support is necessary for the sustained use of AI systems in an organization. Extra support is offered constantly for solving any problems, enhancing efficiency, and for the condition changes. Our support services are developed to guarantee that your implementations of AI solutions are smooth.",
       },
       {
-        title: "Customer Support",
+        title: "Individualized User Experience",
         Icon: PC,
         description:
-          "We are here for you at any point in your suffering. We provide our client with the best services right from the time of consultation and even after launch of your site. We understand that it is possible to have business relationships that span over a long period and that is why the customer comes first.",
+          "We specialize in developing AI strategies that are unique to your users’ needs and requirements. Using insights of the audience, we incorporate an AI-driven approach that establishes the perfect and superior interaction of the users with the solutions offered to them.",
       },
     ],
     serviceIndustriesDescription:
-      "IT Project Management services include Clevit from multiple sectors of industries. We appreciate the fact that each industry comes with its problems and we provide the best solution to enhance the progress of any project. Some of the industries we serve include:",
-    serviceTechnologiesTitle: "Key Aspects of Our Web Development Process",
+      "At Clevit, we provide Artificial Intelligence and technology services that cater to all sectors of the business world to make them more productive. Here’s how we serve different industries:",
+    serviceTechnologiesTitle: "Key Aspects of Our AI Integration Process",
     serviceTabTechnologies: webDevelopmentTechnologiesTabsConstants,
     serviceTechnologies: webDevelopmentTechnologiesConstants,
     serviceBookConsultation: {
-      title: "Ready to Elevate Your Digital Presence? ",
-      description: "Contact Us Today to Start Building Your Custom Website.",
+      title: "Ready to Elevate Your Digital Presence?",
+      description: "Contact Us Today to Start Building Your Custom AI Solution.",
     },
-    ChooseClevitTitle: "Why Choose Clevit for Technical Assessment Services?",
+    ChooseClevitTitle: "Why Choose Clevit for AI Integration?",
     ChooseClevitRecomendation: [
       {
         title: "Tailored Solutions",
         description:
-          "Here we design small and large-scale websites that correspond to your company’s and brand’s goals.",
+          "Our approach includes creating distinct and business-specific AI integration services that seamlessly fit your company’s objectives.",
       },
       {
-        title: "Advanced Technologies",
+        title: "Expert Team",
         description:
-          "We utilize up to date technology that will enable us to provide the most efficient, effective and secure website.",
+          "We have a team of AI professionals who are experts in AI solution implementation and are able to deliver quality work with new advancements.",
       },
       {
-        title: "Scalability",
+        title: "Advanced Technology",
         description:
-          "Whether you are a start-up company or an established enterprise, we create sites that expand your company.",
+          "For your project, we incorporated the best platforms and tools available in AI to provide you with the most optimal solution to your business.",
       },
       {
-        title: "Ongoing Support:",
+        title: "Commitment to Quality",
         description:
-          "Our work is not done as soon as a product is out on the market. We provide support to make certain your site stays current and modified as per the current trend.",
+          "We are profoundly concerned with quality, and this entails exhaustive standardization and quality control of our AI systems for dependability and security.",
+      },
+      {
+        title: "Ongoing Support",
+        description:
+          "We have a custom support team that’s always available to ensure our customers overcome challenges, deploy updates, and maintain the right milieu for AI solutions to thrive in the long run.",
+      },
+      {
+        title: "Proven Track Record",
+        description:
+          "Being a leader in adopting AI into different areas, Clevit is a reliable contractor to embrace the new level of AI-technology for your business.",
       },
     ],
     GetConsultation: {
-      title: "Let's Build Your Future",
-      description:
-        "It is time to create new image of your busines online? Contact us today and let us guide you on how to achive a website that will capture your brand and market needs.",
+      title: "Ready to Transform Your Business with AI?",
+      description: "Discover How Our Solutions Can Drive Your Success. Get a Free Consultation.",
     },
   },
   {
     id: ServicesIdConstants.ML,
     Icon: Settings,
     image: MachineLearning,
-    imageAlt: "Machine Learning Development image ",
+    imageAlt: "Machine Learning Development image",
+    serviceDetails: "poxellllllll", //poxelll
     singleServiceHeaderTitle: "ML Development Services",
     singleServiceHeaderDescription: "Paving the Way for Smarter Solutions",
-    buttonTitle: "Discover More",
+    buttonTitle: "Request a Quote",
     title: "Machine Learning Development",
     route: "/",
     description:
-      "Leverage your data with the help of our ML Development services. These machine learning models and solutions are integrated into your business to enable predictive analytics and smarter automation.",
-
+      "At Clevit, we understand that Machine Learning (ML) Development services help your business make intelligent decisions with data. Whether you need to predict customer behavior or perform text mining, we apply state-of-the-art ML automations to streamline operations and generate value. Our team of specialists adapts every solution based on the field and client requirements.",
     descriptionOffer:
-      "We develop custom machine-learning models to help you understand your data better and make smarter decisions",
+      "Specifically for Clevit, there are several areas of focus to guarantee the success of our machine learning initiatives. Our approach is meant to produce effective and high-quality solutions by emphasizing careful preparations and constant improvement.",
     singlePageDescription:
-      "If you have some features in mind for your mobile application, then turn them into reality at Clevit – your application solutions with next level performance. No matter if you want to build a native, cross-platform, or hybrid application, our professionals will help you in each step of the workflow, making the final product easy-to-navigate, easily-scaled, and aligned with the vision of your business.",
-    serviceDetails:
-      "When creating mobile applications, at Clevit we follow several rules that are universal for all projects. Here’s what drives us:",
+      "If you have some features in mind for your mobile application, then turn them into reality at Clevit – your application solutions with next-level performance. No matter if you want to build a native, cross-platform, or hybrid application, our professionals will help you in each step of the workflow, making the final product easy-to-navigate, easily-scaled, and aligned with the vision of your business.",
     offers: [
       {
-        title: "Exquisite & Sophisticated Solutions",
-        Icon: PC,
+        title: "Planning Phase",
         description:
-          "We understand that one’s web solution should be not only permanent and effective but also beautiful. Each design and development decision is perfect in its way and does not leave a littered mess, which ruins the outward appearance of your brand.",
+          "In each project, we initiate the strategic planning activity. In this stage, we consult directly with you to determine your business needs, objectives, and problems. This way, we can develop a unique machine learning solution that will meet your project’s primary goals.",
       },
       {
-        title: "Flexibility",
-        Icon: PC,
+        title: "Information Preparation Phase",
         description:
-          "It is important for you to know that we do not operate on a ‘one size fits all’ basis with businesses. That is why we provide flexibility in our web development solutions with the option to choose the necessity levels. Whether it is highly elaborate modifications or simple executions in conjunction with other software, we provide dynamic solutions.",
+          "A machine learning model is only as good as the data that you feed into it. Here, the data is collected, transformed, and structured to aid the analytical process that follows this phase.",
       },
       {
-        title: "Trust & Ownership",
-        Icon: PC,
+        title: "Creation of the Model Phase",
         description:
-          "It is always important to point out that trust is always the ownership in any relationship that we establish. It is an essential policy that the company owns all projects it is involved in to champion clear communication and organizational responsibility. Your achievements are important to us and thus make your objectives our own.",
+          "After data preparation, our team of machine learning engineers creates the model. This is the reason we evaluate the ideal algorithms and frameworks depending on the needs of our client.",
       },
       {
-        title: "Originality",
-        Icon: PC,
+        title: "Testing Phase",
         description:
-          "All our activities are founded and guided by the principle of innovation. With every assignment, we start thinking outside the box, therefore the solutions that we devise are not only relevant but unique as well. You may wonder what makes us so unique in an era where more and more websites are being developed.",
+          "For your machine learning model to be effective in actual conditions, we verify it using different data sets. The goal here is to achieve high accuracy of results while minimizing over-fitting or under-fitting of the model.",
       },
       {
-        title: "Quality & Consistency",
-        Icon: PC,
+        title: "Optimization Phase",
         description:
-          "Quality is not negotiable for us because our goal is to provide excellent services. It is because of this reason that we adopt rigorous production quality control measures to ensure you receive the best. This is a very critical area to make sure that all your website related development is consistent so that your site is always efficient and aesthetically pleasing.",
-      },
-      {
-        title: "Customer Support",
-        Icon: PC,
-        description:
-          "We are here for you at any point in your suffering. We provide our client with the best services right from the time of consultation and even after launch of your site. We understand that it is possible to have business relationships that span over a long period and that is why the customer comes first.",
+          "As soon as a model is deployed, we proceed to the optimization stage of the model. In production, we always assess the model and modify it as a result of new production findings.",
       },
     ],
     serviceIndustriesDescription:
-      "IT Project Management services include Clevit from multiple sectors of industries. We appreciate the fact that each industry comes with its problems and we provide the best solution to enhance the progress of any project. Some of the industries we serve include:",
-    serviceTechnologiesTitle: "Key Aspects of Our Web Development Process",
-    serviceTabTechnologies: webDevelopmentTechnologiesTabsConstants,
-    serviceTechnologies: webDevelopmentTechnologiesConstants,
+      "We have machine learning services and solutions for various industries at Clevit. We offer multipurpose and specific solutions that foster innovation in organizations. As a result, it is possible to state that we adjust our IT solutions to the needs of the specified sectors.",
+    serviceTechnologiesTitle: "Key Aspects of Our ML Development Process",
+    serviceTechnologies: [
+      {
+        title: "Deep Learning Frameworks",
+        description:
+          "Our strengths include profound knowledge of deep learning frameworks including Tensorflow.js, Keras.js, and Brain.js.",
+      },
+      {
+        title: "Computer Vision Solutions",
+        description:
+          "Using OpenCV.js, we make intelligent systems software solutions for machine learning that focuses on computer vision.",
+      },
+      {
+        title: "Natural Language Processing",
+        description:
+          "We build Natural Language Processing (NLP) solutions using NLP.js, enabling apps to perform tasks including sentiment analysis and text analysis.",
+      },
+      {
+        title: "Machine Learning for Creative AI",
+        description:
+          "We use ML5.js to build the models tailored specifically to the creation of creative AI applications.",
+      },
+    ],
     serviceBookConsultation: {
-      title: "Ready to Elevate Your Digital Presence? ",
-      description: "Contact Us Today to Start Building Your Custom Website.",
+      title: "Ready to Transform Your Business with Machine Learning?",
+      description:
+        "Discover how our custom ML solutions can drive innovation and efficiency in your business. Contact us today.",
     },
-    ChooseClevitTitle: "Why Choose Clevit for Technical Assessment Services?",
+    ChooseClevitTitle: "Why Choose Clevit for AI Integration Services?",
     ChooseClevitRecomendation: [
       {
         title: "Tailored Solutions",
         description:
-          "Here we design small and large-scale websites that correspond to your company’s and brand’s goals.",
+          "To meet the client’s demands, we adjust the presented machine learning models according to their business requirements and goals.",
       },
       {
-        title: "Advanced Technologies",
+        title: "Expert Team",
         description:
-          "We utilize up to date technology that will enable us to provide the most efficient, effective and secure website.",
+          "Our highly qualified data scientists and ML engineers are familiar with the latest technologies and practices for building accurate solutions.",
       },
       {
-        title: "Scalability",
+        title: "Cutting-Edge Technology",
         description:
-          "Whether you are a start-up company or an established enterprise, we create sites that expand your company.",
+          "We employ sophisticated concepts and techniques such as TensorFlow, OpenCV, and NLP.js to develop creative ML structures.",
       },
       {
-        title: "Ongoing Support:",
+        title: "End-to-End Service",
         description:
-          "Our work is not done as soon as a product is out on the market. We provide support to make certain your site stays current and modified as per the current trend.",
+          "We provide full-cycle ML development services, starting from data preparation to model placing and fine-tuning.",
+      },
+      {
+        title: "Data Security & Compliance",
+        description:
+          "We ensure the safe and legal processing and storage of your data while following the most important guidelines of the industry.",
+      },
+      {
+        title: "Continuous Support",
+        description:
+          "We continually monitor and fine-tune your ML solutions, enabling them to stay relevant and efficient for your business.",
       },
     ],
     GetConsultation: {
-      title: "Let's Build Your Future",
+      title: "Need Expert ML Development Services?",
       description:
-        "It is time to create new image of your busines online? Contact us today and let us guide you on how to achive a website that will capture your brand and market needs.",
+        "Let our team of professionals create powerful machine learning models tailored to your needs. Request a Consultation.",
     },
   },
   {
     id: ServicesIdConstants.Quality,
     Icon: Security,
     image: QualityAssurance,
-    buttonTitle: "Book a Consultation",
-    imageAlt: "Quality Assurance image",
+    buttonTitle: "Request a Quote",
+    imageAlt: "Data Quality Assurance image",
     singleServiceHeaderTitle: "Data Quality Assurance",
     singleServiceHeaderDescription: "Ensuring Data Integrity and Reliability",
-    title: "Quality Assurance",
-    route: "/",
-    description:
-      "Maximize the quality of your project with our Quality Assurance services. We have elaborate testing and quality control to ensure we produce perfect products that will suit the users.",
+    title: "Data Quality Assurance",
+    route: "/data-quality-assurance",
 
-    descriptionOffer:
-      "Flawless user experience guaranteed. Our QA team ensures everything you build is frustration-free",
-    singlePageDescription:
-      "If you have some features in mind for your mobile application, then turn them into reality at Clevit – your application solutions with next level performance. No matter if you want to build a native, cross-platform, or hybrid application, our professionals will help you in each step of the workflow, making the final product easy-to-navigate, easily-scaled, and aligned with the vision of your business.",
-    serviceDetails:
-      "When creating mobile applications, at Clevit we follow several rules that are universal for all projects. Here’s what drives us:",
+    description: {
+      title: "Data Quality Assurance",
+      text: "At Clevit, our Data Quality Assurance (QA) solutions are aimed at ensuring the quality, integrity and credibility of data. We guarantee the effective and accurate completion of the data processes, so you can make sound decisions for your business and improve operations.",
+    },
+
+    descriptionOffer: {
+      title: "What Is Important for Us",
+      text: "Keeping client needs in mind, Clevit is about achieving basic, simple, and accurate data quality assurance. To that end, the most important priority for us is that your data is accurate, reliable, and compliant while helping your business achieve its objectives.",
+    },
+
+    keyAspects: {
+      title: "Key Aspects of Our Data Quality Assurance Process",
+      aspects: [
+        {
+          title: "Data Accuracy & Integrity",
+          text: "We respect the accuracy of your data and guarantee that all the datasets will not contain errors, or duplicate and/or conflicting records. This ensures that the analysis done and the decisions made are precise and sound to every business in your organization.",
+        },
+        {
+          title: "Consistency Across Systems",
+          text: "We are able to maintain the proper data integrity across different platforms, systems and databases that facilitate their working and proper exchange of information with other departments.",
+        },
+        {
+          title: "Timely Data Validation",
+          text: "Clevit ensures that the data is validated in real time and as such all errors are corrected almost instantly hence less time is spent on data collection hence one can act on the data any time.",
+        },
+        {
+          title: "Compliance & Security",
+          text: "Your data is protected to conform to current established standards on data privacy and security to avoid compromising strictly private information.",
+        },
+        {
+          title: "Proactive Monitoring & Maintenance",
+          text: "Our approach of being proactive also assists in the early identification of data process irregularities thus guarantees the future stability of your data processes.",
+        },
+      ],
+    },
+
+    serviceDetails: "poxelll",
     offers: [
       {
-        title: "Exquisite & Sophisticated Solutions",
+        title: "Automated Data Testing",
         Icon: PC,
         description:
-          "We understand that one’s web solution should be not only permanent and effective but also beautiful. Each design and development decision is perfect in its way and does not leave a littered mess, which ruins the outward appearance of your brand.",
+          "With Selenium, Cypress, and TestLink, we ensure effective testing of your data processes to identify and optimize any errors.",
       },
       {
-        title: "Flexibility",
+        title: "API Testing & Validation",
         Icon: PC,
         description:
-          "It is important for you to know that we do not operate on a ‘one size fits all’ basis with businesses. That is why we provide flexibility in our web development solutions with the option to choose the necessity levels. Whether it is highly elaborate modifications or simple executions in conjunction with other software, we provide dynamic solutions.",
+          "Using solutions like Apiary, SoapUI, and Postman, we guarantee that all your APIs perform precise data exchange with validation among systems.",
       },
       {
-        title: "Trust & Ownership",
+        title: "Performance & Load Testing",
         Icon: PC,
         description:
-          "It is always important to point out that trust is always the ownership in any relationship that we establish. It is an essential policy that the company owns all projects it is involved in to champion clear communication and organizational responsibility. Your achievements are important to us and thus make your objectives our own.",
+          "We emulate high loads and performance stress using JMeter and Tricentis Tosca to guarantee stability in your data-handling systems.",
       },
       {
-        title: "Originality",
+        title: "End-to-End Data Integrity Testing",
         Icon: PC,
         description:
-          "All our activities are founded and guided by the principle of innovation. With every assignment, we start thinking outside the box, therefore the solutions that we devise are not only relevant but unique as well. You may wonder what makes us so unique in an era where more and more websites are being developed.",
+          "Utilizing tools like Playwright and Tricentis Tosca, we ensure data integrity, security, and accuracy throughout the system lifecycle.",
       },
       {
-        title: "Quality & Consistency",
+        title: "Proactive Monitoring & Maintenance",
         Icon: PC,
         description:
-          "Quality is not negotiable for us because our goal is to provide excellent services. It is because of this reason that we adopt rigorous production quality control measures to ensure you receive the best. This is a very critical area to make sure that all your website related development is consistent so that your site is always efficient and aesthetically pleasing.",
+          "Our proactive approach helps in early identification of data process irregularities, ensuring the stability of your data processes.",
       },
       {
-        title: "Customer Support",
+        title: "Data Security & Compliance",
         Icon: PC,
         description:
-          "We are here for you at any point in your suffering. We provide our client with the best services right from the time of consultation and even after launch of your site. We understand that it is possible to have business relationships that span over a long period and that is why the customer comes first.",
+          "Your data is treated with great importance, conforming to compliance standards while being well-managed and secured.",
       },
     ],
-    serviceIndustriesDescription:
-      "IT Project Management services include Clevit from multiple sectors of industries. We appreciate the fact that each industry comes with its problems and we provide the best solution to enhance the progress of any project. Some of the industries we serve include:",
-    serviceTechnologiesTitle: "Key Aspects of Our Web Development Process",
-    serviceTabTechnologies: webDevelopmentTechnologiesTabsConstants,
-    serviceTechnologies: webDevelopmentTechnologiesConstants,
-    serviceBookConsultation: {
-      title: "Ready to Elevate Your Digital Presence? ",
-      description: "Contact Us Today to Start Building Your Custom Website.",
+
+    serviceIndustriesDescription: {
+      title: "Industries We Serve",
+      text: "Clevit’s Data Quality Assurance services are flexible for various sectors, including healthcare, finance, retail, logistics, and more. Our services are fully adaptable to meet the high-quality data requirements of each industry.",
     },
-    ChooseClevitTitle: "Why Choose Clevit for Technical Assessment Services?",
+
+    serviceBookConsultation: {
+      title: "Ready to Elevate Your Data Quality?",
+      description: "Contact Us Today to Start Your Data Quality Assurance Journey.",
+    },
+
+    ChooseClevitTitle: "Why Choose Clevit for Data Quality Assurance?",
     ChooseClevitRecomendation: [
       {
-        title: "Tailored Solutions",
+        title: "Comprehensive Approach",
         description:
-          "Here we design small and large-scale websites that correspond to your company’s and brand’s goals.",
+          "We provide all types of data quality assurance services, ensuring complete and truthful solutions.",
       },
       {
-        title: "Advanced Technologies",
+        title: "Experienced Team",
         description:
-          "We utilize up to date technology that will enable us to provide the most efficient, effective and secure website.",
+          "Our specialists are versed in data management, providing accurate solutions with minimal margin of error.",
       },
       {
-        title: "Scalability",
+        title: "Customized Solutions",
         description:
-          "Whether you are a start-up company or an established enterprise, we create sites that expand your company.",
+          "We localize our services to target the unique needs and goals of your business.",
       },
       {
-        title: "Ongoing Support:",
-        description:
-          "Our work is not done as soon as a product is out on the market. We provide support to make certain your site stays current and modified as per the current trend.",
+        title: "Cutting-Edge Technology",
+        description: "We apply the most advanced technologies for improved data quality solutions.",
       },
     ],
+
     GetConsultation: {
-      title: "Let's Build Your Future",
+      title: "Looking for Reliable Data QA Solutions?",
       description:
-        "It is time to create new image of your busines online? Contact us today and let us guide you on how to achive a website that will capture your brand and market needs.",
+        "Let Clevit handle your data validation and optimization needs. Schedule a consultation today.",
     },
   },
   {
     id: ServicesIdConstants.Assessment,
     Icon: TechnicalAssessment,
+    image: TechnicalAssessmentImage,
     buttonTitle: "Schedule an Assessment",
     imageAlt: "Technical Assessment image",
     singleServiceHeaderTitle: "Technical Assessment Services",
     singleServiceHeaderDescription: "Evaluating Your System for Peak Performance and Efficiency",
-    image: TechnicalAssessmentImage,
     title: "Technical Assessment",
     route: "/",
     description:
@@ -615,10 +682,13 @@ export const servicesConstants = [
 
     descriptionOffer:
       "We offer in-depth technical assessments to identify and address any weak spots in your current setups.",
+
     singlePageDescription:
       "If you have some features in mind for your mobile application, then turn them into reality at Clevit – your application solutions with next level performance. No matter if you want to build a native, cross-platform, or hybrid application, our professionals will help you in each step of the workflow, making the final product easy-to-navigate, easily-scaled, and aligned with the vision of your business.",
+
     serviceDetails:
       "When creating mobile applications, at Clevit we follow several rules that are universal for all projects. Here’s what drives us:",
+
     offers: [
       {
         title: "Exquisite & Sophisticated Solutions",
@@ -657,49 +727,59 @@ export const servicesConstants = [
           "We are here for you at any point in your suffering. We provide our client with the best services right from the time of consultation and even after launch of your site. We understand that it is possible to have business relationships that span over a long period and that is why the customer comes first.",
       },
     ],
+
     serviceIndustriesDescription:
       "IT Project Management services include Clevit from multiple sectors of industries. We appreciate the fact that each industry comes with its problems and we provide the best solution to enhance the progress of any project. Some of the industries we serve include:",
+
     serviceTechnologiesTitle: "Key Aspects of Our Web Development Process",
     serviceTabTechnologies: webDevelopmentTechnologiesTabsConstants,
     serviceTechnologies: webDevelopmentTechnologiesConstants,
+
     serviceBookConsultation: {
       title: "Ready to Elevate Your Digital Presence? ",
       description: "Contact Us Today to Start Building Your Custom Website.",
     },
+
     ChooseClevitTitle: "Why Choose Clevit for Technical Assessment Services?",
     ChooseClevitRecomendation: [
       {
-        title: "Tailored Solutions",
+        title: "Comprehensive Evaluations",
         description:
-          "Here we design small and large-scale websites that correspond to your company’s and brand’s goals.",
+          "We provide a comprehensive examination of your business across all layers of technology including hardware, software and security.",
       },
       {
-        title: "Advanced Technologies",
+        title: "Expert Team",
         description:
-          "We utilize up to date technology that will enable us to provide the most efficient, effective and secure website.",
+          "With our team of specialists, we have accumulated significant knowledge of how to assess and improve large and multifaceted technical systems in various industries.",
       },
       {
-        title: "Scalability",
+        title: "Actionable Insights",
         description:
-          "Whether you are a start-up company or an established enterprise, we create sites that expand your company.",
+          "Our assessments give you specific and practical ways to improve performance, increase security, and minimize operational risks.",
       },
       {
-        title: "Ongoing Support:",
+        title: "Customized Solutions",
         description:
-          "Our work is not done as soon as a product is out on the market. We provide support to make certain your site stays current and modified as per the current trend.",
+          "Our approach is flexible to match your business requirements, to make sure that the assessment proposed is suitable for the client.",
+      },
+      {
+        title: "Advanced Technology",
+        description:
+          "We use the best practices and state of the art tools to generate accurate and correct reviews that meet the best practices.",
       },
     ],
+
     GetConsultation: {
       title: "Let's Build Your Future",
       description:
-        "It is time to create new image of your busines online? Contact us today and let us guide you on how to achive a website that will capture your brand and market needs.",
+        "It is time to create new image of your business online? Contact us today and let us guide you on how to achieve a website that will capture your brand and market needs.",
     },
   },
   {
     id: ServicesIdConstants.Maintenance,
     Icon: Support,
-    buttonTitle: "Get Support",
-    imageAlt: "Support & Maintence image",
+    buttonTitle: "Request a Quote",
+    imageAlt: "Support & Maintenance image",
 
     singleServiceHeaderTitle: "Website Maintenance Services",
     singleServiceHeaderDescription: "Ensuring Your Website’s Optimal Performance and Security",
@@ -707,12 +787,12 @@ export const servicesConstants = [
     title: "Support & Maintenance",
     route: "/",
     description:
-      "Ensure your investments continue to perform optimally with our Support & Maintenance solutions. We give long-term support so that all the applications developed are usable and meet their optimal performance.",
+      "At Clevit, we are aware of the fact that your website is a crucial aspect of your business. Our Website Maintenance Services are aimed at making sure your website is secure, fast, and in proper working order. From performance and general health checks to security checks and content updates, we maintain your website’s health and relevance with the modern online world.",
 
     descriptionOffer:
       "We provide reliable support and ongoing maintenance to keep your digital assets running smoothly, ensuring uninterrupted business operations.",
     singlePageDescription:
-      "If you have some features in mind for your mobile application, then turn them into reality at Clevit – your application solutions with next level performance. No matter if you want to build a native, cross-platform, or hybrid application, our professionals will help you in each step of the workflow, making the final product easy-to-navigate, easily-scaled, and aligned with the vision of your business.",
+      "If you have some features in mind for your mobile application, then turn them into reality at Clevit – your application solutions with next-level performance. No matter if you want to build a native, cross-platform, or hybrid application, our professionals will help you in each step of the workflow, making the final product easy-to-navigate, easily-scaled, and aligned with the vision of your business.",
     serviceDetails:
       "When creating mobile applications, at Clevit we follow several rules that are universal for all projects. Here’s what drives us:",
     offers: [
@@ -744,17 +824,17 @@ export const servicesConstants = [
         title: "Quality & Consistency",
         Icon: PC,
         description:
-          "Quality is not negotiable for us because our goal is to provide excellent services. It is because of this reason that we adopt rigorous production quality control measures to ensure you receive the best. This is a very critical area to make sure that all your website related development is consistent so that your site is always efficient and aesthetically pleasing.",
+          "Quality is not negotiable for us because our goal is to provide excellent services. It is because of this reason that we adopt rigorous production quality control measures to ensure you receive the best. This is a very critical area to make sure that all your website-related development is consistent so that your site is always efficient and aesthetically pleasing.",
       },
       {
         title: "Customer Support",
         Icon: PC,
         description:
-          "We are here for you at any point in your suffering. We provide our client with the best services right from the time of consultation and even after launch of your site. We understand that it is possible to have business relationships that span over a long period and that is why the customer comes first.",
+          "We are here for you at any point in your suffering. We provide our client with the best services right from the time of consultation and even after the launch of your site. We understand that it is possible to have business relationships that span over a long period and that is why the customer comes first.",
       },
     ],
     serviceIndustriesDescription:
-      "IT Project Management services include Clevit from multiple sectors of industries. We appreciate the fact that each industry comes with its problems and we provide the best solution to enhance the progress of any project. Some of the industries we serve include:",
+      "Clevit’s Website Maintenance Services conveniently apply to a broad spectrum of clients belonging to different industries. Before providing the services to the different sectors, we assess their needs so that our services can deliver quality performance and security.",
     serviceTechnologiesTitle: "Key Aspects of Our Web Development Process",
     serviceTabTechnologies: webDevelopmentTechnologiesTabsConstants,
     serviceTechnologies: webDevelopmentTechnologiesConstants,
@@ -772,7 +852,7 @@ export const servicesConstants = [
       {
         title: "Advanced Technologies",
         description:
-          "We utilize up to date technology that will enable us to provide the most efficient, effective and secure website.",
+          "We utilize up-to-date technology that will enable us to provide the most efficient, effective, and secure website.",
       },
       {
         title: "Scalability",
@@ -786,9 +866,9 @@ export const servicesConstants = [
       },
     ],
     GetConsultation: {
-      title: "Let's Build Your Future",
+      title: "Need Reliable Website Maintenance Services?",
       description:
-        "It is time to create new image of your busines online? Contact us today and let us guide you on how to achive a website that will capture your brand and market needs.",
+        "Let Clevit ensure your website remains secure, fast, and functional. Schedule a consultation.",
     },
   },
   {
@@ -798,187 +878,209 @@ export const servicesConstants = [
     title: "Outstaffing",
     buttonTitle: "Hire Now",
     imageAlt: "Outstaffing image",
-    singleServiceHeaderTitle: "Website Maintenance Services",
-    singleServiceHeaderDescription: "Ensuring Your Website’s Optimal Performance and Security",
+    singleServiceHeaderTitle: "IT Outstaffing Services",
+    singleServiceHeaderDescription: "Access Skilled Talent On-Demand",
     route: "/",
     description:
-      "Outstaffing – build your team with our professionals. Our skilled professionals blend effectively into your team, enabling you to manage your growing projects effectively.",
+      "At Clevit, our IT outstaffing works for companies searching for flexible and cost-efficient ways to augment IT teams when needed. If you require specific developers, project managers, or QA engineers, you can easily find highly trained workers willing to fit the team. Outstaffing services we offer let you scale up your team rapidly and seamlessly without the challenges of direct recruitment.",
 
     descriptionOffer:
       "Need some extra tech muscle? Clevit can connect you with a pool of highly skilled developers to boost your development team.",
     singlePageDescription:
-      "If you have some features in mind for your mobile application, then turn them into reality at Clevit – your application solutions with next level performance. No matter if you want to build a native, cross-platform, or hybrid application, our professionals will help you in each step of the workflow, making the final product easy-to-navigate, easily-scaled, and aligned with the vision of your business.",
+      "If you have some features in mind for your mobile application, then turn them into reality at Clevit – your application solutions with next-level performance. No matter if you want to build a native, cross-platform, or hybrid application, our professionals will help you in each step of the workflow, making the final product easy-to-navigate, easily-scaled, and aligned with the vision of your business.",
+
     serviceDetails:
       "When creating mobile applications, at Clevit we follow several rules that are universal for all projects. Here’s what drives us:",
+
     offers: [
       {
-        title: "Exquisite & Sophisticated Solutions",
+        title: "Tailored Talent Matching",
         Icon: PC,
         description:
-          "We understand that one’s web solution should be not only permanent and effective but also beautiful. Each design and development decision is perfect in its way and does not leave a littered mess, which ruins the outward appearance of your brand.",
+          "We offer IT contractors according to your project needs, guaranteeing a personnel checklist that will improve the vocation and expertise needed to carry out the project.",
       },
       {
-        title: "Flexibility",
+        title: "Flexibility & Scalability",
         Icon: PC,
         description:
-          "It is important for you to know that we do not operate on a ‘one size fits all’ basis with businesses. That is why we provide flexibility in our web development solutions with the option to choose the necessity levels. Whether it is highly elaborate modifications or simple executions in conjunction with other software, we provide dynamic solutions.",
+          "In outstaffing, we can adjust the number of employees working on your project, which makes it easy for you to expand or scale down your team at any time.",
       },
       {
-        title: "Trust & Ownership",
+        title: "Commitment to Quality",
         Icon: PC,
         description:
-          "It is always important to point out that trust is always the ownership in any relationship that we establish. It is an essential policy that the company owns all projects it is involved in to champion clear communication and organizational responsibility. Your achievements are important to us and thus make your objectives our own.",
+          "The quality of our services is kept high, and we only hire the best workers, making sure that all members of our team are qualified.",
       },
       {
-        title: "Originality",
+        title: "Trust & Reliability",
         Icon: PC,
         description:
-          "All our activities are founded and guided by the principle of innovation. With every assignment, we start thinking outside the box, therefore the solutions that we devise are not only relevant but unique as well. You may wonder what makes us so unique in an era where more and more websites are being developed.",
+          "We understand your success is our success. Outstaffing means building long-term relationships with the client and providing stable and effective work of the outstaffed specialist.",
       },
       {
-        title: "Quality & Consistency",
+        title: "Cost Efficiency",
         Icon: PC,
         description:
-          "Quality is not negotiable for us because our goal is to provide excellent services. It is because of this reason that we adopt rigorous production quality control measures to ensure you receive the best. This is a very critical area to make sure that all your website related development is consistent so that your site is always efficient and aesthetically pleasing.",
+          "By opting for outstaffing services from us, you do not have to spend on recruitment, employee benefits, and overheads, and yet you get the best IT professionals.",
       },
       {
-        title: "Customer Support",
+        title: "Ongoing Support",
         Icon: PC,
         description:
-          "We are here for you at any point in your suffering. We provide our client with the best services right from the time of consultation and even after launch of your site. We understand that it is possible to have business relationships that span over a long period and that is why the customer comes first.",
+          "Our team is actively engaged, standing by to support and facilitate the work of the in-house team and the outstaffed professionals.",
       },
     ],
+
     serviceIndustriesDescription:
-      "IT Project Management services include Clevit from multiple sectors of industries. We appreciate the fact that each industry comes with its problems and we provide the best solution to enhance the progress of any project. Some of the industries we serve include:",
-    serviceTechnologiesTitle: "Key Aspects of Our Web Development Process",
+      "IT Outstaffing Services of Clevit means that we offer staff for rent for every industry to ensure that every business gets the relevant talent. This way we know how every industry works and the problems that they go through, which helps us in identifying the kind of services you require. Here are some industries we serve:",
+
+    serviceTechnologiesTitle: "Key Aspects of Our IT Outstaffing Process",
     serviceTabTechnologies: webDevelopmentTechnologiesTabsConstants,
     serviceTechnologies: webDevelopmentTechnologiesConstants,
+
     serviceBookConsultation: {
       title: "Ready to Elevate Your Digital Presence? ",
       description: "Contact Us Today to Start Building Your Custom Website.",
     },
+
     ChooseClevitTitle: "Why Choose Clevit for Technical Assessment Services?",
     ChooseClevitRecomendation: [
       {
-        title: "Tailored Solutions",
+        title: "Extensive Talent Pool",
         description:
-          "Here we design small and large-scale websites that correspond to your company’s and brand’s goals.",
+          "A large number of qualified specialists in various disciplines and information technologies.",
       },
       {
-        title: "Advanced Technologies",
+        title: "Customized Staffing Solutions",
         description:
-          "We utilize up to date technology that will enable us to provide the most efficient, effective and secure website.",
+          "As a company, we provide the services that meet your project's requirements, and therefore, get the appropriate talents for your products.",
       },
       {
-        title: "Scalability",
+        title: "Efficient Scaling",
         description:
-          "Whether you are a start-up company or an established enterprise, we create sites that expand your company.",
+          "Hire your IT staff as per project requirements and scale up or down depending on the project needs easily.",
       },
       {
-        title: "Ongoing Support:",
+        title: "Transparent Communication",
         description:
-          "Our work is not done as soon as a product is out on the market. We provide support to make certain your site stays current and modified as per the current trend.",
+          "We make the flow of work as we explain it as transparent as possible to help you easily manage your team.",
+      },
+      {
+        title: "Proven Track Record",
+        description:
+          "Our human resource specialists provide IT staffing services with rich experience accumulated over the years, always achieving the expectations of our clients in different sectors.",
       },
     ],
+
     GetConsultation: {
-      title: "Let's Build Your Future",
+      title: "Looking for IT Outstaffing Solutions?",
       description:
-        "It is time to create new image of your busines online? Contact us today and let us guide you on how to achive a website that will capture your brand and market needs.",
+        "Let us help you scale your team with our top-tier outstaffing services. Schedule a consultation.",
     },
   },
   {
     id: ServicesIdConstants.ProjectManagement,
-    image: ProjectManagment,
-    Icon: PM,
-    title: "Project Management",
-    route: "/",
-    buttonTitle: "Plan Your Project",
-    imageAlt: "Project Managment image",
-    singleServiceHeaderTitle: "IT Outstaffing Services",
-    singleServiceHeaderDescription: "Access Skilled Talent On-Demand",
+    image: ProjectManagment, // Замените на соответствующее изображение
+    Icon: PM, // Замените на соответствующую иконку
+    title: "IT Project Management",
+    route: "/it-project-management",
+    buttonTitle: "Request a Quote",
+    imageAlt: "IT Project Management image",
+    singleServiceHeaderTitle: "Expert Guidance for Your IT Projects",
+    singleServiceHeaderDescription:
+      "At Clevit, our IT Project Management services encompass a detailed process-oriented framework to provide a step-by-step direction for delivering your IT projects.",
     description:
-      "Make your projects successful with the help of our Project Management services. Through planning to implementation, we are fully involved in every detail of the project to meet your business needs.",
+      "Our project management staff, which has extensive experience, guarantees that each phase of your project is thoroughly organized, controlled, and implemented, minimizing risks and improving efficiency. We focus on the task on time, cost, and business strategy goals to serve our clients.",
 
     descriptionOffer:
-      "Our expert managers keep your project organized and on schedule, overseeing every detail from start to finish.",
-    singlePageDescription:
-      "If you have some features in mind for your mobile application, then turn them into reality at Clevit – your application solutions with next level performance. No matter if you want to build a native, cross-platform, or hybrid application, our professionals will help you in each step of the workflow, making the final product easy-to-navigate, easily-scaled, and aligned with the vision of your business.",
-    serviceDetails:
-      "When creating mobile applications, at Clevit we follow several rules that are universal for all projects. Here’s what drives us:",
+      "The fact is that Clevit’s IT Project Management approach is based on openness, fast implementation, and cooperation. Our emphasis is the effective performance of a given project in order to meet certain objectives within certain time and within overall cost constraints.",
+
+    serviceDetails: "Here are the key principles that define our project management philosophy:",
+
     offers: [
       {
-        title: "Exquisite & Sophisticated Solutions",
+        title: "Clear Communication",
         Icon: PC,
         description:
-          "We understand that one’s web solution should be not only permanent and effective but also beautiful. Each design and development decision is perfect in its way and does not leave a littered mess, which ruins the outward appearance of your brand.",
+          "This policy emphasizes clear communication at all points that are inherent in the project implementation process.",
       },
       {
-        title: "Flexibility",
+        title: "Customized Project Plans",
         Icon: PC,
         description:
-          "It is important for you to know that we do not operate on a ‘one size fits all’ basis with businesses. That is why we provide flexibility in our web development solutions with the option to choose the necessity levels. Whether it is highly elaborate modifications or simple executions in conjunction with other software, we provide dynamic solutions.",
+          "All projects are different, and thus we manage each IT project according to the objectives, requirements, and challenges involved.",
       },
       {
-        title: "Trust & Ownership",
+        title: "Risk Mitigation",
         Icon: PC,
         description:
-          "It is always important to point out that trust is always the ownership in any relationship that we establish. It is an essential policy that the company owns all projects it is involved in to champion clear communication and organizational responsibility. Your achievements are important to us and thus make your objectives our own.",
+          "Risks are continuously identified and managed by our project managers so as to allow your project not to be extended for any reasons.",
       },
       {
-        title: "Originality",
+        title: "Efficient Resource Management",
         Icon: PC,
         description:
-          "All our activities are founded and guided by the principle of innovation. With every assignment, we start thinking outside the box, therefore the solutions that we devise are not only relevant but unique as well. You may wonder what makes us so unique in an era where more and more websites are being developed.",
+          "We are good at managing resources by ensuring that the right team and the right amount of money is spent to ensure efficiency without wastage.",
       },
       {
-        title: "Quality & Consistency",
+        title: "Timely Delivery",
         Icon: PC,
         description:
-          "Quality is not negotiable for us because our goal is to provide excellent services. It is because of this reason that we adopt rigorous production quality control measures to ensure you receive the best. This is a very critical area to make sure that all your website related development is consistent so that your site is always efficient and aesthetically pleasing.",
+          "We always maintain close deadlines, this way guaranteeing on-time delivery of your project without compromising on quality.",
       },
       {
-        title: "Customer Support",
+        title: "Continuous Monitoring & Feedback",
         Icon: PC,
         description:
-          "We are here for you at any point in your suffering. We provide our client with the best services right from the time of consultation and even after launch of your site. We understand that it is possible to have business relationships that span over a long period and that is why the customer comes first.",
+          "We carry out constant control and monitoring measures and always look forward to receiving feedback from the stakeholders so that the project can go on and can change whenever it has to.",
       },
     ],
+
     serviceIndustriesDescription:
       "IT Project Management services include Clevit from multiple sectors of industries. We appreciate the fact that each industry comes with its problems and we provide the best solution to enhance the progress of any project. Some of the industries we serve include:",
-    serviceTechnologiesTitle: "Key Aspects of Our Web Development Process",
+
+    serviceTechnologiesTitle: "Key Aspects of Our IT Project Management Process",
     serviceTabTechnologies: webDevelopmentTechnologiesTabsConstants,
     serviceTechnologies: webDevelopmentTechnologiesConstants,
+
     serviceBookConsultation: {
-      title: "Ready to Elevate Your Digital Presence? ",
-      description: "Contact Us Today to Start Building Your Custom Website.",
+      title: "Looking for Expert IT Project Management Solutions?",
+      description:
+        "Let Clevit streamline your project with our tailored approach. Contact us today.",
     },
-    ChooseClevitTitle: "Why Choose Clevit for Technical Assessment Services?",
+
+    ChooseClevitTitle: "Why Choose Clevit for IT Project Management Services?",
     ChooseClevitRecomendation: [
+      {
+        title: "Experienced Project Managers",
+        description:
+          "The members of our team hold professional qualifications in project management and have implemented several successful IT projects.",
+      },
       {
         title: "Tailored Solutions",
         description:
-          "Here we design small and large-scale websites that correspond to your company’s and brand’s goals.",
+          "Our services involve coming up with an individual project management plan that suits the goals of your company and project.",
       },
       {
-        title: "Advanced Technologies",
+        title: "Proven Methodologies",
         description:
-          "We utilize up to date technology that will enable us to provide the most efficient, effective and secure website.",
+          "We adopt effective project management approaches including Agile and Waterfall to achieve project goals.",
       },
       {
-        title: "Scalability",
+        title: "Advanced Tools & Technologies",
         description:
-          "Whether you are a start-up company or an established enterprise, we create sites that expand your company.",
+          "We employ the best project management systems for monitoring, analyzing, and enhancing the performance of projects.",
       },
       {
-        title: "Ongoing Support:",
+        title: "Client-Centric Approach",
         description:
-          "Our work is not done as soon as a product is out on the market. We provide support to make certain your site stays current and modified as per the current trend.",
+          "The team stays in touch with the clients to keep them engaged and make sure they are satisfied at every point of the project.",
       },
     ],
+
     GetConsultation: {
-      title: "Let's Build Your Future",
-      description:
-        "It is time to create new image of your busines online? Contact us today and let us guide you on how to achive a website that will capture your brand and market needs.",
+      title: "Looking for Reliable IT Project Management Services?",
+      description: "Let Clevit guide your IT projects to success. Schedule a consultation.",
     },
   },
   {
@@ -989,186 +1091,207 @@ export const servicesConstants = [
     imageAlt: "UI/UX designe image ",
     singleServiceHeaderTitle: "UI/UX Design Services",
     singleServiceHeaderDescription: "Designing Engaging and User-Friendly Experiences",
-    buttonTitle: "See Our Work",
+    buttonTitle: "Request a Quote",
     route: "/",
     description:
-      "Design captivating and user-friendly interfaces with our UI/UX Design solutions. Our main goal here is to create sleek and polished interfaces with a highly usable design that enhances the experience.",
+      "UI/UX design services offered by Clevit are also geared towards developing aesthetically pleasing designs that are easy to use and purpose-driven. Every design aspect is thoughtfully incorporated to enhance usability, look and feel, and accessibility which leads to high-quality user experience and increased revenues.",
 
     descriptionOffer:
       "We craft visually appealing and easy-to-use interfaces, making your digital products enjoyable and intuitive for users.",
     singlePageDescription:
       "If you have some features in mind for your mobile application, then turn them into reality at Clevit – your application solutions with next level performance. No matter if you want to build a native, cross-platform, or hybrid application, our professionals will help you in each step of the workflow, making the final product easy-to-navigate, easily-scaled, and aligned with the vision of your business.",
     serviceDetails:
-      "When creating mobile applications, at Clevit we follow several rules that are universal for all projects. Here’s what drives us:",
+      "What Is Important for Us: In particular, we will describe our UI/UX design process that responds to the principles of cooperation, imagination, and comprehending the need of the ultimate user. Paragraphs, fonts, color schemes, and usability are balanced and meet your brand’s objectives in the design.",
     offers: [
       {
-        title: "Exquisite & Sophisticated Solutions",
+        title: "User-Centered Approach",
         Icon: PC,
         description:
-          "We understand that one’s web solution should be not only permanent and effective but also beautiful. Each design and development decision is perfect in its way and does not leave a littered mess, which ruins the outward appearance of your brand.",
+          "So at Clevit, the design process always has the intent of putting the user first. Analyzing users’ interactions with designs, we focus on improving usability, engagement, and satisfaction.",
       },
       {
-        title: "Flexibility",
+        title: "Consistency Across Platforms",
         Icon: PC,
         description:
-          "It is important for you to know that we do not operate on a ‘one size fits all’ basis with businesses. That is why we provide flexibility in our web development solutions with the option to choose the necessity levels. Whether it is highly elaborate modifications or simple executions in conjunction with other software, we provide dynamic solutions.",
+          "Design persistence selected for the mobile devices is another important factor. That way, the look, feel, and functionality stay consistent even when running on mobile, web, or standalone on the desktop.",
       },
       {
-        title: "Trust & Ownership",
+        title: "Innovation and Creativity",
         Icon: PC,
         description:
-          "It is always important to point out that trust is always the ownership in any relationship that we establish. It is an essential policy that the company owns all projects it is involved in to champion clear communication and organizational responsibility. Your achievements are important to us and thus make your objectives our own.",
+          "Our design team is up to date with the current trends, technologies and even the best practices and strategies that will make your design outstanding and distinctive from other brands.",
       },
       {
-        title: "Originality",
+        title: "Brand Alignment",
         Icon: PC,
         description:
-          "All our activities are founded and guided by the principle of innovation. With every assignment, we start thinking outside the box, therefore the solutions that we devise are not only relevant but unique as well. You may wonder what makes us so unique in an era where more and more websites are being developed.",
+          "This strategy helps us maintain first and foremost the perspective on your brand’s values, its tone, and its identity to allow the design to be in accordance with your business vision and its messaging arm.",
       },
       {
-        title: "Quality & Consistency",
+        title: "Accessibility",
         Icon: PC,
         description:
-          "Quality is not negotiable for us because our goal is to provide excellent services. It is because of this reason that we adopt rigorous production quality control measures to ensure you receive the best. This is a very critical area to make sure that all your website related development is consistent so that your site is always efficient and aesthetically pleasing.",
+          "We ensure that all designs are made to support the differently abled individual so that the experience of the design is easy to follow for every person that would be accessing it.",
       },
       {
-        title: "Customer Support",
+        title: "Iterative Improvement",
         Icon: PC,
         description:
-          "We are here for you at any point in your suffering. We provide our client with the best services right from the time of consultation and even after launch of your site. We understand that it is possible to have business relationships that span over a long period and that is why the customer comes first.",
+          "Everyone that is part of our team is focused on personal and organizational development. Since its launch, we run several tests and collect data from the customers then update the design for better performance and user experience.",
       },
     ],
     serviceIndustriesDescription:
-      "IT Project Management services include Clevit from multiple sectors of industries. We appreciate the fact that each industry comes with its problems and we provide the best solution to enhance the progress of any project. Some of the industries we serve include:",
-    serviceTechnologiesTitle: "Key Aspects of Our Web Development Process",
+      "At Clevit we help UI/UX design to respond to the needs of different industries. Be it retail & e-commerce, healthcare, or SaaS platforms, our designs focus on a broad range of industries to offer intuitive and engaging solutions.",
+    serviceTechnologiesTitle: "Key Aspects of Our UI/UX Design Process",
     serviceTabTechnologies: webDevelopmentTechnologiesTabsConstants,
     serviceTechnologies: webDevelopmentTechnologiesConstants,
     serviceBookConsultation: {
-      title: "Ready to Elevate Your Digital Presence? ",
-      description: "Contact Us Today to Start Building Your Custom Website.",
+      title: "Looking for Professional UI/UX Design Services?",
+      description:
+        "Let Clevit enhance your digital product’s user experience with our tailored design solutions. Schedule a consultation today!",
     },
-    ChooseClevitTitle: "Why Choose Clevit for Technical Assessment Services?",
+    ChooseClevitTitle: "Why Choose Clevit for UI/UX Design Services?",
     ChooseClevitRecomendation: [
       {
-        title: "Tailored Solutions",
+        title: "Experienced Design Team",
         description:
-          "Here we design small and large-scale websites that correspond to your company’s and brand’s goals.",
+          "Our team of designers is very experienced in designing good and friendly interfaces that will make the user want to use the product while at the same time the application achieves its objectives.",
       },
       {
-        title: "Advanced Technologies",
+        title: "Customized Solutions",
         description:
-          "We utilize up to date technology that will enable us to provide the most efficient, effective and secure website.",
+          "We understand that every business is different, and that’s why our designer tailors your design to your requirements to make sure that everything is as you want it to be.",
       },
       {
-        title: "Scalability",
+        title: "Cutting-Edge Tools & Technologies",
         description:
-          "Whether you are a start-up company or an established enterprise, we create sites that expand your company.",
+          "We incorporate modern digital tools like Figma, Adobe XD, and Adobe Photoshop to design elegant, effective, and aesthetic user interfaces.",
       },
       {
-        title: "Ongoing Support:",
+        title: "User-Centered Design",
         description:
-          "Our work is not done as soon as a product is out on the market. We provide support to make certain your site stays current and modified as per the current trend.",
+          "We are targeting the end consumer. They are designed within the context of use to allow the feedback to be constant and ongoing to cover each aspect of the use from beginning to end.",
+      },
+      {
+        title: "On-Time Delivery",
+        description:
+          "We appreciate your time and guarantee timely completion of our UI/UX design projects without compromising on quality.",
+      },
+      {
+        title: "Comprehensive Design Services",
+        description:
+          "Depending on the project, we offer services ranging from prototyping and wireframing to design, and even testing.",
       },
     ],
     GetConsultation: {
-      title: "Let's Build Your Future",
-      description:
-        "It is time to create new image of your busines online? Contact us today and let us guide you on how to achive a website that will capture your brand and market needs.",
+      title:
+        "Maximize the potential of your digital product with our professional UI/UX design services.",
+      description: "Contact us today.",
     },
   },
   {
     id: ServicesIdConstants.Marketing,
     image: DigitalMarketingImage,
     Icon: DigitalMarketing,
-    imageAlt: "web development image",
+    imageAlt: "Digital marketing image",
     singleServiceHeaderTitle: "Digital Marketing Services",
     singleServiceHeaderDescription:
       "Accelerating Your Digital Growth with Strategic Marketing Solutions",
     title: "Digital Marketing",
     route: "/",
-    buttonTitle: "Start Marketing",
+    buttonTitle: "Request a Quote",
     description:
-      "Unlock the potential of your brand with our Digital Marketing solutions. We create a marketing strategy in accordance with the effective marketing data to expand your exposure, interact with your target audience, and generate sales.",
+      "At Clevit, our Digital Marketing Services will help enhance the visibility of your brand and drive the required traffic to your websites while getting more conversions. Whether it be SEO enhancements, PPC campaigns, or content optimization, our team utilizes the latest tools and techniques to guarantee results.",
     descriptionOffer:
       "We help you reach your target audience with effective digital marketing strategies.",
     singlePageDescription:
-      "If you have some features in mind for your mobile application, then turn them into reality at Clevit – your application solutions with next level performance. No matter if you want to build a native, cross-platform, or hybrid application, our professionals will help you in each step of the workflow, making the final product easy-to-navigate, easily-scaled, and aligned with the vision of your business.",
+      "Our experts will guide you through developing a digital strategy that aligns with your goals and drives results, ensuring a customized approach tailored to your unique business needs.",
     serviceDetails:
-      "When creating mobile applications, at Clevit we follow several rules that are universal for all projects. Here’s what drives us:",
+      "In the constantly evolving landscape of digital marketing, we embrace concepts that are analytical, effective, and bespoke. This power is dedicated to give you a robust web presence and also to help drive traffic and engagement.",
     offers: [
       {
-        title: "Exquisite & Sophisticated Solutions",
+        title: "Data-Driven Decisions",
         Icon: PC,
         description:
-          "We understand that one’s web solution should be not only permanent and effective but also beautiful. Each design and development decision is perfect in its way and does not leave a littered mess, which ruins the outward appearance of your brand.",
+          "At Clevit, we work with real facts – this means that all our decisions are informed. Metrics, performance, and user behaviors help us to adapt and optimize our digital marketing strategies over time.",
       },
       {
-        title: "Flexibility",
+        title: "Custom Strategies for Your Business",
         Icon: PC,
         description:
-          "It is important for you to know that we do not operate on a ‘one size fits all’ basis with businesses. That is why we provide flexibility in our web development solutions with the option to choose the necessity levels. Whether it is highly elaborate modifications or simple executions in conjunction with other software, we provide dynamic solutions.",
+          "Every company’s marketing requirements are unique, and so therefore are our marketing strategies. For your targeted needs, we develop specific plans with the purpose of either generating brand recognition, sales, and more.",
       },
       {
-        title: "Trust & Ownership",
+        title: "Focus on ROI",
         Icon: PC,
         description:
-          "It is always important to point out that trust is always the ownership in any relationship that we establish. It is an essential policy that the company owns all projects it is involved in to champion clear communication and organizational responsibility. Your achievements are important to us and thus make your objectives our own.",
+          "Our goal is to guarantee that every dollar you spend on marketing brings you value. Ensuring that our clients get good return on their investments is our major goal in running each campaign.",
       },
       {
-        title: "Originality",
+        title: "Transparency and Communication",
         Icon: PC,
         description:
-          "All our activities are founded and guided by the principle of innovation. With every assignment, we start thinking outside the box, therefore the solutions that we devise are not only relevant but unique as well. You may wonder what makes us so unique in an era where more and more websites are being developed.",
+          "We maintain open communication with our clients, providing updates on our reports, analyses, and strategies so you are constantly aware of our efforts.",
       },
       {
-        title: "Quality & Consistency",
+        title: "Adaptability & Innovation",
         Icon: PC,
         description:
-          "Quality is not negotiable for us because our goal is to provide excellent services. It is because of this reason that we adopt rigorous production quality control measures to ensure you receive the best. This is a very critical area to make sure that all your website related development is consistent so that your site is always efficient and aesthetically pleasing.",
+          "We implement current trends and tools to ensure your marketing strategy remains relevant in the ever-changing digital landscape.",
       },
       {
-        title: "Customer Support",
+        title: "Comprehensive Support",
         Icon: PC,
         description:
-          "We are here for you at any point in your suffering. We provide our client with the best services right from the time of consultation and even after launch of your site. We understand that it is possible to have business relationships that span over a long period and that is why the customer comes first.",
+          "Whether you’re looking to improve your SEO, set up an effective PPC campaign, or develop content marketing strategies, we assist with all your digital marketing needs.",
       },
     ],
     serviceIndustriesDescription:
-      "IT Project Management services include Clevit from multiple sectors of industries. We appreciate the fact that each industry comes with its problems and we provide the best solution to enhance the progress of any project. Some of the industries we serve include:",
-    serviceTechnologiesTitle: "Key Aspects of Our Web Development Process",
+      "Our Digital Marketing Services are flexible and cater to a broad range of sectors. We assist industries like retail, healthcare, and finance in enhancing their online exposure and connecting with their target market.",
+    serviceTechnologiesTitle: "Key Aspects of Our Digital Marketing Services",
     serviceTabTechnologies: webDevelopmentTechnologiesTabsConstants,
     serviceTechnologies: webDevelopmentTechnologiesConstants,
     serviceBookConsultation: {
-      title: "Ready to Elevate Your Digital Presence? ",
-      description: "Contact Us Today to Start Building Your Custom Website.",
+      title: "Ready to Elevate Your Digital Presence?",
+      description: "Contact Us Today to Start Building Your Custom Digital Marketing Strategy.",
     },
-    ChooseClevitTitle: "Why Choose Clevit for Technical Assessment Services?",
+    ChooseClevitTitle: "Why Choose Clevit for Digital Marketing Services?",
     ChooseClevitRecomendation: [
       {
-        title: "Tailored Solutions",
+        title: "Experienced Marketing Team",
         description:
-          "Here we design small and large-scale websites that correspond to your company’s and brand’s goals.",
+          "Our specialized team of digital marketers has a successful track record of creating effective campaigns that have boosted the performance of various businesses.",
       },
       {
-        title: "Advanced Technologies",
+        title: "Custom Solutions Tailored to Your Goals",
         description:
-          "We utilize up to date technology that will enable us to provide the most efficient, effective and secure website.",
+          "Our services in digital marketing are tailored to suit unique client necessities and goals.",
       },
       {
-        title: "Scalability",
+        title: "Cutting-Edge Tools & Technologies",
         description:
-          "Whether you are a start-up company or an established enterprise, we create sites that expand your company.",
+          "We utilize tools like AHrefs, SEMrush, and Google Analytics to fine-tune your digital marketing campaigns for optimal results.",
       },
       {
-        title: "Ongoing Support:",
+        title: "Data-Driven Strategies",
         description:
-          "Our work is not done as soon as a product is out on the market. We provide support to make certain your site stays current and modified as per the current trend.",
+          "Our actions stem from data, ensuring we enhance your campaign’s efficacy and deliver meaningful results.",
+      },
+      {
+        title: "Full-Service Digital Marketing Agency",
+        description:
+          "From SEO and PPC to content marketing and analytics, we provide comprehensive solutions to elevate your business.",
+      },
+      {
+        title: "Proven Track Record",
+        description:
+          "We have delivered tangible results, including enhanced visibility, increased traffic, and better conversion rates.",
       },
     ],
     GetConsultation: {
-      title: "Let's Build Your Future",
+      title: "Looking for Expert Digital Marketing Services?",
       description:
-        "It is time to create new image of your busines online? Contact us today and let us guide you on how to achive a website that will capture your brand and market needs.",
+        "Let Clevit manage and optimize your digital marketing strategy to accelerate your growth. Schedule a consultation today!",
     },
   },
 ];

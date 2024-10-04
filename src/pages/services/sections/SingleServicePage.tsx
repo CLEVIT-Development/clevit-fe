@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 
-import AppDevelopmentOverview from "@/assets/images/services/AppDevelopmentHeading.png";
 import Layout from "@/common/layout/Layout.tsx";
 import CalendlySection from "@/pages/home/CalendlySection";
 import NotFound from "@/pages/not-found/NotFoundPage";

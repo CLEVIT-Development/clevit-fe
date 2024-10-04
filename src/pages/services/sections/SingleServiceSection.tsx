@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 
-import { homeProcessesConstants } from "@/assets/constants/processes/homeProcesses.constants";
+import { singlePageWebDevelopmentProcessesConstants } from "@/assets/constants/processes/singlePageWebDevelopments.constants";
+import { webDevelopmentProcessesConstants } from "@/assets/constants/processes/webDevelopmentProcesses.constants";
 import { type ServicesIdConstants } from "@/assets/constants/services-id.constants";
 import { servicesConstants } from "@/assets/constants/services.constants";
 import Section from "@/common/templates/Section";
@@ -11,7 +12,7 @@ import TechnologySection from "@/pages/home/TechnologySection";
 import BookConsultation from "./BookConsultation";
 import GetConsultation from "./GetConsultation";
 import { getIndustryByService } from "./IndustryServe/helper";
-import { SingleServiceHeaderItems } from "./SingleServicePage";
+import { type SingleServiceHeaderItems } from "./SingleServicePage";
 import WhyChooseClevitSection from "./WhyChooseClevitSection";
 
 interface SingleServiceSectionProps {
@@ -48,7 +49,7 @@ const SingleServiceSection = ({ serviceId, setHeaderItems }: SingleServiceSectio
         <span className="text-md leading-8">{service.singlePageDescription} </span>
         <h2 className="desktop:text-2xl desktop:mt-16">What Is Important for Us</h2>
         <div className="max-w-[900px] desktop:mt-6 mb-16">
-          <span className=" leading-8	">{service.serviceDetails}</span>
+          <span className=" leading-8	 text-blue-200">{service.serviceDetails} detailssss</span>
         </div>
       </div>
       <div className="w-full flex  flex-wrap gap-16">
@@ -101,8 +102,7 @@ const SingleServiceSection = ({ serviceId, setHeaderItems }: SingleServiceSectio
         </div>
       </div>
       <div className="pt-24 pb-24 w-full">
-        {/* <ProcessConnector order={2} processes={homeProcessesConstants} /> */}
-        <ProcessSection processes={homeProcessesConstants} />
+        <ProcessSection processes={singlePageWebDevelopmentProcessesConstants} />
       </div>
       <FeedbackSection className="w-full" />
       <div className="flex flex-col gap-20 items-center pt-24 ">
