@@ -36,6 +36,13 @@ import UIUX from "@/assets/vectors/UIUX.svg?react";
 import PC from "@/assets/vectors/processes/PC.svg?react";
 import Security from "@/assets/vectors/processes/Security.svg?react";
 
+import { singlePageMobileDevelopmentProcessesConstants } from "./processes/SinglePageMobileDevelopmentProcess.constants";
+import { singlePageDevopsProcessesConstants } from "./processes/singlePageDevopsProcess.constants";
+import { singlePageWebDevelopmentProcessesConstants } from "./processes/singlePageWebDevelopmentProcess.constants";
+import {
+  mobileDevelopmentTechnologiesConstants,
+  mobileDevelopmentTechnologiesTabsConstants,
+} from "./technologies/mobileDevelopmentTechnologies.constants";
 import {
   webDevelopmentTechnologiesConstants,
   webDevelopmentTechnologiesTabsConstants,
@@ -58,12 +65,12 @@ export const servicesConstants = [
     descriptionOffer:
       "Strengthen your brand and drive results with our custom-built and user-friendly websites.",
     singlePageDescription:
-      "At Clevit, we understand that your business needs an intensified web presence with efficiently designed, interactive, and affluent traffic sites. Whether it’s an idea, design, build or launch, our dedicated team of specialists are with you every step of the process to ensure not only does your online presence look good but works efficiently.",
+      "If you have some features in mind for your mobile application, then turn them into reality at Clevit – your application solutions with next level performance. No matter if you want to build a native, cross-platform, or hybrid application, our professionals will help you in each step of the workflow, making the final product easy-to-navigate, easily-scaled, and aligned with the vision of your business.",
     serviceDetails:
-      "We also boast of the principles that we uphold in our work as well as the ethical standards that we uphold every day. These core elements are reflected in every project we undertake:These core elements are reflected in every project we undertake:",
+      "When creating mobile applications, at Clevit we follow several rules that are universal for all projects. Here’s what drives us",
     offers: [
       {
-        title: "Exquisite & Sophisticated Solutions",
+        title: "Suitable Solutions",
         Icon: Exquisite,
         description:
           "We understand that one’s web solution should be not only permanent and effective but also beautiful. Each design and development decision is perfect in its way and does not leave a littered mess, which ruins the outward appearance of your brand.",
@@ -108,6 +115,7 @@ export const servicesConstants = [
       title: "Ready to Elevate Your Digital Presence? ",
       description: "Contact Us Today to Start Building Your Custom Website.",
     },
+    servicesProcesses: singlePageWebDevelopmentProcessesConstants,
     ChooseClevitTitle: "Why Choose Clevit for Web Development?",
     ChooseClevitRecomendation: [
       {
@@ -159,7 +167,7 @@ export const servicesConstants = [
         title: "Suitable Solutions",
         Icon: SuitableSolutions,
         description:
-          "We present tailored solutions for your actual and specific business requirements. In order to create a mobile app that will work in tandem with your current business plan, we make sure to take the time to understand what you want.",
+          "We present the tailored solutions for your actual and specific business requirements. In order to create a mobile app that will work in tandem with your current business plan, we make sure to take the time to understand what you want.",
       },
       {
         title: "Trust and Partnership",
@@ -195,12 +203,13 @@ export const servicesConstants = [
     serviceIndustriesDescription:
       "Our mobile app development services cater to various industries, providing tailored solutions that meet unique business needs.",
     serviceTechnologiesTitle: "Key Aspects of Our Mobile App Development Process",
-    serviceTabTechnologies: webDevelopmentTechnologiesTabsConstants,
-    serviceTechnologies: webDevelopmentTechnologiesConstants,
+    serviceTabTechnologies: mobileDevelopmentTechnologiesTabsConstants,
+    serviceTechnologies: mobileDevelopmentTechnologiesConstants,
     serviceBookConsultation: {
       title: "Ready to Turn Your Mobile App Vision into Reality?",
       description: "Contact Us Now to Start Building a Custom App for Your Business.",
     },
+    servicesProcesses: singlePageMobileDevelopmentProcessesConstants,
     ChooseClevitTitle: "Why Choose Clevit for Mobile App Development?",
     ChooseClevitRecomendation: [
       {
@@ -290,6 +299,7 @@ export const servicesConstants = [
       title: "Let’s Optimize Your DevOps Processes",
       description: "Contact Us Today to Start Building Your Custom Website.",
     },
+    servicesProcesses: singlePageDevopsProcessesConstants,
     ChooseClevitTitle: "Why Choose Clevit for DevOps Services?",
     ChooseClevitRecomendation: [
       {
@@ -539,44 +549,18 @@ export const servicesConstants = [
     singleServiceHeaderDescription: "Ensuring Data Integrity and Reliability",
     title: "Data Quality Assurance",
     route: "/data-quality-assurance",
+    description:
+      "At Clevit, our Data Quality Assurance (QA) solutions are aimed at ensuring the quality, integrity and credibility of data. We guarantee the effective and accurate completion of the data processes, so you can make sound decisions for your business and improve operations.",
 
-    description: {
-      title: "Data Quality Assurance",
-      text: "At Clevit, our Data Quality Assurance (QA) solutions are aimed at ensuring the quality, integrity and credibility of data. We guarantee the effective and accurate completion of the data processes, so you can make sound decisions for your business and improve operations.",
-    },
+    descriptionOffer:
+      "Keeping client needs in mind, Clevit is about achieving basic, simple, and accurate data quality assurance. Your data is accurate, reliable, and compliant, helping your business achieve its objectives.",
 
-    descriptionOffer: {
-      title: "What Is Important for Us",
-      text: "Keeping client needs in mind, Clevit is about achieving basic, simple, and accurate data quality assurance. To that end, the most important priority for us is that your data is accurate, reliable, and compliant while helping your business achieve its objectives.",
-    },
+    singlePageDescription:
+      "Maximize the potential of your data with our quality assurance services. Clevit ensures timely data validation and proactive monitoring for future stability.",
 
-    keyAspects: {
-      title: "Key Aspects of Our Data Quality Assurance Process",
-      aspects: [
-        {
-          title: "Data Accuracy & Integrity",
-          text: "We respect the accuracy of your data and guarantee that all the datasets will not contain errors, or duplicate and/or conflicting records. This ensures that the analysis done and the decisions made are precise and sound to every business in your organization.",
-        },
-        {
-          title: "Consistency Across Systems",
-          text: "We are able to maintain the proper data integrity across different platforms, systems and databases that facilitate their working and proper exchange of information with other departments.",
-        },
-        {
-          title: "Timely Data Validation",
-          text: "Clevit ensures that the data is validated in real time and as such all errors are corrected almost instantly hence less time is spent on data collection hence one can act on the data any time.",
-        },
-        {
-          title: "Compliance & Security",
-          text: "Your data is protected to conform to current established standards on data privacy and security to avoid compromising strictly private information.",
-        },
-        {
-          title: "Proactive Monitoring & Maintenance",
-          text: "Our approach of being proactive also assists in the early identification of data process irregularities thus guarantees the future stability of your data processes.",
-        },
-      ],
-    },
+    serviceDetails:
+      "At Clevit, it is our priority to have accurate, reliable and secure data through automation, performance, API validation, and end-to-end testing. Our technique incorporates the utilization of sophisticated instruments to ensure the sanctity of data.",
 
-    serviceDetails: "poxelll",
     offers: [
       {
         title: "Automated Data Testing",
@@ -616,10 +600,12 @@ export const servicesConstants = [
       },
     ],
 
-    serviceIndustriesDescription: {
-      title: "Industries We Serve",
-      text: "Clevit’s Data Quality Assurance services are flexible for various sectors, including healthcare, finance, retail, logistics, and more. Our services are fully adaptable to meet the high-quality data requirements of each industry.",
-    },
+    serviceIndustriesDescription:
+      "Clevit’s Data Quality Assurance services are flexible for various sectors, including healthcare, finance, retail, logistics, and more. Our services are fully adaptable to meet the high-quality data requirements of each industry.",
+
+    serviceTechnologiesTitle: "Key Aspects of Our Data Quality Assurance Process",
+    serviceTabTechnologies: webDevelopmentTechnologiesTabsConstants,
+    serviceTechnologies: webDevelopmentTechnologiesConstants,
 
     serviceBookConsultation: {
       title: "Ready to Elevate Your Data Quality?",
@@ -655,6 +641,7 @@ export const servicesConstants = [
         "Let Clevit handle your data validation and optimization needs. Schedule a consultation today.",
     },
   },
+
   {
     id: ServicesIdConstants.Assessment,
     Icon: TechnicalAssessment,

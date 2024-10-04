@@ -1,3 +1,6 @@
+import AppoimentShedule from "@/assets/vectors/AppoimentShedule.svg?react";
+import ClinicAndLab from "@/assets/vectors/ClinicAndLab.svg?react";
+import DigitalHealt from "@/assets/vectors/DigitalHealt.svg?react";
 import EventPlanningManagment from "@/assets/vectors/EventPlanningManagment.svg?react";
 import FreightCargoServices from "@/assets/vectors/FreightCargoServices.svg?react";
 import MedicalSoftwareDevelopment from "@/assets/vectors/MedicalSoftwareDevelopment.svg?react";
@@ -40,11 +43,11 @@ export const servicesIndustriesConstants = {
       title: "Event Planning & Management",
     },
     {
-      Icon: MedicalSoftwareDevelopment,
+      Icon: ClinicAndLab,
       title: "Clinic & Lab Management",
     },
     {
-      Icon: MusickProduction,
+      Icon: OnlineBookingPlatforms,
       title: "Online Booking Platforms",
     },
     {
@@ -52,11 +55,11 @@ export const servicesIndustriesConstants = {
       title: "Virtual Meetings & Conferencing",
     },
     {
-      Icon: FreightCargoServices,
+      Icon: DigitalHealt,
       title: "Digital Health Solutions",
     },
     {
-      Icon: OnlineBookingPlatforms,
+      Icon: AppoimentShedule,
       title: "Appointment Scheduling",
     },
   ],
