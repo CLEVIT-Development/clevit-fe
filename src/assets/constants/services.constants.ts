@@ -1,3 +1,4 @@
+import { singlePageMobileDevelopmentProcessesConstants } from "@/assets/constants/processes/singlePageMobileDevelopmentProcess.constants.ts";
 import { ServicesIdConstants } from "@/assets/constants/services-id.constants.ts";
 import AIintegration from "@/assets/images/services/AIintegration.png";
 import AppDevelopmentOverviewReverse from "@/assets/images/services/AppDevelopmentOverviewReverse.png";
@@ -36,7 +37,6 @@ import UIUX from "@/assets/vectors/UIUX.svg?react";
 import PC from "@/assets/vectors/processes/PC.svg?react";
 import Security from "@/assets/vectors/processes/Security.svg?react";
 
-import { singlePageMobileDevelopmentProcessesConstants } from "./processes/SinglePageMobileDevelopmentProcess.constants";
 import { singlePageDevopsProcessesConstants } from "./processes/singlePageDevopsProcess.constants";
 import { singlePageWebDevelopmentProcessesConstants } from "./processes/singlePageWebDevelopmentProcess.constants";
 import {
@@ -109,6 +109,8 @@ export const servicesConstants = [
     serviceIndustriesDescription:
       "Our web development process is streamlined and efficient, ensuring the best results for your business:",
     serviceTechnologiesTitle: "Key Aspects of Our Web Development Process",
+    serviceTechnologiesSubtitle:
+      "Our web development solutions cover all stages of the website development process, from interface design to site structure and optimization. We provide a powerful and secure site that not only looks great but also loads quickly and functions flawlessly. Here’s a breakdown of the core aspects we focus on:",
     serviceTabTechnologies: webDevelopmentTechnologiesTabsConstants,
     serviceTechnologies: webDevelopmentTechnologiesConstants,
     serviceBookConsultation: {
@@ -203,6 +205,7 @@ export const servicesConstants = [
     serviceIndustriesDescription:
       "Our mobile app development services cater to various industries, providing tailored solutions that meet unique business needs.",
     serviceTechnologiesTitle: "Key Aspects of Our Mobile App Development Process",
+    serviceTechnologiesSubtitle: "ServicesIdConstants.Mobile subtitle",
     serviceTabTechnologies: mobileDevelopmentTechnologiesTabsConstants,
     serviceTechnologies: mobileDevelopmentTechnologiesConstants,
     serviceBookConsultation: {
@@ -293,6 +296,8 @@ export const servicesConstants = [
     serviceIndustriesDescription:
       "From tech startups to healthcare and finance, Clevit delivers tailored DevOps solutions across diverse industries, ensuring optimal performance and reliability for your business needs:",
     serviceTechnologiesTitle: "Key Aspects of Our Web Development Process",
+    serviceTechnologiesSubtitle:
+      "Clevit provide extensive DevOps services that enhance your development and operations for faster and efficient software delivery։",
     serviceTabTechnologies: webDevelopmentTechnologiesTabsConstants,
     serviceTechnologies: webDevelopmentTechnologiesConstants,
     serviceBookConsultation: {
@@ -338,15 +343,15 @@ export const servicesConstants = [
     descriptionOffer:
       "Clevit can integrate AI features that unlock powerful data insights and make your application truly intelligent.",
     singlePageDescription:
-      "If you have AI features in mind for your mobile application, turn them into reality at Clevit – offering solutions with next-level performance. Whether you aim for native, cross-platform, or hybrid applications, our experts will guide you through every step, ensuring scalability and alignment with your business vision.",
+      "At Clevit, we focus on applying the latest AI technologies that enhance your business processes and bring about positive changes. Our AI services range from data analytics to automation to help businesses improve efficiency, innovation, and growth.",
     serviceDetails:
-      "At Clevit, when integrating AI into projects, we follow several principles that guide all our work. Here’s what drives us:",
+      "At Clevit, we use the best of AI solutions to enable process optimization, decision making and customer satisfaction for companies. Our approach is built on the following foundations:",
     offers: [
       {
         title: "Adaptive AI Solutions",
         Icon: PC,
         description:
-          "Our AI solutions are customized to fit your organization’s needs and dynamics so that they may be adjusted for its benefit. Using a modern form of algorithms and technologies, we offer artificial intelligence systems that learn over time, thus solutions that will continue to grow with your business.",
+          "Our AI solutions are customized to fit your organization’s needs and dynamics so that they may be adjusted for its benefit. Using a modern form of algorithms, and technologies, we offer artificial intelligence systems that learn over time, thus solutions that will continue to grow with your business.",
       },
       {
         title: "Trust",
@@ -382,11 +387,13 @@ export const servicesConstants = [
     serviceIndustriesDescription:
       "At Clevit, we provide Artificial Intelligence and technology services that cater to all sectors of the business world to make them more productive. Here’s how we serve different industries:",
     serviceTechnologiesTitle: "Key Aspects of Our AI Integration Process",
+    serviceTechnologiesSubtitle:
+      "At Clevit, we incorporate a host of advanced AI technologies into your enterprise with a view of changing the way your business functions. Here are the key technologies and tools we utilize in our AI integration process:",
     serviceTabTechnologies: webDevelopmentTechnologiesTabsConstants,
     serviceTechnologies: webDevelopmentTechnologiesConstants,
     serviceBookConsultation: {
-      title: "Ready to Elevate Your Digital Presence?",
-      description: "Contact Us Today to Start Building Your Custom AI Solution.",
+      title: "Unlock the Power of AI for Your Business",
+      description: "Explore Custom Integration Solutions Tailored to Your Needs.",
     },
     ChooseClevitTitle: "Why Choose Clevit for AI Integration?",
     ChooseClevitRecomendation: [
@@ -423,7 +430,7 @@ export const servicesConstants = [
     ],
     GetConsultation: {
       title: "Ready to Transform Your Business with AI?",
-      description: "Discover How Our Solutions Can Drive Your Success. Get a Free Consultation.",
+      description: "Discover How Our Solutions Can Drive Your Success.",
     },
   },
   {
@@ -473,6 +480,7 @@ export const servicesConstants = [
     serviceIndustriesDescription:
       "We have machine learning services and solutions for various industries at Clevit. We offer multipurpose and specific solutions that foster innovation in organizations. As a result, it is possible to state that we adjust our IT solutions to the needs of the specified sectors.",
     serviceTechnologiesTitle: "Key Aspects of Our ML Development Process",
+    serviceTechnologiesSubtitle: "ServicesIdConstants.ML Subtitle",
     serviceTechnologies: [
       {
         title: "Deep Learning Frameworks",
@@ -707,6 +715,7 @@ export const servicesConstants = [
       "IT Project Management services include Clevit from multiple sectors of industries. We appreciate the fact that each industry comes with its problems and we provide the best solution to enhance the progress of any project. Some of the industries we serve include:",
 
     serviceTechnologiesTitle: "Key Aspects of Our Web Development Process",
+    serviceTechnologiesSubtitle: "ServicesIdConstants.Assessment Subtitle",
     serviceTabTechnologies: webDevelopmentTechnologiesTabsConstants,
     serviceTechnologies: webDevelopmentTechnologiesConstants,
 
@@ -811,6 +820,7 @@ export const servicesConstants = [
     serviceIndustriesDescription:
       "Clevit’s Website Maintenance Services conveniently apply to a broad spectrum of clients belonging to different industries. Before providing the services to the different sectors, we assess their needs so that our services can deliver quality performance and security.",
     serviceTechnologiesTitle: "Key Aspects of Our Web Development Process",
+    serviceTechnologiesSubtitle: "ServicesIdConstants.Maintenance subtitle",
     serviceTabTechnologies: webDevelopmentTechnologiesTabsConstants,
     serviceTechnologies: webDevelopmentTechnologiesConstants,
     serviceBookConsultation: {
@@ -910,6 +920,7 @@ export const servicesConstants = [
       "IT Outstaffing Services of Clevit means that we offer staff for rent for every industry to ensure that every business gets the relevant talent. This way we know how every industry works and the problems that they go through, which helps us in identifying the kind of services you require. Here are some industries we serve:",
 
     serviceTechnologiesTitle: "Key Aspects of Our IT Outstaffing Process",
+    serviceTechnologiesSubtitle: "ServicesIdConstants.OutStaffing Subtitle",
     serviceTabTechnologies: webDevelopmentTechnologiesTabsConstants,
     serviceTechnologies: webDevelopmentTechnologiesConstants,
 
@@ -966,7 +977,6 @@ export const servicesConstants = [
       "At Clevit, our IT Project Management services encompass a detailed process-oriented framework to provide a step-by-step direction for delivering your IT projects.",
     description:
       "Our project management staff, which has extensive experience, guarantees that each phase of your project is thoroughly organized, controlled, and implemented, minimizing risks and improving efficiency. We focus on the task on time, cost, and business strategy goals to serve our clients.",
-
     descriptionOffer:
       "The fact is that Clevit’s IT Project Management approach is based on openness, fast implementation, and cooperation. Our emphasis is the effective performance of a given project in order to meet certain objectives within certain time and within overall cost constraints.",
 
@@ -1015,6 +1025,7 @@ export const servicesConstants = [
       "IT Project Management services include Clevit from multiple sectors of industries. We appreciate the fact that each industry comes with its problems and we provide the best solution to enhance the progress of any project. Some of the industries we serve include:",
 
     serviceTechnologiesTitle: "Key Aspects of Our IT Project Management Process",
+    serviceTechnologiesSubtitle: "ServicesIdConstants.ProjectManagement Subtitle",
     serviceTabTechnologies: webDevelopmentTechnologiesTabsConstants,
     serviceTechnologies: webDevelopmentTechnologiesConstants,
 
@@ -1118,6 +1129,7 @@ export const servicesConstants = [
     serviceIndustriesDescription:
       "At Clevit we help UI/UX design to respond to the needs of different industries. Be it retail & e-commerce, healthcare, or SaaS platforms, our designs focus on a broad range of industries to offer intuitive and engaging solutions.",
     serviceTechnologiesTitle: "Key Aspects of Our UI/UX Design Process",
+    serviceTechnologiesSubtitle: "ServicesIdConstants.Design Subtitle",
     serviceTabTechnologies: webDevelopmentTechnologiesTabsConstants,
     serviceTechnologies: webDevelopmentTechnologiesConstants,
     serviceBookConsultation: {
@@ -1224,6 +1236,7 @@ export const servicesConstants = [
     serviceIndustriesDescription:
       "Our Digital Marketing Services are flexible and cater to a broad range of sectors. We assist industries like retail, healthcare, and finance in enhancing their online exposure and connecting with their target market.",
     serviceTechnologiesTitle: "Key Aspects of Our Digital Marketing Services",
+    serviceTechnologiesSubtitle: "ServicesIdConstants.Marketing Subtitle",
     serviceTabTechnologies: webDevelopmentTechnologiesTabsConstants,
     serviceTechnologies: webDevelopmentTechnologiesConstants,
     serviceBookConsultation: {

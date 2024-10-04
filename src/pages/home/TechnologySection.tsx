@@ -53,7 +53,7 @@ const TechnologySection = ({ title, tabsConstant, technologiesConstant, subTitle
         className="scroll-mt-[150px] max-w-[90%] lg:max-w-[1280px] md:w-full w-auto bg-gray-300 desktop:py-12 lg:px-[100px] desktop:px-[46px] md:px-[30px] md:mx-0 xs:-mx-5 xs:py-5 xs:px-[24px] rounded-lg-l space-y-9 overflow-clip"
       >
         <div className="max-w-[900px] desktop:mt-6 mb-16 text-center">
-          <span className="leading-8 text-blue-200">{subTitle}</span>
+          <span className="leading-6 text-[#314252]">{subTitle}</span>
         </div>
         <div className="w-full flex flex-col items-center space-y-[58px]">
           <Navigation items={tabsConstant} onItemClick={onTabItemClickHandler} />

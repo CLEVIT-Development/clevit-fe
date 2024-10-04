@@ -10,8 +10,7 @@ interface GetConsultationProps {
 const GetConsultation = ({ title, description }: GetConsultationProps) => {
   return (
     <div
-      className="flex w-full h-[220px] px-32 py-11 items-center justify-between rounded-md overflow-hidden background: linear-gradient(88.98deg, #9B3B94 0.87%, #210F2B 79.26%);
-"
+      className="flex w-full h-[220px] px-32 py-11 items-center justify-between rounded-md overflow-hidden background: linear-gradient(88.98deg, #9B3B94 0.87%, #210F2B 79.26%)"
       style={{
         backgroundImage: `linear-gradient(88.98deg, #9B3B94 0.87%, #210F2B 79.26%), url(${GetConsultationBackground})`,
         backgroundBlendMode: "overlay",

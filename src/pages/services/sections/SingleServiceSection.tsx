@@ -64,8 +64,8 @@ const SingleServiceSection = ({ serviceId, setHeaderItems }: SingleServiceSectio
         })}
       </div>
       <TechnologySection
-        subTitle="Clevit provide extensive DevOps services that enhance your development and operations for faster and efficient software delivery։"
-        title="Key Aspects of Our DevOps Process"
+        title={service.serviceTechnologiesTitle}
+        subTitle={service.serviceTechnologiesSubtitle}
         tabsConstant={service.serviceTabTechnologies}
         technologiesConstant={service.serviceTechnologies}
       />
