@@ -43,5 +43,4 @@
   @apply border-none;
 }
 .rdw-editor-main {
-  @apply border p-2 min-h-[200px];
 }
