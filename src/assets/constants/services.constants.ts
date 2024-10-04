@@ -151,7 +151,7 @@ export const servicesConstants = [
       "If you have some features in mind for your mobile application, then turn them into reality at Clevit – your application solutions with next-level performance. No matter if you want to build a native, cross-platform, or hybrid application, our professionals will help you in each step of the workflow, making the final product easy-to-navigate, easily-scaled, and aligned with the vision of your business.",
     descriptionOffer: "Develop engaging mobile apps that keep users coming back for more",
     singlePageDescription:
-      "If you have some features in mind for your mobile application, then turn them into reality at Clevit – your application solutions with next level performance. No matter if you want to build a native, cross-platform, or hybrid application, our professionals will help you in each step of the workflow, making the final product easy-to-navigate, easily-scaled, and aligned with the vision of your business.",
+      "At Clevit, the Devops service provided focus on the delivery, collaboration and IT infrastructure management between development and operations. This way, we make your operations smooth, consistently integrating, automating and expanding according to what your business requires.",
     serviceDetails:
       "When creating mobile applications, at Clevit we follow several rules that are universal for all projects. Here’s what drives us:",
     offers: [
@@ -248,81 +248,69 @@ export const servicesConstants = [
     singlePageDescription:
       "If you have some features in mind for your mobile application, then turn them into reality at Clevit – your application solutions with next level performance. No matter if you want to build a native, cross-platform, or hybrid application, our professionals will help you in each step of the workflow, making the final product easy-to-navigate, easily-scaled, and aligned with the vision of your business.",
     serviceDetails:
-      "When creating mobile applications, at Clevit we follow several rules that are universal for all projects. Here’s what drives us:",
+      "We offer an extensive range of DevOps services to support the comprehensive life cycle of your systems development, from conception to monitoring for stability and automated, continually optimized performance.",
     offers: [
       {
-        title: "Exquisite & Sophisticated Solutions",
+        title: "Planning Phase",
         Icon: PC,
         description:
-          "We understand that one’s web solution should be not only permanent and effective but also beautiful. Each design and development decision is perfect in its way and does not leave a littered mess, which ruins the outward appearance of your brand.",
+          "The architecture of every effective DevOps approach starts with strategic planning. We work with your team to identify objectives, implement an action plan, and share schedules/expectations to keep every party on the same page. This phase involves the decision of tools, definition of KPIs, and the definition of a plan for managing infrastructure.",
       },
       {
-        title: "Flexibility",
+        title: "Coding Phase",
         Icon: PC,
         description:
-          "It is important for you to know that we do not operate on a ‘one size fits all’ basis with businesses. That is why we provide flexibility in our web development solutions with the option to choose the necessity levels. Whether it is highly elaborate modifications or simple executions in conjunction with other software, we provide dynamic solutions.",
+          "In the development phase, we include the principle of DevOps to encourage the developers to engage closely with the operation teams. Using version control systems and automation tools, the code is developed, reviewed, and integrated without much time and effort consumed and with the least chance of errors.",
       },
       {
-        title: "Trust & Ownership",
+        title: "Testing Phase",
         Icon: PC,
         description:
-          "It is always important to point out that trust is always the ownership in any relationship that we establish. It is an essential policy that the company owns all projects it is involved in to champion clear communication and organizational responsibility. Your achievements are important to us and thus make your objectives our own.",
+          "Our DevOps process is centered upon automated testing. Testing procedures are integrated into the development process, being performed at all stages of software development to check the code and increase its quality and reliability. A good example is unit tests, integration tests and performance tests through which we are able to detect the problem areas at an early stage.",
       },
       {
-        title: "Originality",
+        title: "Deployment, Operation & Monitoring Phase",
         Icon: PC,
         description:
-          "All our activities are founded and guided by the principle of innovation. With every assignment, we start thinking outside the box, therefore the solutions that we devise are not only relevant but unique as well. You may wonder what makes us so unique in an era where more and more websites are being developed.",
+          "Using DevOps, we are able to deploy updates and features without much interruption to the user’s experience. After installation, we offer maintenance services that permits consistent monitoring of the application performance, security, or scalability with sophisticated tools for handling and amending any complications that may occur.",
       },
       {
-        title: "Quality & Consistency",
+        title: "Continuous Integration and Continuous Delivery (CI/CD)",
         Icon: PC,
         description:
-          "Quality is not negotiable for us because our goal is to provide excellent services. It is because of this reason that we adopt rigorous production quality control measures to ensure you receive the best. This is a very critical area to make sure that all your website related development is consistent so that your site is always efficient and aesthetically pleasing.",
-      },
-      {
-        title: "Customer Support",
-        Icon: PC,
-        description:
-          "We are here for you at any point in your suffering. We provide our client with the best services right from the time of consultation and even after launch of your site. We understand that it is possible to have business relationships that span over a long period and that is why the customer comes first.",
+          "In the software development process, we use CI/CD pipelines to integrate the code, test it, and deploy it. This guarantees that changes are made quickly and efficiently. These CI/CD processes minimize the involvement of humans, making delivery cycles much quicker and efficient with no compromise to quality and performance.",
       },
     ],
     serviceIndustriesDescription:
-      "IT Project Management services include Clevit from multiple sectors of industries. We appreciate the fact that each industry comes with its problems and we provide the best solution to enhance the progress of any project. Some of the industries we serve include:",
+      "From tech startups to healthcare and finance, Clevit delivers tailored DevOps solutions across diverse industries, ensuring optimal performance and reliability for your business needs:",
     serviceTechnologiesTitle: "Key Aspects of Our Web Development Process",
     serviceTabTechnologies: webDevelopmentTechnologiesTabsConstants,
     serviceTechnologies: webDevelopmentTechnologiesConstants,
     serviceBookConsultation: {
-      title: "Ready to Elevate Your Digital Presence?",
+      title: "Let’s Optimize Your DevOps Processes",
       description: "Contact Us Today to Start Building Your Custom Website.",
     },
-    ChooseClevitTitle: "Why Choose Clevit for Technical Assessment Services?",
+    ChooseClevitTitle: "Why Choose Clevit for DevOps Services?",
     ChooseClevitRecomendation: [
       {
-        title: "Tailored Solutions",
+        title: "End-to-End Solutions",
         description:
-          "Here we design small and large-scale websites that correspond to your company’s and brand’s goals.",
+          "We offer DevOps services that encompass the initiation phase, coding phase, deployment phase as well as phase of continuous integration.",
       },
       {
-        title: "Advanced Technologies",
+        title: "Cutting-Edge Tools",
         description:
-          "We utilize up to date technology that will enable us to provide the most efficient, effective and secure website.",
+          "We employ the latest DevOps technologies such as Docker, Jenkins, Kubernetes to remove the process’ manual component.",
       },
       {
-        title: "Scalability",
+        title: "Continuous Support",
         description:
-          "Whether you are a start-up company or an established enterprise, we create sites that expand your company.",
-      },
-      {
-        title: "Ongoing Support:",
-        description:
-          "Our work is not done as soon as a product is out on the market. We provide support to make certain your site stays current and modified as per the current trend.",
+          "To support you further, our DevOps team is always ready to assist you in maintaining the efficiency of your systems.",
       },
     ],
     GetConsultation: {
       title: "Transform Your Operations with Expert DevOps Solutions",
-      description:
-        "It is time to create new image of your business online? Contact us today and let us guide you on how to achieve a website that will capture your brand and market needs.",
+      description: "Contact Us Today to Optimize Your Development Process and Boost Efficiency.",
     },
   },
   {

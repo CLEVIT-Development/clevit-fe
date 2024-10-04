@@ -63,23 +63,23 @@ export const servicesIndustriesConstants = {
   [ServicesIdConstants.DevOps]: [
     {
       Icon: EventPlanningManagment,
-      title: "Dashboard Development",
+      title: "Logistics & Transportation",
     },
     {
       Icon: MedicalSoftwareDevelopment,
-      title: "Medical Software Development",
+      title: "Passenger Transportation",
     },
     {
       Icon: MusickProduction,
-      title: "Music Production & Sound Design",
+      title: "Regenerative Medicine",
     },
     {
       Icon: VirtualMeeting,
-      title: "Virtual Meetings & Conferencing",
+      title: "Treatment Management",
     },
     {
       Icon: FreightCargoServices,
-      title: "Freight & Cargo Services",
+      title: "Digital Health Solutions",
     },
     {
       Icon: OnlineBookingPlatforms,

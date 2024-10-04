@@ -46,7 +46,7 @@ const SingleServicePage = () => {
           <NotFound />
         )}
 
-        <CalendlySection title="Ready to turn your vision into reality? The journey starts here. We're excited to meet you." />
+        {/*<CalendlySection title="Ready to turn your vision into reality? The journey starts here. We're excited to meet you." />*/}
       </Layout>
     </>
   );

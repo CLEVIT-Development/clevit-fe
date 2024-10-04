@@ -78,9 +78,9 @@ const FeedbackSection = ({ className }: FeedbackSectionProps) => {
           </div>
         )}
       </div>
-      <Button variant={ButtonVariant.Primary} onClick={() => navigate(RoutePaths.ContactUs)}>
-        Contact Us
-      </Button>
+      {/*<Button variant={ButtonVariant.Primary} onClick={() => navigate(RoutePaths.ContactUs)}>*/}
+      {/*  Contact Us*/}
+      {/*</Button>*/}
     </Section>
   );
 };

@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 
 import { singlePageWebDevelopmentProcessesConstants } from "@/assets/constants/processes/singlePageWebDevelopments.constants";
-import { webDevelopmentProcessesConstants } from "@/assets/constants/processes/webDevelopmentProcesses.constants";
 import { type ServicesIdConstants } from "@/assets/constants/services-id.constants";
 import { servicesConstants } from "@/assets/constants/services.constants";
 import Section from "@/common/templates/Section";
@@ -27,12 +26,6 @@ const SingleServiceSection = ({ serviceId, setHeaderItems }: SingleServiceSectio
 
   const service = servicesConstants.find((service) => replaceString(service.id) === serviceId);
 
-  if (!service) {
-    return <h1>service not found</h1>;
-  }
-
-  const industries = getIndustryByService(service.id as keyof typeof ServicesIdConstants);
-
   useEffect(() => {
     if (!service) return;
     setHeaderItems({
@@ -43,13 +36,19 @@ const SingleServiceSection = ({ serviceId, setHeaderItems }: SingleServiceSectio
     });
   }, [service, setHeaderItems]);
 
+  if (!service) {
+    return <h1>service not found</h1>;
+  }
+
+  const industries = getIndustryByService(service.id as keyof typeof ServicesIdConstants);
+
   return (
     <Section>
       <div className="text-center flex flex-col  items-center jutsify-between pt-[100px]">
-        <span className="text-md leading-8">{service.singlePageDescription} </span>
+        <span className="text-md leading-8">{service.singlePageDescription}</span>
         <h2 className="desktop:text-2xl desktop:mt-16">What Is Important for Us</h2>
         <div className="max-w-[900px] desktop:mt-6 mb-16">
-          <span className=" leading-8	 text-blue-200">{service.serviceDetails} detailssss</span>
+          <span className="leading-8 text-blue-200">{service.serviceDetails}</span>
         </div>
       </div>
       <div className="w-full flex  flex-wrap gap-16">
@@ -65,13 +64,12 @@ const SingleServiceSection = ({ serviceId, setHeaderItems }: SingleServiceSectio
           );
         })}
       </div>
-      <div className="">
-        <TechnologySection
-          title="Technologies We Use"
-          tabsConstant={service.serviceTabTechnologies}
-          technologiesConstant={service.serviceTechnologies}
-        />
-      </div>
+      <TechnologySection
+        subTitle="Clevit provide extensive DevOps services that enhance your development and operations for faster and efficient software delivery։"
+        title="Key Aspects of Our DevOps Process"
+        tabsConstant={service.serviceTabTechnologies}
+        technologiesConstant={service.serviceTechnologies}
+      />
       <div className="w-full">
         <BookConsultation
           image={service.image}
@@ -87,7 +85,7 @@ const SingleServiceSection = ({ serviceId, setHeaderItems }: SingleServiceSectio
             {service.serviceIndustriesDescription}
           </p>
         </div>
-        <div className="flex gap-6">
+        <div className="flex flex-wrap justify-around gap-6">
           {industries.map(({ title, Icon }, index) => {
             return (
               <div
@@ -101,19 +99,19 @@ const SingleServiceSection = ({ serviceId, setHeaderItems }: SingleServiceSectio
           })}
         </div>
       </div>
-      <div className="pt-24 pb-24 w-full">
+      <div className="py-24 w-full">
         <ProcessSection processes={singlePageWebDevelopmentProcessesConstants} />
       </div>
       <FeedbackSection className="w-full" />
-      <div className="flex flex-col gap-20 items-center pt-24 ">
+      <div className="flex flex-col gap-20 items-center pt-24">
         <h3 className="text-2xl text-[#314252]">{service.ChooseClevitTitle}</h3>
-        <div className="flex  flex-wrap gap-20 justify-center">
+        <div className="flex flex-wrap gap-20 justify-center">
           {service.ChooseClevitRecomendation.map(({ title, description }, index) => {
             return <WhyChooseClevitSection key={index} title={title} description={description} />;
           })}
         </div>
       </div>
-      <div className="w-full">
+      <div className="w-full pb-24">
         <GetConsultation
           title={service.GetConsultation.title}
           description={service.GetConsultation.description}

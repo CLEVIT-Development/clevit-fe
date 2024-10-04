@@ -15,35 +15,42 @@ export const singlePageWebDevelopmentProcessesConstants = [
     id: 1,
     Icon: DiscoveryAndPlanningIcon,
     title: "Discovery & Planning",
-    description:
-      "We begin by identifying your objectives, your audience and the characteristics of your business to create the right approach.",
+    description: "",
   },
   {
     id: 2,
     Icon: DesignAndPrototypingIcon,
-    title: "Design & Prototyping",
-    description:
-      "Our UI/UX designers build a wireframe and a prototype to give you a better understanding of the website appearance.",
+    title: "Infrastructure Setup & Configuration",
+    description: "",
   },
   {
     id: 3,
     Icon: PCIcon,
-    title: "Development:",
-    description:
-      "We design and develop the site front-end and the back-end which makes the site fully responsive, secure, and scalable.",
+    title: "Continuous Integration & Continuous Deployment (CI/CD)",
+    description: "",
   },
   {
     id: 4,
     Icon: TestingAndQAIcon,
-    title: "Testing & QA:",
-    description:
-      "A strong quality assurance process is carried out across devices and browsers to ensure high levels of usability and the absence of bugs.",
+    title: "Automation & Orchestration",
+    description: "",
   },
   {
     id: 5,
     Icon: RocketIcon,
-    title: "Launch & Maintenance",
-    description:
-      "Having successfully developed your website, we continuously monitor and maintain it to ensure optimal functionality.",
+    title: "Monitoring & Performance Optimization",
+    description: "",
+  },
+  {
+    id: 6,
+    Icon: RocketIcon,
+    title: "Security & Compliance",
+    description: "",
+  },
+  {
+    id: 7,
+    Icon: RocketIcon,
+    title: "Ongoing Support & Maintenance",
+    description: "",
   },
 ];
