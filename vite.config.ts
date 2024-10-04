@@ -66,19 +66,32 @@ export default defineConfig({
       minify: true,
     }),
     sitemap({
-      hostname: "https://www.clevit.io/",
-      exclude: ["/assets/**"],
-      extensions: ["tsx", "js", "html"],
-      outDir: "dist",
-      generateRobotsTxt: true,
+      hostname: "https://www.clevit.io",
+      dynamicRoutes: [
+        "/",
+        "/about-us",
+        "/services",
+        "/portfolio",
+        "/faq",
+        "/contact-us",
+        "//privacy-policy",
+        "/terms-and-conditions",
+        "/request-demo",
+        "/web-development",
+      ],
+      exclude: ["/admin/**"],
+      changefreq: "daily", // Frequency for updates
+      priority: 1.0, // Default priority
+      lastmod: new Date(), // Last modified date
+      readable: true, // Optional, makes the XML human-readable
+      generateRobotsTxt: true, // Generate robots.txt
       robots: [
+        { userAgent: "*", allow: "/" },
         {
           userAgent: "*",
-          allow: "/",
-          disallow: ["/admin", "/not-found"],
-          crawlDelay: 2,
-        },
-      ],
+          disallow: ["/admin", "/admin/blog/:id?", "/admin/signin", "/admin/addBlog"],
+        }, // Disallow admin routes
+      ], // Robots policy
     }),
   ],
 });
