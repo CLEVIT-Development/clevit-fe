@@ -63,35 +63,38 @@ const useBlog = () => {
     }
   };
 
-  const getBlogById = async (id: string) => {
+  const getBlogById = async (id: string, options?: UseBlogOptions) => {
     setLoading(true);
 
     try {
       const response: IGetBlogById = await axiosInstanceAuth.get(`/api/blogs/${id}`);
 
       setBlogData(response.data);
+
+      options?.onSuccess?.();
     } catch (error) {
-      console.error("Failed to fetch blog:", error);
+      options?.onFailure?.(error);
     } finally {
       setLoading(false);
     }
   };
 
-  const getAllBlogs = async (page: number = 1) => {
+  const getAllBlogs = async (page: number = 1, options?: UseBlogOptions) => {
     setLoading(true);
 
     try {
       const response: IGetAllBlogs = await axiosInstanceAuth.get(`/blogs?page=${page}`);
 
       setAllBlogs(response.data.blogsList);
-
       setPagination({
         pageSize: response.pageSize,
         currentPage: response.currentPage,
         totalItems: response.totalItems,
       });
+
+      options?.onSuccess?.();
     } catch (error) {
-      console.error("Failed to fetch blogs:", error);
+      options?.onFailure?.(error);
     } finally {
       setLoading(false);
     }
