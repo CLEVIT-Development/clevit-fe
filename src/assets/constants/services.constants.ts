@@ -15,6 +15,8 @@ import WebDevelopmentOverviewImage from "@/assets/images/services/WebDevelopment
 import AdaptiveAiSolutions from "@/assets/vectors/AdaptiveAiSolutions.svg?react";
 import AdvancedAI from "@/assets/vectors/AdvancedAI.svg?react";
 import AdvancedTools from "@/assets/vectors/AdvancedTools.svg?react";
+import BackupRecovery from "@/assets/vectors/BackupRecovery.svg?react";
+import BugFixingErrorResolution from "@/assets/vectors/BugFixingErrorResolution.svg?react";
 import CompilanceSecurity from "@/assets/vectors/CompilanceSecurity.svg?react";
 import ConsistencyAcross from "@/assets/vectors/ConsistencyAcross.svg?react";
 import ConsistentSupport from "@/assets/vectors/ConsistentSupport.svg?react";
@@ -34,13 +36,16 @@ import OptimizationPhase from "@/assets/vectors/OptimizationPhase.svg?react";
 import Originality from "@/assets/vectors/Originality.svg?react";
 import Outstaffing from "@/assets/vectors/Outstaffing.svg?react";
 import PM from "@/assets/vectors/PM.svg?react";
+import PerformanceOptimization from "@/assets/vectors/PerformanceOptimization.svg?react";
 import Phone from "@/assets/vectors/Phone.svg?react";
 import PlanningPase from "@/assets/vectors/PlanningPase.svg?react";
 import PractiveMonitoring from "@/assets/vectors/PractiveMonitoring.svg?react";
 import ProactiveRisk from "@/assets/vectors/ProactiveRisk.svg?react";
 import QualityConsistency from "@/assets/vectors/QualityConsistency.svg?react";
 import QualityFirst from "@/assets/vectors/QualityFirst.svg?react";
+import RegularUpdates from "@/assets/vectors/RegularUpdates.svg?react";
 import Robot from "@/assets/vectors/Robot.svg?react";
+import SecurityFirst from "@/assets/vectors/SecurityFirst.svg?react";
 import Settings from "@/assets/vectors/Settings.svg?react";
 import SuitableSolutions from "@/assets/vectors/SuitableSolutions.svg?react";
 import Support from "@/assets/vectors/Support.svg?react";
@@ -839,40 +844,34 @@ export const servicesConstants = [
       "We are interested in providing our clients with dependable website maintenance services, which will ensure its protection, effectiveness, and relevance. The complexities are solved by us leaving you to concentrate on the expansion of your business.",
     offers: [
       {
-        title: "Exquisite & Sophisticated Solutions",
-        Icon: PC,
+        title: "Performance Optimization",
+        Icon: PerformanceOptimization,
         description:
-          "We understand that one’s web solution should be not only permanent and effective but also beautiful. Each design and development decision is perfect in its way and does not leave a littered mess, which ruins the outward appearance of your brand.",
+          "We observe your website for hours, days, and months guaranteeing its speed, availability, and responsiveness on different devices.",
       },
       {
-        title: "Flexibility",
-        Icon: PC,
+        title: "Security First",
+        Icon: SecurityFirst,
         description:
-          "It is important for you to know that we do not operate on a ‘one size fits all’ basis with businesses. That is why we provide flexibility in our web development solutions with the option to choose the necessity levels. Whether it is highly elaborate modifications or simple executions in conjunction with other software, we provide dynamic solutions.",
+          "In this case, security is one of the most important factors. Part of our service entails periodically scanning your website for possible threats and applying security fixes as necessary.",
       },
       {
-        title: "Trust & Ownership",
-        Icon: PC,
+        title: "Regular Updates",
+        Icon: RegularUpdates,
         description:
-          "It is always important to point out that trust is always the ownership in any relationship that we establish. It is an essential policy that the company owns all projects it is involved in to champion clear communication and organizational responsibility. Your achievements are important to us and thus make your objectives our own.",
+          "This includes not only updating your CMS, but also updating plugins and software to keep your site in line with current technologies and models.",
       },
       {
-        title: "Originality",
-        Icon: PC,
+        title: "Bug Fixing & Error Resolution",
+        Icon: BugFixingErrorResolution,
         description:
-          "All our activities are founded and guided by the principle of innovation. With every assignment, we start thinking outside the box, therefore the solutions that we devise are not only relevant but unique as well. You may wonder what makes us so unique in an era where more and more websites are being developed.",
+          "Preventive maintenance in regards to bugs or other errors is a core responsibility of our team, so you can have a fully functional website with no disruptions.",
       },
       {
-        title: "Quality & Consistency",
-        Icon: PC,
+        title: "Backup & Recovery",
+        Icon: BackupRecovery,
         description:
-          "Quality is not negotiable for us because our goal is to provide excellent services. It is because of this reason that we adopt rigorous production quality control measures to ensure you receive the best. This is a very critical area to make sure that all your website-related development is consistent so that your site is always efficient and aesthetically pleasing.",
-      },
-      {
-        title: "Customer Support",
-        Icon: PC,
-        description:
-          "We are here for you at any point in your suffering. We provide our client with the best services right from the time of consultation and even after the launch of your site. We understand that it is possible to have business relationships that span over a long period and that is why the customer comes first.",
+          "The backups are automated and in case of any problems we have measures in place to restore your website data and loss of time.",
       },
     ],
     serviceIndustriesDescription:

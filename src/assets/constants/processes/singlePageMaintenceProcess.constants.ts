@@ -1,58 +1,56 @@
 import { lazy } from "react";
 
-const DiscoveryAndPlanningIcon = lazy(
-  () => import("@/assets/vectors/processes/DiscoveryAndPlanning.svg?react")
+const InitialWebsiteAuditIcon = lazy(
+  () => import("@/assets/vectors/processes/InitialWebsiteAudit.svg?react")
 );
-const OutomationOrchestrationIcon = lazy(
-  () => import("@/assets/vectors/processes/OutomationOrchestration.svg?react")
+const PerformanceSecurityIcon = lazy(
+  () => import("@/assets/vectors/processes/PerformanceSecurity.svg?react")
 );
-const MonitoringPerformanceIcon = lazy(
-  () => import("@/assets/vectors/processes/MonitoringPerformance.svg?react")
+const RegularUpdatesIcon = lazy(
+  () => import("@/assets/vectors/processes/RegularUpdates.svg?react")
 );
-const ContinousIntegrationIcon = lazy(
-  () => import("@/assets/vectors/processes/ContinousIntegration.svg?react")
+const BugFixingIcon = lazy(() => import("@/assets/vectors/processes/BugFixing.svg?react"));
+const BackupRecoveryIcon = lazy(
+  () => import("@/assets/vectors/processes/BackupRecovery.svg?react")
 );
-const InfrostructureSetupIcon = lazy(
-  () => import("@/assets/vectors/processes/InfrostructureSetup.svg?react")
-);
-const SecurityCompilanceIcon = lazy(
-  () => import("@/assets/vectors/processes/SecurityCompilance.svg?react")
+const OngoingSupporMaintencetIcon = lazy(
+  () => import("@/assets/vectors/processes/OngoingSupportMaintence.svg?react")
 );
 
 export const singlePageMaintenceProcessesConstants = [
   {
     id: 1,
-    Icon: DiscoveryAndPlanningIcon,
+    Icon: InitialWebsiteAuditIcon,
     title: "Initial Website Audit",
     description: "",
   },
   {
     id: 2,
-    Icon: InfrostructureSetupIcon,
+    Icon: PerformanceSecurityIcon,
     title: "Performance & Security Monitoring",
     description: "",
   },
   {
     id: 3,
-    Icon: ContinousIntegrationIcon,
+    Icon: RegularUpdatesIcon,
     title: "Regular Updates & Patching",
     description: "",
   },
   {
     id: 4,
-    Icon: OutomationOrchestrationIcon,
+    Icon: BugFixingIcon,
     title: "Bug Fixing & Error Resolution",
     description: "",
   },
   {
     id: 5,
-    Icon: MonitoringPerformanceIcon,
+    Icon: BackupRecoveryIcon,
     title: "Backup & Recovery Planning",
     description: "",
   },
   {
     id: 6,
-    Icon: SecurityCompilanceIcon,
+    Icon: OngoingSupporMaintencetIcon,
     title: "Ongoing Support & Maintenance",
     description: "",
   },

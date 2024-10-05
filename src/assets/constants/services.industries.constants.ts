@@ -2,23 +2,28 @@ import AppoimentShedule from "@/assets/vectors/AppoimentShedule.svg?react";
 import AppointmentSheduling from "@/assets/vectors/AppointmentSheduling.svg?react";
 import ArtificialIntelligence from "@/assets/vectors/ArtificialInteligence.svg?react";
 import Automation from "@/assets/vectors/Automation.svg?react";
+import BonusCalculation from "@/assets/vectors/BonusCalculation.svg?react";
 import ClinicAndLab from "@/assets/vectors/ClinicAndLab.svg?react";
 import CommercialAdvertising from "@/assets/vectors/CommercialAdvertising.svg?react";
 import Cybersecurity from "@/assets/vectors/Cybersecurity.svg?react";
 import DashboardDevelopment from "@/assets/vectors/DashboardDevelopment.svg?react";
-import DataAnalistics from "@/assets/vectors/DataAnalistics.svg?react";
+import DataAnalistics from "@/assets/vectors/DataAnalitics.svg?react";
 import DigitalHealt from "@/assets/vectors/DigitalHealt.svg?react";
 import DigitalIntegration from "@/assets/vectors/DigitalIntegration.svg?react";
+import EmployeeEvolution from "@/assets/vectors/EmployeeEvolution.svg?react";
 import EventPlanningManagment from "@/assets/vectors/EventPlanningManagment.svg?react";
 import FilmProduction from "@/assets/vectors/FilmProduction.svg?react";
 import FreightCargoServices from "@/assets/vectors/FreightCargoServices.svg?react";
+import HealthcareTechnology from "@/assets/vectors/HealthcareTechnology.svg?react";
 import Hospetality from "@/assets/vectors/Hospetality.svg?react";
 import ITServicesITConsulting from "@/assets/vectors/ITServices&ITConsulting.svg?react";
+import Insurance from "@/assets/vectors/Insurance.svg?react";
 import MedicalSoftwareDevelopment from "@/assets/vectors/MedicalSoftwareDevelopment.svg?react";
 import MusickProduction from "@/assets/vectors/MusickProduction.svg?react";
 import OnlineBookingPlatforms from "@/assets/vectors/OnlineBookingPlatforms.svg?react";
 import PerformanceManagment from "@/assets/vectors/PerformanceManagment.svg?react";
 import SoftwareAsService from "@/assets/vectors/SoftwareAsService.svg?react";
+import SupplyChain from "@/assets/vectors/SupplyChain.svg?react";
 import TaskManagment from "@/assets/vectors/TaskManagment.svg?react";
 import VirtualMeeting from "@/assets/vectors/VirtualMeeting.svg?react";
 import ManagedService from "@/assets/vectors/VirtualMeeting.svg?react";
@@ -212,27 +217,27 @@ export const servicesIndustriesConstants = {
   ],
   [ServicesIdConstants.Maintenance]: [
     {
-      Icon: EventPlanningManagment,
+      Icon: HealthcareTechnology,
       title: "Healthcare Technology",
     },
     {
-      Icon: MedicalSoftwareDevelopment,
+      Icon: EmployeeEvolution,
       title: "Employee Evaluation",
     },
     {
-      Icon: MusickProduction,
+      Icon: BonusCalculation,
       title: "Bonus Calculation",
     },
     {
-      Icon: VirtualMeeting,
+      Icon: Insurance,
       title: "Insurance",
     },
     {
-      Icon: FreightCargoServices,
+      Icon: SupplyChain,
       title: "Supply Chain Management",
     },
     {
-      Icon: OnlineBookingPlatforms,
+      Icon: DataAnalistics,
       title: "Data Analytics",
     },
   ],
