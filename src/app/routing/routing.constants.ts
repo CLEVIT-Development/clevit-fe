@@ -28,9 +28,9 @@ export enum RoutePaths {
   TermsAndConditions = "/terms-and-conditions",
   Calendly = "/request-demo",
   WebDevelopment = "/web-development",
-  AdminBlog = "/admin/blog/:id?",
+  CreateBlog = "/admin/add-blog",
+  EditBlog = "/admin/edit-blog/:id",
   AdminSignIn = "/admin/signin",
-  AdminAddBlog = "/admin/addBlog",
 }
 
 export const headerMenuLinks = [
@@ -58,5 +58,6 @@ export const routerElements = [
   { path: RoutePaths.WebDevelopment, Element: WebDevelopmentPage, isPrivate: false },
   { path: RoutePaths.FAQ, Element: Faq, isPrivate: false },
   { path: RoutePaths.AdminSignIn, Element: SignInPage, isPrivate: false },
-  { path: RoutePaths.AdminBlog, Element: AddEditBlogPage },
+  { path: RoutePaths.CreateBlog, Element: AddEditBlogPage, isPrivate: true },
+  { path: RoutePaths.EditBlog, Element: AddEditBlogPage, isPrivate: true },
 ];
