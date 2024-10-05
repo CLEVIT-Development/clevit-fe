@@ -33,15 +33,15 @@ interface IGetBlogById {
 
 const useBlog = () => {
   const [loading, setLoading] = useState(false);
-  const [blogData, setBlogData] = useState<IBlog | undefined>();
-  const [allBlogs, setAllBlogs] = useState<IBlog[] | undefined>();
-  const [pagination, setPagination] = useState<Pagination | undefined>();
+  const [blogData, setBlogData] = useState<IBlog | null>();
+  const [allBlogs, setAllBlogs] = useState<IBlog[] | null>();
+  const [pagination, setPagination] = useState<Pagination | null>();
 
   const addBlog = async (data: IBlogData, options?: UseBlogOptions) => {
     setLoading(true);
 
     try {
-      await axiosInstanceAuth.post("/api/blogs", data);
+      await axiosInstanceAuth.post("/blogs", data);
       options?.onSuccess?.();
     } catch (error) {
       options?.onFailure?.(error);
@@ -54,7 +54,7 @@ const useBlog = () => {
     setLoading(true);
 
     try {
-      await axiosInstanceAuth.put(`/api/blogs/${id}`, data);
+      await axiosInstanceAuth.put(`/blogs/${id}`, data);
       options?.onSuccess?.();
     } catch (error) {
       options?.onFailure?.(error);
@@ -65,9 +65,10 @@ const useBlog = () => {
 
   const getBlogById = async (id: string, options?: UseBlogOptions) => {
     setLoading(true);
+    setBlogData(null);
 
     try {
-      const response: IGetBlogById = await axiosInstanceAuth.get(`/api/blogs/${id}`);
+      const response: IGetBlogById = await axiosInstanceAuth.get(`/blogs/${id}`);
 
       setBlogData(response.data);
 
@@ -107,7 +108,7 @@ const useBlog = () => {
     getAllBlogs,
     blogData,
     allBlogs,
-    pagination, // Expose pagination data
+    pagination,
     loading,
   };
 };

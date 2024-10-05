@@ -1,8 +1,11 @@
+import { useEffect } from "react";
+
 import { blogsConstants } from "@/assets/constants/blogs.constants";
 import ImagePlaceholder from "@/assets/images/ImagePlaceholder.jpg";
 import FacebookIcon from "@/assets/vectors/Facebook.svg?react";
 import InstagramIcon from "@/assets/vectors/Instagram.svg?react";
 import LinkedInIcon from "@/assets/vectors/Linkedin.svg?react";
+import useBlog from "@/common/hooks/useBlog";
 import Section from "@/common/templates/Section.tsx";
 import BlogCard from "@/shared/ui/BlogCard/BlogCard";
 
@@ -11,19 +14,24 @@ interface SingleBlogPageProps {
 }
 
 const SingleBlogSection = ({ blogId }: SingleBlogPageProps) => {
-  const blog = blogsConstants.find((blog) => blog.id === blogId);
+  const { getBlogById, blogData } = useBlog();
 
-  if (!blog) {
+  useEffect(() => {
+    getBlogById(blogId);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [blogId]);
+
+  if (!blogData) {
     return <h1>Blog not found</h1>;
   }
 
-  const { title, description, image } = blog;
+  const { title, description, image } = blogData;
 
   return (
     <Section className="items-start desktop:max-w-[80%]">
       <img
         loading="lazy"
-        className="w-[335px] h-[220px] desktop:w-[1110px] desktop:h-[550px]  lg:flex rounded-[20px] bg-[#D9D9D9]"
+        className="w-[335px] h-[220px] desktop:w-[1110px] desktop:h-[550px]  lg:flex rounded-[20px] bg-[#D9D9D9] object-cover"
         alt={title}
         src={image || ImagePlaceholder}
       />
