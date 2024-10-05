@@ -92,15 +92,15 @@ export const servicesIndustriesConstants = {
   [ServicesIdConstants.AI]: [
     {
       Icon: EventPlanningManagment,
-      title: "Dashboard Development",
+      title: "Film Production",
     },
     {
       Icon: MedicalSoftwareDevelopment,
-      title: "Medical Software Development",
+      title: "Music Production & Sound Design",
     },
     {
       Icon: MusickProduction,
-      title: "Music Production & Sound Design",
+      title: "Data Analytics",
     },
     {
       Icon: VirtualMeeting,
@@ -108,11 +108,11 @@ export const servicesIndustriesConstants = {
     },
     {
       Icon: FreightCargoServices,
-      title: "Freight & Cargo Services",
+      title: "IT Services & IT Consulting",
     },
     {
       Icon: OnlineBookingPlatforms,
-      title: "Online Booking Platforms",
+      title: "Automation",
     },
   ],
   [ServicesIdConstants.ML]: [

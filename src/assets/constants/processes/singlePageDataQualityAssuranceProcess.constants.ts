@@ -3,7 +3,7 @@ import { lazy } from "react";
 const DiscoveryAndPlanningIcon = lazy(
   () => import("@/assets/vectors/processes/DiscoveryAndPlanning.svg?react")
 );
-const OutomationOrchestrationIcon = lazy(
+const AutomationOrchestrationIcon = lazy(
   () => import("@/assets/vectors/processes/OutomationOrchestration.svg?react")
 );
 const MonitoringPerformanceIcon = lazy(
@@ -12,7 +12,7 @@ const MonitoringPerformanceIcon = lazy(
 const ContinousIntegrationIcon = lazy(
   () => import("@/assets/vectors/processes/ContinousIntegration.svg?react")
 );
-const InfrostructureSetupIcon = lazy(
+const InfrastructureSetupIcon = lazy(
   () => import("@/assets/vectors/processes/InfrostructureSetup.svg?react")
 );
 const SecurityCompilanceIcon = lazy(
@@ -31,7 +31,7 @@ export const singlePageDataQualityAssuranceProcessesConstants = [
   },
   {
     id: 2,
-    Icon: InfrostructureSetupIcon,
+    Icon: InfrastructureSetupIcon,
     title: "Infrastructure Setup & Configuration",
     description: "",
   },
@@ -43,7 +43,7 @@ export const singlePageDataQualityAssuranceProcessesConstants = [
   },
   {
     id: 4,
-    Icon: OutomationOrchestrationIcon,
+    Icon: AutomationOrchestrationIcon,
     title: "Automation & Orchestration",
     description: "",
   },

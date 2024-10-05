@@ -1,5 +1,10 @@
 import { singlePageMobileDevelopmentProcessesConstants } from "@/assets/constants/processes/singlePageMobileDevelopmentProcess.constants.ts";
+import { singlePageWebsiteMaintenceProcessesConstants } from "@/assets/constants/processes/singlePageWebsiteMaintenceProcess.constants.ts";
 import { ServicesIdConstants } from "@/assets/constants/services-id.constants.ts";
+import {
+  digitalMarketingTechnologiesConstants,
+  digitalMarketingTechnologiesTabsConstants,
+} from "@/assets/constants/technologies/digitalMarketingTechnologies.constants.ts";
 import AIintegration from "@/assets/images/services/AIintegration.png";
 import AppDevelopmentOverviewReverse from "@/assets/images/services/AppDevelopmentOverviewReverse.png";
 import DevopsServices from "@/assets/images/services/DevopsServices.png";
@@ -37,7 +42,6 @@ import UIUX from "@/assets/vectors/UIUX.svg?react";
 import PC from "@/assets/vectors/processes/PC.svg?react";
 import Security from "@/assets/vectors/processes/Security.svg?react";
 
-import { singlePageWebsiteMaintenceProcessesConstants } from "./processes/singlePAgeWebsiteMaintenceProcess.constants";
 import { singlePageAIProcessesConstants } from "./processes/singlePageAIProcess.constants";
 import { singlePageDataQualityAssuranceProcessesConstants } from "./processes/singlePageDataQualityAssuranceProcess.constants";
 import { singlePageDevopsProcessesConstants } from "./processes/singlePageDevopsProcess.constants";
@@ -48,10 +52,6 @@ import { singlePageMLProcessesConstants } from "./processes/singlePageMLProcess.
 import { singlePageTechnicalAssesmentProcessesConstants } from "./processes/singlePageTechnicalAssesmentProcess.constants";
 import { singlePageUIUXProcessesConstants } from "./processes/singlePageUIUXProcess.constants";
 import { singlePageWebDevelopmentProcessesConstants } from "./processes/singlePageWebDevelopmentProcess.constants";
-import {
-  digitalMarketingTechnologiesConstants,
-  digitalMarketingTechnologiesTabsConstants,
-} from "./technologies/DigitalMarketingTechnologies.constants";
 import {
   aITechnologiesConstants,
   aITechnologiesTabsConstants,
