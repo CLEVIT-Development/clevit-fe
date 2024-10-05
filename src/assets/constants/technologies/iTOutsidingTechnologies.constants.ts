@@ -38,27 +38,27 @@ const WebSocketIcon = lazy(() => import("@/assets/vectors/technology/WebSocket.s
 export const itOutsidingTechnologiesTabsConstants: ITabsConstant[] = [
   {
     id: 1,
-    title: "outstaffing",
+    title: "Talent Sourcing",
     description:
-      "This classification is about the administration and operation of cloud structures. Whatever cloud solution a business organization is using, be it AWS, Google Cloud, Azure, or Digital Ocean, we assist in configuring, monitoring, and optimizing their cloud infrastructure. This makes certain that your systems are robust, efficient, and safe.",
+      "We use our great contact base to provide you with the most suitable and suitable & adequate human resources for your project.",
   },
   {
     id: 2,
-    title: "Containerization & Orchestration",
+    title: "Candidate Screening",
     description:
-      "Application environment management became easier and scalable due to the implementation of Docker and containerization. We use containers for consistency in both development and in production, making your team more efficient and your apps more reliable.",
+      "We also screen all the professionals to meet your technical needs as well as the cultural fit needed for your business.",
   },
   {
     id: 3,
-    title: "CI/CD Pipeline Automation",
+    title: "Onboarding & Integration",
     description:
-      "Our CI/CD services help optimize your software development process saving your time and efforts for the same. Through the use of Jenkins, AWS CodePipeline, Azure DevOps we are able to ensure that the code you write gets tested, deployed and released to the cloud platforms as soon as possible. This helps minimize the chances of human mistakes, enhance the software release cycle, and ensure that you are always deploying and delivering the latest software.",
+      "Our professionals work in a team combining efforts to make your project successful and efficient.",
   },
   {
     id: 4,
-    title: "Cloud Security & Compliance",
+    title: "Performance Monitoring",
     description:
-      "Security and compliance are of paramount importance within the context of DevOps. We offer security services across the cloud stack, guaranteeing that your <strong>AWS</strong>, <strong>Azure</strong>, or <strong>Google Cloud</strong> environment is optimized with proper configurations and complies with regulations such as <strong>GDPR</strong>, <strong>HIPAA</strong>, and <strong>SOC 2.</strong>",
+      "In order to maintain quality the performance of outstaffed professionals working on our projects is constantly assessed.",
   },
 ];
 

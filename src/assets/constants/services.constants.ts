@@ -932,10 +932,10 @@ export const servicesConstants = [
     descriptionOffer:
       "Need some extra tech muscle? Clevit can connect you with a pool of highly skilled developers to boost your development team.",
     singlePageDescription:
-      "If you have some features in mind for your mobile application, then turn them into reality at Clevit – your application solutions with next-level performance. No matter if you want to build a native, cross-platform, or hybrid application, our professionals will help you in each step of the workflow, making the final product easy-to-navigate, easily-scaled, and aligned with the vision of your business.",
+      "At Clevit Our IT outstaffing works for companies searching for flexible and cost-efficient ways to augment IT teams when needed. If you require specific developers, project managers, or QA engineers, you can easily find highly trained workers willing to fit the team. Outstaffing services we offer let you scale up your team rapidly and seamlessly without the challenges of direct recruitment.\n",
 
     serviceDetails:
-      "When creating mobile applications, at Clevit we follow several rules that are universal for all projects. Here’s what drives us:",
+      "At Clevit, we know how IT outstaffing can be beneficial with flexibility, trust and optimal performance. Our primary concern lies in providing you with a qualified workforce that meets your requirements in terms of the project or event. Here are our core values:",
 
     offers: [
       {
@@ -972,20 +972,22 @@ export const servicesConstants = [
         title: "Ongoing Support",
         Icon: PC,
         description:
-          "Our team is actively engaged, standing by to support and facilitate the work of the in-house team and the outstaffed professionals.",
+          "Our team is actively engaged standing by to support and facilitate the work of the in-house team and the outstaffed professionals.",
       },
     ],
 
     serviceIndustriesDescription:
-      "IT Outstaffing Services of Clevit means that we offer staff for rent for every industry to ensure that every business gets the relevant talent. This way we know how every industry works and the problems that they go through, which helps us in identifying the kind of services you require. Here are some industries we serve:",
+      "IT Outstaffing Services of Clevit means that we offer staff for rent for every industry to ensure that every business gets the relevant talent. This way we know how every industry works and the problems that they go through which helps us in identifying the kind of services you require. Here are some industries we serve:",
 
     serviceTechnologiesTitle: "Key Aspects of Our IT Outstaffing Process",
-    serviceTechnologiesSubtitle: "ServicesIdConstants.OutStaffing Subtitle",
+    serviceTechnologiesSubtitle:
+      "With outstaffing, Clevit guarantees a good transition of talents in your business process. This includes sourcing and onboarding, project alignment, and support across departments and projects. Here are the key aspects of our process",
     serviceTabTechnologies: itOutsidingTechnologiesTabsConstants,
     serviceTechnologies: itOutsidingTechnologiesConstants,
     serviceBookConsultation: {
-      title: "Ready to Elevate Your Digital Presence? ",
-      description: "Contact Us Today to Start Building Your Custom Website.",
+      title: "Ensure Your Team’s Success with Our IT Outstaffing Solutions",
+      description:
+        "Need to scale your team without the overhead? Get in touch with us to discuss your project requirements.",
     },
     servicesProcesses: singlePageItOutsidingProcessesConstants,
     ChooseClevitTitle: "Why Choose Clevit for Technical Assessment Services?",
@@ -1019,8 +1021,7 @@ export const servicesConstants = [
 
     GetConsultation: {
       title: "Looking for IT Outstaffing Solutions?",
-      description:
-        "Let us help you scale your team with our top-tier outstaffing services. Schedule a consultation.",
+      description: "Let us help you scale your team with our top-tier outstaffing services.",
     },
   },
   {

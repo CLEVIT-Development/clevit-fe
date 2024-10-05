@@ -233,7 +233,7 @@ export const servicesIndustriesConstants = {
   [ServicesIdConstants.OutStaffing]: [
     {
       Icon: EventPlanningManagment,
-      title: "Dashboard Development",
+      title: "Digital Health Solutions",
     },
     {
       Icon: MedicalSoftwareDevelopment,
@@ -241,11 +241,11 @@ export const servicesIndustriesConstants = {
     },
     {
       Icon: MusickProduction,
-      title: "Music Production & Sound Design",
+      title: "Online Content Creation",
     },
     {
       Icon: VirtualMeeting,
-      title: "Virtual Meetings & Conferencing",
+      title: "Dashboard Development",
     },
     {
       Icon: FreightCargoServices,
@@ -253,7 +253,7 @@ export const servicesIndustriesConstants = {
     },
     {
       Icon: OnlineBookingPlatforms,
-      title: "Online Booking Platforms",
+      title: "Regenerative Medicine",
     },
   ],
   [ServicesIdConstants.ProjectManagement]: [
