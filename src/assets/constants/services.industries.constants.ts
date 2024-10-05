@@ -177,27 +177,27 @@ export const servicesIndustriesConstants = {
   [ServicesIdConstants.Assessment]: [
     {
       Icon: EventPlanningManagment,
-      title: "Dashboard Development",
+      title: "Software as a Service (SaaS)",
     },
     {
       Icon: MedicalSoftwareDevelopment,
-      title: "Medical Software Development",
+      title: "Performance Management",
     },
     {
       Icon: MusickProduction,
-      title: "Music Production & Sound Design",
+      title: "Cybersecurity",
     },
     {
       Icon: VirtualMeeting,
-      title: "Virtual Meetings & Conferencing",
+      title: "Data Integration",
     },
     {
       Icon: FreightCargoServices,
-      title: "Freight & Cargo Services",
+      title: "Automation and Workflow Tools",
     },
     {
       Icon: OnlineBookingPlatforms,
-      title: "Online Booking Platforms",
+      title: "Task Management Systems",
     },
   ],
   [ServicesIdConstants.Maintenance]: [

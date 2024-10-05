@@ -719,60 +719,56 @@ export const servicesConstants = [
       "We offer in-depth technical assessments to identify and address any weak spots in your current setups.",
 
     singlePageDescription:
-      "If you have some features in mind for your mobile application, then turn them into reality at Clevit – your application solutions with next level performance. No matter if you want to build a native, cross-platform, or hybrid application, our professionals will help you in each step of the workflow, making the final product easy-to-navigate, easily-scaled, and aligned with the vision of your business.",
+      "At Clevit we provide Technical Assessment Services that enable you to analyze the efficiency, reliability, and reliability of your current systems, applications, or structure. It is our job to make sure our clients are aware of the strengths and weaknesses of the existing setup and provide the best solution that will optimize the processes.",
 
     serviceDetails:
-      "When creating mobile applications, at Clevit we follow several rules that are universal for all projects. Here’s what drives us:",
+      "At Clevit we value our capacity to provide credible reports and results. Our objective is to assist you in finding the hidden opportunities and managing with the threats that may distort your business in the future.",
 
     offers: [
       {
-        title: "Exquisite & Sophisticated Solutions",
+        title: "Thorough Evaluation",
         Icon: PC,
         description:
-          "We understand that one’s web solution should be not only permanent and effective but also beautiful. Each design and development decision is perfect in its way and does not leave a littered mess, which ruins the outward appearance of your brand.",
+          "We guarantee that no detail of your technology stack has been overlooked in a bid to identify performance hitches, threats, or even lack of optimum efficiency.",
       },
       {
-        title: "Flexibility",
+        title: "Trust & Transparency",
         Icon: PC,
         description:
-          "It is important for you to know that we do not operate on a ‘one size fits all’ basis with businesses. That is why we provide flexibility in our web development solutions with the option to choose the necessity levels. Whether it is highly elaborate modifications or simple executions in conjunction with other software, we provide dynamic solutions.",
+          "Our assessments are entirely objective, and present you with a clear evaluation of what is good and what can be done differently to enable you to make the right choices.",
       },
       {
-        title: "Trust & Ownership",
+        title: "Advanced Tools & Techniques",
         Icon: PC,
         description:
-          "It is always important to point out that trust is always the ownership in any relationship that we establish. It is an essential policy that the company owns all projects it is involved in to champion clear communication and organizational responsibility. Your achievements are important to us and thus make your objectives our own.",
+          "By employing sophisticated tools and sound practices, we guarantee that the technical evaluations we conduct are correct and conform to current best practices.",
       },
       {
-        title: "Originality",
+        title: "Proactive Risk Management",
         Icon: PC,
         description:
-          "All our activities are founded and guided by the principle of innovation. With every assignment, we start thinking outside the box, therefore the solutions that we devise are not only relevant but unique as well. You may wonder what makes us so unique in an era where more and more websites are being developed.",
+          "Through anticipation of these risks, you are in a position to shield your systems from the probability of threats and your business continues to run smoothly.",
       },
       {
-        title: "Quality & Consistency",
+        title: "Tailored Solutions",
         Icon: PC,
         description:
-          "Quality is not negotiable for us because our goal is to provide excellent services. It is because of this reason that we adopt rigorous production quality control measures to ensure you receive the best. This is a very critical area to make sure that all your website related development is consistent so that your site is always efficient and aesthetically pleasing.",
-      },
-      {
-        title: "Customer Support",
-        Icon: PC,
-        description:
-          "We are here for you at any point in your suffering. We provide our client with the best services right from the time of consultation and even after launch of your site. We understand that it is possible to have business relationships that span over a long period and that is why the customer comes first.",
+          "Each business is unique and so are the requirements and demands of the enterprise. We tailor our recommendations according to your needs and concerns, being aware of the specifics of your industry.",
       },
     ],
 
     serviceIndustriesDescription:
-      "IT Project Management services include Clevit from multiple sectors of industries. We appreciate the fact that each industry comes with its problems and we provide the best solution to enhance the progress of any project. Some of the industries we serve include:",
+      "Clevit’s Technical Assessment Services are versatile across industries since the world can be divided into several industries. Our packages and services address the peculiarities of the various sectors so that an ideal system performance and reliability for every sector is achieved.",
 
-    serviceTechnologiesTitle: "Key Aspects of Our Web Development Process",
-    serviceTechnologiesSubtitle: "ServicesIdConstants.Assessment Subtitle",
+    serviceTechnologiesTitle: "Key Aspects of Our Technical Assessment Process",
+    serviceTechnologiesSubtitle:
+      "Clevit’s technical evaluations encompass various aspects of your technology, making sure that all aspects have been evaluated. Here are the key aspects of our process:",
     serviceTabTechnologies: technicalAssesmentTechnologiesTabsConstants,
     serviceTechnologies: technicalAssesmentTechnologiesConstants,
     serviceBookConsultation: {
-      title: "Ready to Elevate Your Digital Presence? ",
-      description: "Contact Us Today to Start Building Your Custom Website.",
+      title: "Ensure Your System's Efficiency with Clevit",
+      description:
+        "Maximize the potential of your technology stack with our expert assessment services.",
     },
     servicesProcesses: singlePageTechnicalAssesmentProcessesConstants,
     ChooseClevitTitle: "Why Choose Clevit for Technical Assessment Services?",
@@ -790,7 +786,7 @@ export const servicesConstants = [
       {
         title: "Actionable Insights",
         description:
-          "Our assessments give you specific and practical ways to improve performance, increase security, and minimize operational risks.",
+          "To that end, our assessments give you specific and practical ways to improve performance, increase security, and minimize operational risks.",
       },
       {
         title: "Customized Solutions",
@@ -805,9 +801,8 @@ export const servicesConstants = [
     ],
 
     GetConsultation: {
-      title: "Let's Build Your Future",
-      description:
-        "It is time to create new image of your business online? Contact us today and let us guide you on how to achieve a website that will capture your brand and market needs.",
+      title: "Looking for a Detailed Technical Assessment?",
+      description: "Let Clevit optimize your system for peak performance and security.",
     },
   },
   {

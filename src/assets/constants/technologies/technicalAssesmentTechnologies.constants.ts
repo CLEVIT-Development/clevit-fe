@@ -49,19 +49,33 @@ export interface ITechnologyConstant {
 export const technicalAssesmentTechnologiesTabsConstants: ITabsConstant[] = [
   {
     id: 1,
-    title: "Front-End Development",
+    title: "Infrastructure Audit",
+    description:
+      "We assess your hardware, software, and the network to identify if it can handle future growth, it is optimized, and for any bottlenecks that are present.",
   },
   {
     id: 2,
-    title: "Mobile App Development",
+    title: "Security Analysis",
+    description:
+      "Our team will analyze the current security procedures and regulations, evaluate possible risks, and give recommendations for a stronger cybersecurity at your company.",
   },
   {
     id: 3,
-    title: "Back-End Development",
+    title: "Performance Evaluation",
+    description:
+      "Using various tools, we are able to assess and determine your applications, system and network performance that would be running with an expected load.",
   },
   {
     id: 4,
-    title: "Database Management",
+    title: "Code Quality Review",
+    description:
+      "Our specialists analyze your code to find defects, code sorting issues, or poorly written code that can slow down the program or prevent further extension.",
+  },
+  {
+    id: 5,
+    title: "Compliance Check",
+    description:
+      "Make sure your systems and processes meet the requirements of the industry and do not violate any laws to prevent issues from arising and keep operations efficient.",
   },
 ];
 

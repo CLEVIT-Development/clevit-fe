@@ -21,7 +21,7 @@ const GetConsultation = ({ title, description }: GetConsultationProps) => {
         <p className="text-base text-white">{description}</p>
       </div>
       <Button
-        children="Request a Consultation"
+        children="Schedule a consultation"
         variant={ButtonVariant.Primary}
         className="text-white"
       />
