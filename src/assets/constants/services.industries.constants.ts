@@ -151,27 +151,27 @@ export const servicesIndustriesConstants = {
   [ServicesIdConstants.Quality]: [
     {
       Icon: EventPlanningManagment,
-      title: "Dashboard Development",
+      title: "Media & Entertainment",
     },
     {
       Icon: MedicalSoftwareDevelopment,
-      title: "Medical Software Development",
+      title: "Commercial Advertising",
     },
     {
       Icon: MusickProduction,
-      title: "Music Production & Sound Design",
+      title: "Film Production",
     },
     {
       Icon: VirtualMeeting,
-      title: "Virtual Meetings & Conferencing",
+      title: "Hospitality",
     },
     {
       Icon: FreightCargoServices,
-      title: "Freight & Cargo Services",
+      title: "Online Booking Platforms",
     },
     {
       Icon: OnlineBookingPlatforms,
-      title: "Online Booking Platforms",
+      title: "Artificial Intelligence (AI)",
     },
   ],
   [ServicesIdConstants.Assessment]: [

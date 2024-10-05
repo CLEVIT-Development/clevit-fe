@@ -15,54 +15,36 @@ const ContinousIntegrationIcon = lazy(
 const InfrastructureSetupIcon = lazy(
   () => import("@/assets/vectors/processes/InfrostructureSetup.svg?react")
 );
-const SecurityCompilanceIcon = lazy(
-  () => import("@/assets/vectors/processes/SecurityCompilance.svg?react")
-);
-const OngoingSupportIcon = lazy(
-  () => import("@/assets/vectors/processes/OngoingSupport.svg?react")
-);
 
 export const singlePageDataQualityAssuranceProcessesConstants = [
   {
     id: 1,
     Icon: DiscoveryAndPlanningIcon,
-    title: "Discovery & Planning",
+    title: "Initial Data Assessment",
     description: "",
   },
   {
     id: 2,
     Icon: InfrastructureSetupIcon,
-    title: "Infrastructure Setup & Configuration",
+    title: "Data Cleansing & Standardization",
     description: "",
   },
   {
     id: 3,
     Icon: ContinousIntegrationIcon,
-    title: "Continuous Integration & Continuous Deployment (CI/CD)",
+    title: "Validation & Verification",
     description: "",
   },
   {
     id: 4,
     Icon: AutomationOrchestrationIcon,
-    title: "Automation & Orchestration",
+    title: "Data Monitoring & Maintenance",
     description: "",
   },
   {
     id: 5,
     Icon: MonitoringPerformanceIcon,
-    title: "Monitoring & Performance Optimization",
-    description: "",
-  },
-  {
-    id: 6,
-    Icon: SecurityCompilanceIcon,
-    title: "Security & Compliance",
-    description: "",
-  },
-  {
-    id: 7,
-    Icon: OngoingSupportIcon,
-    title: "Ongoing Support & Maintenance",
+    title: "Reporting & Documentation",
     description: "",
   },
 ];

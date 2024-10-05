@@ -617,89 +617,91 @@ export const servicesConstants = [
       "Keeping client needs in mind, Clevit is about achieving basic, simple, and accurate data quality assurance. Your data is accurate, reliable, and compliant, helping your business achieve its objectives.",
 
     singlePageDescription:
-      "Maximize the potential of your data with our quality assurance services. Clevit ensures timely data validation and proactive monitoring for future stability.",
+      "At Clevit, our Data Quality Assurance (QA) solutions are aimed at ensuring the quality, integrity and credibility of data. We guarantee the effective and accurate completion of the data processes, that you can make sound decisions for the business and improve operations.",
 
     serviceDetails:
-      "At Clevit, it is our priority to have accurate, reliable and secure data through automation, performance, API validation, and end-to-end testing. Our technique incorporates the utilization of sophisticated instruments to ensure the sanctity of data.",
+      "Keeping client needs in mind, Clevit is about achieving basic, simple, and accurate data quality assurance. To that end, the most important priority for us is that your data is accurate, reliable, and compliant while helping your business achieve its objectives.",
 
     offers: [
       {
-        title: "Automated Data Testing",
+        title: "Data Accuracy & Integrity",
         Icon: PC,
         description:
-          "With Selenium, Cypress, and TestLink, we ensure effective testing of your data processes to identify and optimize any errors.",
+          "We respect the accuracy of your data and guarantee that all the datasets will not contain errors, or duplicate and/or conflicting records. This ensures that the analysis done and the decisions made are precise and sound to every business in your organization.",
       },
       {
-        title: "API Testing & Validation",
+        title: "Consistency Across Systems",
         Icon: PC,
         description:
-          "Using solutions like Apiary, SoapUI, and Postman, we guarantee that all your APIs perform precise data exchange with validation among systems.",
+          "We are able to maintain the proper data integrity across different platforms, systems and databases that facilitate their working and proper exchange of information with other departments",
       },
       {
-        title: "Performance & Load Testing",
+        title: "Timely Data Validation",
         Icon: PC,
         description:
-          "We emulate high loads and performance stress using JMeter and Tricentis Tosca to guarantee stability in your data-handling systems.",
+          "Clevit ensures that the data is validated in real time and as such all errors are corrected almost instantly hence less time is spent on data collection hence one can act on the data any time.",
       },
       {
-        title: "End-to-End Data Integrity Testing",
+        title: "Compliance & Security",
         Icon: PC,
         description:
-          "Utilizing tools like Playwright and Tricentis Tosca, we ensure data integrity, security, and accuracy throughout the system lifecycle.",
+          "Your data is protected to conform to current established standards on data privacy and security to avoid compromising strictly private information.",
       },
       {
         title: "Proactive Monitoring & Maintenance",
         Icon: PC,
         description:
-          "Our proactive approach helps in early identification of data process irregularities, ensuring the stability of your data processes.",
-      },
-      {
-        title: "Data Security & Compliance",
-        Icon: PC,
-        description:
-          "Your data is treated with great importance, conforming to compliance standards while being well-managed and secured.",
+          "Our approach of being proactive also assists in the early identification of data process irregularities thus guarantees the future stability of your data processes.",
       },
     ],
 
     serviceIndustriesDescription:
-      "Clevit’s Data Quality Assurance services are flexible for various sectors, including healthcare, finance, retail, logistics, and more. Our services are fully adaptable to meet the high-quality data requirements of each industry.",
+      "Clevit’s Data Quality Assurance services are flexible for most businesses such as healthcare, financial, retail, logistics and many others. Our services are fully adaptable to the requirements of the certain sector because the main principles of working claim on high quality and up to date data.",
 
     serviceTechnologiesTitle: "Key Aspects of Our Data Quality Assurance Process",
+    serviceTechnologiesSubtitle:
+      "At Clevit, it is our priority to have accurate, reliable and secure data through automation, performance, API validation, and end to end testing. Our technique incorporates the utilization of sophisticated instruments to ensure the sanctity of data and enhance your system.",
+
     serviceTabTechnologies: dataQualityTechnologiesTabsConstants,
     serviceTechnologies: dataQualityTechnologiesConstants,
 
     serviceBookConsultation: {
-      title: "Ready to Elevate Your Data Quality?",
-      description: "Contact Us Today to Start Your Data Quality Assurance Journey.",
+      title: "Ensure Your Data Quality with Clevit",
+      description: "Maximize the potential of your data with our quality assurance services.",
     },
     servicesProcesses: singlePageDataQualityAssuranceProcessesConstants,
-    ChooseClevitTitle: "Why Choose Clevit for Data Quality Assurance?",
+    ChooseClevitTitle: "Ensure Your Data Quality with Clevit",
     ChooseClevitRecomendation: [
       {
         title: "Comprehensive Approach",
         description:
-          "We provide all types of data quality assurance services, ensuring complete and truthful solutions.",
+          "Here, you will find all types of data quality assurance services starting from auditing and including monitoring, which means you will get nothing but complete and truthful solutions from us.",
       },
       {
         title: "Experienced Team",
         description:
-          "Our specialists are versed in data management, providing accurate solutions with minimal margin of error.",
+          " Our specialists are versed in data management, and all our solutions are accurate, providing as little margin of error as is possible within the existing industry standards.",
       },
       {
         title: "Customized Solutions",
         description:
-          "We localize our services to target the unique needs and goals of your business.",
+          "All businesses are exclusive and thus data requirements of each are different. Our services reflect your needs and goals because we localize the services offered to target your needs.",
       },
       {
-        title: "Cutting-Edge Technology",
-        description: "We apply the most advanced technologies for improved data quality solutions.",
+        title: "Data Security & Compliance",
+        description:
+          "Your data is treated with great importance and security, conforming with compliance standards and being well managed.",
+      },
+      {
+        title: "Cutting-Edge Technology:",
+        description:
+          "We apply both what is current in the market and the most advanced technologies for better and improved data quality solutions.",
       },
     ],
 
     GetConsultation: {
       title: "Looking for Reliable Data QA Solutions?",
-      description:
-        "Let Clevit handle your data validation and optimization needs. Schedule a consultation today.",
+      description: "Let Clevit handle your data validation and optimization needs.",
     },
   },
   {

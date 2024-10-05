@@ -38,15 +38,15 @@ const WebSocketIcon = lazy(() => import("@/assets/vectors/technology/WebSocket.s
 export const dataQualityTechnologiesTabsConstants: ITabsConstant[] = [
   {
     id: 1,
-    title: "dataquality",
+    title: "Automated Data Testing",
     description:
-      "This classification is about the administration and operation of cloud structures. Whatever cloud solution a business organization is using, be it AWS, Google Cloud, Azure, or Digital Ocean, we assist in configuring, monitoring, and optimizing their cloud infrastructure. This makes certain that your systems are robust, efficient, and safe.",
+      "With <strong>Selenium, Cypress </strong> and <strong>TestLink</strong>, we ensure that your data processes are effectively tested, while we look for any errors and optimize the processes.",
   },
   {
     id: 2,
-    title: "Containerization & Orchestration",
+    title: "API Testing & Validation",
     description:
-      "Application environment management became easier and scalable due to the implementation of Docker and containerization. We use containers for consistency in both development and in production, making your team more efficient and your apps more reliable.",
+      "Using solutions like <strong>Apiary, SoapUI,</strong> and <strong>Postman,</strong> we guarantee that all your APIs are compatible and perform precise data exchange with data validation among systems.",
   },
   {
     id: 3,
@@ -56,9 +56,15 @@ export const dataQualityTechnologiesTabsConstants: ITabsConstant[] = [
   },
   {
     id: 4,
-    title: "Cloud Security & Compliance",
+    title: "Performance & Load Testing",
     description:
-      "Security and compliance are of paramount importance within the context of DevOps. We offer security services across the cloud stack, guaranteeing that your <strong>AWS</strong>, <strong>Azure</strong>, or <strong>Google Cloud</strong> environment is optimized with proper configurations and complies with regulations such as <strong>GDPR</strong>, <strong>HIPAA</strong>, and <strong>SOC 2.</strong>",
+      "Using tools such as <strong>Jmeter</strong> and <strong>Tricentis Tosca</strong>, we can emulate high loads and performance stress to guarantee the stability of your data-handling systems.",
+  },
+  {
+    id: 5,
+    title: "End-to-End Data Integrity Testing",
+    description:
+      "For such purposes, some of the effective tools for the end-to-end testing are Playwright and Tricentis Tosca to check the data integrity, security, and accuracy from the life cycle of the system.",
   },
 ];
 
