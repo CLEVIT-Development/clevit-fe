@@ -37,7 +37,16 @@ import UIUX from "@/assets/vectors/UIUX.svg?react";
 import PC from "@/assets/vectors/processes/PC.svg?react";
 import Security from "@/assets/vectors/processes/Security.svg?react";
 
+import { singlePageWebsiteMaintenceProcessesConstants } from "./processes/singlePAgeWebsiteMaintenceProcess.constants";
+import { singlePageAIProcessesConstants } from "./processes/singlePageAIProcess.constants";
+import { singlePageDataQualityAssuranceProcessesConstants } from "./processes/singlePageDataQualityAssuranceProcess.constants";
 import { singlePageDevopsProcessesConstants } from "./processes/singlePageDevopsProcess.constants";
+import { singlePageDigitalMarketingProcessesConstants } from "./processes/singlePageDigitalMarketingProcess.constants";
+import { singlePageItOutsidingProcessesConstants } from "./processes/singlePageItOutsidingProcess.constants";
+import { singlePageItProjectManagmentProcessesConstants } from "./processes/singlePageItProjectManagmentProcess.constants";
+import { singlePageMLProcessesConstants } from "./processes/singlePageMLProcess.constants";
+import { singlePageTechnicalAssesmentProcessesConstants } from "./processes/singlePageTechnicalAssesmentProcess.constants";
+import { singlePageUIUXProcessesConstants } from "./processes/singlePageUIUXProcess.constants";
 import { singlePageWebDevelopmentProcessesConstants } from "./processes/singlePageWebDevelopmentProcess.constants";
 import {
   mobileDevelopmentTechnologiesConstants,
@@ -396,6 +405,7 @@ export const servicesConstants = [
       description: "Explore Custom Integration Solutions Tailored to Your Needs.",
     },
     ChooseClevitTitle: "Why Choose Clevit for AI Integration?",
+    servicesProcesses: singlePageAIProcessesConstants,
     ChooseClevitRecomendation: [
       {
         title: "Tailored Solutions",
@@ -438,76 +448,73 @@ export const servicesConstants = [
     Icon: Settings,
     image: MachineLearning,
     imageAlt: "Machine Learning Development image",
-    serviceDetails: "poxellllllll", //poxelll
     singleServiceHeaderTitle: "ML Development Services",
     singleServiceHeaderDescription: "Paving the Way for Smarter Solutions",
     buttonTitle: "Request a Quote",
     title: "Machine Learning Development",
     route: "/",
     description:
-      "At Clevit, we understand that Machine Learning (ML) Development services help your business make intelligent decisions with data. Whether you need to predict customer behavior or perform text mining, we apply state-of-the-art ML automations to streamline operations and generate value. Our team of specialists adapts every solution based on the field and client requirements.",
+      "At Clevit we understand that Machine learning (ML) Development services help your business to make intelligent decisions with data. Whether you need to predict customer behavior or perform text mining, we apply state-of-the-art ML automations to streamline operations and generate value. Our team of specialists adapts every solution based on the field and client requirements.",
     descriptionOffer:
-      "Specifically for Clevit, there are several areas of focus to guarantee the success of our machine learning initiatives. Our approach is meant to produce effective and high-quality solutions by emphasizing careful preparations and constant improvement.",
+      "Specifically for Clevit, there are several areas of focus to guarantee success of our machine learning initiatives. Our approach is meant to produce effective and high-quality solutions by emphasizing careful preparations and constant improvement.",
+
     singlePageDescription:
       "If you have some features in mind for your mobile application, then turn them into reality at Clevit – your application solutions with next-level performance. No matter if you want to build a native, cross-platform, or hybrid application, our professionals will help you in each step of the workflow, making the final product easy-to-navigate, easily-scaled, and aligned with the vision of your business.",
+
+    serviceDetails: "esi detalnerna",
     offers: [
       {
-        title: "Planning Phase",
+        title: "Adaptive AI Solutions",
+        Icon: PC,
         description:
-          "In each project, we initiate the strategic planning activity. In this stage, we consult directly with you to determine your business needs, objectives, and problems. This way, we can develop a unique machine learning solution that will meet your project’s primary goals.",
+          "Our AI solutions are customized to fit your organization’s needs and dynamics so that they may be adjusted for its benefit. Using a modern form of algorithms, and technologies, we offer artificial intelligence systems that learn over time, thus solutions that will continue to grow with your business.",
       },
       {
-        title: "Information Preparation Phase",
+        title: "Trust",
+        Icon: PC,
         description:
-          "A machine learning model is only as good as the data that you feed into it. Here, the data is collected, transformed, and structured to aid the analytical process that follows this phase.",
+          "Trust is at the core of our model. A key aspect is to design AI applications which are as clear as possible and that you can trust. Ethical AI principles are incorporated to guarantee the security and appropriate use of your data, which helps build credibility between your business and our AI services.",
       },
       {
-        title: "Creation of the Model Phase",
+        title: "Advanced AI",
+        Icon: PC,
         description:
-          "After data preparation, our team of machine learning engineers creates the model. This is the reason we evaluate the ideal algorithms and frameworks depending on the needs of our client.",
+          "AI technologies have been employed to provide unique solutions that propel your business ahead. Machine learning models and deep learning frameworks state that we incorporate the state-of-the-art techniques in AI to make you stay ahead of the competition.",
       },
       {
-        title: "Testing Phase",
+        title: "Quality First",
+        Icon: PC,
         description:
-          "For your machine learning model to be effective in actual conditions, we verify it using different data sets. The goal here is to achieve high accuracy of results while minimizing over-fitting or under-fitting of the model.",
+          "Integration of AI is a fine process for us thus the stress on quality. At every developmental stage of our AI solutions, we follow stringent testing and validation processes to achieve high levels of precision and efficiency. This commitment to quality ensures that our AI applications provide you with the best results.",
       },
       {
-        title: "Optimization Phase",
+        title: "Support",
+        Icon: PC,
         description:
-          "As soon as a model is deployed, we proceed to the optimization stage of the model. In production, we always assess the model and modify it as a result of new production findings.",
+          "According to the social model, continuous support is necessary for the sustained use of AI systems in an organization. Extra support is offered constantly for solving any problems, enhancing efficiency, and for the condition changes. Our support services are developed to guarantee that your implementations of AI solutions are smooth.",
+      },
+      {
+        title: "Individualized User Experience",
+        Icon: PC,
+        description:
+          "We specialize in developing AI strategies that are unique to your users’ needs and requirements. Using insights of the audience, we incorporate an AI-driven approach that establishes the perfect and superior interaction of the users with the solutions offered to them.",
       },
     ],
+
     serviceIndustriesDescription:
       "We have machine learning services and solutions for various industries at Clevit. We offer multipurpose and specific solutions that foster innovation in organizations. As a result, it is possible to state that we adjust our IT solutions to the needs of the specified sectors.",
+
     serviceTechnologiesTitle: "Key Aspects of Our ML Development Process",
-    serviceTechnologiesSubtitle: "ServicesIdConstants.ML Subtitle",
-    serviceTechnologies: [
-      {
-        title: "Deep Learning Frameworks",
-        description:
-          "Our strengths include profound knowledge of deep learning frameworks including Tensorflow.js, Keras.js, and Brain.js.",
-      },
-      {
-        title: "Computer Vision Solutions",
-        description:
-          "Using OpenCV.js, we make intelligent systems software solutions for machine learning that focuses on computer vision.",
-      },
-      {
-        title: "Natural Language Processing",
-        description:
-          "We build Natural Language Processing (NLP) solutions using NLP.js, enabling apps to perform tasks including sentiment analysis and text analysis.",
-      },
-      {
-        title: "Machine Learning for Creative AI",
-        description:
-          "We use ML5.js to build the models tailored specifically to the creation of creative AI applications.",
-      },
-    ],
+    serviceTechnologiesSubtitle:
+      "Clevit provide extensive DevOps services that enhance your development and operations for faster and efficient software delivery",
+    serviceTechnologies: webDevelopmentTechnologiesConstants,
+    serviceTabTechnologies: webDevelopmentTechnologiesTabsConstants,
     serviceBookConsultation: {
       title: "Ready to Transform Your Business with Machine Learning?",
       description:
         "Discover how our custom ML solutions can drive innovation and efficiency in your business. Contact us today.",
     },
+    servicesProcesses: singlePageMLProcessesConstants,
     ChooseClevitTitle: "Why Choose Clevit for AI Integration Services?",
     ChooseClevitRecomendation: [
       {
@@ -528,7 +535,7 @@ export const servicesConstants = [
       {
         title: "End-to-End Service",
         description:
-          "We provide full-cycle ML development services, starting from data preparation to model placing and fine-tuning.",
+          "We are starting from the data preparation and ending with the model placing and fine-tuning.",
       },
       {
         title: "Data Security & Compliance",
@@ -541,6 +548,7 @@ export const servicesConstants = [
           "We continually monitor and fine-tune your ML solutions, enabling them to stay relevant and efficient for your business.",
       },
     ],
+
     GetConsultation: {
       title: "Need Expert ML Development Services?",
       description:
@@ -619,7 +627,7 @@ export const servicesConstants = [
       title: "Ready to Elevate Your Data Quality?",
       description: "Contact Us Today to Start Your Data Quality Assurance Journey.",
     },
-
+    servicesProcesses: singlePageDataQualityAssuranceProcessesConstants,
     ChooseClevitTitle: "Why Choose Clevit for Data Quality Assurance?",
     ChooseClevitRecomendation: [
       {
@@ -649,7 +657,6 @@ export const servicesConstants = [
         "Let Clevit handle your data validation and optimization needs. Schedule a consultation today.",
     },
   },
-
   {
     id: ServicesIdConstants.Assessment,
     Icon: TechnicalAssessment,
@@ -718,12 +725,11 @@ export const servicesConstants = [
     serviceTechnologiesSubtitle: "ServicesIdConstants.Assessment Subtitle",
     serviceTabTechnologies: webDevelopmentTechnologiesTabsConstants,
     serviceTechnologies: webDevelopmentTechnologiesConstants,
-
     serviceBookConsultation: {
       title: "Ready to Elevate Your Digital Presence? ",
       description: "Contact Us Today to Start Building Your Custom Website.",
     },
-
+    servicesProcesses: singlePageTechnicalAssesmentProcessesConstants,
     ChooseClevitTitle: "Why Choose Clevit for Technical Assessment Services?",
     ChooseClevitRecomendation: [
       {
@@ -764,7 +770,6 @@ export const servicesConstants = [
     Icon: Support,
     buttonTitle: "Request a Quote",
     imageAlt: "Support & Maintenance image",
-
     singleServiceHeaderTitle: "Website Maintenance Services",
     singleServiceHeaderDescription: "Ensuring Your Website’s Optimal Performance and Security",
     image: SupportMaintenance,
@@ -827,6 +832,7 @@ export const servicesConstants = [
       title: "Ready to Elevate Your Digital Presence? ",
       description: "Contact Us Today to Start Building Your Custom Website.",
     },
+    servicesProcesses: singlePageWebsiteMaintenceProcessesConstants,
     ChooseClevitTitle: "Why Choose Clevit for Technical Assessment Services?",
     ChooseClevitRecomendation: [
       {
@@ -928,7 +934,7 @@ export const servicesConstants = [
       title: "Ready to Elevate Your Digital Presence? ",
       description: "Contact Us Today to Start Building Your Custom Website.",
     },
-
+    servicesProcesses: singlePageItOutsidingProcessesConstants,
     ChooseClevitTitle: "Why Choose Clevit for Technical Assessment Services?",
     ChooseClevitRecomendation: [
       {
@@ -966,8 +972,8 @@ export const servicesConstants = [
   },
   {
     id: ServicesIdConstants.ProjectManagement,
-    image: ProjectManagment, // Замените на соответствующее изображение
-    Icon: PM, // Замените на соответствующую иконку
+    image: ProjectManagment,
+    Icon: PM,
     title: "IT Project Management",
     route: "/it-project-management",
     buttonTitle: "Request a Quote",
@@ -1034,7 +1040,7 @@ export const servicesConstants = [
       description:
         "Let Clevit streamline your project with our tailored approach. Contact us today.",
     },
-
+    servicesProcesses: singlePageItProjectManagmentProcessesConstants,
     ChooseClevitTitle: "Why Choose Clevit for IT Project Management Services?",
     ChooseClevitRecomendation: [
       {
@@ -1137,6 +1143,7 @@ export const servicesConstants = [
       description:
         "Let Clevit enhance your digital product’s user experience with our tailored design solutions. Schedule a consultation today!",
     },
+    servicesProcesses: singlePageUIUXProcessesConstants,
     ChooseClevitTitle: "Why Choose Clevit for UI/UX Design Services?",
     ChooseClevitRecomendation: [
       {
@@ -1243,6 +1250,7 @@ export const servicesConstants = [
       title: "Ready to Elevate Your Digital Presence?",
       description: "Contact Us Today to Start Building Your Custom Digital Marketing Strategy.",
     },
+    servicesProcesses: singlePageDigitalMarketingProcessesConstants,
     ChooseClevitTitle: "Why Choose Clevit for Digital Marketing Services?",
     ChooseClevitRecomendation: [
       {

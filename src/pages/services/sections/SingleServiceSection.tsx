@@ -51,7 +51,7 @@ const SingleServiceSection = ({ serviceId, setHeaderItems }: SingleServiceSectio
         </div>
       </div>
       <div className="w-full flex  flex-wrap gap-16">
-        {service.offers.map(({ Icon, description, title }) => {
+        {service?.offers?.map(({ Icon, description, title }) => {
           return (
             <div className="w-[350px] flex flex-col gap-4">
               <Icon />
@@ -64,10 +64,10 @@ const SingleServiceSection = ({ serviceId, setHeaderItems }: SingleServiceSectio
         })}
       </div>
       <TechnologySection
-        title={service.serviceTechnologiesTitle}
-        subTitle={service.serviceTechnologiesSubtitle}
-        tabsConstant={service.serviceTabTechnologies}
-        technologiesConstant={service.serviceTechnologies}
+        title={service?.serviceTechnologiesTitle}
+        subTitle={service?.serviceTechnologiesSubtitle}
+        tabsConstant={service?.serviceTabTechnologies}
+        technologiesConstant={service?.serviceTechnologies}
       />
       <div className="w-full">
         <BookConsultation
