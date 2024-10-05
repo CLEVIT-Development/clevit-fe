@@ -1,19 +1,23 @@
 import AppoimentShedule from "@/assets/vectors/AppoimentShedule.svg?react";
 import AppointmentSheduling from "@/assets/vectors/AppointmentSheduling.svg?react";
+import ArtificialIntelligence from "@/assets/vectors/ArtificialInteligence.svg?react";
 import Automation from "@/assets/vectors/Automation.svg?react";
 import ClinicAndLab from "@/assets/vectors/ClinicAndLab.svg?react";
+import CommercialAdvertising from "@/assets/vectors/CommercialAdvertising.svg?react";
 import DashboardDevelopment from "@/assets/vectors/DashboardDevelopment.svg?react";
 import DataAnalistics from "@/assets/vectors/DataAnalistics.svg?react";
 import DigitalHealt from "@/assets/vectors/DigitalHealt.svg?react";
 import EventPlanningManagment from "@/assets/vectors/EventPlanningManagment.svg?react";
 import FilmProduction from "@/assets/vectors/FilmProduction.svg?react";
 import FreightCargoServices from "@/assets/vectors/FreightCargoServices.svg?react";
+import Hospetality from "@/assets/vectors/Hospetality.svg?react";
 import ITServicesITConsulting from "@/assets/vectors/ITServices&ITConsulting.svg?react";
 import MedicalSoftwareDevelopment from "@/assets/vectors/MedicalSoftwareDevelopment.svg?react";
 import MusickProduction from "@/assets/vectors/MusickProduction.svg?react";
 import OnlineBookingPlatforms from "@/assets/vectors/OnlineBookingPlatforms.svg?react";
 import VirtualMeeting from "@/assets/vectors/VirtualMeeting.svg?react";
 import ManagedService from "@/assets/vectors/VirtualMeeting.svg?react";
+import MediaEntertainment from "@/assets/vectors/mediaEntertainment.svg?react";
 
 import { ServicesIdConstants } from "./services-id.constants";
 
@@ -150,27 +154,27 @@ export const servicesIndustriesConstants = {
   ],
   [ServicesIdConstants.Quality]: [
     {
-      Icon: EventPlanningManagment,
+      Icon: MediaEntertainment,
       title: "Media & Entertainment",
     },
     {
-      Icon: MedicalSoftwareDevelopment,
+      Icon: CommercialAdvertising,
       title: "Commercial Advertising",
     },
     {
-      Icon: MusickProduction,
+      Icon: FilmProduction,
       title: "Film Production",
     },
     {
-      Icon: VirtualMeeting,
+      Icon: Hospetality,
       title: "Hospitality",
     },
     {
-      Icon: FreightCargoServices,
+      Icon: OnlineBookingPlatforms,
       title: "Online Booking Platforms",
     },
     {
-      Icon: OnlineBookingPlatforms,
+      Icon: ArtificialIntelligence,
       title: "Artificial Intelligence (AI)",
     },
   ],

@@ -14,11 +14,14 @@ import UIUXDesigne from "@/assets/images/services/UIUXDesigne.png";
 import WebDevelopmentOverviewImage from "@/assets/images/services/WebDevelopmentOverview.png";
 import AdaptiveAiSolutions from "@/assets/vectors/AdaptiveAiSolutions.svg?react";
 import AdvancedAI from "@/assets/vectors/AdvancedAI.svg?react";
+import CompilanceSecurity from "@/assets/vectors/CompilanceSecurity.svg?react";
+import ConsistencyAcross from "@/assets/vectors/ConsistencyAcross.svg?react";
 import ConsistentSupport from "@/assets/vectors/ConsistentSupport.svg?react";
 import CreationOfTheModel from "@/assets/vectors/CreationOfTheModel.svg?react";
 import CustomerSupport from "@/assets/vectors/CustomerSupport.svg?react";
 import CustomizedUserExperience from "@/assets/vectors/CustomizedUserExperience.svg?react";
 import CuttingEdge from "@/assets/vectors/CuttingEdge.svg?react";
+import DataAccurancy from "@/assets/vectors/DataAccurancy.svg?react";
 import Devops from "@/assets/vectors/Devops.svg?react";
 import DigitalMarketing from "@/assets/vectors/DigitalMarketing.svg?react";
 import ExeptionalPerformance from "@/assets/vectors/ExeptionalPerformance.svg?react";
@@ -32,6 +35,7 @@ import Outstaffing from "@/assets/vectors/Outstaffing.svg?react";
 import PM from "@/assets/vectors/PM.svg?react";
 import Phone from "@/assets/vectors/Phone.svg?react";
 import PlanningPase from "@/assets/vectors/PlanningPase.svg?react";
+import PractiveMonitoring from "@/assets/vectors/PractiveMonitoring.svg?react";
 import QualityConsistency from "@/assets/vectors/QualityConsistency.svg?react";
 import QualityFirst from "@/assets/vectors/QualityFirst.svg?react";
 import Robot from "@/assets/vectors/Robot.svg?react";
@@ -41,6 +45,7 @@ import Support from "@/assets/vectors/Support.svg?react";
 import SupportIcon from "@/assets/vectors/SupportIcon.svg?react";
 import TechnicalAssessment from "@/assets/vectors/TechnicalAssessment.svg?react";
 import TestingPhase from "@/assets/vectors/TestingPhase.svg?react";
+import TimelyData from "@/assets/vectors/TimelyData.svg?react";
 import Trust from "@/assets/vectors/Trust.svg?react";
 import TrustAndPartnerShip from "@/assets/vectors/TrustAndPartnerShip.svg?react";
 import TrustOwnership from "@/assets/vectors/TrustOwnership.svg?react";
@@ -625,31 +630,31 @@ export const servicesConstants = [
     offers: [
       {
         title: "Data Accuracy & Integrity",
-        Icon: PC,
+        Icon: DataAccurancy,
         description:
           "We respect the accuracy of your data and guarantee that all the datasets will not contain errors, or duplicate and/or conflicting records. This ensures that the analysis done and the decisions made are precise and sound to every business in your organization.",
       },
       {
         title: "Consistency Across Systems",
-        Icon: PC,
+        Icon: ConsistencyAcross,
         description:
           "We are able to maintain the proper data integrity across different platforms, systems and databases that facilitate their working and proper exchange of information with other departments",
       },
       {
         title: "Timely Data Validation",
-        Icon: PC,
+        Icon: TimelyData,
         description:
           "Clevit ensures that the data is validated in real time and as such all errors are corrected almost instantly hence less time is spent on data collection hence one can act on the data any time.",
       },
       {
         title: "Compliance & Security",
-        Icon: PC,
+        Icon: CompilanceSecurity,
         description:
           "Your data is protected to conform to current established standards on data privacy and security to avoid compromising strictly private information.",
       },
       {
         title: "Proactive Monitoring & Maintenance",
-        Icon: PC,
+        Icon: PractiveMonitoring,
         description:
           "Our approach of being proactive also assists in the early identification of data process irregularities thus guarantees the future stability of your data processes.",
       },

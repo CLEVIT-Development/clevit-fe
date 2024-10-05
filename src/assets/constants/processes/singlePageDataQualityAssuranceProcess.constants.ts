@@ -1,49 +1,47 @@
 import { lazy } from "react";
 
-const DiscoveryAndPlanningIcon = lazy(
-  () => import("@/assets/vectors/processes/DiscoveryAndPlanning.svg?react")
+const InitialDataIcon = lazy(() => import("@/assets/vectors/processes/InitialData.svg?react"));
+const DataCleansingIcon = lazy(() => import("@/assets/vectors/processes/DataCleansing.svg?react"));
+
+const DataMonitoringIcon = lazy(
+  () => import("@/assets/vectors/processes/DataMonitoring.svg?react")
 );
-const AutomationOrchestrationIcon = lazy(
-  () => import("@/assets/vectors/processes/OutomationOrchestration.svg?react")
+const ValidationVerificationIcon = lazy(
+  () => import("@/assets/vectors/processes/ValidationVerification.svg?react")
 );
-const MonitoringPerformanceIcon = lazy(
-  () => import("@/assets/vectors/processes/MonitoringPerformance.svg?react")
-);
-const ContinousIntegrationIcon = lazy(
-  () => import("@/assets/vectors/processes/ContinousIntegration.svg?react")
-);
-const InfrastructureSetupIcon = lazy(
-  () => import("@/assets/vectors/processes/InfrostructureSetup.svg?react")
+
+const ReportingDocumentationIcon = lazy(
+  () => import("@/assets/vectors/processes/ReportingDocumentation.svg?react")
 );
 
 export const singlePageDataQualityAssuranceProcessesConstants = [
   {
     id: 1,
-    Icon: DiscoveryAndPlanningIcon,
+    Icon: InitialDataIcon,
     title: "Initial Data Assessment",
     description: "",
   },
   {
     id: 2,
-    Icon: InfrastructureSetupIcon,
+    Icon: DataCleansingIcon,
     title: "Data Cleansing & Standardization",
     description: "",
   },
   {
     id: 3,
-    Icon: ContinousIntegrationIcon,
+    Icon: ValidationVerificationIcon,
     title: "Validation & Verification",
     description: "",
   },
   {
     id: 4,
-    Icon: AutomationOrchestrationIcon,
+    Icon: DataMonitoringIcon,
     title: "Data Monitoring & Maintenance",
     description: "",
   },
   {
     id: 5,
-    Icon: MonitoringPerformanceIcon,
+    Icon: ReportingDocumentationIcon,
     title: "Reporting & Documentation",
     description: "",
   },
