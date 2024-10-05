@@ -14,6 +14,7 @@ import UIUXDesigne from "@/assets/images/services/UIUXDesigne.png";
 import WebDevelopmentOverviewImage from "@/assets/images/services/WebDevelopmentOverview.png";
 import AdaptiveAiSolutions from "@/assets/vectors/AdaptiveAiSolutions.svg?react";
 import AdvancedAI from "@/assets/vectors/AdvancedAI.svg?react";
+import AdvancedTools from "@/assets/vectors/AdvancedTools.svg?react";
 import CompilanceSecurity from "@/assets/vectors/CompilanceSecurity.svg?react";
 import ConsistencyAcross from "@/assets/vectors/ConsistencyAcross.svg?react";
 import ConsistentSupport from "@/assets/vectors/ConsistentSupport.svg?react";
@@ -36,6 +37,7 @@ import PM from "@/assets/vectors/PM.svg?react";
 import Phone from "@/assets/vectors/Phone.svg?react";
 import PlanningPase from "@/assets/vectors/PlanningPase.svg?react";
 import PractiveMonitoring from "@/assets/vectors/PractiveMonitoring.svg?react";
+import ProactiveRisk from "@/assets/vectors/ProactiveRisk.svg?react";
 import QualityConsistency from "@/assets/vectors/QualityConsistency.svg?react";
 import QualityFirst from "@/assets/vectors/QualityFirst.svg?react";
 import Robot from "@/assets/vectors/Robot.svg?react";
@@ -43,12 +45,15 @@ import Settings from "@/assets/vectors/Settings.svg?react";
 import SuitableSolutions from "@/assets/vectors/SuitableSolutions.svg?react";
 import Support from "@/assets/vectors/Support.svg?react";
 import SupportIcon from "@/assets/vectors/SupportIcon.svg?react";
+import TailoredSolutions from "@/assets/vectors/TailoredSolutions.svg?react";
 import TechnicalAssessment from "@/assets/vectors/TechnicalAssessment.svg?react";
 import TestingPhase from "@/assets/vectors/TestingPhase.svg?react";
+import ThroughEvolution from "@/assets/vectors/ThroughEvolution.svg?react";
 import TimelyData from "@/assets/vectors/TimelyData.svg?react";
 import Trust from "@/assets/vectors/Trust.svg?react";
 import TrustAndPartnerShip from "@/assets/vectors/TrustAndPartnerShip.svg?react";
 import TrustOwnership from "@/assets/vectors/TrustOwnership.svg?react";
+import TrustTransparency from "@/assets/vectors/TrustTransparency.svg?react";
 import UIUX from "@/assets/vectors/UIUX.svg?react";
 import PC from "@/assets/vectors/processes/PC.svg?react";
 import Security from "@/assets/vectors/processes/Security.svg?react";
@@ -735,31 +740,31 @@ export const servicesConstants = [
     offers: [
       {
         title: "Thorough Evaluation",
-        Icon: PC,
+        Icon: ThroughEvolution,
         description:
           "We guarantee that no detail of your technology stack has been overlooked in a bid to identify performance hitches, threats, or even lack of optimum efficiency.",
       },
       {
         title: "Trust & Transparency",
-        Icon: PC,
+        Icon: TrustTransparency,
         description:
           "Our assessments are entirely objective, and present you with a clear evaluation of what is good and what can be done differently to enable you to make the right choices.",
       },
       {
         title: "Advanced Tools & Techniques",
-        Icon: PC,
+        Icon: AdvancedTools,
         description:
           "By employing sophisticated tools and sound practices, we guarantee that the technical evaluations we conduct are correct and conform to current best practices.",
       },
       {
         title: "Proactive Risk Management",
-        Icon: PC,
+        Icon: ProactiveRisk,
         description:
           "Through anticipation of these risks, you are in a position to shield your systems from the probability of threats and your business continues to run smoothly.",
       },
       {
         title: "Tailored Solutions",
-        Icon: PC,
+        Icon: TailoredSolutions,
         description:
           "Each business is unique and so are the requirements and demands of the enterprise. We tailor our recommendations according to your needs and concerns, being aware of the specifics of your industry.",
       },
