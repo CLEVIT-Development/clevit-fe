@@ -17,18 +17,21 @@ const SingleBlogSection = ({ blogId }: SingleBlogPageProps) => {
     return <h1>Blog not found</h1>;
   }
 
-  const { title, description, imageAlt } = blog;
+  const { title, description, image } = blog;
 
   return (
     <Section className="items-start desktop:max-w-[80%]">
       <img
         loading="lazy"
         className="w-[335px] h-[220px] desktop:w-[1110px] desktop:h-[550px]  lg:flex rounded-[20px] bg-[#D9D9D9]"
-        alt={imageAlt}
-        src={ImagePlaceholder}
+        alt={title}
+        src={image || ImagePlaceholder}
       />
       <h1 className="text-3xl desktop:max-w-[80%]">{title}</h1>
-      <p className="text-base desktop:max-w-[80%]">{description}</p>
+      <p
+        className="text-base desktop:max-w-[80%]"
+        dangerouslySetInnerHTML={{ __html: description }}
+      />
 
       <div className="flex space-x-2 items-center justify-center">
         <span className="text-lg">Share this</span>

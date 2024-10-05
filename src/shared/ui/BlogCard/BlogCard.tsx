@@ -32,7 +32,7 @@ const BlogCard = ({ id, date, imageAlt, title, readingTime, className, image }: 
     >
       <img
         loading="lazy"
-        className="w-[420px] h-[260px]  lg:flex rounded-3xl bg-[#D9D9D9]"
+        className="w-[420px] h-[260px]  lg:flex rounded-3xl bg-[#D9D9D9] object-cover"
         alt={imageAlt}
         src={image || ImagePlaceholder}
       />
