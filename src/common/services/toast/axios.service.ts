@@ -2,7 +2,7 @@ import axios from "axios";
 
 import { getApiErroByMessage } from "@/app/api-error-codes";
 
-import LocalStorageService from "./localstorage.service";
+import LocalStorageService from "../localstorage.service";
 
 const createAxiosInstance = (withAuth = false) => {
   const instance = axios.create({

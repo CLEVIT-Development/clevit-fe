@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-import { axiosInstance } from "@/services/axios.service";
-import LocalStorageService from "@/services/localstorage.service";
+import LocalStorageService from "@/common/services/localstorage.service";
+import { axiosInstance } from "@/common/services/toast/axios.service";
 
 type ResponseType = {
   accessToken: string;

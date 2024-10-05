@@ -14,11 +14,11 @@ interface Props extends ComponentPropsWithoutRef<"div"> {
   title: string;
   image: string;
   imageAlt?: string;
-  readingTime: string;
-  date: Date;
+  readingTime?: string;
+  date: string;
 }
 
-const BlogCard = ({ id, date, imageAlt, title, readingTime, className }: Props) => {
+const BlogCard = ({ id, date, imageAlt, title, readingTime, className, image }: Props) => {
   const navigate = useNavigate();
 
   return (
@@ -34,10 +34,10 @@ const BlogCard = ({ id, date, imageAlt, title, readingTime, className }: Props) 
         loading="lazy"
         className="w-[420px] h-[260px]  lg:flex rounded-3xl bg-[#D9D9D9]"
         alt={imageAlt}
-        src={ImagePlaceholder}
+        src={image || ImagePlaceholder}
       />
       <div className="space-y-4">
-        <span className="text-[#858D9D] text-base">{formatDate(date)}</span>
+        <span className="text-[#858D9D] text-base">{formatDate(new Date(date))}</span>
         <h3 className="w-full text-gray-200 text-sm font-semibold">{title}</h3>
         <div className="flex space-x-2">
           <IconWrapper icon={<ClockIcon />} className="bg-white" />
