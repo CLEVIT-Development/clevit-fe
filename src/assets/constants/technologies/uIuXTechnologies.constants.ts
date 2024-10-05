@@ -38,27 +38,27 @@ const WebSocketIcon = lazy(() => import("@/assets/vectors/technology/WebSocket.s
 export const uIuXTechnologiesTabsConstants: ITabsConstant[] = [
   {
     id: 1,
-    title: "uiux",
+    title: "Prototyping & Wireframing",
     description:
-      "This classification is about the administration and operation of cloud structures. Whatever cloud solution a business organization is using, be it AWS, Google Cloud, Azure, or Digital Ocean, we assist in configuring, monitoring, and optimizing their cloud infrastructure. This makes certain that your systems are robust, efficient, and safe.",
+      "We make wireframes and prototypes using <strong>Figma</strong> and <strong>Adobe XD</strong> that represent the app flow, navigation, and interface in order to get to the final design.",
   },
   {
     id: 2,
-    title: "Containerization & Orchestration",
+    title: "Graphic & Visual Design",
     description:
-      "Application environment management became easier and scalable due to the implementation of Docker and containerization. We use containers for consistency in both development and in production, making your team more efficient and your apps more reliable.",
+      "Our specialists employ all the available techniques in <strong>Adobe Illustrator</strong> and <strong>Adobe Photoshop</strong> to develop unique visuals, icons, and graphics to enhance your product.",
   },
   {
     id: 3,
-    title: "CI/CD Pipeline Automation",
+    title: "User Research & Testing",
     description:
-      "Our CI/CD services help optimize your software development process saving your time and efforts for the same. Through the use of Jenkins, AWS CodePipeline, Azure DevOps we are able to ensure that the code you write gets tested, deployed and released to the cloud platforms as soon as possible. This helps minimize the chances of human mistakes, enhance the software release cycle, and ensure that you are always deploying and delivering the latest software.",
+      "Through <strong>Figma</strong> and <strong>Adobe XD</strong>, we employ research and testing to enhance the design to be shaping with users’ expectations and business needs.",
   },
   {
     id: 4,
-    title: "Cloud Security & Compliance",
+    title: "Responsive Design & Consistency",
     description:
-      "Security and compliance are of paramount importance within the context of DevOps. We offer security services across the cloud stack, guaranteeing that your <strong>AWS</strong>, <strong>Azure</strong>, or <strong>Google Cloud</strong> environment is optimized with proper configurations and complies with regulations such as <strong>GDPR</strong>, <strong>HIPAA</strong>, and <strong>SOC 2.</strong>",
+      "Utilizing <strong>Figma</strong> and <strong>Adobe XD</strong>, we make it our effort to maintain the responsive design on any devices and platforms for consistent and delightful interactions.",
   },
 ];
 

@@ -1151,9 +1151,9 @@ export const servicesConstants = [
     descriptionOffer:
       "We craft visually appealing and easy-to-use interfaces, making your digital products enjoyable and intuitive for users.",
     singlePageDescription:
-      "If you have some features in mind for your mobile application, then turn them into reality at Clevit – your application solutions with next level performance. No matter if you want to build a native, cross-platform, or hybrid application, our professionals will help you in each step of the workflow, making the final product easy-to-navigate, easily-scaled, and aligned with the vision of your business.",
+      "UI/UX design services offered by Clevit are also geared towards developing aesthetically pleasing designs that are easy to use and purpose-driven. Every design aspect is thoughtfully incorporated to enhance usability, look and feel, and accessibility which leads to high-quality user experience and increased revenues.",
     serviceDetails:
-      "What Is Important for Us: In particular, we will describe our UI/UX design process that responds to the principles of cooperation, imagination, and comprehending the need of the ultimate user. Paragraphs, fonts, color schemes, and usability are balanced and meet your brand’s objectives in the design.",
+      "In particular, we will describe our UI/UX design process that responds to the principles of cooperation, imagination, and comprehending the need of the ultimate user. Paragraphs, fonts, color schemes, and usability are balanced and meet your brand’s objectives in the design.",
     offers: [
       {
         title: "User-Centered Approach",
@@ -1193,15 +1193,16 @@ export const servicesConstants = [
       },
     ],
     serviceIndustriesDescription:
-      "At Clevit we help UI/UX design to respond to the needs of different industries. Be it retail & e-commerce, healthcare, or SaaS platforms, our designs focus on a broad range of industries to offer intuitive and engaging solutions.",
+      "At Clevit we help UI/UX design to respond to the needs of different industries as shown in the following examples. Be it retail & e-commerce, healthcare, or SaaS platforms, our designs focus on a broad range of industries to offer intuitive and engaging solutions",
     serviceTechnologiesTitle: "Key Aspects of Our UI/UX Design Process",
-    serviceTechnologiesSubtitle: "ServicesIdConstants.Design Subtitle",
+    serviceTechnologiesSubtitle:
+      "Clevit provides comprehensive solutions for each phase of the UI/UX design process that create aesthetic and functional interfaces. We ensure that the methodologies applied during the process are modern to ensure that the developed digital product will have superior design quality.",
     serviceTabTechnologies: uIuXTechnologiesTabsConstants,
     serviceTechnologies: uIuXTechnologiesConstants,
     serviceBookConsultation: {
-      title: "Looking for Professional UI/UX Design Services?",
+      title: "Ensure Your Design Excellence with Clevit",
       description:
-        "Let Clevit enhance your digital product’s user experience with our tailored design solutions. Schedule a consultation today!",
+        "Maximize the potential of your digital product with our professional UI/UX design services.",
     },
     servicesProcesses: singlePageUIUXProcessesConstants,
     ChooseClevitTitle: "Why Choose Clevit for UI/UX Design Services?",
@@ -1238,9 +1239,9 @@ export const servicesConstants = [
       },
     ],
     GetConsultation: {
-      title:
-        "Maximize the potential of your digital product with our professional UI/UX design services.",
-      description: "Contact us today.",
+      title: "Looking for Professional UI/UX Design Services?",
+      description:
+        "Let Clevit enhance your digital product’s user experience with our tailored design solutions.",
     },
   },
   {
