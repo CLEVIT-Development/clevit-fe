@@ -12,7 +12,10 @@ import SupportMaintenance from "@/assets/images/services/Support&Maintenance.png
 import TechnicalAssessmentImage from "@/assets/images/services/TechnicalAssessmentImage.png";
 import UIUXDesigne from "@/assets/images/services/UIUXDesigne.png";
 import WebDevelopmentOverviewImage from "@/assets/images/services/WebDevelopmentOverview.png";
+import AdaptiveAiSolutions from "@/assets/vectors/AdaptiveAiSolutions.svg?react";
+import AdvancedAI from "@/assets/vectors/AdvancedAI.svg?react";
 import ConsistentSupport from "@/assets/vectors/ConsistentSupport.svg?react";
+import CreationOfTheModel from "@/assets/vectors/CreationOfTheModel.svg?react";
 import CustomerSupport from "@/assets/vectors/CustomerSupport.svg?react";
 import CustomizedUserExperience from "@/assets/vectors/CustomizedUserExperience.svg?react";
 import CuttingEdge from "@/assets/vectors/CuttingEdge.svg?react";
@@ -21,16 +24,24 @@ import DigitalMarketing from "@/assets/vectors/DigitalMarketing.svg?react";
 import ExeptionalPerformance from "@/assets/vectors/ExeptionalPerformance.svg?react";
 import Exquisite from "@/assets/vectors/Exquisite.svg?react";
 import Flexibility from "@/assets/vectors/Flexibility.svg?react";
+import IndividualizedUzers from "@/assets/vectors/IndividualizedUser.svg?react";
+import InformationPreparation from "@/assets/vectors/InformationPreparation.svg?react";
+import OptimizationPhase from "@/assets/vectors/OptimizationPhase.svg?react";
 import Originality from "@/assets/vectors/Originality.svg?react";
 import Outstaffing from "@/assets/vectors/Outstaffing.svg?react";
 import PM from "@/assets/vectors/PM.svg?react";
 import Phone from "@/assets/vectors/Phone.svg?react";
+import PlanningPase from "@/assets/vectors/PlanningPase.svg?react";
 import QualityConsistency from "@/assets/vectors/QualityConsistency.svg?react";
+import QualityFirst from "@/assets/vectors/QualityFirst.svg?react";
 import Robot from "@/assets/vectors/Robot.svg?react";
 import Settings from "@/assets/vectors/Settings.svg?react";
 import SuitableSolutions from "@/assets/vectors/SuitableSolutions.svg?react";
 import Support from "@/assets/vectors/Support.svg?react";
+import SupportIcon from "@/assets/vectors/SupportIcon.svg?react";
 import TechnicalAssessment from "@/assets/vectors/TechnicalAssessment.svg?react";
+import TestingPhase from "@/assets/vectors/TestingPhase.svg?react";
+import Trust from "@/assets/vectors/Trust.svg?react";
 import TrustAndPartnerShip from "@/assets/vectors/TrustAndPartnerShip.svg?react";
 import TrustOwnership from "@/assets/vectors/TrustOwnership.svg?react";
 import UIUX from "@/assets/vectors/UIUX.svg?react";
@@ -398,37 +409,37 @@ export const servicesConstants = [
     offers: [
       {
         title: "Adaptive AI Solutions",
-        Icon: PC,
+        Icon: AdaptiveAiSolutions,
         description:
           "Our AI solutions are customized to fit your organization’s needs and dynamics so that they may be adjusted for its benefit. Using a modern form of algorithms, and technologies, we offer artificial intelligence systems that learn over time, thus solutions that will continue to grow with your business.",
       },
       {
         title: "Trust",
-        Icon: PC,
+        Icon: Trust,
         description:
           "Trust is at the core of our model. A key aspect is to design AI applications which are as clear as possible and that you can trust. Ethical AI principles are incorporated to guarantee the security and appropriate use of your data, which helps build credibility between your business and our AI services.",
       },
       {
         title: "Advanced AI",
-        Icon: PC,
+        Icon: AdvancedAI,
         description:
           "AI technologies have been employed to provide unique solutions that propel your business ahead. Machine learning models and deep learning frameworks state that we incorporate the state-of-the-art techniques in AI to make you stay ahead of the competition.",
       },
       {
         title: "Quality First",
-        Icon: PC,
+        Icon: QualityFirst,
         description:
           "Integration of AI is a fine process for us thus the stress on quality. At every developmental stage of our AI solutions, we follow stringent testing and validation processes to achieve high levels of precision and efficiency. This commitment to quality ensures that our AI applications provide you with the best results.",
       },
       {
         title: "Support",
-        Icon: PC,
+        Icon: SupportIcon,
         description:
           "According to the social model, continuous support is necessary for the sustained use of AI systems in an organization. Extra support is offered constantly for solving any problems, enhancing efficiency, and for the condition changes. Our support services are developed to guarantee that your implementations of AI solutions are smooth.",
       },
       {
         title: "Individualized User Experience",
-        Icon: PC,
+        Icon: IndividualizedUzers,
         description:
           "We specialize in developing AI strategies that are unique to your users’ needs and requirements. Using insights of the audience, we incorporate an AI-driven approach that establishes the perfect and superior interaction of the users with the solutions offered to them.",
       },
@@ -506,39 +517,33 @@ export const servicesConstants = [
     offers: [
       {
         title: "Planning Phase",
-        Icon: PC,
+        Icon: PlanningPase,
         description:
           "In each project, we initiate the strategic planning activity. In this stage, we consult directly with you to determine your business needs, objectives and problems. This way, we can develop a unique machine learning solution that will meet your project’s primary goals. Here, our goal is to shift our approach to building ML solutions, and ensure it is beneficial for your company in the long run.",
       },
       {
         title: "Information Preparation Phase",
-        Icon: PC,
+        Icon: InformationPreparation,
         description:
           "A machine learning model is only as good as the data that you feed into it. Here, the data is collected, transformed, and structured to aid the analytical process that follows this phase. The team then reviews that the data collected is adequately complete and in the right format to remove any invalid data. The preparation process as outlined above provides a good grounding for the development of a good machine learning model.",
       },
       {
         title: "Creation of the Model Phase",
-        Icon: PC,
+        Icon: CreationOfTheModel,
         description:
           "After data preparation, our team of machine learning engineers creates the model. This is the reason we evaluate the ideal algorithms and frameworks depending on the need by our client. This phase is where the machine learning system is trained to learn from your data to derive insights, forecast, and automate to achieve your business goals.",
       },
       {
         title: "Testing Phase",
-        Icon: PC,
+        Icon: TestingPhase,
         description:
           "However, for your machine learning model to be effective in actual conditions, we verify it using different data sets. The goal here is to achieve high accuracy of results while minimizing over-fitting or under-fitting of the model. It assists us in improving the model to the best state for high reliability and efficiency in this phase.",
       },
       {
         title: "Optimization Phase",
-        Icon: PC,
+        Icon: OptimizationPhase,
         description:
           "As soon as a model is deployed, we proceed to the optimization stage of the model. In production, we always assess the model and modify it over and over as a result of new production findings. Through the process of improving algorithms and recalibrating the model, we make sure that your machine learning system is effective and adaptable for your business",
-      },
-      {
-        title: "Individualized User Experience",
-        Icon: PC,
-        description:
-          "We specialize in developing AI strategies that are unique to your users’ needs and requirements. Using insights of the audience, we incorporate an AI-driven approach that establishes the perfect and superior interaction of the users with the solutions offered to them.",
       },
     ],
     serviceIndustriesDescription:

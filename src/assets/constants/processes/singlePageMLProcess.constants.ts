@@ -1,58 +1,57 @@
 import { lazy } from "react";
 
-const DiscoveryAndPlanningIcon = lazy(
-  () => import("@/assets/vectors/processes/DiscoveryAndPlanning.svg?react")
+const RequirementAnalysisIcon = lazy(
+  () => import("@/assets/vectors/processes/RequiremAnalysis.svg?react")
 );
-const OutomationOrchestrationIcon = lazy(
-  () => import("@/assets/vectors/processes/OutomationOrchestration.svg?react")
+const DataCollectionIcon = lazy(
+  () => import("@/assets/vectors/processes/DataCollection.svg?react")
 );
-const MonitoringPerformanceIcon = lazy(
-  () => import("@/assets/vectors/processes/MonitoringPerformance.svg?react")
+const ContiniousMonitoringIcon = lazy(
+  () => import("@/assets/vectors/processes/ContiniousMonitoring.svg?react")
 );
-const ContinousIntegrationIcon = lazy(
-  () => import("@/assets/vectors/processes/ContinousIntegration.svg?react")
+const ModelDevelopmentIcon = lazy(
+  () => import("@/assets/vectors/processes/ModelDevelopment.svg?react")
 );
-const InfrostructureSetupIcon = lazy(
-  () => import("@/assets/vectors/processes/InfrostructureSetup.svg?react")
-);
-const SecurityCompilanceIcon = lazy(
-  () => import("@/assets/vectors/processes/SecurityCompilance.svg?react")
+
+const ModelTestingIcon = lazy(() => import("@/assets/vectors/processes/ModelTesting.svg?react"));
+const ModelDeploymentIcon = lazy(
+  () => import("@/assets/vectors/processes/ModelDeployment.svg?react")
 );
 
 export const singlePageMLProcessesConstants = [
   {
     id: 1,
-    Icon: DiscoveryAndPlanningIcon,
+    Icon: RequirementAnalysisIcon,
     title: "Requirement Analysis & Planning",
     description: "",
   },
   {
     id: 2,
-    Icon: InfrostructureSetupIcon,
+    Icon: DataCollectionIcon,
     title: "Data Collection & Preparation",
     description: "",
   },
   {
     id: 3,
-    Icon: ContinousIntegrationIcon,
+    Icon: ModelDevelopmentIcon,
     title: "Model Development & Training",
     description: "",
   },
   {
     id: 4,
-    Icon: OutomationOrchestrationIcon,
+    Icon: ModelTestingIcon,
     title: "Model Testing & Validation",
     description: "",
   },
   {
     id: 5,
-    Icon: MonitoringPerformanceIcon,
+    Icon: ModelDeploymentIcon,
     title: "Model Deployment",
     description: "",
   },
   {
     id: 6,
-    Icon: SecurityCompilanceIcon,
+    Icon: ContiniousMonitoringIcon,
     title: "Continuous Monitoring & Optimization",
     description: "",
   },

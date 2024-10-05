@@ -1,6 +1,8 @@
 import AppoimentShedule from "@/assets/vectors/AppoimentShedule.svg?react";
+import AppointmentSheduling from "@/assets/vectors/AppointmentSheduling.svg?react";
 import Automation from "@/assets/vectors/Automation.svg?react";
 import ClinicAndLab from "@/assets/vectors/ClinicAndLab.svg?react";
+import DashboardDevelopment from "@/assets/vectors/DashboardDevelopment.svg?react";
 import DataAnalistics from "@/assets/vectors/DataAnalistics.svg?react";
 import DigitalHealt from "@/assets/vectors/DigitalHealt.svg?react";
 import EventPlanningManagment from "@/assets/vectors/EventPlanningManagment.svg?react";
@@ -11,6 +13,7 @@ import MedicalSoftwareDevelopment from "@/assets/vectors/MedicalSoftwareDevelopm
 import MusickProduction from "@/assets/vectors/MusickProduction.svg?react";
 import OnlineBookingPlatforms from "@/assets/vectors/OnlineBookingPlatforms.svg?react";
 import VirtualMeeting from "@/assets/vectors/VirtualMeeting.svg?react";
+import ManagedService from "@/assets/vectors/VirtualMeeting.svg?react";
 
 import { ServicesIdConstants } from "./services-id.constants";
 
@@ -121,27 +124,27 @@ export const servicesIndustriesConstants = {
   ],
   [ServicesIdConstants.ML]: [
     {
-      Icon: EventPlanningManagment,
-      title: "Virtual Meetings & Conferencing",
+      Icon: VirtualMeeting,
+      title: "Virtual Meetings  & Conferencing",
     },
     {
-      Icon: MedicalSoftwareDevelopment,
+      Icon: ManagedService,
       title: "Managed Service Providers (MSPs)",
     },
     {
-      Icon: MusickProduction,
+      Icon: OnlineBookingPlatforms,
       title: "Online Booking Platforms",
     },
     {
-      Icon: VirtualMeeting,
+      Icon: DashboardDevelopment,
       title: "Dashboard Development",
     },
     {
-      Icon: FreightCargoServices,
+      Icon: DigitalHealt,
       title: "Digital Health Solutions",
     },
     {
-      Icon: OnlineBookingPlatforms,
+      Icon: AppointmentSheduling,
       title: "Appointment Scheduling",
     },
   ],
