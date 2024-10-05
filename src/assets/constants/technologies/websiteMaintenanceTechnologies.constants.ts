@@ -38,27 +38,33 @@ const WebSocketIcon = lazy(() => import("@/assets/vectors/technology/WebSocket.s
 export const websiteMaintenanceTechnologiesTabsConstants: ITabsConstant[] = [
   {
     id: 1,
-    title: "website maintenance",
+    title: "Performance Monitoring",
     description:
-      "This classification is about the administration and operation of cloud structures. Whatever cloud solution a business organization is using, be it AWS, Google Cloud, Azure, or Digital Ocean, we assist in configuring, monitoring, and optimizing their cloud infrastructure. This makes certain that your systems are robust, efficient, and safe.",
+      "We employ sophisticated technologies in order to track and analyze the speed and performance of the website in real-time.",
   },
   {
     id: 2,
-    title: "Containerization & Orchestration",
+    title: "Security Updates & Patching",
     description:
-      "Application environment management became easier and scalable due to the implementation of Docker and containerization. We use containers for consistency in both development and in production, making your team more efficient and your apps more reliable.",
+      "Security patches and updates are provided by our team to safeguard your website against cyber threats and data breaches.",
   },
   {
     id: 3,
-    title: "CI/CD Pipeline Automation",
+    title: "Content & Plugin Updates",
     description:
-      "Our CI/CD services help optimize your software development process saving your time and efforts for the same. Through the use of Jenkins, AWS CodePipeline, Azure DevOps we are able to ensure that the code you write gets tested, deployed and released to the cloud platforms as soon as possible. This helps minimize the chances of human mistakes, enhance the software release cycle, and ensure that you are always deploying and delivering the latest software.",
+      "All your plugins, software, and content management systems (CMS) will be updated to the latest version to avoid compatibility problems and other related problems.",
   },
   {
     id: 4,
-    title: "Cloud Security & Compliance",
+    title: "Backup & Restore",
     description:
-      "Security and compliance are of paramount importance within the context of DevOps. We offer security services across the cloud stack, guaranteeing that your <strong>AWS</strong>, <strong>Azure</strong>, or <strong>Google Cloud</strong> environment is optimized with proper configurations and complies with regulations such as <strong>GDPR</strong>, <strong>HIPAA</strong>, and <strong>SOC 2.</strong>",
+      "Data backups are usually planned to make sure that the website data is always safe and in any case, it can be easily restored to reduce the time that the website is offline.",
+  },
+  {
+    id: 5,
+    title: "24/7 Support",
+    description:
+      "We also have a professional support team who will always be on hand to provide help at all times so that your website is always fully operational.",
   },
 ];
 

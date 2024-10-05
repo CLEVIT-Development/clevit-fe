@@ -179,8 +179,9 @@ export const servicesConstants = [
     serviceTabTechnologies: webDevelopmentTechnologiesTabsConstants,
     serviceTechnologies: webDevelopmentTechnologiesConstants,
     serviceBookConsultation: {
-      title: "Ready to Elevate Your Digital Presence? ",
-      description: "Contact Us Today to Start Building Your Custom Website.",
+      title: "Maximize Your Website’s Potential with Clevit",
+      description:
+        "Ensure your website runs smoothly and securely with our comprehensive maintenance services.",
     },
     servicesProcesses: singlePageWebDevelopmentProcessesConstants,
     ChooseClevitTitle: "Why Choose Clevit for Web Development?",
@@ -828,9 +829,9 @@ export const servicesConstants = [
     descriptionOffer:
       "We provide reliable support and ongoing maintenance to keep your digital assets running smoothly, ensuring uninterrupted business operations.",
     singlePageDescription:
-      "If you have some features in mind for your mobile application, then turn them into reality at Clevit – your application solutions with next-level performance. No matter if you want to build a native, cross-platform, or hybrid application, our professionals will help you in each step of the workflow, making the final product easy-to-navigate, easily-scaled, and aligned with the vision of your business.",
+      "At Clevit, we are aware of the fact that your website is a crucial aspect of your business. Our Website Maintenance Services are aimed at making sure your website is secure, fast and in proper working order. From performance and general health checks to security checks and content updates, we maintain your website’s health and relevance with the modern online world.",
     serviceDetails:
-      "When creating mobile applications, at Clevit we follow several rules that are universal for all projects. Here’s what drives us:",
+      "We are interested in providing our clients with dependable website maintenance services, which will ensure its protection, effectiveness, and relevance. The complexities are solved by us leaving you to concentrate on the expansion of your business.",
     offers: [
       {
         title: "Exquisite & Sophisticated Solutions",
@@ -871,42 +872,48 @@ export const servicesConstants = [
     ],
     serviceIndustriesDescription:
       "Clevit’s Website Maintenance Services conveniently apply to a broad spectrum of clients belonging to different industries. Before providing the services to the different sectors, we assess their needs so that our services can deliver quality performance and security.",
-    serviceTechnologiesTitle: "Key Aspects of Our Web Development Process",
-    serviceTechnologiesSubtitle: "ServicesIdConstants.Maintenance subtitle",
+    serviceTechnologiesTitle: "Key Aspects of Our Website Maintenance Process",
+    serviceTechnologiesSubtitle:
+      "To support all your web maintenance needs, Clevit provides an array of services that cater to various aspects of website upkeep. Here are the key areas we focus on",
     serviceTabTechnologies: websiteMaintenanceTechnologiesTabsConstants,
     serviceTechnologies: websiteMaintenanceTechnologiesConstants,
     serviceBookConsultation: {
-      title: "Ready to Elevate Your Digital Presence? ",
-      description: "Contact Us Today to Start Building Your Custom Website.",
+      title: "Maximize Your Website’s Potential with Clevit",
+      description:
+        "Ensure your website runs smoothly and securely with our comprehensive maintenance services.",
     },
     servicesProcesses: singlePageMaintenceProcessesConstants,
     ChooseClevitTitle: "Why Choose Clevit for Technical Assessment Services?",
     ChooseClevitRecomendation: [
       {
-        title: "Tailored Solutions",
+        title: "Comprehensive Services",
         description:
-          "Here we design small and large-scale websites that correspond to your company’s and brand’s goals.",
+          "Website maintenance means that we are in charge of all the activities related to websites, including performance, security and other improvements or corrections.",
       },
       {
-        title: "Advanced Technologies",
+        title: "Expert Team",
         description:
-          "We utilize up-to-date technology that will enable us to provide the most efficient, effective, and secure website.",
+          "Our experienced professionals will ensure that your website is safe, updated, and running at full efficiency.",
       },
       {
-        title: "Scalability",
+        title: "Customized Maintenance Plans",
         description:
-          "Whether you are a start-up company or an established enterprise, we create sites that expand your company.",
+          "Our maintenance services are flexible to meet the needs of your website while catering your business type.",
       },
       {
-        title: "Ongoing Support:",
+        title: "Proactive Monitoring",
         description:
-          "Our work is not done as soon as a product is out on the market. We provide support to make certain your site stays current and modified as per the current trend.",
+          "We are always on the lookout for issues that may arise in order to solve them before they bring negative impacts on your site.",
+      },
+      {
+        title: "24/7 Support",
+        description:
+          "We have always had a highly responsive team on standby to fix any problem that may arise and thus the least expected downtime.",
       },
     ],
     GetConsultation: {
       title: "Need Reliable Website Maintenance Services?",
-      description:
-        "Let Clevit ensure your website remains secure, fast, and functional. Schedule a consultation.",
+      description: "Let Clevit ensure your website remains secure, fast, and functional.",
     },
   },
   {
