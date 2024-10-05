@@ -18,51 +18,42 @@ const InfrostructureSetupIcon = lazy(
 const SecurityCompilanceIcon = lazy(
   () => import("@/assets/vectors/processes/SecurityCompilance.svg?react")
 );
-const OngoingSupportIcon = lazy(
-  () => import("@/assets/vectors/processes/OngoingSupport.svg?react")
-);
 
 export const singlePageDigitalMarketingProcessesConstants = [
   {
     id: 1,
     Icon: DiscoveryAndPlanningIcon,
-    title: "Discovery & Planning",
+    title: "Initial Market Research & Strategy Development",
     description: "",
   },
   {
     id: 2,
     Icon: InfrostructureSetupIcon,
-    title: "Infrastructure Setup & Configuration",
+    title: "On-Page and Off-Page SEO Optimization",
     description: "",
   },
   {
     id: 3,
     Icon: ContinousIntegrationIcon,
-    title: "Continuous Integration & Continuous Deployment (CI/CD)",
+    title: "PPC Campaign Setup and Monitoring",
     description: "",
   },
   {
     id: 4,
     Icon: OutomationOrchestrationIcon,
-    title: "Automation & Orchestration",
+    title: "Content Creation and Marketing",
     description: "",
   },
   {
     id: 5,
     Icon: MonitoringPerformanceIcon,
-    title: "Monitoring & Performance Optimization",
+    title: "Website Audits and Technical SEO",
     description: "",
   },
   {
     id: 6,
     Icon: SecurityCompilanceIcon,
-    title: "Security & Compliance",
-    description: "",
-  },
-  {
-    id: 7,
-    Icon: OngoingSupportIcon,
-    title: "Ongoing Support & Maintenance",
+    title: "Analytics, Reporting & Continuous Optimization",
     description: "",
   },
 ];

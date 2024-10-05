@@ -38,27 +38,33 @@ const WebSocketIcon = lazy(() => import("@/assets/vectors/technology/WebSocket.s
 export const digitalMarketingTechnologiesTabsConstants: ITabsConstant[] = [
   {
     id: 1,
-    title: " marketing",
+    title: "Search Engine Optimization",
     description:
-      "This classification is about the administration and operation of cloud structures. Whatever cloud solution a business organization is using, be it AWS, Google Cloud, Azure, or Digital Ocean, we assist in configuring, monitoring, and optimizing their cloud infrastructure. This makes certain that your systems are robust, efficient, and safe.",
+      "Our SEO services include keyword selection, onsite and offsite optimization, link building techniques using such software as <strong>AHrefs</strong>, <strong>SEMrush</strong> and <strong>SEO Moz</strong> to enhance your website ranking and visibility.",
   },
   {
     id: 2,
-    title: "Containerization & Orchestration",
+    title: "Pay-Per-Click (PPC)",
     description:
-      "Application environment management became easier and scalable due to the implementation of Docker and containerization. We use containers for consistency in both development and in production, making your team more efficient and your apps more reliable.",
+      "Targeted professional PPC campaigns are our forte handled under <strong>Google Ads</strong> to ensure that your brand is seen by the right market, always aiming for successful coverage.",
   },
   {
     id: 3,
-    title: "CI/CD Pipeline Automation",
+    title: "Content Marketing",
     description:
-      "Our CI/CD services help optimize your software development process saving your time and efforts for the same. Through the use of Jenkins, AWS CodePipeline, Azure DevOps we are able to ensure that the code you write gets tested, deployed and released to the cloud platforms as soon as possible. This helps minimize the chances of human mistakes, enhance the software release cycle, and ensure that you are always deploying and delivering the latest software.",
+      "We create and define content that connects with your audience. Through mainly the use of <strong>Google Analytics</strong> and <strong>Ahrefs</strong>, we guarantee that your content is properly optimized for optimal performance and customer interaction.",
   },
   {
     id: 4,
-    title: "Cloud Security & Compliance",
+    title: "Website Audits & Technical SEO",
     description:
-      "Security and compliance are of paramount importance within the context of DevOps. We offer security services across the cloud stack, guaranteeing that your <strong>AWS</strong>, <strong>Azure</strong>, or <strong>Google Cloud</strong> environment is optimized with proper configurations and complies with regulations such as <strong>GDPR</strong>, <strong>HIPAA</strong>, and <strong>SOC 2.</strong>",
+      "Through <strong>Screaming Frog</strong>, we perform a detailed analysis on the technical SEO of your website so as to correct any errors like crawl errors, broken links among others.",
+  },
+  {
+    id: 5,
+    title: "Analytics & Reporting",
+    description:
+      "We offer further explanations, and analysis with data from Google Analytics for evaluating the results of your ad campaigns with statistical indicators and constant optimization of processes",
   },
 ];
 

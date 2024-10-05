@@ -317,27 +317,31 @@ export const servicesIndustriesConstants = {
   [ServicesIdConstants.Marketing]: [
     {
       Icon: EventPlanningManagment,
-      title: "Dashboard Development",
+      title: "Digital Health Solutions",
     },
     {
       Icon: MedicalSoftwareDevelopment,
-      title: "Medical Software Development",
+      title: "Online Content Creation",
     },
     {
       Icon: MusickProduction,
-      title: "Music Production & Sound Design",
+      title: "Online Booking Platforms",
     },
     {
       Icon: VirtualMeeting,
-      title: "Virtual Meetings & Conferencing",
+      title: "Online Booking Platforms",
     },
     {
       Icon: FreightCargoServices,
-      title: "Freight & Cargo Services",
+      title: "Commercial Advertising",
     },
     {
       Icon: OnlineBookingPlatforms,
-      title: "Online Booking Platforms",
+      title: "Recruitment & Staffing",
+    },
+    {
+      Icon: OnlineBookingPlatforms,
+      title: "Healthcare Technology",
     },
   ],
 };
