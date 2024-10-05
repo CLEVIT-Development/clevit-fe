@@ -38,21 +38,21 @@ const WebSocketIcon = lazy(() => import("@/assets/vectors/technology/WebSocket.s
 export const itProjectManagmentTechnologiesTabsConstants: ITabsConstant[] = [
   {
     id: 1,
-    title: "project management",
+    title: "Agile Project Management",
     description:
-      "This classification is about the administration and operation of cloud structures. Whatever cloud solution a business organization is using, be it AWS, Google Cloud, Azure, or Digital Ocean, we assist in configuring, monitoring, and optimizing their cloud infrastructure. This makes certain that your systems are robust, efficient, and safe.",
+      "With tools like <strong>Jira</strong>, <strong>Trello</strong>, <strong>Asana</strong>, we incorporate Agile strategies where large tasks are divided into sprints. This allows for flexibility and responsiveness, making it easier for us to respond to shifts in needs and expectations and provide iterative enhancements upon the various phases of the venture.",
   },
   {
     id: 2,
-    title: "Containerization & Orchestration",
+    title: "Waterfall Project Management",
     description:
-      "Application environment management became easier and scalable due to the implementation of Docker and containerization. We use containers for consistency in both development and in production, making your team more efficient and your apps more reliable.",
+      "Instead, we have more of a phase-oriented project management system using tools like <strong>Microsoft Project</strong> and <strong>Redmine</strong>. Waterfall is suitable for projects with clear requirements and time estimates, where all stages have to be accomplished before proceeding to the next.",
   },
   {
     id: 3,
-    title: "CI/CD Pipeline Automation",
+    title: "Hybrid Project Management",
     description:
-      "Our CI/CD services help optimize your software development process saving your time and efforts for the same. Through the use of Jenkins, AWS CodePipeline, Azure DevOps we are able to ensure that the code you write gets tested, deployed and released to the cloud platforms as soon as possible. This helps minimize the chances of human mistakes, enhance the software release cycle, and ensure that you are always deploying and delivering the latest software.",
+      "Interacting with the advantages of Agile and Waterfall and discarding their vices, we employ Notion and Airtable to achieve efficiency in project management. This enables the use of thorough cyclical scheduling and strategic long-term planning since there is often a need for both in complex projects.\n",
   },
   {
     id: 4,

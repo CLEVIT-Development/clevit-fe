@@ -1033,15 +1033,16 @@ export const servicesConstants = [
     buttonTitle: "Request a Quote",
     imageAlt: "IT Project Management image",
     singleServiceHeaderTitle: "Expert Guidance for Your IT Projects",
-    singleServiceHeaderDescription:
-      "At Clevit, our IT Project Management services encompass a detailed process-oriented framework to provide a step-by-step direction for delivering your IT projects.",
+    singleServiceHeaderDescription: "Expert Guidance for Your IT Projects",
     description:
       "Our project management staff, which has extensive experience, guarantees that each phase of your project is thoroughly organized, controlled, and implemented, minimizing risks and improving efficiency. We focus on the task on time, cost, and business strategy goals to serve our clients.",
     descriptionOffer:
       "The fact is that Clevit’s IT Project Management approach is based on openness, fast implementation, and cooperation. Our emphasis is the effective performance of a given project in order to meet certain objectives within certain time and within overall cost constraints.",
 
-    serviceDetails: "Here are the key principles that define our project management philosophy:",
-
+    serviceDetails:
+      "The fact is that Clevit’s IT Project Management approach is based on openness, fast implementation, and cooperation. Our emphasis is the effective performance of a given project in order to meet certain objectives within certain time and within overall cost constraints. Here are the key principles that define our project management philosophy:",
+    singlePageDescription:
+      "At Clevit, our IT Project Management services encompass a detailed process-oriented framework to provide a step-by-step direction for delivering your IT projects. Our project management staff, which has extensive experience, guarantees that each phase of your project is thoroughly organized, controlled, and implemented, minimizing risks and improving efficiency. We focus on the task on time, cost and business strategy goals to serve our clients.",
     offers: [
       {
         title: "Clear Communication",
@@ -1085,14 +1086,14 @@ export const servicesConstants = [
       "IT Project Management services include Clevit from multiple sectors of industries. We appreciate the fact that each industry comes with its problems and we provide the best solution to enhance the progress of any project. Some of the industries we serve include:",
 
     serviceTechnologiesTitle: "Key Aspects of Our IT Project Management Process",
-    serviceTechnologiesSubtitle: "ServicesIdConstants.ProjectManagement Subtitle",
+    serviceTechnologiesSubtitle:
+      "We offer IT Project Management services on a project life cycle basis with a keen focus on each phase. Below are the key aspects of our project management process:",
     serviceTabTechnologies: itProjectManagmentTechnologiesTabsConstants,
     serviceTechnologies: itProjectManagmentTechnologiesConstants,
 
     serviceBookConsultation: {
       title: "Looking for Expert IT Project Management Solutions?",
-      description:
-        "Let Clevit streamline your project with our tailored approach. Contact us today.",
+      description: "Let Clevit streamline your project with our tailored approach.",
     },
     servicesProcesses: singlePageItProjectManagmentProcessesConstants,
     ChooseClevitTitle: "Why Choose Clevit for IT Project Management Services?",
@@ -1126,7 +1127,7 @@ export const servicesConstants = [
 
     GetConsultation: {
       title: "Looking for Reliable IT Project Management Services?",
-      description: "Let Clevit guide your IT projects to success. Schedule a consultation.",
+      description: "Let Clevit guide your IT projects to success.",
     },
   },
   {
