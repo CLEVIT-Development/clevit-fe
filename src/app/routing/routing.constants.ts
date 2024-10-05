@@ -34,14 +34,15 @@ export enum RoutePaths {
 }
 
 export const headerMenuLinks = [
-  { id: 1, label: "Services", link: RoutePaths.Services },
-  { id: 2, label: "Portfolio", link: RoutePaths.Portfolio },
-  { id: 3, label: "About Us", link: RoutePaths.About },
-  { id: 4, label: "Technologies", link: RoutePaths.Technologies },
-  { id: 5, label: "Industries", link: RoutePaths.Industries },
-  { id: 6, label: "FAQ", link: RoutePaths.FAQ },
-  { id: 7, label: "Blog", link: RoutePaths.Blogs },
-  { id: 8, label: "Contact Us", link: RoutePaths.ContactUs },
+  { id: 1, label: "Services", link: RoutePaths.Services, needAuthentication: false },
+  { id: 2, label: "Portfolio", link: RoutePaths.Portfolio, needAuthentication: false },
+  { id: 3, label: "About Us", link: RoutePaths.About, needAuthentication: false },
+  { id: 4, label: "Technologies", link: RoutePaths.Technologies, needAuthentication: false },
+  { id: 5, label: "Industries", link: RoutePaths.Industries, needAuthentication: false },
+  { id: 6, label: "FAQ", link: RoutePaths.FAQ, needAuthentication: false },
+  { id: 7, label: "Blog", link: RoutePaths.Blogs, needAuthentication: false },
+  { id: 8, label: "Contact Us", link: RoutePaths.ContactUs, needAuthentication: false },
+  { id: 9, label: "Create Blog (Admin)", link: RoutePaths.CreateBlog, needAuthentication: true },
 ];
 
 export const routerElements = [

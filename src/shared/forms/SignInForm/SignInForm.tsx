@@ -34,7 +34,7 @@ const SignInForm = () => {
 
   const onFormSubmit = async (data: ISignInFormPayload) => {
     signIn(data.email, data.password, {
-      onSuccess: () => navigate(RoutePaths.CreateBlog),
+      onSuccess: () => navigate(RoutePaths.Home),
       onFailure: (errorMessage: string) =>
         showNotification({
           type: ToastVersions.error,
