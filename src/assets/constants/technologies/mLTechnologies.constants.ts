@@ -38,27 +38,33 @@ const WebSocketIcon = lazy(() => import("@/assets/vectors/technology/WebSocket.s
 export const mLTechnologiesTabsConstants: ITabsConstant[] = [
   {
     id: 1,
-    title: "ML technologies",
+    title: "Deep Learning Frameworks",
     description:
-      "This classification is about the administration and operation of cloud structures. Whatever cloud solution a business organization is using, be it AWS, Google Cloud, Azure, or Digital Ocean, we assist in configuring, monitoring, and optimizing their cloud infrastructure. This makes certain that your systems are robust, efficient, and safe.",
+      "Our strengths include the possession of profound knowledge on deep learning frameworks including <strong>Tensorflow.js,</strong> <strong>Keras.js,</strong> and <strong>Brain.js.</strong> These frameworks are ideal for applications that need to run profound analytic requirements on prediction, image recognition and real time decision making using artificial neural networks to derive patterns from big data.",
   },
   {
     id: 2,
     title: "Containerization & Orchestration",
     description:
-      "Application environment management became easier and scalable due to the implementation of Docker and containerization. We use containers for consistency in both development and in production, making your team more efficient and your apps more reliable.",
+      "Our strengths include the possession of profound knowledge on deep learning frameworks including Tensorflow.js, Keras.js, and Brain.js. These frameworks are ideal for applications that need to run profound analytic requirements on prediction, image recognition and real time decision making using artificial neural networks to derive patterns from big data",
   },
   {
     id: 3,
-    title: "CI/CD Pipeline Automation",
+    title: "Computer Vision Solutions",
     description:
-      "Our CI/CD services help optimize your software development process saving your time and efforts for the same. Through the use of Jenkins, AWS CodePipeline, Azure DevOps we are able to ensure that the code you write gets tested, deployed and released to the cloud platforms as soon as possible. This helps minimize the chances of human mistakes, enhance the software release cycle, and ensure that you are always deploying and delivering the latest software.",
+      "Using <strong>OpenCV.js</strong>, we make intelligent systems software solutions for machine learning that focuses on computer vision to help the business world to derive an understanding of image and video data. Computer vision models offer features such as image classification, object detection, face recognition, etc., thus making your business more responsive to image information in real time.",
   },
   {
     id: 4,
-    title: "Cloud Security & Compliance",
+    title: "Natural Language Processing",
     description:
-      "Security and compliance are of paramount importance within the context of DevOps. We offer security services across the cloud stack, guaranteeing that your <strong>AWS</strong>, <strong>Azure</strong>, or <strong>Google Cloud</strong> environment is optimized with proper configurations and complies with regulations such as <strong>GDPR</strong>, <strong>HIPAA</strong>, and <strong>SOC 2.</strong>",
+      "We build Natural Language Processing (NLP) solutions using <strong>NLP.js</strong>, enabling apps to perform tasks including sentiment analysis, language identification, chatbot creation as well as text analysis. These NLP models are intended for enabling machines to read, evaluate, and produce human language, enhancing the user experience and automating the interactions.",
+  },
+  {
+    id: 5,
+    title: "Machine Learning for Creative AI",
+    description:
+      "We use <strong>ML5.js</strong> to build the models tailored specifically to the creation of creative AI applications, as it enables ML into the interactivity of web and art projects. No matter if it is used for interactive graphics and data visualization or for creating ML5. js is convenient for inventive and liberal use of ML activities.",
   },
 ];
 

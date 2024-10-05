@@ -499,39 +499,40 @@ export const servicesConstants = [
       "Specifically for Clevit, there are several areas of focus to guarantee success of our machine learning initiatives. Our approach is meant to produce effective and high-quality solutions by emphasizing careful preparations and constant improvement.",
 
     singlePageDescription:
-      "If you have some features in mind for your mobile application, then turn them into reality at Clevit – your application solutions with next-level performance. No matter if you want to build a native, cross-platform, or hybrid application, our professionals will help you in each step of the workflow, making the final product easy-to-navigate, easily-scaled, and aligned with the vision of your business.",
+      "At Clevit we understand that Machine learning (ML) Development services help your business to make intelligent decisions with data. Whether you need to predict customer behavior or perform text mining, we apply state-of-the-art ML automations to streamline operations and generate value. Our team of specialists adapts every solution based on the field and client requirements.",
 
-    serviceDetails: "esi detalnerna",
+    serviceDetails:
+      "Specifically for Clevit, there are several areas of focus to guarantee success of our machine learning initiatives. Our approach is meant to produce effective and high-quality solutions by emphasizing careful preparations and constant improvement.",
     offers: [
       {
-        title: "Adaptive AI Solutions",
+        title: "Planning Phase",
         Icon: PC,
         description:
-          "Our AI solutions are customized to fit your organization’s needs and dynamics so that they may be adjusted for its benefit. Using a modern form of algorithms, and technologies, we offer artificial intelligence systems that learn over time, thus solutions that will continue to grow with your business.",
+          "In each project, we initiate the strategic planning activity. In this stage, we consult directly with you to determine your business needs, objectives and problems. This way, we can develop a unique machine learning solution that will meet your project’s primary goals. Here, our goal is to shift our approach to building ML solutions, and ensure it is beneficial for your company in the long run.",
       },
       {
-        title: "Trust",
+        title: "Information Preparation Phase",
         Icon: PC,
         description:
-          "Trust is at the core of our model. A key aspect is to design AI applications which are as clear as possible and that you can trust. Ethical AI principles are incorporated to guarantee the security and appropriate use of your data, which helps build credibility between your business and our AI services.",
+          "A machine learning model is only as good as the data that you feed into it. Here, the data is collected, transformed, and structured to aid the analytical process that follows this phase. The team then reviews that the data collected is adequately complete and in the right format to remove any invalid data. The preparation process as outlined above provides a good grounding for the development of a good machine learning model.",
       },
       {
-        title: "Advanced AI",
+        title: "Creation of the Model Phase",
         Icon: PC,
         description:
-          "AI technologies have been employed to provide unique solutions that propel your business ahead. Machine learning models and deep learning frameworks state that we incorporate the state-of-the-art techniques in AI to make you stay ahead of the competition.",
+          "After data preparation, our team of machine learning engineers creates the model. This is the reason we evaluate the ideal algorithms and frameworks depending on the need by our client. This phase is where the machine learning system is trained to learn from your data to derive insights, forecast, and automate to achieve your business goals.",
       },
       {
-        title: "Quality First",
+        title: "Testing Phase",
         Icon: PC,
         description:
-          "Integration of AI is a fine process for us thus the stress on quality. At every developmental stage of our AI solutions, we follow stringent testing and validation processes to achieve high levels of precision and efficiency. This commitment to quality ensures that our AI applications provide you with the best results.",
+          "However, for your machine learning model to be effective in actual conditions, we verify it using different data sets. The goal here is to achieve high accuracy of results while minimizing over-fitting or under-fitting of the model. It assists us in improving the model to the best state for high reliability and efficiency in this phase.",
       },
       {
-        title: "Support",
+        title: "Optimization Phase",
         Icon: PC,
         description:
-          "According to the social model, continuous support is necessary for the sustained use of AI systems in an organization. Extra support is offered constantly for solving any problems, enhancing efficiency, and for the condition changes. Our support services are developed to guarantee that your implementations of AI solutions are smooth.",
+          "As soon as a model is deployed, we proceed to the optimization stage of the model. In production, we always assess the model and modify it over and over as a result of new production findings. Through the process of improving algorithms and recalibrating the model, we make sure that your machine learning system is effective and adaptable for your business",
       },
       {
         title: "Individualized User Experience",
@@ -541,17 +542,17 @@ export const servicesConstants = [
       },
     ],
     serviceIndustriesDescription:
-      "We have machine learning services and solutions for various industries at Clevit. We offer multipurpose and specific solutions that foster innovation in organizations. As a result, it is possible to state that we adjust our IT solutions to the needs of the specified sectors.",
+      "We have machine learning services and solutions for various industries at Clevit․ We offer multipurpose and specific solutions that foster innovation in organizations. As a result, it is possible to state that we adjust our IT solutions to the needs of the specified sectors, refine both outcomes and company processes.",
 
     serviceTechnologiesTitle: "Key Aspects of Our ML Development Process",
     serviceTechnologiesSubtitle:
-      "Clevit provide extensive DevOps services that enhance your development and operations for faster and efficient software delivery",
+      "Clevit makes use of the current technologies and machine learning in order to create new and sustainable solutions for your enterprise. Having extensive knowledge of various frameworks and techniques, we can offer flexible and effective ML models. Below are the key classifications of our machine learning development services:",
     serviceTechnologies: mLTechnologiesConstants,
     serviceTabTechnologies: mLTechnologiesTabsConstants,
     serviceBookConsultation: {
       title: "Ready to Transform Your Business with Machine Learning?",
       description:
-        "Discover how our custom ML solutions can drive innovation and efficiency in your business. Contact us today.",
+        "Discover how our custom ML solutions can drive innovation and efficiency in your business.",
     },
     servicesProcesses: singlePageMLProcessesConstants,
     ChooseClevitTitle: "Why Choose Clevit for AI Integration Services?",
@@ -569,29 +570,29 @@ export const servicesConstants = [
       {
         title: "Cutting-Edge Technology",
         description:
-          "We employ sophisticated concepts and techniques such as TensorFlow, OpenCV, and NLP.js to develop creative ML structures.",
+          "We employ sophisticated concepts and techniques such as TensorFlow, OpenCV, and NLP. js to develop creative ML structures that assist and facilitate the-enhancement of business operations.",
       },
       {
         title: "End-to-End Service",
         description:
-          "We are starting from the data preparation and ending with the model placing and fine-tuning.",
+          " We are starting from the data preparation and ending with the model placing and fine-tuning, which means that we provide full-cycle ML development services.",
       },
       {
         title: "Data Security & Compliance",
         description:
-          "We ensure the safe and legal processing and storage of your data while following the most important guidelines of the industry.",
+          "We decided for the safe and legal processing and storage of your data while following the most important guidelines of the industry.",
       },
       {
         title: "Continuous Support",
         description:
-          "We continually monitor and fine-tune your ML solutions, enabling them to stay relevant and efficient for your business.",
+          "That is the promise of quality in every aspect of our services even after the soldiers have been deployed. We continually monitor and fine-tune your ML solutions, enabling them to stay relevant and efficient for your business.",
       },
     ],
 
     GetConsultation: {
       title: "Need Expert ML Development Services?",
       description:
-        "Let our team of professionals create powerful machine learning models tailored to your needs. Request a Consultation.",
+        "Let our team of professionals create powerful machine learning models tailored to your needs.",
     },
   },
   {

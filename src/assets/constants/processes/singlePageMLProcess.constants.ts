@@ -18,51 +18,42 @@ const InfrostructureSetupIcon = lazy(
 const SecurityCompilanceIcon = lazy(
   () => import("@/assets/vectors/processes/SecurityCompilance.svg?react")
 );
-const OngoingSupportIcon = lazy(
-  () => import("@/assets/vectors/processes/OngoingSupport.svg?react")
-);
 
 export const singlePageMLProcessesConstants = [
   {
     id: 1,
     Icon: DiscoveryAndPlanningIcon,
-    title: "Discovery & Planning",
+    title: "Requirement Analysis & Planning",
     description: "",
   },
   {
     id: 2,
     Icon: InfrostructureSetupIcon,
-    title: "Infrastructure Setup & Configuration",
+    title: "Data Collection & Preparation",
     description: "",
   },
   {
     id: 3,
     Icon: ContinousIntegrationIcon,
-    title: "Continuous Integration & Continuous Deployment (CI/CD)",
+    title: "Model Development & Training",
     description: "",
   },
   {
     id: 4,
     Icon: OutomationOrchestrationIcon,
-    title: "Automation & Orchestration",
+    title: "Model Testing & Validation",
     description: "",
   },
   {
     id: 5,
     Icon: MonitoringPerformanceIcon,
-    title: "Monitoring & Performance Optimization",
+    title: "Model Deployment",
     description: "",
   },
   {
     id: 6,
     Icon: SecurityCompilanceIcon,
-    title: "Security & Compliance",
-    description: "",
-  },
-  {
-    id: 7,
-    Icon: OngoingSupportIcon,
-    title: "Ongoing Support & Maintenance",
+    title: "Continuous Monitoring & Optimization",
     description: "",
   },
 ];
