@@ -41,7 +41,7 @@ const Header = forwardRef(
         <>
           <NavLink
             onClick={() => setIsOpen(false)}
-            to={RoutePaths.AdminAddBlog}
+            to={RoutePaths.CreateBlog}
             className="text-white lg:text-md text-lg font-medium"
           >
             Add Blog
