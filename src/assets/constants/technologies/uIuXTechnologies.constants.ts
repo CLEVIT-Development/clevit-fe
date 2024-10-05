@@ -35,10 +35,10 @@ const ViteIcon = lazy(() => import("@/assets/vectors/technology/Vite.svg?react")
 const VueIcon = lazy(() => import("@/assets/vectors/technology/Vue.svg?react"));
 const WebSocketIcon = lazy(() => import("@/assets/vectors/technology/WebSocket.svg?react"));
 
-export const webDevelopmentTechnologiesTabsConstants: ITabsConstant[] = [
+export const uIuXTechnologiesTabsConstants: ITabsConstant[] = [
   {
     id: 1,
-    title: "Cloud Infrastructure Management",
+    title: "uiux",
     description:
       "This classification is about the administration and operation of cloud structures. Whatever cloud solution a business organization is using, be it AWS, Google Cloud, Azure, or Digital Ocean, we assist in configuring, monitoring, and optimizing their cloud infrastructure. This makes certain that your systems are robust, efficient, and safe.",
   },
@@ -62,7 +62,7 @@ export const webDevelopmentTechnologiesTabsConstants: ITabsConstant[] = [
   },
 ];
 
-export const webDevelopmentTechnologiesConstants = {
+export const uIuXTechnologiesConstants = {
   1: [
     { id: 1, title: "React.js", Icon: ReactIcon },
     { id: 2, title: "Vue.js", Icon: VueIcon },

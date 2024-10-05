@@ -35,7 +35,7 @@ const ViteIcon = lazy(() => import("@/assets/vectors/technology/Vite.svg?react")
 const VueIcon = lazy(() => import("@/assets/vectors/technology/Vue.svg?react"));
 const WebSocketIcon = lazy(() => import("@/assets/vectors/technology/WebSocket.svg?react"));
 
-export const webDevelopmentTechnologiesTabsConstants: ITabsConstant[] = [
+export const devopsTechnologiesTabsConstants: ITabsConstant[] = [
   {
     id: 1,
     title: "Cloud Infrastructure Management",
@@ -62,7 +62,7 @@ export const webDevelopmentTechnologiesTabsConstants: ITabsConstant[] = [
   },
 ];
 
-export const webDevelopmentTechnologiesConstants = {
+export const devopsTechnologiesConstants = {
   1: [
     { id: 1, title: "React.js", Icon: ReactIcon },
     { id: 2, title: "Vue.js", Icon: VueIcon },

@@ -49,13 +49,53 @@ import { singlePageTechnicalAssesmentProcessesConstants } from "./processes/sing
 import { singlePageUIUXProcessesConstants } from "./processes/singlePageUIUXProcess.constants";
 import { singlePageWebDevelopmentProcessesConstants } from "./processes/singlePageWebDevelopmentProcess.constants";
 import {
+  digitalMarketingTechnologiesConstants,
+  digitalMarketingTechnologiesTabsConstants,
+} from "./technologies/DigitalMarketingTechnologies.constants";
+import {
+  aITechnologiesConstants,
+  aITechnologiesTabsConstants,
+} from "./technologies/aITechnologies.constants";
+import {
+  dataQualityTechnologiesConstants,
+  dataQualityTechnologiesTabsConstants,
+} from "./technologies/dataQualityTechnologies.constants";
+import {
+  devopsTechnologiesConstants,
+  devopsTechnologiesTabsConstants,
+} from "./technologies/devopsTechnologies.constants";
+import {
+  itOutsidingTechnologiesConstants,
+  itOutsidingTechnologiesTabsConstants,
+} from "./technologies/iTOutsidingTechnologies.constants";
+import {
+  itProjectManagmentTechnologiesConstants,
+  itProjectManagmentTechnologiesTabsConstants,
+} from "./technologies/iTProjectManagmentTechnologies.constants";
+import {
+  mLTechnologiesConstants,
+  mLTechnologiesTabsConstants,
+} from "./technologies/mLTechnologies.constants";
+import {
   mobileDevelopmentTechnologiesConstants,
   mobileDevelopmentTechnologiesTabsConstants,
 } from "./technologies/mobileDevelopmentTechnologies.constants";
 import {
+  technicalAssesmentTechnologiesConstants,
+  technicalAssesmentTechnologiesTabsConstants,
+} from "./technologies/technicalAssesmentTechnologies.constants";
+import {
+  uIuXTechnologiesConstants,
+  uIuXTechnologiesTabsConstants,
+} from "./technologies/uIuXTechnologies.constants";
+import {
   webDevelopmentTechnologiesConstants,
   webDevelopmentTechnologiesTabsConstants,
 } from "./technologies/webDevelopmentTechnologies.constants";
+import {
+  websiteMaintenanceTechnologiesConstants,
+  websiteMaintenanceTechnologiesTabsConstants,
+} from "./technologies/websiteMaintenanceTechnologies.constants";
 
 export const servicesConstants = [
   {
@@ -307,8 +347,8 @@ export const servicesConstants = [
     serviceTechnologiesTitle: "Key Aspects of Our Web Development Process",
     serviceTechnologiesSubtitle:
       "Clevit provide extensive DevOps services that enhance your development and operations for faster and efficient software delivery։",
-    serviceTabTechnologies: webDevelopmentTechnologiesTabsConstants,
-    serviceTechnologies: webDevelopmentTechnologiesConstants,
+    serviceTabTechnologies: devopsTechnologiesTabsConstants,
+    serviceTechnologies: devopsTechnologiesConstants,
     serviceBookConsultation: {
       title: "Let’s Optimize Your DevOps Processes",
       description: "Contact Us Today to Start Building Your Custom Website.",
@@ -398,8 +438,8 @@ export const servicesConstants = [
     serviceTechnologiesTitle: "Key Aspects of Our AI Integration Process",
     serviceTechnologiesSubtitle:
       "At Clevit, we incorporate a host of advanced AI technologies into your enterprise with a view of changing the way your business functions. Here are the key technologies and tools we utilize in our AI integration process:",
-    serviceTabTechnologies: webDevelopmentTechnologiesTabsConstants,
-    serviceTechnologies: webDevelopmentTechnologiesConstants,
+    serviceTabTechnologies: aITechnologiesTabsConstants,
+    serviceTechnologies: aITechnologiesConstants,
     serviceBookConsultation: {
       title: "Unlock the Power of AI for Your Business",
       description: "Explore Custom Integration Solutions Tailored to Your Needs.",
@@ -500,15 +540,14 @@ export const servicesConstants = [
           "We specialize in developing AI strategies that are unique to your users’ needs and requirements. Using insights of the audience, we incorporate an AI-driven approach that establishes the perfect and superior interaction of the users with the solutions offered to them.",
       },
     ],
-
     serviceIndustriesDescription:
       "We have machine learning services and solutions for various industries at Clevit. We offer multipurpose and specific solutions that foster innovation in organizations. As a result, it is possible to state that we adjust our IT solutions to the needs of the specified sectors.",
 
     serviceTechnologiesTitle: "Key Aspects of Our ML Development Process",
     serviceTechnologiesSubtitle:
       "Clevit provide extensive DevOps services that enhance your development and operations for faster and efficient software delivery",
-    serviceTechnologies: webDevelopmentTechnologiesConstants,
-    serviceTabTechnologies: webDevelopmentTechnologiesTabsConstants,
+    serviceTechnologies: mLTechnologiesConstants,
+    serviceTabTechnologies: mLTechnologiesTabsConstants,
     serviceBookConsultation: {
       title: "Ready to Transform Your Business with Machine Learning?",
       description:
@@ -620,8 +659,8 @@ export const servicesConstants = [
       "Clevit’s Data Quality Assurance services are flexible for various sectors, including healthcare, finance, retail, logistics, and more. Our services are fully adaptable to meet the high-quality data requirements of each industry.",
 
     serviceTechnologiesTitle: "Key Aspects of Our Data Quality Assurance Process",
-    serviceTabTechnologies: webDevelopmentTechnologiesTabsConstants,
-    serviceTechnologies: webDevelopmentTechnologiesConstants,
+    serviceTabTechnologies: dataQualityTechnologiesTabsConstants,
+    serviceTechnologies: dataQualityTechnologiesConstants,
 
     serviceBookConsultation: {
       title: "Ready to Elevate Your Data Quality?",
@@ -723,8 +762,8 @@ export const servicesConstants = [
 
     serviceTechnologiesTitle: "Key Aspects of Our Web Development Process",
     serviceTechnologiesSubtitle: "ServicesIdConstants.Assessment Subtitle",
-    serviceTabTechnologies: webDevelopmentTechnologiesTabsConstants,
-    serviceTechnologies: webDevelopmentTechnologiesConstants,
+    serviceTabTechnologies: technicalAssesmentTechnologiesTabsConstants,
+    serviceTechnologies: technicalAssesmentTechnologiesConstants,
     serviceBookConsultation: {
       title: "Ready to Elevate Your Digital Presence? ",
       description: "Contact Us Today to Start Building Your Custom Website.",
@@ -826,8 +865,8 @@ export const servicesConstants = [
       "Clevit’s Website Maintenance Services conveniently apply to a broad spectrum of clients belonging to different industries. Before providing the services to the different sectors, we assess their needs so that our services can deliver quality performance and security.",
     serviceTechnologiesTitle: "Key Aspects of Our Web Development Process",
     serviceTechnologiesSubtitle: "ServicesIdConstants.Maintenance subtitle",
-    serviceTabTechnologies: webDevelopmentTechnologiesTabsConstants,
-    serviceTechnologies: webDevelopmentTechnologiesConstants,
+    serviceTabTechnologies: websiteMaintenanceTechnologiesTabsConstants,
+    serviceTechnologies: websiteMaintenanceTechnologiesConstants,
     serviceBookConsultation: {
       title: "Ready to Elevate Your Digital Presence? ",
       description: "Contact Us Today to Start Building Your Custom Website.",
@@ -927,9 +966,8 @@ export const servicesConstants = [
 
     serviceTechnologiesTitle: "Key Aspects of Our IT Outstaffing Process",
     serviceTechnologiesSubtitle: "ServicesIdConstants.OutStaffing Subtitle",
-    serviceTabTechnologies: webDevelopmentTechnologiesTabsConstants,
-    serviceTechnologies: webDevelopmentTechnologiesConstants,
-
+    serviceTabTechnologies: itOutsidingTechnologiesTabsConstants,
+    serviceTechnologies: itOutsidingTechnologiesConstants,
     serviceBookConsultation: {
       title: "Ready to Elevate Your Digital Presence? ",
       description: "Contact Us Today to Start Building Your Custom Website.",
@@ -1032,8 +1070,8 @@ export const servicesConstants = [
 
     serviceTechnologiesTitle: "Key Aspects of Our IT Project Management Process",
     serviceTechnologiesSubtitle: "ServicesIdConstants.ProjectManagement Subtitle",
-    serviceTabTechnologies: webDevelopmentTechnologiesTabsConstants,
-    serviceTechnologies: webDevelopmentTechnologiesConstants,
+    serviceTabTechnologies: itProjectManagmentTechnologiesTabsConstants,
+    serviceTechnologies: itProjectManagmentTechnologiesConstants,
 
     serviceBookConsultation: {
       title: "Looking for Expert IT Project Management Solutions?",
@@ -1136,8 +1174,8 @@ export const servicesConstants = [
       "At Clevit we help UI/UX design to respond to the needs of different industries. Be it retail & e-commerce, healthcare, or SaaS platforms, our designs focus on a broad range of industries to offer intuitive and engaging solutions.",
     serviceTechnologiesTitle: "Key Aspects of Our UI/UX Design Process",
     serviceTechnologiesSubtitle: "ServicesIdConstants.Design Subtitle",
-    serviceTabTechnologies: webDevelopmentTechnologiesTabsConstants,
-    serviceTechnologies: webDevelopmentTechnologiesConstants,
+    serviceTabTechnologies: uIuXTechnologiesTabsConstants,
+    serviceTechnologies: uIuXTechnologiesConstants,
     serviceBookConsultation: {
       title: "Looking for Professional UI/UX Design Services?",
       description:
@@ -1244,8 +1282,8 @@ export const servicesConstants = [
       "Our Digital Marketing Services are flexible and cater to a broad range of sectors. We assist industries like retail, healthcare, and finance in enhancing their online exposure and connecting with their target market.",
     serviceTechnologiesTitle: "Key Aspects of Our Digital Marketing Services",
     serviceTechnologiesSubtitle: "ServicesIdConstants.Marketing Subtitle",
-    serviceTabTechnologies: webDevelopmentTechnologiesTabsConstants,
-    serviceTechnologies: webDevelopmentTechnologiesConstants,
+    serviceTabTechnologies: digitalMarketingTechnologiesTabsConstants,
+    serviceTechnologies: digitalMarketingTechnologiesConstants,
     serviceBookConsultation: {
       title: "Ready to Elevate Your Digital Presence?",
       description: "Contact Us Today to Start Building Your Custom Digital Marketing Strategy.",
