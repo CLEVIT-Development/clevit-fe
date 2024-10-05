@@ -20,7 +20,6 @@ const SingleBlogPage = () => {
         headerVariant={HeaderVariant.Primary}
         heading={
           <Gradient className="h-[200px] w-full">
-            {/* Gradient doesn't appear without SingleBlogHeading, even though it's not strictly necessary */}
             <SingleBlogHeading />
           </Gradient>
         }

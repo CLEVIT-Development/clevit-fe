@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { useNavigate, useParams } from "react-router-dom";
 
 import { RoutePaths } from "@/app/routing/routing.constants";
+import useBlog from "@/common/hooks/useBlog";
 import { BlogSchema } from "@/common/schemas/blogSchema";
 import showNotification, { ToastVersions } from "@/common/services/toast/showNotifications";
 import RichTextEditor from "@/shared/ui/forms/RichTextEditor";
@@ -10,23 +11,31 @@ import { yupResolver } from "@hookform/resolvers/yup";
 
 import Button from "../../ui/Button";
 import Input from "../../ui/forms/Input";
-import useBlog from "./hooks";
-import { type IBlogData } from "./types";
+import { type IBlog } from "./types";
 
 interface IBlogFormProps {
-  initialData?: IBlogData;
+  initialData?: IBlog;
+  isLoading?: boolean;
 }
 
-const BlogForm = ({ initialData }: IBlogFormProps) => {
-  const methods = useForm<IBlogData>({
+const BlogForm = ({ initialData, isLoading }: IBlogFormProps) => {
+  const methods = useForm<IBlog>({
     mode: "onChange",
     resolver: yupResolver(BlogSchema),
-    defaultValues: initialData,
     shouldUnregister: true,
   });
 
-  const [imageFile, setImageFile] = useState<File | null>(null);
   const [imagePreview, setImagePreview] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (initialData) {
+      setValue("title", initialData.title);
+      setValue("content", initialData.content);
+      setValue("image", initialData.image);
+      setImagePreview(initialData.image);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [initialData]);
 
   const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
@@ -34,46 +43,41 @@ const BlogForm = ({ initialData }: IBlogFormProps) => {
     if (file) {
       setValue("image", file);
       trigger("image");
-      setImageFile(file);
-      setImagePreview(URL.createObjectURL(file)); // Set the image preview
+      setImagePreview(URL.createObjectURL(file));
     }
   };
 
   const navigate = useNavigate();
   const { id } = useParams<{ id?: string }>();
-  const { addBlog, updateBlog, loading } = useBlog();
+  const { addBlog, updateBlogById, loading: blogLoading } = useBlog();
 
+  const isFormLoading = isLoading || blogLoading;
   const {
     register,
     handleSubmit,
     setValue,
-    getValues,
     formState: { errors },
     trigger,
   } = methods;
 
-  console.log("Errors:", errors);
-  console.log("Values:", getValues());
-
-  const onFormSubmit = async (data: IBlogData) => {
-    // Include the image file in the blog data
-    const blogData = { ...data, image: imageFile };
+  const onFormSubmit = async (data: IBlog) => {
+    console.log(data);
 
     if (id) {
-      updateBlog(id, blogData, {
+      updateBlogById(id, data, {
         onSuccess: () => {
-          navigate(RoutePaths.Blog);
+          navigate(RoutePaths.Blogs);
         },
         onFailure: () => {
           showNotification({
             type: ToastVersions.error,
             title: "Update failed",
-            description: "Could not update the blog post",
+            description: "Could not update the blog",
           });
         },
       });
     } else {
-      addBlog(blogData, {
+      addBlog(data, {
         onSuccess: () => {
           navigate(RoutePaths.Blogs);
         },
@@ -81,7 +85,7 @@ const BlogForm = ({ initialData }: IBlogFormProps) => {
           showNotification({
             type: ToastVersions.error,
             title: "Creation failed",
-            description: "Could not create the blog post",
+            description: "Could not create the blog",
           });
         },
       });
@@ -91,10 +95,8 @@ const BlogForm = ({ initialData }: IBlogFormProps) => {
   const handleContentChange = async (content: string) => {
     setValue("content", content);
 
-    // Trigger validation for the content field
     const isValid = await trigger("content");
 
-    // Clear the error if the content is valid
     if (isValid) {
       trigger("content");
     }
@@ -114,8 +116,9 @@ const BlogForm = ({ initialData }: IBlogFormProps) => {
             </div>
           )}
           <Input
+            disabled={isFormLoading}
             required
-            error={errors.image?.message}
+            error={errors.image?.message as string}
             label="Image"
             type="file"
             accept="image/*"
@@ -126,13 +129,14 @@ const BlogForm = ({ initialData }: IBlogFormProps) => {
         </div>
         <Input
           required
-          disabled={loading}
+          disabled={isFormLoading}
           label="Title"
           error={errors.title?.message}
           placeholder="Blog Title"
           {...register("title")}
         />
         <RichTextEditor
+          disabled={isFormLoading}
           required
           label="Content"
           error={errors.content?.message}

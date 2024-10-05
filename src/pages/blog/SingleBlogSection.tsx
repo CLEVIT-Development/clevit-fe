@@ -22,7 +22,7 @@ const SingleBlogSection = ({ blogId }: SingleBlogPageProps) => {
   }, [blogId]);
 
   if (!blogData) {
-    return <h1>Blog not found</h1>;
+    return null;
   }
 
   const { title, description, image } = blogData;

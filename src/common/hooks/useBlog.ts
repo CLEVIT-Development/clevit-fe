@@ -37,11 +37,46 @@ const useBlog = () => {
   const [allBlogs, setAllBlogs] = useState<IBlog[] | null>();
   const [pagination, setPagination] = useState<Pagination | null>();
 
-  const addBlog = async (data: IBlogData, options?: UseBlogOptions) => {
+  const addBlog = async (
+    data: Omit<IBlog, "id" | "description" | "created_at">,
+    options?: UseBlogOptions
+  ) => {
+    const { image, ...blogData } = data;
+
     setLoading(true);
 
+    const formData = new FormData();
+
+    formData.append("image", image);
+
     try {
-      await axiosInstanceAuth.post("/blogs", data);
+      const response = await axiosInstanceAuth.post("/blogs/add-blog", {
+        ...blogData,
+        // TODO NO NEED DESCRIPTION
+        description: "need to be removed soon.",
+      });
+      const { id } = response.data;
+
+      await addBlogImageById(id, formData);
+
+      options?.onSuccess?.();
+    } catch (error) {
+      options?.onFailure?.(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+  const addBlogImageById = async (
+    id: string,
+    data: IBlogData["image"],
+    options?: UseBlogOptions
+  ) => {
+    try {
+      await axiosInstanceAuth.post(`/blogs/add-blog-image/${id}`, data, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
       options?.onSuccess?.();
     } catch (error) {
       options?.onFailure?.(error);
@@ -53,8 +88,29 @@ const useBlog = () => {
   const updateBlogById = async (id: string, data: IBlogData, options?: UseBlogOptions) => {
     setLoading(true);
 
+    const { image, ...blogData } = data;
+
     try {
-      await axiosInstanceAuth.put(`/blogs/${id}`, data);
+      await axiosInstanceAuth.patch(`/blogs/update-blog/${id}`, blogData);
+
+      await updateBlogImageById(id, { image });
+
+      options?.onSuccess?.();
+    } catch (error) {
+      options?.onFailure?.(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+  const updateBlogImageById = async (
+    id: string,
+    data: IBlogData["image"],
+    options?: UseBlogOptions
+  ) => {
+    setLoading(true);
+
+    try {
+      await axiosInstanceAuth.put(`/blogs/update-blog-image/${id}`, data);
       options?.onSuccess?.();
     } catch (error) {
       options?.onFailure?.(error);
