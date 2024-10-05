@@ -66,7 +66,7 @@ export default defineConfig({
       minify: true,
     }),
     sitemap({
-      hostname: "https://www.clevit.io", // Your site's hostname
+      hostname: "https://www.clevit.io",
       dynamicRoutes: [
         "/",
         "/about-us",
@@ -86,7 +86,13 @@ export default defineConfig({
       lastmod: new Date(), // Last modified date
       readable: true, // Optional, makes the XML human-readable
       generateRobotsTxt: true, // Generate robots.txt
-      robots: [{ userAgent: "*", allow: "/" }], // Robots policy
+      robots: [
+        { userAgent: "*", allow: "/" },
+        {
+          userAgent: "*",
+          disallow: ["/admin", "/admin/blog/:id?", "/admin/signin", "/admin/addBlog"],
+        }, // Disallow admin routes
+      ], // Robots policy
     }),
   ],
   define: {
