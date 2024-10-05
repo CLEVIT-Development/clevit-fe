@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 
 import Layout from "@/common/layout/Layout.tsx";
-import CalendlySection from "@/pages/home/CalendlySection";
 import NotFound from "@/pages/not-found/NotFoundPage";
 import { Gradient } from "@/shared/gradient/Gradient";
 import PageSEO from "@/shared/lib/meta/PageSeo";
@@ -21,7 +20,12 @@ export interface SingleServiceHeaderItems {
 const SingleServicePage = () => {
   const { id } = useParams();
   // ... existing code ...
-  const [headerItems, setHeaderItems] = useState<SingleServiceHeaderItems>({});
+  const [headerItems, setHeaderItems] = useState<SingleServiceHeaderItems>({
+    title: "",
+    description: "",
+    image: "",
+    imageAlt: "",
+  });
 
   return (
     <>

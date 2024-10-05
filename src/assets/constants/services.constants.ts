@@ -1,10 +1,5 @@
 import { singlePageMobileDevelopmentProcessesConstants } from "@/assets/constants/processes/singlePageMobileDevelopmentProcess.constants.ts";
-import { singlePageWebsiteMaintenceProcessesConstants } from "@/assets/constants/processes/singlePageWebsiteMaintenceProcess.constants.ts";
 import { ServicesIdConstants } from "@/assets/constants/services-id.constants.ts";
-import {
-  digitalMarketingTechnologiesConstants,
-  digitalMarketingTechnologiesTabsConstants,
-} from "@/assets/constants/technologies/digitalMarketingTechnologies.constants.ts";
 import AIintegration from "@/assets/images/services/AIintegration.png";
 import AppDevelopmentOverviewReverse from "@/assets/images/services/AppDevelopmentOverviewReverse.png";
 import DevopsServices from "@/assets/images/services/DevopsServices.png";
@@ -49,6 +44,7 @@ import { singlePageDigitalMarketingProcessesConstants } from "./processes/single
 import { singlePageItOutsidingProcessesConstants } from "./processes/singlePageItOutsidingProcess.constants";
 import { singlePageItProjectManagmentProcessesConstants } from "./processes/singlePageItProjectManagmentProcess.constants";
 import { singlePageMLProcessesConstants } from "./processes/singlePageMLProcess.constants";
+import { singlePageMaintenceProcessesConstants } from "./processes/singlePageMaintenceProcess.constants";
 import { singlePageTechnicalAssesmentProcessesConstants } from "./processes/singlePageTechnicalAssesmentProcess.constants";
 import { singlePageUIUXProcessesConstants } from "./processes/singlePageUIUXProcess.constants";
 import { singlePageWebDevelopmentProcessesConstants } from "./processes/singlePageWebDevelopmentProcess.constants";
@@ -76,6 +72,10 @@ import {
   mLTechnologiesConstants,
   mLTechnologiesTabsConstants,
 } from "./technologies/mLTechnologies.constants";
+import {
+  digitalMarketingTechnologiesIconsConstants,
+  digitalMarketingTechnologiesTabsConstants,
+} from "./technologies/marketingTechnologies.constants";
 import {
   mobileDevelopmentTechnologiesConstants,
   mobileDevelopmentTechnologiesTabsConstants,
@@ -872,7 +872,7 @@ export const servicesConstants = [
       title: "Ready to Elevate Your Digital Presence? ",
       description: "Contact Us Today to Start Building Your Custom Website.",
     },
-    servicesProcesses: singlePageWebsiteMaintenceProcessesConstants,
+    servicesProcesses: singlePageMaintenceProcessesConstants,
     ChooseClevitTitle: "Why Choose Clevit for Technical Assessment Services?",
     ChooseClevitRecomendation: [
       {
@@ -1284,7 +1284,7 @@ export const servicesConstants = [
     serviceTechnologiesTitle: "Key Aspects of Our Digital Marketing Services",
     serviceTechnologiesSubtitle: "ServicesIdConstants.Marketing Subtitle",
     serviceTabTechnologies: digitalMarketingTechnologiesTabsConstants,
-    serviceTechnologies: digitalMarketingTechnologiesConstants,
+    serviceTechnologies: digitalMarketingTechnologiesIconsConstants,
     serviceBookConsultation: {
       title: "Ready to Elevate Your Digital Presence?",
       description: "Contact Us Today to Start Building Your Custom Digital Marketing Strategy.",

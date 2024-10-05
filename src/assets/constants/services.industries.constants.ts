@@ -1,8 +1,12 @@
 import AppoimentShedule from "@/assets/vectors/AppoimentShedule.svg?react";
+import Automation from "@/assets/vectors/Automation.svg?react";
 import ClinicAndLab from "@/assets/vectors/ClinicAndLab.svg?react";
+import DataAnalistics from "@/assets/vectors/DataAnalistics.svg?react";
 import DigitalHealt from "@/assets/vectors/DigitalHealt.svg?react";
 import EventPlanningManagment from "@/assets/vectors/EventPlanningManagment.svg?react";
+import FilmProduction from "@/assets/vectors/FilmProduction.svg?react";
 import FreightCargoServices from "@/assets/vectors/FreightCargoServices.svg?react";
+import ITServicesITConsulting from "@/assets/vectors/ITServices&ITConsulting.svg?react";
 import MedicalSoftwareDevelopment from "@/assets/vectors/MedicalSoftwareDevelopment.svg?react";
 import MusickProduction from "@/assets/vectors/MusickProduction.svg?react";
 import OnlineBookingPlatforms from "@/assets/vectors/OnlineBookingPlatforms.svg?react";
@@ -91,11 +95,11 @@ export const servicesIndustriesConstants = {
   ],
   [ServicesIdConstants.AI]: [
     {
-      Icon: EventPlanningManagment,
+      Icon: FilmProduction,
       title: "Film Production",
     },
     {
-      Icon: MedicalSoftwareDevelopment,
+      Icon: MusickProduction,
       title: "Music Production & Sound Design",
     },
     {
@@ -103,15 +107,15 @@ export const servicesIndustriesConstants = {
       title: "Data Analytics",
     },
     {
-      Icon: VirtualMeeting,
+      Icon: DataAnalistics,
       title: "Virtual Meetings & Conferencing",
     },
     {
-      Icon: FreightCargoServices,
+      Icon: ITServicesITConsulting,
       title: "IT Services & IT Consulting",
     },
     {
-      Icon: OnlineBookingPlatforms,
+      Icon: Automation,
       title: "Automation",
     },
   ],

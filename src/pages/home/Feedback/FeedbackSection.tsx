@@ -1,16 +1,12 @@
 import { useMemo } from "react";
 import AliceCarousel from "react-alice-carousel";
-import { useNavigate } from "react-router-dom";
 
 import classNames from "classnames";
 import { twMerge } from "tailwind-merge";
 
-import { RoutePaths } from "@/app/routing/routing.constants";
 import { feedbacksConstants } from "@/assets/constants/feedbacks.constants";
 import useResponsive from "@/common/hooks/useResponsive";
 import Section from "@/common/templates/Section";
-import Button from "@/shared/ui/Button";
-import { ButtonVariant } from "@/types/variant.types";
 
 import styles from "./Feedback.module.css";
 
@@ -20,7 +16,6 @@ interface FeedbackSectionProps {
 
 const FeedbackSection = ({ className }: FeedbackSectionProps) => {
   const { isTablet } = useResponsive();
-  const navigate = useNavigate();
 
   const feedbacksData = useMemo(() => {
     return feedbacksConstants.map(({ id, companyLogo, description, author, position }) => (
@@ -78,9 +73,6 @@ const FeedbackSection = ({ className }: FeedbackSectionProps) => {
           </div>
         )}
       </div>
-      {/*<Button variant={ButtonVariant.Primary} onClick={() => navigate(RoutePaths.ContactUs)}>*/}
-      {/*  Contact Us*/}
-      {/*</Button>*/}
     </Section>
   );
 };

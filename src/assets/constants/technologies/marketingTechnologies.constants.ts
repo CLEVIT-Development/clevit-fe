@@ -62,7 +62,7 @@ export const digitalMarketingTechnologiesTabsConstants: ITabsConstant[] = [
   },
 ];
 
-export const digitalMarketingTechnologiesConstants = {
+export const digitalMarketingTechnologiesIconsConstants = {
   1: [
     { id: 1, title: "React.js", Icon: ReactIcon },
     { id: 2, title: "Vue.js", Icon: VueIcon },

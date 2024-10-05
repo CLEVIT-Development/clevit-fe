@@ -22,7 +22,7 @@ const OngoingSupportIcon = lazy(
   () => import("@/assets/vectors/processes/OngoingSupport.svg?react")
 );
 
-export const singlePageWebsiteMaintenceProcessesConstants = [
+export const singlePageMaintenceProcessesConstants = [
   {
     id: 1,
     Icon: DiscoveryAndPlanningIcon,
