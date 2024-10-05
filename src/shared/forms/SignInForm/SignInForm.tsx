@@ -1,7 +1,8 @@
 import type { FieldValues } from "react-hook-form";
 import { FormProvider, useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 
-import { useAuthToken } from "@/common/hooks/useAuthToken";
+import { RoutePaths } from "@/app/routing/routing.constants";
 import { SignInSchema } from "@/common/schemas/signInSchema";
 import showNotification, { ToastVersions } from "@/common/services/toast/showNotifications";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -21,7 +22,8 @@ const SignInForm = () => {
     resolver: yupResolver(SignInSchema),
   });
 
-  const { setToken, setRefreshToken } = useAuthToken();
+  const navigate = useNavigate();
+
   const { signIn, loading } = useSignIn();
 
   const {
@@ -32,24 +34,12 @@ const SignInForm = () => {
 
   const onFormSubmit = async (data: ISignInFormPayload) => {
     signIn(data.email, data.password, {
-      onSuccess: (data) => {
-        setToken("access-token-value");
-        setRefreshToken("refresh-token-value");
-        console.log("Tokens stored!", data);
-        showNotification({
-          type: ToastVersions.success,
-          title: "Sign-in successfull",
-          description: "You signed in as admin.",
-        });
-      },
-      onFailure: (err) => {
-        console.log(err);
+      onSuccess: () => navigate(RoutePaths.Home),
+      onFailure: (errorMessage: string) =>
         showNotification({
           type: ToastVersions.error,
-          title: "Sign-in failed",
-          description: "Something went wrong",
-        });
-      },
+          description: errorMessage,
+        }),
     });
   };
 

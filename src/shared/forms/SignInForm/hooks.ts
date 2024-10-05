@@ -1,19 +1,16 @@
 import { useState } from "react";
 
-import axios from "axios";
+import { axiosInstance } from "@/services/axios.service";
+import LocalStorageService from "@/services/localstorage.service";
 
 type ResponseType = {
-  isAuthenticated: boolean;
-  token: string;
-};
-
-type ErrorType = {
-  message: string;
+  accessToken: string;
+  refreshToken: string;
 };
 
 interface SignInOptions {
-  onSuccess?: (response: ResponseType) => void;
-  onFailure?: (error: ErrorType) => void;
+  onSuccess?: () => void;
+  onFailure?: (errorMessage: string) => void;
 }
 
 const useSignIn = () => {
@@ -25,21 +22,22 @@ const useSignIn = () => {
     setError(null);
 
     try {
-      const response = await axios.post("/api/auth/signin", { email, password });
+      const response: { data: ResponseType } = await axiosInstance.post("/auth/login", {
+        email,
+        password,
+      });
 
-      if (options?.onSuccess) {
-        options.onSuccess(response.data);
-      }
+      const { accessToken, refreshToken } = response.data;
 
-      setLoading(false);
-    } catch {
-      setError("Something went wrong");
+      LocalStorageService.setToken(accessToken);
+      LocalStorageService.setRefreshToken(refreshToken);
 
-      if (options?.onFailure) {
-        options.onFailure({ message: "Something went wrong" });
-      }
+      options?.onSuccess?.();
 
       setLoading(false);
+    } catch (err: unknown) {
+      setLoading(false);
+      options?.onFailure?.(err as string);
     }
   };
 

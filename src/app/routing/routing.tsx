@@ -5,11 +5,11 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 
-import { routerElements } from "@/app/routing/routing.constants.ts";
+import { RoutePaths, routerElements } from "@/app/routing/routing.constants.ts";
 import ScrollToTop from "@/common/templates/ScrollToTop.tsx";
 import NotFoundPage from "@/pages/not-found/NotFoundPage.tsx";
 
-import PrivateRoute from "./PrivateRoute";
+import AuthRoute from "./AuthRoute";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -20,13 +20,9 @@ const router = createBrowserRouter(
           path={path}
           element={
             <>
-              {isPrivate ? (
-                <PrivateRoute>
-                  <Element />
-                </PrivateRoute>
-              ) : (
+              <AuthRoute isPrivate={isPrivate} isAuthPath={path === RoutePaths.AdminSignIn}>
                 <Element />
-              )}
+              </AuthRoute>
               <ScrollToTop />
             </>
           }

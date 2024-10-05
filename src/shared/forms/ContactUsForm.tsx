@@ -57,7 +57,7 @@ const ContactUs = () => {
         formData.append("file", data.file);
       }
 
-      await axiosInstance.post("/api/contact-us", formData);
+      await axiosInstance.post("/auth/contact-us", formData);
 
       showNotification({
         type: ToastVersions.success,

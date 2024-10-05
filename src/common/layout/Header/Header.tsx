@@ -36,25 +36,17 @@ const Header = forwardRef(
 
     useLockBodyScroll(isOpen);
 
-    const renderAdminNavList = useMemo(
-      () => (
-        <>
-          <NavLink
-            onClick={() => setIsOpen(false)}
-            to={RoutePaths.AdminAddBlog}
-            className="text-white lg:text-md text-lg font-medium"
-          >
-            Add Blog
-          </NavLink>
-        </>
-      ),
-      []
-    );
-
     const renderNavList = useMemo(
       () =>
         headerMenuLinks.map((headerMenuLink) => {
           const isActive = `${pathname}${hash}` === headerMenuLink.link;
+          const isVisible = headerMenuLink.needAuthentication ? isAuthenticated : true;
+
+          console.log(isAuthenticated);
+
+          if (!isVisible) {
+            return null;
+          }
 
           return (
             <NavLink
@@ -77,7 +69,7 @@ const Header = forwardRef(
             </NavLink>
           );
         }),
-      [isWhiteBackground, pathname, hash]
+      [isWhiteBackground, pathname, hash, isAuthenticated]
     );
 
     return (
@@ -114,10 +106,7 @@ const Header = forwardRef(
             onMenuClick={() => setIsOpen((prev) => !prev)}
           />
           <div ref={ref} className="space-x-[28px] lg:flex hidden">
-            <nav className="flex items-center space-x-5">
-              {renderNavList}
-              {isAuthenticated && renderAdminNavList}
-            </nav>
+            <nav className="flex items-center space-x-5">{renderNavList}</nav>
             <Button prefix={<Messages />} onClick={() => navigate(RoutePaths.Calendly)}>
               Let's Talk
             </Button>
@@ -127,7 +116,7 @@ const Header = forwardRef(
           className={classNames(
             "transition-all duration-700 overflow-hidden lg:hidden flex flex-col justify-between items-center h-0",
             {
-              ["h-[50vh] md:h-[40vh] sm:h-[40vh] lg:h-[30vh] desktop:h-[30vh]"]: isOpen,
+              ["h-[70vh] md:h-[40vh] sm:h-[40vh] lg:h-[30vh] desktop:h-[30vh]"]: isOpen,
             }
           )}
           onTransitionEnd={() => {
@@ -136,7 +125,6 @@ const Header = forwardRef(
         >
           <nav ref={navListRef} className="flex flex-col items-center space-y-6">
             {renderNavList}
-            {isAuthenticated && renderAdminNavList}
           </nav>
           <Copyright
             className={classNames({
