@@ -118,6 +118,20 @@ const useBlog = () => {
       setLoading(false);
     }
   };
+  const deleteBlogById = async (id: string, options?: UseBlogOptions) => {
+    setLoading(true);
+
+    try {
+      await axiosInstanceAuth.delete(`/blogs/delete-blog/${id}`);
+      setAllBlogs(null);
+      getAllBlogs();
+      options?.onSuccess?.();
+    } catch (error) {
+      options?.onFailure?.(error);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const getBlogById = async (id: string, options?: UseBlogOptions) => {
     setLoading(true);
@@ -164,6 +178,7 @@ const useBlog = () => {
     getAllBlogs,
     blogData,
     allBlogs,
+    deleteBlogById,
     pagination,
     loading,
   };

@@ -66,6 +66,11 @@ const BlogForm = ({ initialData, isLoading }: IBlogFormProps) => {
     if (id) {
       updateBlogById(id, data, {
         onSuccess: () => {
+          showNotification({
+            type: ToastVersions.success,
+            title: "Blog Successfully updated.",
+            description: "",
+          });
           navigate(RoutePaths.Blogs);
         },
         onFailure: () => {
@@ -79,6 +84,11 @@ const BlogForm = ({ initialData, isLoading }: IBlogFormProps) => {
     } else {
       addBlog(data, {
         onSuccess: () => {
+          showNotification({
+            type: ToastVersions.success,
+            title: "Blog Successfully created.",
+            description: "",
+          });
           navigate(RoutePaths.Blogs);
         },
         onFailure: () => {
