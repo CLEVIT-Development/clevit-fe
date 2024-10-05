@@ -14,11 +14,25 @@ interface Props extends ComponentPropsWithoutRef<"div"> {
   title: string;
   image: string;
   imageAlt?: string;
-  readingTime: string;
-  date: Date;
+  readingTime?: string;
+  date: string;
+  onDelete?: (id: string) => void;
+  onEdit?: (id: string) => void;
+  isAdminMode?: boolean;
 }
 
-const BlogCard = ({ id, date, imageAlt, title, readingTime, className }: Props) => {
+const BlogCard = ({
+  id,
+  date,
+  imageAlt,
+  title,
+  readingTime,
+  className,
+  image,
+  onDelete,
+  onEdit,
+  isAdminMode,
+}: Props) => {
   const navigate = useNavigate();
 
   return (
@@ -26,23 +40,45 @@ const BlogCard = ({ id, date, imageAlt, title, readingTime, className }: Props) 
       role="button"
       onClick={() => navigate(`/blog/${id}`)}
       className={twMerge(
-        "rounded-lg  transition-all duration-500  desktop:max-w-[420px] space-y-[24px]",
+        "rounded-lg transition-all duration-500 space-y-[24px] bg-white p-4 shadow-md",
         className
       )}
     >
       <img
         loading="lazy"
-        className="w-[420px] h-[260px]  lg:flex rounded-3xl bg-[#D9D9D9]"
+        className="w-[420px]  lg:flex rounded-3xl bg-[#D9D9D9] object-cover"
         alt={imageAlt}
-        src={ImagePlaceholder}
+        src={image || ImagePlaceholder}
       />
       <div className="space-y-4">
-        <span className="text-[#858D9D] text-base">{formatDate(date)}</span>
-        <h3 className="w-full text-gray-200 text-sm font-semibold">{title}</h3>
+        <span className="text-[#858D9D] text-base">{formatDate(new Date(date))}</span>
+        <h3 className="w-full text-gray-800 text-sm font-semibold">{title}</h3>
         <div className="flex space-x-2">
           <IconWrapper icon={<ClockIcon />} className="bg-white" />
           <p className="text-[#858D9D] text-base font-medium">Reading time about {readingTime}</p>
         </div>
+        {isAdminMode && (
+          <div className="flex justify-between items-center mt-4 text-xsdesktop:text-md">
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                onEdit?.(id);
+              }}
+              className="text-blue-400 hover:text-blue-800 focus:outline-none"
+            >
+              Edit
+            </button>
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                onDelete?.(id);
+              }}
+              className="text-red-400 hover:text-red-800 focus:outline-none"
+            >
+              Delete
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

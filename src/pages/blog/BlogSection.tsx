@@ -1,24 +1,95 @@
-import { blogsConstants } from "@/assets/constants/blogs.constants";
+import { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
+
+import { useAuth } from "@/common/hooks/useAuth";
+import useBlog from "@/common/hooks/useBlog";
+import showNotification, { ToastVersions } from "@/common/services/toast/showNotifications";
 import Section from "@/common/templates/Section.tsx";
 import BlogCard from "@/shared/ui/BlogCard/BlogCard";
+import BlogCardSkeleton from "@/shared/ui/BlogCard/BlogCardSkeleton";
+import Button from "@/shared/ui/Button";
+import Pagination from "@/shared/ui/Pagination";
+import { ButtonVariant } from "@/types/variant.types";
 
 const BlogSection = () => {
+  const { getAllBlogs, allBlogs, deleteBlogById, pagination, loading } = useBlog();
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [currentPage, setCurrentPage] = useState(1);
+  const { isAuthenticated } = useAuth();
+
+  useEffect(() => {
+    const onSuccess = () => {
+      containerRef.current?.scrollIntoView({
+        behavior: "smooth",
+        inline: "start",
+        block: "start",
+      });
+    };
+
+    getAllBlogs(currentPage, { onSuccess });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentPage]);
+
+  const handlePageChange = (newPage: number) => {
+    setCurrentPage(newPage);
+  };
+
+  const navigate = useNavigate();
+
+  const handleDeleteBlog = (id: string) => {
+    deleteBlogById(id, {
+      onSuccess: () =>
+        showNotification({
+          type: ToastVersions.success,
+          description: "Blog has successfully deleted.",
+        }),
+      onFailure: () =>
+        showNotification({
+          type: ToastVersions.error,
+          description: "Error deleting blog.",
+        }),
+    });
+  };
+
   return (
-    <Section title="" className="scroll-mt-[150px] md:px-0" headingLevel="h2">
-      <div className="h-full w-full rounded-lg bg-white  grid  xs:grid-cols-1 xs:gap-0 sm:grid-cols-2 desktop:grid-cols-3 !gap-6 ">
-        {blogsConstants.map(({ id, title, image, readingTime, imageAlt, date }) => (
-          <BlogCard
-            id={id}
-            date={date}
-            image={image}
-            imageAlt={imageAlt}
-            key={id}
-            title={title}
-            className="shadow-none"
-            readingTime={readingTime}
-          />
-        ))}
+    <Section title="" className="scroll-mt-[150px] md:px-0" headingLevel="h2" ref={containerRef}>
+      {!allBlogs?.length && !loading && (
+        <div className="flex flex-col items-center justify-center h-64">
+          <p className="text-gray-100 text-lg mb-4">No blogs available at the moment.</p>
+          {isAuthenticated && (
+            <Button variant={ButtonVariant.Primary} onClick={() => navigate("/admin/create-blog")}>
+              Create New Blog
+            </Button>
+          )}
+        </div>
+      )}
+      <div className=" w-full rounded-lg bg-white grid xs:grid-cols-1 xs:gap-0 sm:grid-cols-2 desktop:grid-cols-3 !gap-6">
+        {loading
+          ? Array.from({ length: 6 }).map((_, index) => <BlogCardSkeleton key={index} />)
+          : allBlogs?.map(({ id, title, image, created_at: date }) => (
+              <BlogCard
+                isAdminMode={!!isAuthenticated}
+                onEdit={() => navigate(`/admin/edit-blog/${id}`)}
+                onDelete={handleDeleteBlog}
+                id={id}
+                date={date}
+                image={image}
+                imageAlt={title}
+                key={id}
+                title={title}
+                className="shadow-none"
+              />
+            ))}
       </div>
+
+      {pagination && pagination?.totalItems >= pagination?.pageSize && !loading && (
+        <Pagination
+          totalItems={pagination.totalItems}
+          pageSize={pagination.pageSize}
+          currentPage={currentPage}
+          onPageChange={handlePageChange}
+        />
+      )}
     </Section>
   );
 };

@@ -1,19 +1,29 @@
 import * as yup from "yup";
 
+// URL validation regex
+const urlRegex = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/;
+
 export const BlogSchema = yup.object().shape({
   title: yup.string().required("Title is required"),
   content: yup.string().required("Content is required"),
   image: yup
     .mixed()
     .required("Image is required")
-    .test("File", "Image is required", (value) => {
-      if (!value) return !value; // Return false if no file is provided
+    .test("is-valid-image", "Image must be a valid file or URL", (value) => {
+      // Check if value is a string and a valid URL
+      if (typeof value === "string") {
+        return urlRegex.test(value); // Validates if it's a valid URL
+      }
 
-      return (value as File).size <= 5 * 1024 * 1024; // 5MB limit
-    })
-    .test("fileType", "Unsupported File Format", (value) => {
-      if (!value) return false; // Return false if no file is provided
+      // Check if value is a File object
 
-      return ["image/jpeg", "image/png", "image/gif"].includes((value as File).type); // Allow specific image types
+      if (value && value instanceof File) {
+        return (
+          value.size <= 5 * 1024 * 1024 && // 5MB limit
+          ["image/jpeg", "image/png", "image/gif"].includes(value.type) // Allowed image types
+        );
+      }
+
+      return false; // Invalid if it's neither a valid URL nor a File
     }),
 });
