@@ -22,12 +22,14 @@ import HealthcareTechnology from "@/assets/vectors/HealthcareTechnology.svg?reac
 import Hospetality from "@/assets/vectors/Hospetality.svg?react";
 import ITServicesITConsulting from "@/assets/vectors/ITServices&ITConsulting.svg?react";
 import Insurance from "@/assets/vectors/Insurance.svg?react";
+import LogisticsTransportation from "@/assets/vectors/LogisticsTransportation.svg?react";
 import ManagedService from "@/assets/vectors/ManagedService.svg?react";
 import MedicalSoftwareDevelopment from "@/assets/vectors/MedicalSoftwareDevelopment.svg?react";
 import MobileDevelopment from "@/assets/vectors/MobileDevelopment.svg?react";
 import MusickProduction from "@/assets/vectors/MusickProduction.svg?react";
 import OnlineBookingPlatforms from "@/assets/vectors/OnlineBookingPlatforms.svg?react";
 import OnlineContentCreation from "@/assets/vectors/OnlineContentCreation.svg?react";
+import PassengerTransportation from "@/assets/vectors/PassengerTransportation.svg?react";
 import PerformanceManagment from "@/assets/vectors/PerformanceManagment.svg?react";
 import RegenerativeMedicine from "@/assets/vectors/RegenerativeMedicine.svg?react";
 import ReqruitmentStaffing from "@/assets/vectors/ReqruitmentStaffing.svg?react";
@@ -35,6 +37,7 @@ import SoftwareAsService from "@/assets/vectors/SoftwareAsService.svg?react";
 import SupplyChain from "@/assets/vectors/SupplyChain.svg?react";
 import TaskManagment from "@/assets/vectors/TaskManagment.svg?react";
 import TreatmentManagment from "@/assets/vectors/TreatmentManagment.svg?react";
+import TratmentManagment from "@/assets/vectors/TreatmentManagment.svg?react";
 import VirtualMeeting from "@/assets/vectors/VirtualMeeting.svg?react";
 import MediaEntertainment from "@/assets/vectors/mediaEntertainment.svg?react";
 
@@ -95,23 +98,23 @@ export const servicesIndustriesConstants = {
   ],
   [ServicesIdConstants.DevOps]: [
     {
-      Icon: EventPlanningManagment,
+      Icon: LogisticsTransportation,
       title: "Logistics & Transportation",
     },
     {
-      Icon: MedicalSoftwareDevelopment,
+      Icon: PassengerTransportation,
       title: "Passenger Transportation",
     },
     {
-      Icon: MusickProduction,
+      Icon: RegenerativeMedicine,
       title: "Regenerative Medicine",
     },
     {
-      Icon: VirtualMeeting,
+      Icon: TratmentManagment,
       title: "Treatment Management",
     },
     {
-      Icon: FreightCargoServices,
+      Icon: DigitalHealt,
       title: "Digital Health Solutions",
     },
     {
@@ -349,7 +352,7 @@ export const servicesIndustriesConstants = {
       title: "Recruitment & Staffing",
     },
     {
-      Icon: HealthcareTechnology,
+      Icon: OnlineBookingPlatforms,
       title: "Healthcare Technology",
     },
   ],

@@ -21,11 +21,13 @@ import BackupRecovery from "@/assets/vectors/BackupRecovery.svg?react";
 import BrandAlignment from "@/assets/vectors/BrandAlignment.svg?react";
 import BugFixingErrorResolution from "@/assets/vectors/BugFixingErrorResolution.svg?react";
 import ClearCommunication from "@/assets/vectors/ClearCommunication.svg?react";
+import CodingPhase from "@/assets/vectors/CodingPhase.svg?react";
 import CompilanceSecurity from "@/assets/vectors/CompilanceSecurity.svg?react";
 import ComprehensiveSupport from "@/assets/vectors/ComprehensiveSupport.svg?react";
 import ConsistencyAcross from "@/assets/vectors/ConsistencyAcross.svg?react";
 import ConsistentSupport from "@/assets/vectors/ConsistentSupport.svg?react";
 import ContiniousMonitoring from "@/assets/vectors/ContiniousMonitoring.svg?react";
+import ContinousIntegration from "@/assets/vectors/ContinousIntegration.svg?react";
 import CostEfficiency from "@/assets/vectors/CostEfficiency.svg?react";
 import CreationOfTheModel from "@/assets/vectors/CreationOfTheModel.svg?react";
 import CustomStrategies from "@/assets/vectors/CustomStrategies.svg?react";
@@ -35,6 +37,7 @@ import CustomizedUserExperience from "@/assets/vectors/CustomizedUserExperience.
 import CuttingEdge from "@/assets/vectors/CuttingEdge.svg?react";
 import DataAccurancy from "@/assets/vectors/DataAccurancy.svg?react";
 import DataDrivenDecisions from "@/assets/vectors/DataDrivenDecisions.svg?react";
+import DeploymentOperation from "@/assets/vectors/DeploymentOperation.svg?react";
 import Devops from "@/assets/vectors/Devops.svg?react";
 import DigitalMarketing from "@/assets/vectors/DigitalMarketing.svg?react";
 import EfficientResource from "@/assets/vectors/EfficientResource.svg?react";
@@ -361,31 +364,31 @@ export const servicesConstants = [
     offers: [
       {
         title: "Planning Phase",
-        Icon: PC,
+        Icon: PlanningPase,
         description:
           "The architecture of every effective DevOps approach starts with strategic planning. We work with your team to identify objectives, implement an action plan, and share schedules/expectations to keep every party on the same page. This phase involves the decision of tools, definition of KPIs, and the definition of a plan for managing infrastructure.",
       },
       {
         title: "Coding Phase",
-        Icon: PC,
+        Icon: CodingPhase,
         description:
           "In the development phase, we include the principle of DevOps to encourage the developers to engage closely with the operation teams. Using version control systems and automation tools, the code is developed, reviewed, and integrated without much time and effort consumed and with the least chance of errors.",
       },
       {
         title: "Testing Phase",
-        Icon: PC,
+        Icon: TestingPhase,
         description:
           "Our DevOps process is centered upon automated testing. Testing procedures are integrated into the development process, being performed at all stages of software development to check the code and increase its quality and reliability. A good example is unit tests, integration tests and performance tests through which we are able to detect the problem areas at an early stage.",
       },
       {
         title: "Deployment, Operation & Monitoring Phase",
-        Icon: PC,
+        Icon: DeploymentOperation,
         description:
           "Using DevOps, we are able to deploy updates and features without much interruption to the user’s experience. After installation, we offer maintenance services that permits consistent monitoring of the application performance, security, or scalability with sophisticated tools for handling and amending any complications that may occur.",
       },
       {
         title: "Continuous Integration and Continuous Delivery (CI/CD)",
-        Icon: PC,
+        Icon: ContinousIntegration,
         description:
           "In the software development process, we use CI/CD pipelines to integrate the code, test it, and deploy it. This guarantees that changes are made quickly and efficiently. These CI/CD processes minimize the involvement of humans, making delivery cycles much quicker and efficient with no compromise to quality and performance.",
       },
