@@ -30,6 +30,7 @@ import RegenerativeMedicine from "@/assets/vectors/RegenerativeMedicine.svg?reac
 import SoftwareAsService from "@/assets/vectors/SoftwareAsService.svg?react";
 import SupplyChain from "@/assets/vectors/SupplyChain.svg?react";
 import TaskManagment from "@/assets/vectors/TaskManagment.svg?react";
+import TreatmentManagment from "@/assets/vectors/TreatmentManagment.svg?react";
 import VirtualMeeting from "@/assets/vectors/VirtualMeeting.svg?react";
 import MediaEntertainment from "@/assets/vectors/mediaEntertainment.svg?react";
 
@@ -272,19 +273,19 @@ export const servicesIndustriesConstants = {
   ],
   [ServicesIdConstants.ProjectManagement]: [
     {
-      Icon: EventPlanningManagment,
+      Icon: MusickProduction,
       title: "Music Production & Sound Design",
     },
     {
-      Icon: MedicalSoftwareDevelopment,
+      Icon: SupplyChain,
       title: "Supply Chain Management",
     },
     {
-      Icon: MusickProduction,
+      Icon: ManagedService,
       title: "Managed Service Providers (MSPs)",
     },
     {
-      Icon: VirtualMeeting,
+      Icon: TreatmentManagment,
       title: "Treatment Management",
     },
     {
@@ -292,7 +293,7 @@ export const servicesIndustriesConstants = {
       title: "Freight & Cargo Services",
     },
     {
-      Icon: OnlineBookingPlatforms,
+      Icon: ArtificialIntelligence,
       title: "Artificial Intelligence (AI)",
     },
   ],

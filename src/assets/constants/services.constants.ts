@@ -17,17 +17,21 @@ import AdvancedAI from "@/assets/vectors/AdvancedAI.svg?react";
 import AdvancedTools from "@/assets/vectors/AdvancedTools.svg?react";
 import BackupRecovery from "@/assets/vectors/BackupRecovery.svg?react";
 import BugFixingErrorResolution from "@/assets/vectors/BugFixingErrorResolution.svg?react";
+import ClearCommunication from "@/assets/vectors/ClearCommunication.svg?react";
 import CompilanceSecurity from "@/assets/vectors/CompilanceSecurity.svg?react";
 import ConsistencyAcross from "@/assets/vectors/ConsistencyAcross.svg?react";
 import ConsistentSupport from "@/assets/vectors/ConsistentSupport.svg?react";
+import ContiniousMonitoring from "@/assets/vectors/ContiniousMonitoring.svg?react";
 import CostEfficiency from "@/assets/vectors/CostEfficiency.svg?react";
 import CreationOfTheModel from "@/assets/vectors/CreationOfTheModel.svg?react";
 import CustomerSupport from "@/assets/vectors/CustomerSupport.svg?react";
+import CustomizedProject from "@/assets/vectors/CustomizedProject.svg?react";
 import CustomizedUserExperience from "@/assets/vectors/CustomizedUserExperience.svg?react";
 import CuttingEdge from "@/assets/vectors/CuttingEdge.svg?react";
 import DataAccurancy from "@/assets/vectors/DataAccurancy.svg?react";
 import Devops from "@/assets/vectors/Devops.svg?react";
 import DigitalMarketing from "@/assets/vectors/DigitalMarketing.svg?react";
+import EfficientResource from "@/assets/vectors/EfficientResource.svg?react";
 import ExeptionalPerformance from "@/assets/vectors/ExeptionalPerformance.svg?react";
 import Exquisite from "@/assets/vectors/Exquisite.svg?react";
 import FlexibalityScalability from "@/assets/vectors/FlexibalityScalability.svg?react";
@@ -47,6 +51,7 @@ import ProactiveRisk from "@/assets/vectors/ProactiveRisk.svg?react";
 import QualityConsistency from "@/assets/vectors/QualityConsistency.svg?react";
 import QualityFirst from "@/assets/vectors/QualityFirst.svg?react";
 import RegularUpdates from "@/assets/vectors/RegularUpdates.svg?react";
+import RiskMitigation from "@/assets/vectors/RiskMitigation.svg?react";
 import Robot from "@/assets/vectors/Robot.svg?react";
 import SecurityFirst from "@/assets/vectors/SecurityFirst.svg?react";
 import Settings from "@/assets/vectors/Settings.svg?react";
@@ -59,6 +64,7 @@ import TechnicalAssessment from "@/assets/vectors/TechnicalAssessment.svg?react"
 import TestingPhase from "@/assets/vectors/TestingPhase.svg?react";
 import ThroughEvolution from "@/assets/vectors/ThroughEvolution.svg?react";
 import TimelyData from "@/assets/vectors/TimelyData.svg?react";
+import TimelyDelivery from "@/assets/vectors/TimelyDelivery.svg?react";
 import Trust from "@/assets/vectors/Trust.svg?react";
 import TrustAndPartnerShip from "@/assets/vectors/TrustAndPartnerShip.svg?react";
 import TrustOwnership from "@/assets/vectors/TrustOwnership.svg?react";
@@ -1054,37 +1060,37 @@ export const servicesConstants = [
     offers: [
       {
         title: "Clear Communication",
-        Icon: PC,
+        Icon: ClearCommunication,
         description:
           "This policy emphasizes clear communication at all points that are inherent in the project implementation process.",
       },
       {
         title: "Customized Project Plans",
-        Icon: PC,
+        Icon: CustomizedProject,
         description:
           "All projects are different, and thus we manage each IT project according to the objectives, requirements, and challenges involved.",
       },
       {
         title: "Risk Mitigation",
-        Icon: PC,
+        Icon: RiskMitigation,
         description:
           "Risks are continuously identified and managed by our project managers so as to allow your project not to be extended for any reasons.",
       },
       {
         title: "Efficient Resource Management",
-        Icon: PC,
+        Icon: EfficientResource,
         description:
           "We are good at managing resources by ensuring that the right team and the right amount of money is spent to ensure efficiency without wastage.",
       },
       {
         title: "Timely Delivery",
-        Icon: PC,
+        Icon: TimelyDelivery,
         description:
           "We always maintain close deadlines, this way guaranteeing on-time delivery of your project without compromising on quality.",
       },
       {
         title: "Continuous Monitoring & Feedback",
-        Icon: PC,
+        Icon: ContiniousMonitoring,
         description:
           "We carry out constant control and monitoring measures and always look forward to receiving feedback from the stakeholders so that the project can go on and can change whenever it has to.",
       },
