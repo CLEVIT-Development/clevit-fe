@@ -20,6 +20,7 @@ import BugFixingErrorResolution from "@/assets/vectors/BugFixingErrorResolution.
 import CompilanceSecurity from "@/assets/vectors/CompilanceSecurity.svg?react";
 import ConsistencyAcross from "@/assets/vectors/ConsistencyAcross.svg?react";
 import ConsistentSupport from "@/assets/vectors/ConsistentSupport.svg?react";
+import CostEfficiency from "@/assets/vectors/CostEfficiency.svg?react";
 import CreationOfTheModel from "@/assets/vectors/CreationOfTheModel.svg?react";
 import CustomerSupport from "@/assets/vectors/CustomerSupport.svg?react";
 import CustomizedUserExperience from "@/assets/vectors/CustomizedUserExperience.svg?react";
@@ -29,9 +30,11 @@ import Devops from "@/assets/vectors/Devops.svg?react";
 import DigitalMarketing from "@/assets/vectors/DigitalMarketing.svg?react";
 import ExeptionalPerformance from "@/assets/vectors/ExeptionalPerformance.svg?react";
 import Exquisite from "@/assets/vectors/Exquisite.svg?react";
+import FlexibalityScalability from "@/assets/vectors/FlexibalityScalability.svg?react";
 import Flexibility from "@/assets/vectors/Flexibility.svg?react";
 import IndividualizedUzers from "@/assets/vectors/IndividualizedUser.svg?react";
 import InformationPreparation from "@/assets/vectors/InformationPreparation.svg?react";
+import OngoingSupport from "@/assets/vectors/OngoingSupport.svg?react";
 import OptimizationPhase from "@/assets/vectors/OptimizationPhase.svg?react";
 import Originality from "@/assets/vectors/Originality.svg?react";
 import Outstaffing from "@/assets/vectors/Outstaffing.svg?react";
@@ -51,6 +54,7 @@ import SuitableSolutions from "@/assets/vectors/SuitableSolutions.svg?react";
 import Support from "@/assets/vectors/Support.svg?react";
 import SupportIcon from "@/assets/vectors/SupportIcon.svg?react";
 import TailoredSolutions from "@/assets/vectors/TailoredSolutions.svg?react";
+import TailoredTalents from "@/assets/vectors/TailoredTalents.svg?react";
 import TechnicalAssessment from "@/assets/vectors/TechnicalAssessment.svg?react";
 import TestingPhase from "@/assets/vectors/TestingPhase.svg?react";
 import ThroughEvolution from "@/assets/vectors/ThroughEvolution.svg?react";
@@ -67,7 +71,7 @@ import { singlePageAIProcessesConstants } from "./processes/singlePageAIProcess.
 import { singlePageDataQualityAssuranceProcessesConstants } from "./processes/singlePageDataQualityAssuranceProcess.constants";
 import { singlePageDevopsProcessesConstants } from "./processes/singlePageDevopsProcess.constants";
 import { singlePageDigitalMarketingProcessesConstants } from "./processes/singlePageDigitalMarketingProcess.constants";
-import { singlePageItOutsidingProcessesConstants } from "./processes/singlePageItOutsidingProcess.constants";
+import { singlePageItOutsidingProcessesConstants } from "./processes/singlePageItOutstaffingProcess.constants";
 import { singlePageItProjectManagmentProcessesConstants } from "./processes/singlePageItProjectManagmentProcess.constants";
 import { singlePageMLProcessesConstants } from "./processes/singlePageMLProcess.constants";
 import { singlePageMaintenceProcessesConstants } from "./processes/singlePageMaintenceProcess.constants";
@@ -944,37 +948,37 @@ export const servicesConstants = [
     offers: [
       {
         title: "Tailored Talent Matching",
-        Icon: PC,
+        Icon: TailoredTalents,
         description:
           "We offer IT contractors according to your project needs, guaranteeing a personnel checklist that will improve the vocation and expertise needed to carry out the project.",
       },
       {
         title: "Flexibility & Scalability",
-        Icon: PC,
+        Icon: FlexibalityScalability,
         description:
           "In outstaffing, we can adjust the number of employees working on your project, which makes it easy for you to expand or scale down your team at any time.",
       },
       {
         title: "Commitment to Quality",
-        Icon: PC,
+        Icon: QualityFirst,
         description:
           "The quality of our services is kept high, and we only hire the best workers, making sure that all members of our team are qualified.",
       },
       {
         title: "Trust & Reliability",
-        Icon: PC,
+        Icon: TrustOwnership,
         description:
           "We understand your success is our success. Outstaffing means building long-term relationships with the client and providing stable and effective work of the outstaffed specialist.",
       },
       {
         title: "Cost Efficiency",
-        Icon: PC,
+        Icon: CostEfficiency,
         description:
           "By opting for outstaffing services from us, you do not have to spend on recruitment, employee benefits, and overheads, and yet you get the best IT professionals.",
       },
       {
         title: "Ongoing Support",
-        Icon: PC,
+        Icon: OngoingSupport,
         description:
           "Our team is actively engaged standing by to support and facilitate the work of the in-house team and the outstaffed professionals.",
       },

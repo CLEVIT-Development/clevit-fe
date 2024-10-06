@@ -2,11 +2,13 @@ import AppoimentShedule from "@/assets/vectors/AppoimentShedule.svg?react";
 import AppointmentSheduling from "@/assets/vectors/AppointmentSheduling.svg?react";
 import ArtificialIntelligence from "@/assets/vectors/ArtificialInteligence.svg?react";
 import Automation from "@/assets/vectors/Automation.svg?react";
+import AutomationWorkflow from "@/assets/vectors/AutomationWorkflow.svg?react";
 import BonusCalculation from "@/assets/vectors/BonusCalculation.svg?react";
 import ClinicAndLab from "@/assets/vectors/ClinicAndLab.svg?react";
 import CommercialAdvertising from "@/assets/vectors/CommercialAdvertising.svg?react";
 import Cybersecurity from "@/assets/vectors/Cybersecurity.svg?react";
 import DashboardDevelopment from "@/assets/vectors/DashboardDevelopment.svg?react";
+import DashboardDevelopmentPc from "@/assets/vectors/DashboardDevelopmentPc.svg?react";
 import DataAnalistics from "@/assets/vectors/DataAnalitics.svg?react";
 import DigitalHealt from "@/assets/vectors/DigitalHealt.svg?react";
 import DigitalIntegration from "@/assets/vectors/DigitalIntegration.svg?react";
@@ -18,17 +20,18 @@ import HealthcareTechnology from "@/assets/vectors/HealthcareTechnology.svg?reac
 import Hospetality from "@/assets/vectors/Hospetality.svg?react";
 import ITServicesITConsulting from "@/assets/vectors/ITServices&ITConsulting.svg?react";
 import Insurance from "@/assets/vectors/Insurance.svg?react";
+import ManagedService from "@/assets/vectors/ManagedService.svg?react";
 import MedicalSoftwareDevelopment from "@/assets/vectors/MedicalSoftwareDevelopment.svg?react";
 import MusickProduction from "@/assets/vectors/MusickProduction.svg?react";
 import OnlineBookingPlatforms from "@/assets/vectors/OnlineBookingPlatforms.svg?react";
+import OnlineContentCreation from "@/assets/vectors/OnlineContentCreation.svg?react";
 import PerformanceManagment from "@/assets/vectors/PerformanceManagment.svg?react";
+import RegenerativeMedicine from "@/assets/vectors/RegenerativeMedicine.svg?react";
 import SoftwareAsService from "@/assets/vectors/SoftwareAsService.svg?react";
 import SupplyChain from "@/assets/vectors/SupplyChain.svg?react";
 import TaskManagment from "@/assets/vectors/TaskManagment.svg?react";
 import VirtualMeeting from "@/assets/vectors/VirtualMeeting.svg?react";
-import ManagedService from "@/assets/vectors/VirtualMeeting.svg?react";
 import MediaEntertainment from "@/assets/vectors/mediaEntertainment.svg?react";
-import AutomationWorkflow from "@/assets/vectors/mediaEntertainment.svg?react";
 
 import { ServicesIdConstants } from "./services-id.constants";
 
@@ -243,7 +246,7 @@ export const servicesIndustriesConstants = {
   ],
   [ServicesIdConstants.OutStaffing]: [
     {
-      Icon: EventPlanningManagment,
+      Icon: DigitalHealt,
       title: "Digital Health Solutions",
     },
     {
@@ -251,11 +254,11 @@ export const servicesIndustriesConstants = {
       title: "Medical Software Development",
     },
     {
-      Icon: MusickProduction,
+      Icon: OnlineContentCreation,
       title: "Online Content Creation",
     },
     {
-      Icon: VirtualMeeting,
+      Icon: DashboardDevelopmentPc,
       title: "Dashboard Development",
     },
     {
@@ -263,7 +266,7 @@ export const servicesIndustriesConstants = {
       title: "Freight & Cargo Services",
     },
     {
-      Icon: OnlineBookingPlatforms,
+      Icon: RegenerativeMedicine,
       title: "Regenerative Medicine",
     },
   ],
