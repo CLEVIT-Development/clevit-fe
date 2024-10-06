@@ -1,58 +1,53 @@
 import { lazy } from "react";
 
-const DiscoveryAndPlanningIcon = lazy(
-  () => import("@/assets/vectors/processes/DiscoveryAndPlanning.svg?react")
+const DesignIterationIcon = lazy(
+  () => import("@/assets/vectors/processes/DesignIteration.svg?react")
 );
-const OutomationOrchestrationIcon = lazy(
-  () => import("@/assets/vectors/processes/OutomationOrchestration.svg?react")
-);
-const MonitoringPerformanceIcon = lazy(
-  () => import("@/assets/vectors/processes/MonitoringPerformance.svg?react")
-);
-const ContinousIntegrationIcon = lazy(
-  () => import("@/assets/vectors/processes/ContinousIntegration.svg?react")
-);
+const VisualDesigneIcon = lazy(() => import("@/assets/vectors/processes/VisualDesigne.svg?react"));
 const InfrostructureSetupIcon = lazy(
   () => import("@/assets/vectors/processes/InfrostructureSetup.svg?react")
 );
-const SecurityCompilanceIcon = lazy(
-  () => import("@/assets/vectors/processes/SecurityCompilance.svg?react")
+const WireframingPrototypingIcon = lazy(
+  () => import("@/assets/vectors/processes/WireframingPrototyping.svg?react")
+);
+const FinaleImplementationIcon = lazy(
+  () => import("@/assets/vectors/processes/FinaleImplementation.svg?react")
 );
 
 export const singlePageUIUXProcessesConstants = [
   {
     id: 1,
-    Icon: DiscoveryAndPlanningIcon,
+    Icon: InfrostructureSetupIcon,
     title: "Initial User Research",
     description: "",
   },
   {
     id: 2,
-    Icon: InfrostructureSetupIcon,
+    Icon: WireframingPrototypingIcon,
     title: "Wireframing & Prototyping",
     description: "",
   },
   {
     id: 3,
-    Icon: ContinousIntegrationIcon,
+    Icon: VisualDesigneIcon,
     title: "Visual Design",
     description: "",
   },
   {
     id: 4,
-    Icon: OutomationOrchestrationIcon,
+    Icon: VisualDesigneIcon,
     title: "Usability Testing",
     description: "",
   },
   {
     id: 5,
-    Icon: MonitoringPerformanceIcon,
+    Icon: DesignIterationIcon,
     title: "Design Iteration",
     description: "",
   },
   {
     id: 6,
-    Icon: SecurityCompilanceIcon,
+    Icon: FinaleImplementationIcon,
     title: "Final Implementation",
     description: "",
   },

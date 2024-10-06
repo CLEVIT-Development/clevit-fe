@@ -4,6 +4,7 @@ import ArtificialIntelligence from "@/assets/vectors/ArtificialInteligence.svg?r
 import Automation from "@/assets/vectors/Automation.svg?react";
 import AutomationWorkflow from "@/assets/vectors/AutomationWorkflow.svg?react";
 import BonusCalculation from "@/assets/vectors/BonusCalculation.svg?react";
+import CareerDevelopment from "@/assets/vectors/CareerDevelopment.svg?react";
 import ClinicAndLab from "@/assets/vectors/ClinicAndLab.svg?react";
 import CommercialAdvertising from "@/assets/vectors/CommercialAdvertising.svg?react";
 import Cybersecurity from "@/assets/vectors/Cybersecurity.svg?react";
@@ -12,6 +13,7 @@ import DashboardDevelopmentPc from "@/assets/vectors/DashboardDevelopmentPc.svg?
 import DataAnalistics from "@/assets/vectors/DataAnalitics.svg?react";
 import DigitalHealt from "@/assets/vectors/DigitalHealt.svg?react";
 import DigitalIntegration from "@/assets/vectors/DigitalIntegration.svg?react";
+import EducationTraning from "@/assets/vectors/EducationTraning.svg?react";
 import EmployeeEvolution from "@/assets/vectors/EmployeeEvolution.svg?react";
 import EventPlanningManagment from "@/assets/vectors/EventPlanningManagment.svg?react";
 import FilmProduction from "@/assets/vectors/FilmProduction.svg?react";
@@ -22,6 +24,7 @@ import ITServicesITConsulting from "@/assets/vectors/ITServices&ITConsulting.svg
 import Insurance from "@/assets/vectors/Insurance.svg?react";
 import ManagedService from "@/assets/vectors/ManagedService.svg?react";
 import MedicalSoftwareDevelopment from "@/assets/vectors/MedicalSoftwareDevelopment.svg?react";
+import MobileDevelopment from "@/assets/vectors/MobileDevelopment.svg?react";
 import MusickProduction from "@/assets/vectors/MusickProduction.svg?react";
 import OnlineBookingPlatforms from "@/assets/vectors/OnlineBookingPlatforms.svg?react";
 import OnlineContentCreation from "@/assets/vectors/OnlineContentCreation.svg?react";
@@ -299,27 +302,27 @@ export const servicesIndustriesConstants = {
   ],
   [ServicesIdConstants.Design]: [
     {
-      Icon: EventPlanningManagment,
+      Icon: EducationTraning,
       title: "Education & Training",
     },
     {
-      Icon: MedicalSoftwareDevelopment,
+      Icon: ArtificialIntelligence,
       title: "Artificial Intelligence (AI)",
     },
     {
-      Icon: MusickProduction,
+      Icon: SoftwareAsService,
       title: "Software as a Service (SaaS)",
     },
     {
-      Icon: VirtualMeeting,
+      Icon: MobileDevelopment,
       title: "Mobile Application Development",
     },
     {
-      Icon: FreightCargoServices,
-      title: "FCareer Development",
+      Icon: CareerDevelopment,
+      title: "Career Development",
     },
     {
-      Icon: OnlineBookingPlatforms,
+      Icon: ClinicAndLab,
       title: "Clinic & Lab Management",
     },
   ],

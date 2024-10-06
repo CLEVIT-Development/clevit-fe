@@ -12,10 +12,12 @@ import SupportMaintenance from "@/assets/images/services/Support&Maintenance.png
 import TechnicalAssessmentImage from "@/assets/images/services/TechnicalAssessmentImage.png";
 import UIUXDesigne from "@/assets/images/services/UIUXDesigne.png";
 import WebDevelopmentOverviewImage from "@/assets/images/services/WebDevelopmentOverview.png";
+import Accessibility from "@/assets/vectors/Accessibility.svg?react";
 import AdaptiveAiSolutions from "@/assets/vectors/AdaptiveAiSolutions.svg?react";
 import AdvancedAI from "@/assets/vectors/AdvancedAI.svg?react";
 import AdvancedTools from "@/assets/vectors/AdvancedTools.svg?react";
 import BackupRecovery from "@/assets/vectors/BackupRecovery.svg?react";
+import BrandAlignment from "@/assets/vectors/BrandAlignment.svg?react";
 import BugFixingErrorResolution from "@/assets/vectors/BugFixingErrorResolution.svg?react";
 import ClearCommunication from "@/assets/vectors/ClearCommunication.svg?react";
 import CompilanceSecurity from "@/assets/vectors/CompilanceSecurity.svg?react";
@@ -38,6 +40,8 @@ import FlexibalityScalability from "@/assets/vectors/FlexibalityScalability.svg?
 import Flexibility from "@/assets/vectors/Flexibility.svg?react";
 import IndividualizedUzers from "@/assets/vectors/IndividualizedUser.svg?react";
 import InformationPreparation from "@/assets/vectors/InformationPreparation.svg?react";
+import InovationCreativity from "@/assets/vectors/InovationCreativity.svg?react";
+import IterativeImprovement from "@/assets/vectors/IterativeImprovement.svg?react";
 import OngoingSupport from "@/assets/vectors/OngoingSupport.svg?react";
 import OptimizationPhase from "@/assets/vectors/OptimizationPhase.svg?react";
 import Originality from "@/assets/vectors/Originality.svg?react";
@@ -70,6 +74,7 @@ import TrustAndPartnerShip from "@/assets/vectors/TrustAndPartnerShip.svg?react"
 import TrustOwnership from "@/assets/vectors/TrustOwnership.svg?react";
 import TrustTransparency from "@/assets/vectors/TrustTransparency.svg?react";
 import UIUX from "@/assets/vectors/UIUX.svg?react";
+import UserCenteredApproach from "@/assets/vectors/UserCenteredApproach.svg?react";
 import PC from "@/assets/vectors/processes/PC.svg?react";
 import Security from "@/assets/vectors/processes/Security.svg?react";
 
@@ -1166,37 +1171,37 @@ export const servicesConstants = [
     offers: [
       {
         title: "User-Centered Approach",
-        Icon: PC,
+        Icon: UserCenteredApproach,
         description:
           "So at Clevit, the design process always has the intent of putting the user first. Analyzing users’ interactions with designs, we focus on improving usability, engagement, and satisfaction.",
       },
       {
         title: "Consistency Across Platforms",
-        Icon: PC,
+        Icon: ConsistencyAcross,
         description:
           "Design persistence selected for the mobile devices is another important factor. That way, the look, feel, and functionality stay consistent even when running on mobile, web, or standalone on the desktop.",
       },
       {
         title: "Innovation and Creativity",
-        Icon: PC,
+        Icon: InovationCreativity,
         description:
           "Our design team is up to date with the current trends, technologies and even the best practices and strategies that will make your design outstanding and distinctive from other brands.",
       },
       {
         title: "Brand Alignment",
-        Icon: PC,
+        Icon: BrandAlignment,
         description:
           "This strategy helps us maintain first and foremost the perspective on your brand’s values, its tone, and its identity to allow the design to be in accordance with your business vision and its messaging arm.",
       },
       {
         title: "Accessibility",
-        Icon: PC,
+        Icon: Accessibility,
         description:
           "We ensure that all designs are made to support the differently abled individual so that the experience of the design is easy to follow for every person that would be accessing it.",
       },
       {
         title: "Iterative Improvement",
-        Icon: PC,
+        Icon: IterativeImprovement,
         description:
           "Everyone that is part of our team is focused on personal and organizational development. Since its launch, we run several tests and collect data from the customers then update the design for better performance and user experience.",
       },
