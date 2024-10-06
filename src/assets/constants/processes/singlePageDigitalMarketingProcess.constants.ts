@@ -1,58 +1,54 @@
 import { lazy } from "react";
 
-const DiscoveryAndPlanningIcon = lazy(
-  () => import("@/assets/vectors/processes/DiscoveryAndPlanning.svg?react")
+const InitialMarketingIcon = lazy(
+  () => import("@/assets/vectors/processes/InitialMarketing.svg?react")
 );
-const OutomationOrchestrationIcon = lazy(
-  () => import("@/assets/vectors/processes/OutomationOrchestration.svg?react")
+const ContentCreationMarketingIcon = lazy(
+  () => import("@/assets/vectors/processes/ContentCreationMarketing.svg?react")
 );
-const MonitoringPerformanceIcon = lazy(
-  () => import("@/assets/vectors/processes/MonitoringPerformance.svg?react")
+const WebsiteAuditsIcon = lazy(() => import("@/assets/vectors/processes/WebsiteAudits.svg?react"));
+const PPCCompaignIcon = lazy(() => import("@/assets/vectors/processes/PPCCompaign.svg?react"));
+const TogglePageOptimizationIcon = lazy(
+  () => import("@/assets/vectors/processes/TogglePageOptimization.svg?react")
 );
-const ContinousIntegrationIcon = lazy(
-  () => import("@/assets/vectors/processes/ContinousIntegration.svg?react")
-);
-const InfrostructureSetupIcon = lazy(
-  () => import("@/assets/vectors/processes/InfrostructureSetup.svg?react")
-);
-const SecurityCompilanceIcon = lazy(
-  () => import("@/assets/vectors/processes/SecurityCompilance.svg?react")
+const AnalyticsReportingIcon = lazy(
+  () => import("@/assets/vectors/processes/AnalyticsReporting.svg?react")
 );
 
 export const singlePageDigitalMarketingProcessesConstants = [
   {
     id: 1,
-    Icon: DiscoveryAndPlanningIcon,
+    Icon: InitialMarketingIcon,
     title: "Initial Market Research & Strategy Development",
     description: "",
   },
   {
     id: 2,
-    Icon: InfrostructureSetupIcon,
+    Icon: TogglePageOptimizationIcon,
     title: "On-Page and Off-Page SEO Optimization",
     description: "",
   },
   {
     id: 3,
-    Icon: ContinousIntegrationIcon,
+    Icon: PPCCompaignIcon,
     title: "PPC Campaign Setup and Monitoring",
     description: "",
   },
   {
     id: 4,
-    Icon: OutomationOrchestrationIcon,
+    Icon: ContentCreationMarketingIcon,
     title: "Content Creation and Marketing",
     description: "",
   },
   {
     id: 5,
-    Icon: MonitoringPerformanceIcon,
+    Icon: WebsiteAuditsIcon,
     title: "Website Audits and Technical SEO",
     description: "",
   },
   {
     id: 6,
-    Icon: SecurityCompilanceIcon,
+    Icon: AnalyticsReportingIcon,
     title: "Analytics, Reporting & Continuous Optimization",
     description: "",
   },

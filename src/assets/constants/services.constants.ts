@@ -13,6 +13,7 @@ import TechnicalAssessmentImage from "@/assets/images/services/TechnicalAssessme
 import UIUXDesigne from "@/assets/images/services/UIUXDesigne.png";
 import WebDevelopmentOverviewImage from "@/assets/images/services/WebDevelopmentOverview.png";
 import Accessibility from "@/assets/vectors/Accessibility.svg?react";
+import AdaptabilityInnovation from "@/assets/vectors/AdaptabilityInnovation.svg?react";
 import AdaptiveAiSolutions from "@/assets/vectors/AdaptiveAiSolutions.svg?react";
 import AdvancedAI from "@/assets/vectors/AdvancedAI.svg?react";
 import AdvancedTools from "@/assets/vectors/AdvancedTools.svg?react";
@@ -21,16 +22,19 @@ import BrandAlignment from "@/assets/vectors/BrandAlignment.svg?react";
 import BugFixingErrorResolution from "@/assets/vectors/BugFixingErrorResolution.svg?react";
 import ClearCommunication from "@/assets/vectors/ClearCommunication.svg?react";
 import CompilanceSecurity from "@/assets/vectors/CompilanceSecurity.svg?react";
+import ComprehensiveSupport from "@/assets/vectors/ComprehensiveSupport.svg?react";
 import ConsistencyAcross from "@/assets/vectors/ConsistencyAcross.svg?react";
 import ConsistentSupport from "@/assets/vectors/ConsistentSupport.svg?react";
 import ContiniousMonitoring from "@/assets/vectors/ContiniousMonitoring.svg?react";
 import CostEfficiency from "@/assets/vectors/CostEfficiency.svg?react";
 import CreationOfTheModel from "@/assets/vectors/CreationOfTheModel.svg?react";
+import CustomStrategies from "@/assets/vectors/CustomStrategies.svg?react";
 import CustomerSupport from "@/assets/vectors/CustomerSupport.svg?react";
 import CustomizedProject from "@/assets/vectors/CustomizedProject.svg?react";
 import CustomizedUserExperience from "@/assets/vectors/CustomizedUserExperience.svg?react";
 import CuttingEdge from "@/assets/vectors/CuttingEdge.svg?react";
 import DataAccurancy from "@/assets/vectors/DataAccurancy.svg?react";
+import DataDrivenDecisions from "@/assets/vectors/DataDrivenDecisions.svg?react";
 import Devops from "@/assets/vectors/Devops.svg?react";
 import DigitalMarketing from "@/assets/vectors/DigitalMarketing.svg?react";
 import EfficientResource from "@/assets/vectors/EfficientResource.svg?react";
@@ -38,6 +42,7 @@ import ExeptionalPerformance from "@/assets/vectors/ExeptionalPerformance.svg?re
 import Exquisite from "@/assets/vectors/Exquisite.svg?react";
 import FlexibalityScalability from "@/assets/vectors/FlexibalityScalability.svg?react";
 import Flexibility from "@/assets/vectors/Flexibility.svg?react";
+import FocusOnROI from "@/assets/vectors/FocusOnROI.svg?react";
 import IndividualizedUzers from "@/assets/vectors/IndividualizedUser.svg?react";
 import InformationPreparation from "@/assets/vectors/InformationPreparation.svg?react";
 import InovationCreativity from "@/assets/vectors/InovationCreativity.svg?react";
@@ -69,6 +74,7 @@ import TestingPhase from "@/assets/vectors/TestingPhase.svg?react";
 import ThroughEvolution from "@/assets/vectors/ThroughEvolution.svg?react";
 import TimelyData from "@/assets/vectors/TimelyData.svg?react";
 import TimelyDelivery from "@/assets/vectors/TimelyDelivery.svg?react";
+import TransparencyCommunication from "@/assets/vectors/TransparencyCommunication.svg?react";
 import Trust from "@/assets/vectors/Trust.svg?react";
 import TrustAndPartnerShip from "@/assets/vectors/TrustAndPartnerShip.svg?react";
 import TrustOwnership from "@/assets/vectors/TrustOwnership.svg?react";
@@ -1280,37 +1286,37 @@ export const servicesConstants = [
     offers: [
       {
         title: "Data-Driven Decisions",
-        Icon: PC,
+        Icon: DataDrivenDecisions,
         description:
           "At Clevit, we work with real facts – this means that all our decisions are informed. Metrics, performance and user behaviors help us to adapt and optimize our digital marketing strategies over time.",
       },
       {
         title: "Custom Strategies for Your Business",
-        Icon: PC,
+        Icon: CustomStrategies,
         description:
           "Every company’s marketing requirements are unique and so therefore are our marketing strategies. For your targeted needs, we develop specific plans with the purpose of either generating brand recognition, sales and more.",
       },
       {
         title: "Focus on ROI",
-        Icon: PC,
+        Icon: FocusOnROI,
         description:
           "It thereby becomes our goal to guarantee that every dollar you spend on marketing brings you value. Ensuring that our clients get good return on their investments is our major goal in the running of each campaign.",
       },
       {
         title: "Transparency and Communication",
-        Icon: PC,
+        Icon: TransparencyCommunication,
         description:
           "It is therefore our policy to have these forms of communication with our clients, unencumbered and without pretensions. You will receive updates on our reports, analyses and strategies so that you are constantly aware of what we are doing for you.",
       },
       {
         title: "Adaptability & Innovation",
-        Icon: PC,
+        Icon: AdaptabilityInnovation,
         description:
           "WIt is also important to understand that the context of the digital is changing all the time. We maintain currency by also implementing current trends and tools which makes your marketing strategy to be on trend.",
       },
       {
         title: "Comprehensive Support",
-        Icon: PC,
+        Icon: ComprehensiveSupport,
         description:
           "Whether you’re looking to get to the top of search engine results or set up an effective paid advertising campaign, develop analytics or create content marketing strategies, we can assist you with all of your digital marketing needs.",
       },

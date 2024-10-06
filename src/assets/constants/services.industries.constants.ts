@@ -30,6 +30,7 @@ import OnlineBookingPlatforms from "@/assets/vectors/OnlineBookingPlatforms.svg?
 import OnlineContentCreation from "@/assets/vectors/OnlineContentCreation.svg?react";
 import PerformanceManagment from "@/assets/vectors/PerformanceManagment.svg?react";
 import RegenerativeMedicine from "@/assets/vectors/RegenerativeMedicine.svg?react";
+import ReqruitmentStaffing from "@/assets/vectors/ReqruitmentStaffing.svg?react";
 import SoftwareAsService from "@/assets/vectors/SoftwareAsService.svg?react";
 import SupplyChain from "@/assets/vectors/SupplyChain.svg?react";
 import TaskManagment from "@/assets/vectors/TaskManagment.svg?react";
@@ -328,31 +329,27 @@ export const servicesIndustriesConstants = {
   ],
   [ServicesIdConstants.Marketing]: [
     {
-      Icon: EventPlanningManagment,
+      Icon: DigitalHealt,
       title: "Digital Health Solutions",
     },
     {
-      Icon: MedicalSoftwareDevelopment,
+      Icon: OnlineContentCreation,
       title: "Online Content Creation",
     },
     {
-      Icon: MusickProduction,
+      Icon: OnlineBookingPlatforms,
       title: "Online Booking Platforms",
     },
     {
-      Icon: VirtualMeeting,
-      title: "Online Booking Platforms",
-    },
-    {
-      Icon: FreightCargoServices,
+      Icon: CommercialAdvertising,
       title: "Commercial Advertising",
     },
     {
-      Icon: OnlineBookingPlatforms,
+      Icon: ReqruitmentStaffing,
       title: "Recruitment & Staffing",
     },
     {
-      Icon: OnlineBookingPlatforms,
+      Icon: HealthcareTechnology,
       title: "Healthcare Technology",
     },
   ],
