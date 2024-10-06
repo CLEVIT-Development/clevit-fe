@@ -99,7 +99,10 @@ const SingleServiceSection = ({ serviceId, setHeaderItems }: SingleServiceSectio
         </div>
       </div>
       <div className="py-24 w-full">
-        <ProcessSection processes={service.servicesProcesses} />
+        <ProcessSection
+          processes={service.servicesProcesses}
+          processTitle={service.processMainTitle}
+        />
       </div>
       <FeedbackSection className="w-full" />
       <div className="flex flex-col gap-20 items-center pt-24">

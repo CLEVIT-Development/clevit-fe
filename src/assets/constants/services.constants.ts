@@ -218,6 +218,7 @@ export const servicesConstants = [
         "Ensure your website runs smoothly and securely with our comprehensive maintenance services.",
     },
     servicesProcesses: singlePageWebDevelopmentProcessesConstants,
+    processMainTitle: "Our Development Process",
     ChooseClevitTitle: "Why Choose Clevit for Web Development?",
     ChooseClevitRecomendation: [
       {
@@ -313,6 +314,7 @@ export const servicesConstants = [
       description: "Contact Us Now to Start Building a Custom App for Your Business.",
     },
     servicesProcesses: singlePageMobileDevelopmentProcessesConstants,
+    processMainTitle: "Processes We Follow",
     ChooseClevitTitle: "Why Choose Clevit for Mobile App Development?",
     ChooseClevitRecomendation: [
       {
@@ -405,6 +407,7 @@ export const servicesConstants = [
       description: "Contact Us Today to Start Building Your Custom Website.",
     },
     servicesProcesses: singlePageDevopsProcessesConstants,
+    processMainTitle: "Processes We Follow",
     ChooseClevitTitle: "Why Choose Clevit for DevOps Services?",
     ChooseClevitRecomendation: [
       {
@@ -495,6 +498,7 @@ export const servicesConstants = [
       title: "Unlock the Power of AI for Your Business",
       description: "Explore Custom Integration Solutions Tailored to Your Needs.",
     },
+    processMainTitle: "Processes We Follow",
     ChooseClevitTitle: "Why Choose Clevit for AI Integration?",
     servicesProcesses: singlePageAIProcessesConstants,
     ChooseClevitRecomendation: [
@@ -600,6 +604,7 @@ export const servicesConstants = [
         "Discover how our custom ML solutions can drive innovation and efficiency in your business.",
     },
     servicesProcesses: singlePageMLProcessesConstants,
+    processMainTitle: "Processes We Follow",
     ChooseClevitTitle: "Why Choose Clevit for AI Integration Services?",
     ChooseClevitRecomendation: [
       {
@@ -710,6 +715,7 @@ export const servicesConstants = [
       description: "Maximize the potential of your data with our quality assurance services.",
     },
     servicesProcesses: singlePageDataQualityAssuranceProcessesConstants,
+    processMainTitle: "Processes We Follow for Data Quality Assurance",
     ChooseClevitTitle: "Ensure Your Data Quality with Clevit",
     ChooseClevitRecomendation: [
       {
@@ -813,6 +819,7 @@ export const servicesConstants = [
         "Maximize the potential of your technology stack with our expert assessment services.",
     },
     servicesProcesses: singlePageTechnicalAssesmentProcessesConstants,
+    processMainTitle: "Processes We Follow for Technical Assessment",
     ChooseClevitTitle: "Why Choose Clevit for Technical Assessment Services?",
     ChooseClevitRecomendation: [
       {
@@ -911,6 +918,7 @@ export const servicesConstants = [
         "Ensure your website runs smoothly and securely with our comprehensive maintenance services.",
     },
     servicesProcesses: singlePageMaintenceProcessesConstants,
+    processMainTitle: "Processes We Follow for Website Maintenance",
     ChooseClevitTitle: "Why Choose Clevit for Technical Assessment Services?",
     ChooseClevitRecomendation: [
       {
@@ -1018,6 +1026,7 @@ export const servicesConstants = [
         "Need to scale your team without the overhead? Get in touch with us to discuss your project requirements.",
     },
     servicesProcesses: singlePageItOutsidingProcessesConstants,
+    processMainTitle: "Processes We Follow for IT Outstaffing Services",
     ChooseClevitTitle: "Why Choose Clevit for Technical Assessment Services?",
     ChooseClevitRecomendation: [
       {
@@ -1124,6 +1133,7 @@ export const servicesConstants = [
       description: "Let Clevit streamline your project with our tailored approach.",
     },
     servicesProcesses: singlePageItProjectManagmentProcessesConstants,
+    processMainTitle: "Processes We Follow for IT Project Management Services",
     ChooseClevitTitle: "Why Choose Clevit for IT Project Management Services?",
     ChooseClevitRecomendation: [
       {
@@ -1228,6 +1238,7 @@ export const servicesConstants = [
         "Maximize the potential of your digital product with our professional UI/UX design services.",
     },
     servicesProcesses: singlePageUIUXProcessesConstants,
+    processMainTitle: "Processes We Follow for UI/UX Design Services",
     ChooseClevitTitle: "Why Choose Clevit for UI/UX Design Services?",
     ChooseClevitRecomendation: [
       {
@@ -1337,6 +1348,7 @@ export const servicesConstants = [
         "Unlock the full potential of your business with our expert digital marketing services.",
     },
     servicesProcesses: singlePageDigitalMarketingProcessesConstants,
+    processMainTitle: "Processes We Follow for Digital Marketing Services",
     ChooseClevitTitle: "Why Choose Clevit for Digital Marketing Services?",
     ChooseClevitRecomendation: [
       {
