@@ -2,101 +2,86 @@ import { lazy } from "react";
 
 import type { ITabsConstant } from "@/assets/constants/technologies/technologies.constants.ts";
 
-const AntIcon = lazy(() => import("@/assets/vectors/technology/Ant.svg?react"));
-const CSSIcon = lazy(() => import("@/assets/vectors/technology/CSS.svg?react"));
-const CypressIcon = lazy(() => import("@/assets/vectors/technology/Cypress.svg?react"));
-const DynamoDBIcon = lazy(() => import("@/assets/vectors/technology/DynamoDB.svg?react"));
-const ElasticSearchIcon = lazy(() => import("@/assets/vectors/technology/ElasticSearch.svg?react"));
-const ExpressIcon = lazy(() => import("@/assets/vectors/technology/Express.svg?react"));
-const FirebaseIcon = lazy(() => import("@/assets/vectors/technology/Firebase.svg?react"));
-const GoogleCloudIcon = lazy(() => import("@/assets/vectors/technology/GoogleCloud.svg?react"));
-const GraphQLIcon = lazy(() => import("@/assets/vectors/technology/GraphQL.svg?react"));
-const HTMLIcon = lazy(() => import("@/assets/vectors/technology/HTML.svg?react"));
-const JestIcon = lazy(() => import("@/assets/vectors/technology/Jest.svg?react"));
-const MUIIcon = lazy(() => import("@/assets/vectors/technology/MUI.svg?react"));
-const MariaDBIcon = lazy(() => import("@/assets/vectors/technology/MariaDB.svg?react"));
-const MicrosoftServerIcon = lazy(
-  () => import("@/assets/vectors/technology/MicrosoftServer.svg?react")
-);
-const MongoIcon = lazy(() => import("@/assets/vectors/technology/Mongo.svg?react"));
-const MySQLIcon = lazy(() => import("@/assets/vectors/technology/MySQL.svg?react"));
-const NestIcon = lazy(() => import("@/assets/vectors/technology/Nest.svg?react"));
-const NextIcon = lazy(() => import("@/assets/vectors/technology/Next.svg?react"));
-const NoSQLIcon = lazy(() => import("@/assets/vectors/technology/NoSQL.svg?react"));
-const NodeIcon = lazy(() => import("@/assets/vectors/technology/Node.svg?react"));
-const PostgresIcon = lazy(() => import("@/assets/vectors/technology/PostgreSQL.svg?react"));
-const ReactIcon = lazy(() => import("@/assets/vectors/technology/React.svg?react"));
-const RedisIcon = lazy(() => import("@/assets/vectors/technology/Redis.svg?react"));
-const SASSIcon = lazy(() => import("@/assets/vectors/technology/SASS.svg?react"));
-const SQLiteIcon = lazy(() => import("@/assets/vectors/technology/SQLite.svg?react"));
-const TailwindCSSIcon = lazy(() => import("@/assets/vectors/technology/Tailwind.svg?react"));
-const Typescript = lazy(() => import("@/assets/vectors/technology/Typescript.svg?react"));
-const ViteIcon = lazy(() => import("@/assets/vectors/technology/Vite.svg?react"));
-const VueIcon = lazy(() => import("@/assets/vectors/technology/Vue.svg?react"));
-const WebSocketIcon = lazy(() => import("@/assets/vectors/technology/WebSocket.svg?react"));
+const ChatGPT = lazy(() => import("@/assets/vectors/technology/ChatGPT.svg?react"));
+const Tableau = lazy(() => import("@/assets/vectors/technology/Tableau.svg?react"));
+const FrieFlies = lazy(() => import("@/assets/vectors/technology/FrieFlies.svg?react"));
+const H2OAI = lazy(() => import("@/assets/vectors/technology/H2OAI.svg?react"));
+const Grammarly = lazy(() => import("@/assets/vectors/technology/Grammarly.svg?react"));
+const IBM = lazy(() => import("@/assets/vectors/technology/IBM.svg?react"));
+const AzureCloud = lazy(() => import("@/assets/vectors/technology/AzureCloud.svg?react"));
+const LookaInc = lazy(() => import("@/assets/vectors/technology/LookaInc.svg?react"));
+const MidJorney = lazy(() => import("@/assets/vectors/technology/MidJorney.svg?react"));
+const Oracle = lazy(() => import("@/assets/vectors/technology/Oracle.svg?react"));
+const SalesForce = lazy(() => import("@/assets/vectors/technology/SalesForce.svg?react"));
 
 export const aITechnologiesTabsConstants: ITabsConstant[] = [
   {
     id: 1,
-    title: "ai technologies",
+    title: "AI-Powered Communication & Chatbots",
     description:
-      "This classification is about the administration and operation of cloud structures. Whatever cloud solution a business organization is using, be it AWS, Google Cloud, Azure, or Digital Ocean, we assist in configuring, monitoring, and optimizing their cloud infrastructure. This makes certain that your systems are robust, efficient, and safe.",
+      "Organizational AI-enabled communication applications enable self-service and efficiency and they offer quick and smart responses. Thus, by connecting tools such as ChatGPT, Grammarly, and Fireflies, we develop opportunities to manage customer inquiries, support content generation, and transcribe documents, enhancing overall productivity and minimizing errors.",
   },
   {
     id: 2,
-    title: "Containerization & Orchestration",
+    title: "Creative AI & Content Generation",
     description:
-      "Application environment management became easier and scalable due to the implementation of Docker and containerization. We use containers for consistency in both development and in production, making your team more efficient and your apps more reliable.",
+      "We assist and advise organizations on how to best use tools such as DALL-E, CopyAI and Midjourney for content generation and design. These technologies make visual and textual content generation possible, which means brands can instantly design and produce marketing content and creative work with the help of AI.",
   },
   {
     id: 3,
-    title: "CI/CD Pipeline Automation",
+    title: "Data Analytics & Business Intelligence",
     description:
-      "Our CI/CD services help optimize your software development process saving your time and efforts for the same. Through the use of Jenkins, AWS CodePipeline, Azure DevOps we are able to ensure that the code you write gets tested, deployed and released to the cloud platforms as soon as possible. This helps minimize the chances of human mistakes, enhance the software release cycle, and ensure that you are always deploying and delivering the latest software.",
+      "We create intelligent data analysis tools that turn your data into actionable insights. With such tools as Tableau, H2O.ai, it is now easy to build accurate predictive models and present data visually. By integrating with ai, IBM, and Azure Cloud, we can produce extensive data visualization, prediction, and machine learning to serve as a foundation for your business success.",
   },
   {
     id: 4,
-    title: "Cloud Security & Compliance",
+    title: "AI-Enhanced Cloud & Enterprise Solutions",
     description:
-      "Security and compliance are of paramount importance within the context of DevOps. We offer security services across the cloud stack, guaranteeing that your <strong>AWS</strong>, <strong>Azure</strong>, or <strong>Google Cloud</strong> environment is optimized with proper configurations and complies with regulations such as <strong>GDPR</strong>, <strong>HIPAA</strong>, and <strong>SOC 2.</strong>",
+      "We deploy AI into cloud and enterprise applications used by your business, enabling end-to-end enhancement of operations. With platforms like Oracle, Salesforce, Looka Inc., and Gemini, we focus on providing you with tailored enterprise solutions to optimize your business processes, from customer service to data management, helping your organization become smarter and more efficient.",
   },
 ];
 
 export const aITechnologiesConstants = {
   1: [
-    { id: 1, title: "React.js", Icon: ReactIcon },
-    { id: 2, title: "Vue.js", Icon: VueIcon },
-    { id: 3, title: "Vite.js", Icon: ViteIcon },
-    { id: 4, title: "Next.js", Icon: NextIcon },
-    { id: 6, title: "Material UI", Icon: MUIIcon },
-    { id: 7, title: "Tailwind CSS", Icon: TailwindCSSIcon },
-    { id: 8, title: "Ant Design", Icon: AntIcon },
-    { id: 9, title: "Cypress", Icon: CypressIcon },
-    { id: 10, title: "HTML 5", Icon: HTMLIcon },
-    { id: 11, title: "CSS3", Icon: CSSIcon },
-    { id: 12, title: "SCSS(SASS)", Icon: SASSIcon },
-    { id: 5, title: "Typescript", Icon: Typescript },
+    { id: 1, title: "ChatGPT", Icon: ChatGPT },
+    { id: 2, title: "DALL-E", Icon: ChatGPT },
+    { id: 3, title: "Tableau", Icon: Tableau },
+    { id: 4, title: "FrieFlies", Icon: FrieFlies },
+    { id: 5, title: "H2O.ai", Icon: H2OAI },
+    { id: 6, title: "Grammarly", Icon: Grammarly },
+    { id: 7, title: "IBM", Icon: IBM },
+    { id: 8, title: "AzureCloud", Icon: AzureCloud },
+    { id: 9, title: "Looka Inc", Icon: LookaInc },
+    { id: 10, title: "Midjourney", Icon: MidJorney },
+    { id: 11, title: "Oracle", Icon: Oracle },
+    { id: 12, title: "Salesforce", Icon: SalesForce },
   ],
   2: [
-    { id: 1, title: "Node.js", Icon: NodeIcon },
-    { id: 2, title: "Nest.js", Icon: NestIcon },
-    { id: 3, title: "Express.js", Icon: ExpressIcon },
-    { id: 4, title: "GraphQL", Icon: GraphQLIcon },
-    { id: 5, title: "WebSocket", Icon: WebSocketIcon },
-    { id: 6, title: "Jest", Icon: JestIcon },
+    { id: 1, title: "ChatGPT", Icon: ChatGPT },
+    { id: 2, title: "DALL-E", Icon: ChatGPT },
+    { id: 3, title: "Tableau", Icon: Tableau },
+    { id: 4, title: "FrieFlies", Icon: FrieFlies },
+    { id: 5, title: "H2O.ai", Icon: H2OAI },
+    { id: 6, title: "Grammarly", Icon: Grammarly },
+    { id: 7, title: "IBM", Icon: IBM },
+    { id: 8, title: "AzureCloud", Icon: AzureCloud },
+    { id: 9, title: "Looka Inc", Icon: LookaInc },
+    { id: 10, title: "Midjourney", Icon: MidJorney },
+    { id: 11, title: "Oracle", Icon: Oracle },
+    { id: 12, title: "Salesforce", Icon: SalesForce },
   ],
   3: [
-    { id: 1, title: "MySQL", Icon: MySQLIcon },
-    { id: 2, title: "NoSQL", Icon: NoSQLIcon },
-    { id: 3, title: "MongoDB", Icon: MongoIcon },
-    { id: 4, title: "PostgreSQL", Icon: PostgresIcon },
-    { id: 5, title: "Firebase", Icon: FirebaseIcon },
-    { id: 6, title: "Google Cloud", Icon: GoogleCloudIcon },
-    { id: 7, title: "SQL Server", Icon: MicrosoftServerIcon },
-    { id: 8, title: "SQLite", Icon: SQLiteIcon },
-    { id: 9, title: "Redis", Icon: RedisIcon },
-    { id: 10, title: "Maria DB", Icon: MariaDBIcon },
-    { id: 11, title: "Elasticsearch", Icon: ElasticSearchIcon },
-    { id: 12, title: "DynamoDB", Icon: DynamoDBIcon },
+    { id: 1, title: "ChatGPT", Icon: ChatGPT },
+    { id: 2, title: "DALL-E", Icon: ChatGPT },
+    { id: 3, title: "Tableau", Icon: Tableau },
+    { id: 4, title: "FrieFlies", Icon: FrieFlies },
+    { id: 5, title: "H2O.ai", Icon: H2OAI },
+    { id: 6, title: "Grammarly", Icon: Grammarly },
+    { id: 7, title: "IBM", Icon: IBM },
+    { id: 8, title: "AzureCloud", Icon: AzureCloud },
+    { id: 9, title: "Looka Inc", Icon: LookaInc },
+    { id: 10, title: "Midjourney", Icon: MidJorney },
+    { id: 11, title: "Oracle", Icon: Oracle },
+    { id: 12, title: "Salesforce", Icon: SalesForce },
   ],
 };

@@ -306,7 +306,8 @@ export const servicesConstants = [
     serviceIndustriesDescription:
       "Our mobile app development services cater to various industries, providing tailored solutions that meet unique business needs.",
     serviceTechnologiesTitle: "Key Aspects of Our Mobile App Development Process",
-    serviceTechnologiesSubtitle: "ServicesIdConstants.Mobile subtitle",
+    serviceTechnologiesSubtitle:
+      "Clevit covers all the significant phases of mobile application development to give quality, adjustable solutions for any business. Here are the key aspects of our process:",
     serviceTabTechnologies: mobileDevelopmentTechnologiesTabsConstants,
     serviceTechnologies: mobileDevelopmentTechnologiesConstants,
     serviceBookConsultation: {
