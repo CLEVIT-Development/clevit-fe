@@ -70,10 +70,8 @@ const Footer = () => {
           <h6 className="font-bold lg:text-md-l xs:text-md text-white opacity-60">Industries</h6>
           {industriesConstants.map((element) => {
             return (
-              <div key={element.id} role="button">
-                <p className="text-gray-100 font-medium lg:text-md xs:text-sm cursor-pointer">
-                  {element.name}
-                </p>
+              <div key={element.id}>
+                <p className="text-gray-100 font-medium lg:text-md xs:text-sm">{element.name}</p>
               </div>
             );
           })}

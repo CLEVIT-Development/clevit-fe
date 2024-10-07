@@ -36,7 +36,7 @@ const HomePage = () => {
           </Gradient>
         }
       >
-        <TotalSection projectsValue={`35+`} stuffValue={`10+`} servedValue={`25+`} />
+        <TotalSection projectsValue={`35+`} stuffValue={`20+`} servedValue={`25+`} />
         <ServiceSection />
         <RequestQuoteSection />
         <TechnologySection

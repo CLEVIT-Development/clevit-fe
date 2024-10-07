@@ -38,21 +38,27 @@ const WebSocketIcon = lazy(() => import("@/assets/vectors/technology/WebSocket.s
 export const webDevelopmentTechnologiesTabsConstants: ITabsConstant[] = [
   {
     id: 1,
-    title: "Front-End Development",
+    title: "Cloud Infrastructure Management",
     description:
-      "Front-end development is concerned with constructing, designing, and maintaining the visible content of the website. Front-end developers work with the first thing the website’s unique users see on the page. Through the use of various programming languages, web application developers cohesively structure the contents and set up the design (color, font, size, etc.) of the website.",
+      "This classification is about the administration and operation of cloud structures. Whatever cloud solution a business organization is using, be it AWS, Google Cloud, Azure, or Digital Ocean, we assist in configuring, monitoring, and optimizing their cloud infrastructure. This makes certain that your systems are robust, efficient, and safe.",
   },
   {
     id: 2,
-    title: "Back-End Development",
+    title: "Containerization & Orchestration",
     description:
-      "Anything that does not appear on the first page of the user is dealt with by the back-end developer. Back-end developers work with the server side of the website, where most of the data is stored safely for the front-end developer’s work to reflect. Back End Development Services include programming languages such as Node.js, Nest.js, Express.js, GraphQL, WebSocket, and Jest.",
+      "Application environment management became easier and scalable due to the implementation of Docker and containerization. We use containers for consistency in both development and in production, making your team more efficient and your apps more reliable.",
   },
   {
     id: 3,
-    title: "Database Management System",
+    title: "CI/CD Pipeline Automation",
     description:
-      "Alongside the work that back-end and front-end developers perform, anything that concerns the computerized data preservation system goes within the Database Management System. The technologies used within this system are MySQL, NoSQL, MongoDB, PostgreSQL, Google Firebase, Google Cloud, SQL Server, SQLite, Redis, Maria DB, Elasticsearch, and DynamoDB.",
+      "Our CI/CD services help optimize your software development process saving your time and efforts for the same. Through the use of Jenkins, AWS CodePipeline, Azure DevOps we are able to ensure that the code you write gets tested, deployed and released to the cloud platforms as soon as possible. This helps minimize the chances of human mistakes, enhance the software release cycle, and ensure that you are always deploying and delivering the latest software.",
+  },
+  {
+    id: 4,
+    title: "Cloud Security & Compliance",
+    description:
+      "Security and compliance are of paramount importance within the context of DevOps. We offer security services across the cloud stack, guaranteeing that your <strong>AWS</strong>, <strong>Azure</strong>, or <strong>Google Cloud</strong> environment is optimized with proper configurations and complies with regulations such as <strong>GDPR</strong>, <strong>HIPAA</strong>, and <strong>SOC 2.</strong>",
   },
 ];
 

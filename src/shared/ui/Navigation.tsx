@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 import classNames from "classnames";
 import { twMerge } from "tailwind-merge";
@@ -51,11 +51,15 @@ const Navigation = ({ items, onItemClick, className = "" }: Props) => {
     [activeTab, isTablet, onItemClick]
   );
 
+  useEffect(() => {
+    setActiveTab(1);
+  }, []);
+
   return (
     <nav
       className={twMerge(
         classNames(
-          "flex flex-col desktop:space-x-4 xs:space-x-0 desktop:flex-row xs:w-full xs:px-1.5 xs:flex-col desktop:justify-between xs:justify-center desktop:space-y-0 xs:space-y-8",
+          "flex flex-col desktop:space-x-4 xs:space-x-0 desktop:flex-row xs:w-full xs:px-1.5 xs:flex-col desktop:justify-between xs:justify-center desktop:space-y-0 xs:space-y-8 overflow-x-scroll scrollbar-hide",
           className
         )
       )}
@@ -65,12 +69,15 @@ const Navigation = ({ items, onItemClick, className = "" }: Props) => {
           key={id}
           onClick={() => onNavItemClickHandler(id)}
           className={`
-                    relative duration-500 whitespace-nowrap outline-none focus:outline-none
-                    lg:text-md desktop:text-base !font-bold
-                    after:transition-all after:absolute after:left-0 after:right-0 after:-bottom-2 after:h-0.5 
-                    after:border-purple-100 after:content-['.'] after:text-transparent after:bg-purple-100 
-                    ${activeTab === id ? "after:w-full text-purple-100" : "desktop:after:w-0 xs:after:bg-gray-200 xs:after:bg-opacity-40 text-gray-200"}
-          `}
+         relative duration-500 whitespace-nowrap outline-none focus:outline-none
+         lg:text-md desktop:text-base !font-bold
+         after:transition-all  after:bg-purple-500
+         ${
+           activeTab === id
+             ? "after:w-full text-purple-100 after:-bottom-5 underline decoration-purple-500 underline-offset-[5px]"
+             : "after:w-0 after:bg-transparent text-gray-200"
+         }
+       `}
         >
           {title}
         </button>

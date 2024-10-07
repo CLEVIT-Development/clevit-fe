@@ -15,11 +15,12 @@ import Navigation from "@/shared/ui/Navigation";
 
 interface Props {
   title: string;
+  subTitle?: string;
   tabsConstant: ITabsConstant[];
   technologiesConstant: Record<number, ITechnologyConstant[]>;
 }
 
-const TechnologySection = ({ title, tabsConstant, technologiesConstant }: Props) => {
+const TechnologySection = ({ title, tabsConstant, technologiesConstant, subTitle }: Props) => {
   const [{ currTabId, direction }, setActiveTab] = useState({
     currTabId: 1,
     direction: "",
@@ -42,6 +43,30 @@ const TechnologySection = ({ title, tabsConstant, technologiesConstant }: Props)
     return getSwipeAnimationClass(direction);
   }, [direction]);
 
+  const technologyItems = useMemo(() => {
+    return (
+      <div
+        key={currTabId}
+        className={classNames(
+          "w-full relative justify-center desktop:mt-16  lg:max-w-[90%] desktop:flex-wrap desktop:flex desktop:gap-[50px] desktop:items-stretch xs:grid xs:grid-cols-2 xs:gap-8",
+          swipeAnimationClass
+        )}
+      >
+        {technologiesConstant[currTabId]?.map(({ id, title, Icon }) => (
+          <div
+            key={id}
+            className="flex flex-col desktop:space-y-5 xs:space-y-2 items-center justify-between min-w-[103px] xs:mt-6 dekstop:mt-24"
+          >
+            <div className="desktop:h-auto xs:h-[64px] svg-wrapper">
+              <Icon />
+            </div>
+            <p className="text-base font-medium text-center">{title}</p>
+          </div>
+        ))}
+      </div>
+    );
+  }, [currTabId, swipeAnimationClass, technologiesConstant]);
+
   return (
     <Suspense>
       <Section
@@ -49,34 +74,20 @@ const TechnologySection = ({ title, tabsConstant, technologiesConstant }: Props)
         titleClassName="max-w-full"
         title={title}
         headingLevel="h2"
-        className="scroll-mt-[150px] max-w-[90%] lg:max-w-[1280px] md:w-full w-auto bg-gray-300 desktop:py-12 lg:px-[100px] desktop:px-[46px] md:px-[30px] md:mx-0 xs:-mx-5 xs:py-5 xs:px-[24px] rounded-lg-l space-y-9 overflow-clip"
+        className="scroll-mt-[150px] max-w-[90%] lg:max-w-[1280px] md:w-full w-auto flex items-start justify-center desktop:py-12 lg:px-[100px] desktop:px-[46px] md:px-[30px] md:mx-0 xs:-mx-5 xs:py-5 xs:px-[24px] rounded-lg overflow-clip"
       >
-        <div className="w-full flex flex-col items-center space-y-[58px]">
+        <div className="max-w-[900px] desktop:mt-6 text-center ">
+          <span className="leading-6 text-[#314252]">{subTitle}</span>
+        </div>
+        <div className="w-full flex flex-col justify-center items-center !mt-0">
           <Navigation items={tabsConstant} onItemClick={onTabItemClickHandler} />
           {technologyDescription && (
-            <span className="text-gray-200 text-base animate-textSlide">
-              {technologyDescription}
-            </span>
+            <span
+              className="text-gray-200 text-base animate-textSlide"
+              dangerouslySetInnerHTML={{ __html: technologyDescription }}
+            />
           )}
-          <div
-            key={currTabId}
-            className={classNames(
-              "w-full relative justify-center lg:max-w-[90%] desktop:flex-wrap desktop:flex desktop:gap-[50px] desktop:items-stretch xs:grid xs:grid-cols-2 xs:gap-8",
-              swipeAnimationClass
-            )}
-          >
-            {technologiesConstant[currTabId]?.map(({ id, title, Icon }) => (
-              <div
-                key={id}
-                className="flex flex-col desktop:space-y-5 xs:space-y-2 items-center justify-between min-w-[103px]"
-              >
-                <div className="desktop:h-auto xs:h-[64px] svg-wrapper">
-                  <Icon />
-                </div>
-                <p className="text-base font-medium text-center">{title}</p>
-              </div>
-            ))}
-          </div>
+          {technologyItems}
         </div>
       </Section>
     </Suspense>

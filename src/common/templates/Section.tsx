@@ -35,7 +35,7 @@ const Section = forwardRef(
         ref={ref}
         className={twMerge(
           classNames(
-            "w-full flex flex-col items-center space-y-10 max-w-[1280px] px-5",
+            "w-full flex flex-col items-center space-y-7 desktop:space-y-10 max-w-[1280px] px-5",
             {
               ["items-start desktop:space-y-2 space-y-4"]: variant === SectionVariant.Secondary,
             },
@@ -48,7 +48,7 @@ const Section = forwardRef(
           <HeadingComponent
             className={twMerge(
               classNames(
-                "text-gray-200 desktop:text-2xl text-lg font-semibold text-center md:max-w-fit max-w-[300px]",
+                "text-gray-200 desktop:text-2xl text-lg font-semibold text-center w-full max-w-[400px]",
                 {
                   ["desktop:text-xl text-md-l font-semibold text-left"]:
                     variant === SectionVariant.Secondary,
