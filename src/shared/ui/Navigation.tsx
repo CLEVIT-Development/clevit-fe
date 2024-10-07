@@ -65,12 +65,16 @@ const Navigation = ({ items, onItemClick, className = "" }: Props) => {
           key={id}
           onClick={() => onNavItemClickHandler(id)}
           className={`
-                    relative duration-500 whitespace-nowrap outline-none focus:outline-none
-                    lg:text-md desktop:text-base !font-bold
-                    after:transition-all after:absolute after:left-0 after:right-0 after:-bottom-2 after:h-0.5 
-                    after:border-purple-100 after:content-['.'] after:text-transparent after:bg-purple-100 
-                    ${activeTab === id ? "after:w-full text-purple-100" : "desktop:after:w-0 xs:after:bg-gray-200 xs:after:bg-opacity-40 text-gray-200"}
-          `}
+         relative duration-500 whitespace-nowrap outline-none focus:outline-none
+         lg:text-md desktop:text-base !font-bold
+         after:transition-all after:absolute after:left-0 after:right-0 after:h-0.5
+         after:content-[''] after:bg-purple-500
+         ${
+           activeTab === id
+             ? "after:w-full text-purple-100 after:-bottom-5 underline decoration-purple-500 underline-offset-[5px]"
+             : "after:w-0 after:bg-transparent text-gray-200"
+         }
+       `}
         >
           {title}
         </button>

@@ -84,7 +84,7 @@ const SingleServiceSection = ({ serviceId, setHeaderItems }: SingleServiceSectio
             {service.serviceIndustriesDescription}
           </p>
         </div>
-        <div className="flex w-screen max-w-full overflow-x-auto flex-nowrap justify-around gap-2">
+        <div className="flex w-screen max-w-full desktop:w-full overflow-x-auto flex-nowrap justify-around gap-2">
           {industries.map(({ title, Icon }, index) => {
             return (
               <div
@@ -98,12 +98,10 @@ const SingleServiceSection = ({ serviceId, setHeaderItems }: SingleServiceSectio
           })}
         </div>
       </div>
-      <div className="py-24 w-full">
-        <ProcessSection
-          processes={service.servicesProcesses}
-          processTitle={service.processMainTitle}
-        />
-      </div>
+      <ProcessSection
+        processes={service.servicesProcesses}
+        processTitle={service.processMainTitle}
+      />
       <FeedbackSection className="w-full" />
       <div className="flex flex-col gap-20 items-center pt-24">
         <h3 className="text-2xl text-[#314252]">{service.ChooseClevitTitle}</h3>

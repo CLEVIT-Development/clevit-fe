@@ -14,9 +14,14 @@ const BookConsultation = ({ image, title, description, imageAlt }: IBookConsulta
       <div className="flex flex-col items-start  desktop:gap-6 gap-7 desktop:pt-[120px]">
         <h1 className="text-white text-lg font-bold">{title}</h1>
         <p className="text-white text-md font-normal">{description}</p>
-        <Button className="w-fit" variant={ButtonVariant.Primary} children="Contact us today" />
+        <div>
+          <Button
+            className="w-fit mt-[48px]"
+            variant={ButtonVariant.Primary}
+            children="Contact us today"
+          />
+        </div>
       </div>
-
       <img className="hidden desktop:block  " src={image} loading="lazy" alt={imageAlt} />
     </div>
   );
