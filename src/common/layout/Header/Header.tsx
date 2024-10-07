@@ -42,8 +42,6 @@ const Header = forwardRef(
           const isActive = `${pathname}${hash}` === headerMenuLink.link;
           const isVisible = headerMenuLink.needAuthentication ? isAuthenticated : true;
 
-          console.log(isAuthenticated);
-
           if (!isVisible) {
             return null;
           }
