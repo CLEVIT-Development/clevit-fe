@@ -65,41 +65,7 @@ export default defineConfig({
     createHtmlPlugin({
       minify: true,
     }),
-    sitemap({
-      outDir: "dist",
-      hostname: "https://www.clevit.io",
-      dynamicRoutes: [
-        "/",
-        "/about-us",
-        "/services",
-        "/portfolio",
-        "/faq",
-        "/contact-us",
-        "/privacy-policy", // Removed extra slash
-        "/terms-and-conditions",
-        "/request-demo",
-        "/web-development",
-        "/blogs",
-      ],
-      exclude: ["/admin/**"], // Exclude admin routes from the sitemap
-      changefreq: "daily", // Frequency for updates
-      priority: 1.0, // Default priority for all pages
-      lastmod: new Date().toISOString(), // Last modified date in ISO format
-      readable: true, // Makes the XML human-readable
-      generateRobotsTxt: true, // Generate robots.txt
-      robots: [
-        { userAgent: "*", allow: "/" },
-        {
-          userAgent: "*",
-          disallow: [
-            "/admin",
-            "/admin/blog/:id?", // Use appropriate syntax to match dynamic routes
-            "/admin/signin",
-            "/admin/addBlog",
-          ],
-        }, // Disallow admin routes
-      ], // Robots policy
-    }),
+    sitemap(),
   ],
   define: {
     global: "globalThis",
