@@ -33,7 +33,7 @@ const Button = forwardRef(
         {...props}
       >
         {prefix ? <div className="w-6 h-6 svg-wrapper">{prefix}</div> : null}
-        <span className="font-medium  text-center">{children}</span>
+        <span className="font-medium text-center">{children}</span>
         {suffix ? <div className="w-6 h-6 svg-wrapper">{suffix}</div> : null}
       </button>
     );

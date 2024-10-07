@@ -43,10 +43,10 @@ const SingleServiceSection = ({ serviceId, setHeaderItems }: SingleServiceSectio
 
   return (
     <Section className="p-5">
-      <div className="text-center flex flex-col  items-center jutsify-between pt-[100px]">
+      <div className="text-center flex flex-col  items-center jutsify-between">
         <span className="desktoptext-md  text-base leading-8">{service.singlePageDescription}</span>
         <h2 className="desktop:text-2xl desktop:mt-16">What Is Important for Us</h2>
-        <div className="max-w-[900px] desktop:mt-6 mb-16">
+        <div className="max-w-[900px] desktop:mt-6 mb-16 ">
           <span className="leading-8">{service.serviceDetails}</span>
         </div>
       </div>
@@ -63,12 +63,14 @@ const SingleServiceSection = ({ serviceId, setHeaderItems }: SingleServiceSectio
           );
         })}
       </div>
-      <TechnologySection
-        title={service?.serviceTechnologiesTitle}
-        subTitle={service?.serviceTechnologiesSubtitle}
-        tabsConstant={service?.serviceTabTechnologies}
-        technologiesConstant={service?.serviceTechnologies}
-      />
+      <div className="bg-[#F8F7FD]">
+        <TechnologySection
+          title={service?.serviceTechnologiesTitle}
+          subTitle={service?.serviceTechnologiesSubtitle}
+          tabsConstant={service?.serviceTabTechnologies}
+          technologiesConstant={service?.serviceTechnologies}
+        />
+      </div>
       <div className="w-full">
         <BookConsultation
           image={service.image}
@@ -77,19 +79,19 @@ const SingleServiceSection = ({ serviceId, setHeaderItems }: SingleServiceSectio
           title={service.serviceBookConsultation.title}
         />
       </div>
-      <div className="flex flex-col justify-center gap-6 text-center">
-        <div className="flex flex-col items-center gap-6 pt-16">
+      <div className="flex flex-col justify-center gap-6 text-center !mt-0">
+        <div className="flex flex-col items-center gap-6 pt-24">
           <h3 className="desktop:text-2xl text-lg text-[#314252]">Industries We Serve</h3>
           <p className="desktop:text-md text-base leading-8 text-center  desktop:w-[980px] w-full">
             {service.serviceIndustriesDescription}
           </p>
         </div>
-        <div className="flex w-screen max-w-full desktop:w-full overflow-x-auto flex-nowrap justify-around gap-2">
+        <div className="flex w-screen max-w-full desktop:w-full overflow-x-auto flex-nowrap justify-around desktop:py-5 gap-2">
           {industries.map(({ title, Icon }, index) => {
             return (
               <div
                 key={index}
-                className="w-48 h-44 shrink-0 flex flex-col items-center justify-center gap-5 rounded-lg text-center transition-all duration-300 border shadow-[0px_8px_10px_0px_rgba(0,0,0,0.07)] hover:border-[#4F1D85] hover:border-solid"
+                className="w-48 h-44 shrink-0 flex flex-col items-center justify-center gap-5 rounded-lg text-center transition-all duration-300 border shadow-[0px_8px_10px_0px_rgba(0,0,0,0.07)] hover:border-[#4F1D85] hover:border-solid hover:shadow-[0px_8px_21px_0px_#70339133]"
               >
                 <Icon />
                 <h1>{title}</h1>
@@ -98,10 +100,12 @@ const SingleServiceSection = ({ serviceId, setHeaderItems }: SingleServiceSectio
           })}
         </div>
       </div>
-      <ProcessSection
-        processes={service.servicesProcesses}
-        processTitle={service.processMainTitle}
-      />
+      <div className=" !mt-0 pt-24 w-full">
+        <ProcessSection
+          processes={service.servicesProcesses}
+          processTitle={service.processMainTitle}
+        />
+      </div>
       <FeedbackSection className="w-full" />
       <div className="flex flex-col gap-20 items-center pt-24">
         <h3 className="text-2xl text-[#314252]">{service.ChooseClevitTitle}</h3>

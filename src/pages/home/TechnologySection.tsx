@@ -76,14 +76,18 @@ const TechnologySection = ({ title, tabsConstant, technologiesConstant, subTitle
         headingLevel="h2"
         className="scroll-mt-[150px] max-w-[90%] lg:max-w-[1280px] md:w-full w-auto flex items-start justify-center desktop:py-12 lg:px-[100px] desktop:px-[46px] md:px-[30px] md:mx-0 xs:-mx-5 xs:py-5 xs:px-[24px] rounded-lg overflow-clip"
       >
-        <div className="max-w-[900px] desktop:mt-6 text-center ">
-          <span className="leading-6 text-[#314252]">{subTitle}</span>
+        <div className="w-full desktop:mt-6  desktop:text-center text-start">
+          <span className="leading-6 text-[#314252] text-center">{subTitle}</span>
         </div>
-        <div className="w-full flex flex-col justify-center items-center !mt-0">
-          <Navigation items={tabsConstant} onItemClick={onTabItemClickHandler} />
+        <div className="w-full flex flex-col justify-center items-center pt-6 desktop:pt-0 !mt-0">
+          <Navigation
+            items={tabsConstant}
+            className="desktop:mt-10"
+            onItemClick={onTabItemClickHandler}
+          />
           {technologyDescription && (
             <span
-              className="text-gray-200 text-base animate-textSlide"
+              className="text-gray-200 text-base animate-textSlide mt-6"
               dangerouslySetInnerHTML={{ __html: technologyDescription }}
             />
           )}

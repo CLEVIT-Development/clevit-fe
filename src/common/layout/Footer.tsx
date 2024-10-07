@@ -54,7 +54,7 @@ const Footer = () => {
             <p className="text-gray-100 font-medium lg:text-md xs:text-sm">Contact Us</p>
           </Link>
         </div>
-        <div className="flex flex-col space-y-4 mr-auto lg:ml-auto">
+        <div className="w-full flex flex-col space-y-4 mr-auto lg:ml-auto">
           <h6 className="font-bold lg:text-md-l xs:text-md text-white opacity-60">Services</h6>
           {servicesConstants.map(({ id, title }) => {
             return (
