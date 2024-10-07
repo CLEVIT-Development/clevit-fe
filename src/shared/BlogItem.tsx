@@ -1,4 +1,5 @@
 import Date from "@/assets/vectors/Date.svg?react";
+import { truncate } from "@/utils/textTruncate.utils";
 
 interface Props {
   image: string;
@@ -13,14 +14,15 @@ const BlogItem = ({ image, imageAlt, description, date }: Props) => {
       <div className="w-[54px] h-[52px]">
         <img src={image} alt={imageAlt} className="w-full h-full rounded" />
       </div>
-      <div>
+      <div className="w-[calc(100%-60px)]">
         <div className="flex gap-2 items-center">
           {" "}
           <Date /> <span className="text-white">{date}</span>{" "}
         </div>
-        <div className="whitespace-nowrap overflow-hidden text-ellipsis desktop:w-[200px] w-[100px]  text-white">
-          {description}
-        </div>
+        <div
+          dangerouslySetInnerHTML={{ __html: truncate(description, 80) }}
+          className=" overflow-hidden text-ellipsis  text-white"
+        />
       </div>
     </div>
   );

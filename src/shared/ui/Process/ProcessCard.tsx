@@ -13,7 +13,7 @@ interface Props {
 const ProcessCard = ({ order, title, icon, className, description }: Props) => (
   <div
     className={twMerge(
-      "transition-all duration-500 group hover:scale-105 relative bg-white z-[1] shadow-base-200 border-[1px] border-purple-100 rounded-lg-l w-[200px] min-h-[200px] flex flex-col  items-center justify-center gap-4",
+      "transition-all duration-500 group hover:scale-105 relative bg-white z-[1] shadow-base-200 border-[1px] border-purple-100 rounded-lg-l w-[200px] min-h-[200px] flex flex-col  items-center justify-center gap-2",
       className
     )}
   >
@@ -25,7 +25,7 @@ const ProcessCard = ({ order, title, icon, className, description }: Props) => (
       <span className="text-white text-[26px] leading-[39px] font-semibold">{order}</span>
     </div>
     <div>
-      <p className="text-gray-200 text-xs  leading-5	 text-start p-3">{description}</p>
+      <p className="text-gray-200 text-xs  leading-5 text-start px-3">{description}</p>
     </div>
   </div>
 );
