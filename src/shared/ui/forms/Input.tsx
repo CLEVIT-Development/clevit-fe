@@ -4,7 +4,7 @@ import type { ComponentPropsWithoutRef, ForwardedRef } from "react";
 import classNames from "classnames";
 import { twMerge } from "tailwind-merge";
 
-interface Props extends Omit<ComponentPropsWithoutRef<"input">, "onChange"> {
+interface Props extends ComponentPropsWithoutRef<"input"> {
   label?: string;
   disabled?: boolean;
   error?: string;
