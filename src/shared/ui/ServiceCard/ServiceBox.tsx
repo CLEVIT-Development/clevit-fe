@@ -1,4 +1,5 @@
 import { type FC } from "react";
+import { useNavigate } from "react-router-dom";
 
 import BackgroundGradient from "@/assets/images/services/BackgroundGradient.png";
 import BackgroundGradientReverse from "@/assets/images/services/BackgroundGradientReverse.png";
@@ -13,6 +14,7 @@ interface ServiceBoxProps {
   buttonTitle: string;
   image: string;
   imageAlt: string;
+  route: string;
 }
 
 const ServiceBox: FC<ServiceBoxProps> = ({
@@ -22,7 +24,11 @@ const ServiceBox: FC<ServiceBoxProps> = ({
   buttonTitle,
   imageAlt,
   image,
+  route,
 }) => {
+  // console.log(`bg-[length:200px_${Math.ceil(Math.random() * 1000 + 1)}px] `);
+  const navigate = useNavigate();
+
   return (
     <div
       key={index}
@@ -45,13 +51,14 @@ const ServiceBox: FC<ServiceBoxProps> = ({
           <Button
             className="text-black border-black hover:text-white desktop:text-[20px] text-sm"
             variant={ButtonVariant.Outlined}
+            onClick={() => navigate(`/services${route}`)}
           >
-            Learn More
+            Learn more
           </Button>
           <Button className="desktop:text-[20px] text-white text-sm"> {buttonTitle}</Button>
         </div>
       </div>
-      <div className="desktop:flex hidden w-1/2 items-center justify-center">
+      <div className=" desktop:flex hidden w-1/2  items-center justify-center  ">
         <img src={image} alt={imageAlt} />
       </div>
     </div>

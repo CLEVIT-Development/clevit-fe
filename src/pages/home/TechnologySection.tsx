@@ -43,6 +43,30 @@ const TechnologySection = ({ title, tabsConstant, technologiesConstant, subTitle
     return getSwipeAnimationClass(direction);
   }, [direction]);
 
+  const technologyItems = useMemo(() => {
+    return (
+      <div
+        key={currTabId}
+        className={classNames(
+          "w-full relative justify-center lg:max-w-[90%] desktop:flex-wrap desktop:flex desktop:gap-[50px] desktop:items-stretch xs:grid xs:grid-cols-2 xs:gap-8",
+          swipeAnimationClass
+        )}
+      >
+        {technologiesConstant[currTabId]?.map(({ id, title, Icon }) => (
+          <div
+            key={id}
+            className="flex flex-col desktop:space-y-5 xs:space-y-2 items-center justify-between min-w-[103px]"
+          >
+            <div className="desktop:h-auto xs:h-[64px] svg-wrapper">
+              <Icon />
+            </div>
+            <p className="text-base font-medium text-center">{title}</p>
+          </div>
+        ))}
+      </div>
+    );
+  }, [currTabId, swipeAnimationClass, technologiesConstant]);
+
   return (
     <Suspense>
       <Section
@@ -63,25 +87,7 @@ const TechnologySection = ({ title, tabsConstant, technologiesConstant, subTitle
               dangerouslySetInnerHTML={{ __html: technologyDescription }}
             />
           )}
-          <div
-            key={currTabId}
-            className={classNames(
-              "w-full relative justify-center lg:max-w-[90%] desktop:flex-wrap desktop:flex desktop:gap-[50px] desktop:items-stretch xs:grid xs:grid-cols-2 xs:gap-8",
-              swipeAnimationClass
-            )}
-          >
-            {technologiesConstant[currTabId]?.map(({ id, title, Icon }) => (
-              <div
-                key={id}
-                className="flex flex-col desktop:space-y-5 xs:space-y-2 items-center justify-between min-w-[103px]"
-              >
-                <div className="desktop:h-auto xs:h-[64px] svg-wrapper">
-                  <Icon />
-                </div>
-                <p className="text-base font-medium text-center">{title}</p>
-              </div>
-            ))}
-          </div>
+          {technologyItems}
         </div>
       </Section>
     </Suspense>

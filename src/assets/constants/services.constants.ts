@@ -563,7 +563,7 @@ export const servicesConstants = [
     singleServiceHeaderTitle: "ML Development Services",
     singleServiceHeaderDescription: "Paving the Way for Smarter Solutions",
     buttonTitle: "Request a Quote",
-    title: "Machine Learning Development",
+    title: "Machine Learning ",
     route: "/",
     description:
       "At Clevit we understand that Machine learning (ML) Development services help your business to make intelligent decisions with data. Whether you need to predict customer behavior or perform text mining, we apply state-of-the-art ML automations to streamline operations and generate value. Our team of specialists adapts every solution based on the field and client requirements.",

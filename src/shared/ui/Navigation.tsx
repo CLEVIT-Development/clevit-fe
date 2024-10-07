@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 import classNames from "classnames";
 import { twMerge } from "tailwind-merge";
@@ -51,6 +51,10 @@ const Navigation = ({ items, onItemClick, className = "" }: Props) => {
     [activeTab, isTablet, onItemClick]
   );
 
+  useEffect(() => {
+    setActiveTab(1);
+  }, []);
+
   return (
     <nav
       className={twMerge(
@@ -67,8 +71,7 @@ const Navigation = ({ items, onItemClick, className = "" }: Props) => {
           className={`
          relative duration-500 whitespace-nowrap outline-none focus:outline-none
          lg:text-md desktop:text-base !font-bold
-         after:transition-all after:absolute after:left-0 after:right-0 after:h-0.5
-         after:content-[''] after:bg-purple-500
+         after:transition-all  after:bg-purple-500
          ${
            activeTab === id
              ? "after:w-full text-purple-100 after:-bottom-5 underline decoration-purple-500 underline-offset-[5px]"

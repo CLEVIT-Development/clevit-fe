@@ -20,7 +20,7 @@ interface SingleServiceSectionProps {
 
 const SingleServiceSection = ({ serviceId, setHeaderItems }: SingleServiceSectionProps) => {
   const replaceString = (str: string) => {
-    return str.replace("/#", "");
+    return str.replace("/", "");
   };
 
   const service = servicesConstants.find((service) => replaceString(service.id) === serviceId);
@@ -42,7 +42,7 @@ const SingleServiceSection = ({ serviceId, setHeaderItems }: SingleServiceSectio
   const industries = getIndustryByService(service.id as keyof typeof ServicesIdConstants);
 
   return (
-    <Section>
+    <Section className="p-5">
       <div className="text-center flex flex-col  items-center jutsify-between pt-[100px]">
         <span className="desktoptext-md  text-base leading-8">{service.singlePageDescription}</span>
         <h2 className="desktop:text-2xl desktop:mt-16">What Is Important for Us</h2>
