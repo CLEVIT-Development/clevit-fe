@@ -36,7 +36,7 @@ const Footer = () => {
             ))}
           </div>
         </div>
-        <div className="flex flex-col space-y-4 sm:mx-auto lg:ml-auto">
+        <div className="w-full flex flex-col space-y-4 sm:mx-auto">
           <h6 className="font-bold lg:text-md-l xs:text-md text-white opacity-60">Company</h6>
           <Link to={RoutePaths.About}>
             <p className="text-gray-100 font-medium lg:text-md xs:text-sm">About Us</p>
@@ -76,7 +76,7 @@ const Footer = () => {
             );
           })}
         </div>
-        <div className="flex flex-col space-y-4 sm:mx-auto sm:pl-10 lg:ml-auto">
+        <div className="flex flex-col space-y-4">
           <h6 className="font-bold lg:text-md-l text-md text-white opacity-60">Contact Us</h6>
           {contactsConstants.map(({ id, text, link, Element }) => (
             <div key={id} className="flex items-center space-x-2">
