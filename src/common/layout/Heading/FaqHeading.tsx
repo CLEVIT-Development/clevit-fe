@@ -18,7 +18,7 @@ const FaqHeading = () => {
           business evolve and fuel innovation.
         </p>
         <Button variant={ButtonVariant.Primary} onClick={() => navigate(RoutePaths.ContactUs)}>
-          Contact us
+          Contact Us
         </Button>
       </div>
     </div>

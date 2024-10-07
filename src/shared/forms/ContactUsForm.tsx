@@ -57,7 +57,6 @@ const ContactUs = () => {
         formData.append("file", data.file);
       }
 
-      console.log(data.files);
       await axiosInstance.post("/api/contact-us", formData);
 
       showNotification({

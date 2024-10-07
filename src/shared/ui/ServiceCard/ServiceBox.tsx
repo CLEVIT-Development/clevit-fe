@@ -23,8 +23,6 @@ const ServiceBox: FC<ServiceBoxProps> = ({
   imageAlt,
   image,
 }) => {
-  // console.log(`bg-[length:200px_${Math.ceil(Math.random() * 1000 + 1)}px] `);
-
   return (
     <div
       key={index}
@@ -32,28 +30,28 @@ const ServiceBox: FC<ServiceBoxProps> = ({
         backgroundImage:
           index % 2 === 0 ? `url(${BackgroundGradientReverse})` : `url(${BackgroundGradient})`,
       }}
-      className={`w-full desktop:max-w-screen-3xl  bg-no-repeat  desktop:bg-[length:400px_500px] bg-[length:300px_300px] flex  justify-between items-center desktop:py-16 py-10 desktop:px-20 ${index % 2 === 0 ? "flex-row bg-right " : "flex-row-reverse bg-left"}`}
+      className={`w-full desktop:max-w-screen-3xl bg-no-repeat desktop:bg-[length:600px_400px] bg-[length:300px_300px] flex justify-between items-center desktop:px-20 ${index % 2 === 0 ? "flex-row bg-right " : "flex-row-reverse bg-left"}`}
     >
       <div className="desktop:w-1/2 w-full desktop:px-[72px] desktop:py-[60px] desktop:justify-start desktop:items-start flex flex-col justify-start items-center">
         <div className=" desktop:text-start desktop:px-0 px-8 text-center">
           <h2 className="text-[#314252] text-lg font-bold desktop:landing-10 desktop:text-2xl">
             {title}
           </h2>
-          <p className="desktop:text-md desktop:w-[500px]  text-xs my-3  text-center desktop:text-start leading-5	 desktop:leading-8 ">
+          <p className="desktop:text-md desktop:w-[500px] text-xs my-3 text-center desktop:text-start leading-5 desktop:leading-8 ">
             {description}
           </p>
         </div>
-        <div className="w-full flex desktop:justify-start justify-center  gap-x-4 pt-8">
+        <div className="w-full flex desktop:justify-start justify-center gap-x-4 desktop:pt-8">
           <Button
             className="text-black border-black hover:text-white desktop:text-[20px] text-sm"
             variant={ButtonVariant.Outlined}
           >
-            learn more
+            Learn More
           </Button>
           <Button className="desktop:text-[20px] text-white text-sm"> {buttonTitle}</Button>
         </div>
       </div>
-      <div className=" desktop:flex hidden w-1/2  items-center justify-center  desktop:block ">
+      <div className="desktop:flex hidden w-1/2 items-center justify-center">
         <img src={image} alt={imageAlt} />
       </div>
     </div>
