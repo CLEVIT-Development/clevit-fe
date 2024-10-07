@@ -66,6 +66,7 @@ export default defineConfig({
       minify: true,
     }),
     sitemap({
+      outDir: "dist",
       hostname: "https://www.clevit.io",
       dynamicRoutes: [
         "/",
