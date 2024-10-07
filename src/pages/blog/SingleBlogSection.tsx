@@ -1,8 +1,11 @@
+import { useEffect } from "react";
+
 import { blogsConstants } from "@/assets/constants/blogs.constants";
 import ImagePlaceholder from "@/assets/images/ImagePlaceholder.jpg";
 import FacebookIcon from "@/assets/vectors/Facebook.svg?react";
 import InstagramIcon from "@/assets/vectors/Instagram.svg?react";
 import LinkedInIcon from "@/assets/vectors/Linkedin.svg?react";
+import useBlog from "@/common/hooks/useBlog";
 import Section from "@/common/templates/Section.tsx";
 import BlogCard from "@/shared/ui/BlogCard/BlogCard";
 
@@ -11,24 +14,32 @@ interface SingleBlogPageProps {
 }
 
 const SingleBlogSection = ({ blogId }: SingleBlogPageProps) => {
-  const blog = blogsConstants.find((blog) => blog.id === blogId);
+  const { getBlogById, blogData } = useBlog();
 
-  if (!blog) {
-    return <h1>Blog not found</h1>;
+  useEffect(() => {
+    getBlogById(blogId);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [blogId]);
+
+  if (!blogData) {
+    return null;
   }
 
-  const { title, description, imageAlt } = blog;
+  const { title, description, image } = blogData;
 
   return (
     <Section className="items-start desktop:max-w-[80%]">
       <img
         loading="lazy"
-        className="w-[335px] h-[220px] desktop:w-[1110px] desktop:h-[550px]  lg:flex rounded-[20px] bg-[#D9D9D9]"
-        alt={imageAlt}
-        src={ImagePlaceholder}
+        className="w-[335px] h-[220px] desktop:w-[1110px] desktop:h-[550px]  lg:flex rounded-[20px] bg-[#D9D9D9] object-cover"
+        alt={title}
+        src={image || ImagePlaceholder}
       />
       <h1 className="text-3xl desktop:max-w-[80%]">{title}</h1>
-      <p className="text-base desktop:max-w-[80%]">{description}</p>
+      <p
+        className="text-base desktop:max-w-[80%]"
+        dangerouslySetInnerHTML={{ __html: description }}
+      />
 
       <div className="flex space-x-2 items-center justify-center">
         <span className="text-lg">Share this</span>

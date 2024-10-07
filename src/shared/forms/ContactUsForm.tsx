@@ -4,8 +4,8 @@ import { Controller, FormProvider, useForm } from "react-hook-form";
 import { servicesConstants } from "@/assets/constants/services.constants.ts";
 import countriesConstants from "@/assets/data/countries.json";
 import { contactUsSchema } from "@/common/schemas/contactUsSchema.tsx";
+import { axiosInstance } from "@/common/services/toast/axios.service";
 import showNotification, { ToastVersions } from "@/common/services/toast/showNotifications.tsx";
-import axiosInstance from "@/services/axios.service";
 import AutoComplete from "@/shared/ui/forms/AutoComplete.tsx";
 import { filesSizeValidation } from "@/utils/validation.utils";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -57,7 +57,7 @@ const ContactUs = () => {
         formData.append("file", data.file);
       }
 
-      await axiosInstance.post("/api/contact-us", formData);
+      await axiosInstance.post("/auth/contact-us", formData);
 
       showNotification({
         type: ToastVersions.success,

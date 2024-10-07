@@ -101,7 +101,7 @@ const Footer = () => {
                 image={element.image}
                 description={element.description}
                 date={new Date("12/04/2024").toLocaleDateString()}
-                imageAlt={element?.imageAlt}
+                imageAlt={element?.title}
               />
             );
           })}

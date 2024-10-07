@@ -7,6 +7,7 @@ import { twMerge } from "tailwind-merge";
 
 import { RoutePaths, headerMenuLinks } from "@/app/routing/routing.constants.ts";
 import Messages from "@/assets/vectors/Messages.svg?react";
+import { useAuth } from "@/common/hooks/useAuth";
 import useLockBodyScroll from "@/common/hooks/useBodyLock";
 import useResponsive from "@/common/hooks/useResponsive";
 import Button from "@/shared/ui/Button.tsx";
@@ -31,12 +32,21 @@ const Header = forwardRef(
     const [isTransitionEndClose, setIsTransitionEndClose] = useState(false);
     const navListRef = useRef<HTMLDivElement>(null);
 
+    const { isAuthenticated } = useAuth();
+
     useLockBodyScroll(isOpen);
 
     const renderNavList = useMemo(
       () =>
         headerMenuLinks.map((headerMenuLink) => {
           const isActive = `${pathname}${hash}` === headerMenuLink.link;
+          const isVisible = headerMenuLink.needAuthentication ? isAuthenticated : true;
+
+          console.log(isAuthenticated);
+
+          if (!isVisible) {
+            return null;
+          }
 
           return (
             <NavLink
@@ -59,7 +69,7 @@ const Header = forwardRef(
             </NavLink>
           );
         }),
-      [isWhiteBackground, pathname, hash]
+      [isWhiteBackground, pathname, hash, isAuthenticated]
     );
 
     return (
@@ -106,7 +116,7 @@ const Header = forwardRef(
           className={classNames(
             "transition-all duration-700 overflow-hidden lg:hidden flex flex-col justify-between items-center h-0",
             {
-              ["h-[50vh] md:h-[40vh] sm:h-[40vh] lg:h-[30vh] desktop:h-[30vh]"]: isOpen,
+              ["h-[70vh] md:h-[40vh] sm:h-[40vh] lg:h-[30vh] desktop:h-[30vh]"]: isOpen,
             }
           )}
           onTransitionEnd={() => {
