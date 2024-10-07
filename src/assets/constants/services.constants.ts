@@ -8,6 +8,17 @@ import MachineLearning from "@/assets/images/services/MachineLearning.png";
 import OutStaffingImage from "@/assets/images/services/Outstaffing.png";
 import ProjectManagment from "@/assets/images/services/ProjectManagment.png";
 import QualityAssurance from "@/assets/images/services/QualityAssurance.png";
+import SinglePageAIHeading from "@/assets/images/services/SinglePageAIHeading.png";
+import SinglePageAssessmentHeading from "@/assets/images/services/SinglePageAssessmentHeading.png";
+import SinglePAgeDevopsHeading from "@/assets/images/services/SinglePageDevopsHeading.png";
+import SinglePageMLHeading from "@/assets/images/services/SinglePageMLHeading.png";
+import SinglePageManagmentHeading from "@/assets/images/services/SinglePageManagmentHeading.png";
+import SinglePageMarketingHeading from "@/assets/images/services/SinglePageMarketingHeading.png";
+import SinglePageMobileDevelopmentHeading from "@/assets/images/services/SinglePageMobileDevelopmentHeading.png";
+import SinglePageOutstaffingHeading from "@/assets/images/services/SinglePageOutstaffingHeading.png";
+import SinglePageQualityHeading from "@/assets/images/services/SinglePageQualityHeading.png";
+import SinglePageWebDevelopmentHeading from "@/assets/images/services/SinglePageWebDevelopmentHeading.png";
+import SinglePageuIuXHeading from "@/assets/images/services/SinglePageuIuXHeading.png";
 import SupportMaintenance from "@/assets/images/services/Support&Maintenance.png";
 import TechnicalAssessmentImage from "@/assets/images/services/TechnicalAssessmentImage.png";
 import UIUXDesigne from "@/assets/images/services/UIUXDesigne.png";
@@ -153,6 +164,7 @@ export const servicesConstants = [
     image: WebDevelopmentOverviewImage,
     imageAlt: "web development image",
     singleServiceHeaderTitle: "Web Development Services",
+    headerImage: SinglePageWebDevelopmentHeading,
     singleServiceHeaderDescription:
       "Bring your vision to life with our expert web development team",
     Icon: PC,
@@ -253,6 +265,7 @@ export const servicesConstants = [
     Icon: Phone,
     image: AppDevelopmentOverviewReverse,
     imageAlt: "Mobile App Development image",
+    headerImage: SinglePageMobileDevelopmentHeading,
     singleServiceHeaderTitle: "Mobile App Development Services",
     singleServiceHeaderDescription: "Transform Your Ideas into High-Performance Mobile Apps",
     buttonTitle: "Request a Quote",
@@ -351,6 +364,7 @@ export const servicesConstants = [
     image: DevopsServices,
     buttonTitle: "Request a Quote",
     imageAlt: "Devops service image",
+    headerImage: SinglePAgeDevopsHeading,
     singleServiceHeaderTitle: "DevOps Services & Solutions",
     singleServiceHeaderDescription: "Accelerate Your Development with Seamless DevOps Integration",
     title: "DevOps",
@@ -437,6 +451,7 @@ export const servicesConstants = [
     Icon: Robot,
     image: AIintegration,
     imageAlt: "AI integration image",
+    headerImage: SinglePageAIHeading,
     singleServiceHeaderTitle: "AI Integration Services",
     singleServiceHeaderDescription: "Unlock the Power of AI with Custom Solutions",
     buttonTitle: "Request a Quote",
@@ -544,6 +559,7 @@ export const servicesConstants = [
     Icon: Settings,
     image: MachineLearning,
     imageAlt: "Machine Learning Development image",
+    headerImage: SinglePageMLHeading,
     singleServiceHeaderTitle: "ML Development Services",
     singleServiceHeaderDescription: "Paving the Way for Smarter Solutions",
     buttonTitle: "Request a Quote",
@@ -652,6 +668,7 @@ export const servicesConstants = [
     image: QualityAssurance,
     buttonTitle: "Request a Quote",
     imageAlt: "Data Quality Assurance image",
+    headerImage: SinglePageQualityHeading,
     singleServiceHeaderTitle: "Data Quality Assurance",
     singleServiceHeaderDescription: "Ensuring Data Integrity and Reliability",
     title: "Data Quality Assurance",
@@ -757,6 +774,7 @@ export const servicesConstants = [
     image: TechnicalAssessmentImage,
     buttonTitle: "Schedule an Assessment",
     imageAlt: "Technical Assessment image",
+    headerImage: SinglePageAssessmentHeading,
     singleServiceHeaderTitle: "Technical Assessment Services",
     singleServiceHeaderDescription: "Evaluating Your System for Peak Performance and Efficiency",
     title: "Technical Assessment",
@@ -860,6 +878,7 @@ export const servicesConstants = [
     Icon: Support,
     buttonTitle: "Request a Quote",
     imageAlt: "Support & Maintenance image",
+    headerImage: SinglePageAssessmentHeading,
     singleServiceHeaderTitle: "Website Maintenance Services",
     singleServiceHeaderDescription: "Ensuring Your Website’s Optimal Performance and Security",
     image: SupportMaintenance,
@@ -960,6 +979,7 @@ export const servicesConstants = [
     title: "Outstaffing",
     buttonTitle: "Hire Now",
     imageAlt: "Outstaffing image",
+    headerImage: SinglePageOutstaffingHeading,
     singleServiceHeaderTitle: "IT Outstaffing Services",
     singleServiceHeaderDescription: "Access Skilled Talent On-Demand",
     route: "/",
@@ -1070,6 +1090,7 @@ export const servicesConstants = [
     route: "/it-project-management",
     buttonTitle: "Request a Quote",
     imageAlt: "IT Project Management image",
+    headerImage: SinglePageManagmentHeading,
     singleServiceHeaderTitle: "Expert Guidance for Your IT Projects",
     singleServiceHeaderDescription: "Expert Guidance for Your IT Projects",
     description:
@@ -1175,6 +1196,7 @@ export const servicesConstants = [
     Icon: UIUX,
     title: "UI/UX Design",
     imageAlt: "UI/UX designe image ",
+    headerImage: SinglePageuIuXHeading,
     singleServiceHeaderTitle: "UI/UX Design Services",
     singleServiceHeaderDescription: "Designing Engaging and User-Friendly Experiences",
     buttonTitle: "Request a Quote",
@@ -1284,6 +1306,7 @@ export const servicesConstants = [
     image: DigitalMarketingImage,
     Icon: DigitalMarketing,
     imageAlt: "Digital marketing image",
+    headerImage: SinglePageMarketingHeading,
     singleServiceHeaderTitle: "Digital Marketing Services",
     singleServiceHeaderDescription:
       "Accelerating Your Digital Growth with Strategic Marketing Solutions",

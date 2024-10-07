@@ -30,7 +30,7 @@ const SingleServiceSection = ({ serviceId, setHeaderItems }: SingleServiceSectio
     setHeaderItems({
       title: service.singleServiceHeaderTitle,
       description: service.singleServiceHeaderDescription,
-      image: service.image,
+      image: service.headerImage,
       imageAlt: service.imageAlt,
     });
   }, [service, setHeaderItems]);
@@ -44,7 +44,7 @@ const SingleServiceSection = ({ serviceId, setHeaderItems }: SingleServiceSectio
   return (
     <Section>
       <div className="text-center flex flex-col  items-center jutsify-between pt-[100px]">
-        <span className="text-md leading-8">{service.singlePageDescription}</span>
+        <span className="desktoptext-md  text-base leading-8">{service.singlePageDescription}</span>
         <h2 className="desktop:text-2xl desktop:mt-16">What Is Important for Us</h2>
         <div className="max-w-[900px] desktop:mt-6 mb-16">
           <span className="leading-8">{service.serviceDetails}</span>
@@ -79,17 +79,17 @@ const SingleServiceSection = ({ serviceId, setHeaderItems }: SingleServiceSectio
       </div>
       <div className="flex flex-col justify-center gap-6 text-center">
         <div className="flex flex-col items-center gap-6 pt-24">
-          <h3 className="text-blacktext-md-l text-2xl text-[#314252]">Industries We Serve</h3>
-          <p className="text-md leading-8 text-center  desktop:w-[980px] w-full">
+          <h3 className="desktop:text-2xl text-lg text-[#314252]">Industries We Serve</h3>
+          <p className="desktop:text-md text-base leading-8 text-center  desktop:w-[980px] w-full">
             {service.serviceIndustriesDescription}
           </p>
         </div>
-        <div className="flex flex-wrap justify-around gap-6">
+        <div className="flex w-screen max-w-full overflow-x-auto flex-nowrap justify-around gap-2">
           {industries.map(({ title, Icon }, index) => {
             return (
               <div
                 key={index}
-                className="w-48 h-44 flex flex-col items-center justify-center gap-5 rounded-lg text-center transition-all duration-300 border shadow-[0px_8px_10px_0px_rgba(0,0,0,0.07)] hover:border-[#4F1D85] hover:border-solid"
+                className="w-48 h-44 shrink-0 flex flex-col items-center justify-center gap-5 rounded-lg text-center transition-all duration-300 border shadow-[0px_8px_10px_0px_rgba(0,0,0,0.07)] hover:border-[#4F1D85] hover:border-solid"
               >
                 <Icon />
                 <h1>{title}</h1>

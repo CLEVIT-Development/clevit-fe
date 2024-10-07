@@ -352,7 +352,7 @@ export const servicesIndustriesConstants = {
       title: "Recruitment & Staffing",
     },
     {
-      Icon: OnlineBookingPlatforms,
+      Icon: HealthcareTechnology,
       title: "Healthcare Technology",
     },
   ],

@@ -75,7 +75,7 @@ export const itOutsidingTechnologiesConstants = {
     { id: 10, title: "HTML 5", Icon: HTMLIcon },
     { id: 11, title: "CSS3", Icon: CSSIcon },
     { id: 12, title: "SCSS(SASS)", Icon: SASSIcon },
-    { id: 5, title: "Typescript", Icon: Typescript },
+    { id: 13, title: "Typescript", Icon: Typescript },
   ],
   2: [
     { id: 1, title: "Node.js", Icon: NodeIcon },

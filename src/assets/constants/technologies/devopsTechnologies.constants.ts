@@ -37,26 +37,26 @@ export const devopsTechnologiesTabsConstants: ITabsConstant[] = [
 export const devopsTechnologiesConstants = {
   1: [
     { id: 1, title: "AWS", Icon: AWS },
-    { id: 1, title: "Google Cloud", Icon: GoogleCloud },
-    { id: 1, title: "Azure", Icon: AzureCloud },
-    { id: 1, title: "Digital Ocean", Icon: DigitalOchean },
+    { id: 2, title: "Google Cloud", Icon: GoogleCloud },
+    { id: 3, title: "Azure", Icon: AzureCloud },
+    { id: 4, title: "Digital Ocean", Icon: DigitalOchean },
   ],
   2: [
     { id: 1, title: "AWS", Icon: AWS },
-    { id: 1, title: "Google Cloud", Icon: GoogleCloud },
-    { id: 1, title: "Azure", Icon: AzureCloud },
-    { id: 1, title: "Digital Ocean", Icon: DigitalOchean },
+    { id: 2, title: "Google Cloud", Icon: GoogleCloud },
+    { id: 3, title: "Azure", Icon: AzureCloud },
+    { id: 4, title: "Digital Ocean", Icon: DigitalOchean },
   ],
   3: [
     { id: 1, title: "AWS", Icon: AWS },
-    { id: 1, title: "Google Cloud", Icon: GoogleCloud },
-    { id: 1, title: "Azure", Icon: AzureCloud },
-    { id: 1, title: "Digital Ocean", Icon: DigitalOchean },
+    { id: 2, title: "Google Cloud", Icon: GoogleCloud },
+    { id: 3, title: "Azure", Icon: AzureCloud },
+    { id: 4, title: "Digital Ocean", Icon: DigitalOchean },
   ],
   4: [
     { id: 1, title: "AWS", Icon: AWS },
-    { id: 1, title: "Google Cloud", Icon: GoogleCloud },
-    { id: 1, title: "Azure", Icon: AzureCloud },
-    { id: 1, title: "Digital Ocean", Icon: DigitalOchean },
+    { id: 2, title: "Google Cloud", Icon: GoogleCloud },
+    { id: 3, title: "Azure", Icon: AzureCloud },
+    { id: 4, title: "Digital Ocean", Icon: DigitalOchean },
   ],
 };

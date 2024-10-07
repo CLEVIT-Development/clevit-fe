@@ -7,6 +7,7 @@ import { Gradient } from "@/shared/gradient/Gradient";
 import PageSEO from "@/shared/lib/meta/PageSeo";
 import { HeaderVariant } from "@/types/variant.types.ts";
 
+import { MetaServices } from "../metaServices";
 import SingleServiceHeading from "./SingleServiceHeading";
 import SingleServiceSection from "./SingleServiceSection";
 
@@ -19,7 +20,6 @@ export interface SingleServiceHeaderItems {
 
 const SingleServicePage = () => {
   const { id } = useParams();
-  // ... existing code ...
   const [headerItems, setHeaderItems] = useState<SingleServiceHeaderItems>({
     title: "",
     description: "",
@@ -29,12 +29,15 @@ const SingleServicePage = () => {
 
   return (
     <>
-      <PageSEO canonicalUrl="https://www.clevit.io/service" />
+      <PageSEO
+        title={id ? MetaServices[id]?.title : "Clevit"}
+        description={id ? MetaServices[id]?.description : "Clevit"}
+        canonicalUrl={id ? MetaServices[id]?.url : "https://www.clevit.io/"}
+      />
       <Layout
         headerVariant={HeaderVariant.Primary}
         heading={
           <Gradient className="h-[200px] w-full">
-            {/* Gradient doesn't appear without SingleBlogHeading, even though it's not strictly necessary */}
             <SingleServiceHeading
               title={headerItems.title}
               description={headerItems.description}
@@ -49,8 +52,6 @@ const SingleServicePage = () => {
         ) : (
           <NotFound />
         )}
-
-        {/*<CalendlySection title="Ready to turn your vision into reality? The journey starts here. We're excited to meet you." />*/}
       </Layout>
     </>
   );
