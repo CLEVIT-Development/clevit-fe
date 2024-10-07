@@ -26,7 +26,6 @@ const ServiceBox: FC<ServiceBoxProps> = ({
   image,
   route,
 }) => {
-  // console.log(`bg-[length:200px_${Math.ceil(Math.random() * 1000 + 1)}px] `);
   const navigate = useNavigate();
 
   return (
