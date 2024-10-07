@@ -122,7 +122,7 @@ export const servicesIndustriesConstants = {
       title: "Online Booking Platforms",
     },
   ],
-  [ServicesIdConstants.AI]: [
+  [ServicesIdConstants.AiIntegration]: [
     {
       Icon: FilmProduction,
       title: "Film Production",
@@ -148,7 +148,7 @@ export const servicesIndustriesConstants = {
       title: "Automation",
     },
   ],
-  [ServicesIdConstants.ML]: [
+  [ServicesIdConstants.MachineLearning]: [
     {
       Icon: VirtualMeeting,
       title: "Virtual Meetings  & Conferencing",
@@ -174,7 +174,7 @@ export const servicesIndustriesConstants = {
       title: "Appointment Scheduling",
     },
   ],
-  [ServicesIdConstants.Quality]: [
+  [ServicesIdConstants.QualityAssurance]: [
     {
       Icon: MediaEntertainment,
       title: "Media & Entertainment",
@@ -200,7 +200,7 @@ export const servicesIndustriesConstants = {
       title: "Artificial Intelligence (AI)",
     },
   ],
-  [ServicesIdConstants.Assessment]: [
+  [ServicesIdConstants.TechnicalAssessment]: [
     {
       Icon: SoftwareAsService,
       title: "Software as a Service (SaaS)",
@@ -226,7 +226,7 @@ export const servicesIndustriesConstants = {
       title: "Task Management Systems",
     },
   ],
-  [ServicesIdConstants.Maintenance]: [
+  [ServicesIdConstants.MaintenanceSupport]: [
     {
       Icon: HealthcareTechnology,
       title: "Healthcare Technology",
@@ -330,7 +330,7 @@ export const servicesIndustriesConstants = {
       title: "Clinic & Lab Management",
     },
   ],
-  [ServicesIdConstants.Marketing]: [
+  [ServicesIdConstants.DigitalMarketing]: [
     {
       Icon: DigitalHealt,
       title: "Digital Health Solutions",

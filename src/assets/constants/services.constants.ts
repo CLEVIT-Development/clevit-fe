@@ -447,7 +447,7 @@ export const servicesConstants = [
     },
   },
   {
-    id: ServicesIdConstants.AI,
+    id: ServicesIdConstants.AiIntegration,
     Icon: Robot,
     image: AIintegration,
     imageAlt: "AI integration image",
@@ -555,7 +555,7 @@ export const servicesConstants = [
     },
   },
   {
-    id: ServicesIdConstants.ML,
+    id: ServicesIdConstants.MachineLearning,
     Icon: Settings,
     image: MachineLearning,
     imageAlt: "Machine Learning Development image",
@@ -663,27 +663,27 @@ export const servicesConstants = [
     },
   },
   {
-    id: ServicesIdConstants.Quality,
+    id: ServicesIdConstants.QualityAssurance,
     Icon: Security,
     image: QualityAssurance,
     buttonTitle: "Request a Quote",
-    imageAlt: "Data Quality Assurance image",
+    imageAlt: "Quality Assurance image",
     headerImage: SinglePageQualityHeading,
-    singleServiceHeaderTitle: "Data Quality Assurance",
+    singleServiceHeaderTitle: "Quality Assurance",
     singleServiceHeaderDescription: "Ensuring Data Integrity and Reliability",
-    title: "Data Quality Assurance",
+    title: "Quality Assurance",
     route: "/data-quality-assurance",
     description:
-      "At Clevit, our Data Quality Assurance (QA) solutions are aimed at ensuring the quality, integrity and credibility of data. We guarantee the effective and accurate completion of the data processes, so you can make sound decisions for your business and improve operations.",
+      "At Clevit, our Quality Assurance (QA) solutions are aimed at ensuring the quality, integrity and credibility of data. We guarantee the effective and accurate completion of the data processes, so you can make sound decisions for your business and improve operations.",
 
     descriptionOffer:
-      "Keeping client needs in mind, Clevit is about achieving basic, simple, and accurate data quality assurance. Your data is accurate, reliable, and compliant, helping your business achieve its objectives.",
+      "Keeping client needs in mind, Clevit is about achieving basic, simple, and accurate quality assurance. Your data is accurate, reliable, and compliant, helping your business achieve its objectives.",
 
     singlePageDescription:
-      "At Clevit, our Data Quality Assurance (QA) solutions are aimed at ensuring the quality, integrity and credibility of data. We guarantee the effective and accurate completion of the data processes, that you can make sound decisions for the business and improve operations.",
+      "At Clevit, our Quality Assurance (QA) solutions are aimed at ensuring the quality, integrity and credibility of data. We guarantee the effective and accurate completion of the data processes, that you can make sound decisions for the business and improve operations.",
 
     serviceDetails:
-      "Keeping client needs in mind, Clevit is about achieving basic, simple, and accurate data quality assurance. To that end, the most important priority for us is that your data is accurate, reliable, and compliant while helping your business achieve its objectives.",
+      "Keeping client needs in mind, Clevit is about achieving basic, simple, and accurate quality assurance. To that end, the most important priority for us is that your data is accurate, reliable, and compliant while helping your business achieve its objectives.",
 
     offers: [
       {
@@ -719,9 +719,9 @@ export const servicesConstants = [
     ],
 
     serviceIndustriesDescription:
-      "Clevit’s Data Quality Assurance services are flexible for most businesses such as healthcare, financial, retail, logistics and many others. Our services are fully adaptable to the requirements of the certain sector because the main principles of working claim on high quality and up to date data.",
+      "Clevit’s Quality Assurance services are flexible for most businesses such as healthcare, financial, retail, logistics and many others. Our services are fully adaptable to the requirements of the certain sector because the main principles of working claim on high quality and up to date data.",
 
-    serviceTechnologiesTitle: "Key Aspects of Our Data Quality Assurance Process",
+    serviceTechnologiesTitle: "Key Aspects of Our Quality Assurance Process",
     serviceTechnologiesSubtitle:
       "At Clevit, it is our priority to have accurate, reliable and secure data through automation, performance, API validation, and end to end testing. Our technique incorporates the utilization of sophisticated instruments to ensure the sanctity of data and enhance your system.",
 
@@ -729,17 +729,17 @@ export const servicesConstants = [
     serviceTechnologies: dataQualityTechnologiesConstants,
 
     serviceBookConsultation: {
-      title: "Ensure Your Data Quality with Clevit",
+      title: "Ensure Your Quality with Clevit",
       description: "Maximize the potential of your data with our quality assurance services.",
     },
     servicesProcesses: singlePageDataQualityAssuranceProcessesConstants,
-    processMainTitle: "Processes We Follow for Data Quality Assurance",
+    processMainTitle: "Processes We Follow for Quality Assurance",
     ChooseClevitTitle: "Ensure Your Data Quality with Clevit",
     ChooseClevitRecomendation: [
       {
         title: "Comprehensive Approach",
         description:
-          "Here, you will find all types of data quality assurance services starting from auditing and including monitoring, which means you will get nothing but complete and truthful solutions from us.",
+          "Here, you will find all types of quality assurance services starting from auditing and including monitoring, which means you will get nothing but complete and truthful solutions from us.",
       },
       {
         title: "Experienced Team",
@@ -769,7 +769,7 @@ export const servicesConstants = [
     },
   },
   {
-    id: ServicesIdConstants.Assessment,
+    id: ServicesIdConstants.TechnicalAssessment,
     Icon: TechnicalAssessment,
     image: TechnicalAssessmentImage,
     buttonTitle: "Schedule an Assessment",
@@ -874,7 +874,7 @@ export const servicesConstants = [
     },
   },
   {
-    id: ServicesIdConstants.Maintenance,
+    id: ServicesIdConstants.MaintenanceSupport,
     Icon: Support,
     buttonTitle: "Request a Quote",
     imageAlt: "Support & Maintenance image",
@@ -1302,7 +1302,7 @@ export const servicesConstants = [
     },
   },
   {
-    id: ServicesIdConstants.Marketing,
+    id: ServicesIdConstants.DigitalMarketing,
     image: DigitalMarketingImage,
     Icon: DigitalMarketing,
     imageAlt: "Digital marketing image",

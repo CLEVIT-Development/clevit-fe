@@ -78,7 +78,7 @@ const SingleServiceSection = ({ serviceId, setHeaderItems }: SingleServiceSectio
         />
       </div>
       <div className="flex flex-col justify-center gap-6 text-center">
-        <div className="flex flex-col items-center gap-6 pt-24">
+        <div className="flex flex-col items-center gap-6 pt-16">
           <h3 className="desktop:text-2xl text-lg text-[#314252]">Industries We Serve</h3>
           <p className="desktop:text-md text-base leading-8 text-center  desktop:w-[980px] w-full">
             {service.serviceIndustriesDescription}

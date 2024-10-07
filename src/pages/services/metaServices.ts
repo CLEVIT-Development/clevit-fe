@@ -20,26 +20,26 @@ export const MetaServices = {
     description:
       "Explore Clevit's DevOps services for seamless integration, automation and cloud. Optimize your development process & enhance performance with expert solutions.",
   },
-  [ServicesIdConstants.AI]: {
+  [ServicesIdConstants.AiIntegration]: {
     url: "https://www.clevit.io/services/ai-integration",
     title: "AI Integration Services | Clevit",
     description:
       "Explore AI integration with Clevit Services, grow your business with cutting-edge cutting-edge technology. Optimize your business operations with advanced AI.",
   },
-  [ServicesIdConstants.ML]: {
+  [ServicesIdConstants.MachineLearning]: {
     url: "https://www.clevit.io/services/ml-development",
     title: "ML Development Services | Clevit",
     description:
       "Explore the professional ML services provided by Clevit.Consulting services are available from designing to enhancing to meet your business needs and growth.",
   },
-  [ServicesIdConstants.Quality]: {
+  [ServicesIdConstants.QualityAssurance]: {
     url: "https://www.clevit.io/services/data-quality-assurance",
-    title: "Data Quality Assurance | Clevit",
+    title: "Quality Assurance | Clevit",
     description:
-      "Improve data quality and credibility through Clevit’s Data Quality Assurance solutions. We haveNaming the best solutions that will strengthen business decisions",
+      "Improve quality and credibility through Clevit’s Quality Assurance solutions. We haveNaming the best solutions that will strengthen business decisions",
   },
 
-  [ServicesIdConstants.Assessment]: {
+  [ServicesIdConstants.TechnicalAssessment]: {
     url: "https://www.clevit.io/services/technical-assessment",
     title: "Technical Assessment Services | Clevit",
     description:
