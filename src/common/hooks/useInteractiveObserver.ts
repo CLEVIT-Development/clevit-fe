@@ -44,9 +44,11 @@ const useInteractiveObserver = <T extends HTMLElement>({
 
     return () => {
       if (sectionRef.current) {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         observer.unobserve(sectionRef.current);
       }
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname, hash]);
 };
 

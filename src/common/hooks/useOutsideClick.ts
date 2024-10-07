@@ -14,6 +14,7 @@ const useOutsideClick = <T extends HTMLElement>(ref: RefObject<T>, callback: () 
     return () => {
       document.removeEventListener("click", handleClick);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 };
 

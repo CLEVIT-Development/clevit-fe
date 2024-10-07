@@ -22,6 +22,7 @@ const useScrollView = (ref: RefObject<HTMLDivElement>, route: string) => {
 
       requestAnimationFrame(handleScroll);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isActive, hash, ref]);
 };
 

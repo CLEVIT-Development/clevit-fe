@@ -1,4 +1,4 @@
-import { type FunctionComponent, type LazyExoticComponent, type SVGProps, lazy } from "react";
+import { type FunctionComponent, type LazyExoticComponent, type SVGProps } from "react";
 
 import type { INavigationData } from "@/shared/ui/Navigation.tsx";
 
