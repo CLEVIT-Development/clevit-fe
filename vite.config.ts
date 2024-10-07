@@ -75,23 +75,28 @@ export default defineConfig({
         "/portfolio",
         "/faq",
         "/contact-us",
-        "//privacy-policy",
+        "/privacy-policy", // Removed extra slash
         "/terms-and-conditions",
         "/request-demo",
         "/web-development",
         "/blogs",
       ],
-      exclude: ["/admin/**"],
+      exclude: ["/admin/**"], // Exclude admin routes from the sitemap
       changefreq: "daily", // Frequency for updates
-      priority: 1.0, // Default priority
-      lastmod: new Date(), // Last modified date
-      readable: true, // Optional, makes the XML human-readable
+      priority: 1.0, // Default priority for all pages
+      lastmod: new Date().toISOString(), // Last modified date in ISO format
+      readable: true, // Makes the XML human-readable
       generateRobotsTxt: true, // Generate robots.txt
       robots: [
         { userAgent: "*", allow: "/" },
         {
           userAgent: "*",
-          disallow: ["/admin", "/admin/blog/:id?", "/admin/signin", "/admin/addBlog"],
+          disallow: [
+            "/admin",
+            "/admin/blog/:id?", // Use appropriate syntax to match dynamic routes
+            "/admin/signin",
+            "/admin/addBlog",
+          ],
         }, // Disallow admin routes
       ], // Robots policy
     }),
