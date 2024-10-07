@@ -6,7 +6,7 @@ import { RoutePaths } from "./routing.constants";
 
 interface AuthRouteProps {
   children: React.ReactNode;
-  isPrivate: boolean;
+  isPrivate?: boolean;
   isAuthPath: boolean;
 }
 
