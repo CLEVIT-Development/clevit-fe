@@ -5,26 +5,30 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 
-import { routerElements } from "@/app/routing/routing.constants.ts";
+import { RoutePaths, routerElements } from "@/app/routing/routing.constants.ts";
 import ScrollToTop from "@/common/templates/ScrollToTop.tsx";
 import NotFoundPage from "@/pages/not-found/NotFoundPage.tsx";
+
+import AuthRoute from "./AuthRoute";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
-      {routerElements.map(({ Element, path }) => (
+      {routerElements.map(({ Element, path, isPrivate }) => (
         <Route
           key={path}
           path={path}
           element={
             <>
-              <Element />
+              <AuthRoute isPrivate={isPrivate} isAuthPath={path === RoutePaths.AdminSignIn}>
+                <Element />
+              </AuthRoute>
               <ScrollToTop />
             </>
           }
         />
       ))}
-      <Route path={"*"} element={<NotFoundPage />} />
+      <Route path="*" element={<NotFoundPage />} />
     </>
   )
 );
