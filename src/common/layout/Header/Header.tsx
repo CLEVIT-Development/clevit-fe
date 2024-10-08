@@ -30,7 +30,7 @@ const Header = forwardRef(
     const { isTablet, isDesktop } = useResponsive();
     const [isOpen, setIsOpen] = useState(false);
     const [isTransitionEndClose, setIsTransitionEndClose] = useState(false);
-    const navListRef = useRef<HTMLDivElement>(null);
+    const navListRef = useRef<HTMLDivElement | null>(null);
 
     const { isAuthenticated } = useAuth();
 
@@ -54,7 +54,7 @@ const Header = forwardRef(
               key={headerMenuLink.id}
               to={headerMenuLink.link}
               className={twMerge(
-                classNames(" text-white lg:text-md text-lg font-medium ", {
+                classNames("text-white lg:text-md text-lg font-medium", {
                   ["text-purple-1300"]: isWhiteBackground,
                   ["text-purple-300 lg:after:w-full lg:after:bg-purple-100"]:
                     isActive && isWhiteBackground,
@@ -121,7 +121,7 @@ const Header = forwardRef(
             setIsTransitionEndClose(isOpen);
           }}
         >
-          <nav ref={navListRef} className="flex flex-col items-center space-y-6">
+          <nav ref={navListRef} className="flex flex-col items-center § space-y-6">
             {renderNavList}
           </nav>
           <Copyright
