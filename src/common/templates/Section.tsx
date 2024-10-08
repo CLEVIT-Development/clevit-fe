@@ -48,7 +48,7 @@ const Section = forwardRef(
           <HeadingComponent
             className={twMerge(
               classNames(
-                "text-gray-200 desktop:text-2xl text-lg font-semibold text-center w-full",
+                "text-gray-200 desktop:text-2xl text-lg font-semibold text-center w-full my-5",
                 {
                   ["desktop:text-xl text-md-l font-semibold text-left"]:
                     variant === SectionVariant.Secondary,
