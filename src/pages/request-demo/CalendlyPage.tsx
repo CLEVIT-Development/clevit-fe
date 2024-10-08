@@ -7,12 +7,12 @@ const CalendlyPage = () => {
   return (
     <>
       <PageSEO
-        title="Book a Product Demo"
-        description="You're invited to book a demo call with our team and get an in-depth look at our products. Our team will be happy to address any inquiries you may have about product setup, features, pricing, and other details."
+        title="Request a demo | Clevit"
+        description="Request a demo with Clevit and explore how our tailored solutions can help your business grow with innovative web, mobile, and software development services."
         canonicalUrl="https://www.clevit.io/request-demo"
       />
       <Layout headerVariant={HeaderVariant.Tertiary} className="pb-0 !pt-[130px]">
-        <CalendlySection title="Book a call with one of our experts, and they will reach out to discuss the services we provide and how we can help turn your ideas into reality." />
+        <CalendlySection title="Let’s find the perfect solution" />
       </Layout>
     </>
   );
