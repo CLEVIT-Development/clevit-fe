@@ -38,27 +38,27 @@ const WebSocketIcon = lazy(() => import("@/assets/vectors/technology/WebSocket.s
 export const webDevelopmentTechnologiesTabsConstants: ITabsConstant[] = [
   {
     id: 1,
-    title: "Cloud Infrastructure Management",
+    title: "Front-End Development",
     description:
-      "This classification is about the administration and operation of cloud structures. Whatever cloud solution a business organization is using, be it AWS, Google Cloud, Azure, or Digital Ocean, we assist in configuring, monitoring, and optimizing their cloud infrastructure. This makes certain that your systems are robust, efficient, and safe.",
+      "Front-End developers at our company create intuitive, dynamic, and aesthetically-pleasing and user interfaces. Using technologies like React.js, Vue.js, Next.js, TypeScript, and many others we develop websites that are adaptable to various screen sizes.The goal is to bring an additional focus on the user experience that will allow not to lose a visitor.",
   },
   {
     id: 2,
-    title: "Containerization & Orchestration",
+    title: "Back-End Development",
     description:
-      "Application environment management became easier and scalable due to the implementation of Docker and containerization. We use containers for consistency in both development and in production, making your team more efficient and your apps more reliable.",
+      "Every website has its back-end, which serves as a foundation for web development. With Node, we make certain that every aspect of your website’s server, databases, and applications are well-coordinated. Node.js, Nest.js, Express.js, and other modern frameworks which we are going to build in this project. We integrate back-end services with the keen sense of security and performance as our basis for the reliable solutions.",
   },
   {
     id: 3,
-    title: "CI/CD Pipeline Automation",
+    title: "Database Management",
     description:
-      "Our CI/CD services help optimize your software development process saving your time and efforts for the same. Through the use of Jenkins, AWS CodePipeline, Azure DevOps we are able to ensure that the code you write gets tested, deployed and released to the cloud platforms as soon as possible. This helps minimize the chances of human mistakes, enhance the software release cycle, and ensure that you are always deploying and delivering the latest software.",
+      "It is therefore important to have a well formulated database so that it can deliver on its performance and also to enhance the level of security. We use tools such as MySQL, MongoDB, PostgreSQL, Redis, and among others in developing effective storage systems. Whether you need relational databases or NoSQL, rest assured that our services will handle your data with utmost attention so you have the fastest secure data access for your application.",
   },
   {
     id: 4,
-    title: "Cloud Security & Compliance",
+    title: "Custom Solutions",
     description:
-      "Security and compliance are of paramount importance within the context of DevOps. We offer security services across the cloud stack, guaranteeing that your <strong>AWS</strong>, <strong>Azure</strong>, or <strong>Google Cloud</strong> environment is optimized with proper configurations and complies with regulations such as <strong>GDPR</strong>, <strong>HIPAA</strong>, and <strong>SOC 2.</strong>",
+      "Therefore, we appreciate that each business organization has a specific and special requirement and thus, we offer the web development services that can suit your business needs. No matter whether it is about incorporating third party APIs or developing applications for web security that is top-notch, we have features and solutions that could help your business to gain leverage.",
   },
 ];
 

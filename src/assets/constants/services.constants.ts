@@ -221,7 +221,7 @@ export const servicesConstants = [
       "Our web development process is streamlined and efficient, ensuring the best results for your business:",
     serviceTechnologiesTitle: "Key Aspects of Our Web Development Process",
     serviceTechnologiesSubtitle:
-      "Our web development solutions cover all stages of the website development process, from interface design to site structure and optimization. We provide a powerful and secure site that not only looks great but also loads quickly and functions flawlessly. Here’s a breakdown of the core aspects we focus on:",
+      "Our web development solutions cover all stages of the website development process, from interface design to site structure and optimization. We provide a powerful and secure site that not only looks great but also loads quickly and functions flawlessly. Here’s a breakdown of the core aspects we focus on",
     serviceTabTechnologies: webDevelopmentTechnologiesTabsConstants,
     serviceTechnologies: webDevelopmentTechnologiesConstants,
     serviceBookConsultation: {

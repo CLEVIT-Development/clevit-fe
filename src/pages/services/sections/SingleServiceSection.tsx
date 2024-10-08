@@ -44,16 +44,18 @@ const SingleServiceSection = ({ serviceId, setHeaderItems }: SingleServiceSectio
   return (
     <div className="w-full flex flex-col items-center">
       <Section>
-        <div className="text-center flex flex-col items-center jutsify-between">
-          <span className="desktoptext-md  text-base leading-8">
+        <div className="text-center flex flex-col gap-8 desktop:gap-0 items-center jutsify-between">
+          <span className="desktoptext-md text-start desktop:text-center text-base leading-8">
             {service.singlePageDescription}
           </span>
-          <h2 className="desktop:text-2xl desktop:mt-16">What Is Important for Us</h2>
-          <div className="max-w-[900px] desktop:mt-6 mb-16 ">
-            <span className="leading-8">{service.serviceDetails}</span>
+          <h2 className="desktop:text-2xl text-lg font-bold	 desktop:mt-16">
+            What Is Important for Us
+          </h2>
+          <div className="max-w-[900px] desktop:mt-6 desktop:mb-5  text-start desktop:text-center">
+            <span className="leading-8 ">{service.serviceDetails}</span>
           </div>
         </div>
-        <div className="w-full flex flex-wrap desktop:gap-20 gap-6">
+        <div className="w-full flex flex-wrap justify-center desktop:gap-20 gap-6">
           {service?.offers?.map(({ Icon, description, title }) => {
             return (
               <div className="w-[350px] flex flex-col mt-5 gap-4">
@@ -83,7 +85,7 @@ const SingleServiceSection = ({ serviceId, setHeaderItems }: SingleServiceSectio
           />
         </div>
         <div className="flex flex-col justify-center gap-6 text-center !mt-0">
-          <div className="flex flex-col items-center gap-6 px-5 desktop:pt-20">
+          <div className="flex flex-col items-center gap-6 px-5 pt-10 desktop:pt-20">
             <h3 className="desktop:text-2xl text-lg text-[#314252]">Industries We Serve</h3>
             <p className="desktop:text-md text-base leading-8 text-center  desktop:w-[980px] w-full">
               {service.serviceIndustriesDescription}
@@ -113,20 +115,23 @@ const SingleServiceSection = ({ serviceId, setHeaderItems }: SingleServiceSectio
       </Section>
 
       <FeedbackSection className="w-full" />
-      <div className="w-full flex felex-col justify-center desktop:px-0 px-5">
+      <div className="w-full flex flex-col justify-center items-center  desktop:px-0 px-5">
+        <h3 className="text-[#314252] desktop:text-2xl text-lg">{service.ChooseClevitTitle}</h3>
+
         <div
-          className={`flex flex-col desktop:flex-row gap-5 justify-center ${
+          className={`grid grid-cols-1 desktop:mt-10 desktop:gap-20 gap-10 justify-center w-fit ${
             service.ChooseClevitRecomendation.length === 4
-              ? "grid-cols-4"
+              ? "desktop:grid-cols-4"
               : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
-          }`}
+          } ${service.ChooseClevitRecomendation.length === 6 ? "lg:grid-cols-3" : ""}`}
         >
           {service.ChooseClevitRecomendation.map(({ title, description }, index) => (
             <WhyChooseClevitSection key={index} title={title} description={description} />
           ))}
         </div>
       </div>
-      <div className="w-full pb-24">
+
+      <div className="w-full pb-24 flex justify-center">
         <GetConsultation
           title={service.GetConsultation.title}
           description={service.GetConsultation.description}

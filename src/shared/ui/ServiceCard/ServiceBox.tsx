@@ -54,7 +54,13 @@ const ServiceBox: FC<ServiceBoxProps> = ({
           >
             Learn More
           </Button>
-          <Button className="desktop:text-[20px] text-white text-sm"> {buttonTitle}</Button>
+          <Button
+            className="desktop:text-[20px] text-white text-sm"
+            onClick={() => navigate("/request-demo")}
+          >
+            {" "}
+            {buttonTitle}
+          </Button>
         </div>
       </div>
       <div className=" desktop:flex hidden w-1/2  items-center justify-center  ">

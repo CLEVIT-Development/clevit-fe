@@ -13,13 +13,13 @@ export const mobileDevelopmentTechnologiesTabsConstants: ITabsConstant[] = [
     id: 1,
     title: "Native App Development",
     description:
-      "Front-End developers at our company create intuitive, dynamic, and aesthetically-pleasing and user interfaces. Using technologies like React.js, Vue.js, Next.js, TypeScript, and many others we develop websites that are adaptable to various screen sizes.The goal is to bring an additional focus on the user experience that will allow not to lose a visitor.",
+      "Our team thus specializes in developing native applications with high performance for iOS and Android environments. Native app development helps in making the most of each operating system by offering a fast, efficient and a fluid user experience.",
   },
   {
     id: 2,
     title: "Cross-Platform and Hybrid Development",
     description:
-      "Every website has its back-end, which serves as a foundation for web development. With Node, we make certain that every aspect of your website’s server, databases, and applications are well-coordinated. Node.js, Nest.js, Express.js, and other modern frameworks which we are going to build in this project. We integrate back-end services with the keen sense of security and performance as our basis for the reliable solutions.",
+      "For companies interested in reaching both iOS and Android audiences with the same code, we have cross-platform development in the frameworks such as React Native and Flutter. It also guarantees that the application is developed quicker than using other tools while at the same time providing the same experience irrespective of the platform.",
   },
 ];
 
