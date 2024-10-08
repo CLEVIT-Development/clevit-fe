@@ -17,10 +17,10 @@ const ProcessConnector = ({ order, processes }: Props) => {
   const { isTablet } = useResponsive();
 
   const connectorStyle = {
-    "bottom-left": "translate-y-[100%] bottom-0 left-[30%] md:h-[348px] xs:h-[154px]",
-    "bottom-right": "translate-y-[100%] bottom-0 right-[30%] md:h-[348px] xs:h-[154px]",
-    left: "left-0 -translate-x-[100%] desktop:w-[100px] xs:w-[calc(100vw-300px)] md:w-[calc(100vw-365px)]",
-    right: "right-0 translate-x-[100%] xs:w-[calc(100vw-300px)] md:w-[calc(100vw-365px)]",
+    "bottom-left": "translate-y-[100%] bottom-0 left-[25%] md:h-[50%] xs:h-[207px]",
+    "bottom-right": "translate-y-[100%] bottom-0 right-[25%] md:h-[348px] xs:h-[207px]",
+    left: "left-0 -translate-x-[100%] desktop:w-[100px] xs:w-[calc(100vw-290px)] md:w-[calc(100vw-365px)]",
+    right: "right-0 translate-x-[100%] xs:w-[calc(100vw-290px)] md:w-[calc(100vw-365px)]",
   };
 
   return (

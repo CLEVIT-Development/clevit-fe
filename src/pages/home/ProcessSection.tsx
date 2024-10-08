@@ -9,12 +9,17 @@ import { orderUtils } from "@/utils/order.utils";
 interface Props {
   processes?: IProcess[];
   processTitle?: string;
+  className?: string;
 }
 
-const ProcessSection = ({ processes, processTitle }: Props) => (
+const ProcessSection = ({ processes, processTitle, className }: Props) => (
   <Suspense>
-    <Section title={processTitle ?? "Processes We Follow"} className="space-y-16" headingLevel="h2">
-      <div className="w-full flex  justify-evenly desktop:space-y-0 md:space-y-[250px] xs:space-y-14 desktop:flex-row flex-wrap xs:flex-col">
+    <Section
+      title={processTitle ?? "Processes We Follow"}
+      headingLevel="h2"
+      className={className ?? ""}
+    >
+      <div className="w-full flex justify-evenly desktop:space-y-0 md:space-y-[250px] xs:space-y-14 desktop:flex-row flex-wrap xs:flex-col px-0">
         {processes?.map(({ id, title, Icon, description }, index) => (
           <div key={id} className="relative flex items-center even:self-end w-fit">
             <ProcessCard

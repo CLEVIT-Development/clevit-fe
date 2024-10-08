@@ -42,15 +42,15 @@ const SingleServiceSection = ({ serviceId, setHeaderItems }: SingleServiceSectio
   const industries = getIndustryByService(service.id as keyof typeof ServicesIdConstants);
 
   return (
-    <Section className="p-5">
-      <div className="text-center flex flex-col  items-center jutsify-between">
+    <Section>
+      <div className="text-center flex flex-col items-center jutsify-between">
         <span className="desktoptext-md  text-base leading-8">{service.singlePageDescription}</span>
         <h2 className="desktop:text-2xl desktop:mt-16">What Is Important for Us</h2>
         <div className="max-w-[900px] desktop:mt-6 mb-16 ">
           <span className="leading-8">{service.serviceDetails}</span>
         </div>
       </div>
-      <div className="w-full flex  flex-wrap gap-16">
+      <div className="w-full flex flex-wrap">
         {service?.offers?.map(({ Icon, description, title }) => {
           return (
             <div className="w-[350px] flex flex-col gap-4">
@@ -100,8 +100,9 @@ const SingleServiceSection = ({ serviceId, setHeaderItems }: SingleServiceSectio
           })}
         </div>
       </div>
-      <div className=" !mt-0 pt-24 w-full">
+      <div className="!mt-0 pt-12 desktop:pt-16 w-full">
         <ProcessSection
+          className="!px-0"
           processes={service.servicesProcesses}
           processTitle={service.processMainTitle}
         />

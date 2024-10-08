@@ -17,7 +17,7 @@ const ServicePage = () => {
         </Gradient>
       }
     >
-      <section className="w-full flex flex-col  items-center justify-start p-0	 ">
+      <section className="w-full flex flex-col  items-center justify-start !p-0">
         {servicesConstants.map(
           ({ image, imageAlt, description, title, buttonTitle, id }, index) => {
             return (
