@@ -74,7 +74,7 @@ const Header = forwardRef(
       <header
         className={twMerge(
           classNames(
-            "transition-all duration-300 w-full fixed top-0 z-[30] lg:px-10 lg:py-6 px-5 py-4",
+            "transition-all  duration-300 w-full fixed top-0 z-[30] lg:px-10 lg:py-6 px-5 py-4",
             {
               ["bg-white"]: isWhiteBackground,
               ["bg-headingGradient"]:
@@ -121,7 +121,7 @@ const Header = forwardRef(
             setIsTransitionEndClose(isOpen);
           }}
         >
-          <nav ref={navListRef} className="flex flex-col items-center § space-y-6">
+          <nav ref={navListRef} className="flex flex-col items-center mt-7 space-y-6">
             {renderNavList}
           </nav>
           <Copyright

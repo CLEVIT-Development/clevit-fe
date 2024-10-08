@@ -94,15 +94,16 @@ const Footer = () => {
           <h6 className="font-bold lg:text-md-l text-md text-white opacity-60">
             Latest Blog Posts
           </h6>
-          {blogsConstants.slice(-3).map((element) => {
+          {blogsConstants.slice(-3).map((element, index) => {
             return (
-              <BlogItem
-                key={element.id}
-                image={element.image}
-                description={element.description}
-                date={new Date("12/04/2024").toLocaleDateString()}
-                imageAlt={element?.title}
-              />
+              <div key={element.id} className={index === 2 ? "w-full" : ""}>
+                <BlogItem
+                  image={element.image}
+                  description={element.description}
+                  date={new Date("12/04/2024").toLocaleDateString()}
+                  imageAlt={element.title}
+                />
+              </div>
             );
           })}
         </div>
