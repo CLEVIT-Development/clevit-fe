@@ -20,7 +20,7 @@ const BookConsultation = ({ image, title, description, imageAlt }: IBookConsulta
         <p className="text-white text-md font-normal desktop:max-w-[550px]  ">{description}</p>
         <div className="desktop:w-fit w-full flex justify-center  mt-[48px]">
           <Button
-            className="w-full justify-center  text-[20px] "
+            className="w-full justify-center text-[20px]"
             variant={ButtonVariant.Primary}
             children="Contact us today"
             onClick={() => navigate("/request-demo")}

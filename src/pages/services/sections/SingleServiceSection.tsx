@@ -42,9 +42,9 @@ const SingleServiceSection = ({ serviceId, setHeaderItems }: SingleServiceSectio
   const industries = getIndustryByService(service.id as keyof typeof ServicesIdConstants);
 
   return (
-    <div className="w-full flex flex-col items-center">
+    <div className="w-full flex flex-col items-center max-w-screen-2xl">
       <Section>
-        <div className="text-center flex flex-col gap-8 desktop:gap-0 items-center jutsify-between">
+        <div className="text-center flex flex-col gap-8 desktop:gap-0 items-center jutsify-between px-5">
           <span className="desktoptext-md text-start desktop:text-center text-base leading-8">
             {service.singlePageDescription}
           </span>
@@ -55,20 +55,22 @@ const SingleServiceSection = ({ serviceId, setHeaderItems }: SingleServiceSectio
             <span className="leading-8 ">{service.serviceDetails}</span>
           </div>
         </div>
-        <div className="w-full flex flex-wrap justify-center desktop:gap-20 gap-6">
-          {service?.offers?.map(({ Icon, description, title }) => {
-            return (
-              <div className="w-[350px] flex flex-col mt-5 gap-4">
-                <Icon />
-                <div className="flex flex-col gap-4">
-                  <h3 className="text-purple-100 text-md-l font-medium">{title}</h3>
-                  <span className=" ">{description}</span>
+        <div>
+          <div className="w-full flex flex-wrap justify-center items-start desktop:items-center desktop:gap-20 gap-6">
+            {service?.offers?.map(({ Icon, description, title }) => {
+              return (
+                <div className="w-[350px] flex flex-col mt-5 gap-4">
+                  <Icon />
+                  <div className="flex flex-col gap-4">
+                    <h3 className="text-purple-100 text-md-l font-medium">{title}</h3>
+                    <span>{description}</span>
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
-        <div className="bg-[#F8F7FD] flex justify-center">
+        <div className="bg-[#F8F7FD] flex justify-center px-5">
           <TechnologySection
             title={service.serviceTechnologiesTitle}
             subTitle={service.serviceTechnologiesSubtitle}
@@ -76,7 +78,7 @@ const SingleServiceSection = ({ serviceId, setHeaderItems }: SingleServiceSectio
             technologiesConstant={service.serviceTechnologies}
           />
         </div>
-        <div className="w-full">
+        <div className="w-full desktop:px-0 px-5">
           <BookConsultation
             image={service.image}
             imageAlt={service.imageAlt}
@@ -105,7 +107,7 @@ const SingleServiceSection = ({ serviceId, setHeaderItems }: SingleServiceSectio
             })}
           </div>
         </div>
-        <div className="!mt-0 pt-12 desktop:pt-16 w-full">
+        <div className="!mt-0 pt-12 desktop:pt-16 w-full px-5">
           <ProcessSection
             className="!px-0"
             processes={service.servicesProcesses}
