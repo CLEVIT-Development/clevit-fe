@@ -19,18 +19,50 @@ const ProcessSection = ({ processes, processTitle, className }: Props) => (
       headingLevel="h2"
       className={className ?? ""}
     >
-      <div className="w-full flex justify-evenly desktop:space-y-0 md:space-y-[250px] xs:space-y-14 desktop:flex-row flex-wrap xs:flex-col px-0">
-        {processes?.map(({ id, title, Icon, description }, index) => (
-          <div key={id} className="relative flex items-center even:self-end w-fit">
-            <ProcessCard
-              icon={<Icon className="size-10" />}
-              order={orderUtils(index + 1)}
-              title={title}
-              description={description}
-            />
-            <ProcessConnector order={index + 1} processes={processes} />
-          </div>
-        ))}
+      <div
+        className={`w-full flex flex-col flex-wrap justify-evenly pb-12 px-0 space-y-14 md:space-y-[250px] desktop:pb-24 desktop:space-y-0 desktop:flex-row`}
+      >
+        {processes?.map(({ id, title, Icon, description }, index) => {
+          const lengthOfProcess = processes?.length;
+          const isSecondRow = lengthOfProcess > 5 && index >= 4;
+
+          return (
+            <div
+              key={id}
+              className={`relative flex items-center even:self-end
+                ${
+                  window.innerWidth >= 1024
+                    ? lengthOfProcess === 6
+                      ? "w-[20%]"
+                      : lengthOfProcess === 7
+                        ? "w-[22%]"
+                        : lengthOfProcess >= 8
+                          ? "w-[18%]"
+                          : "w-[200px]"
+                    : "w-[200px]"
+                }
+                ${isSecondRow && window.innerWidth >= 1024 ? "!mt-[50px] mx-[-30px]" : null}
+            `}
+            >
+              <ProcessCard
+                icon={<Icon className="size-10" />}
+                order={orderUtils(index + 1)}
+                title={title}
+                description={description}
+              />
+
+              {window.innerWidth >= 1024 &&
+              ((lengthOfProcess === 6 && index === 3) ||
+                (lengthOfProcess === 7 && index === 4)) ? null : (
+                <ProcessConnector
+                  description={description}
+                  order={index + 1}
+                  processes={processes}
+                />
+              )}
+            </div>
+          );
+        })}
       </div>
     </Section>
   </Suspense>

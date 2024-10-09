@@ -10,17 +10,19 @@ import Connector from "./Connector";
 interface Props {
   order: number;
   processes: IProcess[];
+  description?: string;
 }
 
 // I have added two connectors one for horizontal and 2nd for vertical, on desktop we omit the 2nd.
-const ProcessConnector = ({ order, processes }: Props) => {
+const ProcessConnector = ({ order, processes, description }: Props) => {
   const { isTablet } = useResponsive();
 
   const connectorStyle = {
-    "bottom-left": "translate-y-[100%] bottom-0 left-[25%] md:h-[50%] xs:h-[207px]",
-    "bottom-right": "translate-y-[100%] bottom-0 right-[25%] md:h-[348px] xs:h-[207px]",
-    left: "left-0 -translate-x-[100%] desktop:w-[100px] xs:w-[calc(100vw-290px)] md:w-[calc(100vw-365px)]",
-    right: "right-0 translate-x-[100%] xs:w-[calc(100vw-290px)] md:w-[calc(100vw-365px)]",
+    "bottom-left": `translate-y-[100%] bottom-0 left-[25%] ${description ? "h-[70%] md:h-[143%]" : "h-[77%] md:h-[173%]"}`,
+    "bottom-right": `translate-y-[100%] bottom-0 right-[25%] ${description ? "h-[70%] md:h-[143%]" : "h-[77%] md:h-[173%]"}`,
+    left: "left-0 -translate-x-[100%]  w-[calc(100vw-290px)] md:w-[calc(100vw-290px)] desktop:w-[100px]",
+    right:
+      "right-0 translate-x-[100%] w-[calc(100vw-290px)] md:w-[calc(100vw-290px)] desktop:w-[100px]",
   };
 
   return (

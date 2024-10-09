@@ -109,7 +109,7 @@ const SingleServiceSection = ({ serviceId, setHeaderItems }: SingleServiceSectio
             })}
           </div>
         </div>
-        <div className="!mt-0 pt-12 desktop:pt-16 w-full px-5">
+        <div className="!mt-0 pt-12 desktop:pt-16 w-full">
           <ProcessSection
             className="!px-0"
             processes={service.servicesProcesses}
