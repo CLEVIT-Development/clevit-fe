@@ -7,6 +7,7 @@ const ReactExpoIcon = lazy(() => import("@/assets/vectors/technology/ReactExpo.s
 const KotlinIcon = lazy(() => import("@/assets/vectors/technology/Kotlin.svg?react"));
 const SwiftIcon = lazy(() => import("@/assets/vectors/technology/Swift.svg?react"));
 const ObjectiveCIcon = lazy(() => import("@/assets/vectors/technology/ObjectiveC.svg?react"));
+const JavaIcon = lazy(() => import("@/assets/vectors/technology/Java.svg?react"));
 
 export const mobileDevelopmentTechnologiesTabsConstants: ITabsConstant[] = [
   {
@@ -28,6 +29,7 @@ export const mobileDevelopmentTechnologiesConstants = {
     { id: 1, title: "Swift", Icon: SwiftIcon },
     { id: 2, title: "Kotlin", Icon: KotlinIcon },
     { id: 3, title: "Objective-C", Icon: ObjectiveCIcon },
+    { id: 4, title: "Java", Icon: JavaIcon },
   ],
   2: [
     { id: 1, title: "React Native", Icon: ReactNativeIcon },

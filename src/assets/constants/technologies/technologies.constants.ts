@@ -35,6 +35,9 @@ const Typescript = lazy(() => import("@/assets/vectors/technology/Typescript.svg
 const ViteIcon = lazy(() => import("@/assets/vectors/technology/Vite.svg?react"));
 const VueIcon = lazy(() => import("@/assets/vectors/technology/Vue.svg?react"));
 const WebSocketIcon = lazy(() => import("@/assets/vectors/technology/WebSocket.svg?react"));
+const KotlinIcon = lazy(() => import("@/assets/vectors/technology/Kotlin.svg?react"));
+const ObjectiveCIcon = lazy(() => import("@/assets/vectors/technology/ObjectiveC.svg?react"));
+const JavaIcon = lazy(() => import("@/assets/vectors/technology/Java.svg?react"));
 
 export interface ITabsConstant extends INavigationData {
   description?: string;
@@ -83,6 +86,9 @@ export const technologiesConstants = {
   2: [
     { id: 1, title: "Swift", Icon: SwiftIcon },
     { id: 2, title: "React Native", Icon: ReactIcon },
+    { id: 3, title: "Kotlin", Icon: KotlinIcon },
+    { id: 4, title: "Objective-C", Icon: ObjectiveCIcon },
+    { id: 5, title: "Objective-C", Icon: JavaIcon },
   ],
   3: [
     { id: 1, title: "Node.js", Icon: NodeIcon },

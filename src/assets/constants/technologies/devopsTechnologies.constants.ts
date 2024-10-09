@@ -6,6 +6,7 @@ const AWS = lazy(() => import("@/assets/vectors/technology/AWS.svg?react"));
 const GoogleCloud = lazy(() => import("@/assets/vectors/technology/GoogleCloud.svg?react"));
 const AzureCloud = lazy(() => import("@/assets/vectors/technology/AzureCloud.svg?react"));
 const DigitalOchean = lazy(() => import("@/assets/vectors/technology/DigitalOcean.svg?react"));
+const Docker = lazy(() => import("@/assets/vectors/technology/Docker.svg?react"));
 
 export const devopsTechnologiesTabsConstants: ITabsConstant[] = [
   {
@@ -38,43 +39,29 @@ export const devopsTechnologiesConstants = {
   1: [
     { id: 1, title: "AWS", Icon: AWS },
     { id: 2, title: "Google Cloud", Icon: GoogleCloud },
-    { id: 3, title: "Azure", Icon: AzureCloud },
-    { id: 4, title: "Digital Ocean", Icon: DigitalOchean },
-    { id: 1, title: "AWS", Icon: AWS },
-    { id: 1, title: "Google Cloud", Icon: GoogleCloud },
-    { id: 1, title: "Azure", Icon: AzureCloud },
-    { id: 1, title: "Digital Ocean", Icon: DigitalOchean },
+    { id: 3, title: "Digital Ocean", Icon: DigitalOchean },
+    { id: 4, title: "Docker", Icon: Docker },
+    { id: 5, title: "Azure", Icon: AzureCloud },
   ],
   2: [
     { id: 1, title: "AWS", Icon: AWS },
     { id: 2, title: "Google Cloud", Icon: GoogleCloud },
-    { id: 3, title: "Azure", Icon: AzureCloud },
-    { id: 4, title: "Digital Ocean", Icon: DigitalOchean },
-    { id: 1, title: "AWS", Icon: AWS },
-    { id: 1, title: "Google Cloud", Icon: GoogleCloud },
-    { id: 1, title: "Azure", Icon: AzureCloud },
-    { id: 1, title: "Digital Ocean", Icon: DigitalOchean },
+    { id: 3, title: "Digital Ocean", Icon: DigitalOchean },
+    { id: 4, title: "Docker", Icon: Docker },
+    { id: 5, title: "Azure", Icon: AzureCloud },
   ],
   3: [
     { id: 1, title: "AWS", Icon: AWS },
     { id: 2, title: "Google Cloud", Icon: GoogleCloud },
-    { id: 3, title: "Azure", Icon: AzureCloud },
-    { id: 4, title: "Digital Ocean", Icon: DigitalOchean },
+    { id: 3, title: "Digital Ocean", Icon: DigitalOchean },
+    { id: 4, title: "Docker", Icon: Docker },
+    { id: 5, title: "Azure", Icon: AzureCloud },
   ],
   4: [
     { id: 1, title: "AWS", Icon: AWS },
     { id: 2, title: "Google Cloud", Icon: GoogleCloud },
-    { id: 3, title: "Azure", Icon: AzureCloud },
-    { id: 4, title: "Digital Ocean", Icon: DigitalOchean },
-    { id: 1, title: "AWS", Icon: AWS },
-    { id: 1, title: "Google Cloud", Icon: GoogleCloud },
-    { id: 1, title: "Azure", Icon: AzureCloud },
-    { id: 1, title: "Digital Ocean", Icon: DigitalOchean },
-  ],
-  5: [
-    { id: 1, title: "AWS", Icon: AWS },
-    { id: 1, title: "Google Cloud", Icon: GoogleCloud },
-    { id: 1, title: "Azure", Icon: AzureCloud },
-    { id: 1, title: "Digital Ocean", Icon: DigitalOchean },
+    { id: 3, title: "Digital Ocean", Icon: DigitalOchean },
+    { id: 4, title: "Docker", Icon: Docker },
+    { id: 5, title: "Azure", Icon: AzureCloud },
   ],
 };
