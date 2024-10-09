@@ -48,7 +48,7 @@ const TechnologySection = ({ title, tabsConstant, technologiesConstant, subTitle
       <div
         key={currTabId}
         className={classNames(
-          "w-full relative justify-center desktop:mt-16 lg:max-w-[90%] desktop:flex-wrap desktop:flex desktop:gap-[50px] desktop:items-stretch xs:grid xs:grid-cols-2 xs:gap-8",
+          "w-full relative justify-start desktop:mt-16 lg:max-w-[90%] desktop:flex-wrap desktop:flex desktop:gap-[50px] desktop:items-stretch xs:grid xs:grid-cols-2 xs:gap-8 desktop:pl-5 pl-0",
           swipeAnimationClass
         )}
       >
@@ -74,7 +74,7 @@ const TechnologySection = ({ title, tabsConstant, technologiesConstant, subTitle
         titleClassName="max-w-full"
         title={title}
         headingLevel="h2"
-        className="scroll-mt-[150px] w-full lg:max-w-[1230px] md:w-full flex items-start justify-center desktop:py-12 lg:px-[100px] desktop:px-[46px] md:px-[30px] md:mx-0  xs:py-5 rounded-lg overflow-clip"
+        className="scroll-mt-[150px] w-full lg:max-w-[1230px] md:w-full flex items-start justify-center desktop:py-12 lg:px-[100px] desktop:px-[46px] md:px-[30px] md:mx-0 x xs:py-5 rounded-lg overflow-clip"
       >
         <div className="w-full desktop:mt-6  desktop:text-center text-start">
           <span className="leading-6 text-[#314252] text-center">{subTitle}</span>

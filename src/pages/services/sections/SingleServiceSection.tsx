@@ -56,18 +56,20 @@ const SingleServiceSection = ({ serviceId, setHeaderItems }: SingleServiceSectio
           </div>
         </div>
         <div>
-          <div className="w-full flex flex-wrap justify-center items-start desktop:items-center desktop:gap-20 gap-6">
-            {service?.offers?.map(({ Icon, description, title }) => {
-              return (
-                <div className="w-[350px] flex flex-col mt-5 gap-4">
-                  <Icon />
-                  <div className="flex flex-col gap-4">
-                    <h3 className="text-purple-100 text-md-l font-medium">{title}</h3>
-                    <span>{description}</span>
+          <div className="w-full flex justyfy-center">
+            <div className="max-w-[1270px] flex flex-wrap justify-start items-start desktop:items-center desktop:gap-20 gap-6 px-5 desktop:px-0 ">
+              {service?.offers?.map(({ Icon, description, title }) => {
+                return (
+                  <div className="w-[350px] flex flex-col mt-5 gap-4">
+                    <Icon />
+                    <div className="flex flex-col gap-4">
+                      <h3 className="text-purple-100 text-md-l font-medium">{title}</h3>
+                      <span>{description}</span>
+                    </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
         </div>
         <div className="bg-[#F8F7FD] flex justify-center px-5">
