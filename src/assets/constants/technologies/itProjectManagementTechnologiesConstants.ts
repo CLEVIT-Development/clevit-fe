@@ -40,7 +40,7 @@ export const itProjectManagmentTechnologiesTabsConstants: ITabsConstant[] = [
   },
 ];
 
-export const itProjectManagmentTechnologiesConstants = {
+export const itProjectManagementTechnologiesConstants = {
   1: [
     { id: 1, title: "Jira", Icon: Jira },
     { id: 2, title: "Trelo", Icon: Trelo },
@@ -60,6 +60,15 @@ export const itProjectManagmentTechnologiesConstants = {
     { id: 7, title: "Notion", Icon: Notion },
   ],
   3: [
+    { id: 1, title: "Jira", Icon: Jira },
+    { id: 2, title: "Trelo", Icon: Trelo },
+    { id: 3, title: "Microsoft Project", Icon: MicrosoftProject },
+    { id: 4, title: "Asana", Icon: Asana },
+    { id: 5, title: "Redmine", Icon: Redmine },
+    { id: 6, title: "Airtable", Icon: Airtable },
+    { id: 7, title: "Notion", Icon: Notion },
+  ],
+  4: [
     { id: 1, title: "Jira", Icon: Jira },
     { id: 2, title: "Trelo", Icon: Trelo },
     { id: 3, title: "Microsoft Project", Icon: MicrosoftProject },

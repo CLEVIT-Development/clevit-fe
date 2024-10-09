@@ -110,9 +110,9 @@ import { singlePageTechnicalAssesmentProcessesConstants } from "./processes/sing
 import { singlePageUIUXProcessesConstants } from "./processes/singlePageUIUXProcess.constants";
 import { singlePageWebDevelopmentProcessesConstants } from "./processes/singlePageWebDevelopmentProcess.constants";
 import {
-  aITechnologiesConstants,
   aITechnologiesTabsConstants,
-} from "./technologies/aITechnologies.constants";
+  aiTechnologiesConstants,
+} from "./technologies/aiTechnologies.constants.ts";
 import {
   dataQualityTechnologiesConstants,
   dataQualityTechnologiesTabsConstants,
@@ -124,19 +124,19 @@ import {
 import {
   itOutsidingTechnologiesConstants,
   itOutsidingTechnologiesTabsConstants,
-} from "./technologies/iTOutsidingTechnologies.constants";
+} from "./technologies/itOutsidingTechnologies.constants.ts";
 import {
-  itProjectManagmentTechnologiesConstants,
+  itProjectManagementTechnologiesConstants,
   itProjectManagmentTechnologiesTabsConstants,
-} from "./technologies/iTProjectManagmentTechnologies.constants";
-import {
-  mLTechnologiesConstants,
-  mLTechnologiesTabsConstants,
-} from "./technologies/mLTechnologies.constants";
+} from "./technologies/itProjectManagementTechnologiesConstants.ts";
 import {
   digitalMarketingTechnologiesIconsConstants,
   digitalMarketingTechnologiesTabsConstants,
 } from "./technologies/marketingTechnologies.constants";
+import {
+  mlTechnologiesConstants,
+  mlTechnologiesTabsConstants,
+} from "./technologies/mlTechnologies.constants.ts";
 import {
   mobileDevelopmentTechnologiesConstants,
   mobileDevelopmentTechnologiesTabsConstants,
@@ -146,9 +146,9 @@ import {
   technicalAssesmentTechnologiesTabsConstants,
 } from "./technologies/technicalAssesmentTechnologies.constants";
 import {
-  uIuXTechnologiesConstants,
   uIuXTechnologiesTabsConstants,
-} from "./technologies/uIuXTechnologies.constants";
+  uiUxTechnologiesConstants,
+} from "./technologies/uiUxTechnologies.constants.ts";
 import {
   webDevelopmentTechnologiesConstants,
   webDevelopmentTechnologiesTabsConstants,
@@ -509,7 +509,7 @@ export const servicesConstants = [
     serviceTechnologiesSubtitle:
       "At Clevit, we incorporate a host of advanced AI technologies into your enterprise with a view of changing the way your business functions. Here are the key technologies and tools we utilize in our AI integration process:",
     serviceTabTechnologies: aITechnologiesTabsConstants,
-    serviceTechnologies: aITechnologiesConstants,
+    serviceTechnologies: aiTechnologiesConstants,
     serviceBookConsultation: {
       title: "Unlock the Power of AI for Your Business",
       description: "Explore Custom Integration Solutions Tailored to Your Needs.",
@@ -613,8 +613,8 @@ export const servicesConstants = [
     serviceTechnologiesTitle: "Key Aspects of Our ML Development Process",
     serviceTechnologiesSubtitle:
       "Clevit makes use of the current technologies and machine learning in order to create new and sustainable solutions for your enterprise. Having extensive knowledge of various frameworks and techniques, we can offer flexible and effective ML models. Below are the key classifications of our machine learning development services:",
-    serviceTechnologies: mLTechnologiesConstants,
-    serviceTabTechnologies: mLTechnologiesTabsConstants,
+    serviceTechnologies: mlTechnologiesConstants,
+    serviceTabTechnologies: mlTechnologiesTabsConstants,
     serviceBookConsultation: {
       title: "Ready to Transform Your Business with Machine Learning?",
       description:
@@ -1148,7 +1148,7 @@ export const servicesConstants = [
     serviceTechnologiesSubtitle:
       "We offer IT Project Management services on a project life cycle basis with a keen focus on each phase. Below are the key aspects of our project management process:",
     serviceTabTechnologies: itProjectManagmentTechnologiesTabsConstants,
-    serviceTechnologies: itProjectManagmentTechnologiesConstants,
+    serviceTechnologies: itProjectManagementTechnologiesConstants,
 
     serviceBookConsultation: {
       title: "Looking for Expert IT Project Management Solutions?",
@@ -1254,7 +1254,7 @@ export const servicesConstants = [
     serviceTechnologiesSubtitle:
       "Clevit provides comprehensive solutions for each phase of the UI/UX design process that create aesthetic and functional interfaces. We ensure that the methodologies applied during the process are modern to ensure that the developed digital product will have superior design quality.",
     serviceTabTechnologies: uIuXTechnologiesTabsConstants,
-    serviceTechnologies: uIuXTechnologiesConstants,
+    serviceTechnologies: uiUxTechnologiesConstants,
     serviceBookConsultation: {
       title: "Ensure Your Design Excellence with Clevit",
       description:

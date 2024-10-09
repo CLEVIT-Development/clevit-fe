@@ -9,7 +9,7 @@ const NLP = lazy(() => import("@/assets/vectors/technology/NLP.svg?react"));
 const Keras = lazy(() => import("@/assets/vectors/technology/Keras.svg?react"));
 const Brain = lazy(() => import("@/assets/vectors/technology/Brain.svg?react"));
 
-export const mLTechnologiesTabsConstants: ITabsConstant[] = [
+export const mlTechnologiesTabsConstants: ITabsConstant[] = [
   {
     id: 1,
     title: "Deep Learning Frameworks",
@@ -36,7 +36,7 @@ export const mLTechnologiesTabsConstants: ITabsConstant[] = [
   },
 ];
 
-export const mLTechnologiesConstants = {
+export const mlTechnologiesConstants = {
   1: [
     { id: 1, title: "TensorFlow.js", Icon: TensorFlow },
     { id: 1, title: "OpenCV.js", Icon: OpenCV },

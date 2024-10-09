@@ -7,11 +7,11 @@ import FeedbackSection from "@/pages/home/Feedback/FeedbackSection";
 import ProcessSection from "@/pages/home/ProcessSection";
 import TechnologySection from "@/pages/home/TechnologySection";
 
-import BookConsultation from "./BookConsultation";
-import GetConsultation from "./GetConsultation";
+import ContactUsBottomBanner from "./ContactUsBottomBanner.tsx";
+import ContactUsTopBanner from "./ContactUsTopBanner.tsx";
 import { getIndustryByService } from "./IndustryServe/helper";
 import { type SingleServiceHeaderItems } from "./SingleServicePage";
-import WhyChooseClevitSection from "./WhyChooseClevitSection";
+import WhyChooseClevitSectionItem from "./WhyChooseClevitSectionItem.tsx";
 
 interface SingleServiceSectionProps {
   serviceId: string;
@@ -81,7 +81,7 @@ const SingleServiceSection = ({ serviceId, setHeaderItems }: SingleServiceSectio
           />
         </div>
         <div className="w-full desktop:px-0 px-5">
-          <BookConsultation
+          <ContactUsTopBanner
             image={service.image}
             imageAlt={service.imageAlt}
             description={service.serviceBookConsultation.description}
@@ -118,8 +118,10 @@ const SingleServiceSection = ({ serviceId, setHeaderItems }: SingleServiceSectio
         </div>
       </Section>
       <FeedbackSection className="w-full" />
-      <div className="w-full flex flex-col justify-center items-center  desktop:px-0 px-5">
-        <h3 className="text-[#314252] desktop:text-2xl text-lg">{service.ChooseClevitTitle}</h3>
+      <div className="w-full flex flex-col justify-center items-center desktop:px-0 px-5">
+        <h3 className="text-[#314252] desktop:text-2xl xs:font-bold mt-4 text-lg">
+          {service.ChooseClevitTitle}
+        </h3>
         <div
           className={`grid grid-cols-1 mt-10 desktop:gap-20 gap-10 justify-center w-fit ${
             service.ChooseClevitRecomendation.length === 4
@@ -128,13 +130,13 @@ const SingleServiceSection = ({ serviceId, setHeaderItems }: SingleServiceSectio
           } ${service.ChooseClevitRecomendation.length === 6 ? "lg:grid-cols-3" : ""}`}
         >
           {service.ChooseClevitRecomendation.map(({ title, description }, index) => (
-            <WhyChooseClevitSection key={index} title={title} description={description} />
+            <WhyChooseClevitSectionItem key={index} title={title} description={description} />
           ))}
         </div>
       </div>
 
-      <div className="w-full pb-24 flex justify-center">
-        <GetConsultation
+      <div className="w-full desktop:px-20 xs:px-5 pb-24 flex justify-center">
+        <ContactUsBottomBanner
           title={service.GetConsultation.title}
           description={service.GetConsultation.description}
         />

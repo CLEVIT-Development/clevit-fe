@@ -10,7 +10,7 @@ interface IBookConsultationProps {
   imageAlt: string;
 }
 
-const BookConsultation = ({ image, title, description, imageAlt }: IBookConsultationProps) => {
+const ContactUsTopBanner = ({ image, title, description, imageAlt }: IBookConsultationProps) => {
   const navigate = useNavigate();
 
   return (
@@ -18,7 +18,7 @@ const BookConsultation = ({ image, title, description, imageAlt }: IBookConsulta
       <div className="flex flex-col items-start desktop:max-w-[700px] justify-center gap-5 ">
         <h1 className="text-white text-lg font-bold text-center desktop:text-start">{title}</h1>
         <p className="text-white text-md font-normal desktop:max-w-[550px]  ">{description}</p>
-        <div className="desktop:w-fit w-full flex justify-center ">
+        <div className="desktop:w-fit w-full flex desktop:mt-10 justify-center ">
           <Button
             className="w-full justify-center text-[20px]"
             variant={ButtonVariant.Primary}
@@ -32,4 +32,4 @@ const BookConsultation = ({ image, title, description, imageAlt }: IBookConsulta
   );
 };
 
-export default BookConsultation;
+export default ContactUsTopBanner;

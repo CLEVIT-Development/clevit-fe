@@ -17,7 +17,7 @@ const PrivacyPolicy = () => {
       />
       <Layout headerVariant={HeaderVariant.Tertiary}>
         <div className="w-full flex flex-col items-center space-y-[50px]">
-          <h1 className="desktop:text-4xl text-2xl-3xl text-gray-200">Privacy Policy</h1>
+          <h1 className="desktop:text-4xl text-2xl-3xl mt-4 text-gray-200">Privacy Policy</h1>
           <DocumentSection
             headline="Information We Collect"
             title="We collect two types of information"

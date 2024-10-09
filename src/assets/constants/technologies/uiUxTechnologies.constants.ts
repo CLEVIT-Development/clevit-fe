@@ -36,7 +36,7 @@ export const uIuXTechnologiesTabsConstants: ITabsConstant[] = [
   },
 ];
 
-export const uIuXTechnologiesConstants = {
+export const uiUxTechnologiesConstants = {
   1: [
     { id: 1, title: "React.js", Icon: Figma },
     { id: 2, title: "Adobe XD", Icon: AdobeXD },

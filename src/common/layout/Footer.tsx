@@ -58,7 +58,7 @@ const Footer = () => {
           <h6 className="font-bold lg:text-md-l xs:text-md text-white opacity-60">Services</h6>
           {servicesConstants.map(({ id, title }) => {
             return (
-              <div key={id} role="button" onClick={() => navigate(id)}>
+              <div key={id} role="button" onClick={() => navigate(`/services/${id}`)}>
                 <p className="text-gray-100 font-medium lg:text-md xs:text-sm cursor-pointer">
                   {title}
                 </p>

@@ -43,7 +43,7 @@ const ServiceSection = () => {
             title={title}
             icon={<Icon />}
             descriptionOffer={descriptionOffer}
-            route={`services${id}`}
+            route={`services/${id}`}
             className="shadow-none"
           />
         ))}

@@ -41,7 +41,7 @@ export const aITechnologiesTabsConstants: ITabsConstant[] = [
   },
 ];
 
-export const aITechnologiesConstants = {
+export const aiTechnologiesConstants = {
   1: [
     { id: 1, title: "ChatGPT", Icon: ChatGPT },
     { id: 2, title: "DALL-E", Icon: ChatGPT },
@@ -71,6 +71,20 @@ export const aITechnologiesConstants = {
     { id: 12, title: "Salesforce", Icon: SalesForce },
   ],
   3: [
+    { id: 1, title: "ChatGPT", Icon: ChatGPT },
+    { id: 2, title: "DALL-E", Icon: ChatGPT },
+    { id: 3, title: "Tableau", Icon: Tableau },
+    { id: 4, title: "FrieFlies", Icon: FrieFlies },
+    { id: 5, title: "H2O.ai", Icon: H2OAI },
+    { id: 6, title: "Grammarly", Icon: Grammarly },
+    { id: 7, title: "IBM", Icon: IBM },
+    { id: 8, title: "AzureCloud", Icon: AzureCloud },
+    { id: 9, title: "Looka Inc", Icon: LookaInc },
+    { id: 10, title: "Midjourney", Icon: MidJorney },
+    { id: 11, title: "Oracle", Icon: Oracle },
+    { id: 12, title: "Salesforce", Icon: SalesForce },
+  ],
+  4: [
     { id: 1, title: "ChatGPT", Icon: ChatGPT },
     { id: 2, title: "DALL-E", Icon: ChatGPT },
     { id: 3, title: "Tableau", Icon: Tableau },

@@ -50,7 +50,7 @@ const ServiceBox: FC<ServiceBoxProps> = ({
           <Button
             className="text-black border-black hover:text-white desktop:text-[20px] text-sm"
             variant={ButtonVariant.Outlined}
-            onClick={() => navigate(`/services${route}`)}
+            onClick={() => navigate(`/services/${route}`)}
           >
             Learn More
           </Button>
