@@ -82,7 +82,7 @@ const TechnologySection = ({ title, tabsConstant, technologiesConstant, subTitle
         <div className="w-full flex flex-col justify-center items-center pt-6 desktop:pt-0 !mt-0">
           <Navigation
             items={tabsConstant}
-            className="desktop:mt-10"
+            className="desktop:mt-10 !justify-start"
             onItemClick={onTabItemClickHandler}
           />
           {technologyDescription && (
