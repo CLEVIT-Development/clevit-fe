@@ -48,7 +48,7 @@ const TechnologySection = ({ title, tabsConstant, technologiesConstant, subTitle
       <div
         key={currTabId}
         className={classNames(
-          "w-full relative justify-start desktop:mt-16 lg:max-w-[90%] desktop:flex-wrap desktop:flex desktop:gap-[50px] desktop:items-stretch xs:grid xs:grid-cols-2 xs:gap-8 desktop:pl-5 pl-0",
+          "desktop:w-full w-[99%] relative justify-center desktop:mt-16 lg:max-w-[90%] desktop:flex-wrap desktop:flex desktop:gap-[50px] desktop:items-stretch xs:grid xs:grid-cols-2 xs:gap-8 desktop:pl-5 pl-0",
           swipeAnimationClass
         )}
       >
@@ -76,7 +76,7 @@ const TechnologySection = ({ title, tabsConstant, technologiesConstant, subTitle
         headingLevel="h2"
         className="scroll-mt-[150px] w-full lg:max-w-[1230px] md:w-full flex items-start justify-center desktop:py-12 lg:px-[100px] desktop:px-[46px] md:px-[30px] md:mx-0 x xs:py-5 rounded-lg overflow-clip"
       >
-        <div className="w-full desktop:mt-6  desktop:text-center text-start">
+        <div className="w-full desktop:mt-6 desktop:text-center px-5 text-start">
           <span className="leading-6 text-[#314252] text-center">{subTitle}</span>
         </div>
         <div className="w-full flex flex-col justify-center items-center pt-6 desktop:pt-0 !mt-0">
@@ -86,10 +86,12 @@ const TechnologySection = ({ title, tabsConstant, technologiesConstant, subTitle
             onItemClick={onTabItemClickHandler}
           />
           {technologyDescription && (
-            <span
-              className="text-gray-200 text-base animate-textSlide mt-6"
-              dangerouslySetInnerHTML={{ __html: technologyDescription }}
-            />
+            <div className="px-5 mt-6">
+              <span
+                className="text-gray-200 text-base animate-textSlide"
+                dangerouslySetInnerHTML={{ __html: technologyDescription }}
+              />
+            </div>
           )}
           {technologyItems}
         </div>

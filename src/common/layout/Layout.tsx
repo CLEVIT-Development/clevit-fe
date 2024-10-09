@@ -36,7 +36,7 @@ const Layout = ({
 
   const contentClasses = twMerge(
     classNames(
-      "flex flex-col lg:space-y-[50px] space-y-12 items-center pt-[40px] desktop:pt-[100px]",
+      "flex flex-col  items-center lg:space-y-[50px] space-y-12 pt-[40px] desktop:pt-[100px]",
       {
         "pb-[100px] pt-[100px] md:pt-[110px]": headerVariant === HeaderVariant.Tertiary,
         "w-full h-full max-w-full pb-0": layoutVariant === LayoutVariant.Secondary,
