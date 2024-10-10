@@ -81,7 +81,6 @@ const TechnologySection = ({ title, tabsConstant, technologiesConstant, subTitle
             <span className="leading-6 text-[#314252] text-center">{subTitle}</span>
           </div>
         ) : null}
-
         <div className="w-full flex flex-col justify-center items-center pt-6 desktop:pt-0 !mt-0">
           <Navigation
             items={tabsConstant}

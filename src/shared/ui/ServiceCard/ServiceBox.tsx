@@ -2,7 +2,7 @@ import { type FC } from "react";
 import { useNavigate } from "react-router-dom";
 
 import BackgroundGradient from "@/assets/images/services/BackgroundGradient.png";
-import BackgroundGradientReverse from "@/assets/images/services/BackgroundGradientReverse.png";
+import RightBackgroundGradient from "@/assets/images/services/RigtBackgroundGradient.png";
 import { ButtonVariant } from "@/types/variant.types";
 
 import Button from "../Button";
@@ -33,7 +33,7 @@ const ServiceBox: FC<ServiceBoxProps> = ({
       key={index}
       style={{
         backgroundImage:
-          index % 2 === 0 ? `url(${BackgroundGradientReverse})` : `url(${BackgroundGradient})`,
+          index % 2 === 0 ? `url(${RightBackgroundGradient})` : `url(${BackgroundGradient})`,
       }}
       className={`desktop:mb-0 xs:mb-12 w-full desktop:max-w-screen-3xl bg-no-repeat desktop:bg-[length:600px_400px] bg-[length:300px_300px] flex justify-between items-center desktop:px-20 ${index % 2 === 0 ? "flex-row bg-right " : "flex-row-reverse bg-left"}`}
     >
