@@ -26,7 +26,7 @@ const Layout = ({
 }: Props) => {
   const mainClasses = twMerge(
     classNames(
-      "relative flex flex-col flex-grow md:px-8",
+      "relative flex flex-col flex-grow ",
       {
         "pt-0 !px-0": layoutVariant === LayoutVariant.Secondary,
       },
