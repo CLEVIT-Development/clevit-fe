@@ -13,8 +13,8 @@ const RequestQuoteSection = () => {
   };
 
   return (
-    <section className="relative desktop:h-[339px] h-[260px] xs:w-[90%]  md:w-full md:max-w-[1280px] bg-quoteGradient flex md:flex-row xs:flex-col items-start justify-between md:space-x-[73px]  mb-24 rounded-xl">
-      <div className="absolute xs:bottom-3 xs:left-5 xs:w-full h-[50%] md:static flex flex-col justify-start mt-[40px] z-10 desktop:pl-14 md:p-0  md:pl-14">
+    <section className="relative desktop:h-[339px] h-[260px] xs:w-[90%] md:w-full md:max-w-[1280px] bg-quoteGradient flex md:flex-row xs:flex-col items-start justify-between md:space-x-[73px] mb-24 rounded-xl">
+      <div className="absolute xs:bottom-3 xs:left-5 xs:w-full h-[50%] md:static flex flex-col justify-start mt-[40px] z-10 desktop:pl-14 md:p-0 md:pl-14">
         <p className="desktop:text-3xl desktop:font-thin text-white">Let's build</p>
         <p className="text-white whitespace-nowrap desktop:text-3.5xl xs:font-extrabold desktop:font-extrabold xs:text-lg xs:mb-[20px] desktop:mb-[20px]">
           YOUR DREAM PROJECT
@@ -29,7 +29,7 @@ const RequestQuoteSection = () => {
       </div>
       <div className="relative xs:w-full xs:h-[60%] desktop:h-full md:h-full">
         <img
-          className="w-full h-full object-cover desktop:scale-x-[1] md:h-full xs:scale-x-[-1]  md:scale-x-[1]"
+          className="w-full h-full object-cover desktop:scale-x-[1] md:h-full xs:scale-x-[-1] md:scale-x-[1]"
           src={HTMLtag}
           alt="HTML tag"
         />
