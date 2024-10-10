@@ -23,11 +23,9 @@ interface Props {
   title: string;
   subTitle?: string;
   tabsConstant: ITabsConstant[];
-  technologiesConstant:
-    | {
-        [key: number]: ITechnologyConstant[];
-      }
-    | never;
+  technologiesConstant: {
+    [key: number]: ITechnologyConstant[];
+  };
 }
 
 const TechnologySection = ({ title, subTitle, tabsConstant, technologiesConstant }: Props) => {
@@ -111,7 +109,7 @@ const TechnologySection = ({ title, subTitle, tabsConstant, technologiesConstant
                     <Suspense fallback={<div>Loading...</div>}>
                       <tech.Icon />
                     </Suspense>
-                    <span>{tech.title}</span>
+                    <span className="whitespace-nowrap">{tech.title}</span>
                   </div>
                 </div>
               ))}

@@ -99,4 +99,6 @@ export const webDevelopmentTechnologiesConstants = {
     { id: 11, title: "Elasticsearch", Icon: ElasticSearchIcon },
     { id: 12, title: "DynamoDB", Icon: DynamoDBIcon },
   ],
+  // need to refactor this array
+  4: [],
 };
