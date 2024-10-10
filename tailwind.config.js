@@ -200,6 +200,13 @@ export default {
             fontWeight: "600",
           },
         ],
+        "3.5xl": [
+          "56px",
+          {
+            lineHeight: "84px",
+            fontWeight: "800",
+          },
+        ],
         "4xl": [
           "66px",
           {
