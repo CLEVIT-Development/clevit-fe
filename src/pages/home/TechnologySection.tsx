@@ -2,6 +2,8 @@ import {
   type FunctionComponent,
   type LazyExoticComponent,
   type SVGProps,
+  Suspense,
+  startTransition,
   useEffect,
   useRef,
   useState,
@@ -33,12 +35,13 @@ const TechnologySection = ({ title, subTitle, tabsConstant, technologiesConstant
   const [direction, setDirection] = useState(0);
   const contentRef = useRef<HTMLDivElement>(null);
   const handleTabChange = (tabId: number) => {
-    const currentIndex = tabsConstant.findIndex((tab: ITabsConstant) => tab.id === activeTab);
-    const newIndex = tabsConstant.findIndex((tab: ITabsConstant) => tab.id === tabId);
+    startTransition(() => {
+      const currentIndex = tabsConstant.findIndex((tab: ITabsConstant) => tab.id === activeTab);
+      const newIndex = tabsConstant.findIndex((tab: ITabsConstant) => tab.id === tabId);
 
-    setDirection(newIndex > currentIndex ? 1 : -1);
-
-    setActiveTab(tabId);
+      setDirection(newIndex > currentIndex ? 1 : -1);
+      setActiveTab(tabId);
+    });
   };
 
   useEffect(() => {
@@ -75,7 +78,7 @@ const TechnologySection = ({ title, subTitle, tabsConstant, technologiesConstant
                 role="tab"
                 key={tab.id}
                 onClick={() => handleTabChange(tab.id)}
-                className={`mb-2 desktop:mb-0 desktop:mr-10 relative duration-500 whitespace-nowrap outline-none focus:outline-none lg:text-md desktop:text-base !font-bold after:transition-all after:bg-purple-500 pb-3 desktop:pb-6
+                className={`cursor-pointer mb-2 desktop:mb-0 desktop:mr-10 relative duration-500 whitespace-nowrap outline-none focus:outline-none lg:text-md desktop:text-base !font-bold after:transition-all after:bg-purple-500 pb-3 desktop:pb-6
                   ${
                     activeTab === tab.id
                       ? "after:w-full text-purple-100 after:-bottom-5 decoration-2 underline decoration-purple-500 desktop:h-2 underline-offset-[5px] desktop:underline-offset-[15px]"
@@ -105,7 +108,9 @@ const TechnologySection = ({ title, subTitle, tabsConstant, technologiesConstant
                   className="w-1/2 md:w-[24%] desktop:w-[15%] mb-4 flex flex-col items-center"
                 >
                   <div className="w-[90px] h-[120px] flex flex-col items-center justify-center mr-2 ">
-                    <tech.Icon />
+                    <Suspense fallback={<div>Loading...</div>}>
+                      <tech.Icon />
+                    </Suspense>
                     <span>{tech.title}</span>
                   </div>
                 </div>
