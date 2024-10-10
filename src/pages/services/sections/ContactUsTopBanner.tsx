@@ -22,7 +22,7 @@ const ContactUsTopBanner = ({ image, title, description, imageAlt }: IBookConsul
           <Button
             className="w-full justify-center text-[20px]"
             variant={ButtonVariant.Primary}
-            children="Contact us today"
+            children="Book a Free Consultation"
             onClick={() => navigate("/request-demo")}
           />
         </div>

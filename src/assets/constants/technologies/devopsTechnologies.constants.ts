@@ -13,19 +13,19 @@ export const devopsTechnologiesTabsConstants: ITabsConstant[] = [
     id: 1,
     title: "Cloud Infrastructure Management",
     description:
-      "This classification is about the administration and operation of cloud structures. Whatever cloud solution a business organization is using, be it AWS, Google Cloud, Azure, or Digital Ocean, we assist in configuring, monitoring, and optimizing their cloud infrastructure. This makes certain that your systems are robust, efficient, and safe.",
+      "This classification is about the administration and operation of cloud structures. Whatever cloud solution a business organization is using, be it<strong> AWS, Google Cloud, Azure, or Digital Ocean</strong>, we assist in configuring, monitoring, and optimizing their cloud infrastructure. This makes certain that your systems are robust, efficient, and safe.",
   },
   {
     id: 2,
     title: "Containerization & Orchestration",
     description:
-      "Application environment management became easier and scalable due to the implementation of Docker and containerization. We use containers for consistency in both development and in production, making your team more efficient and your apps more reliable.",
+      "Application environment management became easier and scalable due to the implementation of <strong> Docker </strong>  and containerization. We use containers for consistency in both development and in production, making your team more efficient and your apps more reliable.",
   },
   {
     id: 3,
     title: "CI/CD Pipeline Automation",
     description:
-      "Our CI/CD services help optimize your software development process saving your time and efforts for the same. Through the use of Jenkins, AWS CodePipeline, Azure DevOps we are able to ensure that the code you write gets tested, deployed and released to the cloud platforms as soon as possible. This helps minimize the chances of human mistakes, enhance the software release cycle, and ensure that you are always deploying and delivering the latest software.",
+      "Our CI/CD services help optimize your software development process saving your time and efforts for the same. Through the use of <strong>Jenkins, AWS CodePipeline, Azure DevOps</strong>  we are able to ensure that the code you write gets tested, deployed and released to the cloud platforms as soon as possible. This helps minimize the chances of human mistakes, enhance the software release cycle, and ensure that you are always deploying and delivering the latest software.",
   },
   {
     id: 4,

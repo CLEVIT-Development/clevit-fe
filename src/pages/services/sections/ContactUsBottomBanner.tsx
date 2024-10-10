@@ -25,7 +25,7 @@ const ContactUsBottomBanner = ({ title, description }: GetConsultationProps) => 
         <p className="text-start  text-base text-white">{description}</p>
       </div>
       <Button
-        children="Schedule a consultation today!"
+        children="Get a Free Consultation "
         variant={ButtonVariant.Outlined}
         className="text-white"
         onClick={() => navigate("/request-demo")}

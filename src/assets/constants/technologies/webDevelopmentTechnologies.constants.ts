@@ -40,19 +40,19 @@ export const webDevelopmentTechnologiesTabsConstants: ITabsConstant[] = [
     id: 1,
     title: "Front-End Development",
     description:
-      "Front-End developers at our company create intuitive, dynamic, and aesthetically-pleasing and user interfaces. Using technologies like React.js, Vue.js, Next.js, TypeScript, and many others we develop websites that are adaptable to various screen sizes.The goal is to bring an additional focus on the user experience that will allow not to lose a visitor.",
+      "Front-End developers at our company create  intuitive, dynamic, and aesthetically-pleasing and user interfaces. Using technologies like  <strong>React.js , Vue.js, Next.js, TypeScript ,</strong>  and many others we develop websites that are adaptable to various screen sizes.The goal is to bring an additional focus on the user experience that will allow not to lose a visitor.",
   },
   {
     id: 2,
     title: "Back-End Development",
     description:
-      "Every website has its back-end, which serves as a foundation for web development. With Node, we make certain that every aspect of your website’s server, databases, and applications are well-coordinated. Node.js, Nest.js, Express.js, and other modern frameworks which we are going to build in this project. We integrate back-end services with the keen sense of security and performance as our basis for the reliable solutions.",
+      "Every website has its back-end, which serves as a foundation for web development. With Node, we make certain that every aspect of your website’s server, databases, and applications are well-coordinated. <strong> Node.js, Nest.js, Express.js,</strong>  and other modern frameworks which we are going to build in this project. We integrate back-end services with the keen sense of security and performance as our basis for the reliable solutions.",
   },
   {
     id: 3,
     title: "Database Management",
     description:
-      "It is therefore important to have a well formulated database so that it can deliver on its performance and also to enhance the level of security. We use tools such as MySQL, MongoDB, PostgreSQL, Redis, and among others in developing effective storage systems. Whether you need relational databases or NoSQL, rest assured that our services will handle your data with utmost attention so you have the fastest secure data access for your application.",
+      "It is therefore important to have a well formulated database so that it can deliver on its performance and also to enhance the level of security. We use tools such as <strong>MySQL, MongoDB, PostgreSQL,</strong>  Redis, and among others in developing effective storage systems. Whether you need relational databases or NoSQL, rest assured that our services will handle your data with utmost attention so you have the fastest secure data access for your application.",
   },
   {
     id: 4,

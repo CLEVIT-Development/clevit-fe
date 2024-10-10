@@ -176,15 +176,15 @@ export const servicesConstants = [
     descriptionOffer:
       "Strengthen your brand and drive results with our custom-built and user-friendly websites.",
     singlePageDescription:
-      "If you have some features in mind for your mobile application, then turn them into reality at Clevit – your application solutions with next level performance. No matter if you want to build a native, cross-platform, or hybrid application, our professionals will help you in each step of the workflow, making the final product easy-to-navigate, easily-scaled, and aligned with the vision of your business.",
+      "At Clevit, we understand that your business needs an intensified web presence with efficiently designed, interactive, and affluent traffic sites. Whether it’s an idea, design, build or launch, our dedicated team of specialists are with you every step of the process to ensure not only does your online presence look good but works efficiently.\n",
     serviceDetails:
-      "When creating mobile applications, at Clevit we follow several rules that are universal for all projects. Here’s what drives us",
+      "We also boast of the principles that we uphold in our work as well as the ethical standards that we uphold every day. These core elements are reflected in every project we undertake:These core elements are reflected in every project we undertake",
     offers: [
       {
-        title: "Suitable Solutions",
+        title: "Exquisite & Sophisticated Solutions",
         Icon: Exquisite,
         description:
-          "We understand that one’s web solution should be not only permanent and effective but also beautiful. Each design and development decision is perfect in its way and does not leave a littered mess, which ruins the outward appearance of your brand.",
+          "We understand that one’s web solution should be not only permanent  and effective but also beautiful. Each design and development decision is perfect in its way and does not leave a littered mess, which ruins the outward appearance of your brand.",
       },
       {
         title: "Flexibility",
@@ -225,9 +225,8 @@ export const servicesConstants = [
     serviceTabTechnologies: webDevelopmentTechnologiesTabsConstants,
     serviceTechnologies: webDevelopmentTechnologiesConstants,
     serviceBookConsultation: {
-      title: "Maximize Your Website’s Potential with Clevit",
-      description:
-        "Ensure your website runs smoothly and securely with our comprehensive maintenance services.",
+      title: "Ready to Elevate Your Digital Presence?",
+      description: "Contact Us Today to Start Building Your Custom Website.",
     },
     servicesProcesses: singlePageWebDevelopmentProcessesConstants,
     processMainTitle: "Our Development Process",
@@ -275,7 +274,7 @@ export const servicesConstants = [
       "If you have some features in mind for your mobile application, then turn them into reality at Clevit – your application solutions with next-level performance. No matter if you want to build a native, cross-platform, or hybrid application, our professionals will help you in each step of the workflow, making the final product easy-to-navigate, easily-scaled, and aligned with the vision of your business.",
     descriptionOffer: "Develop engaging mobile apps that keep users coming back for more",
     singlePageDescription:
-      "At Clevit, the Devops service provided focus on the delivery, collaboration and IT infrastructure management between development and operations. This way, we make your operations smooth, consistently integrating, automating and expanding according to what your business requires.",
+      "If you have some features in mind for your mobile application, then turn them into reality at Clevit – your application solutions with next level performance. No matter if you want to build a native, cross-platform, or hybrid application, our professionals will help you in each step of the workflow, making the final product easy-to-navigate, easily-scaled, and aligned with the vision of your business.",
     serviceDetails:
       "When creating mobile applications, at Clevit we follow several rules that are universal for all projects. Here’s what drives us:",
     offers: [
@@ -375,7 +374,7 @@ export const servicesConstants = [
     descriptionOffer:
       "We offer an extensive range of DevOps services to support the comprehensive life cycle of your systems development, from conception to monitoring for stability and automated, continually optimized performance.",
     singlePageDescription:
-      "If you have some features in mind for your mobile application, then turn them into reality at Clevit – your application solutions with next level performance. No matter if you want to build a native, cross-platform, or hybrid application, our professionals will help you in each step of the workflow, making the final product easy-to-navigate, easily-scaled, and aligned with the vision of your business.",
+      "At Clevit, the Devops service provided focus on the delivery, collaboration and IT infrastructure management between development and operations. This way, we make your operations smooth, consistently integrating, automating and expanding according to what your business requires.",
     serviceDetails:
       "We offer an extensive range of DevOps services to support the comprehensive life cycle of your systems development, from conception to monitoring for stability and automated, continually optimized performance.",
     offers: [
