@@ -13,8 +13,8 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="p-16  w-screen bg-faqContactGradient desktop:space-y-14 flex flex-col text-3xl font-bold items-center justify-center">
-      <div className="flex flex-col items-center justify-center">
+    <section className="p-16 w-screen bg-faqContactGradient desktop:space-y-14 flex flex-col font-bold items-center justify-center">
+      <div className="flex flex-col items-center justify-center text-3xl">
         <p className="text-white desktop:text-3xl text-lg text-center">
           If You Have Any Questions?
         </p>
