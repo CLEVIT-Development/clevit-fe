@@ -2,7 +2,7 @@ import { type FC } from "react";
 import { useNavigate } from "react-router-dom";
 
 import BackgroundGradient from "@/assets/images/services/BackgroundGradient.png";
-import RightBackgroundGradient from "@/assets/images/services/RigtBackgroundGradient.png";
+import RightBackgroundGradient from "@/assets/images/services/RightBackgroundGradient.png";
 import { ButtonVariant } from "@/types/variant.types";
 
 import Button from "../Button";
@@ -34,8 +34,9 @@ const ServiceBox: FC<ServiceBoxProps> = ({
       style={{
         backgroundImage:
           index % 2 === 0 ? `url(${RightBackgroundGradient})` : `url(${BackgroundGradient})`,
+        backgroundPosition: index % 2 === 0 ? "right 10px" : "",
       }}
-      className={`desktop:mb-0 xs:mb-12 w-full desktop:max-w-screen-3xl bg-no-repeat desktop:bg-[length:600px_400px] bg-[length:300px_300px] flex justify-between items-center desktop:px-20 ${index % 2 === 0 ? "flex-row bg-right " : "flex-row-reverse bg-left"}`}
+      className={`desktop:mb-0 xs:mb-12 w-full desktop:max-w-screen-3xl bg-no-repeat desktop:bg-[length:600px_400px] bg-[length:300px_300px] flex justify-between items-center desktop:px-20 ${index % 2 === 0 ? "flex-row bg-right" : "flex-row-reverse bg-left"}`}
     >
       <div className="desktop:w-1/2 w-full desktop:px-[72px] desktop:py-[60px] desktop:justify-start desktop:items-start flex flex-col justify-start items-center">
         <div className=" desktop:text-start desktop:px-0 px-8 text-center">
