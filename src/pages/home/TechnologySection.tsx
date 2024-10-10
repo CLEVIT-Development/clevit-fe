@@ -1,108 +1,121 @@
-import { Suspense, useCallback, useMemo, useRef, useState } from "react";
+import {
+  type FunctionComponent,
+  type LazyExoticComponent,
+  type SVGProps,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 
-import classNames from "classnames";
+import { ITabsConstant } from "@/assets/constants/technologies/technologies.constants.ts";
+import Section from "@/common/templates/Section.tsx";
 
-import { RoutePaths } from "@/app/routing/routing.constants";
-import { swipeAnimationConstants } from "@/assets/constants/swipeAnimation.constants";
-import type {
-  ITabsConstant,
-  ITechnologyConstant,
-} from "@/assets/constants/technologies/technologies.constants";
-import useInteractiveObserver from "@/common/hooks/useInteractiveObserver";
-import useScrollView from "@/common/hooks/useScrollView";
-import Section from "@/common/templates/Section";
-import Navigation from "@/shared/ui/Navigation";
+export interface ITechnologyConstant {
+  id: number;
+  title: string;
+  description?: string;
+  Icon: LazyExoticComponent<FunctionComponent<SVGProps<SVGSVGElement>>>;
+}
 
 interface Props {
   title: string;
   subTitle?: string;
   tabsConstant: ITabsConstant[];
-  technologiesConstant: Record<number, ITechnologyConstant[]>;
+  technologiesConstant:
+    | {
+        [key: number]: ITechnologyConstant[];
+      }
+    | never;
 }
 
-const TechnologySection = ({ title, tabsConstant, technologiesConstant, subTitle }: Props) => {
-  const [{ currTabId, direction }, setActiveTab] = useState({
-    currTabId: 1,
-    direction: "",
-  });
+const TechnologySection = ({ title, subTitle, tabsConstant, technologiesConstant }: Props) => {
+  const [activeTab, setActiveTab] = useState(tabsConstant[0].id);
+  const [direction, setDirection] = useState(0);
+  const contentRef = useRef<HTMLDivElement>(null);
+  const handleTabChange = (tabId: number) => {
+    const currentIndex = tabsConstant.findIndex((tab: ITabsConstant) => tab.id === activeTab);
+    const newIndex = tabsConstant.findIndex((tab: ITabsConstant) => tab.id === tabId);
 
-  const sectionRef = useRef<HTMLDivElement>(null);
+    setDirection(newIndex > currentIndex ? 1 : -1);
 
-  useScrollView(sectionRef, RoutePaths.Technologies);
-  useInteractiveObserver({ sectionRef, checkRoute: RoutePaths.Technologies });
+    setActiveTab(tabId);
+  };
 
-  const onTabItemClickHandler = useCallback((clickTabId: number, direction: string) => {
-    setActiveTab({ direction, currTabId: clickTabId });
-  }, []);
+  useEffect(() => {
+    if (contentRef.current) {
+      contentRef.current.style.transition = "none";
+      contentRef.current.style.transform = `translateX(${direction * 100}%)`;
+      contentRef.current.style.opacity = "0";
 
-  const technologyDescription = useMemo(() => {
-    return tabsConstant[currTabId - 1]?.description || "";
-  }, [currTabId, tabsConstant]);
-
-  const swipeAnimationClass = useMemo(() => {
-    return getSwipeAnimationClass(direction);
-  }, [direction]);
-
-  const technologyItems = useMemo(() => {
-    return (
-      <div
-        key={currTabId}
-        className={classNames(
-          "desktop:w-full w-[99%] relative justify-center desktop:mt-16 lg:max-w-[90%] desktop:flex-wrap desktop:flex desktop:gap-[50px] desktop:items-stretch xs:grid xs:grid-cols-2 xs:gap-8 desktop:pl-5 pl-0",
-          swipeAnimationClass
-        )}
-      >
-        {technologiesConstant[currTabId]?.map(({ id, title, Icon }) => (
-          <div
-            key={id}
-            className="flex flex-col desktop:space-y-5 xs:space-y-2 items-center justify-between min-w-[103px] xs:mt-6 dekstop:mt-24"
-          >
-            <div className="desktop:h-auto xs:h-[64px] svg-wrapper">
-              <Icon />
-            </div>
-            <p className="text-base font-medium text-center">{title}</p>
-          </div>
-        ))}
-      </div>
-    );
-  }, [currTabId, swipeAnimationClass, technologiesConstant]);
+      setTimeout(() => {
+        if (contentRef.current) {
+          contentRef.current.style.transition = "all 0.3s ease-in-out";
+          contentRef.current.style.transform = "translateX(0)";
+          contentRef.current.style.opacity = "1";
+        }
+      }, 50);
+    }
+  }, [activeTab, direction]);
 
   return (
-    <Suspense>
-      <Section
-        ref={sectionRef}
-        titleClassName="max-w-full"
-        title={title}
-        headingLevel="h2"
-        className="scroll-mt-[150px] w-full lg:max-w-[1230px] md:w-full flex items-start justify-center desktop:py-12 lg:px-[100px] desktop:px-[46px] md:px-[30px] md:mx-0 x xs:py-5 rounded-lg overflow-clip"
-      >
+    <Section className="w-full bg-gray-300 px-5 md:px-20 desktop:px-28">
+      <div className="w-full h-full">
+        <h2 className="desktop:text-2xl text-center text-lg text-[#314252] pt-5 pb-6 desktop:pt-12">
+          {title}
+        </h2>
         {subTitle ? (
-          <div className="w-full desktop:mt-6 desktop:text-center px-5 text-start">
+          <div className="w-full desktop:mt-6 desktop:text-center text-start">
             <span className="leading-6 text-[#314252] text-center">{subTitle}</span>
           </div>
         ) : null}
-        <div className="w-full flex flex-col justify-center items-center pt-6 desktop:pt-0 !mt-0">
-          <Navigation
-            items={tabsConstant}
-            className="desktop:mt-10 !justify-start"
-            onItemClick={onTabItemClickHandler}
-          />
-          {technologyDescription && (
-            <div className="px-5 mt-6">
+        <div className="w-full flex flex-col desktop:flex-row desktop:overflow-x-scroll no-scrollbar py-6 desktop:pt-12">
+          <div className="w-full flex flex-col desktop:flex-row text-center desktop:w-max desktop:inline-flex">
+            {tabsConstant.map((tab: ITabsConstant) => (
               <span
-                className="text-gray-200 text-base animate-textSlide"
-                dangerouslySetInnerHTML={{ __html: technologyDescription }}
-              />
-            </div>
-          )}
-          {technologyItems}
+                role="tab"
+                key={tab.id}
+                onClick={() => handleTabChange(tab.id)}
+                className={`mb-2 desktop:mb-0 desktop:mr-10 relative duration-500 whitespace-nowrap outline-none focus:outline-none lg:text-md desktop:text-base !font-bold after:transition-all after:bg-purple-500 pb-3 desktop:pb-6
+                  ${
+                    activeTab === tab.id
+                      ? "after:w-full text-purple-100 after:-bottom-5 decoration-2 underline decoration-purple-500 desktop:h-2 underline-offset-[5px] desktop:underline-offset-[15px]"
+                      : "after:w-0 after:bg-transparent text-gray-200"
+                  }
+                `}
+              >
+                {tab.title}
+              </span>
+            ))}
+          </div>
         </div>
-      </Section>
-    </Suspense>
+        <span
+          className="block text-gray-200 text-base animate-textSlide desktop:!pb-8"
+          dangerouslySetInnerHTML={{
+            __html: tabsConstant.find((tab) => tab.id === activeTab)?.description || "",
+          }}
+        />
+        <div className={`py-5  desktop:pb-12 desktop:mt-4 overflow-hidden`}>
+          <div ref={contentRef} className="w-full h-full">
+            <div
+              className={`w-full flex-wrap flex items-center justify-center ${technologiesConstant[activeTab].length < 6 ? "desktop:justify-center" : "desktop:justify-between"}  overflow-y-auto`}
+            >
+              {technologiesConstant[activeTab].map((tech: ITechnologyConstant, index: number) => (
+                <div
+                  key={index}
+                  className="w-1/2 md:w-[24%] desktop:w-[15%] mb-4 flex flex-col items-center"
+                >
+                  <div className="w-[90px] h-[120px] flex flex-col items-center justify-center mr-2 ">
+                    <tech.Icon />
+                    <span>{tech.title}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </Section>
   );
 };
-
-const getSwipeAnimationClass = (direction: string) =>
-  swipeAnimationConstants[direction as keyof typeof swipeAnimationConstants] || "";
 
 export default TechnologySection;

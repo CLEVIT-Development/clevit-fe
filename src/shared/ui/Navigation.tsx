@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 
 import classNames from "classnames";
 import { twMerge } from "tailwind-merge";
@@ -50,10 +50,6 @@ const Navigation = ({ items, onItemClick, className = "" }: Props) => {
     },
     [activeTab, isTablet, onItemClick]
   );
-
-  useEffect(() => {
-    setActiveTab(1);
-  }, []);
 
   return (
     <nav

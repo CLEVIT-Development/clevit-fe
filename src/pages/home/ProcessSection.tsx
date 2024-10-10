@@ -33,7 +33,7 @@ const ProcessSection = ({ processes, processTitle, className }: Props) => (
                 ${
                   window.innerWidth >= 1024
                     ? lengthOfProcess === 6
-                      ? "w-[20%]"
+                      ? "w-[30%]"
                       : lengthOfProcess === 7
                         ? "w-[22%]"
                         : lengthOfProcess >= 8
@@ -41,7 +41,7 @@ const ProcessSection = ({ processes, processTitle, className }: Props) => (
                           : "w-[200px]"
                     : "w-[200px]"
                 }
-                ${isSecondRow && window.innerWidth >= 1024 ? "!mt-[50px] mx-[-30px]" : null}
+                ${isSecondRow && window.innerWidth >= 1024 && lengthOfProcess > 6 ? "!mt-[50px] mx-[-30px]" : isSecondRow && window.innerWidth >= 1024 && lengthOfProcess === 6 ? "!mt-[50px]" : null}
             `}
             >
               <ProcessCard
