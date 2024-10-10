@@ -109,7 +109,7 @@ const TechnologySection = ({ title, subTitle, tabsConstant, technologiesConstant
                     <Suspense fallback={<div>Loading...</div>}>
                       <tech.Icon />
                     </Suspense>
-                    <span className="whitespace-nowrap">{tech.title}</span>
+                    <span className="whitespace-nowrap mt-2">{tech.title}</span>
                   </div>
                 </div>
               ))}
