@@ -11,7 +11,7 @@ import NotFound from "../not-found/NotFoundPage";
 import SingleBlogSection from "./SingleBlogSection";
 
 const SingleBlogPage = () => {
-  const { id } = useParams();
+  const { titlePath } = useParams();
 
   return (
     <>
@@ -24,7 +24,7 @@ const SingleBlogPage = () => {
           </Gradient>
         }
       >
-        {id ? <SingleBlogSection blogId={id} /> : <NotFound />}
+        {titlePath ? <SingleBlogSection titlePath={titlePath} /> : <NotFound />}
 
         <CalendlySection title="Ready to turn your vision into reality? The journey starts here. We're excited to meet you." />
       </Layout>

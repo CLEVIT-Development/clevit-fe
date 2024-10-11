@@ -14,4 +14,5 @@ export type IBlog = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   image: string | any;
   created_at?: string;
+  readingTime?: string;
 };

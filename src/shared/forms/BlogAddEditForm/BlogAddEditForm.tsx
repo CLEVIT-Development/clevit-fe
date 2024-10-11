@@ -62,8 +62,6 @@ const BlogForm = ({ initialData, isLoading }: IBlogFormProps) => {
   } = methods;
 
   const onFormSubmit = async (data: IBlog) => {
-    console.log(data);
-
     if (id) {
       updateBlogById(id, data, {
         onSuccess: () => {
@@ -83,23 +81,34 @@ const BlogForm = ({ initialData, isLoading }: IBlogFormProps) => {
         },
       });
     } else {
-      addBlog(data, {
-        onSuccess: () => {
-          showNotification({
-            type: ToastVersions.success,
-            title: "Blog Successfully created.",
-            description: "",
-          });
-          navigate(RoutePaths.Blogs);
+      addBlog(
+        {
+          id: data.id || "",
+          created_at: data.created_at || "",
+          description: data.description || "",
+          titlePath: data.titlePath || "",
+          title: data.title,
+          content: data.content,
+          image: data.image?.name || "",
         },
-        onFailure: () => {
-          showNotification({
-            type: ToastVersions.error,
-            title: "Creation failed",
-            description: "Could not create the blog",
-          });
-        },
-      });
+        {
+          onSuccess: () => {
+            showNotification({
+              type: ToastVersions.success,
+              title: "Blog Successfully created.",
+              description: "",
+            });
+            navigate(RoutePaths.Blogs);
+          },
+          onFailure: () => {
+            showNotification({
+              type: ToastVersions.error,
+              title: "Creation failed",
+              description: "Could not create the blog",
+            });
+          },
+        }
+      );
     }
   };
 
