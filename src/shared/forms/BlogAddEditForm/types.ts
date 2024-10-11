@@ -7,6 +7,7 @@ export type IBlogData = yup.InferType<typeof BlogSchema>;
 export type IBlog = {
   id?: string;
   title: string;
+  titlePath: string;
   content: string;
   description?: string;
   //TODO: Fix later for more type safety

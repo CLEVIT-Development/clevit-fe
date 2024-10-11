@@ -11,6 +11,8 @@ import Button from "@/shared/ui/Button";
 import Pagination from "@/shared/ui/Pagination";
 import { ButtonVariant } from "@/types/variant.types";
 
+import CreateBlog from "./CreatBlogCard";
+
 const BlogSection = () => {
   const { getAllBlogs, allBlogs, deleteBlogById, pagination, loading } = useBlog();
   const containerRef = useRef<HTMLDivElement>(null);
@@ -29,6 +31,8 @@ const BlogSection = () => {
     getAllBlogs(currentPage, { onSuccess });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentPage]);
+
+  console.log({ allBlogs });
 
   const handlePageChange = (newPage: number) => {
     setCurrentPage(newPage);
@@ -57,13 +61,13 @@ const BlogSection = () => {
         <div className="flex flex-col items-center justify-center h-64">
           <p className="text-gray-100 text-lg mb-4">No blogs available at the moment.</p>
           {isAuthenticated && (
-            <Button variant={ButtonVariant.Primary} onClick={() => navigate("/admin/create-blog")}>
+            <Button variant={ButtonVariant.Primary} onClick={() => navigate("/admin/add-blog")}>
               Create New Blog
             </Button>
           )}
         </div>
       )}
-      <div className=" w-full rounded-lg bg-white grid xs:grid-cols-1 xs:gap-0 sm:grid-cols-2 desktop:grid-cols-3 !gap-6">
+      <div className="w-full rounded-lg bg-white grid xs:grid-cols-1 xs:gap-0 sm:grid-cols-2 desktop:grid-cols-3 !gap-6">
         {loading
           ? Array.from({ length: 6 }).map((_, index) => <BlogCardSkeleton key={index} />)
           : allBlogs?.map(({ id, title, image, created_at: date }) => (
@@ -80,9 +84,9 @@ const BlogSection = () => {
                 className="shadow-none"
               />
             ))}
+        {allBlogs && allBlogs.length > 0 && !loading && <CreateBlog />}
       </div>
-
-      {pagination && pagination?.totalItems >= pagination?.pageSize && !loading && (
+      {pagination && pagination.totalItems >= pagination.pageSize && !loading && (
         <Pagination
           totalItems={pagination.totalItems}
           pageSize={pagination.pageSize}

@@ -40,13 +40,13 @@ const BlogCard = ({
       role="button"
       onClick={() => navigate(`/blog/${id}`)}
       className={twMerge(
-        "rounded-lg transition-all duration-500 space-y-[24px] bg-white p-4 shadow-md",
+        "rounded-lg transition-all duration-500 space-y-[24px] bg-white p-4 shadow-md h-[436px]",
         className
       )}
     >
       <img
         loading="lazy"
-        className="w-[420px]  lg:flex rounded-3xl bg-[#D9D9D9] object-cover"
+        className="w-[420px] h-[260px] lg:flex rounded-3xl bg-[#D9D9D9] object-cover"
         alt={imageAlt}
         src={image || ImagePlaceholder}
       />

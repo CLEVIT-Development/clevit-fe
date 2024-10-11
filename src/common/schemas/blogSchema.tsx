@@ -5,6 +5,13 @@ const urlRegex = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/;
 
 export const BlogSchema = yup.object().shape({
   title: yup.string().required("Title is required"),
+  titlePath: yup
+    .string()
+    .required("Title path is required")
+    .matches(
+      /^[a-z0-9]+(?:-[a-z0-9]+)*$/,
+      "Title path must be a valid path (lowercase letters, numbers, and hyphens only)"
+    ),
   content: yup.string().required("Content is required"),
   image: yup
     .mixed()
