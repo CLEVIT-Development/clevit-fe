@@ -24,6 +24,7 @@ import Insurance from "@/assets/vectors/Insurance.svg?react";
 import ITServicesITConsulting from "@/assets/vectors/ItServices&ItConsulting.svg?react";
 import LogisticsTransportation from "@/assets/vectors/LogisticsTransportation.svg?react";
 import ManagedService from "@/assets/vectors/ManagedService.svg?react";
+import MediaEntertainment from "@/assets/vectors/MediaEntertainment.svg?react";
 import MedicalSoftwareDevelopment from "@/assets/vectors/MedicalSoftwareDevelopment.svg?react";
 import MobileDevelopment from "@/assets/vectors/MobileDevelopment.svg?react";
 import MusickProduction from "@/assets/vectors/MusickProduction.svg?react";
@@ -39,7 +40,6 @@ import TaskManagment from "@/assets/vectors/TaskManagment.svg?react";
 import TreatmentManagment from "@/assets/vectors/TreatmentManagment.svg?react";
 import TratmentManagment from "@/assets/vectors/TreatmentManagment.svg?react";
 import VirtualMeeting from "@/assets/vectors/VirtualMeeting.svg?react";
-import MediaEntertainment from "@/assets/vectors/mediaEntertainment.svg?react";
 
 import { ServicesIdConstants } from "./services-id.constants";
 
