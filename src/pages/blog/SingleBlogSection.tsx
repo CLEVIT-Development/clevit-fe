@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { FacebookShareButton, LinkedinShareButton } from "react-share";
 
 import { blogsConstants } from "@/assets/constants/blogs.constants";
@@ -7,6 +8,7 @@ import FacebookIcon from "@/assets/vectors/Facebook.svg?react";
 // import InstagramIcon from "@/assets/vectors/Instagram.svg?react";
 import LinkedInIcon from "@/assets/vectors/Linkedin.svg?react";
 import useBlog from "@/common/hooks/useBlog";
+import useOrigin from "@/common/hooks/useOrigin.ts";
 import Section from "@/common/templates/Section.tsx";
 import BlogCard from "@/shared/ui/BlogCard/BlogCard";
 
@@ -16,6 +18,8 @@ interface SingleBlogPageProps {
 
 const SingleBlogSection = ({ blogId }: SingleBlogPageProps) => {
   const { getBlogById, blogData } = useBlog();
+  const origin = useOrigin();
+  const { pathname } = useLocation();
 
   useEffect(() => {
     getBlogById(blogId);
@@ -40,15 +44,11 @@ const SingleBlogSection = ({ blogId }: SingleBlogPageProps) => {
 
       <div className="flex space-x-2 items-center justify-center">
         <span className="text-lg">Share this</span>
-        <FacebookShareButton
-          url={"https://clevit-dev.vercel.app/blog/2af0225d-86d9-42c3-b263-47af4d94e561"}
-        >
+        <FacebookShareButton url={origin + pathname}>
           <FacebookIcon className="w-10 h-10" />
         </FacebookShareButton>
         {/*<InstagramIcon className="w-10 h-10" />*/}
-        <LinkedinShareButton
-          url={"https://clevit-dev.vercel.app/blog/2af0225d-86d9-42c3-b263-47af4d94e561"}
-        >
+        <LinkedinShareButton url={origin + pathname}>
           <LinkedInIcon className="w-10 h-10" />
         </LinkedinShareButton>
       </div>
