@@ -101,7 +101,7 @@ const Footer = () => {
               <BlogItem
                 key={element.id}
                 image={element.image}
-                description={element.description}
+                title={element.title}
                 date={new Date("12/04/2024").toLocaleDateString()}
                 imageAlt={element?.title}
               />

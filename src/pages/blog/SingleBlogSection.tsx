@@ -1,9 +1,10 @@
 import { useEffect } from "react";
+import { FacebookShareButton, LinkedinShareButton } from "react-share";
 
 import { blogsConstants } from "@/assets/constants/blogs.constants";
 import ImagePlaceholder from "@/assets/images/ImagePlaceholder.jpg";
 import FacebookIcon from "@/assets/vectors/Facebook.svg?react";
-import InstagramIcon from "@/assets/vectors/Instagram.svg?react";
+// import InstagramIcon from "@/assets/vectors/Instagram.svg?react";
 import LinkedInIcon from "@/assets/vectors/Linkedin.svg?react";
 import useBlog from "@/common/hooks/useBlog";
 import Section from "@/common/templates/Section.tsx";
@@ -18,14 +19,13 @@ const SingleBlogSection = ({ blogId }: SingleBlogPageProps) => {
 
   useEffect(() => {
     getBlogById(blogId);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [blogId]);
 
   if (!blogData) {
     return null;
   }
 
-  const { title, description, image } = blogData;
+  const { title, content, image } = blogData;
 
   return (
     <Section className="items-start desktop:max-w-[80%]">
@@ -36,16 +36,21 @@ const SingleBlogSection = ({ blogId }: SingleBlogPageProps) => {
         src={image || ImagePlaceholder}
       />
       <h1 className="text-3xl desktop:max-w-[80%]">{title}</h1>
-      <p
-        className="text-base desktop:max-w-[80%]"
-        dangerouslySetInnerHTML={{ __html: description }}
-      />
+      <p className="text-base desktop:max-w-[80%]" dangerouslySetInnerHTML={{ __html: content }} />
 
       <div className="flex space-x-2 items-center justify-center">
         <span className="text-lg">Share this</span>
-        <FacebookIcon className="w-10 h-10" />
-        <InstagramIcon className="w-10 h-10" />
-        <LinkedInIcon className="w-10 h-10" />
+        <FacebookShareButton
+          url={"https://clevit-dev.vercel.app/blog/2af0225d-86d9-42c3-b263-47af4d94e561"}
+        >
+          <FacebookIcon className="w-10 h-10" />
+        </FacebookShareButton>
+        {/*<InstagramIcon className="w-10 h-10" />*/}
+        <LinkedinShareButton
+          url={"https://clevit-dev.vercel.app/blog/2af0225d-86d9-42c3-b263-47af4d94e561"}
+        >
+          <LinkedInIcon className="w-10 h-10" />
+        </LinkedinShareButton>
       </div>
       <div className="mt-40">
         <h2 className="text-lg font-bold">More Posts</h2>

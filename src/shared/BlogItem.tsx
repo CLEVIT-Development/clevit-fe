@@ -3,14 +3,14 @@ import Date from "@/assets/vectors/Date.svg?react";
 interface Props {
   image: string;
   imageAlt: string;
-  description: string;
+  title: string;
   date: string;
 }
 
-const BlogItem = ({ image, imageAlt, description, date }: Props) => {
+const BlogItem = ({ image, imageAlt, title, date }: Props) => {
   return (
     <div className="flex gap-2">
-      <div className="w-[54px] h-[52px]">
+      <div className="min-w-[54px] h-[52px]">
         <img src={image} alt={imageAlt} className="w-full h-full rounded" />
       </div>
       <div>
@@ -18,9 +18,7 @@ const BlogItem = ({ image, imageAlt, description, date }: Props) => {
           {" "}
           <Date /> <span className="text-white">{date}</span>{" "}
         </div>
-        <div className="whitespace-nowrap overflow-hidden text-ellipsis desktop:w-[200px] w-[100px]  text-white">
-          {description}
-        </div>
+        <div className="line-clamp-1 desktop:w-[200px] w-[120px]  text-white">{title}</div>
       </div>
     </div>
   );
