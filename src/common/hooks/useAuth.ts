@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-
 import { useAuthToken } from "./useAuthToken";
 
 export const useAuth = () => {
