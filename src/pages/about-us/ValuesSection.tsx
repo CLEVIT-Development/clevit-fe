@@ -16,12 +16,12 @@ const ValuesSection = () => {
   }, []);
 
   return (
-    <Section title="Values" className="desktop:max-w-[80%] desktop:mx-auto" headingLevel="h2">
+    <Section title="Values" className="px-0 desktop:max-w-[80%] desktop:mx-auto" headingLevel="h2">
       <div className="w-full flex md:flex-row flex-col md:space-x-[138px] md:space-y-0 space-y-6 items-center">
         <Navigation
           items={valueTabsConstants}
           onItemClick={onTabItemClickHandler}
-          className="md:!flex-col md:items-start md:!space-x-0 md:!space-y-10 md:px-0 !px-[18px] md:w-fit"
+          className="md:!flex-col md:items-start md:w-[190px] md:!space-x-0 md:!gap-y-10"
         />
         <div
           key={currTabId}

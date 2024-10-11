@@ -24,7 +24,7 @@ const AddEditBlogPage = () => {
   return (
     <>
       <Layout headerVariant={HeaderVariant.Tertiary}>
-        <Section className="mt-8 ">
+        <Section className="mt-8">
           <h1 className="desktop:text-2xl text-lg">
             {isEditing ? "Edit Blog" : "Create New Blog"}{" "}
           </h1>

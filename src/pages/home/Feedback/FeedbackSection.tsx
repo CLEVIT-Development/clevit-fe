@@ -1,22 +1,19 @@
 import { useMemo } from "react";
 import AliceCarousel from "react-alice-carousel";
-import { useNavigate } from "react-router-dom";
-
 import classNames from "classnames";
 import { twMerge } from "tailwind-merge";
-
-import { RoutePaths } from "@/app/routing/routing.constants";
 import { feedbacksConstants } from "@/assets/constants/feedbacks.constants";
 import useResponsive from "@/common/hooks/useResponsive";
 import Section from "@/common/templates/Section";
-import Button from "@/shared/ui/Button";
-import { ButtonVariant } from "@/types/variant.types";
 
 import styles from "./Feedback.module.css";
 
-const FeedbackSection = () => {
+interface FeedbackSectionProps {
+  className?: string;
+}
+
+const FeedbackSection = ({ className }: FeedbackSectionProps) => {
   const { isTablet } = useResponsive();
-  const navigate = useNavigate();
 
   const feedbacksData = useMemo(() => {
     return feedbacksConstants.map(({ id, companyLogo, description, author, position }) => (
@@ -26,7 +23,8 @@ const FeedbackSection = () => {
           classNames(
             "transition-all flex-1 duration-500 bg-white rounded-lg-l shadow-lg md:min-h-[600px] min-h-[550px] hover:scale-105 flex flex-col justify-between items-start px-4 desktop:pt-8 xs:pt-5 pb-6",
             styles["feedback-item"]
-          )
+          ),
+          className
         )}
       >
         <div className="flex flex-col md:space-y-8 xs:space-y-6">
@@ -73,9 +71,6 @@ const FeedbackSection = () => {
           </div>
         )}
       </div>
-      <Button variant={ButtonVariant.Primary} onClick={() => navigate(RoutePaths.ContactUs)}>
-        Contact Us
-      </Button>
     </Section>
   );
 };

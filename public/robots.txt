@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+User-agent: *
+Disallow: /admin
+Disallow: /admin/blog/:id?
+Disallow: /admin/signin
+Disallow: /admin/addBlog
+
+Sitemap: https://www.clevit.io/sitemap.xml

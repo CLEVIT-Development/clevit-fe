@@ -23,9 +23,9 @@ import PageSEO from "@/shared/lib/meta/PageSeo.tsx";
 const WebDevelopmentPage = () => (
   <>
     <PageSEO
-      title="Web and Mobile Apps Development Portfolios | Clevit"
-      description="Find our software and different IT services design & development case studies across various industries for current & past clients. Feel free to contact us today!"
-      canonicalUrl="https://clevit.io/web-development"
+      title="Web Development Services | Clevit"
+      description="Expert Web Development Services by Clevit. Our solutions include client-server, back-end, front-end and database that addresses your business needs for growth."
+      canonicalUrl="https://www.clevit.io/web-development"
     />
     <Layout
       heading={

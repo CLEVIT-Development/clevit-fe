@@ -15,8 +15,8 @@ const AboutPage = () => {
   return (
     <>
       <PageSEO
-        title="About Clevit Software Development Team | Clevit"
-        description="Clevit software development team builds best-in-class web and mobile applications at the forefront of technology. Get to know us and see how we can help."
+        title="About us | Clevit"
+        description="Discover Clevit's mission to transforming ideas into innovative software solutions. Learn more about our values, expertise, and passion for digital success."
         canonicalUrl="https://www.clevit.io/about-us"
       />
       <Layout

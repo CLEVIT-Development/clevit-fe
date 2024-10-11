@@ -27,8 +27,8 @@ const PortfolioPage = () => {
   return (
     <>
       <PageSEO
-        title="Web and Mobile Apps Development Portfolios | Clevit"
-        description="Find our software and different IT services design & development case studies across various industries for current & past clients. Feel free to contact us today!"
+        title="Our works | Clevit"
+        description="Explore Clevit’s portfolio of successful projects across web, mobile, and custom software development. See how we’ve helped businesses grow with technology."
         canonicalUrl="https://www.clevit.io/portfolio"
       />
 

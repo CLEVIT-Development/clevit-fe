@@ -12,7 +12,7 @@ const PortfolioHeading = () => {
     >
       <div className="flex flex-col justify-center items-center ">
         <h1 className="animate-textSlide text-white  desktop:text-3xl text-lg font-semibold">
-          Results that Drive Innovation
+          Our Works
         </h1>
         <p className="desktop:text-lg  desktop:w-[800px] text-base font-normal text-white text-center mt-4">
           Read about our successes in fulfilling Clevit’s commitment to deliver innovative web,

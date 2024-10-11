@@ -26,6 +26,7 @@ const NoSQLIcon = lazy(() => import("@/assets/vectors/technology/NoSQL.svg?react
 const NodeIcon = lazy(() => import("@/assets/vectors/technology/Node.svg?react"));
 const PostgresIcon = lazy(() => import("@/assets/vectors/technology/PostgreSQL.svg?react"));
 const ReactIcon = lazy(() => import("@/assets/vectors/technology/React.svg?react"));
+const ReactExpoIcon = lazy(() => import("@/assets/vectors/technology/ReactExpo.svg?react"));
 const RedisIcon = lazy(() => import("@/assets/vectors/technology/Redis.svg?react"));
 const SASSIcon = lazy(() => import("@/assets/vectors/technology/SASS.svg?react"));
 const SQLiteIcon = lazy(() => import("@/assets/vectors/technology/SQLite.svg?react"));
@@ -35,6 +36,9 @@ const Typescript = lazy(() => import("@/assets/vectors/technology/Typescript.svg
 const ViteIcon = lazy(() => import("@/assets/vectors/technology/Vite.svg?react"));
 const VueIcon = lazy(() => import("@/assets/vectors/technology/Vue.svg?react"));
 const WebSocketIcon = lazy(() => import("@/assets/vectors/technology/WebSocket.svg?react"));
+const KotlinIcon = lazy(() => import("@/assets/vectors/technology/Kotlin.svg?react"));
+const ObjectiveCIcon = lazy(() => import("@/assets/vectors/technology/ObjectiveC.svg?react"));
+const JavaIcon = lazy(() => import("@/assets/vectors/technology/Java.svg?react"));
 
 export interface ITabsConstant extends INavigationData {
   description?: string;
@@ -82,7 +86,11 @@ export const technologiesConstants = {
   ],
   2: [
     { id: 1, title: "Swift", Icon: SwiftIcon },
-    { id: 2, title: "React Native", Icon: ReactIcon },
+    { id: 2, title: "Objective-C", Icon: ObjectiveCIcon },
+    { id: 3, title: "Kotlin", Icon: KotlinIcon },
+    { id: 4, title: "Java", Icon: JavaIcon },
+    { id: 5, title: "React Native", Icon: ReactIcon },
+    { id: 5, title: "React Expo", Icon: ReactExpoIcon },
   ],
   3: [
     { id: 1, title: "Node.js", Icon: NodeIcon },

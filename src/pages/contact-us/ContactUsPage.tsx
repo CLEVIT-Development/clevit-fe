@@ -10,8 +10,8 @@ const ContactUsPage = () => {
   return (
     <>
       <PageSEO
-        title="Contact for web and mobile development | Clevit"
-        description="Contact Clevit team and order professional Web and Mobile development services. Just fill out the form and we'll get back to you right away."
+        title="Contact us | Clevit"
+        description="Got a project in mind? Contact Clevit and let's work together to bring your ideas to life. We are here to support your business growth with expert solutions."
         canonicalUrl="https://www.clevit.io/contact-us"
       />
       <Layout headerVariant={HeaderVariant.Tertiary}>

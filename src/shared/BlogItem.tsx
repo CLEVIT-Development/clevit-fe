@@ -13,7 +13,7 @@ const BlogItem = ({ image, imageAlt, title, date }: Props) => {
       <div className="min-w-[54px] h-[52px]">
         <img src={image} alt={imageAlt} className="w-full h-full rounded" />
       </div>
-      <div>
+      <div className="w-[calc(100%-60px)]">
         <div className="flex gap-2 items-center">
           {" "}
           <Date /> <span className="text-white">{date}</span>{" "}

@@ -30,7 +30,7 @@ const Header = forwardRef(
     const { isTablet, isDesktop } = useResponsive();
     const [isOpen, setIsOpen] = useState(false);
     const [isTransitionEndClose, setIsTransitionEndClose] = useState(false);
-    const navListRef = useRef<HTMLDivElement>(null);
+    const navListRef = useRef<HTMLDivElement | null>(null);
 
     const { isAuthenticated } = useAuth();
 
@@ -41,8 +41,6 @@ const Header = forwardRef(
         headerMenuLinks.map((headerMenuLink) => {
           const isActive = `${pathname}${hash}` === headerMenuLink.link;
           const isVisible = headerMenuLink.needAuthentication ? isAuthenticated : true;
-
-          console.log(isAuthenticated);
 
           if (!isVisible) {
             return null;
@@ -56,7 +54,7 @@ const Header = forwardRef(
               key={headerMenuLink.id}
               to={headerMenuLink.link}
               className={twMerge(
-                classNames(" text-white lg:text-md text-lg font-medium ", {
+                classNames("text-white lg:text-md text-lg font-medium", {
                   ["text-purple-1300"]: isWhiteBackground,
                   ["text-purple-300 lg:after:w-full lg:after:bg-purple-100"]:
                     isActive && isWhiteBackground,
@@ -76,7 +74,7 @@ const Header = forwardRef(
       <header
         className={twMerge(
           classNames(
-            "transition-all duration-300 w-full fixed top-0 z-[30] lg:px-10 lg:py-6 px-5 py-4",
+            "transition-all  duration-300 w-full fixed top-0 z-[30] lg:px-10 lg:py-6 px-5 py-4",
             {
               ["bg-white"]: isWhiteBackground,
               ["bg-headingGradient"]:
@@ -123,7 +121,7 @@ const Header = forwardRef(
             setIsTransitionEndClose(isOpen);
           }}
         >
-          <nav ref={navListRef} className="flex flex-col items-center space-y-6">
+          <nav ref={navListRef} className="flex flex-col items-center mt-7 space-y-6">
             {renderNavList}
           </nav>
           <Copyright
