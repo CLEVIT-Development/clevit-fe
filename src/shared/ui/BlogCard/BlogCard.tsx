@@ -48,7 +48,7 @@ const BlogCard = ({
     >
       <img
         loading="lazy"
-        className="w-[355px] h-[221px] h-[260px] lg:flex rounded-3xl bg-[#D9D9D9] object-cover"
+        className="w-full h-[221px] lg:flex rounded-3xl bg-[#D9D9D9] object-cover"
         alt={imageAlt}
         src={image || ImagePlaceholder}
       />

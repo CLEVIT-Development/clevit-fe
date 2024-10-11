@@ -150,7 +150,7 @@ const useBlog = () => {
     setLoading(true);
 
     try {
-      const response: IGetAllBlogs = await axiosInstanceAuth.get(`/blogs?page=${page}`);
+      const response: IGetAllBlogs = await axiosInstanceAuth.get(`/blogs?page=${page}&sort=Desc`);
 
       setAllBlogs(response.data.blogsList);
       setPagination({

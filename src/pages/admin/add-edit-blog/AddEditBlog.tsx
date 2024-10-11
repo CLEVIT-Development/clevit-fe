@@ -5,20 +5,21 @@ import useBlog from "@/common/hooks/useBlog";
 import Layout from "@/common/layout/Layout.tsx";
 import Section from "@/common/templates/Section";
 import BlogForm from "@/shared/forms/BlogAddEditForm/BlogAddEditForm";
+import { type IBlog } from "@/shared/forms/BlogAddEditForm/types";
 import { HeaderVariant } from "@/types/variant.types.ts";
 
 const AddEditBlogPage = () => {
-  const { titleName } = useParams();
+  const { id } = useParams();
   const { getBlogByTitleName, blogData } = useBlog();
 
-  const isEditing = Boolean(titleName);
+  const isEditing = Boolean(id);
 
   useEffect(() => {
-    if (isEditing && titleName) {
-      getBlogByTitleName(titleName);
+    if (id) {
+      getBlogByTitleName(id);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [titleName, isEditing]);
+  }, [id, isEditing]);
 
   return (
     <>
@@ -27,7 +28,7 @@ const AddEditBlogPage = () => {
           <h1 className="desktop:text-2xl text-lg">
             {isEditing ? "Edit Blog" : "Create New Blog"}{" "}
           </h1>
-          {blogData && <BlogForm initialData={blogData} />}
+          <BlogForm initialData={blogData as IBlog} />
         </Section>
       </Layout>
     </>

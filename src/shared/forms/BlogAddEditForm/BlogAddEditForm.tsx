@@ -33,6 +33,7 @@ const BlogForm = ({ initialData, isLoading }: IBlogFormProps) => {
       setValue("titlePath", initialData.titlePath);
       setValue("content", initialData.content);
       setValue("image", initialData.image);
+      setValue("id", initialData.id);
       setImagePreview(initialData.image);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -51,7 +52,6 @@ const BlogForm = ({ initialData, isLoading }: IBlogFormProps) => {
   const navigate = useNavigate();
   const { id } = useParams<{ id?: string }>();
   const { addBlog, updateBlogById, loading: blogLoading } = useBlog();
-
   const isFormLoading = isLoading || blogLoading;
   const {
     register,
@@ -61,9 +61,11 @@ const BlogForm = ({ initialData, isLoading }: IBlogFormProps) => {
     trigger,
   } = methods;
 
+  console.log({ id });
+
   const onFormSubmit = async (data: IBlog) => {
-    if (id) {
-      updateBlogById(id, data, {
+    if (data?.id) {
+      updateBlogById(data.id, data, {
         onSuccess: () => {
           showNotification({
             type: ToastVersions.success,

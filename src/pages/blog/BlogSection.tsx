@@ -10,6 +10,7 @@ import BlogCardSkeleton from "@/shared/ui/BlogCard/BlogCardSkeleton";
 import Button from "@/shared/ui/Button";
 import Pagination from "@/shared/ui/Pagination";
 import { ButtonVariant } from "@/types/variant.types";
+
 import CreateBlog from "./CreatBlogCard";
 
 const BlogSection = () => {
@@ -77,7 +78,7 @@ const BlogSection = () => {
           : allBlogs?.map(({ id, title, titlePath, readingTime, image, created_at: date }) => (
               <BlogCard
                 isAdminMode={!!isAuthenticated}
-                onEdit={() => navigate(`/admin/edit-blog/${id}`)}
+                onEdit={() => navigate(`/admin/edit-blog/${titlePath}`)}
                 onDelete={handleDeleteBlog}
                 id={id}
                 date={date}
