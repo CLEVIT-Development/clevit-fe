@@ -90,7 +90,7 @@ import TimelyData from "@/assets/vectors/TimelyData.svg?react";
 import TimelyDelivery from "@/assets/vectors/TimelyDelivery.svg?react";
 import TransparencyCommunication from "@/assets/vectors/TransparencyCommunication.svg?react";
 import Trust from "@/assets/vectors/Trust.svg?react";
-import TrustAndPartnerShip from "@/assets/vectors/TrustAndPartnerShip.svg?react";
+import TrustAndPartnerShip from "@/assets/vectors/TrustAndPArtnerShip.svg?react";
 import TrustOwnership from "@/assets/vectors/TrustOwnership.svg?react";
 import TrustTransparency from "@/assets/vectors/TrustTransparency.svg?react";
 import UIUX from "@/assets/vectors/UIUX.svg?react";
