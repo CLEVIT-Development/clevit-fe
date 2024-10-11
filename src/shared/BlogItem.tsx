@@ -18,7 +18,7 @@ const BlogItem = ({ image, imageAlt, title, date }: Props) => {
           {" "}
           <Date /> <span className="text-white">{date}</span>{" "}
         </div>
-        <div className="line-clamp-1 desktop:w-[200px] w-[120px]  text-white">{title}</div>
+        <div className="line-clamp-1 desktop:w-[200px] w-[120px] text-white">{title}</div>
       </div>
     </div>
   );

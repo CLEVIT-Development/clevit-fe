@@ -2,27 +2,28 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { FacebookShareButton, LinkedinShareButton, TwitterShareButton, XIcon } from "react-share";
 
-import { blogsConstants } from "@/assets/constants/blogs.constants";
 import ImagePlaceholder from "@/assets/images/ImagePlaceholder.jpg";
 import FacebookIcon from "@/assets/vectors/Facebook.svg?react";
 import LinkedInIcon from "@/assets/vectors/Linkedin.svg?react";
+import { useBlogContext } from "@/common/context/BlogContext.tsx";
 import useBlog from "@/common/hooks/useBlog";
 import useOrigin from "@/common/hooks/useOrigin.ts";
 import Section from "@/common/templates/Section.tsx";
-import BlogCard from "@/shared/ui/BlogCard/BlogCard";
+import BlogCard from "@/shared/ui/BlogCard/BlogCard.tsx";
 
 interface SingleBlogPageProps {
-  blogId: string;
+  titlePath?: string;
 }
 
-const SingleBlogSection = ({ blogId }: SingleBlogPageProps) => {
-  const { getBlogById, blogData } = useBlog();
+const SingleBlogSection = ({ titlePath }: SingleBlogPageProps) => {
+  const { getBlogByTitleName, blogData } = useBlog();
+  const { lastThreeBlogs } = useBlogContext();
   const origin = useOrigin();
   const { pathname } = useLocation();
 
   useEffect(() => {
-    getBlogById(blogId);
-  }, [blogId]);
+    if (titlePath) getBlogByTitleName(titlePath);
+  }, [titlePath]);
 
   if (!blogData) {
     return null;
@@ -34,12 +35,15 @@ const SingleBlogSection = ({ blogId }: SingleBlogPageProps) => {
     <Section className="items-start desktop:max-w-[80%]">
       <img
         loading="lazy"
-        className="w-[335px] h-[220px] desktop:w-[1110px] desktop:h-[550px]  lg:flex rounded-[20px] bg-[#D9D9D9] object-cover"
+        className="w-full max-w-[1108px] h-full max-h-[552px] aspect-auto desktop:w-[1110px]  lg:flex rounded-[20px] bg-[#D9D9D9]"
         alt={title}
         src={image || ImagePlaceholder}
       />
       <h1 className="text-3xl desktop:max-w-[80%]">{title}</h1>
-      <p className="text-base desktop:max-w-[80%]" dangerouslySetInnerHTML={{ __html: content }} />
+      <p
+        className="text-base desktop:text-md desktop:max-w-[80%]"
+        dangerouslySetInnerHTML={{ __html: content }}
+      />
 
       <div className="flex space-x-2 items-center justify-center">
         <span className="text-lg">Share this</span>
@@ -55,9 +59,11 @@ const SingleBlogSection = ({ blogId }: SingleBlogPageProps) => {
       </div>
       <div className="mt-40">
         <h2 className="text-lg font-bold">More Posts</h2>
-        <div className="flex desktop:flex-row flex-col gap-6 mt-7">
-          {blogsConstants.slice(0, 3).map((blog) => (
-            <BlogCard {...blog} className="shadow-none" />
+        <div className="flex items-center justify-between flex-wrap gap-6 mt-7">
+          {lastThreeBlogs.map((blog) => (
+            <div className="w-full">
+              <BlogCard {...blog} className="shadow-none" />
+            </div>
           ))}
         </div>
       </div>

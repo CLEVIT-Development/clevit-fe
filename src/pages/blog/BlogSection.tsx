@@ -77,7 +77,7 @@ const BlogSection = () => {
       <div className="w-full rounded-lg bg-white grid xs:grid-cols-1 xs:gap-0 sm:grid-cols-2 desktop:grid-cols-3 !gap-6">
         {loading
           ? Array.from({ length: 6 }).map((_, index) => <BlogCardSkeleton key={index} />)
-          : allBlogs?.map(({ id, title, image, created_at: date }) => (
+          : allBlogs?.map(({ id, title, titlePath, readingTime, image, created_at: date }) => (
               <BlogCard
                 isAdminMode={!!isAuthenticated}
                 onEdit={() => navigate(`/admin/edit-blog/${id}`)}
@@ -88,6 +88,8 @@ const BlogSection = () => {
                 imageAlt={title}
                 key={id}
                 title={title}
+                readingTime={readingTime}
+                titlePath={titlePath}
                 className="shadow-none"
               />
             ))}

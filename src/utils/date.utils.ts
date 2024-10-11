@@ -1,23 +1,24 @@
 export const formatDate = (date: Date) => {
   const months = [
-    "Jan.",
-    "Feb.",
-    "Mar.",
-    "Apr.",
+    "January",
+    "February",
+    "March",
+    "April",
     "May",
-    "Jun.",
-    "Jul.",
-    "Aug.",
-    "Sep.",
-    "Oct.",
-    "Nov.",
-    "Dec.",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
   ];
+
   const day = String(date.getDate()).padStart(2, "0");
   const month = months[date.getMonth()];
   const year = date.getFullYear();
 
-  return `${day} ${month}, ${year}`;
+  return `${month} ${day}, ${year}`;
 };
 
 export const getFullYear = () => {

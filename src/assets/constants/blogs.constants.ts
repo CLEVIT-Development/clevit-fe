@@ -35,7 +35,6 @@ export const blogsConstants = [
   },
   {
     id: "3",
-    title: "The Evolution of BMW: A Legacy of Luxury",
     image: "https://picsum.photos/420/260?random=3", // Replace with a valid image URL
     date: "2024-10-05",
     description: `
