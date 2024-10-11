@@ -29,7 +29,7 @@ const Accordion: React.FC<AccordionProps> = ({ title, content }) => {
         className="cursor-pointer flex justify-between items-center p-10"
         onClick={toggleAccordion}
       >
-        <h3 className="text-base font-bold max-w-[80%]">{title}</h3>
+        <h3 className="text-base font-bold max-w-[80%]">{title} </h3>
         <span className="text-lg">
           {isOpen ? (
             <ArrowIcon className="fill-black rotate-90 h-3" />

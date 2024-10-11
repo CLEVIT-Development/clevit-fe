@@ -65,19 +65,6 @@ const ContactInfo = () => {
               </div>
             }
           />
-          <ContactItem
-            icon={<ViberIcon className="stroke-white" />}
-            content={
-              <div className="flex space-x-2">
-                <a
-                  href={`viber://chat?number=${appConfig.contactPhone}`}
-                  className="hover:opacity-75"
-                >
-                  {displayPhoneNumber1}
-                </a>
-              </div>
-            }
-          />
         </ContactWrapper>
         <ContactWrapper>
           {/*/>*/}

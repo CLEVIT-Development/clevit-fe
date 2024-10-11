@@ -47,10 +47,10 @@ const IndustriesSection: React.FC = () => {
 const IndustryList: React.FC<{ industries: Industry[]; isLast: boolean }> = React.memo(
   ({ industries }) => (
     <div className="flex flex-col items-center">
-      <ul className="space-y-3 text-gray-200 text-base font-semibold">
+      <ul className="space-y-3 text-gray-200 text-base font-semibold desktop:pb-0 pb-4">
         {industries.map((industry) => (
           <li key={industry.id}>
-            <h4 className="font-medium desktop:font-semibold leading-5">{industry.name}</h4>
+            <h4 className="font-medium  desktop:font-semibold leading-5">{industry.name}</h4>
           </li>
         ))}
       </ul>

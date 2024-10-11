@@ -6,17 +6,15 @@ import { ServicesIdConstants } from "@/assets/constants/services-id.constants.ts
 
 const useScrollView = (ref: RefObject<HTMLDivElement>, route: string) => {
   const { pathname, hash } = useLocation();
-
   const isActive = route === `${pathname}${hash}`;
 
   useLayoutEffect(() => {
     if (isActive && ref.current) {
       const handleScroll = () => {
         if (ref.current) {
-          ref.current.scrollIntoView({
-            behavior: "smooth",
-            block: Object.values(ServicesIdConstants).includes(route) ? "center" : "start",
-          });
+          const yOffset = -80; // Измените это значение на нужный вам отступ
+          const y = ref.current.getBoundingClientRect().top + window.pageYOffset + yOffset;
+          window.scrollTo({ top: y, behavior: "smooth" });
         }
       };
 
