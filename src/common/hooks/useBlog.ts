@@ -20,6 +20,7 @@ type IBlog = {
   title: string;
   description: string;
   image: string;
+  content: string;
   created_at: string;
 };
 
