@@ -40,7 +40,6 @@ const SingleBlogSection = ({ blogId }: SingleBlogPageProps) => {
       />
       <h1 className="text-3xl desktop:max-w-[80%]">{title}</h1>
       <p className="text-md desktop:max-w-[80%]" dangerouslySetInnerHTML={{ __html: content }} />
-
       <div className="flex space-x-2 items-center justify-center">
         <span className="text-lg">Share this</span>
         <FacebookShareButton url={origin + pathname}>
