@@ -61,7 +61,7 @@ const SingleBlogSection = ({ titlePath }: SingleBlogPageProps) => {
         <h2 className="text-lg font-bold">More Posts</h2>
         <div className="flex items-center justify-between flex-wrap gap-6 mt-7">
           {lastThreeBlogs.map((blog) => (
-            <div className="w-full md:w-[45%] desktop:w-[30%]">
+            <div className="w-full">
               <BlogCard {...blog} className="shadow-none" />
             </div>
           ))}
