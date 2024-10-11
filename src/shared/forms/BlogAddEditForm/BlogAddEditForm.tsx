@@ -34,12 +34,9 @@ const BlogForm = ({ initialData, isLoading }: IBlogFormProps) => {
       setValue("content", initialData.content);
       setValue("image", initialData.image);
       setImagePreview(initialData.image);
-      console.log({ dd: initialData.content });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [initialData]);
-
-  console.log({ initialData });
 
   const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
@@ -65,8 +62,6 @@ const BlogForm = ({ initialData, isLoading }: IBlogFormProps) => {
   } = methods;
 
   const onFormSubmit = async (data: IBlog) => {
-    console.log(data);
-
     if (id) {
       updateBlogById(id, data, {
         onSuccess: () => {

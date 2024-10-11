@@ -32,8 +32,6 @@ const BlogSection = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentPage]);
 
-  console.log({ allBlogs });
-
   const handlePageChange = (newPage: number) => {
     setCurrentPage(newPage);
   };
