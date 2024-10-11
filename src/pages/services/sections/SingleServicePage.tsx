@@ -36,7 +36,7 @@ const SingleServicePage = () => {
       />
       <Layout
         headerVariant={HeaderVariant.Primary}
-        layoutClassName="!px-0"
+        layoutClassName=""
         className="!pt-[50px]"
         heading={
           <Gradient className="h-[200px] w-full">

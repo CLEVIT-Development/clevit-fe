@@ -20,7 +20,7 @@ const ProcessSection = ({ processes, processTitle, className }: Props) => (
       className={className ?? ""}
     >
       <div
-        className={`w-full flex flex-col flex-wrap justify-evenly pb-12 px-0 space-y-14 md:space-y-[250px] desktop:pb-24 desktop:space-y-0 desktop:flex-row`}
+        className={`w-full flex flex-col flex-wrap justify-evenly pb-12 px-0 space-y-14 md:space-y-[250px] desktop:pb-24 desktop:space-y-0 desktop:flex-row xs:px-5`}
       >
         {processes?.map(({ id, title, Icon, description }, index) => {
           const lengthOfProcess = processes?.length;

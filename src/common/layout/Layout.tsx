@@ -28,7 +28,7 @@ const Layout = ({
     classNames(
       "relative flex flex-col flex-grow ",
       {
-        "pt-0 !px-0": layoutVariant === LayoutVariant.Secondary,
+        "pt-0 ": layoutVariant === LayoutVariant.Secondary,
       },
       layoutClassName
     )

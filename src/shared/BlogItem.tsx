@@ -20,8 +20,8 @@ const BlogItem = ({ image, imageAlt, description, date }: Props) => {
           <Date /> <span className="text-white">{date}</span>{" "}
         </div>
         <div
-          dangerouslySetInnerHTML={{ __html: truncate(description, 80) }}
-          className=" overflow-hidden text-ellipsis  text-white"
+          dangerouslySetInnerHTML={{ __html: truncate(description, 45) }}
+          className=" overflow-hidden text-ellipsis  w-[180px] text-white"
         />
       </div>
     </div>
