@@ -1,5 +1,4 @@
 import Date from "@/assets/vectors/Date.svg?react";
-import { truncate } from "@/utils/textTruncate.utils";
 
 interface Props {
   image: string;

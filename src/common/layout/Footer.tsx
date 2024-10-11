@@ -94,7 +94,7 @@ const Footer = () => {
           <h6 className="font-bold lg:text-md-l text-md text-white opacity-60">
             Latest Blog Posts
           </h6>
-          {blogsConstants.slice(-3).map((element, index) => {
+          {blogsConstants.slice(-3).map((element) => {
             return (
               <BlogItem
                 key={element.id}

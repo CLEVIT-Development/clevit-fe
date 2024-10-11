@@ -27,7 +27,7 @@ const ContactUsTopBanner = ({ image, title, description, imageAlt }: IBookConsul
           />
         </div>
       </div>
-      <img className="hidden desktop:block scale-[1.3]" src={image} loading="lazy" alt={imageAlt} />
+      <img className="hidden desktop:block scale-[1.1]" src={image} loading="lazy" alt={imageAlt} />
     </div>
   );
 };
