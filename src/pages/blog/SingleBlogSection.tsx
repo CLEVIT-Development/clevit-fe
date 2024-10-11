@@ -1,11 +1,10 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { FacebookShareButton, LinkedinShareButton } from "react-share";
+import { FacebookShareButton, LinkedinShareButton, TwitterShareButton, XIcon } from "react-share";
 
 import { blogsConstants } from "@/assets/constants/blogs.constants";
 import ImagePlaceholder from "@/assets/images/ImagePlaceholder.jpg";
 import FacebookIcon from "@/assets/vectors/Facebook.svg?react";
-// import InstagramIcon from "@/assets/vectors/Instagram.svg?react";
 import LinkedInIcon from "@/assets/vectors/Linkedin.svg?react";
 import useBlog from "@/common/hooks/useBlog";
 import useOrigin from "@/common/hooks/useOrigin.ts";
@@ -47,10 +46,12 @@ const SingleBlogSection = ({ blogId }: SingleBlogPageProps) => {
         <FacebookShareButton url={origin + pathname}>
           <FacebookIcon className="w-10 h-10" />
         </FacebookShareButton>
-        {/*<InstagramIcon className="w-10 h-10" />*/}
         <LinkedinShareButton url={origin + pathname}>
           <LinkedInIcon className="w-10 h-10" />
         </LinkedinShareButton>
+        <TwitterShareButton url={origin + pathname}>
+          <XIcon className="w-10 h-10 rounded-full [&>rect]:fill-[#55606A]" />
+        </TwitterShareButton>
       </div>
       <div className="mt-40">
         <h2 className="text-lg font-bold">More Posts</h2>

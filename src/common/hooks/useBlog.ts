@@ -53,8 +53,6 @@ const useBlog = () => {
     try {
       const response = await axiosInstanceAuth.post("/blogs/add-blog", {
         ...blogData,
-        // TODO NO NEED DESCRIPTION
-        description: "need to be removed soon.",
       });
       const { id } = response.data;
 

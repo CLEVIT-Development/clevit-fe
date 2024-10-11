@@ -42,7 +42,6 @@ export const headerMenuLinks = [
   { id: 6, label: "FAQ", link: RoutePaths.FAQ, needAuthentication: false },
   { id: 7, label: "Blog", link: RoutePaths.Blogs, needAuthentication: false },
   { id: 8, label: "Contact Us", link: RoutePaths.ContactUs, needAuthentication: false },
-  { id: 9, label: "Create Blog (Admin)", link: RoutePaths.CreateBlog, needAuthentication: true },
 ];
 
 export const routerElements = [

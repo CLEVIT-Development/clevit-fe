@@ -30,6 +30,7 @@ const BlogForm = ({ initialData, isLoading }: IBlogFormProps) => {
   useEffect(() => {
     if (initialData) {
       setValue("title", initialData.title);
+      setValue("titlePath", initialData.titlePath);
       setValue("content", initialData.content);
       setValue("image", initialData.image);
       setImagePreview(initialData.image);
@@ -144,6 +145,14 @@ const BlogForm = ({ initialData, isLoading }: IBlogFormProps) => {
           error={errors.title?.message}
           placeholder="Blog Title"
           {...register("title")}
+        />
+        <Input
+          required
+          disabled={isFormLoading}
+          label="Title path"
+          error={errors.titlePath?.message}
+          placeholder="Blog Title Path"
+          {...register("titlePath")}
         />
         <RichTextEditor
           disabled={isFormLoading}
