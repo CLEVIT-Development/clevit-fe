@@ -24,7 +24,7 @@ export enum RoutePaths {
   Portfolio = "/portfolio",
   FAQ = "/FAQ",
   Blogs = "/blogs",
-  Blog = "/blog/:id",
+  Blog = "/blog/:titlePath",
   ContactUs = "/contact-us",
   PrivacyPolicy = "/privacy-policy",
   TermsAndConditions = "/terms-and-conditions",

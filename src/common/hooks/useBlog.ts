@@ -22,14 +22,12 @@ type IBlog = {
   image: string;
   content: string;
   created_at: string;
+  titlePath: string;
+  readingTime?: string;
 };
 
 interface IGetAllBlogs extends Pagination {
   data: { blogsList: IBlog[] };
-}
-
-interface IGetBlogById {
-  data: IBlog;
 }
 
 const useBlog = () => {
@@ -37,11 +35,9 @@ const useBlog = () => {
   const [blogData, setBlogData] = useState<IBlog | null>();
   const [allBlogs, setAllBlogs] = useState<IBlog[] | null>();
   const [pagination, setPagination] = useState<Pagination | null>();
+  const [lastThreeBlogs, setLastThreeBlogs] = useState<IBlog[]>([]);
 
-  const addBlog = async (
-    data: Omit<IBlog, "id" | "description" | "created_at">,
-    options?: UseBlogOptions
-  ) => {
+  const addBlog = async (data: IBlog, options?: UseBlogOptions) => {
     const { image, ...blogData } = data;
 
     setLoading(true);
@@ -132,18 +128,19 @@ const useBlog = () => {
     }
   };
 
-  const getBlogById = async (id: string, options?: UseBlogOptions) => {
+  const getBlogByTitleName = async (titlePath: string, options?: UseBlogOptions) => {
     setLoading(true);
     setBlogData(null);
 
     try {
-      const response: IGetBlogById = await axiosInstanceAuth.get(`/blogs/${id}`);
+      const response = await axiosInstanceAuth.get(`/blogs/by-title-path/${titlePath}`);
 
       setBlogData(response.data);
 
       options?.onSuccess?.();
     } catch (error) {
       options?.onFailure?.(error);
+      setBlogData(null);
     } finally {
       setLoading(false);
     }
@@ -170,13 +167,31 @@ const useBlog = () => {
     }
   };
 
+  const getLastThreeBlogs = async (options?: UseBlogOptions) => {
+    setLoading(true);
+
+    try {
+      const response = await axiosInstanceAuth.get(`/blogs/last-three`);
+
+      setLastThreeBlogs(response.data);
+
+      options?.onSuccess?.();
+    } catch (error) {
+      options?.onFailure?.(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return {
     addBlog,
     updateBlogById,
-    getBlogById,
+    getBlogByTitleName,
     getAllBlogs,
+    getLastThreeBlogs,
     blogData,
     allBlogs,
+    lastThreeBlogs,
     deleteBlogById,
     pagination,
     loading,

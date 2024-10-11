@@ -5,6 +5,7 @@ import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import classNames from "classnames";
 import { ContentState, EditorState, convertToRaw } from "draft-js";
 import draftToHtml from "draftjs-to-html";
+import htmlToDraft from "html-to-draftjs";
 import { twMerge } from "tailwind-merge";
 
 interface RichTextEditorProps {
@@ -30,7 +31,9 @@ const RichTextEditor: React.FC<RichTextEditorProps> = ({
 
   useEffect(() => {
     if (initialContent) {
-      const contentState = ContentState.createFromText(initialContent);
+      const blocksFromHtml = htmlToDraft(initialContent);
+      const { contentBlocks, entityMap } = blocksFromHtml;
+      const contentState = ContentState.createFromBlockArray(contentBlocks, entityMap);
 
       setEditorState(EditorState.createWithContent(contentState));
     }

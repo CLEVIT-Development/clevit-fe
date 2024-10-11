@@ -10,14 +10,13 @@ import BlogCardSkeleton from "@/shared/ui/BlogCard/BlogCardSkeleton";
 import Button from "@/shared/ui/Button";
 import Pagination from "@/shared/ui/Pagination";
 import { ButtonVariant } from "@/types/variant.types";
-
 import CreateBlog from "./CreatBlogCard";
 
 const BlogSection = () => {
   const { getAllBlogs, allBlogs, deleteBlogById, pagination, loading } = useBlog();
   const containerRef = useRef<HTMLDivElement>(null);
   const [currentPage, setCurrentPage] = useState(1);
-  const { isAuthenticated } = useAuth();
+  const { isAuthenticated, handleLogout } = useAuth();
 
   useEffect(() => {
     const onSuccess = () => {
@@ -31,8 +30,6 @@ const BlogSection = () => {
     getAllBlogs(currentPage, { onSuccess });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentPage]);
-
-  console.log({ allBlogs });
 
   const handlePageChange = (newPage: number) => {
     setCurrentPage(newPage);
@@ -55,8 +52,15 @@ const BlogSection = () => {
     });
   };
 
+  const isAbleToCreateBlog = [allBlogs, allBlogs?.length, isAuthenticated, !loading].every(Boolean);
+
   return (
     <Section className="scroll-mt-[150px] md:px-0" headingLevel="h2" ref={containerRef}>
+      {isAuthenticated ? (
+        <Button className="fixed z-50 right-6 top-[60%] block ml-auto" onClick={handleLogout}>
+          Logout
+        </Button>
+      ) : null}
       {!allBlogs?.length && !loading && (
         <div className="flex flex-col items-center justify-center h-64">
           <p className="text-gray-100 text-lg mb-4">No blogs available at the moment.</p>
@@ -70,7 +74,7 @@ const BlogSection = () => {
       <div className="w-full rounded-lg bg-white grid xs:grid-cols-1 xs:gap-0 sm:grid-cols-2 desktop:grid-cols-3 !gap-6">
         {loading
           ? Array.from({ length: 6 }).map((_, index) => <BlogCardSkeleton key={index} />)
-          : allBlogs?.map(({ id, title, image, created_at: date }) => (
+          : allBlogs?.map(({ id, title, titlePath, readingTime, image, created_at: date }) => (
               <BlogCard
                 isAdminMode={!!isAuthenticated}
                 onEdit={() => navigate(`/admin/edit-blog/${id}`)}
@@ -81,10 +85,12 @@ const BlogSection = () => {
                 imageAlt={title}
                 key={id}
                 title={title}
+                readingTime={readingTime}
+                titlePath={titlePath}
                 className="shadow-none"
               />
             ))}
-        {allBlogs && allBlogs.length > 0 && !loading && <CreateBlog />}
+        {isAbleToCreateBlog && <CreateBlog />}
       </div>
       {pagination && pagination.totalItems >= pagination.pageSize && !loading && (
         <Pagination

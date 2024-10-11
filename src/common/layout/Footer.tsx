@@ -2,16 +2,19 @@ import { memo } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import { RoutePaths } from "@/app/routing/routing.constants.ts";
-import { blogsConstants } from "@/assets/constants/blogs.constants";
 import { contactsConstants } from "@/assets/constants/contacts.constants.ts";
 import { industriesConstants } from "@/assets/constants/industries.constants";
 import { servicesConstants } from "@/assets/constants/services.constants.ts";
 import { socialLinksConstants } from "@/assets/constants/socials.constants.ts";
+import { useBlogContext } from "@/common/context/BlogContext.tsx";
 import BlogItem from "@/shared/BlogItem";
+import { IBlog } from "@/shared/forms/BlogAddEditForm/types.ts";
 import Copyright from "@/shared/ui/Copyright";
 import Logo from "@/shared/ui/Logo.tsx";
 
 const Footer = () => {
+  const { lastThreeBlogs } = useBlogContext();
+
   const navigate = useNavigate();
 
   return (
@@ -94,7 +97,7 @@ const Footer = () => {
           <h6 className="font-bold lg:text-md-l text-md text-white opacity-60">
             Latest Blog Posts
           </h6>
-          {blogsConstants.slice(-3).map((element) => {
+          {lastThreeBlogs.map((element: IBlog) => {
             return (
               <BlogItem
                 key={element.id}

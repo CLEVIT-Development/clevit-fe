@@ -769,6 +769,13 @@
   resolved "https://registry.yarnpkg.com/@types/history/-/history-4.7.11.tgz#56588b17ae8f50c53983a524fc3cc47437969d64"
   integrity sha512-qjDJRrmvBMiTx+jyLxvLfJU7UznFuokDv4f3WRuriHKERccVpFU+8XMQUAbDzoiJCsmexxRExQeMwwCdamSKDA==
 
+"@types/html-to-draftjs@^1.4.3":
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/@types/html-to-draftjs/-/html-to-draftjs-1.4.3.tgz#57d33d999cdf3f688d9e08cdaa68669a26908b79"
+  integrity sha512-8TAgtzFA/sfwjGNXJ7Zod5tgnqsfJFQZYB8Nmu9GIoF7AVSwRm2quF1Ve09dHgHxSVsTSSy2diZSVdeSvTe7vg==
+  dependencies:
+    "@types/draft-js" "*"
+
 "@types/prop-types@*":
   version "15.7.13"
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.13.tgz#2af91918ee12d9d32914feb13f5326658461b451"
