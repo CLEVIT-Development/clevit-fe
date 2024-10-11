@@ -10,7 +10,6 @@ import BlogCardSkeleton from "@/shared/ui/BlogCard/BlogCardSkeleton";
 import Button from "@/shared/ui/Button";
 import Pagination from "@/shared/ui/Pagination";
 import { ButtonVariant } from "@/types/variant.types";
-
 import CreateBlog from "./CreatBlogCard";
 
 const BlogSection = () => {
@@ -31,8 +30,6 @@ const BlogSection = () => {
     getAllBlogs(currentPage, { onSuccess });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentPage]);
-
-  console.log({ allBlogs });
 
   const handlePageChange = (newPage: number) => {
     setCurrentPage(newPage);
