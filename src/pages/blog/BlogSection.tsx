@@ -17,7 +17,7 @@ const BlogSection = () => {
   const { getAllBlogs, allBlogs, deleteBlogById, pagination, loading } = useBlog();
   const containerRef = useRef<HTMLDivElement>(null);
   const [currentPage, setCurrentPage] = useState(1);
-  const { isAuthenticated } = useAuth();
+  const { isAuthenticated, handleLogout } = useAuth();
 
   useEffect(() => {
     const onSuccess = () => {
@@ -55,8 +55,15 @@ const BlogSection = () => {
     });
   };
 
+  const isAbleToCreateBlog = [allBlogs, allBlogs?.length, isAuthenticated, !loading].every(Boolean);
+
   return (
     <Section className="scroll-mt-[150px] md:px-0" headingLevel="h2" ref={containerRef}>
+      {isAuthenticated ? (
+        <Button className="fixed z-50 right-6 top-[60%] block ml-auto" onClick={handleLogout}>
+          Logout
+        </Button>
+      ) : null}
       {!allBlogs?.length && !loading && (
         <div className="flex flex-col items-center justify-center h-64">
           <p className="text-gray-100 text-lg mb-4">No blogs available at the moment.</p>
@@ -84,7 +91,7 @@ const BlogSection = () => {
                 className="shadow-none"
               />
             ))}
-        {allBlogs && allBlogs.length > 0 && !loading && <CreateBlog />}
+        {isAbleToCreateBlog && <CreateBlog />}
       </div>
       {pagination && pagination.totalItems >= pagination.pageSize && !loading && (
         <Pagination
