@@ -6,7 +6,7 @@ const Ahrefs = lazy(() => import("@/assets/vectors/technology/Ahrefs.svg?react")
 const Semrush = lazy(() => import("@/assets/vectors/technology/Semrush.svg?react"));
 const GoogleAnalitycs = lazy(() => import("@/assets/vectors/technology/GoogleAnalitycs.svg?react"));
 const ScreamingFrog = lazy(() => import("@/assets/vectors/technology/ScreamingFrog.svg?react"));
-const SEOmoz = lazy(() => import("@/assets/vectors/technology/SEOmoz.svg?react"));
+const SEOmoz = lazy(() => import("@/assets/vectors/technology/SeoMoz.svg?react"));
 const GoogleSearch = lazy(() => import("@/assets/vectors/technology/GoogleSearch.svg?react"));
 const GoogleAds = lazy(() => import("@/assets/vectors/technology/GoogleAds.svg?react"));
 
