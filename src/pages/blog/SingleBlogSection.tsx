@@ -19,7 +19,6 @@ const SingleBlogSection = ({ blogId }: SingleBlogPageProps) => {
 
   useEffect(() => {
     getBlogById(blogId);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [blogId]);
 
   if (!blogData) {
