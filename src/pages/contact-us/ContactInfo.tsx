@@ -6,7 +6,6 @@ import EnvelopeIcon from "@/assets/vectors/Envelope.svg?react";
 import LocationIcon from "@/assets/vectors/Location.svg?react";
 import TelegramIcon from "@/assets/vectors/Telegram.svg?react";
 import TelephoneIcon from "@/assets/vectors/Telephone.svg?react";
-import ViberIcon from "@/assets/vectors/Viber.svg?react";
 import WatsappIcon from "@/assets/vectors/Watsapp.svg?react";
 import { formatPhoneNumber } from "@/utils/phone.utils";
 

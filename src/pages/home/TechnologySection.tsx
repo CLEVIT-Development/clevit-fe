@@ -51,7 +51,7 @@ const TechnologySection = ({ title, subTitle, tabsConstant, technologiesConstant
     });
   };
 
-  const handleNavigate = (e) => {
+  const handleNavigate = (e: React.MouseEvent<HTMLDivElement>) => {
     e.stopPropagation();
     navigate(RoutePaths.Technologies);
   };
@@ -86,11 +86,7 @@ const TechnologySection = ({ title, subTitle, tabsConstant, technologiesConstant
 
   return (
     <Section className="w-full bg-gray-300 px-5 md:px-20 desktop:px-28">
-      <div
-        className="w-full h-full"
-        ref={sectionRef}
-        onClick={handleNavigate} // исправлено
-      >
+      <div className="w-full h-full" ref={sectionRef} onClick={handleNavigate}>
         <h2 className="desktop:text-2xl text-center text-lg text-[#314252] pt-5 pb-6 desktop:pt-12">
           {title}
         </h2>
