@@ -1,7 +1,6 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 
-import { servicesConstants } from "@/assets/constants/services.constants.ts";
 import Layout from "@/common/layout/Layout.tsx";
 import NotFound from "@/pages/not-found/NotFoundPage";
 import { Gradient } from "@/shared/gradient/Gradient";
@@ -21,13 +20,6 @@ export interface SingleServiceHeaderItems {
 
 const SingleServicePage = () => {
   const { id } = useParams();
-
-  const replaceString = (str: string) => {
-    return str.replace("/", "");
-  };
-
-  const service = servicesConstants.find((service) => replaceString(service.id) === id);
-
   const [headerItems, setHeaderItems] = useState<SingleServiceHeaderItems>({
     title: "",
     description: "",
@@ -35,26 +27,15 @@ const SingleServicePage = () => {
     imageAlt: "",
   });
 
-  useEffect(() => {
-    if (service) {
-      setHeaderItems({
-        title: service.title,
-        description: service.description,
-        image: service.image,
-        imageAlt: service.imageAlt,
-      });
-    }
-  }, [service]);
-
   return (
     <>
       <PageSEO
-        title={id && MetaServices[id] ? MetaServices[id].title : "Clevit"}
-        description={id && MetaServices[id] ? MetaServices[id].description : "Clevit"}
-        canonicalUrl={id && MetaServices[id] ? MetaServices[id].url : "https://www.clevit.io/"}
+        title={id ? MetaServices[id]?.title : "Clevit"}
+        description={id ? MetaServices[id]?.description : "Clevit"}
+        canonicalUrl={id ? MetaServices[id]?.url : "https://www.clevit.io/"}
       />
 
-      {service ? (
+      {id && MetaServices[id] ? (
         <Layout
           headerVariant={HeaderVariant.Primary}
           layoutClassName=""
