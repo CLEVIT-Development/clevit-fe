@@ -10,7 +10,6 @@ import BlogCardSkeleton from "@/shared/ui/BlogCard/BlogCardSkeleton";
 import Button from "@/shared/ui/Button";
 import Pagination from "@/shared/ui/Pagination";
 import { ButtonVariant } from "@/types/variant.types";
-
 import CreateBlog from "./CreatBlogCard";
 
 const BlogSection = () => {
