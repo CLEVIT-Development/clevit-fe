@@ -39,7 +39,7 @@ const useBlog = () => {
 
   const addBlog = async (data: IBlog, options?: UseBlogOptions) => {
     const { image, ...blogData } = data;
-
+    console.log(image, 99999999999);
     setLoading(true);
 
     const formData = new FormData();
@@ -47,8 +47,13 @@ const useBlog = () => {
     formData.append("image", image);
 
     try {
+      const blogReqData = {
+        content: blogData.content,
+        title: blogData.title,
+        titlePath: blogData.titlePath,
+      };
       const response = await axiosInstanceAuth.post("/blogs/add-blog", {
-        ...blogData,
+        ...blogReqData,
       });
       const { id } = response.data;
 
@@ -66,6 +71,8 @@ const useBlog = () => {
     data: IBlogData["image"],
     options?: UseBlogOptions
   ) => {
+    console.log(data, 88888, id);
+
     try {
       await axiosInstanceAuth.post(`/blogs/add-blog-image/${id}`, data, {
         headers: {
@@ -86,7 +93,14 @@ const useBlog = () => {
     const { image, ...blogData } = data;
 
     try {
-      await axiosInstanceAuth.patch(`/blogs/update-blog/${id}`, blogData);
+      const reqData = {
+        content: blogData.content,
+        title: blogData.title,
+        titlePath: blogData.titlePath,
+      };
+
+      await axiosInstanceAuth.patch(`/blogs/update-blog/${id}`, reqData);
+      console.log(image, 88888, id);
 
       await updateBlogImageById(id, { image });
 
@@ -105,7 +119,11 @@ const useBlog = () => {
     setLoading(true);
 
     try {
-      await axiosInstanceAuth.put(`/blogs/update-blog-image/${id}`, data);
+      await axiosInstanceAuth.put(`/blogs/update-blog-image/${id}`, data, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
       options?.onSuccess?.();
     } catch (error) {
       options?.onFailure?.(error);

@@ -61,8 +61,6 @@ const BlogForm = ({ initialData, isLoading }: IBlogFormProps) => {
     trigger,
   } = methods;
 
-  console.log({ id });
-
   const onFormSubmit = async (data: IBlog) => {
     if (data?.id) {
       updateBlogById(data.id, data, {
@@ -91,7 +89,7 @@ const BlogForm = ({ initialData, isLoading }: IBlogFormProps) => {
           titlePath: data.titlePath || "",
           title: data.title,
           content: data.content,
-          image: data.image?.name || "",
+          image: data.image || "",
         },
         {
           onSuccess: () => {
