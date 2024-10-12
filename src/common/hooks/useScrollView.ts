@@ -12,7 +12,6 @@ const useScrollView = (ref: RefObject<HTMLDivElement>, route: string) => {
         if (ref.current) {
           const yOffset = -80; // Измените это значение на нужный вам отступ
           const y = ref.current.getBoundingClientRect().top + window.pageYOffset + yOffset;
-
           window.scrollTo({ top: y, behavior: "smooth" });
         }
       };
