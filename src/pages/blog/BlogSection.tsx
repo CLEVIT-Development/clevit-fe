@@ -72,7 +72,7 @@ const BlogSection = () => {
           )}
         </div>
       )}
-      <div className="w-full h-full rounded-lg bg-white grid xs:grid-cols-1 sm:grid-cols-2 desktop:grid-cols-3 !gap-6">
+      <div className="w-full h-full rounded-lg bg-white grid xs:grid-cols-1 sm:grid-cols-2 desktop:grid-cols-3 gap-x-4 gap-y-5">
         {loading
           ? Array.from({ length: 6 }).map((_, index) => <BlogCardSkeleton key={index} />)
           : allBlogs?.map(({ id, title, titlePath, readingTime, image, created_at: date }) => (

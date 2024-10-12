@@ -42,7 +42,7 @@ const BlogCard = ({
       role="button"
       onClick={() => navigate(`/blog/${titlePath}`)}
       className={twMerge(
-        "w-full h-full max-h-[300px] md:max-h-[400px] desktop:max-h-[436px] rounded-lg transition-all duration-500 space-y-[24px] shadow-md",
+        "w-full h-full rounded-lg transition-all duration-500 space-y-[24px] shadow-md",
         className
       )}
     >
