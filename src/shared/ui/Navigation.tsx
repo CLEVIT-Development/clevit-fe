@@ -70,7 +70,7 @@ const Navigation = ({ items, onItemClick, className = "" }: Props) => {
          after:transition-all  after:bg-purple-500
          ${
            activeTab === id
-             ? "after:w-full text-purple-100 after:-bottom-5 underline decoration-purple-500 underline-offset-[5px]"
+             ? "after:w-full text-purple-100 after:-bottom-5 underline decoration-purple-500"
              : "after:w-0 after:bg-transparent text-gray-200"
          }
        `}

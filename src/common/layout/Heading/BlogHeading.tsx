@@ -8,7 +8,7 @@ const BlogHeading = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="w-full flex items-center desktop:text-left text-center justify-center desktop:pb-10 desktop:pt-[150px] xs:pb-6 px-5">
+    <div className="w-full flex items-center desktop:text-left text-center justify-center desktop:pb-10 pt-[120px] desktop:pt-[150px] xs:pb-6 px-5">
       <div className="flex flex-col justify-center items-center">
         <h1 className="animate-textSlide text-center text-white desktop:text-3xl text-lg font-semibold desktop:w-full w-[60%]">
           What We Can Do For You
