@@ -42,7 +42,7 @@ const BlogCard = ({
       role="button"
       onClick={() => navigate(`/blog/${titlePath}`)}
       className={twMerge(
-        "w-full rounded-lg transition-all duration-500 space-y-[24px] p-4 shadow-md h-[436px]",
+        "w-full h-full max-h-[300px] md:max-h-[400px] desktop:max-h-[436px] rounded-lg transition-all duration-500 space-y-[24px] shadow-md",
         className
       )}
     >
@@ -63,7 +63,7 @@ const BlogCard = ({
         </div>
       </div>
       {isAdminMode && (
-        <div className="flex justify-between items-center mt-4 text-xsdesktop:text-md">
+        <div className="flex justify-between items-center mt-4 text-xs desktop:text-md">
           <button
             onClick={(e) => {
               e.stopPropagation();
