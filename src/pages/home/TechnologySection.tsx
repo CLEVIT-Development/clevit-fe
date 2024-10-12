@@ -8,12 +8,13 @@ import {
   useRef,
   useState,
 } from "react";
-import { useNavigate } from "react-router-dom";
 
 import { RoutePaths } from "@/app/routing/routing.constants.ts";
 import { ITabsConstant } from "@/assets/constants/technologies/technologies.constants.ts";
 import useScrollView from "@/common/hooks/useScrollView.ts";
 import Section from "@/common/templates/Section.tsx";
+
+``;
 
 export interface ITechnologyConstant {
   id: number;
@@ -36,7 +37,6 @@ const TechnologySection = ({ title, subTitle, tabsConstant, technologiesConstant
   const [direction, setDirection] = useState(0);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 968);
   const contentRef = useRef<HTMLDivElement | null>(null);
-  const navigate = useNavigate();
   const sectionRef = useRef<HTMLDivElement | null>(null);
 
   useScrollView(sectionRef, RoutePaths.Technologies);
@@ -51,17 +51,13 @@ const TechnologySection = ({ title, subTitle, tabsConstant, technologiesConstant
     });
   };
 
-  const handleNavigate = (e: React.MouseEvent<HTMLDivElement>) => {
-    e.stopPropagation();
-    navigate(RoutePaths.Technologies);
-  };
-
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
     };
 
     window.addEventListener("resize", handleResize);
+
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
@@ -86,7 +82,7 @@ const TechnologySection = ({ title, subTitle, tabsConstant, technologiesConstant
 
   return (
     <Section className="w-full bg-gray-300 px-5 md:px-20 desktop:px-28">
-      <div className="w-full h-full" ref={sectionRef} onClick={handleNavigate}>
+      <div className="w-full h-full" ref={sectionRef}>
         <h2 className="desktop:text-2xl text-center text-lg text-[#314252] pt-5 pb-6 desktop:pt-12">
           {title}
         </h2>

@@ -39,7 +39,7 @@ const useBlog = () => {
 
   const addBlog = async (data: IBlog, options?: UseBlogOptions) => {
     const { image, ...blogData } = data;
-    console.log(image, 99999999999);
+
     setLoading(true);
 
     const formData = new FormData();
@@ -71,8 +71,6 @@ const useBlog = () => {
     data: IBlogData["image"],
     options?: UseBlogOptions
   ) => {
-    console.log(data, 88888, id);
-
     try {
       await axiosInstanceAuth.post(`/blogs/add-blog-image/${id}`, data, {
         headers: {
@@ -100,7 +98,6 @@ const useBlog = () => {
       };
 
       await axiosInstanceAuth.patch(`/blogs/update-blog/${id}`, reqData);
-      console.log(image, 88888, id);
 
       await updateBlogImageById(id, { image });
 

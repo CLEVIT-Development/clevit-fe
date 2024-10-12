@@ -1,24 +1,29 @@
 import Date from "@/assets/vectors/Date.svg?react";
 
 interface Props {
+  handleClickOnBlog: (titlePath: string) => void;
+  titlePath: string;
   image: string;
   imageAlt: string;
   title: string;
   date: string;
 }
 
-const BlogItem = ({ image, imageAlt, title, date }: Props) => {
+const BlogItem = ({ handleClickOnBlog, image, imageAlt, title, date, titlePath }: Props) => {
   return (
-    <div className="flex gap-2">
-      <div className="min-w-[54px] h-[52px]">
+    <div
+      role="button"
+      onClick={() => handleClickOnBlog(titlePath)}
+      className="flex gap-2 cursor-pointer"
+    >
+      <div className="w-[52px] h-[52px]">
         <img src={image} alt={imageAlt} className="w-full h-full rounded" />
       </div>
       <div className="w-[calc(100%-60px)]">
         <div className="flex gap-2 items-center">
-          {" "}
-          <Date /> <span className="text-white">{date}</span>{" "}
+          <Date /> <span className="text-white">{date}</span>
         </div>
-        <div className="line-clamp-1 desktop:w-[200px] w-[120px] text-white">{title}</div>
+        <div className="line-clamp-1 w-full text-white">{title}</div>
       </div>
     </div>
   );

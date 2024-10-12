@@ -10,6 +10,7 @@ import BlogCardSkeleton from "@/shared/ui/BlogCard/BlogCardSkeleton";
 import Button from "@/shared/ui/Button";
 import Pagination from "@/shared/ui/Pagination";
 import { ButtonVariant } from "@/types/variant.types";
+
 import CreateBlog from "./CreatBlogCard";
 
 const BlogSection = () => {
@@ -19,15 +20,15 @@ const BlogSection = () => {
   const { isAuthenticated, handleLogout } = useAuth();
 
   useEffect(() => {
-    const onSuccess = () => {
-      containerRef.current?.scrollIntoView({
-        behavior: "smooth",
-        inline: "start",
-        block: "start",
-      });
-    };
+    // const onSuccess = () => {
+    //   containerRef.current?.scrollIntoView({
+    //     behavior: "smooth",
+    //     inline: "start",
+    //     block: "start",
+    //   });
+    // };
 
-    getAllBlogs(currentPage, { onSuccess });
+    getAllBlogs(currentPage);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentPage]);
 
@@ -55,7 +56,7 @@ const BlogSection = () => {
   const isAbleToCreateBlog = [allBlogs, allBlogs?.length, isAuthenticated, !loading].every(Boolean);
 
   return (
-    <Section className="scroll-mt-[150px] md:px-0" headingLevel="h2" ref={containerRef}>
+    <Section className="!px-5 desktop:px-0" headingLevel="h2" ref={containerRef}>
       {isAuthenticated ? (
         <Button className="fixed z-50 right-6 top-[60%] block ml-auto" onClick={handleLogout}>
           Logout
@@ -71,12 +72,12 @@ const BlogSection = () => {
           )}
         </div>
       )}
-      <div className="w-full rounded-lg bg-white grid xs:grid-cols-1 xs:gap-0 sm:grid-cols-2 desktop:grid-cols-3 !gap-6">
+      <div className="w-full h-full rounded-lg bg-white grid xs:grid-cols-1 sm:grid-cols-2 desktop:grid-cols-3 !gap-6">
         {loading
           ? Array.from({ length: 6 }).map((_, index) => <BlogCardSkeleton key={index} />)
           : allBlogs?.map(({ id, title, titlePath, readingTime, image, created_at: date }) => (
               <BlogCard
-                isAdminMode={!!isAuthenticated}
+                isAdminMode={isAuthenticated}
                 onEdit={() => navigate(`/admin/edit-blog/${titlePath}`)}
                 onDelete={handleDeleteBlog}
                 id={id}

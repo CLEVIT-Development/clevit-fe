@@ -22,9 +22,7 @@ const router = createBrowserRouter(
           element={
             <>
               <AuthRoute isPrivate={isPrivate} isAuthPath={path === RoutePaths.AdminSignIn}>
-                <BlogProvider>
-                  <Element />
-                </BlogProvider>
+                <Element />
               </AuthRoute>
               <ScrollToTop />
             </>
@@ -37,7 +35,7 @@ const router = createBrowserRouter(
 );
 
 const Routing = () => {
-  return <RouterProvider router={router} />;
+  return <BlogProvider children={<RouterProvider router={router} />} />;
 };
 
 export default Routing;
