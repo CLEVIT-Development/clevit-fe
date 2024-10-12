@@ -10,6 +10,7 @@ import BlogCardSkeleton from "@/shared/ui/BlogCard/BlogCardSkeleton";
 import Button from "@/shared/ui/Button";
 import Pagination from "@/shared/ui/Pagination";
 import { ButtonVariant } from "@/types/variant.types";
+
 import CreateBlog from "./CreatBlogCard";
 
 const BlogSection = () => {
@@ -19,15 +20,15 @@ const BlogSection = () => {
   const { isAuthenticated, handleLogout } = useAuth();
 
   useEffect(() => {
-    const onSuccess = () => {
-      containerRef.current?.scrollIntoView({
-        behavior: "smooth",
-        inline: "start",
-        block: "start",
-      });
-    };
+    // const onSuccess = () => {
+    //   containerRef.current?.scrollIntoView({
+    //     behavior: "smooth",
+    //     inline: "start",
+    //     block: "start",
+    //   });
+    // };
 
-    getAllBlogs(currentPage, { onSuccess });
+    getAllBlogs(currentPage);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentPage]);
 
@@ -55,7 +56,7 @@ const BlogSection = () => {
   const isAbleToCreateBlog = [allBlogs, allBlogs?.length, isAuthenticated, !loading].every(Boolean);
 
   return (
-    <Section className="scroll-mt-[150px] md:px-0" headingLevel="h2" ref={containerRef}>
+    <Section className="md:px-0" headingLevel="h2" ref={containerRef}>
       {isAuthenticated ? (
         <Button className="fixed z-50 right-6 top-[60%] block ml-auto" onClick={handleLogout}>
           Logout
