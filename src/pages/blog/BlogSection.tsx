@@ -77,7 +77,7 @@ const BlogSection = () => {
           : allBlogs?.map(({ id, title, titlePath, readingTime, image, created_at: date }) => (
               <BlogCard
                 isAdminMode={!!isAuthenticated}
-                onEdit={() => navigate(`/admin/edit-blog/${id}`)}
+                onEdit={() => navigate(`/admin/edit-blog/${titlePath}`)}
                 onDelete={handleDeleteBlog}
                 id={id}
                 date={date}
