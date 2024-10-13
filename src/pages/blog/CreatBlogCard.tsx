@@ -11,7 +11,7 @@ const CreateBlog = () => {
       to="/admin/add-blog"
       className={twMerge(
         "rounded-lg transition-all duration-300 bg-white shadow-md hover:shadow-lg",
-        "flex justify-center items-center w-full max-w-[417px] h-full max-h-[300px] md:max-h-[350px] desktop:max-h-[436px]",
+        "flex justify-center items-center w-full h-full",
         "group overflow-hidden relative"
       )}
     >
