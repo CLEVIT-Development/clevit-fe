@@ -47,7 +47,7 @@ export const MetaServices = {
     url: "https://www.clevit.io/services/maintenance-support",
     title: " Support & Maintenance | Clevit",
     description:
-      "Try out Clevit’s Technical Assessment Services for a comprehensive technical review of your system. Improve efficiency, and check the functioning of the system.",
+      "Opt for the full-package website management offered by Clevit. We ensure continued availability, protection and improvements that keep your site up and running.",
   },
   [ServicesIdConstants.OutStaffing]: {
     url: "https://www.clevit.io/services/it-outstaffing",
