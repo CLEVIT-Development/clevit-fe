@@ -7,7 +7,6 @@ export const MetaServices = {
     description:
       " Expert Web Development Services by Clevit. Our solutions include client-server, back-end, front-end and database that addresses your business needs for growth.",
   },
-
   [ServicesIdConstants.Mobile]: {
     url: "https://www.clevit.io/services/app-development",
     title: "App Development Services | Clevit",
@@ -38,10 +37,15 @@ export const MetaServices = {
     description:
       "Improve quality and credibility through Clevit’s Quality Assurance solutions. We haveNaming the best solutions that will strengthen business decisions",
   },
-
   [ServicesIdConstants.TechnicalAssessment]: {
     url: "https://www.clevit.io/services/technical-assessment",
     title: "Technical Assessment Services | Clevit",
+    description:
+      "Try out Clevit’s Technical Assessment Services for a comprehensive technical review of your system. Improve efficiency, and check the functioning of the system.",
+  },
+  [ServicesIdConstants.MaintenanceSupport]: {
+    url: "https://www.clevit.io/services/maintenance-support",
+    title: " Support & Maintenance | Clevit",
     description:
       "Try out Clevit’s Technical Assessment Services for a comprehensive technical review of your system. Improve efficiency, and check the functioning of the system.",
   },
@@ -63,7 +67,7 @@ export const MetaServices = {
     description:
       "Improve user satisfaction with Clevit through UI/UX Design Services. Our designs are user-friendly, and practical based on the requirements of your enterprise.",
   },
-  [ServicesIdConstants.Design]: {
+  [ServicesIdConstants.DigitalMarketing]: {
     url: "https://www.clevit.io/services/digital-marketing",
     title: " Digital Marketing Services | Clevit",
     description:

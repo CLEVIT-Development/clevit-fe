@@ -22,7 +22,6 @@ const SingleServiceSection = ({ serviceId, setHeaderItems }: SingleServiceSectio
   const replaceString = (str: string) => {
     return str.replace("/", "");
   };
-
   const service = servicesConstants.find((service) => replaceString(service.id) === serviceId);
 
   useEffect(() => {
@@ -36,6 +35,7 @@ const SingleServiceSection = ({ serviceId, setHeaderItems }: SingleServiceSectio
   }, [service, setHeaderItems]);
 
   if (!service) {
+    console.error("service error", service);
     return <h1>service not found</h1>;
   }
 
@@ -58,9 +58,9 @@ const SingleServiceSection = ({ serviceId, setHeaderItems }: SingleServiceSectio
         <div>
           <div className="w-full flex justyfy-center">
             <div className="max-w-[1230px] flex flex-wrap  justify-start items-start desktop:items-start desktop:gap-20 gap-6 px-5  desktop:px-0 ">
-              {service?.offers?.map(({ Icon, description, title }) => {
+              {service?.offers?.map(({ Icon, description, title, id }) => {
                 return (
-                  <div className="desktop:w-[350px] w-[90%] flex flex-col gap-4">
+                  <div key={id} className="desktop:w-[350px] w-[90%] flex flex-col gap-4">
                     <Icon />
                     <div className="flex flex-col gap-4">
                       <h3 className="text-purple-100 text-md-l font-medium">{title}</h3>
