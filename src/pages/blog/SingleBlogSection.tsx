@@ -39,9 +39,12 @@ const SingleBlogSection = ({ titlePath }: SingleBlogPageProps) => {
         alt={title}
         src={image || ImagePlaceholder}
       />
-      <h1 className="text-2xl desktop:text-3xl desktop:max-w-[80%]">{title}</h1>
+      <h1 className="text-2xl desktop:text-3xl desktop:max-w-[80%] ">{title}</h1>
 
-      <p className="text-md desktop:max-w-[80%]" dangerouslySetInnerHTML={{ __html: content }} />
+      <p
+        className="text-md desktop:max-w-[80%] html-preview "
+        dangerouslySetInnerHTML={{ __html: content }}
+      />
 
       <div className="flex space-x-2 items-center justify-center">
         <span className="text-lg">Share this</span>

@@ -72,7 +72,7 @@ const RichTextEditor: React.FC<RichTextEditorProps> = ({
         <Editor
           wrapperClassName={twMerge(
             classNames(
-              "transition-all duration-700 border border-purple-100 rounded outline-none p-3 text-gray-100 caret-purple-100 focus:shadow-base-200 disabled:cursor-not-allowed",
+              "transition-all duration-700 border border-purple-100 rounded outline-none p-3 text-black caret-purple-100 focus:shadow-base-200 disabled:cursor-not-allowed",
               {
                 ["opacity-60"]: disabled,
                 ["placeholder-warning-100 text-warning-100 border-warning-100"]: hint,
