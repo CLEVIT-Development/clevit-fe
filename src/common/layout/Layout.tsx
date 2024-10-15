@@ -26,7 +26,7 @@ const Layout = ({
 }: Props) => {
   const mainClasses = twMerge(
     classNames(
-      "relative flex flex-col flex-grow ",
+      "relative flex flex-col flex-grow",
       {
         "pt-0 ": layoutVariant === LayoutVariant.Secondary,
       },
@@ -46,7 +46,7 @@ const Layout = ({
   );
 
   return (
-    <div className="w-full h-screen flex flex-col">
+    <div className="w-screen h-screen flex flex-col">
       <HeadBar heading={heading} headerVariant={headerVariant} />
       <main className={mainClasses}>
         <div className={contentClasses}>{children}</div>
