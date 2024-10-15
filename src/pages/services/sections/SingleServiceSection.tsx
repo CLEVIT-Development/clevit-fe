@@ -34,7 +34,6 @@ const SingleServiceSection = ({ serviceId, setHeaderItems }: SingleServiceSectio
   }, [service, setHeaderItems]);
 
   if (!service) {
-    console.error("service error", service);
     return <h1>service not found</h1>;
   }
 
