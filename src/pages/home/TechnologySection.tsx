@@ -92,7 +92,7 @@ const TechnologySection = ({ title, subTitle, tabsConstant, technologiesConstant
           </div>
         ) : null}
         <div className="w-full flex flex-col desktop:flex-row desktop:overflow-x-scroll no-scrollbar desktop:pt-9">
-          <div className="w-full flex flex-col desktop:flex-row text-center desktop:w-max desktop:inline-flex">
+          <div className="w-full flex flex-col desktop:flex-row text-center desktop:w-max desktop:inline-flex desktop:mt-0 mt-5">
             {tabsConstant.map((tab: ITabsConstant) => (
               <span
                 role="tab"
