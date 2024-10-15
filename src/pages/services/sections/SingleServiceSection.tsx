@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-
 import { type ServicesIdConstants } from "@/assets/constants/services-id.constants";
 import { servicesConstants } from "@/assets/constants/services.constants";
 import Section from "@/common/templates/Section";
