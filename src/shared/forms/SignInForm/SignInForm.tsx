@@ -3,6 +3,7 @@ import { FormProvider, useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 
 import { RoutePaths } from "@/app/routing/routing.constants";
+import { useAuthContext } from "@/common/context/AuthContext";
 import { SignInSchema } from "@/common/schemas/signInSchema";
 import showNotification, { ToastVersions } from "@/common/services/toast/showNotifications";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -25,6 +26,7 @@ const SignInForm = () => {
   const navigate = useNavigate();
 
   const { signIn, loading } = useSignIn();
+  const { handleIsAuthenticated } = useAuthContext();
 
   const {
     register,
@@ -34,7 +36,10 @@ const SignInForm = () => {
 
   const onFormSubmit = async (data: ISignInFormPayload) => {
     signIn(data.email, data.password, {
-      onSuccess: () => navigate(RoutePaths.Home),
+      onSuccess: () => {
+        handleIsAuthenticated();
+        navigate(RoutePaths.Home);
+      },
       onFailure: (errorMessage: string) =>
         showNotification({
           type: ToastVersions.error,

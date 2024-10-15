@@ -7,7 +7,7 @@ import { twMerge } from "tailwind-merge";
 
 import { RoutePaths, headerMenuLinks } from "@/app/routing/routing.constants.ts";
 import Messages from "@/assets/vectors/Messages.svg?react";
-import { useAuth } from "@/common/hooks/useAuth";
+import { useAuthContext } from "@/common/context/AuthContext";
 import useLockBodyScroll from "@/common/hooks/useBodyLock";
 import useResponsive from "@/common/hooks/useResponsive";
 import Button from "@/shared/ui/Button.tsx";
@@ -32,7 +32,7 @@ const Header = forwardRef(
     const [isTransitionEndClose, setIsTransitionEndClose] = useState(false);
     const navListRef = useRef<HTMLDivElement | null>(null);
 
-    const { isAuthenticated } = useAuth();
+    const { isAuthenticated } = useAuthContext();
 
     useLockBodyScroll(isOpen);
 

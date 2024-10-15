@@ -1,16 +1,22 @@
 import { useEffect, useState } from "react";
+
 import { useAuthToken } from "./useAuthToken";
 
 export const useAuth = () => {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(
     !!localStorage.getItem("accessToken")
   );
+
   const { revokeToken, revokeRefreshToken } = useAuthToken();
 
   const handleLogout = () => {
     revokeToken();
     revokeRefreshToken();
     setIsAuthenticated(false);
+  };
+
+  const handleIsAuthenticated = () => {
+    setIsAuthenticated(true);
   };
 
   useEffect(() => {
@@ -25,5 +31,5 @@ export const useAuth = () => {
     return () => window.removeEventListener("storage", checkAuth);
   }, []);
 
-  return { isAuthenticated, handleLogout };
+  return { isAuthenticated, handleLogout, handleIsAuthenticated };
 };
