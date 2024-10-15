@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 
 import { RoutePaths, routerElements } from "@/app/routing/routing.constants.ts";
+import { AuthProvider } from "@/common/context/AuthContext";
 import { BlogProvider } from "@/common/context/BlogContext.tsx";
 import ScrollToTop from "@/common/templates/ScrollToTop.tsx";
 import NotFoundPage from "@/pages/not-found/NotFoundPage.tsx";
@@ -20,12 +21,12 @@ const router = createBrowserRouter(
           key={path}
           path={path}
           element={
-            <>
+            <AuthProvider>
               <AuthRoute isPrivate={isPrivate} isAuthPath={path === RoutePaths.AdminSignIn}>
                 <Element />
               </AuthRoute>
               <ScrollToTop />
-            </>
+            </AuthProvider>
           }
         />
       ))}

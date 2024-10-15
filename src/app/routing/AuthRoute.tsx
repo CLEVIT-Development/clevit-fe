@@ -1,6 +1,7 @@
-import { Navigate } from "react-router-dom";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
-import { useAuth } from "@/common/hooks/useAuth";
+import { useAuthContext } from "@/common/context/AuthContext";
 
 import { RoutePaths } from "./routing.constants";
 
@@ -11,15 +12,18 @@ interface AuthRouteProps {
 }
 
 const AuthRoute = ({ children, isPrivate, isAuthPath }: AuthRouteProps) => {
-  const { isAuthenticated } = useAuth();
+  const { isAuthenticated } = useAuthContext();
+  const navigate = useNavigate();
 
-  if (isPrivate && !isAuthenticated) {
-    return <Navigate to={RoutePaths.AdminSignIn} replace />;
-  }
+  useEffect(() => {
+    if (isPrivate && !isAuthenticated) {
+      return navigate(RoutePaths.AdminSignIn);
+    }
 
-  if (isAuthenticated && isAuthPath) {
-    return <Navigate to={RoutePaths.Home} replace />;
-  }
+    if (isAuthenticated && isAuthPath) {
+      return navigate(RoutePaths.Home);
+    }
+  }, [isAuthenticated, isPrivate]);
 
   return <>{children}</>;
 };
