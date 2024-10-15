@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { FacebookShareButton, LinkedinShareButton, TwitterShareButton, XIcon } from "react-share";
-
 import ImagePlaceholder from "@/assets/images/ImagePlaceholder.jpg";
 import FacebookIcon from "@/assets/vectors/Facebook.svg?react";
 import LinkedInIcon from "@/assets/vectors/Linkedin.svg?react";
