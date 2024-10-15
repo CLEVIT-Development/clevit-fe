@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-
 import { useAuthContext } from "@/common/context/AuthContext";
 
 import { RoutePaths } from "./routing.constants";
