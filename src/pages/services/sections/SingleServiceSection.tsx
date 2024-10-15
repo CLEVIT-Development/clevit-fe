@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-
 import { type ServicesIdConstants } from "@/assets/constants/services-id.constants";
 import { servicesConstants } from "@/assets/constants/services.constants";
 import Section from "@/common/templates/Section";
@@ -22,7 +21,6 @@ const SingleServiceSection = ({ serviceId, setHeaderItems }: SingleServiceSectio
   const replaceString = (str: string) => {
     return str.replace("/", "");
   };
-
   const service = servicesConstants.find((service) => replaceString(service.id) === serviceId);
 
   useEffect(() => {
@@ -36,6 +34,7 @@ const SingleServiceSection = ({ serviceId, setHeaderItems }: SingleServiceSectio
   }, [service, setHeaderItems]);
 
   if (!service) {
+    console.error("service error", service);
     return <h1>service not found</h1>;
   }
 

@@ -56,7 +56,7 @@ export const routerElements = [
   { path: RoutePaths.Calendly, Element: CalendlyPage, isPrivate: false },
   { path: RoutePaths.Blogs, Element: BlogsPage, isPrivate: false },
   { path: RoutePaths.Blog, Element: SingleBlogPage, isPrivate: false },
-  { path: RoutePaths.Service, Element: SingleServicePage },
+  { path: RoutePaths.Service, Element: SingleServicePage, isPrivate: false },
   { path: RoutePaths.Portfolio, Element: PortfolioPage, isPrivate: false },
   { path: RoutePaths.WebDevelopment, Element: WebDevelopmentPage, isPrivate: false },
   { path: RoutePaths.FAQ, Element: Faq, isPrivate: false },
