@@ -17,7 +17,7 @@ const PersonCard: React.FC<PersonCardProps> = ({
   icon,
   iconUrl,
 }) => (
-  <div className="flex flex-col desktop:items-start items-center min-w-[300px] text-center borderp-4 rounded-lg">
+  <div className="flex flex-col desktop:items-start items-center min-w-[300px] text-center border p-4 rounded-lg transform transition-transform duration-700 hover:scale-105  ">
     {image ? (
       <img
         loading="lazy"

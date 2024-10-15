@@ -34,7 +34,6 @@ const SingleServiceSection = ({ serviceId, setHeaderItems }: SingleServiceSectio
   }, [service, setHeaderItems]);
 
   if (!service) {
-    console.error("service error", service);
     return <h1>service not found</h1>;
   }
 
@@ -81,7 +80,7 @@ const SingleServiceSection = ({ serviceId, setHeaderItems }: SingleServiceSectio
         </div>
         <div className="w-full desktop:px-0 px-5">
           <ContactUsTopBanner
-            image={service.image}
+            image={service?.bannerImage || service?.image}
             imageAlt={service.imageAlt}
             description={service.serviceBookConsultation.description}
             title={service.serviceBookConsultation.title}

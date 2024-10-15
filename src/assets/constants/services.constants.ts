@@ -1,10 +1,17 @@
 import { singlePageMobileDevelopmentProcessesConstants } from "@/assets/constants/processes/singlePageMobileDevelopmentProcess.constants.ts";
 import { ServicesIdConstants } from "@/assets/constants/services-id.constants.ts";
 import AIintegration from "@/assets/images/services/AIintegration.png";
+import AiBanner from "@/assets/images/services/AiBanner.png";
 import AppDevelopmentOverviewReverse from "@/assets/images/services/AppDevelopmentOverviewReverse.png";
+import DataQualityBanner from "@/assets/images/services/DataQualityBanner.png";
 import DevopsServices from "@/assets/images/services/DevopsServices.png";
+import DigitalMarketingBanner from "@/assets/images/services/DigitalMarketingBanner.png";
 import DigitalMarketingImage from "@/assets/images/services/DigitalMarketingImage.png";
+import ItProjectManagmentBanner from "@/assets/images/services/ItProjectManagmentBanner.png";
 import MachineLearning from "@/assets/images/services/MachineLearning.png";
+import MachineLearningBanner from "@/assets/images/services/MachineLearningBanner.png";
+import MaintenanceBanner from "@/assets/images/services/MaintenanceBanner.png";
+import MobileBanner from "@/assets/images/services/MobileBanner.png";
 import OutStaffingImage from "@/assets/images/services/Outstaffing.png";
 import ProjectManagment from "@/assets/images/services/ProjectManagment.png";
 import QualityAssurance from "@/assets/images/services/QualityAssurance.png";
@@ -97,7 +104,6 @@ import UIUX from "@/assets/vectors/UIUX.svg?react";
 import UserCenteredApproach from "@/assets/vectors/UserCenteredApproach.svg?react";
 import PC from "@/assets/vectors/processes/PC.svg?react";
 import Security from "@/assets/vectors/processes/Security.svg?react";
-
 import { singlePageAIProcessesConstants } from "./processes/singlePageAIProcess.constants";
 import { singlePageDataQualityAssuranceProcessesConstants } from "./processes/singlePageDataQualityAssuranceProcess.constants";
 import { singlePageDevopsProcessesConstants } from "./processes/singlePageDevopsProcess.constants";
@@ -264,6 +270,7 @@ export const servicesConstants = [
     Icon: Phone,
     image: AppDevelopmentOverviewReverse,
     imageAlt: "Mobile App Development image",
+    bannerImage: MobileBanner,
     headerImage: SinglePageMobileDevelopmentHeading,
     singleServiceHeaderTitle: "Mobile App Development Services",
     singleServiceHeaderDescription: "Transform Your Ideas into High-Performance Mobile Apps",
@@ -451,6 +458,7 @@ export const servicesConstants = [
     image: AIintegration,
     imageAlt: "AI integration image",
     headerImage: SinglePageAIHeading,
+    bannerImage: AiBanner,
     singleServiceHeaderTitle: "AI Integration Services",
     singleServiceHeaderDescription: "Unlock the Power of AI with Custom Solutions",
     buttonTitle: "Request a Quote",
@@ -559,6 +567,7 @@ export const servicesConstants = [
     image: MachineLearning,
     imageAlt: "Machine Learning Development image",
     headerImage: SinglePageMLHeading,
+    bannerImage: MachineLearningBanner,
     singleServiceHeaderTitle: "ML Development Services",
     singleServiceHeaderDescription: "Paving the Way for Smarter Solutions",
     buttonTitle: "Request a Quote",
@@ -668,6 +677,7 @@ export const servicesConstants = [
     buttonTitle: "Request a Quote",
     imageAlt: "Quality Assurance image",
     headerImage: SinglePageQualityHeading,
+    bannerImage: DataQualityBanner,
     singleServiceHeaderTitle: "Quality Assurance",
     singleServiceHeaderDescription: "Ensuring Data Integrity and Reliability",
     title: "Quality Assurance",
@@ -878,6 +888,7 @@ export const servicesConstants = [
     buttonTitle: "Request a Quote",
     imageAlt: "Support & Maintenance image",
     headerImage: SinglePageAssessmentHeading,
+    bannerImage: MaintenanceBanner,
     singleServiceHeaderTitle: "Website Maintenance Services",
     singleServiceHeaderDescription: "Ensuring Your Website’s Optimal Performance and Security",
     image: SupportMaintenance,
@@ -1089,6 +1100,7 @@ export const servicesConstants = [
     route: "/it-project-management",
     buttonTitle: "Request a Quote",
     imageAlt: "IT Project Management image",
+    bannerImage: ItProjectManagmentBanner,
     headerImage: SinglePageManagmentHeading,
     singleServiceHeaderTitle: "Expert Guidance for Your IT Projects",
     singleServiceHeaderDescription: "Expert Guidance for Your IT Projects",
@@ -1306,6 +1318,7 @@ export const servicesConstants = [
     Icon: DigitalMarketing,
     imageAlt: "Digital marketing image",
     headerImage: SinglePageMarketingHeading,
+    bannerImage: DigitalMarketingBanner,
     singleServiceHeaderTitle: "Digital Marketing Services",
     singleServiceHeaderDescription:
       "Accelerating Your Digital Growth with Strategic Marketing Solutions",
