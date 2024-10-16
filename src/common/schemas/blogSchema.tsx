@@ -13,6 +13,7 @@ export const BlogSchema = yup.object().shape({
       "Title path must be a valid path (lowercase letters, numbers, and hyphens only)"
     ),
   content: yup.string().required("Content is required"),
+  metaDescription: yup.string().required("Meta description is required"),
   image: yup
     .mixed()
     .required("Image is required")

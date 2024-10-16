@@ -10,6 +10,7 @@ export type IBlog = {
   titlePath: string;
   content: string;
   description?: string;
+  metaDescription: string;
   //TODO: Fix later for more type safety
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   image: string | any;

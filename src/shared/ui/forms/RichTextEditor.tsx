@@ -1,12 +1,9 @@
-import React, { useEffect } from "react";
-import { Editor } from "react-draft-wysiwyg";
-import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
+import React, { useEffect, useRef } from "react";
 
 import classNames from "classnames";
-import { ContentState, EditorState, convertToRaw } from "draft-js";
-import draftToHtml from "draftjs-to-html";
-import htmlToDraft from "html-to-draftjs";
 import { twMerge } from "tailwind-merge";
+
+import { Editor } from "@tinymce/tinymce-react";
 
 interface RichTextEditorProps {
   onContentChange: (content: string) => void;
@@ -27,29 +24,16 @@ const RichTextEditor: React.FC<RichTextEditorProps> = ({
   hint,
   required,
 }) => {
-  const [editorState, setEditorState] = React.useState(EditorState.createEmpty());
+  const editorRef = useRef<Editor["editor"] | null>(null);
 
   useEffect(() => {
-    if (initialContent) {
-      const blocksFromHtml = htmlToDraft(initialContent);
-      const { contentBlocks, entityMap } = blocksFromHtml;
-      const contentState = ContentState.createFromBlockArray(contentBlocks, entityMap);
-
-      setEditorState(EditorState.createWithContent(contentState));
+    if (editorRef.current && initialContent) {
+      editorRef.current.setContent(initialContent);
     }
   }, [initialContent]);
 
-  const onEditorStateChange = (state: EditorState) => {
-    setEditorState(state);
-
-    // Get the current content in raw format
-    const contentState = state.getCurrentContent();
-    const rawContent = convertToRaw(contentState);
-
-    // Convert raw content to HTML
-    const htmlContent = draftToHtml(rawContent);
-
-    onContentChange(htmlContent); // Call the onContentChange with HTML content
+  const onEditorStateChange = (content: string) => {
+    onContentChange(content);
   };
 
   return (
@@ -70,19 +54,24 @@ const RichTextEditor: React.FC<RichTextEditorProps> = ({
           </span>
         )}
         <Editor
-          wrapperClassName={twMerge(
-            classNames(
-              "transition-all duration-700 border border-purple-100 rounded outline-none p-3 text-black caret-purple-100 focus:shadow-base-200 disabled:cursor-not-allowed",
-              {
-                ["opacity-60"]: disabled,
-                ["placeholder-warning-100 text-warning-100 border-warning-100"]: hint,
-                ["placeholder-error-100 border-error-100 after:text-error-100"]: error,
-              }
-            )
-          )}
-          editorState={editorState}
-          onEditorStateChange={onEditorStateChange}
-          placeholder="Write your blog content here..."
+          onInit={(_evt, editor) => (editorRef.current = editor)}
+          apiKey={import.meta.env.VITE_TINY_MCE_KEY}
+          init={{
+            height: 600,
+            image_caption: true,
+            toolbar:
+              "undo redo | accordion accordionremove | blocks fontfamily fontsize | bold italic underline strikethrough | align numlist bullist | link image | table media | lineheight outdent indent| forecolor backcolor removeformat | charmap emoticons | code fullscreen preview | save print | pagebreak anchor codesample | ltr rtl",
+            plugins:
+              "preview importcss searchreplace autolink autosave save directionality code visualblocks visualchars fullscreen image link media codesample table charmap pagebreak nonbreaking anchor insertdatetime advlist lists wordcount help charmap quickbars emoticons accordion",
+            editimage_cors_hosts: ["picsum.photos"],
+            quickbars_selection_toolbar:
+              "bold italic | quicklink h2 h3 blockquote quickimage quicktable",
+            noneditable_class: "mceNonEditable",
+            toolbar_mode: "sliding",
+            contextmenu: "link image table",
+            resize: false,
+          }}
+          onEditorChange={onEditorStateChange}
         />
       </label>
 
