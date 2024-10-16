@@ -13,10 +13,10 @@ const RequestQuoteSection = () => {
   };
 
   return (
-    <section className="relative desktop:h-[339px] h-[260px] xs:w-[90%] md:w-full md:max-w-[1280px] bg-quoteGradient flex md:flex-row xs:flex-col items-start justify-between md:space-x-[73px] mb-24 rounded-xl">
+    <section className="w-full relative  desktop:h-[339px] h-[260px]   bg-quoteGradient flex md:flex-row xs:flex-col items-start justify-between md:space-x-[73px] mb-24">
       <div className="absolute xs:bottom-3 xs:left-5 xs:w-full h-[50%] md:static flex flex-col justify-start mt-[40px] z-10 desktop:pl-14 md:p-0 md:pl-14">
         <p className="desktop:text-3xl desktop:font-thin text-white">Let's build</p>
-        <p className="text-white whitespace-nowrap desktop:text-3.5xl xs:font-extrabold desktop:font-extrabold xs:text-lg xs:mb-[20px] desktop:mb-[20px]">
+        <p className="text-white whitespace-nowrap lg:text-3.5xl desktop:text-2xl  xs:font-extrabold desktop:font-extrabold xs:text-lg xs:mb-[20px] desktop:mb-[20px]">
           YOUR DREAM PROJECT
         </p>
         <Button
