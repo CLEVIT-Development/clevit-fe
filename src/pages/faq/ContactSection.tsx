@@ -1,5 +1,4 @@
 import { useNavigate } from "react-router-dom";
-
 import { RoutePaths } from "@/app/routing/routing.constants";
 import Pointer from "@/assets/vectors/Pointer.svg?react";
 import Button from "@/shared/ui/Button";
