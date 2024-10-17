@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 import { type IBlogData } from "@/types/blog.types";
 
 import { axiosInstanceAuth } from "../services/toast/axios.service";
@@ -52,6 +51,7 @@ const useBlog = () => {
         content: blogData.content,
         title: blogData.title,
         titlePath: blogData.titlePath,
+        metaDescription: blogData.metaDescription,
       };
       const response = await axiosInstanceAuth.post("/blogs/add-blog", {
         ...blogReqData,
