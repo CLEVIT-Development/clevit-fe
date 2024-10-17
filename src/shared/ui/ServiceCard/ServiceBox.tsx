@@ -65,7 +65,7 @@ const ServiceBox: FC<ServiceBoxProps> = ({
         </div>
       </div>
       <div className=" desktop:flex hidden w-1/2  items-center justify-center  ">
-        <img src={image} alt={imageAlt} />
+        <img loading="lazy" src={image} alt={imageAlt} />
       </div>
     </div>
   );
