@@ -17,7 +17,7 @@ const BlogItem = ({ handleClickOnBlog, image, imageAlt, title, date, titlePath }
       className="flex gap-2 cursor-pointer"
     >
       <div className="w-[52px] h-[52px]">
-        <img src={image} alt={imageAlt} className="w-full h-full rounded" />
+        <img src={image} alt={imageAlt} className="w-full h-full rounded object-cover" />
       </div>
       <div className="w-[calc(100%-60px)]">
         <div className="flex gap-2 items-center">

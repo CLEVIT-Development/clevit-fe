@@ -39,6 +39,7 @@ const SingleBlogPage = () => {
             <SingleBlogHeading />
           </Gradient>
         }
+        className="pt-[17px] px-4"
       >
         {titlePath ? <SingleBlogSection titlePath={titlePath} /> : <NotFound />}
 
