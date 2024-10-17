@@ -47,7 +47,7 @@ const ServiceBox: FC<ServiceBoxProps> = ({
             {description}
           </p>
         </div>
-        <div className="w-full flex desktop:justify-start justify-center desktop:gap-x-2  desktop:pt-8 lg:gap-x-4 desktop:pr-7 md:gap-10">
+        <div className="w-full flex desktop:justify-start justify-center desktop:gap-x-2  desktop:pt-8 lg:gap-x-4 desktop:pr-7 md:gap-10 gap-5">
           <Button
             className="text-black border-black hover:text-white desktop:text-[20px] text-sm"
             variant={ButtonVariant.Outlined}
