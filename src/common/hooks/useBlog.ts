@@ -52,6 +52,7 @@ const useBlog = () => {
         content: blogData.content,
         title: blogData.title,
         titlePath: blogData.titlePath,
+        metaDescription: blogData.metaDescription,
       };
       const response = await axiosInstanceAuth.post("/blogs/add-blog", {
         ...blogReqData,
