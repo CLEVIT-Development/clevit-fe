@@ -1,13 +1,18 @@
 import root from "react-shadow";
 
-interface Props {
+import { twMerge } from "tailwind-merge";
+
+interface Props extends React.ComponentProps<"div"> {
   content: string;
 }
 
-const DraftPreview: React.FC<Props> = ({ content }) => {
+const DraftPreview: React.FC<Props> = ({ content, className, ...props }) => {
   return (
-    <root.div className="desktop:max-w-[80%]">
-      <div dangerouslySetInnerHTML={{ __html: content }} />
+    <root.div
+      {...props}
+      className={twMerge("max-w-full lg:max-w-[1110px] no-scrollbar", className)}
+    >
+      <div className="w-full" dangerouslySetInnerHTML={{ __html: content }} />
     </root.div>
   );
 };

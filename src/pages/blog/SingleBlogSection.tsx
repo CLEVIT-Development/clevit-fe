@@ -8,7 +8,6 @@ import LinkedInIcon from "@/assets/vectors/Linkedin.svg?react";
 import { useBlogContext } from "@/common/context/BlogContext.tsx";
 import useBlog from "@/common/hooks/useBlog";
 import useOrigin from "@/common/hooks/useOrigin.ts";
-import Section from "@/common/templates/Section.tsx";
 import BlogCard from "@/shared/ui/BlogCard/BlogCard.tsx";
 
 import BlogPreviewSkeleton from "./BlogPostPreview";
@@ -33,18 +32,18 @@ const SingleBlogSection = ({ titlePath }: SingleBlogPageProps) => {
   return !blogData ? (
     <BlogPreviewSkeleton />
   ) : (
-    <Section className="items-start desktop:max-w-[80%] px-5 desktop:px-0">
+    <section className="w-full">
       <img
         loading="lazy"
-        className="w-full max-w-[1108px] h-full max-h-[552px] aspect-auto desktop:w-[1110px]  lg:flex rounded-[20px] bg-[#D9D9D9]"
+        className="h-[221px] object-cover aspect-auto w-full lg:max-w-[1110px] lg:h-[552px]  lg:flex rounded-[20px] bg-[#D9D9D9]"
         alt={blogData.title}
         src={blogData.image || ImagePlaceholder}
       />
-      <h1 className="text-2xl desktop:text-3xl desktop:max-w-[80%] ">{blogData.title}</h1>
+      <h1 className="mt-4 font-semibold text-[42px] text-gray-200 px-4">{blogData.title}</h1>
       <Suspense fallback={<ContentSceleton />}>
-        <DraftPreview content={blogData.content} />
+        <DraftPreview className="mt-7 overflow-y-auto " content={blogData.content} />
       </Suspense>
-      <div className="flex space-x-2 items-center justify-center">
+      <div className="flex space-x-2 items-center justify-center mt-7">
         <span className="text-lg">Share this</span>
         <FacebookShareButton url={origin + pathname}>
           <FacebookIcon className="w-6 h-6 desktop:w-8 desktop:h-8" />
@@ -56,7 +55,7 @@ const SingleBlogSection = ({ titlePath }: SingleBlogPageProps) => {
           <XIcon className="w-6 h-6 desktop:w-8 desktop:h-8 rounded-full [&>rect]:fill-[#55606A]" />
         </TwitterShareButton>
       </div>
-      <div className="w-full mt-40">
+      <div className="w-full mt-7 lg:mt-24">
         <h2 className="text-lg font-bold">More Posts</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-5 desktop:mt-7">
           {lastThreeBlogs.map((blog) => (
@@ -66,7 +65,7 @@ const SingleBlogSection = ({ titlePath }: SingleBlogPageProps) => {
           ))}
         </div>
       </div>
-    </Section>
+    </section>
   );
 };
 

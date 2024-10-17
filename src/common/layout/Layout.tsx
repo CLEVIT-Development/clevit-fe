@@ -46,7 +46,7 @@ const Layout = ({
   );
 
   return (
-    <div className="w-screen h-screen flex flex-col">
+    <div className="w-screen md:w-full h-screen flex flex-col">
       <HeadBar heading={heading} headerVariant={headerVariant} />
       <main className={mainClasses}>
         <div className={contentClasses}>{children}</div>
