@@ -24,7 +24,7 @@ const TotalSection = ({ projectsValue, stuffValue, servedValue }: Props) => {
         backgroundPosition: "center",
         background: "linear-gradient(7deg, rgba(245,245,245,1) 0%, rgba(222,200,235,1) 67%)",
       }}
-      className="w-full flex-1 flex md:justify-evenly gap-[16px] md:space-y-0 space-y-1 md:flex-row flex-col items-center md:py-[60px] py-5 rounded-lg-l bg-no-repeat md:bg-totalDesktopPosition bg-totalMobilePosition"
+      className="w-full flex-1 flex md:justify-evenly gap-[16px] md:space-y-0 space-y-1 md:flex-row flex-col items-center md:py-[60px] py-5 bg-no-repeat md:bg-totalDesktopPosition bg-totalMobilePosition"
     >
       <TotalItem title="Successful Projects" value={projectsValue} />
       <TotalItem title="Engineers & Designers" value={stuffValue} />
