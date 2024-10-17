@@ -1,6 +1,5 @@
 import { memo } from "react";
 import { Link, useNavigate } from "react-router-dom";
-
 import { RoutePaths } from "@/app/routing/routing.constants.ts";
 import { contactsConstants } from "@/assets/constants/contacts.constants.ts";
 import { industriesConstants } from "@/assets/constants/industries.constants";
