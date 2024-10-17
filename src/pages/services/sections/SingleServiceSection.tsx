@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+
 import { type ServicesIdConstants } from "@/assets/constants/services-id.constants";
 import { servicesConstants } from "@/assets/constants/services.constants";
 import Section from "@/common/templates/Section";
@@ -55,10 +56,10 @@ const SingleServiceSection = ({ serviceId, setHeaderItems }: SingleServiceSectio
         </div>
         <div>
           <div className="w-full flex justyfy-center">
-            <div className="max-w-[1230px] flex flex-wrap  justify-start items-start desktop:items-start desktop:gap-20 gap-6 px-5  desktop:px-0 ">
+            <div className="max-w-[1230px] flex flex-wrap  justify-start items-start desktop:gap-10 desktop:justify-evenly lg:items-start lg:gap-20 gap-6 px-5  lg:px-0 ">
               {service?.offers?.map(({ Icon, description, title }) => {
                 return (
-                  <div className="desktop:w-[350px] w-[90%] flex flex-col gap-4">
+                  <div className="w-[90%] flex flex-col gap-4  desktop:w-[300px] lg:w-[350px]">
                     <Icon />
                     <div className="flex flex-col gap-4">
                       <h3 className="text-purple-100 text-md-l font-medium">{title}</h3>
@@ -70,7 +71,7 @@ const SingleServiceSection = ({ serviceId, setHeaderItems }: SingleServiceSectio
             </div>
           </div>
         </div>
-        <div className="bg-[#F8F7FD] flex justify-center">
+        <div className="bg-[#F8F7FD] flex justify-center desktop:w-full">
           <TechnologySection
             title={service.serviceTechnologiesTitle}
             subTitle={service.serviceTechnologiesSubtitle}
@@ -86,14 +87,14 @@ const SingleServiceSection = ({ serviceId, setHeaderItems }: SingleServiceSectio
             title={service.serviceBookConsultation.title}
           />
         </div>
-        <div className="flex flex-col justify-center gap-6 text-center !mt-0">
+        <div className="flex flex-col justify-center gap-6 text-center desktop:w-full !mt-0">
           <div className="flex flex-col items-center gap-6 px-5 pt-10 desktop:pt-20">
             <h3 className="desktop:text-2xl text-lg text-[#314252]">Industries We Serve</h3>
             <p className="desktop:text-md text-base leading-8 text-center  desktop:w-[980px] w-full">
               {service.serviceIndustriesDescription}
             </p>
           </div>
-          <div className="flex w-screen max-w-full desktop:w-full desktop:pl-0 pl-5 overflow-x-auto flex-nowrap justify-around desktop:py-5 gap-2">
+          <div className="flex w-screen max-w-full lg:w-full desktop:pl-0 pl-5 overflow-x-auto flex-nowrap justify-around desktop:py-5 gap-2">
             {industries.map(({ title, Icon }, index) => {
               return (
                 <div
@@ -121,7 +122,7 @@ const SingleServiceSection = ({ serviceId, setHeaderItems }: SingleServiceSectio
           {service.ChooseClevitTitle}
         </h3>
         <div
-          className={`grid grid-cols-1 mt-10 desktop:gap-20 gap-10 justify-center w-fit ${
+          className={`grid grid-cols-1 mt-10 desktop:gap-20 desktop:px-10 gap-10 justify-center w-fit ${
             service.ChooseClevitRecomendation.length === 4
               ? "desktop:grid-cols-4"
               : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
