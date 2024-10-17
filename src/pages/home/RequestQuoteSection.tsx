@@ -1,5 +1,4 @@
 import { useNavigate } from "react-router-dom";
-
 import { RoutePaths } from "@/app/routing/routing.constants";
 import HTMLtag from "@/assets/images/services/HTMLtag.png";
 import Button from "@/shared/ui/Button";
