@@ -1,5 +1,8 @@
-import { useParams } from "react-router-dom";
+import { useEffect } from "react";
+import { useLocation, useParams } from "react-router-dom";
 
+import useBlog from "@/common/hooks/useBlog";
+import useOrigin from "@/common/hooks/useOrigin";
 import SingleBlogHeading from "@/common/layout/Heading/SingleBlogHeading";
 import Layout from "@/common/layout/Layout.tsx";
 import { Gradient } from "@/shared/gradient/Gradient";
@@ -12,10 +15,23 @@ import SingleBlogSection from "./SingleBlogSection";
 
 const SingleBlogPage = () => {
   const { titlePath } = useParams();
+  const { getBlogByTitleName, blogData } = useBlog();
+  const { pathname } = useLocation();
+  const origin = useOrigin();
+
+  useEffect(() => {
+    if (titlePath) getBlogByTitleName(titlePath);
+  }, [titlePath]);
+
+  const canonicalUrl = origin + pathname;
 
   return (
     <>
-      <PageSEO canonicalUrl="https://www.clevit.io/blog" />
+      <PageSEO
+        description={blogData?.metaDescription}
+        title={blogData?.title}
+        canonicalUrl={canonicalUrl}
+      />
       <Layout
         headerVariant={HeaderVariant.Primary}
         heading={

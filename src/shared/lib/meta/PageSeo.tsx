@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 
 import TwitterCardImage from "@/assets/images/social/twitter_card.webp";
 
-import { APP_TITLE, getAppTitle } from "./meta";
+import { getAppTitle } from "./meta";
 
 interface PageSEOProps {
   title?: string;
@@ -18,7 +18,10 @@ const PageSEO: React.FC<PageSEOProps> = ({
   alternativeDescription,
   canonicalUrl,
 }) => {
-  const metaDescription = description || APP_TITLE;
+  const metaDescription =
+    description ||
+    "Clevit is a web and mobile app development company building reliable solutions for businesses and startups. Find out how we can help with your project. Book a FREE consultation!";
+  const metaTitle = title || "Web and Mobile App Development Company | Clevit";
 
   return (
     <Helmet>
@@ -31,23 +34,17 @@ const PageSEO: React.FC<PageSEOProps> = ({
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="https://clevit.io/" />
-      <meta name="twitter:title" content="Web and Mobile App Development Company | Clevit" />
+      <meta name="twitter:title" content={metaTitle} />
       <meta name="twitter:image" content={TwitterCardImage} />
       <meta
         name="twitter:image:alt"
         content="A description of the image for visually impaired users"
       />
-      <meta
-        name="twitter:description"
-        content="Clevit is a web and mobile app development company building reliable solutions for businesses and startups. Find out how we can help with your project. Book a FREE consultation!"
-      />
+      <meta name="twitter:description" content={metaDescription} />
 
       <meta property="og:locale" content="en" />
-      <meta property="og:title" content="Web and Mobile App Development Company | Clevit" />
-      <meta
-        property="og:description"
-        content="Clevit is a web and mobile app development company building reliable solutions for businesses and startups. Find out how we can help with your project. Book a FREE consultation!"
-      />
+      <meta property="og:title" content={metaTitle} />
+      <meta property="og:description" content={metaDescription} />
       <meta property="og:url" content="https://clevit.io/" />
       <meta property="og:type" content="article" />
 
