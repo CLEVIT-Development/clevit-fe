@@ -1,6 +1,5 @@
 import { type FC } from "react";
 import { useNavigate } from "react-router-dom";
-
 import BackgroundGradient from "@/assets/images/services/BackgroundGradient.png";
 import RightBackgroundGradient from "@/assets/images/services/RightBackgroundGradient.png";
 import { ButtonVariant } from "@/types/variant.types";
