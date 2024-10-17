@@ -7,6 +7,7 @@ import useBlog from "@/common/hooks/useBlog";
 import { BlogSchema } from "@/common/schemas/blogSchema";
 import showNotification, { ToastVersions } from "@/common/services/toast/showNotifications";
 import RichTextEditor from "@/shared/ui/forms/RichTextEditor";
+import TextArea from "@/shared/ui/forms/TextArea";
 import { yupResolver } from "@hookform/resolvers/yup";
 
 import Button from "../../ui/Button";
@@ -34,6 +35,7 @@ const BlogForm = ({ initialData, isLoading }: IBlogFormProps) => {
       setValue("content", initialData.content);
       setValue("image", initialData.image);
       setValue("id", initialData.id);
+      setValue("metaDescription", initialData.metaDescription);
       setImagePreview(initialData.image);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -90,6 +92,7 @@ const BlogForm = ({ initialData, isLoading }: IBlogFormProps) => {
           title: data.title,
           content: data.content,
           image: data.image || "",
+          metaDescription: data.metaDescription || "",
         },
         {
           onSuccess: () => {
@@ -162,6 +165,15 @@ const BlogForm = ({ initialData, isLoading }: IBlogFormProps) => {
           error={errors.titlePath?.message}
           placeholder="Blog Title Path"
           {...register("titlePath")}
+        />
+        <TextArea
+          maxLength={3000}
+          required
+          disabled={isFormLoading}
+          label="Meta description"
+          error={errors.metaDescription?.message}
+          placeholder="Blog Meta Description"
+          {...register("metaDescription")}
         />
         <RichTextEditor
           disabled={isFormLoading}

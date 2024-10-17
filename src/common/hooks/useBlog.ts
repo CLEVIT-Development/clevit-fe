@@ -23,6 +23,7 @@ type IBlog = {
   content: string;
   created_at: string;
   titlePath: string;
+  metaDescription: string;
   readingTime?: string;
 };
 
@@ -95,6 +96,7 @@ const useBlog = () => {
         content: blogData.content,
         title: blogData.title,
         titlePath: blogData.titlePath,
+        metaDescription: blogData.metaDescription,
       };
 
       await axiosInstanceAuth.patch(`/blogs/update-blog/${id}`, reqData);
