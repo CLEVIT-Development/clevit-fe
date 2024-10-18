@@ -1,5 +1,4 @@
 import { Suspense } from "react";
-
 import Section from "@/common/templates/Section.tsx";
 import ProcessCard from "@/shared/ui/Process/ProcessCard";
 import ProcessConnector from "@/shared/ui/Process/ProcessConnector";
