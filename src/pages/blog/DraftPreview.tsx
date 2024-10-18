@@ -8,10 +8,7 @@ interface Props extends React.ComponentProps<"div"> {
 
 const DraftPreview: React.FC<Props> = ({ content, className, ...props }) => {
   return (
-    <root.div
-      {...props}
-      className={twMerge("max-w-full lg:max-w-[1110px] no-scrollbar", className)}
-    >
+    <root.div {...props} className={twMerge("max-w-full no-scrollbar", className)}>
       <div className="w-full" dangerouslySetInnerHTML={{ __html: content }} />
     </root.div>
   );
