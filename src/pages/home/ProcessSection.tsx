@@ -1,5 +1,4 @@
 import { Suspense } from "react";
-
 import Section from "@/common/templates/Section.tsx";
 import ProcessCard from "@/shared/ui/Process/ProcessCard";
 import ProcessConnector from "@/shared/ui/Process/ProcessConnector";
@@ -38,10 +37,12 @@ const ProcessSection = ({ processes, processTitle, className }: Props) => (
                         ? "w-[22%]"
                         : lengthOfProcess >= 8
                           ? "w-[18%]"
-                          : "w-[200px]"
+                          : lengthOfProcess === 5 && window.innerWidth <= 1260
+                            ? "w-[30%]"
+                            : "w-[200px]"
                     : "w-[200px]"
                 }
-                ${isSecondRow && window.innerWidth >= 1024 && lengthOfProcess > 6 ? "!mt-[50px] mx-[-30px]" : isSecondRow && window.innerWidth >= 1024 && lengthOfProcess === 6 ? "!mt-[50px]" : null}
+                ${isSecondRow && window.innerWidth >= 1024 && lengthOfProcess > 6 ? "!mt-[50px] mx-[-30px]" : isSecondRow && window.innerWidth >= 1024 && lengthOfProcess === 6 ? "!mt-[50px]" : lengthOfProcess === 5 && window.innerWidth <= 1260 ? "desktop:!mt-[50px] mt-0" : null}
             `}
             >
               <ProcessCard
@@ -53,6 +54,7 @@ const ProcessSection = ({ processes, processTitle, className }: Props) => (
 
               {window.innerWidth >= 1024 &&
               ((lengthOfProcess === 6 && index === 3) ||
+                (lengthOfProcess === 5 && index === 3 && window.innerWidth <= 1260) ||
                 (lengthOfProcess === 7 && index === 4)) ? null : (
                 <ProcessConnector
                   description={description}

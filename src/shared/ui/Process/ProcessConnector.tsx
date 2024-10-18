@@ -20,7 +20,7 @@ const ProcessConnector = ({ order, processes, description }: Props) => {
   const connectorStyle = {
     "bottom-left": `translate-y-[100%] bottom-0 left-[25%] ${description ? "h-[70%] md:h-[143%]" : "h-[77%] md:h-[173%]"}`,
     "bottom-right": `translate-y-[100%] bottom-0 right-[25%] ${description ? "h-[70%] md:h-[143%]" : "h-[77%] md:h-[173%]"}`,
-    left: "left-0 -translate-x-[100%]  w-[calc(100vw-290px)] md:w-[calc(100vw-290px)] desktop:w-[100px]",
+    left: "left-0 -translate-x-[100%]  w-[calc(100vw-290px)] md:w-[calc(100vw-290px)] desktop:w-[200px]",
     right:
       "right-0 translate-x-[100%] w-[calc(100vw-290px)] md:w-[calc(100vw-290px)] desktop:w-[100px]",
   };
@@ -36,8 +36,7 @@ const ProcessConnector = ({ order, processes, description }: Props) => {
           position={PositionVariant.Vertical}
         />
       )}
-      {/* On Tablet Event ordered items should have left horizontal and odd ones right horizontal connectors */}
-      {/* On Desktop we need only left connectors */}
+
       {order !== 1 && (
         <Connector
           className={classNames("absolute", {
