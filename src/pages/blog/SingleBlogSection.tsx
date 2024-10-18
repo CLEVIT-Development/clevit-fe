@@ -32,18 +32,22 @@ const SingleBlogSection = ({ titlePath }: SingleBlogPageProps) => {
   return !blogData ? (
     <BlogPreviewSkeleton />
   ) : (
-    <section className="w-full">
-      <img
-        loading="lazy"
-        className="h-[221px] object-cover aspect-auto w-full lg:max-w-[1110px] lg:h-[552px]  lg:flex rounded-[20px] bg-[#D9D9D9]"
-        alt={blogData.title}
-        src={blogData.image || ImagePlaceholder}
-      />
-      <h1 className="mt-4 font-semibold text-[42px] text-gray-200 px-4">{blogData.title}</h1>
+    <section className="w-full  lg:pr-[250px]">
+      <div>
+        <img
+          loading="lazy"
+          className=" object-cover aspect-auto w-full lg:h-[552px] lg:flex rounded-[20px] bg-[#D9D9D9]"
+          alt={blogData.title}
+          src={blogData.image || ImagePlaceholder}
+        />
+        <h1 className="mt-4 font-semibold text-xl lg:text-2xl text-gray-200 w-full">
+          {blogData.title}
+        </h1>
+      </div>
       <Suspense fallback={<ContentSceleton />}>
         <DraftPreview className="mt-7 overflow-y-auto " content={blogData.content} />
       </Suspense>
-      <div className="flex space-x-2 items-center justify-center mt-7">
+      <div className="flex space-x-2 items-center mt-7">
         <span className="text-lg">Share this</span>
         <FacebookShareButton url={origin + pathname}>
           <FacebookIcon className="w-6 h-6 desktop:w-8 desktop:h-8" />
