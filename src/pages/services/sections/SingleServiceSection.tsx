@@ -47,19 +47,19 @@ const SingleServiceSection = ({ serviceId, setHeaderItems }: SingleServiceSectio
           <span className="desktoptext-md text-start desktop:text-center text-base leading-8">
             {service.singlePageDescription}
           </span>
-          <h2 className="desktop:text-2xl text-lg font-bold	 desktop:mt-16">
+          <h2 className="desktop:text-2xl text-lg font-bold	desktop:mt-16">
             What Is Important for Us
           </h2>
-          <div className="max-w-[900px] desktop:mt-6 desktop:mb-5  text-start desktop:text-center">
+          <div className="max-w-[900px] desktop:mt-6 desktop:mb-5 text-start desktop:text-center">
             <span className="leading-8 ">{service.serviceDetails}</span>
           </div>
         </div>
         <div>
           <div className="w-full flex justyfy-center">
-            <div className="max-w-[1230px] flex flex-wrap  justify-start items-start desktop:gap-10 desktop:justify-evenly lg:items-start lg:gap-20 gap-6 px-5  lg:px-0 ">
+            <div className="max-w-[1230px] flex flex-wrap justify-start items-start desktop:gap-10 desktop:justify-start lg:items-start lg:gap-20 gap-6 px-5 lg:px-0 ">
               {service?.offers?.map(({ Icon, description, title }) => {
                 return (
-                  <div className="w-[90%] flex flex-col gap-4  desktop:w-[300px] lg:w-[350px]">
+                  <div className="w-[90%] flex flex-col gap-4 desktop:w-[300px] lg:w-[350px]">
                     <Icon />
                     <div className="flex flex-col gap-4">
                       <h3 className="text-purple-100 text-md-l font-medium">{title}</h3>
