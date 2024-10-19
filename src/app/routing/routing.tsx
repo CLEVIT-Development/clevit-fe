@@ -7,7 +7,6 @@ import {
 
 import { RoutePaths, routerElements } from "@/app/routing/routing.constants.ts";
 import { AuthProvider } from "@/common/context/AuthContext";
-import { BlogProvider } from "@/common/context/BlogContext.tsx";
 import ScrollToTop from "@/common/templates/ScrollToTop.tsx";
 import NotFoundPage from "@/pages/not-found/NotFoundPage.tsx";
 
@@ -36,7 +35,7 @@ const router = createBrowserRouter(
 );
 
 const Routing = () => {
-  return <BlogProvider children={<RouterProvider router={router} />} />;
+  return <RouterProvider router={router} />;
 };
 
 export default Routing;

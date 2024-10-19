@@ -5,6 +5,9 @@ import Routing from "app/routing/routing.tsx";
 
 import ToastService from "@/common/services/toast/ToastService.tsx";
 import useLoadFont from "@/utils/fonts.utils";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
+const queryClient = new QueryClient();
 
 const App = () => {
   const handleGtagLoad = () => {
@@ -21,7 +24,7 @@ const App = () => {
   useLoadFont("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 
   return (
-    <>
+    <QueryClientProvider client={queryClient}>
       <Helmet>
         {/* Google tag (gtag.js) */}
         <script
@@ -30,9 +33,10 @@ const App = () => {
           onLoad={handleGtagLoad}
         />
       </Helmet>
+
       <Routing />
       <ToastService />
-    </>
+    </QueryClientProvider>
   );
 };
 

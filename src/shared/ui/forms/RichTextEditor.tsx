@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 
 import classNames from "classnames";
 import { twMerge } from "tailwind-merge";
@@ -24,13 +24,7 @@ const RichTextEditor: React.FC<RichTextEditorProps> = ({
   hint,
   required,
 }) => {
-  const editorRef = useRef<Editor["editor"] | null>(null);
-
-  useEffect(() => {
-    if (editorRef.current && initialContent) {
-      editorRef.current.setContent(initialContent);
-    }
-  }, [initialContent]);
+  const editorRef = useRef(null);
 
   const onEditorStateChange = (content: string) => {
     onContentChange(content);
@@ -53,8 +47,15 @@ const RichTextEditor: React.FC<RichTextEditorProps> = ({
             {label}
           </span>
         )}
+
         <Editor
-          onInit={(_evt, editor) => (editorRef.current = editor)}
+          ref={editorRef}
+          onInit={(_evt, editor) => {
+            if (initialContent) {
+              editor.setContent(initialContent);
+            }
+          }}
+          initialValue={initialContent}
           apiKey={import.meta.env.VITE_TINY_MCE_KEY}
           init={{
             height: 600,
@@ -62,7 +63,7 @@ const RichTextEditor: React.FC<RichTextEditorProps> = ({
             toolbar:
               "undo redo | accordion accordionremove | blocks fontfamily fontsize | bold italic underline strikethrough | align numlist bullist | link image | table media | lineheight outdent indent| forecolor backcolor removeformat | charmap emoticons | code fullscreen preview | save print | pagebreak anchor codesample | ltr rtl",
             plugins:
-              "preview importcss searchreplace autolink autosave save directionality code visualblocks visualchars fullscreen image link media codesample table charmap pagebreak nonbreaking anchor insertdatetime advlist lists wordcount help charmap quickbars emoticons accordion",
+              "searchreplace autolink autosave save directionality code visualblocks visualchars image link media codesample table charmap pagebreak anchor advlist lists wordcount charmap quickbars accordion",
             editimage_cors_hosts: ["picsum.photos"],
             quickbars_selection_toolbar:
               "bold italic | quicklink h2 h3 blockquote quickimage quicktable",

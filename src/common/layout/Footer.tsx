@@ -1,17 +1,19 @@
 import { memo } from "react";
 import { Link, useNavigate } from "react-router-dom";
+
 import { RoutePaths } from "@/app/routing/routing.constants.ts";
 import { contactsConstants } from "@/assets/constants/contacts.constants.ts";
 import { industriesConstants } from "@/assets/constants/industries.constants";
 import { servicesConstants } from "@/assets/constants/services.constants.ts";
 import { socialLinksConstants } from "@/assets/constants/socials.constants.ts";
-import { useBlogContext } from "@/common/context/BlogContext.tsx";
 import BlogItem from "@/shared/BlogItem";
 import Copyright from "@/shared/ui/Copyright";
 import Logo from "@/shared/ui/Logo.tsx";
 
+import { useLastThreeBlogs } from "../hooks/blog/blogQueries";
+
 const Footer = () => {
-  const { lastThreeBlogs } = useBlogContext();
+  const { data: lastThreeBlogs } = useLastThreeBlogs();
 
   const navigate = useNavigate();
 
@@ -103,7 +105,7 @@ const Footer = () => {
           <h6 className="font-bold lg:text-md-l text-md text-white opacity-60">
             Latest Blog Posts
           </h6>
-          {lastThreeBlogs.map((element) => {
+          {lastThreeBlogs?.map((element) => {
             return (
               <BlogItem
                 handleClickOnBlog={handleClickOnBlog}

@@ -4,6 +4,7 @@ import * as yup from "yup";
 const urlRegex = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/;
 
 export const BlogSchema = yup.object().shape({
+  id: yup.string().optional(),
   title: yup.string().required("Title is required"),
   titlePath: yup
     .string()
@@ -14,6 +15,7 @@ export const BlogSchema = yup.object().shape({
     ),
   content: yup.string().required("Content is required"),
   metaDescription: yup.string().required("Meta description is required"),
+  status: yup.string().oneOf(["Draft", "Published"]).required("Status is required"),
   image: yup
     .mixed()
     .required("Image is required")
