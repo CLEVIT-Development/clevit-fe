@@ -12,7 +12,7 @@ interface TotalItemProps {
 }
 
 const AboutTotalItem = ({ value, title }: TotalItemProps) => (
-  <div className="desktop:max-w-auto  desktop:h-[178px] desktop:px-4  desktop:py-6 flex flex-col  md:items-start rounded-[28px]">
+  <div className="desktop:max-w-auto  desktop:h-[178px] desktop:px-4  desktop:py-6 flex flex-col  md:items-center rounded-[28px]">
     <span className="md:text-4xl font-semibold	 text-2xl-3xl text-white">{value}</span>
     <span className="md:text-lg-l text-base text-white">{title}</span>
   </div>
