@@ -17,7 +17,7 @@ import PhoneInput from "../ui/forms/PhoneInput";
 import TextArea from "../ui/forms/TextArea";
 
 interface IContactUsFormPayload extends FieldValues {
-  fullname: string;
+  fullnNme: string;
   email: string;
   country: string;
   phone?: string;
@@ -44,7 +44,7 @@ const ContactUs = () => {
       const formData = new FormData();
       const body = {
         interestedServices: data.service,
-        fullName: data.fullname,
+        fullName: data.fullnNme,
         email: data.email,
         message: data.description || "",
         country: data.country,
@@ -84,7 +84,7 @@ const ContactUs = () => {
           <Input
             required
             label="Full Name"
-            error={errors.fullname?.message}
+            error={errors.fullnNme?.message}
             placeholder="Enter Your Full Name"
             {...register("fullname")}
           />
@@ -109,7 +109,7 @@ const ContactUs = () => {
             render={({ field: { ref, ...field } }) => (
               <PhoneInput
                 ref={ref}
-                label="Phone"
+                label="Phone Number"
                 extraProps={field}
                 error={errors.phone?.message}
                 placeholder="Enter Your Phone Number"
@@ -127,7 +127,7 @@ const ContactUs = () => {
           />
           <TextArea
             maxLength={2000}
-            label="How Can We Help"
+            label="How Can We Help?"
             className="desktop:col-span-2"
             placeholder="Describe your idea/project briefly"
             {...register("description")}

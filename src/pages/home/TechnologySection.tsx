@@ -81,7 +81,7 @@ const TechnologySection = ({ title, subTitle, tabsConstant, technologiesConstant
   }, [activeTab, direction, isMobile]);
 
   return (
-    <Section className="w-full bg-gray-300 px-5 md:px-20 desktop:px-28">
+    <Section className="w-full bg-gray-300 px-5 md:px-20 desktop:px-28 rounded-lg">
       <div className="w-full h-full" ref={sectionRef}>
         <h2 className="desktop:text-2xl text-center text-lg text-[#314252] pt-5 pb-6 desktop:pt-12">
           {title}

@@ -20,7 +20,7 @@ const ContactUsPage = () => {
             <h1 className="desktop:text-3xl text-lg  font-semibold text-gray-200 text-center">
               Your Idea, Our Expertise. Let's Collaborate!
             </h1>
-            <p className="desktop:text-md text-base font-normal text-gray-200 desktop:text-center">
+            <p className="desktop:text-md text-base font-normal text-gray-200 desktop:text-center px-5">
               No matter where you are in your project journey. We'll listen to your needs, offer
               insightful advice, and create a customized plan that gets your project rolling. Fill
               out our contact form, and we'll reach out within a few hours to discuss your goals. We
