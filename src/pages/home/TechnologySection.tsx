@@ -98,13 +98,18 @@ const TechnologySection = ({ title, subTitle, tabsConstant, technologiesConstant
                 role="tab"
                 key={tab.id}
                 onClick={() => handleTabChange(tab.id)}
-                className={`cursor-pointer mb-2 desktop:mb-0 desktop:mr-10 relative duration-500 whitespace-nowrap outline-none focus:outline-none lg:text-md desktop:text-base !font-bold after:transition-all after:bg-purple-500 pb-3 desktop:pb-6
-                  ${
-                    activeTab === tab.id
-                      ? "after:w-full text-purple-100 after:-bottom-5 decoration-2 underline decoration-purple-500 desktop:h-2 desktop:underline-offset-[15px]"
-                      : "after:w-0 after:bg-transparent text-gray-200"
-                  }
-                `}
+                className={`
+                         cursor-pointer mb-2 desktop:mb-0 desktop:mr-10 relative duration-500 whitespace-nowrap 
+                         outline-none focus:outline-none lg:text-md desktop:text-base !font-bold
+                         after:transition-all after:bg-purple-500 after:absolute after:left-0 after:h-[2px]
+                         pb-3 desktop:pb-3 after:bottom-[5px] 
+      
+                          ${
+                            activeTab === tab.id
+                              ? "after:w-full text-purple-100 after:bg-purple-500 desktop:after:w-[100%]"
+                              : "after:w-0 after:bg-transparent text-gray-200"
+                          }
+                      `}
               >
                 {tab.title}
               </span>
