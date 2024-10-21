@@ -23,7 +23,7 @@ const TeamSection = () => {
         loading="lazy"
         src={TeamPhoto}
         alt="Team Picture"
-        className="xl:max-w-[1024px] desktop:max-w-[768px]"
+        className="xl:max-w-[1024px] desktop:max-w-[768px] h-[395px] object-cover"
       />
       <Button onClick={redirectToCalendly} prefix={<Messages />}>
         Let's Talk

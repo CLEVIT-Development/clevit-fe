@@ -1,7 +1,9 @@
 import { useMemo } from "react";
 import AliceCarousel from "react-alice-carousel";
+
 import classNames from "classnames";
 import { twMerge } from "tailwind-merge";
+
 import { feedbacksConstants } from "@/assets/constants/feedbacks.constants";
 import useResponsive from "@/common/hooks/useResponsive";
 import Section from "@/common/templates/Section";
@@ -56,6 +58,7 @@ const FeedbackSection = ({ className }: FeedbackSectionProps) => {
         {feedbacksConstants.length > 3 || isTablet ? (
           <AliceCarousel
             mouseTracking
+            touchTracking={false}
             responsive={{ 0: { items: 1 }, 840: { items: 2 } }}
             disableButtonsControls
             items={feedbacksData}
