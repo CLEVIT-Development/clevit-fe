@@ -31,6 +31,11 @@ interface Props {
     [key: number]: ITechnologyConstant[];
   };
 }
+interface SubDescription {
+  id: string;
+  title: string;
+  description: string;
+}
 
 const TechnologySection = ({ title, subTitle, tabsConstant, technologiesConstant }: Props) => {
   const [activeTab, setActiveTab] = useState(tabsConstant[0].id);
@@ -129,8 +134,8 @@ const TechnologySection = ({ title, subTitle, tabsConstant, technologiesConstant
             <div className="w-full flex flex-col desktop:flex-row desktop:justify-evenly gap-6  mb-8">
               {tabsConstant
                 .find((tab) => tab.id === activeTab)
-                ?.subDescription.map(({ description, title }, index) => (
-                  <div className="desktop:w-1/3 w-full text-start">
+                ?.subDescription.map(({ description, title, id }: SubDescription) => (
+                  <div key={id} className="desktop:w-1/3 w-full text-start">
                     <h3 className="mb-4 text-md font-semibold">{title}</h3>
                     <span dangerouslySetInnerHTML={{ __html: description }} />
                   </div>

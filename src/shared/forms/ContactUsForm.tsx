@@ -17,7 +17,7 @@ import PhoneInput from "../ui/forms/PhoneInput";
 import TextArea from "../ui/forms/TextArea";
 
 interface IContactUsFormPayload extends FieldValues {
-  fullnNme: string;
+  fullname: string;
   email: string;
   country: string;
   phone?: string;
@@ -44,7 +44,7 @@ const ContactUs = () => {
       const formData = new FormData();
       const body = {
         interestedServices: data.service,
-        fullName: data.fullnNme,
+        fullName: data.fullname,
         email: data.email,
         message: data.description || "",
         country: data.country,
@@ -84,7 +84,7 @@ const ContactUs = () => {
           <Input
             required
             label="Full Name"
-            error={errors.fullnNme?.message}
+            error={errors.fullname?.message}
             placeholder="Enter Your Full Name"
             {...register("fullname")}
           />
