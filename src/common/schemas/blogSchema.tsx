@@ -16,6 +16,7 @@ export const BlogSchema = yup.object().shape({
   content: yup.string().required("Content is required"),
   metaDescription: yup.string().required("Meta description is required"),
   status: yup.string().oneOf(["Draft", "Published"]).required("Status is required"),
+  imageUrl: yup.string().optional(),
   image: yup
     .mixed()
     .required("Image is required")

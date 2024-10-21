@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Helmet } from "react-helmet";
+import ReactModal from "react-modal";
 
 import Routing from "app/routing/routing.tsx";
 
@@ -8,6 +9,8 @@ import useLoadFont from "@/utils/fonts.utils";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const queryClient = new QueryClient();
+
+ReactModal.setAppElement("#root");
 
 const App = () => {
   const handleGtagLoad = () => {

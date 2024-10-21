@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import { useBlocker } from "react-router-dom";
+import { useBeforeUnload, useBlocker, useNavigate } from "react-router-dom";
 
+import { RoutePaths } from "@/app/routing/routing.constants";
 import { useBlogUpdate } from "@/common/hooks/blog/blogMutations";
 import useAutosave from "@/common/hooks/useAutoSave";
 import useLockBodyScroll from "@/common/hooks/useBodyLock";
@@ -28,7 +29,7 @@ const BlogForm = ({ initialData }: IBlogFormProps) => {
     trigger,
     getValues,
     reset,
-  } = useForm<IBlog>({
+  } = useForm({
     mode: "onChange",
     resolver: yupResolver(BlogSchema),
     shouldUnregister: true,
@@ -36,14 +37,34 @@ const BlogForm = ({ initialData }: IBlogFormProps) => {
   });
 
   const [imagePreview, setImagePreview] = useState<string | null>(null);
-  const { mutateAsync: updateBlogById } = useBlogUpdate();
+  const { mutateAsync: updateBlogById, isSuccess } = useBlogUpdate();
+  const navigate = useNavigate();
 
-  const blocker = useBlocker(
-    ({ currentLocation, nextLocation }) =>
-      isDirty && currentLocation.pathname !== nextLocation.pathname
-  );
+  const blocker = useBlocker(({ currentLocation, nextLocation }) => {
+    const curr = currentLocation.pathname.split("/");
+    const next = nextLocation.pathname.split("/");
+    const isSamePage = curr.length === next.length;
+
+    // dont block page if title Path updating
+    const isSamePathname = isSamePage && curr[curr.length - 1] === next[next.length - 1];
+
+    return isDirty && !isSamePathname && currentLocation.pathname !== nextLocation.pathname;
+  });
 
   useLockBodyScroll(blocker.state === "blocked");
+
+  useBeforeUnload(
+    useCallback(
+      (event) => {
+        if (isDirty && !isSuccess) {
+          event.preventDefault();
+          event.returnValue =
+            "You have unsaved changes. Exiting this page will lose all your work.";
+        }
+      },
+      [isDirty]
+    )
+  );
 
   useEffect(() => {
     if (initialData?.image) {
@@ -55,18 +76,17 @@ const BlogForm = ({ initialData }: IBlogFormProps) => {
     const data = getValues();
     const blogId = initialData?.id;
 
+    const updateData = { id: blogId, ...data, status: initialData?.status ?? "Draft" };
+
     if (blogId) {
       try {
-        await updateBlogById({
-          id: blogId,
-          ...data,
-        });
+        await updateBlogById(updateData as IBlog);
         showNotification({
           type: ToastVersions.success,
           title: "Success",
           description: "Blog has been successfully updated",
         });
-        reset(undefined, { keepValues: true, keepDirty: false, keepDefaultValues: false });
+        blocker.proceed?.();
       } catch (e) {
         showNotification({
           type: ToastVersions.error,
@@ -77,9 +97,29 @@ const BlogForm = ({ initialData }: IBlogFormProps) => {
     }
   };
 
+  const handlePublish = async () => {
+    const data = getValues();
+    const publishData = {
+      id: initialData?.id,
+      ...data,
+      status: "Published",
+    };
+
+    if (initialData?.id) {
+      await updateBlogById(publishData as IBlog);
+
+      showNotification({
+        type: ToastVersions.success,
+        title: "Success",
+        description: "Blog has been successfully Published",
+      });
+    }
+  };
+
   useAutosave({
     onSave: handleBlogSave,
     isDirty,
+    interval: 10000,
   });
 
   const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -108,7 +148,10 @@ const BlogForm = ({ initialData }: IBlogFormProps) => {
 
   const handleExitWithSave = async () => {
     await handleBlogSave();
-    blocker.proceed?.();
+    reset();
+    navigate(RoutePaths.Blogs, {
+      replace: true,
+    });
   };
 
   return (
@@ -166,7 +209,9 @@ const BlogForm = ({ initialData }: IBlogFormProps) => {
         />
         <div className="flex items-center justify-between">
           <Button onClick={handleBlogSave}>Save Blog</Button>
-          <Button className="bg-black">Publish Blog</Button>
+          <Button className="bg-black" onClick={handlePublish}>
+            Publish Blog
+          </Button>
         </div>
       </form>
       <SaveReminder

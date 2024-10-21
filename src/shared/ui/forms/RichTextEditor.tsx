@@ -63,7 +63,7 @@ const RichTextEditor: React.FC<RichTextEditorProps> = ({
             toolbar:
               "undo redo | accordion accordionremove | blocks fontfamily fontsize | bold italic underline strikethrough | align numlist bullist | link image | table media | lineheight outdent indent| forecolor backcolor removeformat | charmap emoticons | code fullscreen preview | save print | pagebreak anchor codesample | ltr rtl",
             plugins:
-              "searchreplace autolink autosave save directionality code visualblocks visualchars image link media codesample table charmap pagebreak anchor advlist lists wordcount charmap quickbars accordion",
+              "searchreplace autolink directionality code visualblocks visualchars image link media codesample table charmap pagebreak anchor advlist lists wordcount charmap quickbars accordion",
             editimage_cors_hosts: ["picsum.photos"],
             quickbars_selection_toolbar:
               "bold italic | quicklink h2 h3 blockquote quickimage quicktable",

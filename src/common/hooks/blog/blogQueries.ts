@@ -12,11 +12,19 @@ export const useBlogByTitle = (titlePath: string) => {
   });
 };
 
-export const useAllBlogs = ({ page, sort }: { page: number; sort: "Desc" | "Asc" }) => {
+export const useAllBlogs = ({
+  page,
+  sort,
+  isAdmin,
+}: {
+  page: number;
+  sort: "Desc" | "Asc";
+  isAdmin: boolean;
+}) => {
   return useQuery({
-    queryKey: [BlogQueryKeys.ALL, page, sort],
+    queryKey: [BlogQueryKeys.ALL, page, sort, isAdmin],
     queryFn: async () => {
-      return BlogService.getAllBlogs(page, sort);
+      return BlogService.getAllBlogs(page, sort, isAdmin);
     },
   });
 };

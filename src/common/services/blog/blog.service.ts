@@ -4,7 +4,7 @@ import type { IBlogData, IGetAllBlogs } from "@/types/blog.types";
 import { axiosInstanceAuth } from "../toast/axios.service";
 
 class BlogService {
-  static async addBlog(data: IBlog) {
+  static async addBlog(data: Omit<IBlog, "image">) {
     const response = await axiosInstanceAuth.post("/blogs/add-blog", data);
 
     return response.data;
@@ -21,14 +21,7 @@ class BlogService {
   static async updateBlogById(id: string, data: IBlogData) {
     const { image, ...blogData } = data;
 
-    const reqData = {
-      content: blogData.content,
-      title: blogData.title,
-      titlePath: blogData.titlePath,
-      metaDescription: blogData.metaDescription,
-    };
-
-    await axiosInstanceAuth.patch(`/blogs/update-blog/${id}`, reqData);
+    await axiosInstanceAuth.patch(`/blogs/update-blog/${id}`, blogData);
 
     if (image instanceof File) {
       const formData = new FormData();
@@ -53,8 +46,8 @@ class BlogService {
 
     return response.data;
   }
-  static async getAllBlogs(page = 1, sort = "Desc") {
-    const response = await axiosInstanceAuth.get<IGetAllBlogs>(`/blogs`, {
+  static async getAllBlogs(page = 1, sort = "Desc", isAdmin: boolean) {
+    const response = await axiosInstanceAuth.get<IGetAllBlogs>(`/blogs${isAdmin ? "/admin" : ""}`, {
       params: {
         page,
         sort,

@@ -21,7 +21,11 @@ const BlogSection = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [currentPage, setCurrentPage] = useState(1);
   const { isAuthenticated, handleLogout } = useAuth();
-  const { data: allBlogs, isLoading } = useAllBlogs({ page: currentPage, sort: "Desc" });
+  const { data: allBlogs, isLoading } = useAllBlogs({
+    page: currentPage,
+    sort: "Desc",
+    isAdmin: isAuthenticated,
+  });
   const { mutateAsync: deleteBlog } = useBlogDelete();
 
   const handleBlogCreate = async () => {
@@ -30,8 +34,8 @@ const BlogSection = () => {
       titlePath: generateUniqueTitlePath("Default Blog Title"),
       content: "This is the default content for the blog post.",
       metaDescription: "This is a default meta description for SEO.",
-      status: "draft" as TStatus, // Assuming TStatus has a value 'draft'
-      image:
+      status: "Draft" as TStatus, // Assuming TStatus has a value 'draft'
+      imageUrl:
         "https://res.cloudinary.com/dchnaa2wb/image/upload/v1729259681/xnmlcsaogei5cfjtgdv2.jpg",
     };
 
@@ -84,24 +88,16 @@ const BlogSection = () => {
       <div className="w-full h-full rounded-lg bg-white grid xs:grid-cols-1 sm:grid-cols-2 desktop:grid-cols-3 gap-x-4 gap-y-5">
         {isLoading
           ? Array.from({ length: 6 }).map((_, index) => <BlogCardSkeleton key={index} />)
-          : allBlogs?.blogsList.map(
-              ({ id, title, titlePath, readingTime, image, created_at: date }) => (
-                <BlogCard
-                  isAdminMode={isAuthenticated}
-                  onEdit={() => navigate(`/admin/edit-blog/${titlePath}`)}
-                  onDelete={handleDeleteBlog}
-                  id={id}
-                  date={date}
-                  image={image}
-                  imageAlt={title}
-                  key={id}
-                  title={title}
-                  readingTime={readingTime}
-                  titlePath={titlePath}
-                  className="shadow-none"
-                />
-              )
-            )}
+          : allBlogs?.blogsList.map((data) => (
+              <BlogCard
+                isAdminMode={isAuthenticated}
+                data={data}
+                onEdit={() => navigate(`/admin/edit-blog/${data.titlePath}`)}
+                onDelete={handleDeleteBlog}
+                key={data.id}
+                className="shadow-none"
+              />
+            ))}
         {isAbleToCreateBlog && <CreateBlog handleBlogCreate={handleBlogCreate} />}
       </div>
       {allBlogs && allBlogs.totalItems >= allBlogs.pageSize && !isLoading && (

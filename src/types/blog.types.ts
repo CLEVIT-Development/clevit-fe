@@ -1,6 +1,7 @@
 import type * as yup from "yup";
 
 import { type BlogSchema } from "@/common/schemas/blogSchema";
+import type { TStatus } from "@/shared/forms/BlogAddEditForm/types";
 
 export type IBlogData = yup.InferType<typeof BlogSchema>;
 
@@ -12,6 +13,7 @@ export interface IBlog {
   content: string;
   created_at: string;
   titlePath: string;
+  status: TStatus;
   metaDescription: string;
   readingTime?: string;
 }

@@ -12,11 +12,12 @@ export type IBlog = {
   titlePath: string;
   content: string;
   description?: string;
+  imageUrl?: string;
   metaDescription: string;
   status: TStatus;
   //TODO: Fix later for more type safety
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  image: string | any;
+  image: string;
   created_at?: string;
   readingTime?: string;
 };
