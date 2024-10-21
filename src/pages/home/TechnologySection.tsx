@@ -125,6 +125,18 @@ const TechnologySection = ({ title, subTitle, tabsConstant, technologiesConstant
         ) : null}
 
         <div className={`py-5 desktop:pb-12 desktop:mt-4 overflow-hidden`}>
+          {tabsConstant.find((tab) => tab.id === activeTab)?.subDescription ? (
+            <div className="w-full flex flex-col desktop:flex-row desktop:justify-evenly gap-6  mb-8">
+              {tabsConstant
+                .find((tab) => tab.id === activeTab)
+                ?.subDescription.map(({ description, title }, index) => (
+                  <div className="desktop:w-1/3 w-full text-start">
+                    <h3 className="mb-4 text-md font-semibold">{title}</h3>
+                    <span dangerouslySetInnerHTML={{ __html: description }} />
+                  </div>
+                ))}
+            </div>
+          ) : null}
           <div ref={contentRef} className="w-full h-full">
             <div
               className={`w-full flex-wrap flex items-center justify-center ${

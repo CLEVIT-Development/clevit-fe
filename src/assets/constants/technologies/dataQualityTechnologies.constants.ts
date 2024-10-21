@@ -26,21 +26,16 @@ export const dataQualityTechnologiesTabsConstants: ITabsConstant[] = [
   },
   {
     id: 3,
-    title: "CI/CD Pipeline Automation",
-    description:
-      "Our CI/CD services help optimize your software development process saving your time and efforts for the same. Through the use of Jenkins, AWS CodePipeline, Azure DevOps we are able to ensure that the code you write gets tested, deployed and released to the cloud platforms as soon as possible. This helps minimize the chances of human mistakes, enhance the software release cycle, and ensure that you are always deploying and delivering the latest software.",
-  },
-  {
-    id: 4,
     title: "Performance & Load Testing",
     description:
       "Using tools such as <strong>Jmeter</strong> and <strong>Tricentis Tosca</strong>, we can emulate high loads and performance stress to guarantee the stability of your data-handling systems.",
   },
+
   {
-    id: 5,
+    id: 4,
     title: "End-to-End Data Integrity Testing",
     description:
-      "For such purposes, some of the effective tools for the end-to-end testing are Playwright and Tricentis Tosca to check the data integrity, security, and accuracy from the life cycle of the system.",
+      "For such purposes, some of the effective tools for the end-to-end testing are <strong>Playwright</strong>  and <strong>Tricentis Tosca</strong>  to check the data integrity, security, and accuracy from the life cycle of the system.",
   },
 ];
 
@@ -76,16 +71,6 @@ export const dataQualityTechnologiesConstants = {
     { id: 4, title: "SoapUI", Icon: SoapUI },
   ],
   4: [
-    { id: 1, title: "Selenium", Icon: Selenium },
-    { id: 2, title: "Testlink", Icon: TestLink },
-    { id: 3, title: "Apiary", Icon: Apiary },
-    { id: 4, title: "Cypress ", Icon: Cypress },
-    { id: 4, title: "Playwright", Icon: Playwright },
-    { id: 4, title: "Jmeter", Icon: Jmeter },
-    { id: 4, title: "Tricentis Tosca", Icon: TricentisTosca },
-    { id: 4, title: "SoapUI", Icon: SoapUI },
-  ],
-  5: [
     { id: 1, title: "Selenium", Icon: Selenium },
     { id: 2, title: "Testlink", Icon: TestLink },
     { id: 3, title: "Apiary", Icon: Apiary },
