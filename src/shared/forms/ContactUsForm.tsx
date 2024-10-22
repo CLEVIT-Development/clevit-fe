@@ -109,7 +109,7 @@ const ContactUs = () => {
             render={({ field: { ref, ...field } }) => (
               <PhoneInput
                 ref={ref}
-                label="Phone"
+                label="Phone Number"
                 extraProps={field}
                 error={errors.phone?.message}
                 placeholder="Enter Your Phone Number"
@@ -127,7 +127,7 @@ const ContactUs = () => {
           />
           <TextArea
             maxLength={2000}
-            label="How Can We Help"
+            label="How Can We Help?"
             className="desktop:col-span-2"
             placeholder="Describe your idea/project briefly"
             {...register("description")}

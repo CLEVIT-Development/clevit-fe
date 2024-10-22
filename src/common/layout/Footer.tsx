@@ -27,10 +27,10 @@ const Footer = () => {
 
   return (
     <footer className="flex flex-col bg-black lg:pt-12 lg:pb-6 xs:pt-5 xs:pb-4 lg:px-20 xs:px-5 z-[20]">
-      <div className="flex flex-wrap gap-8 lg:grid lg:grid-cols-6">
-        <div className="w-[45%] lg:w-fit flex flex-col space-y-4 sm:col-auto xs:col-span-2">
+      <div className="flex flex-wrap gap-8 lg:grid lg:grid-cols-6 xs:grid xs:grid-cols-1 md:grid-cols-3">
+        <div className="desktop:w-[45%] lg:w-fit flex flex-col space-y-4 sm:col-auto xs:col-span-2 w-full">
           <Logo />
-          <span className="lg:text-base xs:text-sm text-gray-100 max-w-[340px]">
+          <span className="lg:text-base xs:text-sm text-gray-100 desktop:max-w-[340px] ">
             As a leading web and mobile app development company, Clevit empowers businesses across
             all sectors to unlock their full digital potential. Our team of skilled web app
             developers delivers top-notch web, mobile, and AI-driven solutions tailored to your

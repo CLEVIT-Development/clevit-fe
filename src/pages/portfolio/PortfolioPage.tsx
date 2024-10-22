@@ -149,13 +149,13 @@ const PortfolioPage = () => {
                         {item.isLink ? (
                           <a
                             href={`https://www.${item.value}`}
-                            className="text-blue-200 font-semibold"
+                            className="text-blue-200 font-semibold underline"
                             target="_blank"
                           >
                             {item.value as string}
                           </a>
                         ) : !Array.isArray(item.value) ? (
-                          <span className="text-gray-200">{item.value}</span>
+                          <span className="text-gray-200 font-semibold">{item.value}</span>
                         ) : (
                           <div className="flex">
                             {item.value.map((elem, i) => (

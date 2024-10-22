@@ -39,7 +39,7 @@ export const digitalMarketingTechnologiesTabsConstants: ITabsConstant[] = [
     id: 5,
     title: "Analytics & Reporting",
     description:
-      "We offer further explanations, and analysis with data from Google Analytics for evaluating the results of your ad campaigns with statistical indicators and constant optimization of processes",
+      "We offer further explanations, and analysis with data from <strong>Google Analytics</strong> for evaluating the results of your ad campaigns with statistical indicators and constant optimization of processes",
   },
 ];
 

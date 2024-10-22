@@ -31,6 +31,11 @@ interface Props {
     [key: number]: ITechnologyConstant[];
   };
 }
+interface SubDescription {
+  id: string;
+  title: string;
+  description: string;
+}
 
 const TechnologySection = ({ title, subTitle, tabsConstant, technologiesConstant }: Props) => {
   const [activeTab, setActiveTab] = useState(tabsConstant[0].id);
@@ -81,7 +86,7 @@ const TechnologySection = ({ title, subTitle, tabsConstant, technologiesConstant
   }, [activeTab, direction, isMobile]);
 
   return (
-    <Section className="w-full bg-gray-300 px-5 md:px-20 desktop:px-28">
+    <Section className="w-full bg-gray-300 px-5 md:px-20 desktop:px-28 rounded-lg">
       <div className="w-full h-full" ref={sectionRef}>
         <h2 className="desktop:text-2xl text-center text-lg text-[#314252] pt-5 pb-6 desktop:pt-12">
           {title}
@@ -98,13 +103,17 @@ const TechnologySection = ({ title, subTitle, tabsConstant, technologiesConstant
                 role="tab"
                 key={tab.id}
                 onClick={() => handleTabChange(tab.id)}
-                className={`cursor-pointer mb-2 desktop:mb-0 desktop:mr-10 relative duration-500 whitespace-nowrap outline-none focus:outline-none lg:text-md desktop:text-base !font-bold after:transition-all after:bg-purple-500 pb-3 desktop:pb-6
-                  ${
-                    activeTab === tab.id
-                      ? "after:w-full text-purple-100 after:-bottom-5 decoration-2 underline decoration-purple-500 desktop:h-2 desktop:underline-offset-[15px]"
-                      : "after:w-0 after:bg-transparent text-gray-200"
-                  }
-                `}
+                className={`
+                           cursor-pointer mb-2 desktop:mb-0 desktop:mr-10 relative duration-500 whitespace-nowrap 
+                           outline-none focus:outline-none lg:text-md desktop:text-base !font-bold
+                           after:transition-all after:absolute after:left-0 after:h-[2px]
+                           pb-3 desktop:pb-3 after:bottom-[5px]
+                         ${
+                           activeTab === tab.id
+                             ? "after:w-full text-purple-100 after:bg-purple-500 desktop:after:w-[100%]"
+                             : "text-gray-200 after:w-full after:bg-[#314252]/50 desktop:after:w-0"
+                         }
+                     `}
               >
                 {tab.title}
               </span>
@@ -121,6 +130,18 @@ const TechnologySection = ({ title, subTitle, tabsConstant, technologiesConstant
         ) : null}
 
         <div className={`py-5 desktop:pb-12 desktop:mt-4 overflow-hidden`}>
+          {tabsConstant.find((tab) => tab.id === activeTab)?.subDescription ? (
+            <div className="w-full flex flex-col desktop:flex-row desktop:justify-evenly gap-6  mb-8">
+              {tabsConstant
+                .find((tab) => tab.id === activeTab)
+                ?.subDescription.map(({ description, title, id }: SubDescription) => (
+                  <div key={id} className="desktop:w-1/3 w-full text-start">
+                    <h3 className="mb-4 text-md font-semibold">{title}</h3>
+                    <span dangerouslySetInnerHTML={{ __html: description }} />
+                  </div>
+                ))}
+            </div>
+          ) : null}
           <div ref={contentRef} className="w-full h-full">
             <div
               className={`w-full flex-wrap flex items-center justify-center ${

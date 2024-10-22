@@ -42,6 +42,7 @@ const JavaIcon = lazy(() => import("@/assets/vectors/technology/Java.svg?react")
 
 export interface ITabsConstant extends INavigationData {
   description?: string;
+  subDescription?: any;
 }
 
 export interface ITechnologyConstant {

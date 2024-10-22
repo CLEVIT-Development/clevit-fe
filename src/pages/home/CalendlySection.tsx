@@ -19,7 +19,7 @@ const CalendlySection = ({ title }: Props) => {
     <Section
       title={title}
       titleClassName="desktop:text-xl-l"
-      className="desktop:space-y-0 space-y-6"
+      className="desktop:space-y-0 space-y-6 px-5"
       headingLevel="h1"
     >
       <div className="w-full">

@@ -12,7 +12,7 @@ const TeamSection = () => {
   };
 
   return (
-    <Section className="self-center desktop:max-w-[80%]">
+    <Section className="self-center desktop:max-w-[80%] lg:max-w-[1024px]">
       <p className="break-words desktop:text-center text-md font-normal">
         As a full-cycle development partner, Clevit provides tailored solutions to help businesses
         regardless of their size to innovate and expand in a consistently changing digital arena.
@@ -23,7 +23,7 @@ const TeamSection = () => {
         loading="lazy"
         src={TeamPhoto}
         alt="Team Picture"
-        className="xl:max-w-[1024px] desktop:max-w-[768px]"
+        className="lg:max-w-[1024px] desktop:max-w-[768px]"
       />
       <Button onClick={redirectToCalendly} prefix={<Messages />}>
         Let's Talk

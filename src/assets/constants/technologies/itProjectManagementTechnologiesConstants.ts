@@ -30,13 +30,7 @@ export const itProjectManagmentTechnologiesTabsConstants: ITabsConstant[] = [
     id: 3,
     title: "Hybrid Project Management",
     description:
-      "Interacting with the advantages of Agile and Waterfall and discarding their vices, we employ Notion and Airtable to achieve efficiency in project management. This enables the use of thorough cyclical scheduling and strategic long-term planning since there is often a need for both in complex projects.\n",
-  },
-  {
-    id: 4,
-    title: "Cloud Security & Compliance",
-    description:
-      "Security and compliance are of paramount importance within the context of DevOps. We offer security services across the cloud stack, guaranteeing that your <strong>AWS</strong>, <strong>Azure</strong>, or <strong>Google Cloud</strong> environment is optimized with proper configurations and complies with regulations such as <strong>GDPR</strong>, <strong>HIPAA</strong>, and <strong>SOC 2.</strong>",
+      "Interacting with the advantages of <strong>Agile and Waterfall</strong>  and discarding their vices, we employ <strong>Notion and Airtable</strong> to achieve efficiency in project management. This enables the use of thorough cyclical scheduling and strategic long-term planning since there is often a need for both in complex projects.\n",
   },
 ];
 
@@ -60,15 +54,6 @@ export const itProjectManagementTechnologiesConstants = {
     { id: 7, title: "Notion", Icon: Notion },
   ],
   3: [
-    { id: 1, title: "Jira", Icon: Jira },
-    { id: 2, title: "Trelo", Icon: Trelo },
-    { id: 3, title: "Microsoft Project", Icon: MicrosoftProject },
-    { id: 4, title: "Asana", Icon: Asana },
-    { id: 5, title: "Redmine", Icon: Redmine },
-    { id: 6, title: "Airtable", Icon: Airtable },
-    { id: 7, title: "Notion", Icon: Notion },
-  ],
-  4: [
     { id: 1, title: "Jira", Icon: Jira },
     { id: 2, title: "Trelo", Icon: Trelo },
     { id: 3, title: "Microsoft Project", Icon: MicrosoftProject },

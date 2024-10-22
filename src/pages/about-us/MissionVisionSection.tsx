@@ -20,9 +20,10 @@ const MissionVisionSection = () => {
 
   return (
     <Section
-      className="self-center desktop:max-w-[80%] bg-gray-500 rounded-lg-l md:space-y-12 space-y-6 py-12 md:pl-[100px] md:pr-[53px] pl-[20px] pr-[20px] bg-no-repeat md:bg-missionDesktopPosition bg-missionMobilePosition"
+      className="self-center desktop:max-w-[80%] bg-gray-500 rounded-lg-l md:space-y-12 space-y-6 py-12 md:pl-[100px] md:pr-[53px] pl-[20px] pr-[20px] bg-no-repeat md:bg-missionDesktopPosition bg-missionMobilePosition "
       style={{
         backgroundImage: isMobile ? `url(${MissionVisionMobile})` : `url(${MissionVisionDesktop})`,
+        border: "1px solid #FAFAFA",
       }}
     >
       <MissionSingleItem
