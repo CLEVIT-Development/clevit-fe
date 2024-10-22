@@ -112,7 +112,7 @@ const Header = forwardRef(
         </div>
         <div
           className={classNames(
-            "transition-all duration-700 overflow-hidden lg:hidden flex flex-col justify-between items-center h-0",
+            "transition-all duration-700 overflow-hidden lg:hidden flex flex-col justify-between items-center h-0 xs:overflow-y-auto",
             {
               ["h-[70vh] md:h-[45vh]  sm:h-[40vh] lg:h-[30vh] desktop:h-[40vh]"]: isOpen,
             }
