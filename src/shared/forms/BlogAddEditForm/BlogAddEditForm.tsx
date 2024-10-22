@@ -1,45 +1,126 @@
-import { useEffect, useState } from "react";
-import { FormProvider, useForm } from "react-hook-form";
-import { useNavigate, useParams } from "react-router-dom";
+import { useCallback, useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
+import { useBeforeUnload, useBlocker, useNavigate } from "react-router-dom";
 
 import { RoutePaths } from "@/app/routing/routing.constants";
-import useBlog from "@/common/hooks/useBlog";
+import { useBlogUpdate } from "@/common/hooks/blog/blogMutations";
+import useAutosave from "@/common/hooks/useAutoSave";
+import useLockBodyScroll from "@/common/hooks/useBodyLock";
 import { BlogSchema } from "@/common/schemas/blogSchema";
 import showNotification, { ToastVersions } from "@/common/services/toast/showNotifications";
+import Button from "@/shared/ui/Button";
+import Input from "@/shared/ui/forms/Input";
 import RichTextEditor from "@/shared/ui/forms/RichTextEditor";
 import TextArea from "@/shared/ui/forms/TextArea";
 import { yupResolver } from "@hookform/resolvers/yup";
 
-import Button from "../../ui/Button";
-import Input from "../../ui/forms/Input";
+import SaveReminder from "./SaveReminder";
 import { type IBlog } from "./types";
 
 interface IBlogFormProps {
   initialData?: IBlog;
-  isLoading?: boolean;
 }
 
-const BlogForm = ({ initialData, isLoading }: IBlogFormProps) => {
-  const methods = useForm<IBlog>({
+const BlogForm = ({ initialData }: IBlogFormProps) => {
+  const {
+    register,
+    setValue,
+    formState: { errors, isDirty },
+    trigger,
+    getValues,
+    reset,
+  } = useForm({
     mode: "onChange",
     resolver: yupResolver(BlogSchema),
     shouldUnregister: true,
+    defaultValues: initialData,
   });
 
   const [imagePreview, setImagePreview] = useState<string | null>(null);
+  const { mutateAsync: updateBlogById, isSuccess } = useBlogUpdate();
+  const navigate = useNavigate();
+
+  const blocker = useBlocker(({ currentLocation, nextLocation }) => {
+    const curr = currentLocation.pathname.split("/");
+    const next = nextLocation.pathname.split("/");
+    const isSamePage = curr.length === next.length;
+
+    // dont block page if title Path updating
+    const isSamePathname = isSamePage && curr[curr.length - 1] === next[next.length - 1];
+
+    return isDirty && !isSamePathname && currentLocation.pathname !== nextLocation.pathname;
+  });
+
+  useLockBodyScroll(blocker.state === "blocked");
+
+  useBeforeUnload(
+    useCallback(
+      (event) => {
+        if (isDirty && !isSuccess) {
+          event.preventDefault();
+          event.returnValue =
+            "You have unsaved changes. Exiting this page will lose all your work.";
+        }
+      },
+      [isDirty]
+    )
+  );
 
   useEffect(() => {
-    if (initialData) {
-      setValue("title", initialData.title);
-      setValue("titlePath", initialData.titlePath);
-      setValue("content", initialData.content);
-      setValue("image", initialData.image);
-      setValue("id", initialData.id);
-      setValue("metaDescription", initialData.metaDescription);
+    if (initialData?.image) {
       setImagePreview(initialData.image);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [initialData]);
+  }, [initialData?.image]);
+
+  const handleBlogSave = async () => {
+    const data = getValues();
+    const blogId = initialData?.id;
+
+    const updateData = { id: blogId, ...data, status: initialData?.status ?? "Draft" };
+
+    if (blogId) {
+      try {
+        await updateBlogById(updateData as IBlog);
+        showNotification({
+          type: ToastVersions.success,
+          title: "Success",
+          description: "Blog has been successfully updated",
+        });
+        blocker.proceed?.();
+      } catch (e) {
+        showNotification({
+          type: ToastVersions.error,
+          title: "Error",
+          description: "There was an error updating the blog",
+        });
+      }
+    }
+  };
+
+  const handlePublish = async () => {
+    const data = getValues();
+    const publishData = {
+      id: initialData?.id,
+      ...data,
+      status: "Published",
+    };
+
+    if (initialData?.id) {
+      await updateBlogById(publishData as IBlog);
+      await navigate("/blogs");
+      showNotification({
+        type: ToastVersions.success,
+        title: "Success",
+        description: "Blog has been successfully Published",
+      });
+    }
+  };
+
+  useAutosave({
+    onSave: handleBlogSave,
+    isDirty,
+    interval: 10000,
+  });
 
   const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
@@ -48,70 +129,6 @@ const BlogForm = ({ initialData, isLoading }: IBlogFormProps) => {
       setValue("image", file);
       trigger("image");
       setImagePreview(URL.createObjectURL(file));
-    }
-  };
-
-  const navigate = useNavigate();
-  const { id } = useParams<{ id?: string }>();
-  const { addBlog, updateBlogById, loading: blogLoading } = useBlog();
-  const isFormLoading = isLoading || blogLoading;
-  const {
-    register,
-    handleSubmit,
-    setValue,
-    formState: { errors },
-    trigger,
-  } = methods;
-
-  const onFormSubmit = async (data: IBlog) => {
-    if (data?.id) {
-      updateBlogById(data.id, data, {
-        onSuccess: () => {
-          showNotification({
-            type: ToastVersions.success,
-            title: "Blog Successfully updated.",
-            description: "",
-          });
-          navigate(RoutePaths.Blogs);
-        },
-        onFailure: () => {
-          showNotification({
-            type: ToastVersions.error,
-            title: "Update failed",
-            description: "Could not update the blog",
-          });
-        },
-      });
-    } else {
-      addBlog(
-        {
-          id: data.id || "",
-          created_at: data.created_at || "",
-          description: data.description || "",
-          titlePath: data.titlePath || "",
-          title: data.title,
-          content: data.content,
-          image: data.image || "",
-          metaDescription: data.metaDescription || "",
-        },
-        {
-          onSuccess: () => {
-            showNotification({
-              type: ToastVersions.success,
-              title: "Blog Successfully created.",
-              description: "",
-            });
-            navigate(RoutePaths.Blogs);
-          },
-          onFailure: () => {
-            showNotification({
-              type: ToastVersions.error,
-              title: "Creation failed",
-              description: "Could not create the blog",
-            });
-          },
-        }
-      );
     }
   };
 
@@ -125,9 +142,22 @@ const BlogForm = ({ initialData, isLoading }: IBlogFormProps) => {
     }
   };
 
+  const handleExit = () => {
+    blocker.proceed?.();
+  };
+
+  const handleExitWithSave = async () => {
+    await handleBlogSave();
+
+    reset();
+    navigate(RoutePaths.Blogs, {
+      replace: true,
+    });
+  };
+
   return (
-    <FormProvider {...methods}>
-      <form className="w-full desktop:w-[700px] space-y-4" onSubmit={handleSubmit(onFormSubmit)}>
+    <>
+      <form className="w-full desktop:w-[700px] space-y-4" onSubmit={(e) => e.preventDefault()}>
         <div>
           {imagePreview && (
             <div className="mt-2">
@@ -139,7 +169,6 @@ const BlogForm = ({ initialData, isLoading }: IBlogFormProps) => {
             </div>
           )}
           <Input
-            disabled={isFormLoading}
             required
             error={errors.image?.message as string}
             label="Image"
@@ -152,7 +181,6 @@ const BlogForm = ({ initialData, isLoading }: IBlogFormProps) => {
         </div>
         <Input
           required
-          disabled={isFormLoading}
           label="Title"
           error={errors.title?.message}
           placeholder="Blog Title"
@@ -160,7 +188,6 @@ const BlogForm = ({ initialData, isLoading }: IBlogFormProps) => {
         />
         <Input
           required
-          disabled={isFormLoading}
           label="Title path"
           error={errors.titlePath?.message}
           placeholder="Blog Title Path"
@@ -169,24 +196,32 @@ const BlogForm = ({ initialData, isLoading }: IBlogFormProps) => {
         <TextArea
           maxLength={3000}
           required
-          disabled={isFormLoading}
           label="Meta description"
           error={errors.metaDescription?.message}
           placeholder="Blog Meta Description"
           {...register("metaDescription")}
         />
         <RichTextEditor
-          disabled={isFormLoading}
           required
           label="Content"
           error={errors.content?.message}
           onContentChange={handleContentChange}
           initialContent={initialData?.content || ""}
         />
-
-        <Button type="submit">{id ? "Update Blog" : "Create Blog"}</Button>
+        <div className="flex items-center justify-between">
+          <Button onClick={handleBlogSave}>Save Blog</Button>
+          <Button className="bg-black" onClick={handlePublish}>
+            Publish Blog
+          </Button>
+        </div>
       </form>
-    </FormProvider>
+      <SaveReminder
+        isOpen={blocker.state === "blocked"}
+        onReset={blocker.reset}
+        onExit={handleExit}
+        onSaveAndExit={handleExitWithSave}
+      />
+    </>
   );
 };
 

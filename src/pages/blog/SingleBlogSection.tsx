@@ -1,11 +1,11 @@
-import { Suspense, lazy, useEffect } from "react";
+import { Suspense, lazy } from "react";
 import { useLocation } from "react-router-dom";
 import { FacebookShareButton, LinkedinShareButton, TwitterShareButton, XIcon } from "react-share";
+
 import ImagePlaceholder from "@/assets/images/ImagePlaceholder.jpg";
 import FacebookIcon from "@/assets/vectors/Facebook.svg?react";
 import LinkedInIcon from "@/assets/vectors/Linkedin.svg?react";
-import { useBlogContext } from "@/common/context/BlogContext.tsx";
-import useBlog from "@/common/hooks/useBlog";
+import { useBlogByTitle, useLastThreeBlogs } from "@/common/hooks/blog/blogQueries";
 import useOrigin from "@/common/hooks/useOrigin.ts";
 import BlogCard from "@/shared/ui/BlogCard/BlogCard.tsx";
 
@@ -19,14 +19,10 @@ interface SingleBlogPageProps {
 }
 
 const SingleBlogSection = ({ titlePath }: SingleBlogPageProps) => {
-  const { getBlogByTitleName, blogData } = useBlog();
-  const { lastThreeBlogs } = useBlogContext();
+  const { data: lastThreeBlogs } = useLastThreeBlogs();
+  const { data: blogData } = useBlogByTitle(titlePath!);
   const origin = useOrigin();
   const { pathname } = useLocation();
-
-  useEffect(() => {
-    if (titlePath) getBlogByTitleName(titlePath);
-  }, [titlePath]);
 
   return !blogData ? (
     <BlogPreviewSkeleton />
@@ -37,7 +33,7 @@ const SingleBlogSection = ({ titlePath }: SingleBlogPageProps) => {
           loading="lazy"
           className=" object-cover aspect-auto w-full lg:h-[552px] lg:flex rounded-[20px] bg-[#D9D9D9]"
           alt={blogData.title}
-          src={blogData.image || ImagePlaceholder}
+          src={(blogData.image as string) || ImagePlaceholder}
         />
         <h1 className="mt-4 font-semibold text-xl lg:text-2xl text-gray-200 w-full">
           {blogData.title}
@@ -61,9 +57,9 @@ const SingleBlogSection = ({ titlePath }: SingleBlogPageProps) => {
       <div className="w-full mt-7 lg:mt-24">
         <h2 className="text-lg font-bold">More Posts</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-5 desktop:mt-7">
-          {lastThreeBlogs.map((blog) => (
+          {lastThreeBlogs?.map((blog) => (
             <div className="w-full md:max-w-1/2 desktop:max-w-[410px]">
-              <BlogCard {...blog} className="shadow-none" />
+              <BlogCard data={blog} className="shadow-none" />
             </div>
           ))}
         </div>

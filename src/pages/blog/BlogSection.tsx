@@ -1,35 +1,47 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
+
+import { useBlogCreate, useBlogDelete } from "@/common/hooks/blog/blogMutations";
+import { useAllBlogs } from "@/common/hooks/blog/blogQueries";
 import { useAuth } from "@/common/hooks/useAuth";
-import useBlog from "@/common/hooks/useBlog";
 import showNotification, { ToastVersions } from "@/common/services/toast/showNotifications";
 import Section from "@/common/templates/Section.tsx";
+import type { TStatus } from "@/shared/forms/BlogAddEditForm/types";
 import BlogCard from "@/shared/ui/BlogCard/BlogCard";
 import BlogCardSkeleton from "@/shared/ui/BlogCard/BlogCardSkeleton";
 import Button from "@/shared/ui/Button";
 import Pagination from "@/shared/ui/Pagination";
 import { ButtonVariant } from "@/types/variant.types";
+import { generateUniqueTitlePath } from "@/utils/helper.utils";
 
 import CreateBlog from "./CreatBlogCard";
 
 const BlogSection = () => {
-  const { getAllBlogs, allBlogs, deleteBlogById, pagination, loading } = useBlog();
+  const { mutateAsync: createBlog } = useBlogCreate();
   const containerRef = useRef<HTMLDivElement>(null);
   const [currentPage, setCurrentPage] = useState(1);
   const { isAuthenticated, handleLogout } = useAuth();
+  const { data: allBlogs, isLoading } = useAllBlogs({
+    page: currentPage,
+    sort: "Desc",
+    isAdmin: isAuthenticated,
+  });
+  const { mutateAsync: deleteBlog } = useBlogDelete();
 
-  useEffect(() => {
-    // const onSuccess = () => {
-    //   containerRef.current?.scrollIntoView({
-    //     behavior: "smooth",
-    //     inline: "start",
-    //     block: "start",
-    //   });
-    // };
+  const handleBlogCreate = async () => {
+    const defaultBlog = {
+      title: "Default Blog Title",
+      titlePath: generateUniqueTitlePath("Default Blog Title"),
+      content: "This is the default content for the blog post.",
+      metaDescription: "This is a default meta description for SEO.",
+      status: "Draft" as TStatus, // Assuming TStatus has a value 'draft'
+      imageUrl:
+        "https://res.cloudinary.com/dchnaa2wb/image/upload/v1729259681/xnmlcsaogei5cfjtgdv2.jpg",
+    };
 
-    getAllBlogs(currentPage);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [currentPage]);
+    await createBlog(defaultBlog);
+    navigate(`/admin/edit-blog/${defaultBlog.titlePath}`);
+  };
 
   const handlePageChange = (newPage: number) => {
     setCurrentPage(newPage);
@@ -37,22 +49,24 @@ const BlogSection = () => {
 
   const navigate = useNavigate();
 
-  const handleDeleteBlog = (id: string) => {
-    deleteBlogById(id, {
-      onSuccess: () =>
-        showNotification({
-          type: ToastVersions.success,
-          description: "Blog has successfully deleted.",
-        }),
-      onFailure: () =>
-        showNotification({
-          type: ToastVersions.error,
-          description: "Error deleting blog.",
-        }),
-    });
+  const handleDeleteBlog = async (id: string) => {
+    try {
+      await deleteBlog(id);
+      showNotification({
+        type: ToastVersions.success,
+        description: "Blog has successfully deleted.",
+      });
+    } catch (err) {
+      showNotification({
+        type: ToastVersions.error,
+        description: "Error deleting blog.",
+      });
+    }
   };
 
-  const isAbleToCreateBlog = [allBlogs, allBlogs?.length, isAuthenticated, !loading].every(Boolean);
+  const isAbleToCreateBlog = [allBlogs?.blogsList.length, isAuthenticated, !isLoading].every(
+    Boolean
+  );
 
   return (
     <Section className="!px-5 desktop:px-0" headingLevel="h2" ref={containerRef}>
@@ -61,41 +75,35 @@ const BlogSection = () => {
           Logout
         </Button>
       ) : null}
-      {!allBlogs?.length && !loading && (
+      {!allBlogs?.blogsList.length && !isLoading && (
         <div className="flex flex-col items-center justify-center h-64">
           <p className="text-gray-100 text-lg mb-4">No blogs available at the moment.</p>
           {isAuthenticated && (
-            <Button variant={ButtonVariant.Primary} onClick={() => navigate("/admin/add-blog")}>
+            <Button variant={ButtonVariant.Primary} onClick={handleBlogCreate}>
               Create New Blog
             </Button>
           )}
         </div>
       )}
       <div className="w-full h-full rounded-lg bg-white grid xs:grid-cols-1 sm:grid-cols-2 desktop:grid-cols-3 gap-x-4 gap-y-5">
-        {loading
+        {isLoading
           ? Array.from({ length: 6 }).map((_, index) => <BlogCardSkeleton key={index} />)
-          : allBlogs?.map(({ id, title, titlePath, readingTime, image, created_at: date }) => (
+          : allBlogs?.blogsList.map((data) => (
               <BlogCard
                 isAdminMode={isAuthenticated}
-                onEdit={() => navigate(`/admin/edit-blog/${titlePath}`)}
+                data={data}
+                onEdit={() => navigate(`/admin/edit-blog/${data.titlePath}`)}
                 onDelete={handleDeleteBlog}
-                id={id}
-                date={date}
-                image={image}
-                imageAlt={title}
-                key={id}
-                title={title}
-                readingTime={readingTime}
-                titlePath={titlePath}
+                key={data.id}
                 className="shadow-none"
               />
             ))}
-        {isAbleToCreateBlog && <CreateBlog />}
+        {isAbleToCreateBlog && <CreateBlog handleBlogCreate={handleBlogCreate} />}
       </div>
-      {pagination && pagination.totalItems >= pagination.pageSize && !loading && (
+      {allBlogs && allBlogs.totalItems >= allBlogs.pageSize && !isLoading && (
         <Pagination
-          totalItems={pagination.totalItems}
-          pageSize={pagination.pageSize}
+          totalItems={allBlogs.totalItems}
+          pageSize={allBlogs.pageSize}
           currentPage={currentPage}
           onPageChange={handlePageChange}
         />

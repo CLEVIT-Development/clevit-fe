@@ -1,7 +1,6 @@
-import { useEffect } from "react";
 import { useLocation, useParams } from "react-router-dom";
 
-import useBlog from "@/common/hooks/useBlog";
+import { useBlogByTitle } from "@/common/hooks/blog/blogQueries";
 import useOrigin from "@/common/hooks/useOrigin";
 import SingleBlogHeading from "@/common/layout/Heading/SingleBlogHeading";
 import Layout from "@/common/layout/Layout.tsx";
@@ -15,13 +14,9 @@ import SingleBlogSection from "./SingleBlogSection";
 
 const SingleBlogPage = () => {
   const { titlePath } = useParams();
-  const { getBlogByTitleName, blogData } = useBlog();
+  const { data: blogData } = useBlogByTitle(titlePath!);
   const { pathname } = useLocation();
   const origin = useOrigin();
-
-  useEffect(() => {
-    if (titlePath) getBlogByTitleName(titlePath);
-  }, [titlePath]);
 
   const canonicalUrl = origin + pathname;
 
