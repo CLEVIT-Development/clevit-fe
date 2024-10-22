@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Helmet } from "react-helmet";
 import ReactModal from "react-modal";
-
 import Routing from "app/routing/routing.tsx";
 
 import ToastService from "@/common/services/toast/ToastService.tsx";
