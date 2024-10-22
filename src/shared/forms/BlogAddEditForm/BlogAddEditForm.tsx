@@ -107,7 +107,7 @@ const BlogForm = ({ initialData }: IBlogFormProps) => {
 
     if (initialData?.id) {
       await updateBlogById(publishData as IBlog);
-
+      await navigate("/blogs");
       showNotification({
         type: ToastVersions.success,
         title: "Success",
@@ -148,6 +148,7 @@ const BlogForm = ({ initialData }: IBlogFormProps) => {
 
   const handleExitWithSave = async () => {
     await handleBlogSave();
+
     reset();
     navigate(RoutePaths.Blogs, {
       replace: true,
