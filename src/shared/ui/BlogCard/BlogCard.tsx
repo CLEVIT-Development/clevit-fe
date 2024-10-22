@@ -25,7 +25,7 @@ const BlogCard = ({ onDelete, onEdit, isAdminMode, className, data }: Props) => 
       role="button"
       onClick={() => navigate(`/blog/${data.titlePath}`)}
       className={twMerge(
-        "w-full h-full rounded-lg transition-all duration-500 space-y-[24px] min-h-[340px] flex flex-col items-start justify-between shadow-md relative",
+        "w-full h-full rounded-lg transition-all duration-500 gap-10 min-h-[340px] flex flex-col items-start justify-between shadow-md relative",
         className
       )}
     >
