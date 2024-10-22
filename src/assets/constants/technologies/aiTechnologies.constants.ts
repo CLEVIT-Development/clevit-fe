@@ -1,5 +1,4 @@
 import { lazy } from "react";
-
 import type { ITabsConstant } from "@/assets/constants/technologies/technologies.constants.ts";
 
 const ChatGPT = lazy(() => import("@/assets/vectors/technology/ChatGPT.svg?react"));
