@@ -67,13 +67,13 @@ const Navigation = ({ items, onItemClick, className = "" }: Props) => {
           className={`
           relative duration-500 whitespace-nowrap outline-none focus:outline-none
           lg:text-md desktop:text-base !font-bold
-          after:transition-all after:bg-purple-500 after:absolute after:left-0 after:h-[2px]
+          after:transition-all  after:absolute after:left-0 after:h-[2px]
           after:bottom-[-10px]
           
           ${
             activeTab === id
-              ? "text-purple-100 after:w-full sm:after:w-full lg:after:w-[100%]"
-              : "after:w-full after:bg-[#314252]/50 desktop:bg-transparent text-gray-200  desktop:after:w-0"
+              ? "text-purple-100 after:w-full sm:after:w-full lg:after:w-[100%] after:bg-purple-500"
+              : "after:w-full after:bg-[#314252]/50 desktop:bg-transparent text-gray-200 desktop:after:w-0"
           }
         `}
         >
