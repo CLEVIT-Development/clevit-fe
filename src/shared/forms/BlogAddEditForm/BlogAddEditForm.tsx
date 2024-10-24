@@ -157,7 +157,7 @@ const BlogForm = ({ initialData }: IBlogFormProps) => {
 
   return (
     <>
-      <form className="w-full desktop:w-[700px] space-y-4" onSubmit={(e) => e.preventDefault()}>
+      <form className="w-full desktop:w-[900px] space-y-4" onSubmit={(e) => e.preventDefault()}>
         <div>
           {imagePreview && (
             <div className="mt-2">
