@@ -1,56 +1,67 @@
-export const industriesConstants = [
-  [
-    "Media and Entertainment",
-    "Film Production",
-    "Commercial Advertising",
-    "Music Production and Sound Design",
-    "Technology and Software Development",
-    "Event Planning and Management",
-    "Hospitality",
-    "Online Booking Platforms",
-    "Virtual Meetings and Conferencing",
-    "Mobile Application Development",
-    "Information Technology (IT) Services",
-    "Managed Service Providers (MSPs)",
-    "Cybersecurity",
-    "Digital Transformation",
-    "Logistics and Transportation",
-    "Freight and Cargo Services",
-  ],
-  [
-    "Passenger Transportation",
-    "Supply Chain Management",
-    "Artificial Intelligence (AI)",
-    "Software as a Service (SaaS)",
-    "Data Integration",
-    "Data Analytics",
-    "Dashboard Development",
-    "Online Content Creation",
-    "Storytelling Platforms",
-    "Collaboration Tools",
-    "Task Management Systems",
-    "Human Resources (HR)",
-    "Performance Management",
-    "Employee Evaluation",
-    "Bonus Calculation",
-    "Automation and Workflow Tools",
-  ],
-  [
-    "Recruitment and Staffing",
-    "Career Development",
-    "Education and Training",
-    "Online Platforms",
-    "Healthcare Technology",
-    "Medical Software Development",
-    "Clinic and Lab Management",
-    "Digital Health Solutions",
-    "Telemedicine",
-    "COVID-19 Testing and Monitoring",
-    "Appointment Scheduling",
-    "Treatment Management",
-    "Regenerative Medicine",
-    "Underwriting",
-    "Landing",
-    "Insurance",
-  ],
+export interface Industry {
+  id: number;
+  name: string;
+}
+
+export const industriesConstants: Industry[] = [
+  {
+    id: 1,
+    name: "Media and Entertainment",
+  },
+  {
+    id: 2,
+    name: "Technology and Software Development",
+  },
+  {
+    id: 3,
+    name: "Online Booking Platforms",
+  },
+  {
+    id: 4,
+    name: "Mobile Application Development",
+  },
+  {
+    id: 5,
+    name: "Cybersecurity",
+  },
+  {
+    id: 6,
+    name: "Logistics and Transportation",
+  },
+  {
+    id: 7,
+    name: "Artificial Intelligence (AI)",
+  },
+  {
+    id: 8,
+    name: "Software as a Service (SaaS)",
+  },
+  {
+    id: 9,
+    name: "Data Analytics",
+  },
+  {
+    id: 10,
+    name: "Dashboard Development",
+  },
+  {
+    id: 11,
+    name: "Task Management Systems",
+  },
+  {
+    id: 12,
+    name: "Recruitment and Staffing",
+  },
+  {
+    id: 13,
+    name: "Education and Training",
+  },
+  {
+    id: 14,
+    name: "Medical Software Development",
+  },
+  {
+    id: 15,
+    name: "Insurances",
+  },
 ];

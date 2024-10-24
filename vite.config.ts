@@ -2,7 +2,6 @@ import { defineConfig } from "vite";
 import compression from "vite-plugin-compression";
 import { createHtmlPlugin } from "vite-plugin-html";
 import inspect from "vite-plugin-inspect";
-import sitemap from "vite-plugin-sitemap";
 import svgr from "vite-plugin-svgr";
 import tsconfigPaths from "vite-tsconfig-paths";
 
@@ -65,33 +64,38 @@ export default defineConfig({
     createHtmlPlugin({
       minify: true,
     }),
-    sitemap({
-      hostname: "https://www.clevit.io",
-      dynamicRoutes: [
-        "/",
-        "/about-us",
-        "/services",
-        "/portfolio",
-        "/faq",
-        "/contact-us",
-        "//privacy-policy",
-        "/terms-and-conditions",
-        "/request-demo",
-        "/web-development",
-      ],
-      exclude: ["/admin/**"],
-      changefreq: "daily", // Frequency for updates
-      priority: 1.0, // Default priority
-      lastmod: new Date(), // Last modified date
-      readable: true, // Optional, makes the XML human-readable
-      generateRobotsTxt: true, // Generate robots.txt
-      robots: [
-        { userAgent: "*", allow: "/" },
-        {
-          userAgent: "*",
-          disallow: ["/admin", "/admin/blog/:id?", "/admin/signin", "/admin/addBlog"],
-        }, // Disallow admin routes
-      ], // Robots policy
-    }),
+    // Not working in production. Need to generate sitemap.xml and robots.txt, then move both files to the public folder.
+    //   sitemap({
+    //     hostname: "https://www.clevit.io",
+    //     dynamicRoutes: [
+    //       "/",
+    //       "/about-us",
+    //       "/services",
+    //       "/portfolio",
+    //       "/faq",
+    //       "/contact-us",
+    //       "//privacy-policy",
+    //       "/terms-and-conditions",
+    //       "/request-demo",
+    //       "/web-development",
+    //       "/blogs",
+    //     ],
+    //     exclude: ["/admin/**"],
+    //     changefreq: "daily", // Frequency for updates
+    //     priority: 1.0, // Default priority
+    //     lastmod: new Date(), // Last modified date
+    //     readable: true, // Optional, makes the XML human-readable
+    //     generateRobotsTxt: true, // Generate robots.txt
+    //     robots: [
+    //       { userAgent: "*", allow: "/" },
+    //       {
+    //         userAgent: "*",
+    //         disallow: ["/admin", "/admin/blog/:id?", "/admin/signin", "/admin/addBlog"],
+    //       }, // Disallow admin routes
+    //     ], // Robots policy
+    //   }),
   ],
+  define: {
+    global: "globalThis",
+  },
 });

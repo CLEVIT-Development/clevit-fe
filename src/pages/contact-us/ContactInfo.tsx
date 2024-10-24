@@ -6,7 +6,6 @@ import EnvelopeIcon from "@/assets/vectors/Envelope.svg?react";
 import LocationIcon from "@/assets/vectors/Location.svg?react";
 import TelegramIcon from "@/assets/vectors/Telegram.svg?react";
 import TelephoneIcon from "@/assets/vectors/Telephone.svg?react";
-import ViberIcon from "@/assets/vectors/Viber.svg?react";
 import WatsappIcon from "@/assets/vectors/Watsapp.svg?react";
 import { formatPhoneNumber } from "@/utils/phone.utils";
 
@@ -60,19 +59,6 @@ const ContactInfo = () => {
             content={
               <div className="flex space-x-2">
                 <a href={`https://t.me/${appConfig.contactPhone}`} className="hover:opacity-75">
-                  {displayPhoneNumber1}
-                </a>
-              </div>
-            }
-          />
-          <ContactItem
-            icon={<ViberIcon className="stroke-white" />}
-            content={
-              <div className="flex space-x-2">
-                <a
-                  href={`viber://chat?number=${appConfig.contactPhone}`}
-                  className="hover:opacity-75"
-                >
                   {displayPhoneNumber1}
                 </a>
               </div>

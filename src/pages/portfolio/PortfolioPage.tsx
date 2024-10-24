@@ -27,8 +27,8 @@ const PortfolioPage = () => {
   return (
     <>
       <PageSEO
-        title="Web and Mobile Apps Development Portfolios | Clevit"
-        description="Find our software and different IT services design & development case studies across various industries for current & past clients. Feel free to contact us today!"
+        title="Our works | Clevit"
+        description="Explore Clevit’s portfolio of successful projects across web, mobile, and custom software development. See how we’ve helped businesses grow with technology."
         canonicalUrl="https://www.clevit.io/portfolio"
       />
 
@@ -48,7 +48,7 @@ const PortfolioPage = () => {
             className={` ${index % 2 === 0 ? "desktop:items-start" : "desktop:items-end"} ${index !== portfolioConstants.length - 1 ? "desktop:!mb-[56px]" : ""} items-start`}
             titleClassName="text-purple-100"
           >
-            <div className="flex flex-col desktop:flex-row gap-9">
+            <div className="flex flex-col desktop:flex-row gap-9 px-5">
               {/* Mobile layout */}
               <div className="flex flex-col lg:hidden">
                 <div>
@@ -149,13 +149,13 @@ const PortfolioPage = () => {
                         {item.isLink ? (
                           <a
                             href={`https://www.${item.value}`}
-                            className="text-blue-200 font-semibold"
+                            className="text-blue-200 font-semibold underline"
                             target="_blank"
                           >
                             {item.value as string}
                           </a>
                         ) : !Array.isArray(item.value) ? (
-                          <span className="text-gray-200">{item.value}</span>
+                          <span className="text-gray-200 font-semibold">{item.value}</span>
                         ) : (
                           <div className="flex">
                             {item.value.map((elem, i) => (

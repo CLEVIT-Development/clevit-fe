@@ -18,9 +18,9 @@ const Button = forwardRef(
   ) => {
     const buttonVariantStyle = {
       [ButtonVariant.Primary]:
-        "bg-blue-200 bg-purple-300 disabled:opacity-20 hover:bg-purple-500 focus:outline-white focus:outline-offset-[-5px]",
+        "bg-blue-200 bg-purple-300 disabled:opacity-20 text-white  hover:bg-purple-500 focus:outline-white focus:outline-offset-[-5px]",
       [ButtonVariant.Outlined]:
-        "bg-transparent border border-white disabled:opacity-40 hover:border-purple-300 hover:bg-purple-300 focus:outline-purple-500 focus:outline-offset-[-5px]",
+        "bg-transparent border border-white text-white  disabled:opacity-40 hover:border-purple-300 hover:bg-purple-300 focus:outline-purple-500 focus:outline-offset-[-5px]",
     };
 
     return (
@@ -33,7 +33,7 @@ const Button = forwardRef(
         {...props}
       >
         {prefix ? <div className="w-6 h-6 svg-wrapper">{prefix}</div> : null}
-        <span className="text-white font-medium text-md-l text-center">{children}</span>
+        <span className="font-medium text-center">{children}</span>
         {suffix ? <div className="w-6 h-6 svg-wrapper">{suffix}</div> : null}
       </button>
     );

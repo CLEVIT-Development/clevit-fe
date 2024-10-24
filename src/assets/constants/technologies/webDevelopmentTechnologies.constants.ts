@@ -40,19 +40,25 @@ export const webDevelopmentTechnologiesTabsConstants: ITabsConstant[] = [
     id: 1,
     title: "Front-End Development",
     description:
-      "Front-end development is concerned with constructing, designing, and maintaining the visible content of the website. Front-end developers work with the first thing the website’s unique users see on the page. Through the use of various programming languages, web application developers cohesively structure the contents and set up the design (color, font, size, etc.) of the website.",
+      "Front-End developers at our company create  intuitive, dynamic, and aesthetically-pleasing and user interfaces. Using technologies like  <strong>React.js , Vue.js, Next.js, TypeScript ,</strong>  and many others we develop websites that are adaptable to various screen sizes.The goal is to bring an additional focus on the user experience that will allow not to lose a visitor.",
   },
   {
     id: 2,
     title: "Back-End Development",
     description:
-      "Anything that does not appear on the first page of the user is dealt with by the back-end developer. Back-end developers work with the server side of the website, where most of the data is stored safely for the front-end developer’s work to reflect. Back End Development Services include programming languages such as Node.js, Nest.js, Express.js, GraphQL, WebSocket, and Jest.",
+      "Every website has its back-end, which serves as a foundation for web development. With Node, we make certain that every aspect of your website’s server, databases, and applications are well-coordinated. <strong> Node.js, Nest.js, Express.js,</strong>  and other modern frameworks which we are going to build in this project. We integrate back-end services with the keen sense of security and performance as our basis for the reliable solutions.",
   },
   {
     id: 3,
-    title: "Database Management System",
+    title: "Database Management",
     description:
-      "Alongside the work that back-end and front-end developers perform, anything that concerns the computerized data preservation system goes within the Database Management System. The technologies used within this system are MySQL, NoSQL, MongoDB, PostgreSQL, Google Firebase, Google Cloud, SQL Server, SQLite, Redis, Maria DB, Elasticsearch, and DynamoDB.",
+      "It is therefore important to have a well formulated database so that it can deliver on its performance and also to enhance the level of security. We use tools such as <strong>MySQL, MongoDB, PostgreSQL,</strong>  Redis, and among others in developing effective storage systems. Whether you need relational databases or NoSQL, rest assured that our services will handle your data with utmost attention so you have the fastest secure data access for your application.",
+  },
+  {
+    id: 4,
+    title: "Custom Solutions",
+    description:
+      "Therefore, we appreciate that each business organization has a specific and special requirement and thus, we offer the web development services that can suit your business needs. No matter whether it is about incorporating third party APIs or developing applications for web security that is top-notch, we have features and solutions that could help your business to gain leverage.",
   },
 ];
 
@@ -93,4 +99,6 @@ export const webDevelopmentTechnologiesConstants = {
     { id: 11, title: "Elasticsearch", Icon: ElasticSearchIcon },
     { id: 12, title: "DynamoDB", Icon: DynamoDBIcon },
   ],
+  // need to refactor this array
+  4: [],
 };

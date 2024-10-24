@@ -7,6 +7,7 @@ import { twMerge } from "tailwind-merge";
 
 import { RoutePaths, headerMenuLinks } from "@/app/routing/routing.constants.ts";
 import Messages from "@/assets/vectors/Messages.svg?react";
+import { useAuthContext } from "@/common/context/AuthContext";
 import useLockBodyScroll from "@/common/hooks/useBodyLock";
 import useResponsive from "@/common/hooks/useResponsive";
 import Button from "@/shared/ui/Button.tsx";
@@ -24,13 +25,14 @@ interface Props {
 const Header = forwardRef(
   ({ headerVariant, scrollY }: Props, ref: ForwardedRef<HTMLDivElement>) => {
     const isWhiteBackground = headerVariant !== HeaderVariant.Primary;
-
     const navigate = useNavigate();
     const { pathname, hash } = useLocation();
     const { isTablet, isDesktop } = useResponsive();
     const [isOpen, setIsOpen] = useState(false);
     const [isTransitionEndClose, setIsTransitionEndClose] = useState(false);
-    const navListRef = useRef<HTMLDivElement>(null);
+    const navListRef = useRef<HTMLDivElement | null>(null);
+
+    const { isAuthenticated } = useAuthContext();
 
     useLockBodyScroll(isOpen);
 
@@ -38,6 +40,11 @@ const Header = forwardRef(
       () =>
         headerMenuLinks.map((headerMenuLink) => {
           const isActive = `${pathname}${hash}` === headerMenuLink.link;
+          const isVisible = headerMenuLink.needAuthentication ? isAuthenticated : true;
+
+          if (!isVisible) {
+            return null;
+          }
 
           return (
             <NavLink
@@ -47,32 +54,27 @@ const Header = forwardRef(
               key={headerMenuLink.id}
               to={headerMenuLink.link}
               className={twMerge(
-                classNames(
-                  "relative text-white lg:text-md text-lg font-medium " +
-                    "lg:after:transition-all lg:after:duration-300 lg:after:absolute lg:after:w-0 lg:after:h-0.5 lg:after:left-0 lg:after:right-0 lg:after:-bottom-2 lg:after:content-['.'] lg:after:text-transparent " +
-                    "lg:hover:after:w-full lg:hover:after:bg-purple-100",
-                  {
-                    ["text-purple-1300"]: isWhiteBackground,
-                    ["text-purple-300 lg:after:w-full lg:after:bg-purple-100"]:
-                      isActive && isWhiteBackground,
-                    ["lg:text-gray-100 lg:opacity-70 lg:after:w-full lg:after:bg-purple-100"]:
-                      isActive && !isWhiteBackground,
-                  }
-                )
+                classNames("text-white lg:text-md text-lg font-medium", {
+                  ["text-purple-1300"]: isWhiteBackground,
+                  ["text-purple-300 lg:after:w-full lg:after:bg-purple-100"]:
+                    isActive && isWhiteBackground,
+                  ["lg:text-purple-400 lg:opacity-70 lg:after:w-full lg:after:bg-purple-100"]:
+                    isActive && !isWhiteBackground,
+                })
               )}
             >
               {headerMenuLink.label}
             </NavLink>
           );
         }),
-      [isWhiteBackground, pathname, hash]
+      [isWhiteBackground, pathname, hash, isAuthenticated]
     );
 
     return (
       <header
         className={twMerge(
           classNames(
-            "transition-all duration-300 w-full fixed top-0 z-[30] lg:px-10 lg:py-6 px-5 py-4",
+            "transition-all  duration-300 w-full fixed top-0 z-[30] lg:px-10 lg:py-6 px-5 py-4",
             {
               ["bg-white"]: isWhiteBackground,
               ["bg-headingGradient"]:
@@ -110,16 +112,16 @@ const Header = forwardRef(
         </div>
         <div
           className={classNames(
-            "transition-all duration-700 overflow-hidden lg:hidden flex flex-col justify-between items-center h-0",
+            "transition-all duration-700 overflow-hidden lg:hidden flex flex-col justify-between items-center h-0 xs:overflow-y-auto",
             {
-              ["h-[50vh] md:h-[40vh] sm:h-[40vh] lg:h-[30vh] desktop:h-[30vh]"]: isOpen,
+              ["h-[70vh] md:h-[45vh]  sm:h-[40vh] lg:h-[30vh] desktop:h-[40vh]"]: isOpen,
             }
           )}
           onTransitionEnd={() => {
             setIsTransitionEndClose(isOpen);
           }}
         >
-          <nav ref={navListRef} className="flex flex-col items-center space-y-6">
+          <nav ref={navListRef} className="flex flex-col items-center mt-7 space-y-6">
             {renderNavList}
           </nav>
           <Copyright

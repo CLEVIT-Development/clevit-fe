@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  plugins: [],
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
@@ -100,6 +101,7 @@ export default {
       },
       backgroundImage: {
         quoteGradient: "linear-gradient(88.98deg, #9B3B94 0.87%, #210F2B 79.26%)",
+        faqContactGradient: "linear-gradient(254.76deg, #9B3B94 -12.62%, #000000 51%);",
         headingGradient: "linear-gradient(254.76deg, #9B3B94 -12.62%, #000000 51%)",
         contactUsGradient: "linear-gradient(232.27deg, #0A0240 1.73%, rgba(10, 2, 64, 0.8) 91.7%)",
         overviewGradient: "linear-gradient(232.27deg, #0A0240 1.73%, rgba(10, 2, 64, 0.8) 91.7%);",
@@ -199,6 +201,13 @@ export default {
             fontWeight: "600",
           },
         ],
+        "3.5xl": [
+          "56px",
+          {
+            lineHeight: "84px",
+            fontWeight: "800",
+          },
+        ],
         "4xl": [
           "66px",
           {
@@ -209,8 +218,8 @@ export default {
       },
       borderRadius: {
         "lg-l": "10px",
+        "lg-2xl": "28px",
       },
     },
   },
-  plugins: [],
 };

@@ -1,0 +1,5 @@
+.svg-mobile {
+  > svg {
+    height: 50%;
+  }
+}

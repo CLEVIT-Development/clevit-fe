@@ -12,19 +12,18 @@ const TeamSection = () => {
   };
 
   return (
-    <Section className="self-center desktop:max-w-[80%]">
+    <Section className="self-center desktop:max-w-[80%] lg:max-w-[1024px]">
       <p className="break-words desktop:text-center text-md font-normal">
-        Clevit, your full-cycle development partner assists businesses of all sizes to build new
-        applications, modernize existing systems, and achieve optimal functionality in the
-        ever-evolving digital landscape. We stand as a leading partner in web and app development,
-        fueled by a team of experts who craft next-generation solutions tailored to your specific
-        needs. Focus on your core business, while Clevit handles the tech․
+        As a full-cycle development partner, Clevit provides tailored solutions to help businesses
+        regardless of their size to innovate and expand in a consistently changing digital arena.
+        Building new projects and modernizing current systems is our focus, ensuring optimal results
+        with a client-focused methodology and a team of specialists committed to your victory.
       </p>
       <img
         loading="lazy"
         src={TeamPhoto}
         alt="Team Picture"
-        className="xl:max-w-[1024px] desktop:max-w-[768px]"
+        className="lg:max-w-[1024px] desktop:max-w-[768px]"
       />
       <Button onClick={redirectToCalendly} prefix={<Messages />}>
         Let's Talk

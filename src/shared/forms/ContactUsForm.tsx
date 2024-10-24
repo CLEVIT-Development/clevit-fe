@@ -4,8 +4,8 @@ import { Controller, FormProvider, useForm } from "react-hook-form";
 import { servicesConstants } from "@/assets/constants/services.constants.ts";
 import countriesConstants from "@/assets/data/countries.json";
 import { contactUsSchema } from "@/common/schemas/contactUsSchema.tsx";
+import { axiosInstance } from "@/common/services/toast/axios.service";
 import showNotification, { ToastVersions } from "@/common/services/toast/showNotifications.tsx";
-import axiosInstance from "@/services/axios.service";
 import AutoComplete from "@/shared/ui/forms/AutoComplete.tsx";
 import { filesSizeValidation } from "@/utils/validation.utils";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -57,8 +57,7 @@ const ContactUs = () => {
         formData.append("file", data.file);
       }
 
-      console.log(data.files);
-      await axiosInstance.post("/api/contact-us", formData);
+      await axiosInstance.post("/auth/contact-us", formData);
 
       showNotification({
         type: ToastVersions.success,
@@ -110,7 +109,7 @@ const ContactUs = () => {
             render={({ field: { ref, ...field } }) => (
               <PhoneInput
                 ref={ref}
-                label="Phone"
+                label="Phone Number"
                 extraProps={field}
                 error={errors.phone?.message}
                 placeholder="Enter Your Phone Number"
@@ -123,12 +122,12 @@ const ContactUs = () => {
             className="desktop:col-span-2"
             placeholder="Please select service"
             error={errors.service?.message}
-            items={servicesConstants}
+            items={[...servicesConstants, { id: "other", title: "Other" }]}
             {...register("service")}
           />
           <TextArea
             maxLength={2000}
-            label="How Can We Help"
+            label="How Can We Help?"
             className="desktop:col-span-2"
             placeholder="Describe your idea/project briefly"
             {...register("description")}

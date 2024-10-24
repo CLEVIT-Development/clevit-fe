@@ -10,17 +10,17 @@ const ContactUsPage = () => {
   return (
     <>
       <PageSEO
-        title="Contact for web and mobile development | Clevit"
-        description="Contact Clevit team and order professional Web and Mobile development services. Just fill out the form and we'll get back to you right away."
+        title="Contact us | Clevit"
+        description="Got a project in mind? Contact Clevit and let's work together to bring your ideas to life. We are here to support your business growth with expert solutions."
         canonicalUrl="https://www.clevit.io/contact-us"
       />
       <Layout headerVariant={HeaderVariant.Tertiary}>
-        <Section className="mt-8">
+        <Section className="mt-8 px-5">
           <div className="flex flex-col space-y-6 desktop:max-w-[80%] ">
             <h1 className="desktop:text-3xl text-lg  font-semibold text-gray-200 text-center">
               Your Idea, Our Expertise. Let's Collaborate!
             </h1>
-            <p className="desktop:text-md text-base font-normal text-gray-200 desktop:text-center">
+            <p className="desktop:text-md text-base font-normal text-gray-200 desktop:text-center px-5">
               No matter where you are in your project journey. We'll listen to your needs, offer
               insightful advice, and create a customized plan that gets your project rolling. Fill
               out our contact form, and we'll reach out within a few hours to discuss your goals. We

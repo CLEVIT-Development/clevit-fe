@@ -7,7 +7,7 @@ const ReasonSection = () => {
     <Section
       title="Why Choose Clevit?"
       headingLevel="h3"
-      className="bg-gray-500 md:py-12 md:px-6 py-5 px-5 rounded-lg-l"
+      className="self-center desktop:max-w-[80%] bg-gray-500 md:py-12 md:px-6 py-5 px-5 rounded-lg-l"
     >
       <div className="flex flex-wrap md:gap-[72px] gap-6 justify-between">
         {reasonsConstants.map(({ id, title, description, Icon }) => (

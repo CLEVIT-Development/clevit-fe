@@ -10,14 +10,14 @@ const PortfolioHeading = () => {
         backgroundSize: "cover",
       }}
     >
-      <div className="flex flex-col justify-center items-center">
-        <h1 className="animate-textSlide text-white desktop:max-w-[50%] desktop:text-3xl text-lg font-semibold">
+      <div className="flex flex-col justify-center items-center ">
+        <h1 className="animate-textSlide text-white  desktop:text-3xl text-lg font-semibold">
           Our Works
         </h1>
-        <p className="desktop:text-lg  text-base font-normal text-white text-center mt-4">
-          Dive into software case studies addressing diverse challenges, projects of all scales, and
-          complexities. Explore Clevit’s dynamic portfolio, showcasing innovative web, mobile apps,
-          and digital solutions that propel business success.
+        <p className="desktop:text-lg  desktop:w-[800px] text-base font-normal text-white text-center mt-4">
+          Read about our successes in fulfilling Clevit’s commitment to deliver innovative web,
+          mobile, and AI solutions. Discover how we overcome complex problems, give businesses a
+          boost, and transform concepts into powerful digital encounters.
         </p>
       </div>
     </div>

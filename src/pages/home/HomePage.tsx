@@ -24,23 +24,20 @@ const HomePage = () => {
     <>
       <PageSEO
         title="Web and Mobile App Development Company | Clevit"
-        description="Clevit is a web and mobile app development company building reliable solutions for businesses and startups.Find out how we can help with your project. Book a FREE consultation!"
+        description="Partner with Clevit to develop custom web and mobile app development that fit your business needs. Let us bring your ideas to life with cutting-edge technology."
         canonicalUrl="https://www.clevit.io/"
         alternativeDescription="We provide project-based and dedicated teams for custom software, web, mobile, AI, and cloud solutions. Get smarter, cost-effective solutions for your business."
       />
       <Layout
+        layoutClassName="!pt-0 xs:!w-screen"
+        className="!pt-0 xs:!w-screen"
         heading={
           <Gradient>
             <HomeHeading />
           </Gradient>
         }
       >
-        <TotalSection
-          projectsValue={`35+`}
-          stuffValue={`20+`}
-          servedValue={`45+`}
-          deliveredPercent={`99%`}
-        />
+        <TotalSection projectsValue={`35+`} stuffValue={`20+`} servedValue={`25+`} />
         <ServiceSection />
         <RequestQuoteSection />
         <TechnologySection

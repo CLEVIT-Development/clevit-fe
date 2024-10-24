@@ -67,6 +67,7 @@ const AboutSection: React.FC = () => {
           {aboutData.length > 3 || isTablet ? (
             <AliceCarousel
               mouseTracking
+              infinite
               responsive={{ 0: { items: 1 }, 1256: { items: 3 } }}
               disableButtonsControls
               items={aboutData}

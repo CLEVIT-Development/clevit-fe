@@ -10,7 +10,11 @@ import Section from "@/common/templates/Section";
 
 import styles from "./Feedback.module.css";
 
-const FeedbackSection = () => {
+interface FeedbackSectionProps {
+  className?: string;
+}
+
+const FeedbackSection = ({ className }: FeedbackSectionProps) => {
   const { isTablet } = useResponsive();
 
   const feedbacksData = useMemo(() => {
@@ -19,9 +23,10 @@ const FeedbackSection = () => {
         key={id}
         className={twMerge(
           classNames(
-            "transition-all flex-1 duration-500 bg-white rounded-lg-l shadow-lg md:min-h-[600px] min-h-[550px] hover:scale-105 flex flex-col justify-between items-start px-4 desktop:pt-8 xs:pt-5 pb-6",
+            "transition-all flex-1 duration-500 bg-white rounded-lg-l shadow-lg md:min-h-[600px] min-h-[550px] lg:hover:scale-105 flex flex-col justify-between items-start px-4 desktop:pt-8 xs:pt-5 pb-6",
             styles["feedback-item"]
-          )
+          ),
+          className
         )}
       >
         <div className="flex flex-col md:space-y-8 xs:space-y-6">
@@ -53,6 +58,8 @@ const FeedbackSection = () => {
         {feedbacksConstants.length > 3 || isTablet ? (
           <AliceCarousel
             mouseTracking
+            touchTracking
+            infinite
             responsive={{ 0: { items: 1 }, 840: { items: 2 } }}
             disableButtonsControls
             items={feedbacksData}
