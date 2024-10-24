@@ -1,5 +1,4 @@
 import { Suspense, lazy } from "react";
-
 import { appConfig } from "@/assets/constants/config.constants.ts";
 import useResponsive from "@/common/hooks/useResponsive.ts";
 import Section from "@/common/templates/Section";
