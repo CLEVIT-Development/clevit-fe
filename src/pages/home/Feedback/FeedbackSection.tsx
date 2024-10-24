@@ -59,7 +59,6 @@ const FeedbackSection = ({ className }: FeedbackSectionProps) => {
           <AliceCarousel
             mouseTracking
             touchTracking
-            animationType
             infinite
             responsive={{ 0: { items: 1 }, 840: { items: 2 } }}
             disableButtonsControls

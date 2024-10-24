@@ -47,8 +47,8 @@ const Footer = () => {
             ))}
           </div>
         </div>
-        <div className="w-[45%] lg:w-fit flex flex-col space-y-4 sm:mx-auto">
-          <h6 className="font-bold lg:text-md-l text-md text-white opacity-60">Company</h6>
+        <div className="w-[45%] lg:w-fit flex flex-col space-y-4 sm:mx-auto xs:whitespace-nowrap desktop:whitespace-normal">
+          <h6 className="font-bold lg:text-md-l text-md text-white opacity-60 ">Company</h6>
           <Link to={RoutePaths.About}>
             <p className="text-gray-100 font-medium lg:text-md xs:text-sm">About Us</p>
           </Link>
@@ -69,7 +69,12 @@ const Footer = () => {
           <h6 className="font-bold lg:text-md-l text-md text-white opacity-60">Services</h6>
           {servicesConstants.map(({ id, title }) => {
             return (
-              <div key={id} role="button" onClick={() => navigate(`/services/${id}`)}>
+              <div
+                key={id}
+                role="button"
+                className="xs:whitespace-nowrap desktop:whitespace-normal	"
+                onClick={() => navigate(`/services/${id}`)}
+              >
                 <p className="text-gray-100 font-medium lg:text-md xs:text-sm cursor-pointer">
                   {title}
                 </p>
@@ -81,20 +86,25 @@ const Footer = () => {
           <h6 className="font-bold lg:text-md-l text-md text-white opacity-60">Industries</h6>
           {industriesConstants.map((element) => {
             return (
-              <div key={element.id}>
+              <div key={element.id} className="xs:w-[125px]">
                 <p className="text-gray-100 font-medium lg:text-md xs:text-sm">{element.name}</p>
               </div>
             );
           })}
         </div>
         <div className="w-[45%] lg:w-fit flex flex-col space-y-4">
-          <h6 className="font-bold lg:text-md-l text-md text-white opacity-60">Contact Us</h6>
+          <h6 className="font-bold lg:text-md-l text-md text-white opacity-60 xs:whitespace-nowrap desktop:whitespace-normal">
+            Contact Us
+          </h6>
           {contactsConstants.map(({ id, text, link, Element }) => (
-            <div key={id} className="flex items-center space-x-2">
+            <div
+              key={id}
+              className="flex items-center space-x-2 xs:whitespace-nowrap desktop:whitespace-normal"
+            >
               <Element className="size-6" />
               <Link
                 to={link}
-                className="text-gray-100 font-medium lg:text-md xs:text-base whitespace-nowrap"
+                className="text-gray-100 font-medium lg:text-md xs:text-base whitespace-nowrap !ml-0"
               >
                 {text}
               </Link>

@@ -1,4 +1,4 @@
-import { Suspense, lazy, useEffect, useRef } from "react";
+import { Suspense, lazy } from "react";
 
 import { appConfig } from "@/assets/constants/config.constants.ts";
 import useResponsive from "@/common/hooks/useResponsive.ts";
@@ -27,7 +27,7 @@ const CalendlySection = ({ title }: Props) => {
           <InlineWidget
             url={appConfig.shareUrl}
             styles={{
-              height: isExtraSmall ? 1100 : isTablet || isCalendlyDesktop ? 1100 : 680,
+              height: isExtraSmall ? 1100 : isTablet || isCalendlyDesktop ? 1100 : 599,
               marginBottom: isCalendlyDesktop ? (isExtraSmall ? "-80px" : 0) : 50,
               minWidth: isMobile ? "85vw" : 0,
             }}
