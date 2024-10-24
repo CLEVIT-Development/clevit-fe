@@ -25,7 +25,7 @@ const BlogCard = ({ onDelete, onEdit, isAdminMode, className, data }: Props) => 
       role="button"
       onClick={() => navigate(`/blog/${data.titlePath}`)}
       className={twMerge(
-        "w-full h-full rounded-lg transition-all duration-500 gap-10 min-h-[340px] flex flex-col items-start justify-between shadow-md relative",
+        "w-full h-full  rounded-lg transition-all duration-500 desktop:hover:scale-105 gap-10 min-h-[340px] flex flex-col items-start justify-between shadow-md relative",
         className
       )}
     >
@@ -45,8 +45,8 @@ const BlogCard = ({ onDelete, onEdit, isAdminMode, className, data }: Props) => 
           <span className="text-[#858D9D] text-base">{formatDate(new Date(data.created_at))}</span>
         )}
         <h3 className="w-full text-gray-800 text-sm font-semibold">{data.title}</h3>
-        <div className="flex space-x-2">
-          <IconWrapper icon={<ClockIcon />} className="bg-white" />
+        <div className="flex space-x-2 ">
+          <IconWrapper icon={<ClockIcon />} className="bg-white w-3 mr-3" />
           <span className="text-[#858D9D] text-base font-medium">
             Reading time about {data.readingTime}
           </span>

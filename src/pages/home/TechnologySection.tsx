@@ -86,7 +86,7 @@ const TechnologySection = ({ title, subTitle, tabsConstant, technologiesConstant
   }, [activeTab, direction, isMobile]);
 
   return (
-    <Section className="w-full bg-gray-300 px-5 md:px-20 desktop:px-28 rounded-lg">
+    <Section className="w-full bg-gray-300 px-5 md:px-20  desktop:px-5 rounded-lg desktop:!max-w-[1024px]">
       <div className="w-full h-full" ref={sectionRef}>
         <h2 className="desktop:text-2xl text-center text-lg text-[#314252] pt-5 pb-6 desktop:pt-12">
           {title}
@@ -96,7 +96,7 @@ const TechnologySection = ({ title, subTitle, tabsConstant, technologiesConstant
             <span className="leading-6 text-[#314252] text-center">{subTitle} </span>
           </div>
         ) : null}
-        <div className="w-full flex flex-col desktop:flex-row desktop:overflow-x-scroll no-scrollbar desktop:pt-9">
+        <div className="w-full flex flex-col desktop:flex-row desktop:overflow-x-scroll  no-scrollbar desktop:pt-9">
           <div className="w-full flex flex-col desktop:flex-row text-center desktop:w-max desktop:inline-flex desktop:mt-0 mt-5">
             {tabsConstant.map((tab: ITabsConstant) => (
               <span
