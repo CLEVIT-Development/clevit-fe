@@ -1,5 +1,6 @@
 import AboutHeadingBackground from "@/assets/images/AboutHeading.webp";
 
+
 const AboutHeading = () => {
   return (
     <div className="w-full flex items-center desktop:text-left desktop:justify-between desktop:pb-[77px] desktop:pt-[180px] desktop:pl-[80px] desktop:pr-[110px] text-center justify-center pb-6 pt-[180px] ">
