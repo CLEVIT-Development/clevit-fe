@@ -7,7 +7,7 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 import react from "@vitejs/plugin-react";
 
-import { generateSitemap } from "./api/generateSitemap";
+import { generateSitemap } from "./src/api/generateSitemap";
 
 // Custom plugin to generate sitemap
 const sitemapPlugin = () => ({
