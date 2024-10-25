@@ -104,6 +104,7 @@ import UIUX from "@/assets/vectors/UIUX.svg?react";
 import UserCenteredApproach from "@/assets/vectors/UserCenteredApproach.svg?react";
 import PC from "@/assets/vectors/processes/PC.svg?react";
 import Security from "@/assets/vectors/processes/Security.svg?react";
+
 import { singlePageAIProcessesConstants } from "./processes/singlePageAIProcess.constants";
 import { singlePageDataQualityAssuranceProcessesConstants } from "./processes/singlePageDataQualityAssuranceProcess.constants";
 import { singlePageDevopsProcessesConstants } from "./processes/singlePageDevopsProcess.constants";
@@ -254,7 +255,7 @@ export const servicesConstants = [
           "Whether you are a start-up company or an established enterprise, we create sites that expand your company.",
       },
       {
-        title: "Ongoing Support:",
+        title: "Ongoing Support",
         description:
           "Our work is not done as soon as a product is out on the market. We provide support to make certain your site stays current and modified as per the current trend.",
       },
@@ -766,7 +767,7 @@ export const servicesConstants = [
           "Your data is treated with great importance and security, conforming with compliance standards and being well managed.",
       },
       {
-        title: "Cutting-Edge Technology:",
+        title: "Cutting-Edge Technology",
         description:
           "We apply both what is current in the market and the most advanced technologies for better and improved data quality solutions.",
       },
