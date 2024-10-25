@@ -1,8 +1,10 @@
 import axios from "axios";
-import fs from "fs";
-import path from "path";
+
+import { type VercelResponse } from "@vercel/node";
 
 import { ServicesIdConstants } from "../src/assets/constants/services-id.constants";
+
+// Adjust the path as per your setup
 
 const staticRoutes = [
   "/",
@@ -20,7 +22,7 @@ const staticRoutes = [
 // Generate service routes dynamically
 const serviceRoutes = Object.values(ServicesIdConstants).map((id) => `/services/${id}`);
 
-export async function generateSitemap() {
+export default async function generateSitemap(res: VercelResponse) {
   try {
     const backendUrl = "https://clevit-be.vercel.app/users/v1/";
 
@@ -55,13 +57,12 @@ export async function generateSitemap() {
     .join("")}
 </urlset>`;
 
-    fs.writeFileSync(path.join("dist", "sitemap.xml"), sitemapXml);
-    console.log("Sitemap generated successfully");
+    // Set the appropriate headers to return XML
+    res.setHeader("Content-Type", "application/xml");
+    // Send the generated sitemap as the response
+    res.status(200).send(sitemapXml);
   } catch (error) {
     console.error("Failed to generate sitemap:", error);
-
-    if (error instanceof Error) {
-      console.error("Error message:", error.message);
-    }
+    res.status(500).json({ error: "Failed to generate sitemap" });
   }
 }
