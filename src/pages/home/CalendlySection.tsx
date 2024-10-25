@@ -1,5 +1,4 @@
 import { Suspense, lazy } from "react";
-
 import { appConfig } from "@/assets/constants/config.constants.ts";
 import useResponsive from "@/common/hooks/useResponsive.ts";
 import Section from "@/common/templates/Section";
@@ -27,7 +26,7 @@ const CalendlySection = ({ title }: Props) => {
           <InlineWidget
             url={appConfig.shareUrl}
             styles={{
-              height: isExtraSmall ? 1100 : isTablet || isCalendlyDesktop ? 1100 : 599,
+              height: isExtraSmall ? 1100 : isTablet || isCalendlyDesktop ? 1100 : 660,
               marginBottom: isCalendlyDesktop ? (isExtraSmall ? "-80px" : 0) : 50,
               minWidth: isMobile ? "85vw" : 0,
             }}
