@@ -1,7 +1,5 @@
 import axios from "axios";
 
-import { type VercelResponse } from "@vercel/node";
-
 import { ServicesIdConstants } from "../src/assets/constants/services-id.constants";
 
 // Adjust the path as per your setup
@@ -22,7 +20,8 @@ const staticRoutes = [
 // Generate service routes dynamically
 const serviceRoutes = Object.values(ServicesIdConstants).map((id) => `/services/${id}`);
 
-export default async function generateSitemap(res: VercelResponse) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default async function generateSitemap(res: any) {
   try {
     const backendUrl = "https://clevit-be.vercel.app/users/v1/";
 
