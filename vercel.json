@@ -1,7 +1,7 @@
 {
   "rewrites": [{ "source": "/sitemap.xml", "destination": "/api/generate-sitemap" }],
   "functions": {
-    "api/generate-sitemap.js": {
+    "src/api/generate-sitemap.js": {
       "memory": 1024,
       "maxDuration": 10
     }
@@ -9,7 +9,7 @@
   "crons": [
     {
       "path": "/api/generate-sitemap",
-      "schedule": "09 16 * * *"
+      "schedule": "35 08 * * *"
     }
   ]
 }
