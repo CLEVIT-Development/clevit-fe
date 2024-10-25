@@ -1,7 +1,8 @@
 import axios from "axios";
 import fs from "fs";
 import path from "path";
-import { ServicesIdConstants } from "../src/assets/constants/services-id.constants";
+
+import { ServicesIdConstants } from "../../src/assets/constants/services-id.constants";
 
 const staticRoutes = [
   "/",

@@ -8,7 +8,7 @@
   },
   "crons": [
     {
-      "path": "/api/generate-sitemap.ts",
+      "path": "/src/utils/generate-sitemap.ts",
       "schedule": "52 08 * * *"
     }
   ]
