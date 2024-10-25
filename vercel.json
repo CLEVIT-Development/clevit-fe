@@ -9,7 +9,7 @@
   "crons": [
     {
       "path": "/api/generate-sitemap",
-      "schedule": "45 08 * * *"
+      "schedule": "52 08 * * *"
     }
   ]
 }
