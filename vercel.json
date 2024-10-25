@@ -1,7 +1,7 @@
 {
   "rewrites": [{ "source": "/sitemap.xml", "destination": "/src/utils/generate-sitemap.ts" }],
   "functions": {
-    "src/utils/generate-sitemap.ts": {
+    "/src/utils/generate-sitemap.ts": {
       "memory": 1024,
       "maxDuration": 10
     }
