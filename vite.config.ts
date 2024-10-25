@@ -11,7 +11,7 @@ import react from "@vitejs/plugin-react";
 const sitemapPlugin = () => ({
   name: "generate-sitemap",
   async closeBundle() {
-    const { generateSitemap } = await import("./src/api/generateSitemap");
+    const { generateSitemap } = await import("./api/generateSitemap");
 
     await generateSitemap();
   },
