@@ -13,7 +13,7 @@ const sitemapPlugin = () => ({
   async closeBundle() {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
-    const { generateSitemap } = await import("./api/generateSitemap");
+    const { generateSitemap } = await import("./api/generateSitemap.ts");
 
     await generateSitemap();
   },
