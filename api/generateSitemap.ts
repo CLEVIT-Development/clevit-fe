@@ -1,18 +1,3 @@
-const ServicesIdConstants = {
-  Web: "web-development",
-  Mobile: "mobile-app-development",
-  DevOps: "devops",
-  AiIntegration: "ai-integration",
-  MachineLearning: "machine-learning",
-  QualityAssurance: "quality-assurance",
-  TechnicalAssessment: "technical-assessment",
-  MaintenanceSupport: "maintenance-support",
-  OutStaffing: "outstaffing",
-  ProjectManagement: "project-management",
-  Design: "ui-ux-design",
-  DigitalMarketing: "digital-marketing",
-};
-
 const staticRoutes = [
   "/",
   "/about-us",
@@ -23,10 +8,20 @@ const staticRoutes = [
   "/privacy-policy",
   "/terms-and-conditions",
   "/request-demo",
+  "/services/web-development",
+  "/services/mobile-app-development",
+  "/services/devops",
+  "/services/ai-integration",
+  "/services/machine-learning",
+  "/services/quality-assurance",
+  "/services/technical-assessment",
+  "/services/maintenance-support",
+  "/services/outstaffing",
+  "/services/project-management",
+  "/services/ui-ux-design",
+  "/services/digital-marketing",
   "/blogs",
 ];
-
-const serviceRoutes = Object.values(ServicesIdConstants).map((id) => `/services/${id}`);
 
 async function getBlogs() {
   const backendUrl = "https://clevit-be.vercel.app/users/v1/";
@@ -52,7 +47,7 @@ export async function GET(_request: Request) {
     (blog: { titlePath: string }) => `/blogs/${blog.titlePath}`
   );
 
-  const allRoutes = [...staticRoutes, ...serviceRoutes, ...blogRoutes];
+  const allRoutes = [...staticRoutes, ...blogRoutes];
 
   const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
