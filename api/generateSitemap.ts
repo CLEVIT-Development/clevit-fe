@@ -1,3 +1,5 @@
+// import { waitUntil } from "@vercel/functions";
+
 // const ServicesIdConstants = {
 //   Web: "web-development",
 //   Mobile: "mobile-app-development",
@@ -13,8 +15,6 @@
 //   DigitalMarketing: "digital-marketing",
 // };
 
-// Adjust the path as per your setup
-
 // const staticRoutes = [
 //   "/",
 //   "/about-us",
@@ -28,52 +28,51 @@
 //   "/blogs",
 // ];
 
-// // Generate service routes dynamically
 // const serviceRoutes = Object.values(ServicesIdConstants).map((id) => `/services/${id}`);
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export default async function GET() {
-  try {
-    //     const backendUrl = "https://clevit-be.vercel.app/users/v1/";
+// export default async function generateSitemap(res: any) {
+//   try {
+//     const backendUrl = "https://clevit-be.vercel.app/users/v1/";
 
-    //     if (!backendUrl) {
-    //       throw new Error("VITE_BACKEND_URL is not defined in the environment variables");
-    //     }
+//     if (!backendUrl) {
+//       throw new Error("VITE_BACKEND_URL is not defined in the environment variables");
+//     }
 
-    //     const response = await fetch(`${backendUrl}blogs?page=1&sort=Desc`);
-    //     const responseData = await response.json();
+//     const response = await fetch(`${backendUrl}blogs?page=1&sort=Desc`);
 
-    //     if (!responseData?.data?.blogsList) {
-    //       throw new Error("Unexpected response structure from the backend");
-    //     }
+//     if (!response.data?.data?.blogsList) {
+//       throw new Error("Unexpected response structure from the backend");
+//     }
 
-    //     const blogRoutes = responseData.data.blogsList.map(
-    //       (blog: { titlePath: string }) => `/blogs/${blog.titlePath}`
-    //     );
+//     const blogRoutes = response.data.data.blogsList.map(
+//       (blog: { titlePath: string }) => `/blogs/${blog.titlePath}`
+//     );
 
-    //     const allRoutes = [...staticRoutes, ...serviceRoutes, ...blogRoutes];
+//     const allRoutes = [...staticRoutes, ...serviceRoutes, ...blogRoutes];
 
-    //     const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
-    // <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    //   ${allRoutes
-    //     .map(
-    //       (route) => `
-    //   <url>
-    //     <loc>https://www.clevit.io${route}</loc>
-    //     <changefreq>daily</changefreq>
-    //     <priority>0.7</priority>
-    //   </url>
-    //   `
-    //     )
-    //     .join("")}
-    // </urlset>`;
-    // return new Response(sitemapXml, {
-    //   headers: { "Content-Type": "application/xml" },
-    // });
+//     const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
+// <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+//   ${allRoutes
+//     .map(
+//       (route) => `
+//   <url>
+//     <loc>https://www.clevit.io${route}</loc>
+//     <changefreq>daily</changefreq>
+//     <priority>0.7</priority>
+//   </url>
+//   `
+//     )
+//     .join("")}
+// </urlset>`;
 
-    return new Response("Hello");
-  } catch (error) {
-    console.error("Failed to generate sitemap:", error);
-    return new Response("Failed to generate sitemap", { status: 500 });
-  }
+//     res.setHeader("Content-Type", "application/xml");
+//     res.status(200).send(sitemapXml);
+//   } catch (error) {
+//     console.error("Failed to generate sitemap:", error);
+//     res.status(500).json({ error: "Failed to generate sitemap" });
+//   }
+// }
+
+export function GET(_request: Request) {
+  return new Response(`Hello from ${process.env.VERCEL_REGION}`);
 }
