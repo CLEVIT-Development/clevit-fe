@@ -1,5 +1,3 @@
-import { waitUntil } from "@vercel/functions";
-
 const ServicesIdConstants = {
   Web: "web-development",
   Mobile: "mobile-app-development",
@@ -30,7 +28,7 @@ const staticRoutes = [
 
 const serviceRoutes = Object.values(ServicesIdConstants).map((id) => `/services/${id}`);
 
-async function getBlog() {
+async function getBlogs() {
   const backendUrl = "https://clevit-be.vercel.app/users/v1/";
 
   try {
@@ -47,15 +45,12 @@ async function getBlog() {
   }
 }
 
-export function GET(_request: Request) {
-  let blogsList: any;
-  waitUntil(
-    getBlog().then((json) => {
-      blogsList = json.data.blogsList;
-    })
-  );
+async function GET(_request: Request) {
+  const response = await getBlogs();
 
-  const blogRoutes = blogsList.map((blog: { titlePath: string }) => `/blogs/${blog.titlePath}`);
+  const blogRoutes = response.data.blogsList.map(
+    (blog: { titlePath: string }) => `/blogs/${blog.titlePath}`
+  );
 
   const allRoutes = [...staticRoutes, ...serviceRoutes, ...blogRoutes];
 
