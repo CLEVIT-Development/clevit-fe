@@ -45,7 +45,7 @@ async function getBlogs() {
   }
 }
 
-async function GET(_request: Request) {
+export async function GET(_request: Request) {
   const response = await getBlogs();
 
   const blogRoutes = response.data.blogsList.map(
