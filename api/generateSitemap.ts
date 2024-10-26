@@ -32,7 +32,7 @@ const staticRoutes = [
 const serviceRoutes = Object.values(ServicesIdConstants).map((id) => `/services/${id}`);
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export default async function generateSitemap(res: any) {
+export default async function generateSitemap() {
   try {
     const backendUrl = "https://clevit-be.vercel.app/users/v1/";
 
@@ -68,12 +68,11 @@ export default async function generateSitemap(res: any) {
     .join("")}
 </urlset>`;
 
-    // Set the appropriate headers to return XML
-    res.setHeader("Content-Type", "application/xml");
-    // Send the generated sitemap as the response
-    res.status(200).send(sitemapXml);
+    return new Response(sitemapXml, {
+      headers: { "Content-Type": "application/xml" },
+    });
   } catch (error) {
     console.error("Failed to generate sitemap:", error);
-    res.status(500).json({ error: "Failed to generate sitemap" });
+    return new Response("Failed to generate sitemap", { status: 500 });
   }
 }
