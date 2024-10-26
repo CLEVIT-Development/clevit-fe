@@ -48,7 +48,7 @@ const PortfolioPage = () => {
             className={` ${index % 2 === 0 ? "desktop:items-start" : "desktop:items-end"} ${index !== portfolioConstants.length - 1 ? "desktop:!mb-[56px]" : ""} items-start`}
             titleClassName="text-purple-100"
           >
-            <div className="flex flex-col desktop:flex-row gap-9 px-5">
+            <div className="flex flex-col desktop:flex-row gap-9 px-5 desktop:px-20">
               {/* Mobile layout */}
               <div className="flex flex-col lg:hidden">
                 <div>
@@ -57,9 +57,9 @@ const PortfolioPage = () => {
                     {project.description}
                   </p>
                 </div>
-                <div className="bg-red-300 flex desktop:justify-center md:justify-center">
+                <div className="flex desktop:justify-center md:justify-center">
                   <img
-                    className="desktop:w-[90%] desktop:h-[900px] md:w-[90%] md:h-[700px]"
+                    className="desktop:w-[100%] desktop:h-[900px] md:w-[90%] md:h-[700px]"
                     loading="lazy"
                     alt={`${project.title} picture`}
                     src={project.mobileImageUrl}
@@ -78,7 +78,7 @@ const PortfolioPage = () => {
                         {item.isLink ? (
                           <a
                             href={`https://www.${item.value}`}
-                            className="text-blue-200 font-semibold"
+                            className="text-blue-200 font-semibold underline"
                             target="_blank"
                           >
                             {item.value as string}

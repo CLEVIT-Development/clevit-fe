@@ -37,7 +37,7 @@ const TechnologySection = ({ title, subTitle, tabsConstant, technologiesConstant
   const [isMobile, setIsMobile] = useState(window.innerWidth < 968);
   const contentRef = useRef<HTMLDivElement | null>(null);
   const sectionRef = useRef<HTMLDivElement | null>(null);
-  const prevIconsRef = useRef<ITechnologyConstant[]>([]); // Хранит предыдущие иконки
+  const prevIconsRef = useRef<ITechnologyConstant[]>([]);
 
   const handleTabChange = (tabId: number) => {
     startTransition(() => {
@@ -48,11 +48,6 @@ const TechnologySection = ({ title, subTitle, tabsConstant, technologiesConstant
       setActiveTab(tabId);
     });
   };
-
-  useEffect(() => {
-    // Сравниваем текущие иконки с предыдущими
-    // Обновляем предыдущие иконки
-  }, [currentIcons]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -75,7 +70,6 @@ const TechnologySection = ({ title, subTitle, tabsConstant, technologiesConstant
           ? `translateY(${direction * 100}%)`
           : `translateX(${direction * 100}%)`;
         contentRef.current.style.opacity = "0";
-        // Здесь можно добавить дополнительную логику, если это необходимо
         prevIconsRef.current = currentIcons;
       } else {
         console.log("Icons is equal");
@@ -171,6 +165,10 @@ const TechnologySection = ({ title, subTitle, tabsConstant, technologiesConstant
 // Функция для получения классов сетки в зависимости от количества технологий
 const getGridClass = (length: number) => {
   switch (length) {
+    case 2:
+      return "desktop:flex desktop:gap-16";
+    case 4:
+      return "desktop:grid desktop:grid-cols-4 desktop:justify-items-center desktop:";
     case 5:
       return "desktop:justify-center md:grid md:grid-cols-5 md:justify-items-center";
     case 6:

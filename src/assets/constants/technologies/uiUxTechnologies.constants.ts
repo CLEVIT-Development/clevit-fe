@@ -38,25 +38,25 @@ export const uIuXTechnologiesTabsConstants: ITabsConstant[] = [
 
 export const uiUxTechnologiesConstants = {
   1: [
-    { id: 1, title: "React.js", Icon: Figma },
+    { id: 1, title: "Figma", Icon: Figma },
     { id: 2, title: "Adobe XD", Icon: AdobeXD },
     { id: 3, title: "Adobe Illustrator", Icon: AdobeIllustrator },
     { id: 4, title: "Adobe Photoshop", Icon: AdobePhotoshop },
   ],
   2: [
-    { id: 1, title: "React.js", Icon: Figma },
+    { id: 1, title: "Figma", Icon: Figma },
     { id: 2, title: "Adobe XD", Icon: AdobeXD },
     { id: 3, title: "Adobe Illustrator", Icon: AdobeIllustrator },
     { id: 4, title: "Adobe Photoshop", Icon: AdobePhotoshop },
   ],
   3: [
-    { id: 1, title: "React.js", Icon: Figma },
+    { id: 1, title: "Figma", Icon: Figma },
     { id: 2, title: "Adobe XD", Icon: AdobeXD },
     { id: 3, title: "Adobe Illustrator", Icon: AdobeIllustrator },
     { id: 4, title: "Adobe Photoshop", Icon: AdobePhotoshop },
   ],
   4: [
-    { id: 1, title: "React.js", Icon: Figma },
+    { id: 1, title: "Figma", Icon: Figma },
     { id: 2, title: "Adobe XD", Icon: AdobeXD },
     { id: 3, title: "Adobe Illustrator", Icon: AdobeIllustrator },
     { id: 4, title: "Adobe Photoshop", Icon: AdobePhotoshop },
