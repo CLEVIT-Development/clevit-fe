@@ -32,7 +32,7 @@ const staticRoutes = [
 const serviceRoutes = Object.values(ServicesIdConstants).map((id) => `/services/${id}`);
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export default async function generateSitemap() {
+export default async function GET() {
   try {
     const backendUrl = "https://clevit-be.vercel.app/users/v1/";
 
