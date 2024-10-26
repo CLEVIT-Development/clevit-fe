@@ -1,14 +1,14 @@
 {
-  "rewrites": [{ "source": "/sitemap.xml", "destination": "/api/generate-sitemap" }],
+  "rewrites": [{ "source": "/sitemap.xml", "destination": "/api/generateSitemap" }],
   "functions": {
-    "api/generate-sitemap.ts": {
+    "api/generateSitemap.ts": {
       "memory": 1024,
       "maxDuration": 10
     }
   },
   "crons": [
     {
-      "path": "/api/generate-sitemap",
+      "path": "/api/generateSitemap",
       "schedule": "52 08 * * *"
     }
   ]
