@@ -33,8 +33,20 @@ const serviceRoutes = Object.values(ServicesIdConstants).map((id) => `/services/
 async function getBlog() {
   const backendUrl = "https://clevit-be.vercel.app/users/v1/";
 
-  const res = await fetch(`${backendUrl}blogs?page=1&sort=Desc`);
-  return await res.json();
+  try {
+    const res = await fetch(`${backendUrl}blogs?page=1&sort=Desc`);
+    console.log(`Response status: ${res.status}`);
+
+    if (!res.ok) {
+      throw new Error(`HTTP error! status: ${res.status}`);
+    }
+
+    const data = await res.json();
+    return data;
+  } catch (error) {
+    console.error("Error fetching blogs:", error);
+    return { data: { blogsList: [] } };
+  }
 }
 
 export function GET(_request: Request) {
