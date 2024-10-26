@@ -40,6 +40,7 @@ async function getBlog() {
     if (!res.ok) {
       throw new Error(`HTTP error! status: ${res.status}`);
     }
+    console.log(res, "res");
 
     const data = await res.json();
     return data;
@@ -57,11 +58,13 @@ export function GET(_request: Request) {
     })
   );
 
-  const blogRoutes = response.data.blogsList.map(
-    (blog: { titlePath: string }) => `/blogs/${blog.titlePath}`
-  );
+  console.log(response, "res");
 
-  const allRoutes = [...staticRoutes, ...serviceRoutes, ...blogRoutes];
+  // const blogRoutes = response.data.blogsList.map(
+  //   (blog: { titlePath: string }) => `/blogs/${blog.titlePath}`
+  // );
+
+  const allRoutes = [...staticRoutes, ...serviceRoutes];
 
   const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
