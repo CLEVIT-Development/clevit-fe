@@ -1,8 +1,3 @@
-import axios from "axios";
-import { ServicesIdConstants } from "../src/assets/constants/services-id.constants";
-
-// Adjust the path as per your setup
-
 const staticRoutes = [
   "/",
   "/about-us",
@@ -13,34 +8,48 @@ const staticRoutes = [
   "/privacy-policy",
   "/terms-and-conditions",
   "/request-demo",
+  "/services/web-development",
+  "/services/mobile-app-development",
+  "/services/devops",
+  "/services/ai-integration",
+  "/services/machine-learning",
+  "/services/quality-assurance",
+  "/services/technical-assessment",
+  "/services/maintenance-support",
+  "/services/outstaffing",
+  "/services/project-management",
+  "/services/ui-ux-design",
+  "/services/digital-marketing",
   "/blogs",
 ];
 
-// Generate service routes dynamically
-const serviceRoutes = Object.values(ServicesIdConstants).map((id) => `/services/${id}`);
+async function getBlogs() {
+  const backendUrl = "https://clevit-be.vercel.app/users/v1/";
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export default async function generateSitemap(res: any) {
   try {
-    const backendUrl = "https://clevit-be.vercel.app/users/v1/";
+    const response = await fetch(`${backendUrl}blogs?page=1&sort=Desc`);
 
-    if (!backendUrl) {
-      throw new Error("VITE_BACKEND_URL is not defined in the environment variables");
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
     }
 
-    const response = await axios.get(`${backendUrl}blogs?page=1&sort=Desc`);
+    return await response.json();
+  } catch (error) {
+    console.error("Error fetching or parsing blogs:", error);
+    return { data: { blogsList: [] } };
+  }
+}
 
-    if (!response.data?.data?.blogsList) {
-      throw new Error("Unexpected response structure from the backend");
-    }
+export async function GET(_request: Request) {
+  const response = await getBlogs();
 
-    const blogRoutes = response.data.data.blogsList.map(
-      (blog: { titlePath: string }) => `/blogs/${blog.titlePath}`
-    );
+  const blogRoutes = response.data.blogsList.map(
+    (blog: { titlePath: string }) => `/blogs/${blog.titlePath}`
+  );
 
-    const allRoutes = [...staticRoutes, ...serviceRoutes, ...blogRoutes];
+  const allRoutes = [...staticRoutes, ...blogRoutes];
 
-    const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
+  const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   ${allRoutes
     .map(
@@ -53,14 +62,9 @@ export default async function generateSitemap(res: any) {
   `
     )
     .join("")}
-</urlset>`;
+    </urlset>`;
 
-    // Set the appropriate headers to return XML
-    res.setHeader("Content-Type", "application/xml");
-    // Send the generated sitemap as the response
-    res.status(200).send(sitemapXml);
-  } catch (error) {
-    console.error("Failed to generate sitemap:", error);
-    res.status(500).json({ error: "Failed to generate sitemap" });
-  }
+  return new Response(sitemapXml, {
+    headers: { "Content-Type": "application/xml" },
+  });
 }
