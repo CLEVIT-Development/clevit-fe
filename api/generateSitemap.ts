@@ -40,12 +40,16 @@ async function getBlog() {
     if (!res.ok) {
       throw new Error(`HTTP error! status: ${res.status}`);
     }
-    console.log(res, "res");
 
+    // Read the entire response body as text
+    const text = await res.text();
+    console.log("Response body:", text); // Log the response body for debugging
+
+    // Parse the text as JSON
     const data = await res.json();
-    return data;
+    return data.data;
   } catch (error) {
-    console.error("Error fetching blogs:", error);
+    console.error("Error fetching or parsing blogs:", error);
     return { data: { blogsList: [] } };
   }
 }
