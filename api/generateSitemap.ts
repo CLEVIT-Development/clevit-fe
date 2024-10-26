@@ -34,23 +34,16 @@ async function getBlog() {
   const backendUrl = "https://clevit-be.vercel.app/users/v1/";
 
   try {
-    const res = await fetch(`${backendUrl}blogs?page=1&sort=Desc`);
-    console.log(`Response status: ${res.status}`);
+    const response = await fetch(`${backendUrl}blogs?page=1&sort=Desc`);
 
-    if (!res.ok) {
-      throw new Error(`HTTP error! status: ${res.status}`);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
     }
 
-    // Read the entire response body as text
-    const text = await res.text();
-    console.log("Response body:", text); // Log the response body for debugging
-
-    // Parse the text as JSON
-    const data = await res.json();
-    return data.data;
+    return await response.json();
   } catch (error) {
     console.error("Error fetching or parsing blogs:", error);
-    return { data: { blogsList: [] } };
+    return { data: { data: { blogsList: [] } } };
   }
 }
 
@@ -58,17 +51,15 @@ export function GET(_request: Request) {
   let response: any;
   waitUntil(
     getBlog().then((json) => {
-      response = json;
+      response = json.data.data;
     })
   );
 
-  console.log(response, "res");
+  const blogRoutes = response.blogsList.map(
+    (blog: { titlePath: string }) => `/blogs/${blog.titlePath}`
+  );
 
-  // const blogRoutes = response.data.blogsList.map(
-  //   (blog: { titlePath: string }) => `/blogs/${blog.titlePath}`
-  // );
-
-  const allRoutes = [...staticRoutes, ...serviceRoutes];
+  const allRoutes = [...staticRoutes, ...serviceRoutes, ...blogRoutes];
 
   const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
