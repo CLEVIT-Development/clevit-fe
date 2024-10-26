@@ -1,5 +1,17 @@
-import axios from "axios";
-import { ServicesIdConstants } from "../src/assets/constants/services-id.constants";
+const ServicesIdConstants = {
+  Web: "web-development",
+  Mobile: "mobile-app-development",
+  DevOps: "devops",
+  AiIntegration: "ai-integration",
+  MachineLearning: "machine-learning",
+  QualityAssurance: "quality-assurance",
+  TechnicalAssessment: "technical-assessment",
+  MaintenanceSupport: "maintenance-support",
+  OutStaffing: "outstaffing",
+  ProjectManagement: "project-management",
+  Design: "ui-ux-design",
+  DigitalMarketing: "digital-marketing",
+};
 
 // Adjust the path as per your setup
 
@@ -28,13 +40,14 @@ export default async function generateSitemap(res: any) {
       throw new Error("VITE_BACKEND_URL is not defined in the environment variables");
     }
 
-    const response = await axios.get(`${backendUrl}blogs?page=1&sort=Desc`);
+    const response = await fetch(`${backendUrl}blogs?page=1&sort=Desc`);
+    const responseData = await response.json();
 
-    if (!response.data?.data?.blogsList) {
+    if (!responseData?.data?.blogsList) {
       throw new Error("Unexpected response structure from the backend");
     }
 
-    const blogRoutes = response.data.data.blogsList.map(
+    const blogRoutes = responseData.data.blogsList.map(
       (blog: { titlePath: string }) => `/blogs/${blog.titlePath}`
     );
 
