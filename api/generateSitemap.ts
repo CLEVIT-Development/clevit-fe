@@ -1,35 +1,35 @@
-const ServicesIdConstants = {
-  Web: "web-development",
-  Mobile: "mobile-app-development",
-  DevOps: "devops",
-  AiIntegration: "ai-integration",
-  MachineLearning: "machine-learning",
-  QualityAssurance: "quality-assurance",
-  TechnicalAssessment: "technical-assessment",
-  MaintenanceSupport: "maintenance-support",
-  OutStaffing: "outstaffing",
-  ProjectManagement: "project-management",
-  Design: "ui-ux-design",
-  DigitalMarketing: "digital-marketing",
-};
+// const ServicesIdConstants = {
+//   Web: "web-development",
+//   Mobile: "mobile-app-development",
+//   DevOps: "devops",
+//   AiIntegration: "ai-integration",
+//   MachineLearning: "machine-learning",
+//   QualityAssurance: "quality-assurance",
+//   TechnicalAssessment: "technical-assessment",
+//   MaintenanceSupport: "maintenance-support",
+//   OutStaffing: "outstaffing",
+//   ProjectManagement: "project-management",
+//   Design: "ui-ux-design",
+//   DigitalMarketing: "digital-marketing",
+// };
 
 // Adjust the path as per your setup
 
-const staticRoutes = [
-  "/",
-  "/about-us",
-  "/services",
-  "/portfolio",
-  "/faq",
-  "/contact-us",
-  "/privacy-policy",
-  "/terms-and-conditions",
-  "/request-demo",
-  "/blogs",
-];
+// const staticRoutes = [
+//   "/",
+//   "/about-us",
+//   "/services",
+//   "/portfolio",
+//   "/faq",
+//   "/contact-us",
+//   "/privacy-policy",
+//   "/terms-and-conditions",
+//   "/request-demo",
+//   "/blogs",
+// ];
 
-// Generate service routes dynamically
-const serviceRoutes = Object.values(ServicesIdConstants).map((id) => `/services/${id}`);
+// // Generate service routes dynamically
+// const serviceRoutes = Object.values(ServicesIdConstants).map((id) => `/services/${id}`);
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default async function GET() {
