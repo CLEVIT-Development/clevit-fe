@@ -43,21 +43,19 @@ async function getBlog() {
     return await response.json();
   } catch (error) {
     console.error("Error fetching or parsing blogs:", error);
-    return { data: { data: { blogsList: [] } } };
+    return { data: { blogsList: [] } };
   }
 }
 
 export function GET(_request: Request) {
-  let response: any;
+  let blogsList: any;
   waitUntil(
     getBlog().then((json) => {
-      response = json.data.data;
+      blogsList = json.data.blogsList;
     })
   );
 
-  const blogRoutes = response.blogsList.map(
-    (blog: { titlePath: string }) => `/blogs/${blog.titlePath}`
-  );
+  const blogRoutes = blogsList.map((blog: { titlePath: string }) => `/blogs/${blog.titlePath}`);
 
   const allRoutes = [...staticRoutes, ...serviceRoutes, ...blogRoutes];
 
