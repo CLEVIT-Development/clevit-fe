@@ -48,7 +48,7 @@ const PortfolioPage = () => {
             className={` ${index % 2 === 0 ? "desktop:items-start" : "desktop:items-end"} ${index !== portfolioConstants.length - 1 ? "desktop:!mb-[56px]" : ""} items-start`}
             titleClassName="text-purple-100"
           >
-            <div className="flex flex-col desktop:flex-row gap-9 px-5 desktop:px-20">
+            <div className="flex flex-col desktop:flex-row gap-9 px-5 md:px-20  lg:px-0">
               {/* Mobile layout */}
               <div className="flex flex-col lg:hidden">
                 <div>

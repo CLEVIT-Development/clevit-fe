@@ -3,7 +3,6 @@ import { Link, useNavigate } from "react-router-dom";
 
 import { RoutePaths } from "@/app/routing/routing.constants.ts";
 import { contactsConstants } from "@/assets/constants/contacts.constants.ts";
-// import { industriesConstants } from "@/assets/constants/industries.constants";
 import { servicesConstants } from "@/assets/constants/services.constants.ts";
 import { socialLinksConstants } from "@/assets/constants/socials.constants.ts";
 import BlogItem from "@/shared/BlogItem";
@@ -82,16 +81,6 @@ const Footer = () => {
             );
           })}
         </div>
-        {/* <div className="w-[45%] lg:w-fit flex flex-col space-y-4 mr-auto lg:ml-auto">
-          <h6 className="font-bold lg:text-md-l text-md text-white opacity-60">Industries</h6>
-          {industriesConstants.map((element) => {
-            return (
-              <div key={element.id} className="xs:w-[125px]">
-                <p className="text-gray-100 font-medium lg:text-md xs:text-sm">{element.name}</p>
-              </div>
-            );
-          })}
-        </div> */}
         <div className="w-[45%] lg:w-fit flex flex-col space-y-4">
           <h6 className="font-bold lg:text-md-l text-md text-white opacity-60 xs:whitespace-nowrap desktop:whitespace-normal">
             Contact Us

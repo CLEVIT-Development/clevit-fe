@@ -162,7 +162,6 @@ const TechnologySection = ({ title, subTitle, tabsConstant, technologiesConstant
   );
 };
 
-// Функция для получения классов сетки в зависимости от количества технологий
 const getGridClass = (length: number) => {
   switch (length) {
     case 2:
