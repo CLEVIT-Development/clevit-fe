@@ -1,4 +1,5 @@
 import { lazy } from "react";
+
 import type { ITabsConstant } from "@/assets/constants/technologies/technologies.constants.ts";
 
 const ChatGPT = lazy(() => import("@/assets/vectors/technology/ChatGPT.svg?react"));
@@ -7,7 +8,7 @@ const FrieFlies = lazy(() => import("@/assets/vectors/technology/FrieFlies.svg?r
 const H2OAI = lazy(() => import("@/assets/vectors/technology/H2OAI.svg?react"));
 const Grammarly = lazy(() => import("@/assets/vectors/technology/Grammarly.svg?react"));
 const IBM = lazy(() => import("@/assets/vectors/technology/IBM.svg?react"));
-const AzureCloud = lazy(() => import("@/assets/vectors/technology/AzureCloud.svg?react"));
+const AzureCloudSmall = lazy(() => import("@/assets/vectors/technology/AzureCloudSmall.svg?react"));
 const LookaInc = lazy(() => import("@/assets/vectors/technology/LookaInc.svg?react"));
 const MidJorney = lazy(() => import("@/assets/vectors/technology/MidJorney.svg?react"));
 const Oracle = lazy(() => import("@/assets/vectors/technology/Oracle.svg?react"));
@@ -49,7 +50,7 @@ export const aiTechnologiesConstants = {
     { id: 5, title: "H2O.ai", Icon: H2OAI },
     { id: 6, title: "Grammarly", Icon: Grammarly },
     { id: 7, title: "IBM", Icon: IBM },
-    { id: 8, title: "AzureCloud", Icon: AzureCloud },
+    { id: 8, title: "AzureCloud", Icon: AzureCloudSmall },
     { id: 9, title: "Looka Inc", Icon: LookaInc },
     { id: 10, title: "Midjourney", Icon: MidJorney },
     { id: 11, title: "Oracle", Icon: Oracle },
@@ -63,7 +64,7 @@ export const aiTechnologiesConstants = {
     { id: 5, title: "H2O.ai", Icon: H2OAI },
     { id: 6, title: "Grammarly", Icon: Grammarly },
     { id: 7, title: "IBM", Icon: IBM },
-    { id: 8, title: "AzureCloud", Icon: AzureCloud },
+    { id: 8, title: "AzureCloud", Icon: AzureCloudSmall },
     { id: 9, title: "Looka Inc", Icon: LookaInc },
     { id: 10, title: "Midjourney", Icon: MidJorney },
     { id: 11, title: "Oracle", Icon: Oracle },
@@ -77,7 +78,7 @@ export const aiTechnologiesConstants = {
     { id: 5, title: "H2O.ai", Icon: H2OAI },
     { id: 6, title: "Grammarly", Icon: Grammarly },
     { id: 7, title: "IBM", Icon: IBM },
-    { id: 8, title: "AzureCloud", Icon: AzureCloud },
+    { id: 8, title: "AzureCloud", Icon: AzureCloudSmall },
     { id: 9, title: "Looka Inc", Icon: LookaInc },
     { id: 10, title: "Midjourney", Icon: MidJorney },
     { id: 11, title: "Oracle", Icon: Oracle },
@@ -91,7 +92,7 @@ export const aiTechnologiesConstants = {
     { id: 5, title: "H2O.ai", Icon: H2OAI },
     { id: 6, title: "Grammarly", Icon: Grammarly },
     { id: 7, title: "IBM", Icon: IBM },
-    { id: 8, title: "AzureCloud", Icon: AzureCloud },
+    { id: 8, title: "AzureCloud", Icon: AzureCloudSmall },
     { id: 9, title: "Looka Inc", Icon: LookaInc },
     { id: 10, title: "Midjourney", Icon: MidJorney },
     { id: 11, title: "Oracle", Icon: Oracle },

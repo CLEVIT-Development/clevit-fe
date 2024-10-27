@@ -144,7 +144,7 @@ const TechnologySection = ({ title, subTitle, tabsConstant, technologiesConstant
               {technologiesConstant[activeTab].map((tech, index) => (
                 <div
                   key={index}
-                  className="w-1/2 md:w-[24%] desktop:w-[15%] lg:w-[10%] mb-4 flex flex-col items-center animate-swipeTop"
+                  className="w-1/2 md:w-[24%] desktop:w-[15%] lg:w-[20%] mb-4 flex flex-col items-center animate-swipeTop"
                 >
                   <div className="w-[90px] h-[120px] flex flex-col items-center justify-center mr-2">
                     <Suspense fallback={<div>Loading...</div>}>
