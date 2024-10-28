@@ -11,5 +11,16 @@
     "api/generateMetaTags.ts": {
       "memory": 1024
     }
-  }
+  },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/javascript"
+        }
+      ]
+    }
+  ]
 }
