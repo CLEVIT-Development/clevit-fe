@@ -1,10 +1,14 @@
 {
   "rewrites": [
     { "source": "/sitemap.xml", "destination": "/api/generateSitemap" },
-    { "source": "/(.*)", "destination": "/index.html" }
+    { "source": "/blog/:path*", "destination": "/api/generateMetaTags" },
+    { "source": "/:path*", "destination": "/api/generateMetaTags" }
   ],
   "functions": {
     "api/generateSitemap.ts": {
+      "memory": 1024
+    },
+    "api/generateMetaTags.ts": {
       "memory": 1024
     }
   }
