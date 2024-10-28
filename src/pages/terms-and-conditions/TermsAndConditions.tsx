@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 
 import { RoutePaths } from "@/app/routing/routing.constants.ts";
+import { seoConfig } from "@/app/seo.config";
 import { appConfig } from "@/assets/constants/config.constants.ts";
 import Layout from "@/common/layout/Layout.tsx";
 import DocumentSection from "@/common/templates/DocumentSection.tsx";
-import PageSEO from "@/shared/lib/meta/PageSeo";
+import Seo from "@/shared/seo/SEO";
 import { HeaderVariant } from "@/types/variant.types.ts";
 import { urlShortener } from "@/utils/link.utils.ts";
 import { formatPhoneNumber } from "@/utils/phone.utils";
@@ -14,11 +15,7 @@ const TermsAndConditions = () => {
 
   return (
     <>
-      <PageSEO
-        title="Terms And Conditions | Clevit"
-        description="Review Clevit’s Terms and Conditions to understand the guidelines for using our services, your rights as a user, and how we ensure a transparent partnership."
-        canonicalUrl="https://www.clevit.io/terms-and-conditions"
-      />
+      <Seo {...seoConfig.termsAndConditions} />
       <Layout headerVariant={HeaderVariant.Tertiary}>
         <div className="w-full flex flex-col items-center space-y-[50px]">
           <h1 className="desktop:text-4xl text-2xl-3xl text-gray-200 mt-4 text-center">

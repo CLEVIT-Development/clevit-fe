@@ -1,3 +1,4 @@
+import { seoConfig } from "@/app/seo.config";
 import { homeProcessesConstants } from "@/assets/constants/processes/homeProcesses.constants";
 import {
   technologiesConstants,
@@ -6,7 +7,7 @@ import {
 import HomeHeading from "@/common/layout/Heading/HomeHeading";
 import Layout from "@/common/layout/Layout";
 import { Gradient } from "@/shared/gradient/Gradient.tsx";
-import PageSEO from "@/shared/lib/meta/PageSeo";
+import Seo from "@/shared/seo/SEO";
 
 import TotalSection from "../about-us/TotalSection";
 import AboutSection from "./AboutSection";
@@ -22,12 +23,7 @@ import TechnologySection from "./TechnologySection";
 const HomePage = () => {
   return (
     <>
-      <PageSEO
-        title="Web and Mobile App Development Company | Clevit"
-        description="Partner with Clevit to develop custom web and mobile app development that fit your business needs. Let us bring your ideas to life with cutting-edge technology."
-        canonicalUrl="https://www.clevit.io/"
-        alternativeDescription="We provide project-based and dedicated teams for custom software, web, mobile, AI, and cloud solutions. Get smarter, cost-effective solutions for your business."
-      />
+      <Seo {...seoConfig.home} />
       <Layout
         layoutClassName="!pt-0 xs:!w-screen"
         className="!pt-0 xs:!w-screen"

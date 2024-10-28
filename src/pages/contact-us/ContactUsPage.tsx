@@ -1,7 +1,8 @@
+import { seoConfig } from "@/app/seo.config";
 import Layout from "@/common/layout/Layout.tsx";
 import Section from "@/common/templates/Section";
 import ContactUsForm from "@/shared/forms/ContactUsForm";
-import PageSEO from "@/shared/lib/meta/PageSeo";
+import Seo from "@/shared/seo/SEO";
 import { HeaderVariant } from "@/types/variant.types.ts";
 
 import ContactInfo from "./ContactInfo";
@@ -9,11 +10,7 @@ import ContactInfo from "./ContactInfo";
 const ContactUsPage = () => {
   return (
     <>
-      <PageSEO
-        title="Contact us | Clevit"
-        description="Got a project in mind? Contact Clevit and let's work together to bring your ideas to life. We are here to support your business growth with expert solutions."
-        canonicalUrl="https://www.clevit.io/contact-us"
-      />
+      <Seo {...seoConfig.contactUs} />
       <Layout headerVariant={HeaderVariant.Tertiary}>
         <Section className="mt-8 px-5">
           <div className="flex flex-col space-y-6 desktop:max-w-[80%] ">

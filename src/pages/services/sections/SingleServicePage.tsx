@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import Layout from "@/common/layout/Layout.tsx";
 import NotFound from "@/pages/not-found/NotFoundPage";
 import { Gradient } from "@/shared/gradient/Gradient";
-import PageSEO from "@/shared/lib/meta/PageSeo";
+import Seo from "@/shared/seo/SEO";
 import { HeaderVariant } from "@/types/variant.types.ts";
 
 import { MetaServices } from "../metaServices";
@@ -29,10 +29,11 @@ const SingleServicePage = () => {
 
   return (
     <>
-      <PageSEO
+      <Seo
+        keywords=""
         title={id ? MetaServices[id]?.title : "Clevit"}
         description={id ? MetaServices[id]?.description : "Clevit"}
-        canonicalUrl={id ? MetaServices[id]?.url : "https://www.clevit.io/"}
+        canonical={id ? MetaServices[id]?.url : "https://www.clevit.io/"}
       />
 
       {id && MetaServices[id] ? (

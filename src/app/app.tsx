@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 import ReactModal from "react-modal";
+
 import Routing from "app/routing/routing.tsx";
 
 import ToastService from "@/common/services/toast/ToastService.tsx";
@@ -26,19 +27,20 @@ const App = () => {
   useLoadFont("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 
   return (
-    <QueryClientProvider client={queryClient}>
-      <Helmet>
-        {/* Google tag (gtag.js) */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-3N6NCX16LH"
-          onLoad={handleGtagLoad}
-        />
-      </Helmet>
-
-      <Routing />
-      <ToastService />
-    </QueryClientProvider>
+    <HelmetProvider>
+      <QueryClientProvider client={queryClient}>
+        <Helmet>
+          {/* Google tag (gtag.js) */}
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-3N6NCX16LH"
+            onLoad={handleGtagLoad}
+          />
+        </Helmet>
+        <Routing />
+        <ToastService />
+      </QueryClientProvider>
+    </HelmetProvider>
   );
 };
 

@@ -5,7 +5,7 @@ import useOrigin from "@/common/hooks/useOrigin";
 import SingleBlogHeading from "@/common/layout/Heading/SingleBlogHeading";
 import Layout from "@/common/layout/Layout.tsx";
 import { Gradient } from "@/shared/gradient/Gradient";
-import PageSEO from "@/shared/lib/meta/PageSeo";
+import Seo from "@/shared/seo/SEO";
 import { HeaderVariant } from "@/types/variant.types.ts";
 
 import CalendlySection from "../home/CalendlySection";
@@ -22,10 +22,11 @@ const SingleBlogPage = () => {
 
   return (
     <>
-      <PageSEO
-        description={blogData?.metaDescription}
-        title={blogData?.title}
-        canonicalUrl={canonicalUrl}
+      <Seo
+        keywords=""
+        title={blogData?.title ?? ""}
+        description={blogData?.metaDescription ?? ""}
+        canonical={canonicalUrl}
       />
       <Layout
         headerVariant={HeaderVariant.Primary}

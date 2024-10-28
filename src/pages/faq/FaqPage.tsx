@@ -1,7 +1,8 @@
+import { seoConfig } from "@/app/seo.config";
 import FaqHeading from "@/common/layout/Heading/FaqHeading";
 import Layout from "@/common/layout/Layout.tsx";
 import { Gradient } from "@/shared/gradient/Gradient";
-import PageSEO from "@/shared/lib/meta/PageSeo.tsx";
+import Seo from "@/shared/seo/SEO";
 import { HeaderVariant } from "@/types/variant.types.ts";
 
 import CalendlySection from "../home/CalendlySection";
@@ -11,11 +12,7 @@ import { FaqSection } from "./FaqSection";
 const Faq = () => {
   return (
     <>
-      <PageSEO
-        title="Frequently Asked Questions | Clevit"
-        description="Explore Clevit's FAQ page for answers to common questions about our development services, and how we help businesses grow with innovative digital solutions."
-        canonicalUrl="https://www.clevit.io/faq"
-      />
+      <Seo {...seoConfig.faq} />
       <Layout
         headerVariant={HeaderVariant.Primary}
         heading={
