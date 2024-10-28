@@ -148,9 +148,11 @@ const TechnologySection = ({ title, subTitle, tabsConstant, technologiesConstant
                 >
                   <div className="w-[90px] h-[120px] flex flex-col items-center justify-center mr-2">
                     <Suspense fallback={<div>Loading...</div>}>
-                      <tech.Icon />
+                      <div className="w-full h-[75px] flex justify-center items-end">
+                        <tech.Icon />
+                      </div>
                     </Suspense>
-                    <span className="whitespace-nowrap mt-2">{tech.title}</span>
+                    <span className="whitespace-nowrap  mt-2">{tech.title}</span>
                   </div>
                 </div>
               ))}

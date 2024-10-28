@@ -55,8 +55,8 @@ export const mobileDevelopmentTechnologiesTabsConstants: ITabsConstant[] = [
 export const mobileDevelopmentTechnologiesConstants = {
   1: [
     { id: 1, title: "Swift", Icon: SwiftIcon },
-    { id: 2, title: "Kotlin", Icon: KotlinIcon },
-    { id: 3, title: "Objective-C", Icon: ObjectiveCIcon },
+    { id: 2, title: "Objective-C", Icon: ObjectiveCIcon },
+    { id: 3, title: "Kotlin", Icon: KotlinIcon },
     { id: 4, title: "Java", Icon: JavaIcon },
   ],
   2: [
