@@ -27,7 +27,7 @@ async function getBlogs() {
   const backendUrl = "https://clevit-be.vercel.app/users/v1/";
 
   try {
-    const response = await fetch(`${backendUrl}blogs?page=1&sort=Desc`);
+    const response = await fetch(`${backendUrl}blogs/title-paths`);
 
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
