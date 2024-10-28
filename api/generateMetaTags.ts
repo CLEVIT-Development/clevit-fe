@@ -134,6 +134,7 @@ function generateHtml(metaTags: SeoConfigPage) {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" async sizes="16x16" />
     <title>${metaTags.title}</title>
     <meta name="description" content="${metaTags.description}" />
     <link rel="canonical" href="${metaTags.canonical}" />
