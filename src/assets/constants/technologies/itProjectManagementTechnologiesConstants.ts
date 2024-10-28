@@ -37,7 +37,7 @@ export const itProjectManagmentTechnologiesTabsConstants: ITabsConstant[] = [
 export const itProjectManagementTechnologiesConstants = {
   1: [
     { id: 1, title: "Jira", Icon: Jira },
-    { id: 2, title: "Trelo", Icon: Trelo },
+    { id: 2, title: "Trello", Icon: Trelo },
     { id: 3, title: "Microsoft Project", Icon: MicrosoftProject },
     { id: 4, title: "Asana", Icon: Asana },
     { id: 5, title: "Redmine", Icon: Redmine },
@@ -46,7 +46,7 @@ export const itProjectManagementTechnologiesConstants = {
   ],
   2: [
     { id: 1, title: "Jira", Icon: Jira },
-    { id: 2, title: "Trelo", Icon: Trelo },
+    { id: 2, title: "Trello", Icon: Trelo },
     { id: 3, title: "Microsoft Project", Icon: MicrosoftProject },
     { id: 4, title: "Asana", Icon: Asana },
     { id: 5, title: "Redmine", Icon: Redmine },
@@ -55,7 +55,7 @@ export const itProjectManagementTechnologiesConstants = {
   ],
   3: [
     { id: 1, title: "Jira", Icon: Jira },
-    { id: 2, title: "Trelo", Icon: Trelo },
+    { id: 2, title: "Trello", Icon: Trelo },
     { id: 3, title: "Microsoft Project", Icon: MicrosoftProject },
     { id: 4, title: "Asana", Icon: Asana },
     { id: 5, title: "Redmine", Icon: Redmine },

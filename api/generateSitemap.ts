@@ -27,7 +27,7 @@ async function getBlogs() {
   const backendUrl = "https://clevit-be.vercel.app/users/v1/";
 
   try {
-    const response = await fetch(`${backendUrl}blogs?page=1&sort=Desc`);
+    const response = await fetch(`${backendUrl}blogs/title-paths`);
 
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
@@ -43,9 +43,7 @@ async function getBlogs() {
 export async function GET(_request: Request) {
   const response = await getBlogs();
 
-  const blogRoutes = response.data.blogsList.map(
-    (blog: { titlePath: string }) => `/blogs/${blog.titlePath}`
-  );
+  const blogRoutes = response.data.map((blog: { titlePath: string }) => `/blogs/${blog.titlePath}`);
 
   const allRoutes = [...staticRoutes, ...blogRoutes];
 
@@ -68,3 +66,4 @@ export async function GET(_request: Request) {
     headers: { "Content-Type": "application/xml" },
   });
 }
+

@@ -6,7 +6,6 @@ import useInteractiveObserver from "@/common/hooks/useInteractiveObserver.ts";
 import useScrollView from "@/common/hooks/useScrollView";
 import Section from "@/common/templates/Section";
 
-// Функция для деления массива на три равные части
 const splitArrayIntoThree = (array: Industry[]) => {
   const partSize = Math.ceil(array.length / 3);
   const firstPart = array.slice(0, partSize);
