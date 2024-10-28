@@ -1,5 +1,4 @@
 {
-  "rewrites": [],
   "functions": {
     "api/generateSitemap.ts": {
       "memory": 1024
