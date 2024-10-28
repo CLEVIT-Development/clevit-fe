@@ -35,7 +35,7 @@ async function getBlogs() {
 
     return await response.json();
   } catch (error) {
-    console.error("Error fetching or parsing blogs:", error);
+    console.error("Error fetching blogs:", error);
     return { data: { blogs: [] } };
   }
 }
