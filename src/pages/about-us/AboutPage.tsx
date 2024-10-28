@@ -1,7 +1,8 @@
+import { seoConfig } from "@/app/seo.config";
 import AboutHeading from "@/common/layout/Heading/AboutHeading";
 import Layout from "@/common/layout/Layout";
 import { Gradient } from "@/shared/gradient/Gradient.tsx";
-import PageSEO from "@/shared/lib/meta/PageSeo";
+import Seo from "@/shared/seo/Seo";
 
 import CalendlySection from "../home/CalendlySection";
 import FeedbackSection from "../home/Feedback/FeedbackSection";
@@ -14,11 +15,7 @@ import ValuesSection from "./ValuesSection";
 const AboutPage = () => {
   return (
     <>
-      <PageSEO
-        title="About us | Clevit"
-        description="Discover Clevit's mission to transforming ideas into innovative software solutions. Learn more about our values, expertise, and passion for digital success."
-        canonicalUrl="https://www.clevit.io/about-us"
-      />
+      <Seo {...seoConfig.aboutUs} />
       <Layout
         className="!pt-[40px] px-5 desktop:px-0 lg:px-0"
         heading={

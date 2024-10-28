@@ -1,20 +1,17 @@
 import { Link } from "react-router-dom";
 
 import { RoutePaths } from "@/app/routing/routing.constants.ts";
+import { seoConfig } from "@/app/seo.config";
 import { appConfig } from "@/assets/constants/config.constants.ts";
 import Layout from "@/common/layout/Layout.tsx";
 import DocumentSection from "@/common/templates/DocumentSection.tsx";
-import PageSEO from "@/shared/lib/meta/PageSeo";
+import Seo from "@/shared/seo/Seo";
 import { HeaderVariant } from "@/types/variant.types.ts";
 
 const PrivacyPolicy = () => {
   return (
     <>
-      <PageSEO
-        title="Privacy Policy | Clevit"
-        description="Learn how Clevit protects your privacy and handles your personal data. Read our Privacy Policy to understand our commitment to safeguarding your information."
-        canonicalUrl="https://www.clevit.io/privacy-policy"
-      />
+      <Seo {...seoConfig.privacyPolicy} />
       <Layout headerVariant={HeaderVariant.Tertiary}>
         <div className="w-full flex flex-col items-center space-y-[50px]">
           <h1 className="desktop:text-4xl text-2xl-3xl mt-4 text-gray-200">Privacy Policy</h1>

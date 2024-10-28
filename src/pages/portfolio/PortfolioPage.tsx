@@ -1,12 +1,13 @@
 import { useRef, useState } from "react";
 
+import { seoConfig } from "@/app/seo.config";
 import { portfolioConstants } from "@/assets/constants/portfolio.constants";
 import useResponsive from "@/common/hooks/useResponsive.ts";
 import PortfolioHeading from "@/common/layout/Heading/PortfolioHeading";
 import Layout from "@/common/layout/Layout.tsx";
 import Section from "@/common/templates/Section";
 import { Gradient } from "@/shared/gradient/Gradient";
-import PageSEO from "@/shared/lib/meta/PageSeo";
+import Seo from "@/shared/seo/Seo";
 import { HeaderVariant } from "@/types/variant.types.ts";
 
 import CalendlySection from "../home/CalendlySection";
@@ -26,11 +27,7 @@ const PortfolioPage = () => {
 
   return (
     <>
-      <PageSEO
-        title="Our works | Clevit"
-        description="Explore Clevit’s portfolio of successful projects across web, mobile, and custom software development. See how we’ve helped businesses grow with technology."
-        canonicalUrl="https://www.clevit.io/portfolio"
-      />
+      <Seo {...seoConfig.portfolio} />
 
       <Layout
         className="space-y-9 !pt-[40px]"
