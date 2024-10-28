@@ -57,9 +57,9 @@ const PortfolioPage = () => {
                     {project.description}
                   </p>
                 </div>
-                <div className="flex desktop:justify-center md:justify-center">
+                <div className="flex desktop:justify-center">
                   <img
-                    className="desktop:w-[100%] desktop:h-[900px] md:w-[90%] md:h-[700px]"
+                    className="desktop:w-[100%] desktop:h-[900px] md:w-[100%] md:h-[700px]"
                     loading="lazy"
                     alt={`${project.title} picture`}
                     src={project.mobileImageUrl}
