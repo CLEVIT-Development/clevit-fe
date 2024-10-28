@@ -1,8 +1,5 @@
 {
-  "rewrites": [
-    { "source": "/sitemap.xml", "destination": "/api/generateSitemap" },
-    { "source": "/(.*)", "destination": "/index.html" }
-  ],
+  "rewrites": [{ "source": "/sitemap.xml", "destination": "/api/generateSitemap" }],
   "functions": {
     "api/generateSitemap.ts": {
       "memory": 1024
