@@ -40,9 +40,15 @@ const KotlinIcon = lazy(() => import("@/assets/vectors/technology/Kotlin.svg?rea
 const ObjectiveCIcon = lazy(() => import("@/assets/vectors/technology/ObjectiveC.svg?react"));
 const JavaIcon = lazy(() => import("@/assets/vectors/technology/Java.svg?react"));
 
+export interface SubDescription {
+  id: number;
+  title: string;
+  description: string;
+}
+
 export interface ITabsConstant extends INavigationData {
   description?: string;
-  subDescription?: any;
+  subDescription?: SubDescription[];
 }
 
 export interface ITechnologyConstant {

@@ -129,7 +129,7 @@ const TechnologySection = ({ title, subTitle, tabsConstant, technologiesConstant
             <div className="w-full flex flex-col desktop:flex-row desktop:justify-evenly gap-6 mb-8">
               {tabsConstant
                 .find((tab) => tab.id === activeTab)
-                ?.subDescription.map(({ description, title, id }) => (
+                ?.subDescription?.map(({ description, title, id }) => (
                   <div key={id} className="desktop:w-1/3 w-full text-start">
                     <h3 className="mb-4 text-md font-semibold">{title}</h3>
                     <span dangerouslySetInnerHTML={{ __html: description }} />
