@@ -43,9 +43,7 @@ async function getBlogs() {
 export async function GET(_request: Request) {
   const response = await getBlogs();
 
-  const blogRoutes = response.data.blogsList.map(
-    (blog: { titlePath: string }) => `/blogs/${blog.titlePath}`
-  );
+  const blogRoutes = response.data.map((blog: { titlePath: string }) => `/blogs/${blog.titlePath}`);
 
   const allRoutes = [...staticRoutes, ...blogRoutes];
 
