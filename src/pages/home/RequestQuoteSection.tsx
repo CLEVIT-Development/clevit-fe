@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+
 import { RoutePaths } from "@/app/routing/routing.constants";
 import HTMLtag from "@/assets/images/services/HTMLtag.png";
 import Button from "@/shared/ui/Button";
@@ -26,7 +27,7 @@ const RequestQuoteSection = () => {
           Request a Demo
         </Button>
       </div>
-      <div className="relative xs:w-full xs:h-[60%] desktop:h-full md:h-full">
+      <div className="relative xs:w-full xs:h-[60%] desktop:h-full md:h-full  max-w-[1000px]">
         <img
           className="w-full h-full object-cover desktop:scale-x-[1] md:h-full xs:scale-x-[-1] md:scale-x-[1]"
           src={HTMLtag}

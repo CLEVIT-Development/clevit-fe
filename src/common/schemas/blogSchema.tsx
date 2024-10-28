@@ -26,8 +26,6 @@ export const BlogSchema = yup.object().shape({
         return urlRegex.test(value); // Validates if it's a valid URL
       }
 
-      // Check if value is a File object
-
       if (value && value instanceof File) {
         return (
           value.size <= 5 * 1024 * 1024 && // 5MB limit

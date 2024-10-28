@@ -2,7 +2,6 @@ import { memo } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { RoutePaths } from "@/app/routing/routing.constants.ts";
 import { contactsConstants } from "@/assets/constants/contacts.constants.ts";
-import { industriesConstants } from "@/assets/constants/industries.constants";
 import { servicesConstants } from "@/assets/constants/services.constants.ts";
 import { socialLinksConstants } from "@/assets/constants/socials.constants.ts";
 import BlogItem from "@/shared/BlogItem";
@@ -28,10 +27,10 @@ const Footer = () => {
 
   return (
     <footer className="flex flex-col bg-black lg:pt-12 lg:pb-6 xs:pt-5 xs:pb-4 lg:px-20 xs:px-5 z-[20]">
-      <div className="flex flex-wrap gap-8 lg:grid lg:grid-cols-6 xs:grid xs:grid-cols-1 md:grid-cols-3">
+      <div className="flex flex-wrap gap-8 lg:grid lg:grid-cols-5 desktop:grid-cols-3 xs:grid xs:grid-cols-2 md:grid-cols-3">
         <div className="desktop:w-[45%] lg:w-fit flex flex-col space-y-4 sm:col-auto xs:col-span-2 w-full">
           <Logo />
-          <span className="lg:text-base xs:text-sm text-gray-100 desktop:max-w-[340px] ">
+          <span className="lg:text-base xs:text-sm text-gray-100 desktop:w-[200px] lg:w-[300px] ">
             As a leading web and mobile app development company, Clevit empowers businesses across
             all sectors to unlock their full digital potential. Our team of skilled web app
             developers delivers top-notch web, mobile, and AI-driven solutions tailored to your
@@ -71,22 +70,12 @@ const Footer = () => {
               <div
                 key={id}
                 role="button"
-                className="xs:whitespace-nowrap desktop:whitespace-normal	"
+                className="xs:whitespace-nowrap desktop:whitespace-normal"
                 onClick={() => navigate(`/services/${id}`)}
               >
                 <p className="text-gray-100 font-medium lg:text-md xs:text-sm cursor-pointer">
                   {title}
                 </p>
-              </div>
-            );
-          })}
-        </div>
-        <div className="w-[45%] lg:w-fit flex flex-col space-y-4 mr-auto lg:ml-auto">
-          <h6 className="font-bold lg:text-md-l text-md text-white opacity-60">Industries</h6>
-          {industriesConstants.map((element) => {
-            return (
-              <div key={element.id} className="xs:w-[125px]">
-                <p className="text-gray-100 font-medium lg:text-md xs:text-sm">{element.name}</p>
               </div>
             );
           })}

@@ -1,4 +1,5 @@
 import { Suspense } from "react";
+
 import Section from "@/common/templates/Section.tsx";
 import ProcessCard from "@/shared/ui/Process/ProcessCard";
 import ProcessConnector from "@/shared/ui/Process/ProcessConnector";
@@ -46,7 +47,7 @@ const ProcessSection = ({ processes, processTitle, className }: Props) => (
             `}
             >
               <ProcessCard
-                icon={<Icon className="size-10" />}
+                icon={<Icon className="size-13" />}
                 order={orderUtils(index + 1)}
                 title={title}
                 description={description}

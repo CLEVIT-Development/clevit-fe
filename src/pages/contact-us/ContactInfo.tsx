@@ -15,11 +15,9 @@ import ContactWrapper from "./ContactWrapper";
 const ContactInfo = () => {
   const formattedAddressSecond = encodeURIComponent(appConfig.contactAddressSecondary);
 
-  // Create the URL for Google Maps
   const mapUrlSecond = `https://www.google.com/maps/search/?api=1&query=${formattedAddressSecond}`;
 
   const displayPhoneNumber1 = formatPhoneNumber(appConfig.contactPhone, "Armenia");
-  // const displayPhoneNumber2 = formatPhoneNumber(appConfig.contactPhoneSecondary, "USA");
 
   return (
     <div className="lg:w-auto  w-full flex flex-col desktop:items-start items-center desktop:space-y-8 space-y-6">

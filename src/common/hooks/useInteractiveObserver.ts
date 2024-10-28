@@ -26,7 +26,6 @@ const useInteractiveObserver = <T extends HTMLElement>({
 
         callback?.(entry, checkPath);
 
-        // check if the user is not on the top of the page
         if (entry.intersectionRect.height !== 0 && window.scrollY != 0 && isActive) {
           navigate(entry.isIntersecting ? checkRoute : backRoute);
         }
