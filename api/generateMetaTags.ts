@@ -155,11 +155,14 @@ function generateHtml(metaTags: SeoConfigPage) {
   <body>
     ${metaTags.h1 ? `<h1 style="display:none">${metaTags.h1}</h1>` : ""}
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <script type="module" src="/src/main.tsx" crossorigin="anonymous"></script>
   </body>
 </html>`;
 
   return new Response(html, {
-    headers: { "Content-Type": "text/html" },
+    headers: {
+      "Content-Type": "text/html",
+      "X-Content-Type-Options": "nosniff",
+    },
   });
 }
