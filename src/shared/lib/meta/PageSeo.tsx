@@ -20,9 +20,8 @@ const PageSEO: React.FC<PageSEOProps> = ({
 }) => {
   const metaDescription =
     description ||
-    "Clevit specializes in creating custom web and mobile applications that drive business growth. Our expert team delivers innovative solutions for startups and enterprises, focusing on scalable, user-friendly technology. Contact us today for a FREE consultation and transform your digital presence.";
-  const metaTitle =
-    title || "Professional Web & Mobile App Development Services | Custom Solutions by Clevit";
+    "Clevit is a web and mobile app development company building reliable solutions for businesses and startups. Find out how we can help with your project. Book a FREE consultation!";
+  const metaTitle = title || "Web and Mobile App Development Company | Clevit";
 
   return (
     <Helmet>
@@ -43,14 +42,11 @@ const PageSEO: React.FC<PageSEOProps> = ({
       />
       <meta name="twitter:description" content={metaDescription} />
 
-      <meta property="og:site_name" content="Clevit" />
       <meta property="og:locale" content="en" />
       <meta property="og:title" content={metaTitle} />
       <meta property="og:description" content={metaDescription} />
       <meta property="og:url" content="https://clevit.io/" />
-      <meta property="og:type" content="website" />
-      <meta property="og:image" content={TwitterCardImage} />
-      <meta property="og:image:alt" content="Clevit - Web and Mobile Development Services" />
+      <meta property="og:type" content="article" />
 
       <meta
         name="robots"
@@ -64,10 +60,7 @@ const PageSEO: React.FC<PageSEOProps> = ({
         <meta name="alternative-description" content={alternativeDescription} />
       )}
 
-      <meta
-        name="keywords"
-        content="web development, mobile app development, custom software solutions, react development, nodejs, typescript, software consulting, web design, app design, digital transformation"
-      />
+      <meta name="keywords" content="nextplate, react" />
 
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
     </Helmet>

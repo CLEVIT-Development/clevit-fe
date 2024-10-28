@@ -10,7 +10,6 @@ import PortfolioPage from "@/pages/portfolio/PortfolioPage";
 import PrivacyPolicy from "@/pages/privacy-policy/PrivacyPolicy.tsx";
 import CalendlyPage from "@/pages/request-demo/CalendlyPage";
 import ServicePage from "@/pages/services/ServicePage";
-import WebDevelopmentPage from "@/pages/services/WebDevelopmentPage.tsx";
 import SingleServicePage from "@/pages/services/sections/SingleServicePage";
 import TermsAndConditions from "@/pages/terms-and-conditions/TermsAndConditions.tsx";
 
@@ -29,7 +28,6 @@ export enum RoutePaths {
   PrivacyPolicy = "/privacy-policy",
   TermsAndConditions = "/terms-and-conditions",
   Calendly = "/request-demo",
-  WebDevelopment = "/web-development",
   CreateBlog = "/admin/add-blog",
   EditBlog = "/admin/edit-blog/:id",
   AdminSignIn = "/admin/signin",
@@ -58,7 +56,6 @@ export const routerElements = [
   { path: RoutePaths.Blog, Element: SingleBlogPage, isPrivate: false },
   { path: RoutePaths.Service, Element: SingleServicePage, isPrivate: false },
   { path: RoutePaths.Portfolio, Element: PortfolioPage, isPrivate: false },
-  { path: RoutePaths.WebDevelopment, Element: WebDevelopmentPage, isPrivate: false },
   { path: RoutePaths.FAQ, Element: Faq, isPrivate: false },
   { path: RoutePaths.AdminSignIn, Element: SignInPage, isPrivate: false },
   { path: RoutePaths.CreateBlog, Element: AddEditBlogPage, isPrivate: true },
