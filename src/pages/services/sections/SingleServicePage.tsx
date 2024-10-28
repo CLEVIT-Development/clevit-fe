@@ -31,9 +31,9 @@ const SingleServicePage = () => {
     <>
       <Seo
         keywords=""
-        title={id ? MetaServices[id]?.title : "Clevit"}
-        description={id ? MetaServices[id]?.description : "Clevit"}
-        canonical={id ? MetaServices[id]?.url : "https://www.clevit.io/"}
+        title={id ? MetaServices[id]?.title : ""}
+        description={id ? MetaServices[id]?.description : ""}
+        canonical={id ? MetaServices[id]?.url : ""}
       />
 
       {id && MetaServices[id] ? (
