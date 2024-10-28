@@ -165,7 +165,8 @@ function generateHtml(metaTags: SeoConfigPage) {
   <body>
     ${metaTags.h1 ? `<h1 style="display:none">${metaTags.h1}</h1>` : ""}
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx" crossorigin="anonymous"></script>
+    <script type="module" crossorigin src="/assets/main.js"></script>
+    <link rel="stylesheet" href="/assets/main.css">
   </body>
 </html>`;
 
@@ -173,6 +174,7 @@ function generateHtml(metaTags: SeoConfigPage) {
     headers: {
       "Content-Type": "text/html",
       "X-Content-Type-Options": "nosniff",
+      "Cache-Control": "public, max-age=0, must-revalidate",
     },
   });
 }
