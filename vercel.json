@@ -1,44 +1,8 @@
 {
-  "rewrites": [
-    { "source": "/sitemap.xml", "destination": "/api/generateSitemap" },
-    { "source": "/blog/:path*", "destination": "/api/generateMetaTags" },
-    { "source": "/:path*", "destination": "/api/generateMetaTags" }
-  ],
+  "rewrites": [],
   "functions": {
     "api/generateSitemap.ts": {
       "memory": 1024
-    },
-    "api/generateMetaTags.ts": {
-      "memory": 1024
     }
-  },
-  "headers": [
-    {
-      "source": "/assets/(.*).js",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "text/javascript"
-        }
-      ]
-    },
-    {
-      "source": "/assets/(.*).css",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "text/css"
-        }
-      ]
-    },
-    {
-      "source": "/assets/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
-    }
-  ]
+  }
 }
