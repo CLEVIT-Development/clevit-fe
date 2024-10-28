@@ -68,3 +68,4 @@ export async function GET(_request: Request) {
     headers: { "Content-Type": "application/xml" },
   });
 }
+
