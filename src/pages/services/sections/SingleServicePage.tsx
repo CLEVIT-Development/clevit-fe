@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import Layout from "@/common/layout/Layout.tsx";
 import NotFound from "@/pages/not-found/NotFoundPage";
 import { Gradient } from "@/shared/gradient/Gradient";
-import Seo from "@/shared/seo/SEO";
+import Seo from "@/shared/seo/Seo";
 import { HeaderVariant } from "@/types/variant.types.ts";
 
 import { MetaServices } from "../metaServices";

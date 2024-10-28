@@ -4,7 +4,7 @@ import { servicesConstants } from "@/assets/constants/services.constants";
 import ServiceHeading from "@/common/layout/Heading/ServiceHeading";
 import Layout from "@/common/layout/Layout";
 import { Gradient } from "@/shared/gradient/Gradient";
-import Seo from "@/shared/seo/SEO";
+import Seo from "@/shared/seo/Seo";
 import ServiceBox from "@/shared/ui/ServiceCard/ServiceBox.tsx";
 
 import CalendlySection from "../home/CalendlySection";

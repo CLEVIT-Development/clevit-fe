@@ -7,7 +7,7 @@ import {
 import HomeHeading from "@/common/layout/Heading/HomeHeading";
 import Layout from "@/common/layout/Layout";
 import { Gradient } from "@/shared/gradient/Gradient.tsx";
-import Seo from "@/shared/seo/SEO";
+import Seo from "@/shared/seo/Seo";
 
 import TotalSection from "../about-us/TotalSection";
 import AboutSection from "./AboutSection";

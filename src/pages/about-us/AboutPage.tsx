@@ -2,7 +2,7 @@ import { seoConfig } from "@/app/seo.config";
 import AboutHeading from "@/common/layout/Heading/AboutHeading";
 import Layout from "@/common/layout/Layout";
 import { Gradient } from "@/shared/gradient/Gradient.tsx";
-import Seo from "@/shared/seo/SEO";
+import Seo from "@/shared/seo/Seo";
 
 import CalendlySection from "../home/CalendlySection";
 import FeedbackSection from "../home/Feedback/FeedbackSection";

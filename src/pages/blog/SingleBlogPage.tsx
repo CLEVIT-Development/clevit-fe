@@ -5,7 +5,7 @@ import useOrigin from "@/common/hooks/useOrigin";
 import SingleBlogHeading from "@/common/layout/Heading/SingleBlogHeading";
 import Layout from "@/common/layout/Layout.tsx";
 import { Gradient } from "@/shared/gradient/Gradient";
-import Seo from "@/shared/seo/SEO";
+import Seo from "@/shared/seo/Seo";
 import { HeaderVariant } from "@/types/variant.types.ts";
 
 import CalendlySection from "../home/CalendlySection";

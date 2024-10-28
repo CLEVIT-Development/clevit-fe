@@ -5,7 +5,7 @@ import { seoConfig } from "@/app/seo.config";
 import { appConfig } from "@/assets/constants/config.constants.ts";
 import Layout from "@/common/layout/Layout.tsx";
 import DocumentSection from "@/common/templates/DocumentSection.tsx";
-import Seo from "@/shared/seo/SEO";
+import Seo from "@/shared/seo/Seo";
 import { HeaderVariant } from "@/types/variant.types.ts";
 
 const PrivacyPolicy = () => {

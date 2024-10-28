@@ -7,7 +7,7 @@ import PortfolioHeading from "@/common/layout/Heading/PortfolioHeading";
 import Layout from "@/common/layout/Layout.tsx";
 import Section from "@/common/templates/Section";
 import { Gradient } from "@/shared/gradient/Gradient";
-import Seo from "@/shared/seo/SEO";
+import Seo from "@/shared/seo/Seo";
 import { HeaderVariant } from "@/types/variant.types.ts";
 
 import CalendlySection from "../home/CalendlySection";

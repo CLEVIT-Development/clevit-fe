@@ -1,7 +1,7 @@
 import { seoConfig } from "@/app/seo.config";
 import Layout from "@/common/layout/Layout.tsx";
 import CalendlySection from "@/pages/home/CalendlySection.tsx";
-import Seo from "@/shared/seo/SEO";
+import Seo from "@/shared/seo/Seo";
 import { HeaderVariant } from "@/types/variant.types.ts";
 
 const CalendlyPage = () => {

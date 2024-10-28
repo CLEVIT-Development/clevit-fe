@@ -2,7 +2,7 @@ import { seoConfig } from "@/app/seo.config";
 import Layout from "@/common/layout/Layout.tsx";
 import Section from "@/common/templates/Section";
 import ContactUsForm from "@/shared/forms/ContactUsForm";
-import Seo from "@/shared/seo/SEO";
+import Seo from "@/shared/seo/Seo";
 import { HeaderVariant } from "@/types/variant.types.ts";
 
 import ContactInfo from "./ContactInfo";
