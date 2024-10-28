@@ -104,7 +104,6 @@ import UIUX from "@/assets/vectors/UIUX.svg?react";
 import UserCenteredApproach from "@/assets/vectors/UserCenteredApproach.svg?react";
 import PC from "@/assets/vectors/processes/PC.svg?react";
 import Security from "@/assets/vectors/processes/Security.svg?react";
-
 import { singlePageAIProcessesConstants } from "./processes/singlePageAIProcess.constants";
 import { singlePageDataQualityAssuranceProcessesConstants } from "./processes/singlePageDataQualityAssuranceProcess.constants";
 import { singlePageDevopsProcessesConstants } from "./processes/singlePageDevopsProcess.constants";
