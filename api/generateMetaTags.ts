@@ -103,7 +103,7 @@ const backendUrl = "https://clevit-be.vercel.app/users/v1/";
 
 export async function GET(request: Request) {
   const url = new URL(request.url);
-  const path = url.pathname;
+  const path = decodeURIComponent(url.pathname).replace(/[^\w\-\/]/g, "");
 
   // Check if this is a blog post route
   if (path.startsWith("/blog/")) {
@@ -128,29 +128,39 @@ export async function GET(request: Request) {
 }
 
 function generateHtml(metaTags: SeoConfigPage) {
+  const escapeHtml = (str: string) => {
+    return str
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+  };
+
   const html = `
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" async sizes="16x16" />
-    <title>${metaTags.title}</title>
-    <meta name="description" content="${metaTags.description}" />
-    <link rel="canonical" href="${metaTags.canonical}" />
+    <meta name="robots" content="index, follow" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" async sizes="16x16" />
+    <title>${escapeHtml(metaTags.title)}</title>
+    <meta name="description" content="${escapeHtml(metaTags.description)}" />
+    <link rel="canonical" href="${escapeHtml(metaTags.canonical)}" />
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="${metaTags.title}" />
-    <meta property="og:description" content="${metaTags.description}" />
-    <meta property="og:url" content="${metaTags.canonical}" />
-    ${metaTags.ogImage ? `<meta property="og:image" content="${metaTags.ogImage}" />` : ""}
+    <meta property="og:title" content="${escapeHtml(metaTags.title)}" />
+    <meta property="og:description" content="${escapeHtml(metaTags.description)}" />
+    <meta property="og:url" content="${escapeHtml(metaTags.canonical)}" />
+    ${metaTags.ogImage ? `<meta property="og:image" content="${escapeHtml(metaTags.ogImage)}" />` : ""}
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:title" content="${metaTags.title}" />
-    <meta property="twitter:description" content="${metaTags.description}" />
-    ${metaTags.ogImage ? `<meta property="twitter:image" content="${metaTags.ogImage}" />` : ""}
+    <meta property="twitter:title" content="${escapeHtml(metaTags.title)}" />
+    <meta property="twitter:description" content="${escapeHtml(metaTags.description)}" />
+    ${metaTags.ogImage ? `<meta property="twitter:image" content="${escapeHtml(metaTags.ogImage)}" />` : ""}
   </head>
   <body>
     ${metaTags.h1 ? `<h1 style="display:none">${metaTags.h1}</h1>` : ""}
