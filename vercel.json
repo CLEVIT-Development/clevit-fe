@@ -1,20 +1,14 @@
 {
-  "rewrites": [{ "source": "/sitemap.xml", "destination": "/api/generateSitemap" }],
+  "rewrites": [
+    { "source": "/sitemap.xml", "destination": "/api/generateSitemap" },
+    { "source": "/(.*)", "destination": "api/hydration.ts" }
+  ],
   "functions": {
     "api/generateSitemap.ts": {
       "memory": 1024
+    },
+    "api/hydration.ts": {
+      "memory": 1024
     }
-  },
-  "builds": [
-    {
-      "src": "api/hydration.ts",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "api/hydration.ts"
-    }
-  ]
+  }
 }
