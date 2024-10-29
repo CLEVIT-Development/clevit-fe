@@ -1,5 +1,4 @@
 import express, { Request, Response } from "express";
-
 import { render } from "../ssr";
 
 // Adjust path as necessary
