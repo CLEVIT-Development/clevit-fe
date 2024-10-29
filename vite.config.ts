@@ -29,4 +29,7 @@ export default defineConfig({
       minify: true,
     }),
   ],
+  ssr: {
+    noExternal: ["react-dom"],
+  },
 });

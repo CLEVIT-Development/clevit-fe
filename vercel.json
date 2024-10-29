@@ -1,11 +1,20 @@
 {
-  "rewrites": [
-    { "source": "/sitemap.xml", "destination": "/api/generateSitemap" },
-    { "source": "/(.*)", "destination": "/" }
-  ],
+  "rewrites": [{ "source": "/sitemap.xml", "destination": "/api/generateSitemap" }],
   "functions": {
     "api/generateSitemap.ts": {
       "memory": 1024
     }
-  }
+  },
+  "builds": [
+    {
+      "src": "api/index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "api/index.js"
+    }
+  ]
 }
