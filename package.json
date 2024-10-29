@@ -30,7 +30,7 @@
     "@types/express": "^5.0.0",
     "@types/node": "^22.8.2",
     "@vercel/functions": "^1.4.2",
-    "@vercel/node": "^3.2.23",
+    "@vercel/node": "^3",
     "audit-ci": "^6.6.1",
     "axios": "^1.7.2",
     "classnames": "^2.5.1",
@@ -80,5 +80,8 @@
     "vite": "^5.2.0",
     "vite-plugin-copy": "^0.1.6",
     "vite-plugin-html": "^3.2.2"
+  },
+  "resolutions": {
+    "path-to-regexp": "^6.3.0"
   }
 }
