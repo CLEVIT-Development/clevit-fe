@@ -10,7 +10,7 @@ import { Gradient } from "@/shared/gradient/Gradient.tsx";
 import Seo from "@/shared/seo/Seo";
 
 import TotalSection from "../about-us/TotalSection";
-import AboutSection from "./AboutSection";
+// import AboutSection from "./AboutSection";
 import CalendlySection from "./CalendlySection";
 import FeedbackSection from "./Feedback/FeedbackSection";
 import IndustriesSection from "./IndustriesSection";
@@ -45,7 +45,7 @@ const HomePage = () => {
         <IndustriesSection />
         <ProjectSection />
         <FeedbackSection />
-        <AboutSection />
+        {/*<AboutSection />*/}
         <CalendlySection title="Schedule a free call with a member of our team who will be happy to discuss the services we offer and how they can benefit you." />
       </Layout>
     </>
