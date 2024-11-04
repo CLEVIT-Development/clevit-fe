@@ -1,13 +1,10 @@
 {
   "rewrites": [
     { "source": "/sitemap.xml", "destination": "/api/generateSitemap" },
-    { "source": "/(.*)", "destination": "api/hydration.ts" }
+    { "source": "/(.*)", "destination": "/" }
   ],
   "functions": {
     "api/generateSitemap.ts": {
-      "memory": 1024
-    },
-    "api/hydration.ts": {
       "memory": 1024
     }
   }
