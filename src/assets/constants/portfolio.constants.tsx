@@ -448,7 +448,7 @@ export const portfolioConstants: Project[] = [
       { label: "Type", value: "Web Development, AI Development" },
       { label: "Duration", value: "2 Years 4 Months" },
       { label: "Website", value: "Internal Use Only", isLink: false },
-      { label: "Country", value: "Canada" },
+      { label: "Country", value: "United States" },
       {
         label: "Technologies",
         value: [
