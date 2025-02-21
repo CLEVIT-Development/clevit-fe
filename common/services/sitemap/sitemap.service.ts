@@ -41,15 +41,20 @@ class SitemapService {
   }
 
   static async generateDynamicSitemap(): Promise<MetadataRoute.Sitemap> {
-    const baseUrl = "https://www.clevit.io";
-    const blogs = await BlogService.getTitlePath();
+    try {
+      const baseUrl = "https://www.clevit.io";
+      const blogs = await BlogService.getTitlePath();
 
-    return blogs.map((blog) => ({
-      url: `${baseUrl}/blogs/${blog.titlePath}`,
-      changeFrequency: "daily",
-      lastModified: new Date().toISOString(),
-      priority: 0.7,
-    }));
+      return blogs.map((blog) => ({
+        url: `${baseUrl}/blogs/${blog.titlePath}`,
+        changeFrequency: "daily",
+        lastModified: new Date().toISOString(),
+        priority: 0.7,
+      }));
+    } catch (error) {
+      console.error("Failed to generate dynamic sitemap:", error);
+      return [];
+    }
   }
 
   static async generateSitemap(): Promise<MetadataRoute.Sitemap> {

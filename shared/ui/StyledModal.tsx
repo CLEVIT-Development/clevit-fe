@@ -1,21 +1,33 @@
-import Modal from "react-modal";
+import React from "react";
+import ReactModalDefault from "react-modal";
 
 import CloseIcon from "@/assets/vectors/Close.svg";
 
-interface Props extends Modal.Props {
+const Modal = ReactModalDefault as unknown as React.ComponentType<ReactModalDefault.Props>;
+
+if (typeof window !== "undefined") {
+  ReactModalDefault.setAppElement("#root");
+}
+
+interface Props {
+  isOpen?: boolean;
+  onRequestClose?: () => void;
   contentStyles?: React.CSSProperties;
   overlayStyles?: React.CSSProperties;
   withCloseButton?: boolean;
+  children: React.ReactNode;
 }
 
-const StyledModal: React.FC<Props> = ({
-  children,
+const StyledModal = ({
+  isOpen = false,
+  onRequestClose,
   contentStyles,
   overlayStyles,
   withCloseButton,
+  children,
   ...props
-}) => {
-  const customStyles: Modal.Styles = {
+}: Props & Partial<ReactModalDefault.Props>) => {
+  const customStyles: ReactModalDefault.Styles = {
     content: {
       top: "50%",
       left: "50%",
@@ -36,16 +48,16 @@ const StyledModal: React.FC<Props> = ({
   };
 
   return (
-    <Modal style={customStyles} {...props}>
+    <Modal isOpen={isOpen} onRequestClose={onRequestClose} style={customStyles} {...props}>
       <div className="relative h-full">
-        {withCloseButton ? (
+        {withCloseButton && (
           <button
             className="absolute right-[22px] top-[22px] cursor-pointer z-10"
-            onClick={props.onRequestClose}
+            onClick={onRequestClose}
           >
             <CloseIcon />
           </button>
-        ) : null}
+        )}
         {children}
       </div>
     </Modal>
