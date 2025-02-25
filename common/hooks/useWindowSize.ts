@@ -1,0 +1,33 @@
+import { useEffect, useState } from "react";
+
+const useWindowSize = () => {
+  const [windowSize, setWindowSize] = useState<{ width: number; height: number }>({
+    width: 0,
+    height: 0,
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+
+    // Check if window is defined to ensure we're on the client side
+    if (typeof window !== "undefined") {
+      handleResize(); // Set initial size
+      window.addEventListener("resize", handleResize);
+    }
+
+    return () => {
+      if (typeof window !== "undefined") {
+        window.removeEventListener("resize", handleResize);
+      }
+    };
+  }, []);
+
+  return windowSize;
+};
+
+export default useWindowSize;
