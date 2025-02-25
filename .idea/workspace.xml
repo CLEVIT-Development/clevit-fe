@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2c3606b9-ecc9-4b74-8e05-e441ee9b32e8" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2f0AJHdNlCbeGwIKYq9d1bvrZNm" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/hayko/Desktop/projects/clevit-fe&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;/usr/local/bin/node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/hayko/Desktop/projects/clevit-fe/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.nodejs&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/hayko/Desktop/projects/clevit-fe/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/utils" />
+      <recent name="$PROJECT_DIR$/src/common/hooks" />
+      <recent name="$PROJECT_DIR$/public" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.preview">
+    <configuration name="audit" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="audit" />
+      </scripts>
+      <node-interpreter value="/usr/local/bin/node" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="lint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="lint" />
+      </scripts>
+      <node-interpreter value="/usr/local/bin/node" />
+      <package-manager value="yarn" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="preview" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="preview" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.preview" />
+        <item itemvalue="npm.build" />
+        <item itemvalue="npm.audit" />
+        <item itemvalue="npm.lint" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2c3606b9-ecc9-4b74-8e05-e441ee9b32e8" name="Changes" comment="" />
+      <created>1712927549445</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1712927549445</updated>
+      <workItem from="1712927552133" duration="24162000" />
+      <workItem from="1713955388282" duration="11438000" />
+      <workItem from="1714471023476" duration="4700000" />
+      <workItem from="1716391579390" duration="5235000" />
+      <workItem from="1718023263423" duration="2127000" />
+      <workItem from="1718733008276" duration="3358000" />
+      <workItem from="1719878138874" duration="5829000" />
+      <workItem from="1720478138909" duration="1800000" />
+      <workItem from="1721332458975" duration="598000" />
+      <workItem from="1727969748799" duration="5661000" />
+      <workItem from="1728633136029" duration="42529000" />
+      <workItem from="1731161173792" duration="598000" />
+      <workItem from="1740095840170" duration="558000" />
+      <workItem from="1740175080956" duration="3000000" />
+      <workItem from="1740252878930" duration="153000" />
+      <workItem from="1740521593076" duration="195000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
+  </component>
+</project>
