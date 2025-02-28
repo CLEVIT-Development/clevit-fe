@@ -1,48 +1,78 @@
 import {
-  ExpressIcon,
+  CypressIcon,
   FirebaseIcon,
   GoogleCloudIcon,
+  JestIcon,
+  MongoIcon,
   MySQLIcon,
   NestIcon,
   NextIcon,
   NodeIcon,
   ReactIcon,
   TailwindCSSIcon,
-  ViteIcon,
+  Typescript,
 } from "@/assets/icons/technology-icons";
-import FlowOpsMobile from "@/assets/images/projects/FlowOpsMobile.webp";
-import FlowopsDesktop from "@/assets/images/projects/FlowopsDesktop.webp";
 import OblivioniDesktop from "@/assets/images/projects/OblivioniDesktop.webp";
 import OblivioniMobile from "@/assets/images/projects/OblivioniMobile.webp";
+import PollinMobile from "@/assets/images/projects/PollinMobile.webp";
+import PollinWeb from "@/assets/images/projects/PollinWeb.webp";
 import RenegadeDesktop from "@/assets/images/projects/RenegadeDesktop.webp";
 import RenegadeMobile from "@/assets/images/projects/RenegadeMobile.webp";
 
 export const projectsConstants = [
+  // {
+  //   id: 1,
+  //   sphera: "Events & Entertainment",
+  //   title: "TheFlowOps",
+  //   subTitle: "The booking platform that saves you time",
+  //   description:
+  //     "TheFlowOps is a booking platform for seat reservations and event planning. With our expertise in app, website, and admin dashboard development, it features automated systems and intuitive tools for managing both in-person and online events.",
+  //   type: "Web and Mobile Development, Admin Dashboard",
+  //   duration: "2 Years 1 Month (Ongoing)",
+  //   country: "Singapore",
+  //   link: "https://www.theflowops.com/",
+  //   appStoreLink: "https://apps.apple.com/us/app/flowops/id6477181736",
+  //   googlePlayLink: "https://apps.apple.com/us/app/flowops/id6477181736",
+  //   icons: [
+  //     { id: 1, Icon: ReactIcon, text: "React.js" },
+  //     { id: 2, Icon: TailwindCSSIcon, text: "Tailwind CSS" },
+  //     { id: 3, Icon: ViteIcon, text: "Vite.js" },
+  //     { id: 4, Icon: NodeIcon, text: "Node.js" },
+  //     { id: 5, Icon: ExpressIcon, text: "Express.js" },
+  //     { id: 6, Icon: MySQLIcon, text: "MySQL" },
+  //     { id: 7, Icon: GoogleCloudIcon, text: "Google Cloud" },
+  //     { id: 8, Icon: FirebaseIcon, text: "Google Firebase" },
+  //   ],
+  //   desktopBackground: FlowopsDesktop,
+  //   mobileBackground: FlowOpsMobile,
+  // },
   {
     id: 1,
-    sphera: "Events & Entertainment",
-    title: "TheFlowOps",
-    subTitle: "The booking platform that saves you time",
+    sphera: "Healthcare",
+    title: "Pollin Healthcare\n",
+    subTitle: "Healthcare appointment scheduling and treatment management",
     description:
-      "TheFlowOps is a booking platform for seat reservations and event planning. With our expertise in app, website, and admin dashboard development, it features automated systems and intuitive tools for managing both in-person and online events.",
-    type: "Web and Mobile Development, Admin Dashboard",
-    duration: "2 Years 1 Month (Ongoing)",
-    country: "Singapore",
-    link: "https://www.theflowops.com/",
-    appStoreLink: "https://apps.apple.com/us/app/flowops/id6477181736",
-    googlePlayLink: "https://apps.apple.com/us/app/flowops/id6477181736",
+      "Pollin Regenerative Health Clinic Management System simplifies patient appointment scheduling. We've developed an admin dashboard to facilitate clinic network actions and optimize connections between patients and doctors.",
+    type: "Web Development, Admin Dashboard",
+    duration: "3 Years 2 Month (Ongoing)",
+    country: "Canada",
+    link: "https://www.pollinfertility.com/",
     icons: [
       { id: 1, Icon: ReactIcon, text: "React.js" },
-      { id: 2, Icon: TailwindCSSIcon, text: "Tailwind CSS" },
-      { id: 3, Icon: ViteIcon, text: "Vite.js" },
-      { id: 4, Icon: NodeIcon, text: "Node.js" },
-      { id: 5, Icon: ExpressIcon, text: "Express.js" },
-      { id: 6, Icon: MySQLIcon, text: "MySQL" },
-      { id: 7, Icon: GoogleCloudIcon, text: "Google Cloud" },
-      { id: 8, Icon: FirebaseIcon, text: "Google Firebase" },
+      { id: 2, Icon: NextIcon, text: "Next.js" },
+      { id: 3, Icon: TailwindCSSIcon, text: "Tailwind CSS" },
+      { id: 4, Icon: CypressIcon, text: "Cypress" },
+      { id: 5, Icon: Typescript, text: "Typescript" },
+      { id: 6, Icon: NodeIcon, text: "Node.js" },
+      { id: 7, Icon: NestIcon, text: "Nest.js" },
+      { id: 8, Icon: JestIcon, text: "Jest" },
+      { id: 9, Icon: GoogleCloudIcon, text: "Google Cloud" },
+      { id: 10, Icon: FirebaseIcon, text: "Firebase" },
+      { id: 11, Icon: MySQLIcon, text: "MySQL" },
+      { id: 12, Icon: MongoIcon, text: "MongoDB" },
     ],
-    desktopBackground: FlowopsDesktop,
-    mobileBackground: FlowOpsMobile,
+    desktopBackground: PollinWeb,
+    mobileBackground: PollinMobile,
   },
   {
     id: 2,

@@ -50,8 +50,8 @@ const ProjectSection = () => {
                 country,
                 link,
                 icons,
-                appStoreLink,
-                googlePlayLink,
+                // appStoreLink,
+                // googlePlayLink,
               }) => {
                 return (
                   <div
@@ -96,18 +96,18 @@ const ProjectSection = () => {
                               {country}
                             </span>
                           </p>
-                          {(appStoreLink || googlePlayLink) && (
-                            <p className="text-white desktop:text-md xs:text-sm !font-semibold">
-                              App Links:
-                              <Link
-                                href={appStoreLink}
-                                target="_blank"
-                                className="font-normal desktop:text-md xs:text-base text-purple-400 ml-2"
-                              >
-                                App Store
-                              </Link>
-                            </p>
-                          )}
+                          {/*{(appStoreLink || googlePlayLink) && (*/}
+                          {/*  <p className="text-white desktop:text-md xs:text-sm !font-semibold">*/}
+                          {/*    App Links:*/}
+                          {/*    <Link*/}
+                          {/*      href={appStoreLink}*/}
+                          {/*      target="_blank"*/}
+                          {/*      className="font-normal desktop:text-md xs:text-base text-purple-400 ml-2"*/}
+                          {/*    >*/}
+                          {/*      App Store*/}
+                          {/*    </Link>*/}
+                          {/*  </p>*/}
+                          {/*)}*/}
                           <p className="text-white desktop:text-md xs:text-sm !font-semibold">
                             Website:
                             <Link
