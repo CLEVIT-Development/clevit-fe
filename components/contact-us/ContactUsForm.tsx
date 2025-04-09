@@ -3,19 +3,20 @@
 import type { FieldValues } from "react-hook-form";
 import { Controller, FormProvider, useForm } from "react-hook-form";
 
-import { contactUsSchema } from "@/common/schemas/contactUsSchema";
-import { axiosInstance } from "@/common/services/toast/axios.service";
-import showNotification, { ToastVersions } from "@/common/services/toast/showNotifications";
-import { servicesConstants } from "@/shared/constants/services.constants";
-import countriesConstants from "@/shared/data/countries.json";
-import Button from "@/shared/ui/Button";
-import AutoComplete from "@/shared/ui/forms/AutoComplete";
-import FileInput from "@/shared/ui/forms/FileInput";
-import Input from "@/shared/ui/forms/Input";
-import PhoneInput from "@/shared/ui/forms/PhoneInput";
-import TextArea from "@/shared/ui/forms/TextArea";
-import { filesSizeValidation } from "@/utils/validation.utils";
 import { yupResolver } from "@hookform/resolvers/yup";
+
+import { contactUsSchema } from "../../common/schemas/contactUsSchema";
+import { axiosInstance } from "../../common/services/toast/axios.service";
+import showNotification, { ToastVersions } from "../../common/services/toast/showNotifications";
+import { servicesConstants } from "../../shared/constants/services.constants";
+import countriesConstants from "../../shared/data/countries.json";
+import Button from "../../shared/ui/Button";
+import AutoComplete from "../../shared/ui/forms/AutoComplete";
+import FileInput from "../../shared/ui/forms/FileInput";
+import Input from "../../shared/ui/forms/Input";
+import PhoneInput from "../../shared/ui/forms/PhoneInput";
+import TextArea from "../../shared/ui/forms/TextArea";
+import { filesSizeValidation } from "../../utils/validation.utils";
 
 interface IContactUsFormPayload extends FieldValues {
   fullname: string;

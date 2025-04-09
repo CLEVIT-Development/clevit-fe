@@ -1,6 +1,6 @@
-import BlogSection from "@/components/blog/BlogSection";
-import { CalendlySection } from "@/components/home";
-import { generatePageMetadata } from "@/utils/metadata.utils";
+import BlogSection from "../../../components/blog/BlogSection";
+import { CalendlySection } from "../../../components/home";
+import { generatePageMetadata } from "../../../utils/metadata.utils";
 
 export const metadata = generatePageMetadata("blogs");
 

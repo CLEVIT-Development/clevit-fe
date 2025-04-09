@@ -1,7 +1,7 @@
-import SingleBlogHeading from "@/common/layout/Heading/SingleBlogHeading";
-import Layout from "@/common/layout/Layout";
-import { Gradient } from "@/components/gradient/Gradient";
-import { HeaderVariant } from "@/types/variant.types";
+import SingleBlogHeading from "../../../../common/layout/Heading/SingleBlogHeading";
+import Layout from "../../../../common/layout/Layout";
+import { Gradient } from "../../../../components/gradient/Gradient";
+import { HeaderVariant } from "../../../../types/variant.types";
 
 interface IProps {
   children: React.ReactNode;

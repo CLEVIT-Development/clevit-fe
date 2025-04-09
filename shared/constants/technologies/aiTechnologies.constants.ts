@@ -2,17 +2,19 @@ import { lazy } from "react";
 
 import type { ITabsConstant } from "./technicalAssesmentTechnologies.constants";
 
-const ChatGPT = lazy(() => import("@/assets/vectors/technology/ChatGPT.svg"));
-const Tableau = lazy(() => import("@/assets/vectors/technology/Tableau.svg"));
-const FrieFlies = lazy(() => import("@/assets/vectors/technology/FrieFlies.svg"));
-const H2OAI = lazy(() => import("@/assets/vectors/technology/H2OAI.svg"));
-const Grammarly = lazy(() => import("@/assets/vectors/technology/Grammarly.svg"));
-const IBM = lazy(() => import("@/assets/vectors/technology/IBM.svg"));
-const AzureCloudSmall = lazy(() => import("@/assets/vectors/technology/AzureCloudSmall.svg"));
-const LookaInc = lazy(() => import("@/assets/vectors/technology/LookaInc.svg"));
-const MidJorney = lazy(() => import("@/assets/vectors/technology/MidJorney.svg"));
-const Oracle = lazy(() => import("@/assets/vectors/technology/Oracle.svg"));
-const SalesForce = lazy(() => import("@/assets/vectors/technology/SalesForce.svg"));
+const ChatGPT = lazy(() => import("../../../assets/vectors/technology/ChatGPT.svg"));
+const Tableau = lazy(() => import("../../../assets/vectors/technology/Tableau.svg"));
+const FrieFlies = lazy(() => import("../../../assets/vectors/technology/FrieFlies.svg"));
+const H2OAI = lazy(() => import("../../../assets/vectors/technology/H2OAI.svg"));
+const Grammarly = lazy(() => import("../../../assets/vectors/technology/Grammarly.svg"));
+const IBM = lazy(() => import("../../../assets/vectors/technology/IBM.svg"));
+const AzureCloudSmall = lazy(
+  () => import("../../../assets/vectors/technology/AzureCloudSmall.svg")
+);
+const LookaInc = lazy(() => import("../../../assets/vectors/technology/LookaInc.svg"));
+const MidJorney = lazy(() => import("../../../assets/vectors/technology/MidJorney.svg"));
+const Oracle = lazy(() => import("../../../assets/vectors/technology/Oracle.svg"));
+const SalesForce = lazy(() => import("../../../assets/vectors/technology/SalesForce.svg"));
 
 export const aITechnologiesTabsConstants: ITabsConstant[] = [
   {

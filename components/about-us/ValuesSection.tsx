@@ -2,10 +2,10 @@
 
 import { useCallback, useState } from "react";
 
-import Section from "@/common/templates/Section";
-import { swipeAnimationSecondaryConstants } from "@/shared/constants/swipeAnimation.constants";
-import { valueTabsConstants, valuesConstants } from "@/shared/constants/values.constants";
-import Navigation from "@/shared/ui/Navigation";
+import Section from "../../common/templates/Section";
+import { swipeAnimationSecondaryConstants } from "../../shared/constants/swipeAnimation.constants";
+import { valueTabsConstants, valuesConstants } from "../../shared/constants/values.constants";
+import Navigation from "../../shared/ui/Navigation";
 
 const ValuesSection = () => {
   const [{ currTabId, direction }, setActiveTab] = useState({

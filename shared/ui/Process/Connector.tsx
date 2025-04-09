@@ -1,6 +1,6 @@
 import { twMerge } from "tailwind-merge";
 
-import { PositionVariant } from "@/types/position.types";
+import { PositionVariant } from "../../../types/position.types";
 
 interface Props {
   position?: PositionVariant;

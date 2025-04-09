@@ -6,11 +6,10 @@ import {
   TelegramIcon,
   TelephoneIcon,
   WatsappIcon,
-} from "@/assets/icons/contact-icons";
-import { appConfig } from "@/shared/constants/config.constants";
-import { socialLinksConstants } from "@/shared/constants/socials.constants";
-import { formatPhoneNumber } from "@/utils/phone.utils";
-
+} from "../../assets/icons/contact-icons";
+import { appConfig } from "../../shared/constants/config.constants";
+import { socialLinksConstants } from "../../shared/constants/socials.constants";
+import { formatPhoneNumber } from "../../utils/phone.utils";
 import ContactItem from "./ContactItem";
 import ContactWrapper from "./ContactWrapper";
 

@@ -29,8 +29,7 @@ import {
   ViteIcon,
   VueIcon,
   WebSocketIcon,
-} from "@/assets/icons/technology-icons";
-
+} from "../../../assets/icons/technology-icons";
 import type { ITabsConstant } from "./technicalAssesmentTechnologies.constants";
 
 export const webDevelopmentTechnologiesTabsConstants: ITabsConstant[] = [

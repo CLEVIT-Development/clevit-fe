@@ -1,9 +1,9 @@
 import Link from "next/link";
 
-import DocumentSection from "@/common/templates/DocumentSection";
-import { appConfig } from "@/shared/constants/config.constants";
-import { RoutePaths } from "@/shared/constants/route.constants";
-import { generatePageMetadata } from "@/utils/metadata.utils";
+import DocumentSection from "../../common/templates/DocumentSection";
+import { appConfig } from "../../shared/constants/config.constants";
+import { RoutePaths } from "../../shared/constants/route.constants";
+import { generatePageMetadata } from "../../utils/metadata.utils";
 
 export const metadata = generatePageMetadata("privacy");
 

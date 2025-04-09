@@ -1,6 +1,7 @@
-import BlogService from "@/common/services/blog/blog.service";
-import type { IBlog } from "@/types/blog.types";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
+
+import type { IBlog } from "../../../types/blog.types";
+import BlogService from "../../services/blog/blog.service";
 
 const useInvalidateBlog = () => {
   const queryClient = useQueryClient();

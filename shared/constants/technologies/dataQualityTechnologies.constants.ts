@@ -2,14 +2,14 @@ import { lazy } from "react";
 
 import type { ITabsConstant } from "./technologies.constants";
 
-const Selenium = lazy(() => import("@/assets/vectors/technology/Selenium.svg"));
-const TestLink = lazy(() => import("@/assets/vectors/technology/TestLink.svg"));
-const Apiary = lazy(() => import("@/assets/vectors/technology/Apiary.svg"));
-const Cypress = lazy(() => import("@/assets/vectors/technology/Cypress.svg"));
-const Playwright = lazy(() => import("@/assets/vectors/technology/Playwright.svg"));
-const Jmeter = lazy(() => import("@/assets/vectors/technology/Jmeter.svg"));
-const TricentisTosca = lazy(() => import("@/assets/vectors/technology/TricentisTosca.svg"));
-const SoapUI = lazy(() => import("@/assets/vectors/technology/SoapUI.svg"));
+const Selenium = lazy(() => import("../../../assets/vectors/technology/Selenium.svg"));
+const TestLink = lazy(() => import("../../../assets/vectors/technology/TestLink.svg"));
+const Apiary = lazy(() => import("../../../assets/vectors/technology/Apiary.svg"));
+const Cypress = lazy(() => import("../../../assets/vectors/technology/Cypress.svg"));
+const Playwright = lazy(() => import("../../../assets/vectors/technology/Playwright.svg"));
+const Jmeter = lazy(() => import("../../../assets/vectors/technology/Jmeter.svg"));
+const TricentisTosca = lazy(() => import("../../../assets/vectors/technology/TricentisTosca.svg"));
+const SoapUI = lazy(() => import("../../../assets/vectors/technology/SoapUI.svg"));
 
 export const dataQualityTechnologiesTabsConstants: ITabsConstant[] = [
   {

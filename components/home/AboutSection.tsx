@@ -3,14 +3,14 @@ import AliceCarousel from "react-alice-carousel";
 
 import classNames from "classnames";
 
-import AvoPhoto from "@/assets/images/team/Avo.webp";
-import EdoPhoto from "@/assets/images/team/Edo.webp";
-import GorPhoto from "@/assets/images/team/Gor.webp";
-import LinkedinIcon from "@/assets/vectors/Linkedin.svg";
-import useResponsive from "@/common/hooks/useResponsive";
-import Section from "@/common/templates/Section";
 import styles from "@/pages/home/Feedback/Feedback.module.css";
 
+import AvoPhoto from "../../assets/images/team/Avo.webp";
+import EdoPhoto from "../../assets/images/team/Edo.webp";
+import GorPhoto from "../../assets/images/team/Gor.webp";
+import LinkedinIcon from "../../assets/vectors/Linkedin.svg";
+import useResponsive from "../../common/hooks/useResponsive";
+import Section from "../../common/templates/Section";
 import PersonCard from "./PersonCard";
 
 interface Person {

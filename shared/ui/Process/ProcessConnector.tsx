@@ -1,10 +1,9 @@
 import classNames from "classnames";
 
-import useResponsive from "@/common/hooks/useResponsive";
-import type { IProcess } from "@/types/constant.types.ts";
-import { PositionVariant } from "@/types/position.types";
-import { isEven } from "@/utils/parity.utils";
-
+import useResponsive from "../../../common/hooks/useResponsive";
+import type { IProcess } from "../../../types/constant.types.ts";
+import { PositionVariant } from "../../../types/position.types";
+import { isEven } from "../../../utils/parity.utils";
 import Connector from "./Connector";
 
 interface Props {

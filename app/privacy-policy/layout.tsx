@@ -1,5 +1,5 @@
-import Layout from "@/common/layout/Layout";
-import { HeaderVariant } from "@/types/variant.types";
+import Layout from "../../common/layout/Layout";
+import { HeaderVariant } from "../../types/variant.types";
 
 interface Props {
   children: React.ReactNode;

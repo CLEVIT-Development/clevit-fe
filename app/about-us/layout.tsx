@@ -1,6 +1,6 @@
-import AboutHeading from "@/common/layout/Heading/AboutHeading";
-import Layout from "@/common/layout/Layout";
-import { Gradient } from "@/components/gradient/Gradient";
+import AboutHeading from "../../common/layout/Heading/AboutHeading";
+import Layout from "../../common/layout/Layout";
+import { Gradient } from "../../components/gradient/Gradient";
 
 interface Props {
   children: React.ReactNode;

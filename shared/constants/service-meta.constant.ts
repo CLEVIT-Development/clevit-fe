@@ -1,4 +1,4 @@
-import { ServicesIdConstants } from "@/shared/constants/services-id.constants";
+import { ServicesIdConstants } from "./services-id.constants";
 
 export const servicesMeta = {
   [ServicesIdConstants.Web]: {

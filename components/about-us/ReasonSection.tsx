@@ -1,6 +1,6 @@
-import Section from "@/common/templates/Section";
-import { reasonsConstants } from "@/shared/constants/reasons.constants";
-import ReasonCard from "@/shared/ui/ReasonCard";
+import Section from "../../common/templates/Section";
+import { reasonsConstants } from "../../shared/constants/reasons.constants";
+import ReasonCard from "../../shared/ui/ReasonCard";
 
 const ReasonSection = () => {
   return (

@@ -1,16 +1,20 @@
 import { lazy } from "react";
 
 const InitialWebsiteAuditIcon = lazy(
-  () => import("@/assets/vectors/processes/InitialWebsiteAudit.svg")
+  () => import("../../../assets/vectors/processes/InitialWebsiteAudit.svg")
 );
 const PerformanceSecurityIcon = lazy(
-  () => import("@/assets/vectors/processes/PerformanceSecurity.svg")
+  () => import("../../../assets/vectors/processes/PerformanceSecurity.svg")
 );
-const RegularUpdatesIcon = lazy(() => import("@/assets/vectors/processes/RegularUpdates.svg"));
-const BugFixingIcon = lazy(() => import("@/assets/vectors/processes/BugFixing.svg"));
-const BackupRecoveryIcon = lazy(() => import("@/assets/vectors/processes/BackupRecovery.svg"));
+const RegularUpdatesIcon = lazy(
+  () => import("../../../assets/vectors/processes/RegularUpdates.svg")
+);
+const BugFixingIcon = lazy(() => import("../../../assets/vectors/processes/BugFixing.svg"));
+const BackupRecoveryIcon = lazy(
+  () => import("../../../assets/vectors/processes/BackupRecovery.svg")
+);
 const OngoingSupporMaintencetIcon = lazy(
-  () => import("@/assets/vectors/processes/OngoingSupportMaintence.svg")
+  () => import("../../../assets/vectors/processes/OngoingSupportMaintence.svg")
 );
 
 export const singlePageMaintenceProcessesConstants = [

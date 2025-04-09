@@ -5,8 +5,8 @@ import { useFormContext } from "react-hook-form";
 import classNames from "classnames";
 import { twMerge } from "tailwind-merge";
 
-import ArrowIcon from "@/assets/vectors/Arrow.svg";
-import useOutsideClick from "@/common/hooks/useOutsideClick";
+import ArrowIcon from "../../../assets/vectors/Arrow.svg";
+import useOutsideClick from "../../../common/hooks/useOutsideClick";
 
 export type TSelectItem = {
   id: string;

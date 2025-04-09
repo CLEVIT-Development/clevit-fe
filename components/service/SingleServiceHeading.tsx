@@ -1,5 +1,5 @@
-import StyledLink from "@/shared/ui/StyledLink";
-import { ButtonVariant } from "@/types/variant.types";
+import StyledLink from "../../shared/ui/StyledLink";
+import { ButtonVariant } from "../../types/variant.types";
 
 interface SingleServiceHeadingProps {
   title: string;

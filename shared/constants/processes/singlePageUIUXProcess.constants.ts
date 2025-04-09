@@ -1,15 +1,17 @@
 import { lazy } from "react";
 
-const DesignIterationIcon = lazy(() => import("@/assets/vectors/processes/DesignIteration.svg"));
-const VisualDesigneIcon = lazy(() => import("@/assets/vectors/processes/VisualDesigne.svg"));
+const DesignIterationIcon = lazy(
+  () => import("../../../assets/vectors/processes/DesignIteration.svg")
+);
+const VisualDesigneIcon = lazy(() => import("../../../assets/vectors/processes/VisualDesigne.svg"));
 const InfrostructureSetupIcon = lazy(
-  () => import("@/assets/vectors/processes/InfrostructureSetup.svg")
+  () => import("../../../assets/vectors/processes/InfrostructureSetup.svg")
 );
 const WireframingPrototypingIcon = lazy(
-  () => import("@/assets/vectors/processes/WireframingPrototyping.svg")
+  () => import("../../../assets/vectors/processes/WireframingPrototyping.svg")
 );
 const FinaleImplementationIcon = lazy(
-  () => import("@/assets/vectors/processes/FinaleImplementation.svg")
+  () => import("../../../assets/vectors/processes/FinaleImplementation.svg")
 );
 
 export const singlePageUIUXProcessesConstants = [

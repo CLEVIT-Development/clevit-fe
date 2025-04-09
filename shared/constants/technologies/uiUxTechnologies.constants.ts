@@ -2,10 +2,12 @@ import { lazy } from "react";
 
 import type { ITabsConstant } from "./technologies.constants";
 
-const Figma = lazy(() => import("@/assets/vectors/technology/Figma.svg"));
-const AdobeXD = lazy(() => import("@/assets/vectors/technology/AdobeXD.svg"));
-const AdobeIllustrator = lazy(() => import("@/assets/vectors/technology/AdobeIllustrator.svg"));
-const AdobePhotoshop = lazy(() => import("@/assets/vectors/technology/AdobePhotoshop.svg"));
+const Figma = lazy(() => import("../../../assets/vectors/technology/Figma.svg"));
+const AdobeXD = lazy(() => import("../../../assets/vectors/technology/AdobeXD.svg"));
+const AdobeIllustrator = lazy(
+  () => import("../../../assets/vectors/technology/AdobeIllustrator.svg")
+);
+const AdobePhotoshop = lazy(() => import("../../../assets/vectors/technology/AdobePhotoshop.svg"));
 
 export const uIuXTechnologiesTabsConstants: ITabsConstant[] = [
   {

@@ -1,11 +1,11 @@
 "use client";
 
-import useWindowSize from "@/common/hooks/useWindowSize";
-import Section from "@/common/templates/Section";
-import ProcessCard from "@/shared/ui/Process/ProcessCard";
-import ProcessConnector from "@/shared/ui/Process/ProcessConnector";
-import type { IProcess } from "@/types/constant.types";
-import { orderUtils } from "@/utils/order.utils";
+import useWindowSize from "../../common/hooks/useWindowSize";
+import Section from "../../common/templates/Section";
+import ProcessCard from "../../shared/ui/Process/ProcessCard";
+import ProcessConnector from "../../shared/ui/Process/ProcessConnector";
+import type { IProcess } from "../../types/constant.types";
+import { orderUtils } from "../../utils/order.utils";
 
 interface Props {
   processes?: IProcess[];

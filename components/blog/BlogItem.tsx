@@ -1,4 +1,4 @@
-import Date from "@/assets/vectors/Date.svg";
+import Date from "../../assets/vectors/Date.svg";
 
 interface Props {
   handleClickOnBlog: (titlePath: string) => void;

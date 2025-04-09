@@ -3,7 +3,7 @@ import { useCallback, useState } from "react";
 import classNames from "classnames";
 import { twMerge } from "tailwind-merge";
 
-import useResponsive from "@/common/hooks/useResponsive";
+import useResponsive from "../../common/hooks/useResponsive";
 
 export interface INavigationData {
   id: number;

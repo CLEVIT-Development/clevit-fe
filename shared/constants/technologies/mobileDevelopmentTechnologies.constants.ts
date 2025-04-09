@@ -5,8 +5,7 @@ import {
   ReactExpoIcon,
   ReactNativeIcon,
   SwiftIcon,
-} from "@/assets/icons/technology-icons";
-
+} from "../../../assets/icons/technology-icons";
 import type { ITabsConstant } from "./technologies.constants";
 
 export const mobileDevelopmentTechnologiesTabsConstants: ITabsConstant[] = [

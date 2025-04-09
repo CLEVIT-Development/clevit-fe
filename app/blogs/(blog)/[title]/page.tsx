@@ -1,8 +1,8 @@
 import type { Metadata, ResolvingMetadata } from "next";
 
-import BlogService from "@/common/services/blog/blog.service";
-import SingleBlogSection from "@/components/blog/SingleBlogSection";
-import { CalendlySection } from "@/components/home";
+import BlogService from "../../../../common/services/blog/blog.service";
+import SingleBlogSection from "../../../../components/blog/SingleBlogSection";
+import { CalendlySection } from "../../../../components/home";
 
 type Props = {
   params: Promise<{ title: string }>;

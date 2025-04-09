@@ -1,5 +1,5 @@
-import CalendarBlank from "@/assets/vectors/CalendarBlank.svg";
-import { formatDate } from "@/utils/date.utils";
+import CalendarBlank from "../../assets/vectors/CalendarBlank.svg";
+import { formatDate } from "../../utils/date.utils";
 
 interface Props {
   image: string;

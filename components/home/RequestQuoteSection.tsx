@@ -1,7 +1,7 @@
-import HTMLtag from "@/assets/images/services/HTMLtag.png";
-import { RoutePaths } from "@/shared/constants/route.constants";
-import StyledLink from "@/shared/ui/StyledLink";
-import { ButtonVariant } from "@/types/variant.types";
+import HTMLtag from "../../assets/images/services/HTMLtag.png";
+import { RoutePaths } from "../../shared/constants/route.constants";
+import StyledLink from "../../shared/ui/StyledLink";
+import { ButtonVariant } from "../../types/variant.types";
 
 const RequestQuoteSection = () => {
   return (

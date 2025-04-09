@@ -1,16 +1,20 @@
 import { lazy } from "react";
 
 const InitialConsultatioRequirmentIcon = lazy(
-  () => import("@/assets/vectors/processes/InitialConsultationRequirment.svg")
+  () => import("../../../assets/vectors/processes/InitialConsultationRequirment.svg")
 );
-const OnboardingTeamIcon = lazy(() => import("@/assets/vectors/processes/OnboardingTeam.svg"));
+const OnboardingTeamIcon = lazy(
+  () => import("../../../assets/vectors/processes/OnboardingTeam.svg")
+);
 const PerformanceTrackingICon = lazy(
-  () => import("@/assets/vectors/processes/PerformanceTracking.svg")
+  () => import("../../../assets/vectors/processes/PerformanceTracking.svg")
 );
 const CandidateInterviewICon = lazy(
-  () => import("@/assets/vectors/processes/CandidateInterview.svg")
+  () => import("../../../assets/vectors/processes/CandidateInterview.svg")
 );
-const TalentSourcingIcon = lazy(() => import("@/assets/vectors/processes/TalentSourcing.svg"));
+const TalentSourcingIcon = lazy(
+  () => import("../../../assets/vectors/processes/TalentSourcing.svg")
+);
 
 export const singlePageItOutsidingProcessesConstants = [
   {

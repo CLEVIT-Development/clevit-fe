@@ -2,12 +2,12 @@ import { lazy } from "react";
 
 import type { ITabsConstant } from "./technologies.constants";
 
-const TensorFlow = lazy(() => import("@/assets/vectors/technology/Tensorflow.svg"));
-const OpenCV = lazy(() => import("@/assets/vectors/technology/OpenCV.svg"));
-const ML5 = lazy(() => import("@/assets/vectors/technology/ML5.svg"));
-const NLP = lazy(() => import("@/assets/vectors/technology/NLP.svg"));
-const Keras = lazy(() => import("@/assets/vectors/technology/Keras.svg"));
-const Brain = lazy(() => import("@/assets/vectors/technology/Brain.svg"));
+const TensorFlow = lazy(() => import("../../../assets/vectors/technology/Tensorflow.svg"));
+const OpenCV = lazy(() => import("../../../assets/vectors/technology/OpenCV.svg"));
+const ML5 = lazy(() => import("../../../assets/vectors/technology/ML5.svg"));
+const NLP = lazy(() => import("../../../assets/vectors/technology/NLP.svg"));
+const Keras = lazy(() => import("../../../assets/vectors/technology/Keras.svg"));
+const Brain = lazy(() => import("../../../assets/vectors/technology/Brain.svg"));
 
 export const mlTechnologiesTabsConstants: ITabsConstant[] = [
   {

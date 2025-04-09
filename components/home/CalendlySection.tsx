@@ -4,9 +4,9 @@ import { Suspense } from "react";
 
 import dynamic from "next/dynamic";
 
-import useResponsive from "@/common/hooks/useResponsive";
-import Section from "@/common/templates/Section";
-import { appConfig } from "@/shared/constants/config.constants";
+import useResponsive from "../../common/hooks/useResponsive";
+import Section from "../../common/templates/Section";
+import { appConfig } from "../../shared/constants/config.constants";
 
 interface Props {
   title: string;

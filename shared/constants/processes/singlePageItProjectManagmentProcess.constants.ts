@@ -1,20 +1,20 @@
 import { lazy } from "react";
 
 const InitialConsultationIcon = lazy(
-  () => import("@/assets/vectors/processes/InitialConsultation.svg")
+  () => import("../../../assets/vectors/processes/InitialConsultation.svg")
 );
 const ResourceAllocationIcon = lazy(
-  () => import("@/assets/vectors/processes/ResourceAllocation.svg")
+  () => import("../../../assets/vectors/processes/ResourceAllocation.svg")
 );
 
 const RiskIdentificationIcon = lazy(
-  () => import("@/assets/vectors/processes/RiskIdentification.svg")
+  () => import("../../../assets/vectors/processes/RiskIdentification.svg")
 );
 const MonitoringProgressIcon = lazy(
-  () => import("@/assets/vectors/processes/MonitoringProgress.svg")
+  () => import("../../../assets/vectors/processes/MonitoringProgress.svg")
 );
 
-const FinaleDelivery = lazy(() => import("@/assets/vectors/processes/FinaleDelivery.svg"));
+const FinaleDelivery = lazy(() => import("../../../assets/vectors/processes/FinaleDelivery.svg"));
 
 export const singlePageItProjectManagmentProcessesConstants = [
   {

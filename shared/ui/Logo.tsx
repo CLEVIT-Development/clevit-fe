@@ -1,8 +1,8 @@
 import classNames from "classnames";
 import Image from "next/image";
 
-import { PrimaryLogoURL, SecondaryLogoURL } from "@/shared/constants/seo.constants";
-import { LogoVariant } from "@/types/variant.types";
+import { LogoVariant } from "../../types/variant.types";
+import { PrimaryLogoURL, SecondaryLogoURL } from "../constants/seo.constants";
 
 interface Props {
   variant?: LogoVariant;

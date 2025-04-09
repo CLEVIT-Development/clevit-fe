@@ -1,16 +1,22 @@
 import { lazy } from "react";
 
 const RequirementAnalysisIcon = lazy(
-  () => import("@/assets/vectors/processes/RequiremAnalysis.svg")
+  () => import("../../../assets/vectors/processes/RequiremAnalysis.svg")
 );
-const DataCollectionIcon = lazy(() => import("@/assets/vectors/processes/DataCollection.svg"));
+const DataCollectionIcon = lazy(
+  () => import("../../../assets/vectors/processes/DataCollection.svg")
+);
 const ContiniousMonitoringIcon = lazy(
-  () => import("@/assets/vectors/processes/ContiniousMonitoring.svg")
+  () => import("../../../assets/vectors/processes/ContiniousMonitoring.svg")
 );
-const ModelDevelopmentIcon = lazy(() => import("@/assets/vectors/processes/ModelDevelopment.svg"));
+const ModelDevelopmentIcon = lazy(
+  () => import("../../../assets/vectors/processes/ModelDevelopment.svg")
+);
 
-const ModelTestingIcon = lazy(() => import("@/assets/vectors/processes/ModelTesting.svg"));
-const ModelDeploymentIcon = lazy(() => import("@/assets/vectors/processes/ModelDeployment.svg"));
+const ModelTestingIcon = lazy(() => import("../../../assets/vectors/processes/ModelTesting.svg"));
+const ModelDeploymentIcon = lazy(
+  () => import("../../../assets/vectors/processes/ModelDeployment.svg")
+);
 
 export const singlePageMLProcessesConstants = [
   {

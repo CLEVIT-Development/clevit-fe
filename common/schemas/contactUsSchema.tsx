@@ -1,6 +1,6 @@
 import * as yup from "yup";
 
-import { mailRegexp } from "@/utils/mail.utils";
+import { mailRegexp } from "../../utils/mail.utils";
 
 export const contactUsSchema = yup.object().shape({
   fullname: yup.string().required("Full Name Required"),

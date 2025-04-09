@@ -1,7 +1,6 @@
 import { useState } from "react";
 
-import { type IBlogData } from "@/types/blog.types";
-
+import { type IBlogData } from "../../types/blog.types";
 import { axiosInstanceAuth } from "../services/toast/axios.service";
 
 interface UseBlogOptions {

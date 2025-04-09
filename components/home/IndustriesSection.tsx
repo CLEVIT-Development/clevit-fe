@@ -2,11 +2,11 @@
 
 import React, { useRef } from "react";
 
-import useInteractiveObserver from "@/common/hooks/useInteractiveObserver";
-import useScrollView from "@/common/hooks/useScrollView";
-import Section from "@/common/templates/Section";
-import { type Industry, industriesConstants } from "@/shared/constants/industries.constants";
-import { RoutePaths } from "@/shared/constants/route.constants";
+import useInteractiveObserver from "../../common/hooks/useInteractiveObserver";
+import useScrollView from "../../common/hooks/useScrollView";
+import Section from "../../common/templates/Section";
+import { type Industry, industriesConstants } from "../../shared/constants/industries.constants";
+import { RoutePaths } from "../../shared/constants/route.constants";
 
 const splitArrayIntoThree = (array: Industry[]) => {
   const partSize = Math.ceil(array.length / 3);

@@ -3,7 +3,7 @@ import {
   ResearchIcon,
   SupportSmallIcon,
   UIUXSmallIcon,
-} from "@/assets/icons/proccess-icons";
+} from "../../../assets/icons/proccess-icons";
 
 export const homeProcessesConstants = [
   {

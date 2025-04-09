@@ -1,14 +1,14 @@
 import { lazy } from "react";
 
 const DiscoveryAndPlanningIcon = lazy(
-  () => import("@/assets/vectors/processes/DiscoveryAndPlanning.svg")
+  () => import("../../../assets/vectors/processes/DiscoveryAndPlanning.svg")
 );
-const PCIcon = lazy(() => import("@/assets/vectors/processes/PC.svg"));
+const PCIcon = lazy(() => import("../../../assets/vectors/processes/PC.svg"));
 const DesignAndPrototypingIcon = lazy(
-  () => import("@/assets/vectors/processes/DesignAndPrototyping.svg")
+  () => import("../../../assets/vectors/processes/DesignAndPrototyping.svg")
 );
-const TestingAndQAIcon = lazy(() => import("@/assets/vectors/processes/TestingAndQA.svg"));
-const RocketIcon = lazy(() => import("@/assets/vectors/processes/Rocket.svg"));
+const TestingAndQAIcon = lazy(() => import("../../../assets/vectors/processes/TestingAndQA.svg"));
+const RocketIcon = lazy(() => import("../../../assets/vectors/processes/Rocket.svg"));
 
 export const singlePageWebDevelopmentProcessesConstants = [
   {

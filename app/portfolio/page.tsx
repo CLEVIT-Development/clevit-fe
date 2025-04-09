@@ -1,6 +1,6 @@
-import { CalendlySection, FeedbackSection } from "@/components/home";
-import { WorkSection } from "@/components/portfolio";
-import { generatePageMetadata } from "@/utils/metadata.utils";
+import { CalendlySection, FeedbackSection } from "../../components/home";
+import { WorkSection } from "../../components/portfolio";
+import { generatePageMetadata } from "../../utils/metadata.utils";
 
 export const metadata = generatePageMetadata("portfolio");
 

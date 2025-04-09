@@ -1,19 +1,19 @@
 import { lazy } from "react";
 
 const InitialConsultationIcon = lazy(
-  () => import("@/assets/vectors/processes/InitialConsultation.svg")
+  () => import("../../../assets/vectors/processes/InitialConsultation.svg")
 );
 const InfrastructureCodeIcon = lazy(
-  () => import("@/assets/vectors/processes/InfrastructureCode.svg")
+  () => import("../../../assets/vectors/processes/InfrastructureCode.svg")
 );
 const ReportingRecommendationsIcon = lazy(
-  () => import("@/assets/vectors/processes/ReportingRecommendations.svg")
+  () => import("../../../assets/vectors/processes/ReportingRecommendations.svg")
 );
 const PerformanceTestingIcon = lazy(
-  () => import("@/assets/vectors/processes/PerformanceTesting.svg")
+  () => import("../../../assets/vectors/processes/PerformanceTesting.svg")
 );
 const SecurityCompilanceAuditIcon = lazy(
-  () => import("@/assets/vectors/processes/SecurityCompilanceAudit.svg")
+  () => import("../../../assets/vectors/processes/SecurityCompilanceAudit.svg")
 );
 
 export const singlePageTechnicalAssesmentProcessesConstants = [

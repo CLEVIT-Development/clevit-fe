@@ -12,7 +12,7 @@ import {
   RenegadeIcon,
   SqorIcon,
   TagLogisticsIcon,
-} from "@/assets/icons/advertiser-slider-icons";
+} from "../../assets/icons/advertiser-slider-icons";
 
 export const advertiserSlidersConstants = [
   { id: "Aurora", icon: AuroraIcon },

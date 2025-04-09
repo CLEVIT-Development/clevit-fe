@@ -2,9 +2,9 @@
 
 import { useParams } from "next/navigation";
 
-import { useBlogByTitle } from "@/common/hooks/blog/blogQueries";
-import Section from "@/common/templates/Section";
-import BlogEditSceleton from "@/components/blog/BlogEditSceleton";
+import { useBlogByTitle } from "../../../../../common/hooks/blog/blogQueries";
+import Section from "../../../../../common/templates/Section";
+import BlogEditSceleton from "../../../../../components/blog/BlogEditSceleton";
 
 const AddEditBlogPage = () => {
   const { id } = useParams();

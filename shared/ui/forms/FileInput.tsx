@@ -5,9 +5,8 @@ import { useFormContext } from "react-hook-form";
 import classNames from "classnames";
 import { twMerge } from "tailwind-merge";
 
-import PaperClip from "@/assets/vectors/Paperclip.svg";
-import PdfFileIcon from "@/assets/vectors/PdfFile.svg";
-
+import PaperClip from "../../../assets/vectors/Paperclip.svg";
+import PdfFileIcon from "../../../assets/vectors/PdfFile.svg";
 import FilePreview from "./FilePreview";
 
 interface Props extends ComponentPropsWithoutRef<"input"> {

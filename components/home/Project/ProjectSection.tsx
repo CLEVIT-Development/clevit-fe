@@ -6,14 +6,14 @@ import "react-alice-carousel/lib/alice-carousel.css";
 
 import Link from "next/link";
 
-import ProjectCube from "@/assets/images/projects/ProjectCube.webp";
-import Arrow from "@/assets/vectors/Arrow.svg";
-import useResponsive from "@/common/hooks/useResponsive";
-import Section from "@/common/templates/Section";
-import { projectsConstants } from "@/shared/constants/projects.constants";
-import { RoutePaths } from "@/shared/constants/route.constants";
-import StyledLink from "@/shared/ui/StyledLink";
-import { urlShortener } from "@/utils/link.utils";
+import ProjectCube from "../../../assets/images/projects/ProjectCube.webp";
+import Arrow from "../../../assets/vectors/Arrow.svg";
+import useResponsive from "../../../common/hooks/useResponsive";
+import Section from "../../../common/templates/Section";
+import { projectsConstants } from "../../../shared/constants/projects.constants";
+import { RoutePaths } from "../../../shared/constants/route.constants";
+import StyledLink from "../../../shared/ui/StyledLink";
+import { urlShortener } from "../../../utils/link.utils";
 
 const ProjectSection = () => {
   const { isMobile } = useResponsive();

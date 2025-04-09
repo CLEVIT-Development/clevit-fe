@@ -1,6 +1,6 @@
-import Facebook from "@/assets/vectors/Facebook.svg";
-import Instagram from "@/assets/vectors/Instagram.svg";
-import LinkedIn from "@/assets/vectors/Linkedin.svg";
+import Facebook from "../../assets/vectors/Facebook.svg";
+import Instagram from "../../assets/vectors/Instagram.svg";
+import LinkedIn from "../../assets/vectors/Linkedin.svg";
 
 export const socialLinksConstants = [
   { id: 1, link: "https://www.linkedin.com/company/clevit-soft/mycompany/", Icon: LinkedIn },

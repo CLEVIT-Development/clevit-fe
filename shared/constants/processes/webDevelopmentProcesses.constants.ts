@@ -1,9 +1,9 @@
 import { lazy } from "react";
 
-const CommencementIcon = lazy(() => import("@/assets/vectors/processes/Commencement.svg"));
-const PCIcon = lazy(() => import("@/assets/vectors/processes/PC.svg"));
-const RocketIcon = lazy(() => import("@/assets/vectors/processes/Rocket.svg"));
-const SecurityIcon = lazy(() => import("@/assets/vectors/processes/Security.svg"));
+const CommencementIcon = lazy(() => import("../../../assets/vectors/processes/Commencement.svg"));
+const PCIcon = lazy(() => import("../../../assets/vectors/processes/PC.svg"));
+const RocketIcon = lazy(() => import("../../../assets/vectors/processes/Rocket.svg"));
+const SecurityIcon = lazy(() => import("../../../assets/vectors/processes/Security.svg"));
 
 export const webDevelopmentProcessesConstants = [
   {

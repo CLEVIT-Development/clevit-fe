@@ -2,12 +2,12 @@
 
 import { useRouter } from "next/navigation";
 
-import Messages from "@/assets/vectors/Messages.svg";
-import { advertiserSlidersConstants } from "@/shared/constants/advertiser-sliders.constants";
-import { RoutePaths } from "@/shared/constants/route.constants";
-import { seoConfig } from "@/shared/constants/seo.constants";
-import Button from "@/shared/ui/Button";
-import InfiniteLogoScroll from "@/shared/ui/InfinitiScrollingLogo";
+import Messages from "../../../assets/vectors/Messages.svg";
+import { advertiserSlidersConstants } from "../../../shared/constants/advertiser-sliders.constants";
+import { RoutePaths } from "../../../shared/constants/route.constants";
+import { seoConfig } from "../../../shared/constants/seo.constants";
+import Button from "../../../shared/ui/Button";
+import InfiniteLogoScroll from "../../../shared/ui/InfinitiScrollingLogo";
 
 const HomeHeading = () => {
   const router = useRouter();

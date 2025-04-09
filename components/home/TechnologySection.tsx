@@ -2,11 +2,11 @@
 
 import { type SVGProps, Suspense, startTransition, useEffect, useRef, useState } from "react";
 
-import useResponsive from "@/common/hooks/useResponsive";
-import useScrollView from "@/common/hooks/useScrollView";
-import Section from "@/common/templates/Section";
-import { RoutePaths } from "@/shared/constants/route.constants";
-import type { ITabsConstant } from "@/shared/constants/technologies/technologies.constants";
+import useResponsive from "../../common/hooks/useResponsive";
+import useScrollView from "../../common/hooks/useScrollView";
+import Section from "../../common/templates/Section";
+import { RoutePaths } from "../../shared/constants/route.constants";
+import type { ITabsConstant } from "../../shared/constants/technologies/technologies.constants";
 
 export interface ITechnologyConstant {
   id: number;

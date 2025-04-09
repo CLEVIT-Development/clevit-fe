@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 
-import ArrowIcon from "@/assets/vectors/Arrow.svg";
+import ArrowIcon from "../../assets/vectors/Arrow.svg";
 
 interface AccordionProps {
   title: string;

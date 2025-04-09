@@ -1,6 +1,6 @@
-import BlogService from "@/common/services/blog/blog.service";
 import { useQuery } from "@tanstack/react-query";
 
+import BlogService from "../../services/blog/blog.service";
 import BlogQueryKeys from "./queryKeys";
 
 export const useBlogByTitle = (titlePath: string) => {

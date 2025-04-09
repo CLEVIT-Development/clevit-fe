@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-import BlogService from "@/common/services/blog/blog.service";
+import BlogService from "../blog/blog.service";
 
 // Static routes for the sitemap
 const staticRoutes = [

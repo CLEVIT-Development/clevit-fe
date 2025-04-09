@@ -1,6 +1,6 @@
-import Section from "@/common/templates/Section";
-import { ContactInfo, ContactUsForm } from "@/components/contact-us";
-import { generatePageMetadata } from "@/utils/metadata.utils";
+import Section from "../../common/templates/Section";
+import { ContactInfo, ContactUsForm } from "../../components/contact-us";
+import { generatePageMetadata } from "../../utils/metadata.utils";
 
 export const metadata = generatePageMetadata("contact");
 

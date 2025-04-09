@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 
-import Section from "@/common/templates/Section";
-import { SectionVariant } from "@/types/variant.types";
+import { SectionVariant } from "../../types/variant.types";
+import Section from "./Section";
 
 interface Props {
   title?: string;

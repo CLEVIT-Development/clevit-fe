@@ -2,14 +2,14 @@
 
 import { useParams } from "next/navigation";
 
-import Section from "@/common/templates/Section";
-import { FeedbackSection, ProcessSection, TechnologySection } from "@/components/home";
-import ContactUsBottomBanner from "@/components/service/ContactUsBottomBanner";
-import ContactUsTopBanner from "@/components/service/ContactUsTopBanner";
-import WhyChooseClevitSectionItem from "@/components/service/WhyChooseClevitSectionItem";
-import type { ServicesIdConstants } from "@/shared/constants/services-id.constants";
-import { servicesConstants } from "@/shared/constants/services.constants";
-import { getIndustryByService } from "@/utils/service.utils";
+import Section from "../../common/templates/Section";
+import type { ServicesIdConstants } from "../../shared/constants/services-id.constants";
+import { servicesConstants } from "../../shared/constants/services.constants";
+import { getIndustryByService } from "../../utils/service.utils";
+import { FeedbackSection, ProcessSection, TechnologySection } from "../home";
+import ContactUsBottomBanner from "./ContactUsBottomBanner";
+import ContactUsTopBanner from "./ContactUsTopBanner";
+import WhyChooseClevitSectionItem from "./WhyChooseClevitSectionItem";
 
 const SingleService = () => {
   const { id } = useParams<{ id: string }>();

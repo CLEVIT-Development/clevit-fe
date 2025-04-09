@@ -1,6 +1,6 @@
-import { ContactSection, FaqSection } from "@/components/faq";
-import { CalendlySection } from "@/components/home";
-import { generatePageMetadata } from "@/utils/metadata.utils";
+import { ContactSection, FaqSection } from "../../components/faq";
+import { CalendlySection } from "../../components/home";
+import { generatePageMetadata } from "../../utils/metadata.utils";
 
 export const metadata = generatePageMetadata("faq");
 

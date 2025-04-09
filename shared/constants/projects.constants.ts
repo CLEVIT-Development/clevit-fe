@@ -11,13 +11,13 @@ import {
   ReactIcon,
   TailwindCSSIcon,
   Typescript,
-} from "@/assets/icons/technology-icons";
-import OblivioniDesktop from "@/assets/images/projects/OblivioniDesktop.webp";
-import OblivioniMobile from "@/assets/images/projects/OblivioniMobile.webp";
-import PollinMobile from "@/assets/images/projects/PollinMobile.webp";
-import PollinWeb from "@/assets/images/projects/PollinWeb.webp";
-import RenegadeDesktop from "@/assets/images/projects/RenegadeDesktop.webp";
-import RenegadeMobile from "@/assets/images/projects/RenegadeMobile.webp";
+} from "../../assets/icons/technology-icons";
+import OblivioniDesktop from "../../assets/images/projects/OblivioniDesktop.webp";
+import OblivioniMobile from "../../assets/images/projects/OblivioniMobile.webp";
+import PollinMobile from "../../assets/images/projects/PollinMobile.webp";
+import PollinWeb from "../../assets/images/projects/PollinWeb.webp";
+import RenegadeDesktop from "../../assets/images/projects/RenegadeDesktop.webp";
+import RenegadeMobile from "../../assets/images/projects/RenegadeMobile.webp";
 
 export const projectsConstants = [
   // {

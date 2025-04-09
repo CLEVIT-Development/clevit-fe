@@ -1,9 +1,9 @@
-import DeploymentMonitoringIcon from "@/assets/vectors/processes/DeploymentMonitoring.svg";
-import IntegrationAndImplementationIcon from "@/assets/vectors/processes/IntegrationImplementation.svg";
-import NeedsAssessmentIcon from "@/assets/vectors/processes/NeedsAssessment.svg";
-import OngoingSupportAndOptimizationICon from "@/assets/vectors/processes/OngoingSupportAndOptimization.svg";
-import SolutionDesignIcon from "@/assets/vectors/processes/SolutionDesigne.svg";
-import TestingAndQAIcon from "@/assets/vectors/processes/TestingAndQA.svg";
+import DeploymentMonitoringIcon from "../../../assets/vectors/processes/DeploymentMonitoring.svg";
+import IntegrationAndImplementationIcon from "../../../assets/vectors/processes/IntegrationImplementation.svg";
+import NeedsAssessmentIcon from "../../../assets/vectors/processes/NeedsAssessment.svg";
+import OngoingSupportAndOptimizationICon from "../../../assets/vectors/processes/OngoingSupportAndOptimization.svg";
+import SolutionDesignIcon from "../../../assets/vectors/processes/SolutionDesigne.svg";
+import TestingAndQAIcon from "../../../assets/vectors/processes/TestingAndQA.svg";
 
 export const singlePageAIProcessesConstants = [
   {

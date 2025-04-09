@@ -1,7 +1,7 @@
-import { RoutePaths } from "@/shared/constants/route.constants";
-import { seoConfig } from "@/shared/constants/seo.constants";
-import StyledLink from "@/shared/ui/StyledLink";
-import { ButtonVariant } from "@/types/variant.types";
+import { RoutePaths } from "../../../shared/constants/route.constants";
+import { seoConfig } from "../../../shared/constants/seo.constants";
+import StyledLink from "../../../shared/ui/StyledLink";
+import { ButtonVariant } from "../../../types/variant.types";
 
 const FaqHeading = () => {
   return (

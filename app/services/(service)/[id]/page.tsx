@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
-import SingleService from "@/components/service/SingleService";
-import { servicesMeta } from "@/shared/constants/service-meta.constant";
+import SingleService from "../../../../components/service/SingleService";
+import { servicesMeta } from "../../../../shared/constants/service-meta.constant";
 
 type Params = { id: string };
 

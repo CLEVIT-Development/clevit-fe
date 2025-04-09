@@ -5,17 +5,16 @@ import { FacebookShareButton, LinkedinShareButton, TwitterShareButton, XIcon } f
 
 import { notFound, usePathname } from "next/navigation";
 
-import ImagePlaceholder from "@/assets/images/ImagePlaceholder.jpg";
-import FacebookIcon from "@/assets/vectors/Facebook.svg";
-import LinkedInIcon from "@/assets/vectors/Linkedin.svg";
-import { useBlogByTitle, useLastThreeBlogs } from "@/common/hooks/blog/blogQueries";
-import useOrigin from "@/common/hooks/useOrigin";
-import BlogCard from "@/shared/ui/BlogCard/BlogCard";
-
+import ImagePlaceholder from "../../assets/images/ImagePlaceholder.jpg";
+import FacebookIcon from "../../assets/vectors/Facebook.svg";
+import LinkedInIcon from "../../assets/vectors/Linkedin.svg";
+import { useBlogByTitle, useLastThreeBlogs } from "../../common/hooks/blog/blogQueries";
+import useOrigin from "../../common/hooks/useOrigin";
+import BlogCard from "../../shared/ui/BlogCard/BlogCard";
 import BlogPreviewSkeleton from "./BlogPostPreview";
 import ContentSceleton from "./ContentSceleton";
 
-const DraftPreview = lazy(() => import("@/components/blog/DraftPreview"));
+const DraftPreview = lazy(() => import("./DraftPreview"));
 
 interface SingleBlogPageProps {
   titlePath?: string;

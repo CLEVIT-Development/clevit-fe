@@ -1,4 +1,4 @@
-import AboutTotalItemBackgroundImage from "@/assets/images/AbutTotalItemBackgroundImage.png";
+import AboutTotalItemBackgroundImage from "../../assets/images/AbutTotalItemBackgroundImage.png";
 
 interface Props {
   projectsValue: string;

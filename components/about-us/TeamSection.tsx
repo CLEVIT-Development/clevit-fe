@@ -1,7 +1,7 @@
-import TeamPhoto from "@/assets/images/team/teamPhoto.webp";
-import Messages from "@/assets/vectors/Messages.svg";
-import Section from "@/common/templates/Section";
-import StyledLink from "@/shared/ui/StyledLink";
+import TeamPhoto from "../../assets/images/team/teamPhoto.webp";
+import Messages from "../../assets/vectors/Messages.svg";
+import Section from "../../common/templates/Section";
+import StyledLink from "../../shared/ui/StyledLink";
 
 const TeamSection = () => {
   return (

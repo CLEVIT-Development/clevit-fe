@@ -1,7 +1,7 @@
-import ClientApproach from "@/assets/vectors/reason/ClientApproach.svg";
-import EndToEnd from "@/assets/vectors/reason/EndToEnd.svg";
-import Flexibility from "@/assets/vectors/reason/Flexibility.svg";
-import InnovativeSolutions from "@/assets/vectors/reason/InnovativeSolutions.svg";
+import ClientApproach from "../../assets/vectors/reason/ClientApproach.svg";
+import EndToEnd from "../../assets/vectors/reason/EndToEnd.svg";
+import Flexibility from "../../assets/vectors/reason/Flexibility.svg";
+import InnovativeSolutions from "../../assets/vectors/reason/InnovativeSolutions.svg";
 
 export const reasonsConstants = [
   {

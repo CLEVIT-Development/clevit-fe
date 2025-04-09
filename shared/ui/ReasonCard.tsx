@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import classNames from "classnames";
 import { twMerge } from "tailwind-merge";
 
-import IconWrapper from "@/common/templates/IconWrapper";
+import IconWrapper from "../../common/templates/IconWrapper";
 
 interface Props {
   title: string;

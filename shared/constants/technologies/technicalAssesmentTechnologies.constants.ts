@@ -1,6 +1,6 @@
 import { type FunctionComponent, type LazyExoticComponent, type SVGProps } from "react";
 
-import type { INavigationData } from "@/shared/ui/Navigation.tsx";
+import type { INavigationData } from "../../ui/Navigation.tsx";
 
 export interface ITabsConstant extends INavigationData {
   description?: string;

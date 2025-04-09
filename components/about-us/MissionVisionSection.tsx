@@ -1,9 +1,9 @@
 "use client";
 
-import MissionVisionDesktop from "@/assets/images/missionVision/MissionVisionDesktop.webp";
-import MissionVisionMobile from "@/assets/images/missionVision/MissionVisionMobile.webp";
-import useResponsive from "@/common/hooks/useResponsive";
-import Section from "@/common/templates/Section";
+import MissionVisionDesktop from "../../assets/images/missionVision/MissionVisionDesktop.webp";
+import MissionVisionMobile from "../../assets/images/missionVision/MissionVisionMobile.webp";
+import useResponsive from "../../common/hooks/useResponsive";
+import Section from "../../common/templates/Section";
 
 interface MissionSingleItemProps {
   title: string;

@@ -3,8 +3,8 @@ import { useLayoutEffect } from "react";
 
 import { usePathname, useRouter } from "next/navigation";
 
-import useHash from "@/common/hooks/useHash";
-import { RoutePaths } from "@/shared/constants/route.constants";
+import { RoutePaths } from "../../shared/constants/route.constants";
+import useHash from "./useHash";
 
 const useInteractiveObserver = <T extends HTMLElement>({
   sectionRef,

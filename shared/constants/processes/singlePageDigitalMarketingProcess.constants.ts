@@ -1,16 +1,18 @@
 import { lazy } from "react";
 
-const InitialMarketingIcon = lazy(() => import("@/assets/vectors/processes/InitialMarketing.svg"));
-const ContentCreationMarketingIcon = lazy(
-  () => import("@/assets/vectors/processes/ContentCreationMarketing.svg")
+const InitialMarketingIcon = lazy(
+  () => import("../../../assets/vectors/processes/InitialMarketing.svg")
 );
-const WebsiteAuditsIcon = lazy(() => import("@/assets/vectors/processes/WebsiteAudits.svg"));
-const PPCCompaignIcon = lazy(() => import("@/assets/vectors/processes/PPCCompaign.svg"));
+const ContentCreationMarketingIcon = lazy(
+  () => import("../../../assets/vectors/processes/ContentCreationMarketing.svg")
+);
+const WebsiteAuditsIcon = lazy(() => import("../../../assets/vectors/processes/WebsiteAudits.svg"));
+const PPCCompaignIcon = lazy(() => import("../../../assets/vectors/processes/PPCCompaign.svg"));
 const TogglePageOptimizationIcon = lazy(
-  () => import("@/assets/vectors/processes/TogglePageOptimization.svg")
+  () => import("../../../assets/vectors/processes/TogglePageOptimization.svg")
 );
 const AnalyticsReportingIcon = lazy(
-  () => import("@/assets/vectors/processes/AnalyticsReporting.svg")
+  () => import("../../../assets/vectors/processes/AnalyticsReporting.svg")
 );
 
 export const singlePageDigitalMarketingProcessesConstants = [
