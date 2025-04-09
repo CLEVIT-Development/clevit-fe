@@ -1,8 +1,8 @@
-import CommitmentIcon from "@/assets/vectors/values/Commitment.svg";
-import HandshakeIcon from "@/assets/vectors/values/Handshake.svg";
-import PassioneIcon from "@/assets/vectors/values/Passion.svg";
-import PuzzleIcon from "@/assets/vectors/values/Puzzle.svg";
-import type { INavigationData } from "@/shared/ui/Navigation.tsx";
+import CommitmentIcon from "../../assets/vectors/values/Commitment.svg";
+import HandshakeIcon from "../../assets/vectors/values/Handshake.svg";
+import PassioneIcon from "../../assets/vectors/values/Passion.svg";
+import PuzzleIcon from "../../assets/vectors/values/Puzzle.svg";
+import type { INavigationData } from "../ui/Navigation.tsx";
 
 export const valueTabsConstants: INavigationData[] = [
   { id: 1, title: "Integrity" },

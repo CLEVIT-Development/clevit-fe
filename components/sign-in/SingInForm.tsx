@@ -5,14 +5,15 @@ import { FormProvider, useForm } from "react-hook-form";
 
 import { useRouter } from "next/navigation";
 
-import { useAuthContext } from "@/common/context/AuthContext";
-import useSignIn from "@/common/hooks/auth/useSignIn";
-import { SignInSchema } from "@/common/schemas/signInSchema";
-import showNotification, { ToastVersions } from "@/common/services/toast/showNotifications";
-import { RoutePaths } from "@/shared/constants/route.constants";
-import Button from "@/shared/ui/Button";
-import Input from "@/shared/ui/forms/Input";
 import { yupResolver } from "@hookform/resolvers/yup";
+
+import { useAuthContext } from "../../common/context/AuthContext";
+import useSignIn from "../../common/hooks/auth/useSignIn";
+import { SignInSchema } from "../../common/schemas/signInSchema";
+import showNotification, { ToastVersions } from "../../common/services/toast/showNotifications";
+import { RoutePaths } from "../../shared/constants/route.constants";
+import Button from "../../shared/ui/Button";
+import Input from "../../shared/ui/forms/Input";
 
 interface ISignInFormPayload extends FieldValues {
   email: string;

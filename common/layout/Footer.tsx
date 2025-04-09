@@ -3,14 +3,14 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
-import { useLastThreeBlogs } from "@/common/hooks/blog/blogQueries";
-import BlogItem from "@/components/blog/BlogItem";
-import { contactsConstants } from "@/shared/constants/contacts.constants";
-import { RoutePaths } from "@/shared/constants/route.constants";
-import { servicesConstants } from "@/shared/constants/services.constants";
-import { socialLinksConstants } from "@/shared/constants/socials.constants";
-import Copyright from "@/shared/ui/Copyright";
-import Logo from "@/shared/ui/Logo";
+import BlogItem from "../../components/blog/BlogItem";
+import { contactsConstants } from "../../shared/constants/contacts.constants";
+import { RoutePaths } from "../../shared/constants/route.constants";
+import { servicesConstants } from "../../shared/constants/services.constants";
+import { socialLinksConstants } from "../../shared/constants/socials.constants";
+import Copyright from "../../shared/ui/Copyright";
+import Logo from "../../shared/ui/Logo";
+import { useLastThreeBlogs } from "../hooks/blog/blogQueries";
 
 const Footer = () => {
   const { data: lastThreeBlogs } = useLastThreeBlogs();

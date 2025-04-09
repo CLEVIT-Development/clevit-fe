@@ -1,6 +1,6 @@
 import { twMerge } from "tailwind-merge";
 
-import PlusIcon from "@/assets/vectors/PlusIcon.svg";
+import PlusIcon from "../../assets/vectors/PlusIcon.svg";
 
 interface IProps {
   handleBlogCreate: () => void;

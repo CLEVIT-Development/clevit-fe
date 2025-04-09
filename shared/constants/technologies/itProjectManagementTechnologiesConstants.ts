@@ -2,14 +2,16 @@ import { lazy } from "react";
 
 import type { ITabsConstant } from "./technologies.constants";
 
-const Jira = lazy(() => import("@/assets/vectors/technology/Jira.svg"));
-const Trelo = lazy(() => import("@/assets/vectors/technology/Trello.svg"));
-const Asana = lazy(() => import("@/assets/vectors/technology/Asana.svg"));
-const Redmine = lazy(() => import("@/assets/vectors/technology/Redmine.svg"));
-const Airtable = lazy(() => import("@/assets/vectors/technology/Airtable.svg"));
-const Notion = lazy(() => import("@/assets/vectors/technology/Notion.svg"));
+const Jira = lazy(() => import("../../../assets/vectors/technology/Jira.svg"));
+const Trelo = lazy(() => import("../../../assets/vectors/technology/Trello.svg"));
+const Asana = lazy(() => import("../../../assets/vectors/technology/Asana.svg"));
+const Redmine = lazy(() => import("../../../assets/vectors/technology/Redmine.svg"));
+const Airtable = lazy(() => import("../../../assets/vectors/technology/Airtable.svg"));
+const Notion = lazy(() => import("../../../assets/vectors/technology/Notion.svg"));
 
-const MicrosoftProject = lazy(() => import("@/assets/vectors/technology/MicrosoftProject.svg"));
+const MicrosoftProject = lazy(
+  () => import("../../../assets/vectors/technology/MicrosoftProject.svg")
+);
 
 export const itProjectManagmentTechnologiesTabsConstants: ITabsConstant[] = [
   {

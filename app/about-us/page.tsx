@@ -4,9 +4,9 @@ import {
   ReasonSection,
   TeamSection,
   ValuesSection,
-} from "@/components/about-us";
-import { CalendlySection, FeedbackSection } from "@/components/home";
-import { generatePageMetadata } from "@/utils/metadata.utils";
+} from "../../components/about-us";
+import { CalendlySection, FeedbackSection } from "../../components/home";
+import { generatePageMetadata } from "../../utils/metadata.utils";
 
 export const metadata = generatePageMetadata("about");
 

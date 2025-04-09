@@ -1,5 +1,5 @@
-import Section from "@/common/templates/Section";
-import SignInForm from "@/components/sign-in/SingInForm";
+import Section from "../../../../common/templates/Section";
+import SignInForm from "../../../../components/sign-in/SingInForm";
 
 const SignInPage = () => {
   return (

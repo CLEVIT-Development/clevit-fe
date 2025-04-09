@@ -1,7 +1,7 @@
-import Messages from "@/assets/vectors/Messages.svg";
-import { RoutePaths } from "@/shared/constants/route.constants";
-import { seoConfig } from "@/shared/constants/seo.constants";
-import StyledLink from "@/shared/ui/StyledLink";
+import Messages from "../../../assets/vectors/Messages.svg";
+import { RoutePaths } from "../../../shared/constants/route.constants";
+import { seoConfig } from "../../../shared/constants/seo.constants";
+import StyledLink from "../../../shared/ui/StyledLink";
 
 const ServiceHeading = () => {
   return (

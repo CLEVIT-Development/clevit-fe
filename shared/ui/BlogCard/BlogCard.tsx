@@ -3,11 +3,11 @@ import type { ComponentPropsWithoutRef } from "react";
 import { useRouter } from "next/navigation";
 import { twMerge } from "tailwind-merge";
 
-import ImagePlaceholder from "@/assets/images/ImagePlaceholder.jpg";
-import ClockIcon from "@/assets/vectors/clock.svg";
-import IconWrapper from "@/common/templates/IconWrapper";
-import type { IBlog } from "@/types/blog.types";
-import { formatDate } from "@/utils/date.utils";
+import ImagePlaceholder from "../../../assets/images/ImagePlaceholder.jpg";
+import ClockIcon from "../../../assets/vectors/clock.svg";
+import IconWrapper from "../../../common/templates/IconWrapper";
+import type { IBlog } from "../../../types/blog.types";
+import { formatDate } from "../../../utils/date.utils";
 
 interface Props extends ComponentPropsWithoutRef<"div"> {
   className?: string;

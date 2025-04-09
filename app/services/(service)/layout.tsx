@@ -2,11 +2,11 @@
 
 import { useParams } from "next/navigation";
 
-import Layout from "@/common/layout/Layout";
-import { Gradient } from "@/components/gradient/Gradient";
-import SingleServiceHeading from "@/components/service/SingleServiceHeading";
-import { servicesConstants } from "@/shared/constants/services.constants";
-import { HeaderVariant } from "@/types/variant.types";
+import Layout from "../../../common/layout/Layout";
+import { Gradient } from "../../../components/gradient/Gradient";
+import SingleServiceHeading from "../../../components/service/SingleServiceHeading";
+import { servicesConstants } from "../../../shared/constants/services.constants";
+import { HeaderVariant } from "../../../types/variant.types";
 
 type Params = { id: string };
 

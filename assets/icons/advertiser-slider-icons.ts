@@ -1,16 +1,16 @@
-import AuroraIcon from "@/assets/vectors/advertisers/Aurora.svg";
-import ByteDanceIcon from "@/assets/vectors/advertisers/ByteDance.svg";
-import DebatesIcon from "@/assets/vectors/advertisers/Debates.svg";
-import DirektPlusOnlineIcon from "@/assets/vectors/advertisers/DirektPlusOnline.svg";
-import FHhealthIcon from "@/assets/vectors/advertisers/FHhealth.svg";
-import FlowOpsIcon from "@/assets/vectors/advertisers/FlowOps.svg";
-import IdoeWorksIcon from "@/assets/vectors/advertisers/IdoeWorks.svg";
-import OblivioniIcon from "@/assets/vectors/advertisers/Oblivioni.svg";
-import PlatAiIcon from "@/assets/vectors/advertisers/PlatAi.svg";
-import PollinIcon from "@/assets/vectors/advertisers/Pollin.svg";
-import RenegadeIcon from "@/assets/vectors/advertisers/Renegade.svg";
-import SqorIcon from "@/assets/vectors/advertisers/Sqor.svg";
-import TagLogisticsIcon from "@/assets/vectors/advertisers/TagLogistics.svg";
+import AuroraIcon from "../vectors/advertisers/Aurora.svg";
+import ByteDanceIcon from "../vectors/advertisers/ByteDance.svg";
+import DebatesIcon from "../vectors/advertisers/Debates.svg";
+import DirektPlusOnlineIcon from "../vectors/advertisers/DirektPlusOnline.svg";
+import FHhealthIcon from "../vectors/advertisers/FHhealth.svg";
+import FlowOpsIcon from "../vectors/advertisers/FlowOps.svg";
+import IdoeWorksIcon from "../vectors/advertisers/IdoeWorks.svg";
+import OblivioniIcon from "../vectors/advertisers/Oblivioni.svg";
+import PlatAiIcon from "../vectors/advertisers/PlatAi.svg";
+import PollinIcon from "../vectors/advertisers/Pollin.svg";
+import RenegadeIcon from "../vectors/advertisers/Renegade.svg";
+import SqorIcon from "../vectors/advertisers/Sqor.svg";
+import TagLogisticsIcon from "../vectors/advertisers/TagLogistics.svg";
 
 export {
   AuroraIcon,

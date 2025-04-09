@@ -1,5 +1,4 @@
-import type { IBlog, IBlogData, IBlogTitlePath, IGetAllBlogs } from "@/types/blog.types";
-
+import type { IBlog, IBlogData, IBlogTitlePath, IGetAllBlogs } from "../../../types/blog.types";
 import { axiosInstance, axiosInstanceAuth } from "../toast/axios.service";
 
 class BlogService {

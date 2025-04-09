@@ -1,5 +1,5 @@
-import Button from "@/shared/ui/Button";
-import StyledModal from "@/shared/ui/StyledModal";
+import Button from "../../shared/ui/Button";
+import StyledModal from "../../shared/ui/StyledModal";
 
 interface Props {
   isOpen: boolean;

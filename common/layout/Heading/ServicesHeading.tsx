@@ -1,7 +1,7 @@
 import { useRouter } from "next/navigation";
 
-import { RoutePaths } from "@/shared/constants/route.constants";
-import Button from "@/shared/ui/Button";
+import { RoutePaths } from "../../../shared/constants/route.constants";
+import Button from "../../../shared/ui/Button";
 
 interface Props {
   title: string;

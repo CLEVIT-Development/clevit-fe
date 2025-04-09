@@ -1,4 +1,4 @@
-import ContentSceleton from "@/components/blog/ContentSceleton";
+import ContentSceleton from "./ContentSceleton";
 
 const BlogPreviewSkeleton = () => {
   return (

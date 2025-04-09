@@ -1,5 +1,5 @@
-import PortfolioHeadingBackground from "@/assets/images/Portfolioheading.webp";
-import { seoConfig } from "@/shared/constants/seo.constants";
+import PortfolioHeadingBackground from "../../../assets/images/Portfolioheading.webp";
+import { seoConfig } from "../../../shared/constants/seo.constants";
 
 const PortfolioHeading = () => {
   return (

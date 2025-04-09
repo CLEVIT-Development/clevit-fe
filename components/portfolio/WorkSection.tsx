@@ -2,12 +2,15 @@
 
 import { useRef, useState } from "react";
 
-import useResponsive from "@/common/hooks/useResponsive";
-import Section from "@/common/templates/Section";
-import { portfolioConstants } from "@/shared/constants/portfolio.constants";
+import useResponsive from "../../common/hooks/useResponsive";
+import Section from "../../common/templates/Section";
+import { portfolioConstants } from "../../shared/constants/portfolio.constants";
 
 const WorkSection = () => {
   const [showMoreStates, setShowMoreStates] = useState(portfolioConstants.map(() => false));
+  const [showMoreDesktopStates, setShowMoreDesktopStates] = useState(
+    portfolioConstants.map(() => false)
+  );
 
   const [hoveredIcon, setHoveredIcon] = useState<string | null>(null);
   const tooltipRef = useRef<HTMLDivElement | null>(null);
@@ -17,6 +20,20 @@ const WorkSection = () => {
 
     newShowMoreStates[index] = !newShowMoreStates[index];
     setShowMoreStates(newShowMoreStates);
+  };
+
+  const handleMouseEnter = (index: number) => {
+    const newShowMoreDesktopStates = [...showMoreDesktopStates];
+
+    newShowMoreDesktopStates[index] = true;
+    setShowMoreDesktopStates(newShowMoreDesktopStates);
+  };
+
+  const handleMouseLeave = (index: number) => {
+    const newShowMoreDesktopStates = [...showMoreDesktopStates];
+
+    newShowMoreDesktopStates[index] = false;
+    setShowMoreDesktopStates(newShowMoreDesktopStates);
   };
 
   return (
@@ -137,20 +154,20 @@ const WorkSection = () => {
                       ) : !Array.isArray(item.value) ? (
                         <span className="text-gray-200 font-semibold">{item.value}</span>
                       ) : (
-                        <div className="flex">
-                          {item.value.map((elem, i) => (
+                        <div className="flex relative">
+                          {item.value.slice(0, 9).map((elem, i) => (
                             <button
                               type="button"
                               onMouseEnter={() => setHoveredIcon(`${project.title}-${i}`)}
                               onMouseLeave={() => setHoveredIcon(null)}
                               key={i}
-                              className=" swg-wrapper cursor-auto rounded-full bg-gray-300 h-6 w-6 flex items-center justify-center mr-2 relative"
+                              className="swg-wrapper cursor-auto rounded-full bg-gray-300 h-6 w-6 flex items-center justify-center mr-2 relative"
                             >
                               <elem.Icon height={18} />
                               {hoveredIcon === `${project.title}-${i}` && (
                                 <div
                                   role="tooltip"
-                                  className="absolute  -translate-y-[120%] z-10 inline-block px-3 py-2 text-sm font-medium text-black bg-white border border-gray-300 rounded-lg shadow-sm whitespace-nowrap"
+                                  className="absolute -translate-y-[120%] z-10 inline-block px-3 py-2 text-sm font-medium text-black bg-white border border-gray-300 rounded-lg shadow-sm whitespace-nowrap"
                                 >
                                   {elem.name}
                                   <div className="absolute top-full left-1/2 transform -translate-x-1/2 -translate-y-1 bg-white h-2 w-2 rotate-45 border-l border-b border-gray-300"></div>
@@ -158,6 +175,31 @@ const WorkSection = () => {
                               )}
                             </button>
                           ))}
+                          {item.value.length > 9 && (
+                            <span
+                              onMouseEnter={() => handleMouseEnter(index)}
+                              onMouseLeave={() => handleMouseLeave(index)}
+                              className="text-[18px] font-medium text-blue-200 cursor-pointer text-sm relative"
+                            >
+                              ... {item.value.length - 9} more
+                              {showMoreDesktopStates[index] && (
+                                <div
+                                  role="tooltip"
+                                  className="absolute bottom-[30px] py-2 px-4 left-0 z-10 text-sm font-medium text-gray-200 bg-white border border-gray-300 rounded-lg shadow-lg min-w-[200px]"
+                                >
+                                  <div className="space-y-4">
+                                    {item.value.slice(9, item.value.length).map((elem, i) => (
+                                      <div key={i} className="flex items-center justify-left">
+                                        <elem.Icon height={18} width={18} className="mr-3" />
+                                        <span>{elem.name}</span>
+                                      </div>
+                                    ))}
+                                  </div>
+                                  <div className="absolute -bottom-1 z-4 left-5 bg-white h-2 w-2 rotate-45 border-r border-b border-gray-300"></div>
+                                </div>
+                              )}
+                            </span>
+                          )}
                         </div>
                       )}
                     </li>

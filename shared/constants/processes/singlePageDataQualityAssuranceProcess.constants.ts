@@ -1,15 +1,17 @@
 import { lazy } from "react";
 
-const InitialDataIcon = lazy(() => import("@/assets/vectors/processes/InitialData.svg"));
-const DataCleansingIcon = lazy(() => import("@/assets/vectors/processes/DataCleansing.svg"));
+const InitialDataIcon = lazy(() => import("../../../assets/vectors/processes/InitialData.svg"));
+const DataCleansingIcon = lazy(() => import("../../../assets/vectors/processes/DataCleansing.svg"));
 
-const DataMonitoringIcon = lazy(() => import("@/assets/vectors/processes/DataMonitoring.svg"));
+const DataMonitoringIcon = lazy(
+  () => import("../../../assets/vectors/processes/DataMonitoring.svg")
+);
 const ValidationVerificationIcon = lazy(
-  () => import("@/assets/vectors/processes/ValidationVerification.svg")
+  () => import("../../../assets/vectors/processes/ValidationVerification.svg")
 );
 
 const ReportingDocumentationIcon = lazy(
-  () => import("@/assets/vectors/processes/ReportingDocumentation.svg")
+  () => import("../../../assets/vectors/processes/ReportingDocumentation.svg")
 );
 
 export const singlePageDataQualityAssuranceProcessesConstants = [

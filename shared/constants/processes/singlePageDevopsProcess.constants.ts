@@ -1,24 +1,26 @@
 import { lazy } from "react";
 
 const DiscoveryAndPlanningIcon = lazy(
-  () => import("@/assets/vectors/processes/DiscoveryAndPlanning.svg")
+  () => import("../../../assets/vectors/processes/DiscoveryAndPlanning.svg")
 );
 const OutomationOrchestrationIcon = lazy(
-  () => import("@/assets/vectors/processes/OutomationOrchestration.svg")
+  () => import("../../../assets/vectors/processes/OutomationOrchestration.svg")
 );
 const MonitoringPerformanceIcon = lazy(
-  () => import("@/assets/vectors/processes/MonitoringPerformance.svg")
+  () => import("../../../assets/vectors/processes/MonitoringPerformance.svg")
 );
 const ContinousIntegrationIcon = lazy(
-  () => import("@/assets/vectors/processes/ContinousIntegration.svg")
+  () => import("../../../assets/vectors/processes/ContinousIntegration.svg")
 );
 const InfrostructureSetupIcon = lazy(
-  () => import("@/assets/vectors/processes/InfrostructureSetup.svg")
+  () => import("../../../assets/vectors/processes/InfrostructureSetup.svg")
 );
 const SecurityCompilanceIcon = lazy(
-  () => import("@/assets/vectors/processes/SecurityCompilance.svg")
+  () => import("../../../assets/vectors/processes/SecurityCompilance.svg")
 );
-const OngoingSupportIcon = lazy(() => import("@/assets/vectors/processes/OngoingSupport.svg"));
+const OngoingSupportIcon = lazy(
+  () => import("../../../assets/vectors/processes/OngoingSupport.svg")
+);
 
 export const singlePageDevopsProcessesConstants = [
   {

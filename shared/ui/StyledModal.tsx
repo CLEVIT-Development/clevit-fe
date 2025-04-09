@@ -1,7 +1,7 @@
 import React from "react";
 import ReactModalDefault from "react-modal";
 
-import CloseIcon from "@/assets/vectors/Close.svg";
+import CloseIcon from "../../assets/vectors/Close.svg";
 
 const Modal = ReactModalDefault as unknown as React.ComponentType<ReactModalDefault.Props>;
 

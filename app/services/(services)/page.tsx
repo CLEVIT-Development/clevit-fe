@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
-import { CalendlySection } from "@/components/home";
-import { servicesConstants } from "@/shared/constants/services.constants";
-import ServiceBox from "@/shared/ui/ServiceCard/ServiceBox";
-import { generatePageMetadata } from "@/utils/metadata.utils";
+import { CalendlySection } from "../../../components/home";
+import { servicesConstants } from "../../../shared/constants/services.constants";
+import ServiceBox from "../../../shared/ui/ServiceCard/ServiceBox";
+import { generatePageMetadata } from "../../../utils/metadata.utils";
 
 export const metadata: Metadata = generatePageMetadata("services");
 

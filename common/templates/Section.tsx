@@ -4,7 +4,7 @@ import React, { forwardRef } from "react";
 import classNames from "classnames";
 import { twMerge } from "tailwind-merge";
 
-import { SectionVariant } from "@/types/variant.types";
+import { SectionVariant } from "../../types/variant.types";
 
 interface Props extends ComponentPropsWithoutRef<"section"> {
   title?: string;

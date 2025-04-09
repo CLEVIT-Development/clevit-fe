@@ -1,4 +1,4 @@
-import useWindowSize from "@/common/hooks/useWindowSize";
+import useWindowSize from "./useWindowSize";
 
 const useResponsive = () => {
   const { width } = useWindowSize();

@@ -1,7 +1,7 @@
 import type { ComponentPropsWithoutRef } from "react";
 
-import CrossIcon from "@/assets/vectors/Cross.svg";
-import IconWrapper from "@/common/templates/IconWrapper";
+import CrossIcon from "../../../assets/vectors/Cross.svg";
+import IconWrapper from "../../../common/templates/IconWrapper";
 
 interface Props extends ComponentPropsWithoutRef<"div"> {
   icon: React.ReactNode;

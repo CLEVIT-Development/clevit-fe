@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-import { BASE_URL } from "@/shared/constants/route.constants";
+import { BASE_URL } from "../shared/constants/route.constants";
 
 const disallowRules = ["/admin", "/admin/blog/", "/admin/signin", "/admin/addBlog"];
 

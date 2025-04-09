@@ -1,11 +1,11 @@
 import Link from "next/link";
 
-import DocumentSection from "@/common/templates/DocumentSection";
-import { appConfig } from "@/shared/constants/config.constants";
-import { RoutePaths } from "@/shared/constants/route.constants";
-import { urlShortener } from "@/utils/link.utils";
-import { generatePageMetadata } from "@/utils/metadata.utils";
-import { formatPhoneNumber } from "@/utils/phone.utils";
+import DocumentSection from "../../common/templates/DocumentSection";
+import { appConfig } from "../../shared/constants/config.constants";
+import { RoutePaths } from "../../shared/constants/route.constants";
+import { urlShortener } from "../../utils/link.utils";
+import { generatePageMetadata } from "../../utils/metadata.utils";
+import { formatPhoneNumber } from "../../utils/phone.utils";
 
 export const metadata = generatePageMetadata("services");
 

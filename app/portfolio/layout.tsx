@@ -1,7 +1,7 @@
-import PortfolioHeading from "@/common/layout/Heading/PortfolioHeading";
-import Layout from "@/common/layout/Layout";
-import { Gradient } from "@/components/gradient/Gradient";
-import { HeaderVariant } from "@/types/variant.types";
+import PortfolioHeading from "../../common/layout/Heading/PortfolioHeading";
+import Layout from "../../common/layout/Layout";
+import { Gradient } from "../../components/gradient/Gradient";
+import { HeaderVariant } from "../../types/variant.types";
 
 interface Props {
   children: React.ReactNode;

@@ -1,9 +1,9 @@
 import { type FC } from "react";
 
-import BackgroundGradient from "@/assets/images/services/BackgroundGradient.png";
-import RightBackgroundGradient from "@/assets/images/services/RightBackgroundGradient.png";
-import StyledLink from "@/shared/ui/StyledLink";
-import { ButtonVariant } from "@/types/variant.types";
+import BackgroundGradient from "../../../assets/images/services/BackgroundGradient.png";
+import RightBackgroundGradient from "../../../assets/images/services/RightBackgroundGradient.png";
+import { ButtonVariant } from "../../../types/variant.types";
+import StyledLink from "../StyledLink";
 
 interface ServiceBoxProps {
   title: string;

@@ -3,9 +3,8 @@
 import { type ReactNode } from "react";
 import { useEffect, useRef, useState } from "react";
 
-import useScroll from "@/common/hooks/useScroll";
-import { HeaderVariant } from "@/types/variant.types";
-
+import { HeaderVariant } from "../../types/variant.types";
+import useScroll from "../hooks/useScroll";
 import Header from "./Header/Header";
 
 interface Props {

@@ -1,7 +1,7 @@
-import Pointer from "@/assets/vectors/Pointer.svg";
-import { RoutePaths } from "@/shared/constants/route.constants";
-import StyledLink from "@/shared/ui/StyledLink";
-import { ButtonVariant } from "@/types/variant.types";
+import Pointer from "../../assets/vectors/Pointer.svg";
+import { RoutePaths } from "../../shared/constants/route.constants";
+import StyledLink from "../../shared/ui/StyledLink";
+import { ButtonVariant } from "../../types/variant.types";
 
 const ContactSection = () => {
   return (

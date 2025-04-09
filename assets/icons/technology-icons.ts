@@ -1,51 +1,64 @@
 "use client";
 
-import BerryIcon from "@/assets/vectors/technology/ Berry.svg";
-import AWSIcon from "@/assets/vectors/technology/AWS.svg";
-import AntIcon from "@/assets/vectors/technology/Ant.svg";
-import AzureCloudIcon from "@/assets/vectors/technology/AzureCloud.svg";
-import CSSIcon from "@/assets/vectors/technology/CSS.svg";
-import CypressIcon from "@/assets/vectors/technology/Cypress.svg";
-import DigitalOcheanIcon from "@/assets/vectors/technology/DigitalOchean.svg";
-import DockerIcon from "@/assets/vectors/technology/Docker.svg";
-import DynamoDBIcon from "@/assets/vectors/technology/DynamoDB.svg";
-import ElasticSearchIcon from "@/assets/vectors/technology/ElasticSearch.svg";
-import ExpressIcon from "@/assets/vectors/technology/Express.svg";
-import FirebaseIcon from "@/assets/vectors/technology/Firebase.svg";
-import GoogleCloudIcon from "@/assets/vectors/technology/GoogleCloud.svg";
-import GraphQLIcon from "@/assets/vectors/technology/GraphQL.svg";
-import HTMLIcon from "@/assets/vectors/technology/HTML.svg";
-import JavaIcon from "@/assets/vectors/technology/Java.svg";
-import JestIcon from "@/assets/vectors/technology/Jest.svg";
-import KotlinIcon from "@/assets/vectors/technology/Kotlin.svg";
-import MUIIcon from "@/assets/vectors/technology/MUI.svg";
-import MariaDBIcon from "@/assets/vectors/technology/MariaDB.svg";
-import MicrosoftServerIcon from "@/assets/vectors/technology/MicrosoftServer.svg";
-import MongoIcon from "@/assets/vectors/technology/Mongo.svg";
-import MySQLIcon from "@/assets/vectors/technology/MySQL.svg";
-import NestIcon from "@/assets/vectors/technology/Nest.svg";
-import NextIcon from "@/assets/vectors/technology/Next.svg";
-import NoSQLIcon from "@/assets/vectors/technology/NoSQL.svg";
-import NodeIcon from "@/assets/vectors/technology/Node.svg";
-import NotionIcon from "@/assets/vectors/technology/Notion.svg";
-import ObjectiveCIcon from "@/assets/vectors/technology/ObjectiveC.svg";
-import PostgresIcon from "@/assets/vectors/technology/PostgreSQL.svg";
-import PostMarkIcon from "@/assets/vectors/technology/Postmark.svg";
-import PrismaIcon from "@/assets/vectors/technology/Prisma.svg";
-import ReactIcon from "@/assets/vectors/technology/React.svg";
-import ReactExpoIcon from "@/assets/vectors/technology/ReactExpo.svg";
-import ReactNativeIcon from "@/assets/vectors/technology/ReactNative.svg";
-import RedisIcon from "@/assets/vectors/technology/Redis.svg";
-import SASSIcon from "@/assets/vectors/technology/SASS.svg";
-import SQLiteIcon from "@/assets/vectors/technology/SQLite.svg";
-import SwiftIcon from "@/assets/vectors/technology/Swift.svg";
-import TailwindCSSIcon from "@/assets/vectors/technology/Tailwind.svg";
-import Typescript from "@/assets/vectors/technology/Typescript.svg";
-import VercelIcon from "@/assets/vectors/technology/Vercel.svg";
-import ViteIcon from "@/assets/vectors/technology/Vite.svg";
-import VueIcon from "@/assets/vectors/technology/Vue.svg";
-import VuetifyIcon from "@/assets/vectors/technology/Vuetify.svg";
-import WebSocketIcon from "@/assets/vectors/technology/WebSocket.svg";
+import BerryIcon from "../vectors/technology/ Berry.svg";
+import AWSIcon from "../vectors/technology/AWS.svg";
+import AntIcon from "../vectors/technology/Ant.svg";
+import AzureCloudIcon from "../vectors/technology/AzureCloud.svg";
+import CSSIcon from "../vectors/technology/CSS.svg";
+import ClerkIcon from "../vectors/technology/Clerk.svg";
+import CloudflareWorkersIcon from "../vectors/technology/CloudflareWorkers.svg";
+import CypressIcon from "../vectors/technology/Cypress.svg";
+import DigitalOcheanIcon from "../vectors/technology/DigitalOchean.svg";
+import DockerIcon from "../vectors/technology/Docker.svg";
+import DynamoDBIcon from "../vectors/technology/DynamoDB.svg";
+import ESLintIcon from "../vectors/technology/ESLint.svg";
+import ElasticSearchIcon from "../vectors/technology/ElasticSearch.svg";
+import EmotionIcon from "../vectors/technology/Emotion.svg";
+import ExpressIcon from "../vectors/technology/Express.svg";
+import FirebaseIcon from "../vectors/technology/Firebase.svg";
+import GoogleCloudIcon from "../vectors/technology/GoogleCloud.svg";
+import GraphQLIcon from "../vectors/technology/GraphQL.svg";
+import HTMLIcon from "../vectors/technology/HTML.svg";
+import JavaIcon from "../vectors/technology/Java.svg";
+import JestIcon from "../vectors/technology/Jest.svg";
+import KotlinIcon from "../vectors/technology/Kotlin.svg";
+import MUIIcon from "../vectors/technology/MUI.svg";
+import MariaDBIcon from "../vectors/technology/MariaDB.svg";
+import MercadoPagoIcon from "../vectors/technology/MercadoPago.svg";
+import MicrosoftServerIcon from "../vectors/technology/MicrosoftServer.svg";
+import MongoIcon from "../vectors/technology/Mongo.svg";
+import MySQLIcon from "../vectors/technology/MySQL.svg";
+import NestIcon from "../vectors/technology/Nest.svg";
+import NextIcon from "../vectors/technology/Next.svg";
+import NextAuthIcon from "../vectors/technology/NextAuth.svg";
+import NginxIcon from "../vectors/technology/Nginx.svg";
+import NoSQLIcon from "../vectors/technology/NoSQL.svg";
+import NodeIcon from "../vectors/technology/Node.svg";
+import NotionIcon from "../vectors/technology/Notion.svg";
+import ObjectiveCIcon from "../vectors/technology/ObjectiveC.svg";
+import OpenNextJSIcon from "../vectors/technology/OpenNextJS.svg";
+import PostgresIcon from "../vectors/technology/PostgreSQL.svg";
+import PostMarkIcon from "../vectors/technology/Postmark.svg";
+import PrismaIcon from "../vectors/technology/Prisma.svg";
+import ReactIcon from "../vectors/technology/React.svg";
+import ReactExpoIcon from "../vectors/technology/ReactExpo.svg";
+import ReactNativeIcon from "../vectors/technology/ReactNative.svg";
+import RedisIcon from "../vectors/technology/Redis.svg";
+import ReduxIcon from "../vectors/technology/Redux.svg";
+import SASSIcon from "../vectors/technology/SASS.svg";
+import SQLiteIcon from "../vectors/technology/SQLite.svg";
+import SocketIcon from "../vectors/technology/Socket.svg";
+import StripeIcon from "../vectors/technology/Stripe.svg";
+import SupabaseIcon from "../vectors/technology/Supabase.svg";
+import SwiftIcon from "../vectors/technology/Swift.svg";
+import TailwindCSSIcon from "../vectors/technology/Tailwind.svg";
+import Typescript from "../vectors/technology/Typescript.svg";
+import VercelIcon from "../vectors/technology/Vercel.svg";
+import ViteIcon from "../vectors/technology/Vite.svg";
+import VueIcon from "../vectors/technology/Vue.svg";
+import VuetifyIcon from "../vectors/technology/Vuetify.svg";
+import WebRTCIcon from "../vectors/technology/WebRTC.svg";
+import WebSocketIcon from "../vectors/technology/WebSocket.svg";
 
 export {
   AWSIcon,
@@ -94,4 +107,17 @@ export {
   VueIcon,
   VercelIcon,
   WebSocketIcon,
+  CloudflareWorkersIcon,
+  EmotionIcon,
+  SupabaseIcon,
+  ESLintIcon,
+  OpenNextJSIcon,
+  StripeIcon,
+  NextAuthIcon,
+  ClerkIcon,
+  MercadoPagoIcon,
+  SocketIcon,
+  WebRTCIcon,
+  ReduxIcon,
+  NginxIcon,
 };

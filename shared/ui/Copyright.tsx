@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import { twMerge } from "tailwind-merge";
 
-import { getFullYear } from "@/utils/date.utils";
+import { getFullYear } from "../../utils/date.utils";
 
 interface Props {
   className?: string;

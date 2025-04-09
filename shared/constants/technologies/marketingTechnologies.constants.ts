@@ -2,13 +2,15 @@ import { lazy } from "react";
 
 import type { ITabsConstant } from "./technologies.constants";
 
-const Ahrefs = lazy(() => import("@/assets/vectors/technology/Ahrefs.svg"));
-const Semrush = lazy(() => import("@/assets/vectors/technology/Semrush.svg"));
-const GoogleAnalitycs = lazy(() => import("@/assets/vectors/technology/GoogleAnalitycs.svg"));
-const ScreamingFrog = lazy(() => import("@/assets/vectors/technology/ScreamingFrog.svg"));
-const SEOmoz = lazy(() => import("@/assets/vectors/technology/SeoMoz.svg"));
-const GoogleSearch = lazy(() => import("@/assets/vectors/technology/GoogleSearch.svg"));
-const GoogleAds = lazy(() => import("@/assets/vectors/technology/GoogleAds.svg"));
+const Ahrefs = lazy(() => import("../../../assets/vectors/technology/Ahrefs.svg"));
+const Semrush = lazy(() => import("../../../assets/vectors/technology/Semrush.svg"));
+const GoogleAnalitycs = lazy(
+  () => import("../../../assets/vectors/technology/GoogleAnalitycs.svg")
+);
+const ScreamingFrog = lazy(() => import("../../../assets/vectors/technology/ScreamingFrog.svg"));
+const SEOmoz = lazy(() => import("../../../assets/vectors/technology/SeoMoz.svg"));
+const GoogleSearch = lazy(() => import("../../../assets/vectors/technology/GoogleSearch.svg"));
+const GoogleAds = lazy(() => import("../../../assets/vectors/technology/GoogleAds.svg"));
 
 export const digitalMarketingTechnologiesTabsConstants: ITabsConstant[] = [
   {

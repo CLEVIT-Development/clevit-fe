@@ -4,13 +4,13 @@ import { useRef } from "react";
 
 import { useRouter } from "next/navigation";
 
-import useInteractiveObserver from "@/common/hooks/useInteractiveObserver";
-import useScrollView from "@/common/hooks/useScrollView";
-import Section from "@/common/templates/Section";
-import { RoutePaths } from "@/shared/constants/route.constants";
-import { ServicesIdConstants } from "@/shared/constants/services-id.constants";
-import { servicesConstants } from "@/shared/constants/services.constants";
-import ServiceCard from "@/shared/ui/ServiceCard/ServiceCard";
+import useInteractiveObserver from "../../common/hooks/useInteractiveObserver";
+import useScrollView from "../../common/hooks/useScrollView";
+import Section from "../../common/templates/Section";
+import { RoutePaths } from "../../shared/constants/route.constants";
+import { ServicesIdConstants } from "../../shared/constants/services-id.constants";
+import { servicesConstants } from "../../shared/constants/services.constants";
+import ServiceCard from "../../shared/ui/ServiceCard/ServiceCard";
 
 const ServiceSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);

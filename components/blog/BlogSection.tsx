@@ -4,19 +4,19 @@ import { useRef, useState } from "react";
 
 import { useRouter } from "next/navigation";
 
-import { useBlogCreate, useBlogDelete } from "@/common/hooks/blog/blogMutations";
-import { useAllBlogs } from "@/common/hooks/blog/blogQueries";
-import { useAuth } from "@/common/hooks/useAuth";
-import showNotification, { ToastVersions } from "@/common/services/toast/showNotifications";
-import Section from "@/common/templates/Section";
-import CreateBlog from "@/components/blog/CreatBlogCard";
-import BlogCard from "@/shared/ui/BlogCard/BlogCard";
-import BlogCardSkeleton from "@/shared/ui/BlogCard/BlogCardSkeleton";
-import Button from "@/shared/ui/Button";
-import Pagination from "@/shared/ui/Pagination";
-import type { TStatus } from "@/types/blog.types";
-import { ButtonVariant } from "@/types/variant.types";
-import { generateUniqueTitlePath } from "@/utils/helper.utils";
+import { useBlogCreate, useBlogDelete } from "../../common/hooks/blog/blogMutations";
+import { useAllBlogs } from "../../common/hooks/blog/blogQueries";
+import { useAuth } from "../../common/hooks/useAuth";
+import showNotification, { ToastVersions } from "../../common/services/toast/showNotifications";
+import Section from "../../common/templates/Section";
+import BlogCard from "../../shared/ui/BlogCard/BlogCard";
+import BlogCardSkeleton from "../../shared/ui/BlogCard/BlogCardSkeleton";
+import Button from "../../shared/ui/Button";
+import Pagination from "../../shared/ui/Pagination";
+import type { TStatus } from "../../types/blog.types";
+import { ButtonVariant } from "../../types/variant.types";
+import { generateUniqueTitlePath } from "../../utils/helper.utils";
+import CreateBlog from "./CreatBlogCard";
 
 const BlogSection = () => {
   const { mutateAsync: createBlog } = useBlogCreate();

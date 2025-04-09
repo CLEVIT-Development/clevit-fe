@@ -3,9 +3,9 @@ import React from "react";
 import classNames from "classnames";
 import { twMerge } from "tailwind-merge";
 
-import Footer from "@/common/layout/Footer";
-import HeadBar from "@/common/layout/HeadBar";
-import { HeaderVariant, LayoutVariant } from "@/types/variant.types";
+import { HeaderVariant, LayoutVariant } from "../../types/variant.types";
+import Footer from "./Footer";
+import HeadBar from "./HeadBar";
 
 interface Props {
   className?: string;

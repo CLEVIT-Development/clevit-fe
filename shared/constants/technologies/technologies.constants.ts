@@ -36,8 +36,8 @@ import {
   ViteIcon,
   VueIcon,
   WebSocketIcon,
-} from "@/assets/icons/technology-icons";
-import type { INavigationData } from "@/shared/ui/Navigation.tsx";
+} from "../../../assets/icons/technology-icons";
+import type { INavigationData } from "../../ui/Navigation.tsx";
 
 export interface SubDescription {
   id: number;

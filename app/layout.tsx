@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 
-import { poppins } from "@/assets/fonts/font";
-import GtagProvider from "@/shared/lib/google-tag/GoogleTagProvider";
-import NextProgressBar from "@/shared/lib/next-progress/NextProgressProvider";
-import QueryClientProviderWrapper from "@/shared/lib/react-query/QueryClientProvider";
-import ToastProvider from "@/shared/lib/toast/ToastProvider";
-
+import { poppins } from "../assets/fonts/font";
+import GtagProvider from "../shared/lib/google-tag/GoogleTagProvider";
+import NextProgressBar from "../shared/lib/next-progress/NextProgressProvider";
+import QueryClientProviderWrapper from "../shared/lib/react-query/QueryClientProvider";
+import ToastProvider from "../shared/lib/toast/ToastProvider";
 import "./globals.css";
 import "./lib.css";
 

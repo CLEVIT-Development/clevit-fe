@@ -1,6 +1,6 @@
-import NotFoundBackground from "@/assets/images/NotFound.svg";
-import Layout from "@/common/layout/Layout";
-import { HeaderVariant } from "@/types/variant.types";
+import NotFoundBackground from "../assets/images/NotFound.svg";
+import Layout from "../common/layout/Layout";
+import { HeaderVariant } from "../types/variant.types";
 
 const NotFound = () => {
   return (

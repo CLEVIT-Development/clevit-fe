@@ -3,58 +3,79 @@ import type { FunctionComponent, SVGProps } from "react";
 import {
   AntIcon,
   BerryIcon,
+  ClerkIcon,
+  CloudflareWorkersIcon,
   CypressIcon,
   DigitalOcheanIcon,
+  DockerIcon,
+  ESLintIcon,
+  EmotionIcon,
   ExpressIcon,
   FirebaseIcon,
   GoogleCloudIcon,
+  GraphQLIcon,
   JestIcon,
   MUIIcon,
+  MercadoPagoIcon,
   MongoIcon,
   MySQLIcon,
   NestIcon,
+  NextAuthIcon,
   NextIcon,
+  NginxIcon,
   NodeIcon,
   NotionIcon,
+  OpenNextJSIcon,
   PostMarkIcon,
   PostgresIcon,
   PrismaIcon,
   ReactExpoIcon,
   ReactIcon,
   ReactNativeIcon,
+  ReduxIcon,
+  SocketIcon,
+  StripeIcon,
+  SupabaseIcon,
   TailwindCSSIcon,
   Typescript,
   VercelIcon,
   ViteIcon,
   VueIcon,
   VuetifyIcon,
-} from "@/assets/icons/technology-icons";
-import BepDesktop from "@/assets/images/portfolio/BepDesktop.webp";
-import BepMobileImage from "@/assets/images/portfolio/BepMobile.webp";
-import EvaluationDesktop from "@/assets/images/portfolio/EvaluationDesktop.webp";
-import EvaluationMobileImage from "@/assets/images/portfolio/EvaluationMobile.webp";
-import FhHealthDesktop from "@/assets/images/portfolio/FhHealthDesktop.webp";
-import FhHealthMobileImage from "@/assets/images/portfolio/FhHealthMobile.webp";
-import FlowOpsAppDesktop from "@/assets/images/portfolio/FlowOpsAppDesktop.webp";
-import FlowOpsAppMobileImage from "@/assets/images/portfolio/FlowOpsAppMobile.webp";
-import FlowOpsDashboardDesktop from "@/assets/images/portfolio/FlowOpsDashboardDesktop.webp";
-import FlowOpsDashboardMobileImage from "@/assets/images/portfolio/FlowOpsDashboardMobile.webp";
-import FlowOpsWebDesktop from "@/assets/images/portfolio/FlowOpsWebDesktop.webp";
-import FlowOpsWebMobileImage from "@/assets/images/portfolio/FlowOpsWebMobile.webp";
-import OblivioniDesktopImage from "@/assets/images/portfolio/OblivioniDesktop.webp";
-import OblivioniMobileImage from "@/assets/images/portfolio/OblivioniMobile.webp";
-import PlatAiDesktop from "@/assets/images/portfolio/PlatAiDesktop.webp";
-import PlatAiMobileImage from "@/assets/images/portfolio/PlatAiMobile.webp";
-import PolinHealthcareDesktop from "@/assets/images/portfolio/PolinHealthcareDesktop.webp";
-import PolinHealthcareMobileImage from "@/assets/images/portfolio/PolinHealthcareMobile.webp";
-import RenegadeTechnologiesMobileImage from "@/assets/images/portfolio/RenegadeTechnologiesMobile.webp";
-import RenegageTechnologiesDesktop from "@/assets/images/portfolio/RenegadeTechnologiesWebDesktop.webp";
-import SqorBetaDesktop from "@/assets/images/portfolio/SqorBetaDesktop.webp";
-import SqotrBetaMobileImage from "@/assets/images/portfolio/SqotrBetaMobile.webp";
-import StorylineDesktop from "@/assets/images/portfolio/StorylineDesktop.webp";
-import StorylineMobileImage from "@/assets/images/portfolio/StorylineMobile.webp";
-import TagLogisticsDesktoo from "@/assets/images/portfolio/TagLogisticsDesktop.webp";
-import TagLogisticsMobileImage from "@/assets/images/portfolio/TagLogisticsMobile.webp";
+  WebRTCIcon,
+} from "../../assets/icons/technology-icons";
+import AuroraDesktop from "../../assets/images/portfolio/AuroraDesktop.webp";
+import AuroraMobileImage from "../../assets/images/portfolio/AuroraMobileImage.webp";
+import BepDesktop from "../../assets/images/portfolio/BepDesktop.webp";
+import BepMobileImage from "../../assets/images/portfolio/BepMobile.webp";
+import DebateDesktop from "../../assets/images/portfolio/DebateDesktop.webp";
+import DebateMobileImage from "../../assets/images/portfolio/DebateMobileImage.webp";
+import EvaluationDesktop from "../../assets/images/portfolio/EvaluationDesktop.webp";
+import EvaluationMobileImage from "../../assets/images/portfolio/EvaluationMobile.webp";
+import FhHealthDesktop from "../../assets/images/portfolio/FhHealthDesktop.webp";
+import FhHealthMobileImage from "../../assets/images/portfolio/FhHealthMobile.webp";
+import FlowOpsAppDesktop from "../../assets/images/portfolio/FlowOpsAppDesktop.webp";
+import FlowOpsAppMobileImage from "../../assets/images/portfolio/FlowOpsAppMobile.webp";
+import FlowOpsDashboardDesktop from "../../assets/images/portfolio/FlowOpsDashboardDesktop.webp";
+import FlowOpsDashboardMobileImage from "../../assets/images/portfolio/FlowOpsDashboardMobile.webp";
+import FlowOpsWebDesktop from "../../assets/images/portfolio/FlowOpsWebDesktop.webp";
+import FlowOpsWebMobileImage from "../../assets/images/portfolio/FlowOpsWebMobile.webp";
+import OblivioniDesktopImage from "../../assets/images/portfolio/OblivioniDesktop.webp";
+import OblivioniMobileImage from "../../assets/images/portfolio/OblivioniMobile.webp";
+import OravoxDesktop from "../../assets/images/portfolio/OravoxDesktop.webp";
+import OravoxMobileImage from "../../assets/images/portfolio/OravoxMobileImage.webp";
+import PlatAiDesktop from "../../assets/images/portfolio/PlatAiDesktop.webp";
+import PlatAiMobileImage from "../../assets/images/portfolio/PlatAiMobile.webp";
+import PolinHealthcareDesktop from "../../assets/images/portfolio/PolinHealthcareDesktop.webp";
+import PolinHealthcareMobileImage from "../../assets/images/portfolio/PolinHealthcareMobile.webp";
+import RenegadeTechnologiesMobileImage from "../../assets/images/portfolio/RenegadeTechnologiesMobile.webp";
+import RenegageTechnologiesDesktop from "../../assets/images/portfolio/RenegadeTechnologiesWebDesktop.webp";
+import SqorBetaDesktop from "../../assets/images/portfolio/SqorBetaDesktop.webp";
+import SqotrBetaMobileImage from "../../assets/images/portfolio/SqotrBetaMobile.webp";
+import StorylineDesktop from "../../assets/images/portfolio/StorylineDesktop.webp";
+import StorylineMobileImage from "../../assets/images/portfolio/StorylineMobile.webp";
+import TagLogisticsDesktoo from "../../assets/images/portfolio/TagLogisticsDesktop.webp";
+import TagLogisticsMobileImage from "../../assets/images/portfolio/TagLogisticsMobile.webp";
 
 interface Project {
   title: string;
@@ -307,158 +328,261 @@ export const portfolioConstants: Project[] = [
       },
     ],
   },
+
+  // Oravox
   {
-    title: "Evaluation",
-    desktopImageUrl: EvaluationDesktop.src,
-    mobileImageUrl: EvaluationMobileImage.src,
-    description: "Automated employee evaluation and bonus calculation tool. ",
+    title: "Oravox",
+    desktopImageUrl: OravoxDesktop.src,
+    mobileImageUrl: OravoxMobileImage.src,
+    description:
+      "Your gateway to meaningful discussions, online learning, and AI-powered insights.",
     details:
-      "We developed Evaluation as an automated tool for evaluating employees and calculating bonuses. The platform assesses employees based on their skills, working hours, and other relevant factors connected to their work. ",
+      "Our platform empowers users to engage in structured debates on topics of their choice. Users can create discussion topics, invite others to debate, and receive AI-powered feedback on their performance. The platform also features comprehensive courses with certification upon completion, enhancing users' debating skills and knowledge.",
     info: [
-      { label: "Industry", value: "HR" },
+      { label: "Industry", value: "Education Technology / Social Learning" },
       { label: "Type", value: "Web Development" },
-      { label: "Duration", value: "In Progress" },
-      { label: "Website", value: "Internal Use Only", isLink: false },
-      { label: "Country", value: "United States" },
+      { label: "Duration", value: "1+ Year (Ongoing)" },
+      { label: "Website", value: "In Progress", isLink: false },
+      { label: "Country", value: "Brazil" },
       {
         label: "Technologies",
         value: [
           { name: "React.js", Icon: ReactIcon },
           { name: "Next.js", Icon: NextIcon },
-          { name: "Tailwind CSS", Icon: TailwindCSSIcon },
+          { name: "Material UI", Icon: MUIIcon },
+          { name: "Emotion", Icon: EmotionIcon },
+          { name: "Prisma", Icon: PrismaIcon },
+          { name: "PostgreSQL", Icon: PostgresIcon },
+          { name: "Supabase", Icon: SupabaseIcon },
+          { name: "Jest", Icon: JestIcon },
+          { name: "ESLint", Icon: ESLintIcon },
           { name: "Typescript", Icon: Typescript },
-          { name: "Node.js", Icon: NodeIcon },
-          { name: "Nest.js", Icon: NestIcon },
-          { name: "Vercel", Icon: VercelIcon },
-          { name: "MySQL", Icon: MySQLIcon },
+          { name: "Tailwind CSS", Icon: TailwindCSSIcon },
+          { name: "Cloudflare Workers", Icon: CloudflareWorkersIcon },
+          { name: "OpenNextJS", Icon: OpenNextJSIcon },
+          { name: "Stripe", Icon: StripeIcon },
+          { name: "Next Auth", Icon: NextAuthIcon },
+          { name: "Clerk", Icon: ClerkIcon },
+          { name: "Google APIs", Icon: GoogleCloudIcon },
+          { name: "MercadoPago", Icon: MercadoPagoIcon },
         ],
       },
     ],
   },
+  // Debate
   {
-    title: "BEP",
-    desktopImageUrl: BepDesktop.src,
-    mobileImageUrl: BepMobileImage.src,
-    description:
-      "Unlock your career potential. Connecting with top employers & educational partners!",
+    title: "Debate Platform",
+    desktopImageUrl: DebateDesktop.src,
+    mobileImageUrl: DebateMobileImage.src,
+    description: "AI-Powered Conversations for Smarter Business Deals",
     details:
-      "Introducing BEP, an online platform that bridges the gap between job seekers and new employment opportunities. We built the whole platform to facilitate seamless connections for employers to fill vacancies and provide educational institutions with additional teams to foster growth and development. ",
+      "Oravox is an innovative platform designed to enhance professional conversations with AI assistance, helping users communicate effectively and close deals seamlessly. With Oravox, users can integrate their WhatsApp chats, select specific contacts for business discussions, and engage in AI-powered communication.",
     info: [
-      { label: "Industry", value: "Educational, Work" },
-      { label: "Type", value: "Web Development" },
+      { label: "Industry", value: "Business Communication, AI Assistance" },
+      { label: "Type", value: "Web Application" },
       { label: "Duration", value: "In Progress" },
       { label: "Website", value: "In Progress", isLink: false },
-      { label: "Country", value: "Armenia" },
-      {
-        label: "Technologies",
-        value: [
-          { name: "React.js", Icon: ReactIcon },
-          { name: "Next.js", Icon: NextIcon },
-          { name: "Tailwind CSS", Icon: TailwindCSSIcon },
-          { name: "Typescript", Icon: Typescript },
-          { name: "Node.js", Icon: NodeIcon },
-          { name: "Express.js", Icon: ExpressIcon },
-          { name: "Nest.js", Icon: NestIcon },
-          { name: "Digital Ocean", Icon: DigitalOcheanIcon },
-          { name: "MySQL", Icon: MySQLIcon },
-        ],
-      },
-    ],
-  },
-  {
-    title: "FH Health",
-    desktopImageUrl: FhHealthDesktop.src,
-    mobileImageUrl: FhHealthMobileImage.src,
-    description: "Your custom medical lab and clinic management software.",
-    details:
-      "FH Health, a leading healthcare technology firm, specializes in delivering innovative digital health solutions. The development includes secure monitoring of COVID-19 test results, automated recommendations for clinic revisits, a user-friendly admin panel, centralized test inventory management, integration of video conferencing for remote consultations, and secure messaging for direct patient-professional communication.",
-    info: [
-      { label: "Industry", value: "Healthcare" },
-      { label: "Type", value: "Web Development" },
-      { label: "Duration", value: "3 Years 2 Months" },
-      { label: "Website", value: "fhhealth.com ", isLink: true },
-      { label: "Country", value: "Canada" },
+      { label: "Country", value: "Global" },
       {
         label: "Technologies",
         value: [
           { name: "React.js", Icon: ReactIcon },
           { name: "Next.js", Icon: NextIcon },
           { name: "Material UI", Icon: MUIIcon },
-          { name: "Cypress", Icon: CypressIcon },
+          { name: "Tailwind CSS", Icon: TailwindCSSIcon },
           { name: "Typescript", Icon: Typescript },
-          { name: "Node.js", Icon: NodeIcon },
-          { name: "Nest.js", Icon: NestIcon },
-          { name: "Jest", Icon: JestIcon },
-          { name: "Google Cloud", Icon: GoogleCloudIcon },
-          { name: "Firebase", Icon: FirebaseIcon },
-          { name: "Express.js", Icon: ExpressIcon },
-          { name: "MySQL", Icon: MySQLIcon },
-          { name: "MongoDB", Icon: MongoIcon },
+          { name: "Socket.io", Icon: SocketIcon },
+          { name: "WebRTC", Icon: WebRTCIcon },
+          { name: "Stripe", Icon: StripeIcon },
+          { name: "AI Integration", Icon: ReactIcon }, //same here
         ],
       },
     ],
   },
   {
-    title: "Pollin Healthcare",
-    desktopImageUrl: PolinHealthcareDesktop.src,
-    mobileImageUrl: PolinHealthcareMobileImage.src,
-    description: "Healthcare appointment scheduling and treatment management. ",
+    title: "Aurora",
+    desktopImageUrl: AuroraDesktop.src,
+    mobileImageUrl: AuroraMobileImage.src,
+    description: "Professional Relationship Management (PRM) System",
     details:
-      "Pollin Regenerative Health Clinic Management System simplifies patient appointment scheduling. We've developed an admin dashboard to facilitate clinic network actions and optimize connections between patients and doctors. Patients access consultations via a mobile app and interact with an AI-powered chatbot for effortless healthcare actions and information retrieval.",
+      "This is a specialized tool that helps pharmaceutical and medical device companies manage their relationships with healthcare professionals (like doctors and specialists) and medical institutions (like hospitals and clinics). Think of it as a super-organized digital address book with lots of extra features! 📱",
     info: [
       { label: "Industry", value: "Healthcare" },
-      { label: "Type", value: "Web Development" },
-      { label: "Duration", value: "2 Years 3 Months" },
-      { label: "Website", value: "pollinfertility.com", isLink: true },
-      { label: "Country", value: "Canada" },
+      { label: "Type", value: "Web Development / Admin Dashboard Development" },
+      { label: "Duration", value: "2+ Year (Ongoing)" },
+      { label: "Website", value: "In Progress", isLink: false },
+      { label: "Country", value: "Germany" },
       {
         label: "Technologies",
         value: [
           { name: "React.js", Icon: ReactIcon },
           { name: "Next.js", Icon: NextIcon },
+          { name: "Typescript", Icon: Typescript },
+          { name: "GraphQL (Apollo Client)", Icon: GraphQLIcon },
           { name: "Tailwind CSS", Icon: TailwindCSSIcon },
-          { name: "Cypress", Icon: CypressIcon },
-          { name: "Typescript", Icon: Typescript },
-          { name: "Node.js", Icon: NodeIcon },
-          { name: "Nest.js", Icon: NestIcon },
-          { name: "Jest", Icon: JestIcon },
-          { name: "Google Cloud", Icon: GoogleCloudIcon },
-          { name: "Firebase", Icon: FirebaseIcon },
-          { name: "MySQL", Icon: MySQLIcon },
-          { name: "MongoDB", Icon: MongoIcon },
-        ],
-      },
-    ],
-  },
-  {
-    title: "Plat AI",
-    desktopImageUrl: PlatAiDesktop.src,
-    mobileImageUrl: PlatAiMobileImage.src,
-    description:
-      "Offering efficient underwriting solutions for lenders, financial institutions, and insurance firms.",
-    details:
-      "Plat AI platform efficiently evaluates external submissions, integrating into existing workflows or serving as a standalone solution. Using AI-driven risk assessment, Plat AI reduces costs and enhances productivity. Our contributions included both web development and AI development, ensuring a user-friendly, and efficient platform that enhances underwriting processes and overall operational efficiency.",
-    info: [
-      { label: "Industry", value: "Finance, AI" },
-      { label: "Type", value: "Web Development, AI Development" },
-      { label: "Duration", value: "2 Years 4 Months" },
-      { label: "Website", value: "Internal Use Only", isLink: false },
-      { label: "Country", value: "United States" },
-      {
-        label: "Technologies",
-        value: [
-          { name: "React.js", Icon: ReactIcon },
-          { name: "Next.js", Icon: NextIcon },
-          { name: "Material UI", Icon: MUIIcon },
-          { name: "Berry UI", Icon: BerryIcon },
-          { name: "Cypress", Icon: CypressIcon },
-          { name: "Typescript", Icon: Typescript },
-          { name: "Node.js", Icon: NodeIcon },
-          { name: "Nest.js", Icon: NestIcon },
-          { name: "Google Cloud", Icon: GoogleCloudIcon },
+          { name: "Redux", Icon: ReduxIcon },
+          { name: "NextAuth", Icon: NextAuthIcon },
+          { name: "NestJS", Icon: NestIcon },
+          { name: "Docker", Icon: DockerIcon },
           { name: "PostgreSQL", Icon: PostgresIcon },
+          { name: "Nginx", Icon: NginxIcon },
+          { name: "Jest", Icon: JestIcon },
         ],
       },
     ],
   },
+  // {
+  //   title: "Evaluation",
+  //   desktopImageUrl: EvaluationDesktop.src,
+  //   mobileImageUrl: EvaluationMobileImage.src,
+  //   description: "Automated employee evaluation and bonus calculation tool. ",
+  //   details:
+  //     "We developed Evaluation as an automated tool for evaluating employees and calculating bonuses. The platform assesses employees based on their skills, working hours, and other relevant factors connected to their work. ",
+  //   info: [
+  //     { label: "Industry", value: "HR" },
+  //     { label: "Type", value: "Web Development" },
+  //     { label: "Duration", value: "In Progress" },
+  //     { label: "Website", value: "Internal Use Only", isLink: false },
+  //     { label: "Country", value: "United States" },
+  //     {
+  //       label: "Technologies",
+  //       value: [
+  //         { name: "React.js", Icon: ReactIcon },
+  //         { name: "Next.js", Icon: NextIcon },
+  //         { name: "Tailwind CSS", Icon: TailwindCSSIcon },
+  //         { name: "Typescript", Icon: Typescript },
+  //         { name: "Node.js", Icon: NodeIcon },
+  //         { name: "Nest.js", Icon: NestIcon },
+  //         { name: "Vercel", Icon: VercelIcon },
+  //         { name: "MySQL", Icon: MySQLIcon },
+  //       ],
+  //     },
+  //   ],
+  // },
+  // {
+  //   title: "BEP",
+  //   desktopImageUrl: BepDesktop.src,
+  //   mobileImageUrl: BepMobileImage.src,
+  //   description:
+  //     "Unlock your career potential. Connecting with top employers & educational partners!",
+  //   details:
+  //     "Introducing BEP, an online platform that bridges the gap between job seekers and new employment opportunities. We built the whole platform to facilitate seamless connections for employers to fill vacancies and provide educational institutions with additional teams to foster growth and development. ",
+  //   info: [
+  //     { label: "Industry", value: "Educational, Work" },
+  //     { label: "Type", value: "Web Development" },
+  //     { label: "Duration", value: "In Progress" },
+  //     { label: "Website", value: "In Progress", isLink: false },
+  //     { label: "Country", value: "Armenia" },
+  //     {
+  //       label: "Technologies",
+  //       value: [
+  //         { name: "React.js", Icon: ReactIcon },
+  //         { name: "Next.js", Icon: NextIcon },
+  //         { name: "Tailwind CSS", Icon: TailwindCSSIcon },
+  //         { name: "Typescript", Icon: Typescript },
+  //         { name: "Node.js", Icon: NodeIcon },
+  //         { name: "Express.js", Icon: ExpressIcon },
+  //         { name: "Nest.js", Icon: NestIcon },
+  //         { name: "Digital Ocean", Icon: DigitalOcheanIcon },
+  //         { name: "MySQL", Icon: MySQLIcon },
+  //       ],
+  //     },
+  //   ],
+  // },
+  // {
+  //   title: "FH Health",
+  //   desktopImageUrl: FhHealthDesktop.src,
+  //   mobileImageUrl: FhHealthMobileImage.src,
+  //   description: "Your custom medical lab and clinic management software.",
+  //   details:
+  //     "FH Health, a leading healthcare technology firm, specializes in delivering innovative digital health solutions. The development includes secure monitoring of COVID-19 test results, automated recommendations for clinic revisits, a user-friendly admin panel, centralized test inventory management, integration of video conferencing for remote consultations, and secure messaging for direct patient-professional communication.",
+  //   info: [
+  //     { label: "Industry", value: "Healthcare" },
+  //     { label: "Type", value: "Web Development" },
+  //     { label: "Duration", value: "3 Years 2 Months" },
+  //     { label: "Website", value: "fhhealth.com ", isLink: true },
+  //     { label: "Country", value: "Canada" },
+  //     {
+  //       label: "Technologies",
+  //       value: [
+  //         { name: "React.js", Icon: ReactIcon },
+  //         { name: "Next.js", Icon: NextIcon },
+  //         { name: "Material UI", Icon: MUIIcon },
+  //         { name: "Cypress", Icon: CypressIcon },
+  //         { name: "Typescript", Icon: Typescript },
+  //         { name: "Node.js", Icon: NodeIcon },
+  //         { name: "Nest.js", Icon: NestIcon },
+  //         { name: "Jest", Icon: JestIcon },
+  //         { name: "Google Cloud", Icon: GoogleCloudIcon },
+  //         { name: "Firebase", Icon: FirebaseIcon },
+  //         { name: "Express.js", Icon: ExpressIcon },
+  //         { name: "MySQL", Icon: MySQLIcon },
+  //         { name: "MongoDB", Icon: MongoIcon },
+  //       ],
+  //     },
+  //   ],
+  // },
+  // {
+  //   title: "Pollin Healthcare",
+  //   desktopImageUrl: PolinHealthcareDesktop.src,
+  //   mobileImageUrl: PolinHealthcareMobileImage.src,
+  //   description: "Healthcare appointment scheduling and treatment management. ",
+  //   details:
+  //     "Pollin Regenerative Health Clinic Management System simplifies patient appointment scheduling. We've developed an admin dashboard to facilitate clinic network actions and optimize connections between patients and doctors. Patients access consultations via a mobile app and interact with an AI-powered chatbot for effortless healthcare actions and information retrieval.",
+  //   info: [
+  //     { label: "Industry", value: "Healthcare" },
+  //     { label: "Type", value: "Web Development" },
+  //     { label: "Duration", value: "2 Years 3 Months" },
+  //     { label: "Website", value: "pollinfertility.com", isLink: true },
+  //     { label: "Country", value: "Canada" },
+  //     {
+  //       label: "Technologies",
+  //       value: [
+  //         { name: "React.js", Icon: ReactIcon },
+  //         { name: "Next.js", Icon: NextIcon },
+  //         { name: "Tailwind CSS", Icon: TailwindCSSIcon },
+  //         { name: "Cypress", Icon: CypressIcon },
+  //         { name: "Typescript", Icon: Typescript },
+  //         { name: "Node.js", Icon: NodeIcon },
+  //         { name: "Nest.js", Icon: NestIcon },
+  //         { name: "Jest", Icon: JestIcon },
+  //         { name: "Google Cloud", Icon: GoogleCloudIcon },
+  //         { name: "Firebase", Icon: FirebaseIcon },
+  //         { name: "MySQL", Icon: MySQLIcon },
+  //         { name: "MongoDB", Icon: MongoIcon },
+  //       ],
+  //     },
+  //   ],
+  // },
+  // {
+  //   title: "Plat AI",
+  //   desktopImageUrl: PlatAiDesktop.src,
+  //   mobileImageUrl: PlatAiMobileImage.src,
+  //   description:
+  //     "Offering efficient underwriting solutions for lenders, financial institutions, and insurance firms.",
+  //   details:
+  //     "Plat AI platform efficiently evaluates external submissions, integrating into existing workflows or serving as a standalone solution. Using AI-driven risk assessment, Plat AI reduces costs and enhances productivity. Our contributions included both web development and AI development, ensuring a user-friendly, and efficient platform that enhances underwriting processes and overall operational efficiency.",
+  //   info: [
+  //     { label: "Industry", value: "Finance, AI" },
+  //     { label: "Type", value: "Web Development, AI Development" },
+  //     { label: "Duration", value: "2 Years 4 Months" },
+  //     { label: "Website", value: "Internal Use Only", isLink: false },
+  //     { label: "Country", value: "United States" },
+  //     {
+  //       label: "Technologies",
+  //       value: [
+  //         { name: "React.js", Icon: ReactIcon },
+  //         { name: "Next.js", Icon: NextIcon },
+  //         { name: "Material UI", Icon: MUIIcon },
+  //         { name: "Berry UI", Icon: BerryIcon },
+  //         { name: "Cypress", Icon: CypressIcon },
+  //         { name: "Typescript", Icon: Typescript },
+  //         { name: "Node.js", Icon: NodeIcon },
+  //         { name: "Nest.js", Icon: NestIcon },
+  //         { name: "Google Cloud", Icon: GoogleCloudIcon },
+  //         { name: "PostgreSQL", Icon: PostgresIcon },
+  //       ],
+  //     },
+  //   ],
+  // },
 ];

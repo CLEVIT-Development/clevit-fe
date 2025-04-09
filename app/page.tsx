@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
-import HomeHeading from "@/common/layout/Heading/HomeHeading";
-import Layout from "@/common/layout/Layout";
-import TotalSection from "@/components/about-us/TotalSection";
-import { Gradient } from "@/components/gradient/Gradient";
+import HomeHeading from "../common/layout/Heading/HomeHeading";
+import Layout from "../common/layout/Layout";
+import TotalSection from "../components/about-us/TotalSection";
+import { Gradient } from "../components/gradient/Gradient";
 import {
   CalendlySection,
   FeedbackSection,
@@ -13,13 +13,13 @@ import {
   RequestQuoteSection,
   ServiceSection,
   TechnologySection,
-} from "@/components/home";
-import { homeProcessesConstants } from "@/shared/constants/processes/homeProcesses.constants";
+} from "../components/home";
+import { homeProcessesConstants } from "../shared/constants/processes/homeProcesses.constants";
 import {
   technologiesConstants,
   technologyTabsConstants,
-} from "@/shared/constants/technologies/technologies.constants";
-import { generatePageMetadata } from "@/utils/metadata.utils";
+} from "../shared/constants/technologies/technologies.constants";
+import { generatePageMetadata } from "../utils/metadata.utils";
 
 export const metadata: Metadata = generatePageMetadata("home");
 

@@ -7,17 +7,16 @@ import { usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";
 import { twMerge } from "tailwind-merge";
 
-import Messages from "@/assets/vectors/Messages.svg";
-import { useAuthContext } from "@/common/context/AuthContext";
-import useLockBodyScroll from "@/common/hooks/useBodyLock";
-import useHash from "@/common/hooks/useHash";
-import useResponsive from "@/common/hooks/useResponsive";
-import { RoutePaths, headerMenuLinks } from "@/shared/constants/route.constants";
-import Copyright from "@/shared/ui/Copyright";
-import Logo from "@/shared/ui/Logo";
-import StyledLink from "@/shared/ui/StyledLink";
-import { HeaderVariant, LogoVariant } from "@/types/variant.types";
-
+import Messages from "../../../assets/vectors/Messages.svg";
+import { RoutePaths, headerMenuLinks } from "../../../shared/constants/route.constants";
+import Copyright from "../../../shared/ui/Copyright";
+import Logo from "../../../shared/ui/Logo";
+import StyledLink from "../../../shared/ui/StyledLink";
+import { HeaderVariant, LogoVariant } from "../../../types/variant.types";
+import { useAuthContext } from "../../context/AuthContext";
+import useLockBodyScroll from "../../hooks/useBodyLock";
+import useHash from "../../hooks/useHash";
+import useResponsive from "../../hooks/useResponsive";
 import BurgerMenu from "./BurgerMenu";
 
 interface Props {

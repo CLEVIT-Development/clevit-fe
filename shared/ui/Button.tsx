@@ -3,7 +3,7 @@ import type { ComponentPropsWithoutRef, ForwardedRef, ReactNode } from "react";
 
 import { twMerge } from "tailwind-merge";
 
-import { ButtonVariant } from "@/types/variant.types";
+import { ButtonVariant } from "../../types/variant.types";
 
 interface Props extends Omit<ComponentPropsWithoutRef<"button">, "prefix"> {
   prefix?: ReactNode;

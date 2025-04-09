@@ -14,7 +14,7 @@ const IconWrapper = ({ icon, className = "" }: Props) => (
       classNames("bg-purple-200 rounded-full flex items-center justify-center", className)
     )}
   >
-    <div className="h-[50%] [&_svg]:h-full [&_svg]:w-full">{icon}</div>
+    <div className="h-[40px] w-[40px] [&_svg]:h-full [&_svg]:w-full transform-gpu">{icon}</div>
   </div>
 );
 

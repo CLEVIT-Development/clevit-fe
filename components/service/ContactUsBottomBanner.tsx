@@ -1,6 +1,6 @@
-import GetConsultationBackground from "@/assets/images/GetConsultationBackground.png";
-import StyledLink from "@/shared/ui/StyledLink";
-import { ButtonVariant } from "@/types/variant.types";
+import GetConsultationBackground from "../../assets/images/GetConsultationBackground.png";
+import StyledLink from "../../shared/ui/StyledLink";
+import { ButtonVariant } from "../../types/variant.types";
 
 interface GetConsultationProps {
   title: string;

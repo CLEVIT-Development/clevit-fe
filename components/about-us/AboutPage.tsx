@@ -1,6 +1,5 @@
-import AboutHeading from "@/common/layout/Heading/AboutHeading";
-import Layout from "@/common/layout/Layout";
-
+import AboutHeading from "../../common/layout/Heading/AboutHeading";
+import Layout from "../../common/layout/Layout";
 import { Gradient } from "../gradient/Gradient";
 import CalendlySection from "../home/CalendlySection";
 import FeedbackSection from "../home/Feedback/FeedbackSection";

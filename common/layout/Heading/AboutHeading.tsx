@@ -1,5 +1,5 @@
-import AboutHeadingBackground from "@/assets/images/AboutHeading.webp";
-import { seoConfig } from "@/shared/constants/seo.constants";
+import AboutHeadingBackground from "../../../assets/images/AboutHeading.webp";
+import { seoConfig } from "../../../shared/constants/seo.constants";
 
 const AboutHeading = () => {
   return (

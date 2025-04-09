@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import { twMerge } from "tailwind-merge";
 
-import type { feedbacksConstants } from "@/shared/constants/feedbacks.constants";
+import type { feedbacksConstants } from "../../../shared/constants/feedbacks.constants";
 
 interface IProps {
   data: (typeof feedbacksConstants)[number];

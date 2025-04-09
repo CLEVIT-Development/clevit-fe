@@ -1,5 +1,5 @@
-import Envelope from "@/assets/vectors/Envelope.svg";
-import Telephone from "@/assets/vectors/Telephone.svg";
+import Envelope from "../../assets/vectors/Envelope.svg";
+import Telephone from "../../assets/vectors/Telephone.svg";
 
 export const contactsConstants = [
   {

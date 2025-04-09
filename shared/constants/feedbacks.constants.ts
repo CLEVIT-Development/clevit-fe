@@ -1,8 +1,8 @@
 "use client";
 
-import Oblivioni from "@/assets/images/feedbacks/Oblivioni.webp";
-import Renegade from "@/assets/images/feedbacks/Renegade.webp";
-import Sqor from "@/assets/images/feedbacks/Sqor.webp";
+import Oblivioni from "../../assets/images/feedbacks/Oblivioni.webp";
+import Renegade from "../../assets/images/feedbacks/Renegade.webp";
+import Sqor from "../../assets/images/feedbacks/Sqor.webp";
 
 export const feedbacksConstants = [
   {

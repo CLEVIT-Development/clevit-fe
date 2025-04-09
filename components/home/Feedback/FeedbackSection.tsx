@@ -2,10 +2,9 @@
 
 import AliceCarousel from "react-alice-carousel";
 
-import useResponsive from "@/common/hooks/useResponsive";
-import Section from "@/common/templates/Section";
-import { feedbacksConstants } from "@/shared/constants/feedbacks.constants";
-
+import useResponsive from "../../../common/hooks/useResponsive";
+import Section from "../../../common/templates/Section";
+import { feedbacksConstants } from "../../../shared/constants/feedbacks.constants";
 import FeedbackItem from "./FeedBackItem";
 
 interface FeedbackSectionProps {
