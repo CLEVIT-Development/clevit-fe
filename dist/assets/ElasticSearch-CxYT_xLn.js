@@ -1,0 +1,119 @@
+import { r as e } from "./react-CvSS68GI.js";
+
+const t = (t) =>
+  e.createElement(
+    "svg",
+    {
+      width: 78,
+      height: 78,
+      viewBox: "0 0 78 78",
+      fill: "none",
+      xmlns: "http://www.w3.org/2000/svg",
+      ...t,
+    },
+    e.createElement(
+      "mask",
+      {
+        id: "mask0_1375_1169",
+        style: { maskType: "luminance" },
+        maskUnits: "userSpaceOnUse",
+        x: 4,
+        y: 4,
+        width: 70,
+        height: 70,
+      },
+      e.createElement("path", {
+        d: "M39 74C58.33 74 74 58.33 74 39C74 19.67 58.33 4 39 4C19.67 4 4 19.67 4 39C4 58.33 19.67 74 39 74Z",
+        fill: "white",
+      })
+    ),
+    e.createElement(
+      "g",
+      { mask: "url(#mask0_1375_1169)" },
+      e.createElement("path", {
+        d: "M53.9835 23.6875H6.1875C4.9835 23.6875 4 22.704 4 21.5V6.1875C4 4.9835 4.9835 4 6.1875 4H68.533C69.737 4 70.7205 4.9835 70.7205 6.1875V6.954C70.6085 16.1415 63.171 23.6875 53.9835 23.6875Z",
+        fill: "#F0BF1A",
+      })
+    ),
+    e.createElement(
+      "mask",
+      {
+        id: "mask1_1375_1169",
+        style: { maskType: "luminance" },
+        maskUnits: "userSpaceOnUse",
+        x: 4,
+        y: 4,
+        width: 70,
+        height: 70,
+      },
+      e.createElement("path", {
+        d: "M39 74C58.33 74 74 58.33 74 39C74 19.67 58.33 4 39 4C19.67 4 4 19.67 4 39C4 58.33 19.67 74 39 74Z",
+        fill: "white",
+      })
+    ),
+    e.createElement(
+      "g",
+      { mask: "url(#mask1_1375_1169)" },
+      e.createElement("path", {
+        d: "M70.8292 74H4.2207V54.3125H54.2042C63.3917 54.3125 70.8292 61.75 70.8292 70.9375V74Z",
+        fill: "#3EBEB0",
+      })
+    ),
+    e.createElement(
+      "mask",
+      {
+        id: "mask2_1375_1169",
+        style: { maskType: "luminance" },
+        maskUnits: "userSpaceOnUse",
+        x: 4,
+        y: 4,
+        width: 70,
+        height: 70,
+      },
+      e.createElement("path", {
+        d: "M39 74C58.33 74 74 58.33 74 39C74 19.67 58.33 4 39 4C19.67 4 4 19.67 4 39C4 58.33 19.67 74 39 74Z",
+        fill: "white",
+      })
+    ),
+    e.createElement(
+      "g",
+      { mask: "url(#mask2_1375_1169)" },
+      e.createElement("path", {
+        d: "M50.046 48.8455H0.5V29.158H50.046C55.5165 29.158 59.8915 33.533 59.8915 39.0035C59.8915 44.474 55.408 48.8455 50.046 48.8455Z",
+        fill: "#07A5DE",
+      })
+    ),
+    e.createElement(
+      "mask",
+      {
+        id: "mask3_1375_1169",
+        style: { maskType: "luminance" },
+        maskUnits: "userSpaceOnUse",
+        x: 4,
+        y: 4,
+        width: 70,
+        height: 70,
+      },
+      e.createElement("path", {
+        d: "M39 74C58.33 74 74 58.33 74 39C74 19.67 58.33 4 39 4C19.67 4 4 19.67 4 39C4 58.33 19.67 74 39 74Z",
+        fill: "white",
+      })
+    ),
+    e.createElement(
+      "g",
+      { mask: "url(#mask3_1375_1169)" },
+      e.createElement("path", {
+        d: "M34.625 29.158H2.25V48.8455H34.625C35.3915 45.8915 35.829 42.612 35.829 39C35.829 35.388 35.3915 32.1085 34.625 29.158Z",
+        fill: "#231F20",
+      })
+    ),
+    e.createElement("path", {
+      d: "M21.3915 8.704C15.4835 12.204 10.5625 17.454 7.5 23.6875H33.3125C30.6875 17.671 26.5295 12.6415 21.3915 8.704Z",
+      fill: "#D7A229",
+    }),
+    e.createElement("path", {
+      d: "M22.4835 69.8455C27.5165 65.7995 31.5625 60.4375 34.079 54.3125H7.5C10.783 60.875 16.033 66.3455 22.4835 69.8455Z",
+      fill: "#019B8F",
+    })
+  );
+export { t as default };

@@ -1,0 +1,31 @@
+import { r as e } from "./react-CvSS68GI.js";
+
+const t = (t) =>
+  e.createElement(
+    "svg",
+    {
+      width: 70,
+      height: 70,
+      viewBox: "0 0 70 70",
+      fill: "none",
+      xmlns: "http://www.w3.org/2000/svg",
+      ...t,
+    },
+    e.createElement("path", {
+      d: "M9.84375 62.8906L4.10156 0H65.7617L60.1562 62.8906L35 70",
+      fill: "#264DE4",
+    }),
+    e.createElement("path", {
+      d: "M35 5.05859V64.5312L55.3711 58.9258L60.1562 5.05859",
+      fill: "#2965F1",
+    }),
+    e.createElement("path", {
+      d: "M15.5859 12.8516H35V20.5078H16.2695M16.9531 28.4375H35V36.2305H17.6367M18.0469 40.0586H25.7031L26.25 46.2109L35 48.5352V56.6016L19.0039 52.2266",
+      fill: "#EBEBEB",
+    }),
+    e.createElement("path", {
+      d: "M35 28.4375V36.2305H44.4336L43.4766 46.2109L35 48.5352V56.6016L50.7227 52.2266L54.2773 12.8516H35V20.5078H45.9375L45.1855 28.4375H35Z",
+      fill: "white",
+    })
+  );
+export { t as default };

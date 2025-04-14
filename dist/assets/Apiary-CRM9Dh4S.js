@@ -1,0 +1,115 @@
+import { r as e } from "./react-CvSS68GI.js";
+
+const t = (t) =>
+  e.createElement(
+    "svg",
+    {
+      width: 78,
+      height: 78,
+      viewBox: "0 0 78 78",
+      fill: "none",
+      xmlns: "http://www.w3.org/2000/svg",
+      ...t,
+    },
+    e.createElement(
+      "g",
+      { clipPath: "url(#clip0_3288_6438)" },
+      e.createElement("path", {
+        opacity: 0.5,
+        d: "M38.916 13.9639V33.85L56.3742 23.8864V4L38.916 13.9639Z",
+        fill: "#13A049",
+      }),
+      e.createElement("path", {
+        opacity: 0.5,
+        d: "M38.9169 13.9639L21.459 4V23.9278L38.9169 33.8916V13.9639Z",
+        fill: "#A2CC39",
+      }),
+      e.createElement("path", {
+        opacity: 0.9,
+        d: "M56.3742 4L38.9161 13.9639L21.4582 4L4 13.9639L38.9161 33.8916L73.8113 13.9639L56.3742 4Z",
+        fill: "url(#paint0_linear_3288_6438)",
+      }),
+      e.createElement("path", {
+        d: "M38.9161 33.8926L4 13.9648V33.8926L21.4582 43.8565V63.7637L38.9161 73.7276L56.3742 63.7637V43.8565L73.8113 33.8926V13.9648L38.9161 33.8926Z",
+        fill: "url(#paint1_linear_3288_6438)",
+      }),
+      e.createElement("path", {
+        d: "M38.916 33.8926V73.7276L56.3742 63.7637V43.8565L73.8113 33.8926V13.9648L38.916 33.8926Z",
+        fill: "url(#paint2_linear_3288_6438)",
+      }),
+      e.createElement("path", {
+        opacity: 0.05,
+        d: "M38.916 53.7988V73.7266L56.3742 63.7627L38.916 53.7988Z",
+        fill: "#231F20",
+      }),
+      e.createElement("path", {
+        opacity: 0.1,
+        d: "M38.9169 73.7676V53.8398L21.459 63.8037L38.9169 73.7676Z",
+        fill: "#231F20",
+      }),
+      e.createElement("path", {
+        opacity: 0.05,
+        d: "M21.4582 23.9277L4 33.8916L21.4582 43.8555L38.9161 33.8916L21.4582 23.9277Z",
+        fill: "#231F20",
+      }),
+      e.createElement("path", {
+        opacity: 0.05,
+        d: "M56.3742 23.9277L38.916 33.8916L56.3742 43.8555L73.8113 33.8916L56.3742 23.9277Z",
+        fill: "#231F20",
+      })
+    ),
+    e.createElement(
+      "defs",
+      null,
+      e.createElement(
+        "linearGradient",
+        {
+          id: "paint0_linear_3288_6438",
+          x1: 6985.97,
+          y1: 1498.31,
+          x2: 4,
+          y2: 1498.31,
+          gradientUnits: "userSpaceOnUse",
+        },
+        e.createElement("stop", { stopColor: "#37BDA6" }),
+        e.createElement("stop", { offset: 1, stopColor: "#8AD3B8" })
+      ),
+      e.createElement(
+        "linearGradient",
+        {
+          id: "paint1_linear_3288_6438",
+          x1: 6985.97,
+          y1: 3001.98,
+          x2: 4,
+          y2: 3001.98,
+          gradientUnits: "userSpaceOnUse",
+        },
+        e.createElement("stop", { offset: 0.5, stopColor: "#4BB6AD" }),
+        e.createElement("stop", { offset: 1, stopColor: "#78BBC1" })
+      ),
+      e.createElement(
+        "linearGradient",
+        {
+          id: "paint2_linear_3288_6438",
+          x1: 38.2879,
+          y1: 3001.98,
+          x2: 3529.25,
+          y2: 3001.98,
+          gradientUnits: "userSpaceOnUse",
+        },
+        e.createElement("stop", { stopColor: "#4379A7" }),
+        e.createElement("stop", { offset: 1, stopColor: "#7CC9B8" })
+      ),
+      e.createElement(
+        "clipPath",
+        { id: "clip0_3288_6438" },
+        e.createElement("rect", {
+          width: 70,
+          height: 70,
+          fill: "white",
+          transform: "translate(4 4)",
+        })
+      )
+    )
+  );
+export { t as default };

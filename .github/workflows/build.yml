@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - ci_cd
+      - develop
   pull_request:
     branches:
       - develop
@@ -12,6 +13,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    env: # Define global environment variables here
+      NEXT_PUBLIC_BACKEND_URL: https://clevit-be.vercel.app/users/v1/
+      NEXT_PUBLIC_TINY_MCE_KEY: 2gw0rx6h0ekscp6j049j9h69gpbzam0r7kmfrjbit1bvz15f
 
     steps:
       - name: Checkout Repository
@@ -23,10 +28,10 @@ jobs:
           node-version: "20"
 
       - name: Clear Node.js Cache
-        run: yarn cache clean
+        run: npm cache clean --force # Use npm cache clean
 
       - name: Install Dependencies
-        run: yarn install
+        run: npm install # Use npm install instead of yarn
 
       - name: Build
-        run: yarn build
+        run: npm run build # Use npm run build instead of yarn build

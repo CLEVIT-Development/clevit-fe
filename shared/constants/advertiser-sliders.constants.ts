@@ -1,0 +1,31 @@
+import {
+  AuroraIcon,
+  ByteDanceIcon,
+  DebatesIcon,
+  DirektPlusOnlineIcon,
+  FHhealthIcon,
+  FlowOpsIcon,
+  IdoeWorksIcon,
+  OblivioniIcon,
+  PlatAiIcon,
+  PollinIcon,
+  RenegadeIcon,
+  SqorIcon,
+  TagLogisticsIcon,
+} from "../../assets/icons/advertiser-slider-icons";
+
+export const advertiserSlidersConstants = [
+  { id: "Aurora", icon: AuroraIcon },
+  { id: "ByteDance", icon: ByteDanceIcon },
+  { id: "Debates", icon: DebatesIcon },
+  { id: "DirektPlusOnline", icon: DirektPlusOnlineIcon },
+  { id: "FHhealth", icon: FHhealthIcon },
+  { id: "FlowOps", icon: FlowOpsIcon },
+  { id: "IdoeWorks", icon: IdoeWorksIcon },
+  { id: "Oblivioni", icon: OblivioniIcon },
+  { id: "PlatAi", icon: PlatAiIcon },
+  { id: "Pollin", icon: PollinIcon },
+  { id: "Renegade", icon: RenegadeIcon },
+  { id: "Sqor", icon: SqorIcon },
+  { id: "TagLogistics", icon: TagLogisticsIcon },
+];
