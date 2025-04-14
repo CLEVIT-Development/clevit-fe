@@ -23,7 +23,7 @@ const FeedbackSection = ({ className }: FeedbackSectionProps) => {
         key={id}
         className={twMerge(
           classNames(
-            "transition-all flex-1 duration-500 bg-white rounded-lg-l shadow-lg md:min-h-[600px] min-h-[550px] lg:hover:scale-105 flex flex-col justify-between items-start px-4 desktop:pt-8 xs:pt-5 pb-6",
+            "transition-all flex-1 duration-500 bg-white rounded-lg-l shadow-lg desktop:min-h-[500px] md:min-h-[550px] min-h-[550px] lg:hover:scale-105 flex flex-col justify-between items-start px-4 desktop:pt-8 xs:pt-5 pb-6",
             styles["feedback-item"]
           ),
           className
