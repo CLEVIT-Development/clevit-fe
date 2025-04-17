@@ -16,7 +16,7 @@ const FeedbackItem: React.FC<IProps> = ({
     <div
       className={twMerge(
         classNames(
-          "transition-all flex-1 duration-500 bg-white rounded-lg-l shadow-lg md:min-h-[600px] min-h-[550px] lg:hover:scale-105 flex flex-col justify-between items-start px-4 desktop:pt-8 xs:pt-5 pb-6",
+          "transition-all flex-1 duration-500 bg-white rounded-lg-l shadow-lg lg:min-h-[600px] desktop:min-h-[620px] min-h-[450px] lg:hover:scale-105 flex flex-col justify-between items-start px-4 desktop:pt-8 xs:pt-5 pb-6",
           "shadow-[0_8px_10px_#0000001a]"
         ),
         className
