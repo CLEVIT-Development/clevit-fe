@@ -6,7 +6,6 @@ import { Controller, FormProvider, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 
 import { contactUsSchema } from "../../common/schemas/contactUsSchema";
-import { axiosInstance } from "../../common/services/toast/axios.service";
 import showNotification, { ToastVersions } from "../../common/services/toast/showNotifications";
 import { servicesConstants } from "../../shared/constants/services.constants";
 import countriesConstants from "../../shared/data/countries.json";
@@ -59,7 +58,16 @@ const ContactUs = () => {
         formData.append("file", data.file);
       }
 
-      await axiosInstance.post("/auth/contact-us", formData);
+      const response = await fetch("/api/contact-us", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+
+        throw new Error(errorData.error || "Failed to submit form");
+      }
 
       showNotification({
         type: ToastVersions.success,
@@ -70,7 +78,10 @@ const ContactUs = () => {
       showNotification({
         type: ToastVersions.error,
         title: "Submission Failed",
-        description: "There was an error submitting your message. Please try again later.",
+        description:
+          error instanceof Error
+            ? error.message
+            : "There was an error submitting your message. Please try again later.",
       });
       console.error("Error submitting form:", error);
     }
